@@ -1,6 +1,6 @@
 export const triAgencyData = {
   lastUpdated: '2026-03-31',
-  sourceUrl: 'https://www.nserc-crsng.gc.ca/NSERC-CRSNG/ResearchSecurity-SecuriteRecherche_eng.asp',
+  sourceUrl: 'https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security',
   source: 'Natural Sciences and Engineering Research Council of Canada (NSERC) — Tri-agency Guidance on Research Security',
 
   definition:
