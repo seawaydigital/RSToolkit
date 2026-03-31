@@ -83,16 +83,9 @@ export default function RiskMitigation({ onNavigate }) {
     <div className="tool-page">
       <div className="tool-page-header">
         <h1>Risk Mitigation Guide</h1>
-        <p>Practical measures to reduce national security risks in Canadian research — drawn from UBC Research Security, the U15 Guide, and Government of Canada guidance</p>
+        <p>Practical measures to reduce national security risks in Canadian research — drawn from Canadian university research security programs, the U15 Guide, and Government of Canada guidance</p>
         <div className="tool-page-meta">
           <span>Last updated: {riskMitigationData.lastUpdated}</span>
-          <a
-            href="https://researchsecurity.ubc.ca/raf-guide/main-considerations-best-practices"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            UBC source
-          </a>
         </div>
       </div>
 
