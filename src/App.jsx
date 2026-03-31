@@ -8,6 +8,7 @@ import GlobalSearchModal from './components/ui/SearchBar';
 import './styles/global.css';
 
 const TOOL_COMPONENTS = {
+  'tri-agency-guide': lazy(() => import('./tools/policy-guides/TriAgencyGuide')),
   'strac-flowchart': lazy(() => import('./tools/flowcharts/StracFlowchart')),
   'nsgrp-flowchart': lazy(() => import('./tools/flowcharts/NsgrpFlowchart')),
   'ontario-flowchart': lazy(() => import('./tools/flowcharts/OntarioFlowchart')),

@@ -7,6 +7,14 @@ export const CATEGORIES = [
     description: 'Interactive flowcharts explaining key research security policies',
     tools: [
       {
+        id: 'tri-agency-guide',
+        name: 'Tri-Agency Research Security Guide',
+        slug: 'tri-agency-guide',
+        description: 'Plain-language explainer of the tri-agency research security framework, 10 guiding principles, and the NSGRP and STRAC policies',
+        tags: ['tri-agency', 'nserc', 'cihr', 'sshrc', 'policy', 'guide', 'principles'],
+        related: ['strac-flowchart', 'nsgrp-flowchart', 'stra-lookup'],
+      },
+      {
         id: 'strac-flowchart',
         name: 'STRAC Policy Flowchart',
         slug: 'strac-flowchart',
