@@ -97,7 +97,7 @@ export default function StraLookup({ onNavigate }) {
         <h1>STRA Lookup</h1>
         <p>Search and browse Sensitive Technology Research Areas with guided assessment</p>
         <div className="tool-page-meta">
-          <span>Last updated: {straData.lastUpdated}</span>
+          <span>List last modified: {straData.lastUpdated}</span>
           <a href={straData.sourceUrl} target="_blank" rel="noopener noreferrer">Policy source</a>
         </div>
       </div>

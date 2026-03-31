@@ -1138,6 +1138,226 @@ html, body {
   text-decoration: underline;
 }
 
+/* ===== Glossary ===== */
+.glossary-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.glossary-filter-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.glossary-filter-chip:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.glossary-filter-chip--active {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.glossary-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.glossary-item--open {
+  border-color: var(--accent);
+}
+
+.glossary-item-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.glossary-item-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.glossary-term {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.glossary-short-def {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.glossary-category-badge {
+  flex-shrink: 0;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.glossary-chevron {
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.glossary-item-body {
+  padding: 0 14px 14px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.glossary-definition {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 12px 0 8px;
+}
+
+.glossary-meta-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.glossary-source {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ===== FAQ ===== */
+.faq-category {
+  margin-bottom: 28px;
+}
+
+.faq-category-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.faq-item--open {
+  border-color: var(--accent);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+  transition: background 0.15s;
+}
+
+.faq-question:hover {
+  background: var(--bg-tertiary);
+}
+
+.faq-answer {
+  padding: 0 14px 14px 38px;
+  border-top: 1px solid var(--border);
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+.faq-related-tool {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 4px 10px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.faq-related-tool:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.faq-related-tools {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.faq-disclaimer {
+  margin-top: 32px;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* ===== Wizard Modal ===== */
 .wizard-overlay {
   position: fixed;

@@ -5,7 +5,7 @@
  */
 
 export const straData = {
-  lastUpdated: "2025-03-17",
+  lastUpdated: "2025-05-07",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas",
   categories: [

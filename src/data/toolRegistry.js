@@ -80,6 +80,22 @@ export const CATEGORIES = [
         tags: ['export', 'control', 'eipa', 'sanctions', 'reference'],
         related: ['risk-checklist', 'nsgrp-flowchart'],
       },
+      {
+        id: 'glossary',
+        name: 'Glossary / Jargon Decoder',
+        slug: 'glossary',
+        description: 'Definitions of key research security terms from Canadian and Ontario Government sources',
+        tags: ['glossary', 'definitions', 'jargon', 'terms', 'reference'],
+        related: ['faq', 'strac-flowchart'],
+      },
+      {
+        id: 'faq',
+        name: 'Research Security FAQ',
+        slug: 'faq',
+        description: 'Answers to common questions about STRAC, NRO, NSGRP, export controls, and compliance',
+        tags: ['faq', 'questions', 'compliance', 'guidance'],
+        related: ['glossary', 'stra-lookup', 'nro-lookup'],
+      },
     ],
   },
 ];

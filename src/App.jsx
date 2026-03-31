@@ -15,6 +15,8 @@ const TOOL_COMPONENTS = {
   'nro-lookup': lazy(() => import('./tools/compliance/NroLookup')),
   'risk-checklist': lazy(() => import('./tools/compliance/RiskChecklist')),
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
+  'glossary': lazy(() => import('./tools/reference/Glossary')),
+  'faq': lazy(() => import('./tools/reference/Faq')),
 };
 
 function getHashRoute() {
