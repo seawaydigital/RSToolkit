@@ -38,10 +38,6 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
           <span className="topbar-search-label">Search</span>
           <kbd className="topbar-search-kbd">Ctrl+K</kbd>
         </button>
-        <span className="topbar-badge">
-          <Shield size={14} />
-          100% Client-Side
-        </span>
       </div>
     </header>
   );
