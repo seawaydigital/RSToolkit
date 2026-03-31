@@ -1256,6 +1256,219 @@ html, body {
   color: var(--text-muted);
 }
 
+/* ===== Risk Mitigation ===== */
+.rm-intro {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+}
+
+.rm-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.rm-filter-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.rm-filter-chip:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.rm-filter-chip--active {
+  background: var(--accent-subtle);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rm-result-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.rm-category {
+  margin-bottom: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.rm-category-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-secondary);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rm-category-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.rm-category-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.rm-category-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rm-category-summary {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.rm-category-count {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1px 8px;
+}
+
+.rm-measures {
+  border-top: 1px solid var(--border);
+  background: var(--bg-primary);
+}
+
+.rm-applicability {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+
+.rm-measure {
+  border-bottom: 1px solid var(--border);
+}
+
+.rm-measure:last-child {
+  border-bottom: none;
+}
+
+.rm-measure--open {
+  background: var(--bg-secondary);
+}
+
+.rm-measure-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.rm-measure-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.rm-measure-title {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.rm-measure-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.rm-tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.rm-tag--always {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--green);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.rm-tag--partnership {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.rm-tag--stra {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--amber);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.rm-tag--international {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--purple);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.rm-measure-body {
+  padding: 4px 16px 16px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.rm-measure-section {
+  margin-top: 12px;
+}
+
+.rm-section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.rm-measure-section p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ===== FAQ ===== */
 .faq-category {
   margin-bottom: 28px;

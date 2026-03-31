@@ -63,6 +63,14 @@ export const CATEGORIES = [
         tags: ['risk', 'checklist', 'assessment', 'grant'],
         related: ['nsgrp-flowchart', 'export-control'],
       },
+      {
+        id: 'risk-mitigation',
+        name: 'Risk Mitigation Guide',
+        slug: 'risk-mitigation',
+        description: 'Practical measures to reduce research security risks — personnel, partners, data, legal, and monitoring',
+        tags: ['risk', 'mitigation', 'best practices', 'partners', 'security'],
+        related: ['risk-checklist', 'nsgrp-flowchart', 'nro-lookup'],
+      },
     ],
   },
   {

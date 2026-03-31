@@ -14,6 +14,7 @@ const TOOL_COMPONENTS = {
   'stra-lookup': lazy(() => import('./tools/compliance/StraLookup')),
   'nro-lookup': lazy(() => import('./tools/compliance/NroLookup')),
   'risk-checklist': lazy(() => import('./tools/compliance/RiskChecklist')),
+  'risk-mitigation': lazy(() => import('./tools/compliance/RiskMitigation')),
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
