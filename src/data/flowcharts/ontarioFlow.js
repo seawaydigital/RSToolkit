@@ -3,7 +3,7 @@ export const ontarioFlow = {
   title: "Ontario Research Security Guidelines Decision Flow",
   lastUpdated: "2025-01-24",
   policySource: "Research Security Guidelines for Ontario Research Funding Programs",
-  sourceUrl: "https://www.ontario.ca/page/research-security-guidelines-ontario-research-funding-programs",
+  sourceUrl: "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
   nodes: [
     { id: "start", type: "start", label: "Ontario-Funded Research Application", description: "You are applying for funding from an Ontario Ministry of Colleges and Universities research funding program (ORF-RE, ORF-Genomics, ORF-LIF, ORF-SIF, ORF-CF, ORF-BRIF, or ERA).", next: "pre-application" },
     { id: "pre-application", type: "action", label: "Conduct pre-application risk assessment", description: "Before submitting, the Applicant and PI should assess the application for potential economic and/or geopolitical risks. Consider any existing or planned collaborations or receipt of funding/in-kind support with project partners that may impact the reputation of Ontario.", policyRef: "Ontario RS Guidelines, Section 1", next: "check-sensitive" },
