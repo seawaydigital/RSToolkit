@@ -212,7 +212,25 @@ export default function RiskMitigation({ onNavigate }) {
       </div>
 
       <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16, textAlign: 'center' }}>
-        {riskMitigationData.sourceNote}
+        Best practices drawn from Canadian university research security programs, the{' '}
+        <a
+          href="https://www.u15.ca/wp-content/uploads/2023/02/U15-Guide-Mitigating-Economic-and-Geopolitical-Risks-in-Sensitive-Research-Projects.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--accent)' }}
+        >
+          U15 Guide on Mitigating Economic and Geopolitical Risks
+        </a>
+        , and{' '}
+        <a
+          href="https://science.gc.ca/site/science/en/safeguarding-your-research"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: 'var(--accent)' }}
+        >
+          Government of Canada guidance
+        </a>
+        .
       </p>
     </div>
   );

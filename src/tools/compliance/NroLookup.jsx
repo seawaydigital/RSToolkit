@@ -161,8 +161,11 @@ export default function NroLookup({ onNavigate }) {
         <h1>NRO Lookup &amp; Map</h1>
         <p>
           Search Named Research Organizations with interactive map visualization.
-          Data sourced from the Government of Canada, last updated{' '}
-          {nroData.lastUpdated}.
+          Data sourced from the{' '}
+          <a href={nroData.sourceUrl} target="_blank" rel="noopener noreferrer">
+            Government of Canada
+          </a>
+          , last updated {nroData.lastUpdated}.
         </p>
       </div>
 

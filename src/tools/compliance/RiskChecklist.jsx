@@ -124,7 +124,14 @@ export default function RiskChecklist({ onNavigate }) {
         <div key={section.id} className="checklist-section">
           <div className="checklist-section-header">
             <span className="checklist-section-title">{section.title}</span>
-            <span className="checklist-section-source">{section.policySource}</span>
+            <a
+              className="checklist-section-source"
+              href={riskChecklist.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {section.policySource}
+            </a>
           </div>
 
           {section.items.map(item => {

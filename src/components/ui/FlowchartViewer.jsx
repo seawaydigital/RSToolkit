@@ -10,7 +10,13 @@ export default function FlowchartViewer({ data, onNavigate }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
         <div className="tool-page-meta">
           <span>Last updated: {data.lastUpdated}</span>
-          <span>Source: {data.policySource}</span>
+          {data.sourceUrl ? (
+            <a href={data.sourceUrl} target="_blank" rel="noopener noreferrer">
+              Source: {data.policySource}
+            </a>
+          ) : (
+            <span>Source: {data.policySource}</span>
+          )}
         </div>
         <div className="flowchart-toggle">
           <button
