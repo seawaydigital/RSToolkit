@@ -573,6 +573,14 @@ html, body {
   font-size: 12px;
   color: var(--text-muted);
 }
+.tool-page-meta a {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tool-page-meta a:hover {
+  color: #fff;
+}
 
 /* ===== Loading & Error ===== */
 .loading {
