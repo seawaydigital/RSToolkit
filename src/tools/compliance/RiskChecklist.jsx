@@ -142,6 +142,13 @@ export default function RiskChecklist({ onNavigate }) {
                 className={`checklist-item${state === 'risk' ? ' checklist-item--risk' : ''}`}
               >
                 <div className="checklist-item-label">{item.label}</div>
+                {state && (
+                  <div className="checklist-print-state">
+                    {state === 'no-risk' && '✓ No Risk'}
+                    {state === 'risk' && '⚠ Risk Identified'}
+                    {state === 'na' && '— N/A'}
+                  </div>
+                )}
                 <div className="checklist-item-controls">
                   <button
                     className={`checklist-state-btn${state === 'no-risk' ? ' checklist-state-btn--no-risk' : ''}`}
