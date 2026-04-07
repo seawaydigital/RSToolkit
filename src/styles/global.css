@@ -2428,8 +2428,8 @@ html, body {
   .rm-category-header .rm-category-count,
   button { display: none !important; }
 
-  /* Layout */
-  body, .app, .app-body, .main-content, .tool-page {
+  /* Layout — remove all height/overflow constraints so full content prints */
+  html, body, #root, .app, .app-body, .main-content, .tool-page {
     background: white !important;
     color: black !important;
     display: block !important;
@@ -2437,7 +2437,12 @@ html, body {
     margin: 0 !important;
     width: 100% !important;
     max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
     box-shadow: none !important;
+    flex: none !important;
   }
 
   /* Show print-only state badge; hide on screen */
