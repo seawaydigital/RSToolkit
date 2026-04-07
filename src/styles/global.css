@@ -217,7 +217,13 @@ html, body {
     top: var(--topbar-height);
     background: rgba(0, 0, 0, 0.5);
     z-index: 80;
+    animation: backdropFadeIn 0.2s ease;
   }
+}
+
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .sidebar-scroll {
@@ -410,6 +416,118 @@ html, body {
   background: var(--bg-tertiary);
   border-radius: 10px;
   color: var(--text-muted);
+}
+
+/* Start Here / Scenarios */
+.home-start {
+  margin-bottom: 40px;
+}
+
+.home-start-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-start-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.home-scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.home-scenario-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: border-color 0.15s;
+}
+
+.home-scenario-card:hover {
+  border-color: var(--accent);
+}
+
+.home-scenario-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.home-scenario-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.home-scenario-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.home-scenario-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.home-scenario-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.home-scenario-tool-btn {
+  padding: 4px 10px;
+  background: var(--accent-subtle);
+  border: 1px solid rgba(59,130,246,0.3);
+  border-radius: 20px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.home-scenario-tool-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.home-all-tools-label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-all-tools-label::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 18px;
+  background: var(--border-light);
+  border-radius: 2px;
 }
 
 .home-footer {
@@ -757,6 +875,71 @@ html, body {
   color: white;
 }
 
+/* ===== NRO Sanctioned Banner ===== */
+.nro-sanctioned-banner {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.nro-sanctioned-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+
+.nro-sanctioned-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.nro-sanctioned-countries {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.nro-sanctioned-country {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.nro-sanctioned-country-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.nro-sanctioned-country-basis {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.nro-sanctioned-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.nro-sanctioned-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nro-sanctioned-note a:hover {
+  text-decoration: underline;
+}
+
 /* ===== NRO Map ===== */
 .nro-map-container {
   height: 400px;
@@ -1039,6 +1222,72 @@ html, body {
 
 .checklist-progress-item strong {
   color: var(--text-primary);
+}
+
+.checklist-progress-bar-wrap {
+  margin-bottom: 16px;
+}
+
+.checklist-progress-bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.checklist-progress-pct {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.checklist-progress-bar-track {
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.checklist-progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.checklist-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.checklist-reset-btn {
+  padding: 10px 20px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.checklist-reset-btn:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.checklist-saved-indicator {
+  font-size: 12px;
+  color: var(--green);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.checklist-saved-indicator--visible {
+  opacity: 1;
 }
 
 .checklist-print-btn {
@@ -2158,9 +2407,16 @@ html, body {
 /* ===== Print Styles ===== */
 @media print {
   .topbar, .sidebar, .sidebar-backdrop,
-  .checklist-print-btn, .checklist-state-btn,
-  .checklist-learn-more-toggle {
+  .checklist-print-btn, .checklist-reset-btn, .checklist-saved-indicator,
+  .checklist-state-btn, .checklist-learn-more-toggle,
+  .rm-filters, .stra-search, .rm-result-count,
+  .checklist-actions {
     display: none !important;
+  }
+
+  .rm-measure--open .rm-measure-body,
+  .rm-category .rm-measures {
+    display: block !important;
   }
 
   .app-body {

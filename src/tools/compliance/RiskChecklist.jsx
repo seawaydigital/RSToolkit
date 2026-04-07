@@ -1,18 +1,48 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { riskChecklist } from '../../data/riskChecklist';
+
+const STORAGE_KEY = 'rs-toolkit-checklist-v1';
+
+function loadSaved() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function buildInitial() {
+  const initial = {};
+  riskChecklist.sections.forEach(section => {
+    section.items.forEach(item => {
+      initial[item.id] = item.defaultState;
+    });
+  });
+  return initial;
+}
 
 export default function RiskChecklist({ onNavigate }) {
   const [itemStates, setItemStates] = useState(() => {
-    const initial = {};
-    riskChecklist.sections.forEach(section => {
-      section.items.forEach(item => {
-        initial[item.id] = item.defaultState;
-      });
-    });
-    return initial;
+    const saved = loadSaved();
+    if (saved) return { ...buildInitial(), ...saved };
+    return buildInitial();
   });
 
   const [expandedItems, setExpandedItems] = useState({});
+  const [savedIndicator, setSavedIndicator] = useState(false);
+
+  // Persist to localStorage whenever states change
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(itemStates));
+      setSavedIndicator(true);
+      const t = setTimeout(() => setSavedIndicator(false), 1500);
+      return () => clearTimeout(t);
+    } catch {
+      // localStorage unavailable — silent fail
+    }
+  }, [itemStates]);
 
   const toggleState = (itemId, newState) => {
     setItemStates(prev => ({
@@ -26,6 +56,10 @@ export default function RiskChecklist({ onNavigate }) {
       ...prev,
       [itemId]: !prev[itemId],
     }));
+  };
+
+  const resetChecklist = () => {
+    setItemStates(buildInitial());
   };
 
   const getSectionProgress = (section) => {
@@ -46,6 +80,7 @@ export default function RiskChecklist({ onNavigate }) {
   };
 
   const overall = getOverallProgress();
+  const pct = overall.total > 0 ? Math.round((overall.completed / overall.total) * 100) : 0;
 
   return (
     <div className="tool-page">
@@ -57,6 +92,17 @@ export default function RiskChecklist({ onNavigate }) {
           <a href={riskChecklist.sourceUrl} target="_blank" rel="noopener noreferrer">
             Policy source
           </a>
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <div className="checklist-progress-bar-wrap">
+        <div className="checklist-progress-bar-header">
+          <span>Overall progress</span>
+          <span className="checklist-progress-pct">{pct}% complete</span>
+        </div>
+        <div className="checklist-progress-bar-track">
+          <div className="checklist-progress-bar-fill" style={{ width: `${pct}%` }} />
         </div>
       </div>
 
@@ -129,9 +175,17 @@ export default function RiskChecklist({ onNavigate }) {
         </div>
       ))}
 
-      <button className="checklist-print-btn" onClick={() => window.print()}>
-        Print Checklist
-      </button>
+      <div className="checklist-actions">
+        <button className="checklist-print-btn" onClick={() => window.print()}>
+          Print Checklist
+        </button>
+        <button className="checklist-reset-btn" onClick={resetChecklist}>
+          Reset
+        </button>
+        <span className={`checklist-saved-indicator${savedIndicator ? ' checklist-saved-indicator--visible' : ''}`}>
+          Progress saved
+        </span>
+      </div>
     </div>
   );
 }

@@ -166,6 +166,33 @@ export default function NroLookup({ onNavigate }) {
         </p>
       </div>
 
+      {/* Fully sanctioned countries warning */}
+      <div className="nro-sanctioned-banner">
+        <div className="nro-sanctioned-title">
+          ⚠️ Comprehensively Sanctioned Countries
+        </div>
+        <p className="nro-sanctioned-body">
+          The following countries are subject to comprehensive Canadian sanctions — all research
+          collaboration, funding, and technology transfer is prohibited regardless of whether
+          a specific organization appears on the NRO list below.
+        </p>
+        <div className="nro-sanctioned-countries">
+          {[
+            { name: 'North Korea (DPRK)', basis: 'UNA + SEMA — ban on all new investment; comprehensive trade, financial, and technical restrictions' },
+            { name: 'Belarus', basis: 'SEMA — broad sectoral restrictions on finance, energy, exports, and controlled technology' },
+          ].map(c => (
+            <div key={c.name} className="nro-sanctioned-country">
+              <span className="nro-sanctioned-country-name">{c.name}</span>
+              <span className="nro-sanctioned-country-basis">{c.basis}</span>
+            </div>
+          ))}
+        </div>
+        <p className="nro-sanctioned-note">
+          Russia and Iran appear in the NRO list below and are also subject to comprehensive sanctions.
+          Consult <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx" target="_blank" rel="noopener noreferrer">Global Affairs Canada</a> for the current full sanctions list.
+        </p>
+      </div>
+
       {/* Map */}
       <div className="nro-map-container">
         <MapContainer

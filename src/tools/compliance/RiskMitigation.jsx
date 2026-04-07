@@ -205,7 +205,13 @@ export default function RiskMitigation({ onNavigate }) {
         </div>
       )}
 
-      <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 24, textAlign: 'center' }}>
+      <div className="checklist-actions" style={{ marginTop: 24 }}>
+        <button className="checklist-print-btn" onClick={() => window.print()}>
+          Print Guide
+        </button>
+      </div>
+
+      <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16, textAlign: 'center' }}>
         {riskMitigationData.sourceNote}
       </p>
     </div>
