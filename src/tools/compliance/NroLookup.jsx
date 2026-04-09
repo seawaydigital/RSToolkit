@@ -54,7 +54,58 @@ function MarkerCluster({ markers, onMarkerClick, activeId }) {
   const clusterRef = useRef(null);
 
   useEffect(() => {
-    const cluster = L.markerClusterGroup();
+    const cluster = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      spiderfyOnMaxZoom: true,
+      maxClusterRadius: 50,
+      iconCreateFunction: (cluster) => {
+        const childMarkers = cluster.getAllChildMarkers();
+        const count = childMarkers.length;
+
+        // Tally by country color to determine dominant country in cluster
+        const colorCounts = {};
+        childMarkers.forEach((cm) => {
+          const c = cm.options.fillColor || '#94a3b8';
+          colorCounts[c] = (colorCounts[c] || 0) + 1;
+        });
+        let dominantColor = '#94a3b8';
+        let max = 0;
+        Object.entries(colorCounts).forEach(([col, n]) => {
+          if (n > max) {
+            max = n;
+            dominantColor = col;
+          }
+        });
+        const mixed = Object.keys(colorCounts).length > 1;
+
+        // Size scales with count, capped
+        const size = count < 10 ? 32 : count < 50 ? 38 : count < 150 ? 44 : 50;
+
+        return L.divIcon({
+          html: `
+            <div style="
+              width:${size}px;
+              height:${size}px;
+              border-radius:50%;
+              background:${dominantColor};
+              border:3px solid ${mixed ? '#fff' : 'rgba(255,255,255,0.85)'};
+              box-shadow:0 0 0 2px ${dominantColor}55, 0 2px 6px rgba(0,0,0,0.4);
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              color:#fff;
+              font-weight:700;
+              font-size:${size >= 44 ? '14px' : '13px'};
+              font-family:system-ui,-apple-system,sans-serif;
+              text-shadow:0 1px 2px rgba(0,0,0,0.5);
+            ">${count}</div>
+          `,
+          className: 'nro-cluster-icon',
+          iconSize: [size, size],
+          iconAnchor: [size / 2, size / 2],
+        });
+      },
+    });
     markers.forEach((m) => {
       const marker = L.circleMarker([m.lat, m.lng], {
         radius: 8,
