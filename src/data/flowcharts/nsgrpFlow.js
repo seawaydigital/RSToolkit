@@ -87,6 +87,7 @@ export const nsgrpFlow = {
       label: "Submit Risk Assessment Form with application",
       description: "Complete and submit the Risk Assessment Form along with your proposed risk mitigation measures as part of the grant application. The form will be reviewed by the funding agency in consultation with national security partners as appropriate.",
       policyRef: "NSGRP, Implementation",
+      resourceLink: { url: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form", label: "Open Risk Assessment Form" },
       next: "agency-review"
     },
     {
