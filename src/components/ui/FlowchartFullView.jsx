@@ -93,7 +93,7 @@ function NodeShape({ node, layout, onClick, isSelected }) {
         style={{ pointerEvents: 'none' }}
       >
         {lines.map((line, i) => (
-          <tspan key={i} x={x} y={textY + i * lineH}>
+          <tspan key={i} x={x} y={textY + i * lineH} dominantBaseline="central">
             {line}
           </tspan>
         ))}
