@@ -3,9 +3,10 @@ import dagre from 'dagre';
 
 const NODE_WIDTH = 220;
 const NODE_HEIGHT_ACTION = 60;
-const NODE_HEIGHT_DECISION = 80;
-const NODE_HEIGHT_TERMINAL = 50;
+const NODE_HEIGHT_DECISION = 90;
+const NODE_HEIGHT_TERMINAL = 44;
 const PADDING = 40;
+const EDGE_COLOR = '#16a34a';
 
 function getNodeHeight(type) {
   if (type === 'decision') return NODE_HEIGHT_DECISION;
@@ -15,7 +16,7 @@ function getNodeHeight(type) {
 
 function buildLayout(nodes) {
   const g = new dagre.graphlib.Graph();
-  g.setGraph({ rankdir: 'TB', ranksep: 60, nodesep: 40 });
+  g.setGraph({ rankdir: 'TB', ranksep: 70, nodesep: 50 });
   g.setDefaultEdgeLabel(() => ({}));
 
   for (const node of nodes) {
@@ -32,71 +33,67 @@ function buildLayout(nodes) {
   return g;
 }
 
+const NODE_STYLES = {
+  start:    { fill: '#0c1e3a', stroke: '#3b82f6', strokeWidth: 2,   text: '#93c5fd' },
+  end:      { fill: '#052e16', stroke: '#16a34a', strokeWidth: 2,   text: '#86efac' },
+  decision: { fill: '#111827', stroke: '#eab308', strokeWidth: 2,   text: '#ffffff' },
+  action:   { fill: '#1e293b', stroke: '#334155', strokeWidth: 1.5, text: '#e2e8f0' },
+};
+
 function NodeShape({ node, layout, onClick, isSelected }) {
   const pos = layout.node(node.id);
   if (!pos) return null;
 
-  const x = pos.x;
-  const y = pos.y;
+  const { x, y } = pos;
   const w = NODE_WIDTH;
   const h = getNodeHeight(node.type);
+  const s = NODE_STYLES[node.type] || NODE_STYLES.action;
 
-  const colors = {
-    start: { fill: '#3b82f6', stroke: '#2563eb', text: '#ffffff' },
-    end: { fill: '#22c55e', stroke: '#16a34a', text: '#ffffff' },
-    decision: { fill: '#7c3aed', stroke: '#6d28d9', text: '#ffffff' },
-    action: { fill: '#1e293b', stroke: '#475569', text: '#f1f5f9' },
-  };
-  const c = colors[node.type] || colors.action;
+  const stroke = isSelected ? '#ffffff' : s.stroke;
+  const strokeWidth = isSelected ? 2.5 : s.strokeWidth;
+  const filter = isSelected ? 'drop-shadow(0 0 6px rgba(255,255,255,0.35))' : undefined;
 
-  const selectedStroke = isSelected ? '#f59e0b' : c.stroke;
-  const strokeWidth = isSelected ? 3 : 1.5;
+  const lines = wrapText(node.label, 26);
+  const lineH = 14;
+  const textY = y - ((lines.length - 1) * lineH) / 2;
 
   return (
-    <g onClick={() => onClick(node)} style={{ cursor: 'pointer' }}>
+    <g onClick={() => onClick(node)} style={{ cursor: 'pointer', filter }}>
       {node.type === 'decision' ? (
         <polygon
           points={`${x},${y - h / 2} ${x + w / 2},${y} ${x},${y + h / 2} ${x - w / 2},${y}`}
-          fill={c.fill}
-          stroke={selectedStroke}
+          fill={s.fill}
+          stroke={stroke}
           strokeWidth={strokeWidth}
-          rx={4}
         />
       ) : node.type === 'start' || node.type === 'end' ? (
         <rect
-          x={x - w / 2}
-          y={y - h / 2}
-          width={w}
-          height={h}
+          x={x - w / 2} y={y - h / 2}
+          width={w} height={h}
           rx={h / 2}
-          fill={c.fill}
-          stroke={selectedStroke}
+          fill={s.fill}
+          stroke={stroke}
           strokeWidth={strokeWidth}
         />
       ) : (
         <rect
-          x={x - w / 2}
-          y={y - h / 2}
-          width={w}
-          height={h}
-          rx={8}
-          fill={c.fill}
-          stroke={selectedStroke}
+          x={x - w / 2} y={y - h / 2}
+          width={w} height={h}
+          rx={10}
+          fill={s.fill}
+          stroke={stroke}
           strokeWidth={strokeWidth}
         />
       )}
       <text
-        x={x}
-        y={y}
         textAnchor="middle"
-        dominantBaseline="middle"
-        fill={c.text}
+        fill={s.text}
         fontSize={12}
         fontWeight={500}
         style={{ pointerEvents: 'none' }}
       >
-        {wrapText(node.label, 24).map((line, i, arr) => (
-          <tspan key={i} x={x} dy={i === 0 ? -(arr.length - 1) * 7 : 14}>
+        {lines.map((line, i) => (
+          <tspan key={i} x={x} y={textY + i * lineH}>
             {line}
           </tspan>
         ))}
@@ -126,9 +123,7 @@ function EdgeLine({ edge, layout }) {
   if (!points || !points.points) return null;
 
   const allPoints = points.points;
-  const d = allPoints
-    .map((p, i) => (i === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`))
-    .join(' ');
+  const d = allPoints.map((p, i) => (i === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`)).join(' ');
 
   const last = allPoints[allPoints.length - 1];
   const prev = allPoints.length > 1 ? allPoints[allPoints.length - 2] : allPoints[0];
@@ -136,10 +131,10 @@ function EdgeLine({ edge, layout }) {
 
   return (
     <g>
-      <path d={d} fill="none" stroke="#475569" strokeWidth={1.5} />
+      <path d={d} fill="none" stroke={EDGE_COLOR} strokeWidth={1.5} />
       <polygon
-        points={`0,-5 10,0 0,5`}
-        fill="#475569"
+        points="0,-5 9,0 0,5"
+        fill={EDGE_COLOR}
         transform={`translate(${last.x},${last.y}) rotate(${(angle * 180) / Math.PI})`}
       />
     </g>
@@ -157,23 +152,43 @@ function EdgeLabel({ edge, layout, nodes }) {
   const isNo = sourceNode.no === edge.w;
   if (!isYes && !isNo) return null;
 
-  // Use the point immediately after the diamond exit rather than the edge midpoint.
-  // For routed edges (e.g. No → attest routing around resolve-nro), the midpoint
-  // lands below sibling boxes making the label appear to exit the wrong node.
+  // Place label on the first segment after the diamond exit (not the edge midpoint)
   const pts = edgeData.points;
   const labelPt = pts.length > 1 ? pts[1] : pts[0];
 
+  const cx = labelPt.x + (isYes ? -28 : 28);
+  const cy = labelPt.y;
+  const pillW = 38;
+  const pillH = 20;
+  const pillRx = 10;
+
+  const pillFill   = isYes ? '#14532d' : '#450a0a';
+  const pillStroke = isYes ? '#22c55e' : '#ef4444';
+  const textColor  = isYes ? '#86efac' : '#fca5a5';
+  const label      = isYes ? 'YES' : 'NO';
+
   return (
-    <text
-      x={labelPt.x + (isYes ? -20 : 20)}
-      y={labelPt.y - 5}
-      textAnchor="middle"
-      fontSize={11}
-      fontWeight={600}
-      fill={isYes ? '#22c55e' : '#ef4444'}
-    >
-      {isYes ? 'Yes' : 'No'}
-    </text>
+    <g>
+      <rect
+        x={cx - pillW / 2} y={cy - pillH / 2}
+        width={pillW} height={pillH}
+        rx={pillRx}
+        fill={pillFill}
+        stroke={pillStroke}
+        strokeWidth={1.5}
+      />
+      <text
+        x={cx} y={cy}
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize={10}
+        fontWeight={700}
+        fill={textColor}
+        style={{ letterSpacing: '0.6px' }}
+      >
+        {label}
+      </text>
+    </g>
   );
 }
 
