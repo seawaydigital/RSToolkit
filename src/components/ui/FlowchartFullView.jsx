@@ -157,13 +157,16 @@ function EdgeLabel({ edge, layout, nodes }) {
   const isNo = sourceNode.no === edge.w;
   if (!isYes && !isNo) return null;
 
-  const midIdx = Math.floor(edgeData.points.length / 2);
-  const mid = edgeData.points[midIdx];
+  // Use the point immediately after the diamond exit rather than the edge midpoint.
+  // For routed edges (e.g. No → attest routing around resolve-nro), the midpoint
+  // lands below sibling boxes making the label appear to exit the wrong node.
+  const pts = edgeData.points;
+  const labelPt = pts.length > 1 ? pts[1] : pts[0];
 
   return (
     <text
-      x={mid.x + (isYes ? -20 : 20)}
-      y={mid.y - 5}
+      x={labelPt.x + (isYes ? -20 : 20)}
+      y={labelPt.y - 5}
       textAnchor="middle"
       fontSize={11}
       fontWeight={600}
