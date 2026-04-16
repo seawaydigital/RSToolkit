@@ -61,6 +61,7 @@ src/
     faqData.js                   # 24 FAQs across 6 categories
     riskMitigationData.js        # 22 measures across 5 categories
     triAgencyData.js             # Tri-Agency RS guidance: principles, policies, agencies
+    cybersecurityData.js         # 7 essential actions, file/device encryption, passwords, AI warning, sensitive data
     flowcharts/
       stracFlow.js               # STRAC policy decision nodes
       nsgrpFlow.js               # NSGRP partnership risk assessment nodes
@@ -82,6 +83,8 @@ src/
       ExportControl.jsx          # Searchable accordion reference
       Glossary.jsx               # 12-term expandable cards with category filter
       Faq.jsx                    # Accordion; auto-expands matched results when searching
+    operational-security/
+      CybersecurityGuide.jsx     # 4-tab guide: Quick Start / Encryption / Passwords & 2FA / AI & Sensitive Data
 ```
 
 ---
@@ -110,6 +113,11 @@ src/
 | `export-control` | Export Control Quick Reference | `exportControlData.js` |
 | `glossary` | Glossary / Jargon Decoder | `glossaryData.js` |
 | `faq` | Research Security FAQ | `faqData.js` |
+
+### Operational Security
+| Slug | Tool Name | Data File |
+|---|---|---|
+| `cybersecurity-guide` | Cybersecurity Best Practices | `cybersecurityData.js` |
 
 ---
 
@@ -194,6 +202,7 @@ Header pattern:
 - **Flowchart layout constants** (in `FlowchartFullView.jsx`): `NODE_WIDTH=190`, `NODE_HEIGHT_ACTION=58`, `NODE_HEIGHT_DECISION=84`, `NODE_HEIGHT_TERMINAL=42`, `PADDING=36`, `ranksep=55`, `nodesep=30`. Tuned so the widest flowchart (NSGRP, 3-column branching) fits within its container at typical desktop widths with the side panel open.
 - **NSGRP flowchart accuracy**: Flow reflects dual-trigger logic (both Annex A AND Annex B required for mandatory RAF). Non-federal partnerships exit to a terminal at step 1. Annex A "No" branch exits to "Document due diligence and proceed" terminal. Attestation step added before RAF submission. Agency review node clarifies funding agency (not institution) makes final determination. RAF node links to official Risk Assessment Form page via `resourceLink`.
 - **npm audit**: Run `npm audit fix` after any dependency changes. As of 2026-04-08 the project has 0 known vulnerabilities.
+- **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
 
 ---
 
