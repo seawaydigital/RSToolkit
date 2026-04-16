@@ -418,7 +418,7 @@ export default function NroLookup({ onNavigate }) {
       <div className="nro-proximity-panel">
         <div className="nro-proximity-header">
           <strong>Check proximity to NROs</strong>
-          <span>Search any institution to see the nearest Named Research Organizations and their distances.</span>
+          <span>Search any institution to see the nearest Named Research Organizations and their distances. Searches OpenStreetMap data worldwide — for best results, include the city or country (e.g. "Beihang University, Beijing"). If nothing is found, try a partial name or full address.</span>
         </div>
         <form className="nro-proximity-form" onSubmit={handleInstitutionSearch}>
           <input
