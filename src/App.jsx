@@ -19,6 +19,7 @@ const TOOL_COMPONENTS = {
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
+  'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
 };
 
 function getHashRoute() {

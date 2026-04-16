@@ -114,6 +114,23 @@ export const CATEGORIES = [
       },
     ],
   },
+  {
+    id: 'operational-security',
+    label: 'Operational Security',
+    emoji: '🔒',
+    primary: true,
+    description: 'Day-to-day security practices for protecting research data, devices, and accounts',
+    tools: [
+      {
+        id: 'cybersecurity-guide',
+        name: 'Cybersecurity Best Practices',
+        slug: 'cybersecurity-guide',
+        description: 'Plain-language guide to personal and operational security hygiene — 2FA, encryption, password managers, AI tool risks, and backup rules',
+        tags: ['cybersecurity', 'security', 'encryption', 'passwords', '2fa', 'backup', 'ai', 'devices'],
+        related: ['risk-mitigation', 'stra-lookup'],
+      },
+    ],
+  },
 ];
 
 export const PRIMARY_CATEGORIES = CATEGORIES.filter(c => c.primary);
