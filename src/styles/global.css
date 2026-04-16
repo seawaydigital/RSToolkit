@@ -561,6 +561,10 @@ a:hover {
   margin: 0 auto;
 }
 
+.tool-page--wide {
+  max-width: none;
+}
+
 .tool-page-header {
   margin-bottom: 24px;
 }
@@ -912,11 +916,11 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
 }
 
 .flowchart-node-panel {
-  width: 272px;
+  width: 240px;
   flex-shrink: 0;
   position: sticky;
   top: 16px;

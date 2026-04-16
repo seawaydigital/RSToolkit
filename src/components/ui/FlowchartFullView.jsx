@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import dagre from 'dagre';
 
-const NODE_WIDTH = 220;
-const NODE_HEIGHT_ACTION = 60;
-const NODE_HEIGHT_DECISION = 90;
-const NODE_HEIGHT_TERMINAL = 44;
-const PADDING = 40;
+const NODE_WIDTH = 190;
+const NODE_HEIGHT_ACTION = 58;
+const NODE_HEIGHT_DECISION = 84;
+const NODE_HEIGHT_TERMINAL = 42;
+const PADDING = 36;
 const EDGE_COLOR = '#16a34a';
 
 function getNodeHeight(type) {
@@ -16,7 +16,7 @@ function getNodeHeight(type) {
 
 function buildLayout(nodes) {
   const g = new dagre.graphlib.Graph();
-  g.setGraph({ rankdir: 'TB', ranksep: 70, nodesep: 50 });
+  g.setGraph({ rankdir: 'TB', ranksep: 55, nodesep: 30 });
   g.setDefaultEdgeLabel(() => ({}));
 
   for (const node of nodes) {
