@@ -909,21 +909,34 @@ a:hover {
 
 /* Flowchart Full View */
 .flowchart-outer {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .flowchart-node-panel {
-  position: absolute;
-  top: 32px;
-  right: 32px;
-  width: 260px;
-  max-width: calc(100% - 48px);
-  z-index: 10;
+  width: 272px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 16px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 16px 16px 14px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  margin-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .flowchart-outer {
+    flex-direction: column;
+  }
+  .flowchart-node-panel {
+    width: 100%;
+    position: static;
+    margin-top: 0;
+  }
 }
 
 .flowchart-node-panel-close {
@@ -967,7 +980,8 @@ a:hover {
 }
 
 .flowchart-svg-container {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   overflow: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
