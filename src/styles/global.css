@@ -2861,6 +2861,502 @@ a:hover {
   font-size: 18px;
 }
 
+/* ===== Cybersecurity Guide (csec-) ===== */
+
+.csec-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+
+.csec-tab {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+
+.csec-tab:hover {
+  color: var(--text-primary);
+}
+
+.csec-tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.csec-tab-content {
+  padding-top: 4px;
+}
+
+.csec-intro-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+
+/* Quick Start — numbered action list */
+.csec-actions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.csec-action-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.15s;
+}
+
+.csec-action-item:hover {
+  border-color: var(--border-light);
+}
+
+.csec-action-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--accent-subtle);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.csec-action-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.csec-action-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.csec-action-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.csec-action-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Encryption — section titles */
+.csec-section-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.csec-section-intro {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+/* OS sub-tabs */
+.csec-os-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.csec-os-tab {
+  padding: 6px 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.csec-os-tab:hover {
+  border-color: var(--border-light);
+  color: var(--text-primary);
+}
+
+.csec-os-tab--active {
+  background: var(--accent-subtle);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Platform steps */
+.csec-platform-content {
+  padding: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 8px;
+}
+
+.csec-best-for {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.csec-steps {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.csec-step {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.csec-step-suffix {
+  color: var(--text-muted);
+}
+
+.csec-code {
+  display: block;
+  margin-top: 6px;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--green);
+  word-break: break-all;
+}
+
+.csec-tip {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: var(--amber-subtle);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Device encryption list */
+.csec-device-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.csec-device-item {
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.csec-device-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.csec-device-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Passwords & 2FA */
+.csec-subsection {
+  margin-bottom: 28px;
+}
+
+.csec-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.csec-resource-link {
+  font-size: 13px;
+  padding: 4px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--link);
+  transition: all 0.15s;
+}
+
+.csec-resource-link:hover {
+  border-color: var(--link);
+  color: var(--link-hover);
+}
+
+.csec-manager-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.csec-manager-card {
+  display: block;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.15s;
+  color: var(--text-primary);
+}
+
+.csec-manager-card:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.csec-manager-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.csec-free-badge {
+  font-size: 11px;
+  padding: 2px 7px;
+  background: var(--green-subtle);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+.csec-manager-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 3-2-1 Backup Rule card */
+.csec-backup-card {
+  padding: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-top: 4px;
+}
+
+.csec-backup-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.csec-backup-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.csec-backup-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.csec-backup-number {
+  flex-shrink: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  width: 24px;
+  text-align: center;
+}
+
+.csec-backup-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.csec-backup-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  line-height: 1.6;
+}
+
+/* AI Warning card */
+.csec-warning {
+  padding: 20px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+}
+
+.csec-warning-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.csec-warning-intro {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.csec-warning-list {
+  padding-left: 20px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.csec-warning-list li {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.csec-warning-cta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(239, 68, 68, 0.2);
+  padding-top: 12px;
+  line-height: 1.6;
+}
+
+/* Sensitive Data categories */
+.csec-data-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.csec-data-category {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.csec-data-category-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.csec-data-category-label {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.csec-data-category-detail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.csec-related-tool-btn {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  background: var(--accent-subtle);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.csec-related-tool-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.csec-consult-note {
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .csec-action-item {
+    flex-wrap: wrap;
+  }
+  .csec-backup-number {
+    font-size: 20px;
+  }
+  .csec-tabs {
+    gap: 2px;
+  }
+  .csec-tab {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
 /* ===== Print Styles ===== */
 @page {
   size: A4 portrait;
