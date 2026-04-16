@@ -80,6 +80,17 @@ export default function FlowchartGuidedMode({ data, onNavigate }) {
           </button>
         )}
 
+        {currentNode.resourceLink && (
+          <a
+            className="flowchart-resource-link"
+            href={currentNode.resourceLink.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {currentNode.resourceLink.label}
+          </a>
+        )}
+
         <div className="guided-buttons" style={{ marginTop: 20 }}>
           {history.length > 1 && (
             <button className="guided-btn guided-btn--back" onClick={goBack}>

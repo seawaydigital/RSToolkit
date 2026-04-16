@@ -189,7 +189,7 @@ export default function FlowchartFullView({ data, onNavigate }) {
   const edges = layout.edges();
 
   return (
-    <div>
+    <div className="flowchart-outer">
       <div className="flowchart-svg-container">
         <svg
           width={svgWidth}
@@ -218,7 +218,14 @@ export default function FlowchartFullView({ data, onNavigate }) {
       </div>
 
       {selectedNode && (
-        <div className="guided-card" style={{ marginTop: 16 }}>
+        <div className="flowchart-node-panel">
+          <button
+            className="flowchart-node-panel-close"
+            onClick={() => setSelectedNode(null)}
+            aria-label="Close"
+          >
+            ✕
+          </button>
           <div className="guided-card-label">{selectedNode.label}</div>
           <div className="guided-card-desc">{selectedNode.description}</div>
           {selectedNode.policyRef && (
@@ -235,19 +242,16 @@ export default function FlowchartFullView({ data, onNavigate }) {
               {selectedNode.crossLink.label}
             </button>
           )}
-          <button
-            style={{
-              marginTop: 12,
-              background: 'none',
-              border: 'none',
-              color: '#64748b',
-              cursor: 'pointer',
-              fontSize: 13,
-            }}
-            onClick={() => setSelectedNode(null)}
-          >
-            Close
-          </button>
+          {selectedNode.resourceLink && (
+            <a
+              className="flowchart-resource-link"
+              href={selectedNode.resourceLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {selectedNode.resourceLink.label}
+            </a>
+          )}
         </div>
       )}
     </div>

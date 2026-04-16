@@ -908,6 +908,64 @@ a:hover {
 }
 
 /* Flowchart Full View */
+.flowchart-outer {
+  position: relative;
+}
+
+.flowchart-node-panel {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 260px;
+  max-width: calc(100% - 48px);
+  z-index: 10;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px 16px 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+}
+
+.flowchart-node-panel-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.flowchart-node-panel-close:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.flowchart-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--green-subtle);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: var(--radius);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.flowchart-resource-link:hover {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--green);
+}
+
 .flowchart-svg-container {
   width: 100%;
   overflow: auto;
