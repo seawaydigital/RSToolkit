@@ -2,7 +2,7 @@ export const cybersecurityData = {
   id: 'cybersecurity-guide',
   lastUpdated: '2026-04-16',
   sourceUrl: 'https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity',
-  sourceLabel: 'Lakehead University Research Security',
+  sourceLabel: 'Lakehead University Research Cyber Security',
 
   essentialActions: [
     {
