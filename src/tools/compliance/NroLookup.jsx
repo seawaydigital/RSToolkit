@@ -25,6 +25,19 @@ const COUNTRY_COLORS = {
   Iran: '#22c55e',
 };
 
+// Haversine distance between two lat/lng points, returns km
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLng = (lng2 - lng1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1 * (Math.PI / 180)) *
+      Math.cos(lat2 * (Math.PI / 180)) *
+      Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
 // Prepare marker data from organizations
 function buildMarkers(orgs) {
   return orgs.map((org) => ({
@@ -136,9 +149,43 @@ function FlyToHandler({ target }) {
 
   useEffect(() => {
     if (target) {
-      map.flyTo([target.lat, target.lng], 10);
+      map.flyTo([target.lat, target.lng], target.zoom ?? 10);
     }
   }, [map, target]);
+
+  return null;
+}
+
+// Renders a gold star marker for the user's searched institution
+function MyInstitutionLayer({ institution }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!institution) return;
+
+    const icon = L.divIcon({
+      html: `<div style="
+        width:30px;height:30px;border-radius:50%;
+        background:#fbbf24;border:3px solid #fff;
+        box-shadow:0 0 0 2px rgba(251,191,36,0.45),0 2px 8px rgba(0,0,0,0.55);
+        display:flex;align-items:center;justify-content:center;
+        color:#78350f;font-size:16px;line-height:1;
+      ">★</div>`,
+      className: 'nro-my-institution-icon',
+      iconSize: [30, 30],
+      iconAnchor: [15, 15],
+    });
+
+    const marker = L.marker([institution.lat, institution.lng], { icon });
+    marker.bindPopup(
+      `<b>${institution.shortLabel}</b><br/><span style="font-size:11px;color:#888">Your institution</span>`
+    );
+    marker.addTo(map);
+
+    return () => {
+      map.removeLayer(marker);
+    };
+  }, [map, institution]);
 
   return null;
 }
@@ -149,6 +196,13 @@ export default function NroLookup({ onNavigate }) {
   const [activeRowId, setActiveRowId] = useState(null);
   const [flyTarget, setFlyTarget] = useState(null);
   const tableRef = useRef(null);
+
+  // Institution proximity search state
+  const [institutionQuery, setInstitutionQuery] = useState('');
+  const [institutionSuggestions, setInstitutionSuggestions] = useState([]);
+  const [myInstitution, setMyInstitution] = useState(null);
+  const [geocoding, setGeocoding] = useState(false);
+  const [geocodeError, setGeocodeError] = useState('');
 
   const organizations = nroData.organizations;
 
@@ -188,6 +242,18 @@ export default function NroLookup({ onNavigate }) {
   // Markers for the map
   const markers = useMemo(() => buildMarkers(filteredOrgs), [filteredOrgs]);
 
+  // Nearest NROs to the searched institution (computed against all orgs, not filtered)
+  const nearestNros = useMemo(() => {
+    if (!myInstitution) return [];
+    return organizations
+      .map((org) => ({
+        ...org,
+        distanceKm: haversineKm(myInstitution.lat, myInstitution.lng, org.lat, org.lng),
+      }))
+      .sort((a, b) => a.distanceKm - b.distanceKm)
+      .slice(0, 5);
+  }, [myInstitution, organizations]);
+
   // Handle clicking a map pin
   const handleMarkerClick = useCallback((id) => {
     setActiveRowId(id);
@@ -204,6 +270,55 @@ export default function NroLookup({ onNavigate }) {
   const handleRowClick = useCallback((org) => {
     setActiveRowId(org.id);
     setFlyTarget({ lat: org.lat, lng: org.lng, id: org.id });
+  }, []);
+
+  // Geocode an institution name via Nominatim
+  const handleInstitutionSearch = async (e) => {
+    e?.preventDefault();
+    const q = institutionQuery.trim();
+    if (!q) return;
+    setGeocoding(true);
+    setGeocodeError('');
+    setInstitutionSuggestions([]);
+    try {
+      const res = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5`,
+        { headers: { 'Accept-Language': 'en' } }
+      );
+      if (!res.ok) throw new Error();
+      const data = await res.json();
+      if (data.length === 0) {
+        setGeocodeError('No results found. Try a more specific name, or include the city and country.');
+      } else {
+        setInstitutionSuggestions(
+          data.map((r) => ({
+            displayName: r.display_name,
+            lat: parseFloat(r.lat),
+            lng: parseFloat(r.lon),
+          }))
+        );
+      }
+    } catch {
+      setGeocodeError('Search failed. Check your connection and try again.');
+    } finally {
+      setGeocoding(false);
+    }
+  };
+
+  const handleSelectInstitution = useCallback((suggestion) => {
+    setMyInstitution({
+      ...suggestion,
+      shortLabel: suggestion.displayName.split(',')[0],
+    });
+    setInstitutionSuggestions([]);
+    setFlyTarget({ lat: suggestion.lat, lng: suggestion.lng, zoom: 7 });
+  }, []);
+
+  const handleClearInstitution = useCallback(() => {
+    setMyInstitution(null);
+    setInstitutionQuery('');
+    setInstitutionSuggestions([]);
+    setGeocodeError('');
   }, []);
 
   return (
@@ -264,6 +379,7 @@ export default function NroLookup({ onNavigate }) {
             onMarkerClick={handleMarkerClick}
             activeId={activeRowId}
           />
+          <MyInstitutionLayer institution={myInstitution} />
           <FlyToHandler target={flyTarget} />
         </MapContainer>
       </div>
@@ -285,6 +401,118 @@ export default function NroLookup({ onNavigate }) {
             {country}
           </span>
         ))}
+        <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)' }}>
+          <span style={{
+            width: 12,
+            height: 12,
+            borderRadius: '50%',
+            backgroundColor: '#fbbf24',
+            display: 'inline-block',
+            border: '2px solid #fff',
+          }} />
+          Your institution
+        </span>
+      </div>
+
+      {/* Institution proximity check */}
+      <div className="nro-proximity-panel">
+        <div className="nro-proximity-header">
+          <strong>Check proximity to NROs</strong>
+          <span>Search any institution to see the nearest Named Research Organizations and their distances.</span>
+        </div>
+        <form className="nro-proximity-form" onSubmit={handleInstitutionSearch}>
+          <input
+            type="text"
+            className="nro-proximity-input"
+            placeholder="e.g. University of Toronto, MIT, Peking University…"
+            value={institutionQuery}
+            onChange={(e) => {
+              setInstitutionQuery(e.target.value);
+              if (institutionSuggestions.length > 0) setInstitutionSuggestions([]);
+              if (geocodeError) setGeocodeError('');
+            }}
+          />
+          <button
+            type="submit"
+            className="nro-proximity-btn"
+            disabled={geocoding || !institutionQuery.trim()}
+          >
+            {geocoding ? 'Searching…' : 'Find'}
+          </button>
+          {myInstitution && (
+            <button type="button" className="nro-proximity-clear" onClick={handleClearInstitution}>
+              Clear
+            </button>
+          )}
+        </form>
+
+        {institutionSuggestions.length > 0 && (
+          <ul className="nro-proximity-suggestions">
+            {institutionSuggestions.map((s, i) => (
+              <li
+                key={i}
+                className="nro-proximity-suggestion"
+                onClick={() => handleSelectInstitution(s)}
+              >
+                {s.displayName}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {geocodeError && <p className="nro-proximity-error">{geocodeError}</p>}
+
+        {myInstitution && nearestNros.length > 0 && (
+          <div className="nro-proximity-results">
+            <p className="nro-proximity-results-label">
+              Nearest NROs to <strong>{myInstitution.shortLabel}</strong>:
+            </p>
+            <table className="nro-proximity-results-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Organization</th>
+                  <th>Country</th>
+                  <th>Distance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {nearestNros.map((org, i) => (
+                  <tr
+                    key={org.id}
+                    onClick={() => handleRowClick(org)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <td className="nro-proximity-rank">{i + 1}</td>
+                    <td>{org.name}</td>
+                    <td>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span
+                          style={{
+                            width: 8,
+                            height: 8,
+                            borderRadius: '50%',
+                            backgroundColor: COUNTRY_COLORS[org.country] || '#94a3b8',
+                            display: 'inline-block',
+                            flexShrink: 0,
+                          }}
+                        />
+                        {org.country}
+                      </span>
+                    </td>
+                    <td className="nro-proximity-distance">
+                      {org.distanceKm < 1
+                        ? `${Math.round(org.distanceKm * 1000)} m`
+                        : org.distanceKm < 100
+                        ? `${org.distanceKm.toFixed(1)} km`
+                        : `${Math.round(org.distanceKm)} km`}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
 
       {/* Country filter chips */}

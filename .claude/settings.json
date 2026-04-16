@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const cmd=(JSON.parse(d).command||'');if(cmd.includes('git commit')){console.log('CLAUDE.md AUTO-UPDATE CHECK: Before committing, verify CLAUDE.md is current. Check for: new/removed tools (update Tools Inventory + Directory Structure), new data files, CSP directive changes, new Key Decisions or conventions, new CSS naming patterns. Update CLAUDE.md now if anything changed this session.');}}catch(e){}});\""
+          }
+        ]
+      }
+    ]
+  }
+}
