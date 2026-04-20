@@ -37,19 +37,44 @@ const TOOL_MAP = Object.fromEntries(
 );
 
 export default function Home({ onNavigate }) {
+  const totalTools = CATEGORIES.reduce((n, c) => n + c.tools.length, 0);
+
   return (
     <div className="home">
-      <div className="home-hero">
-        <h1>Research Security Toolkit</h1>
+      <section className="home-hero">
+        <div className="home-hero-eyebrow">
+          RESEARCH SECURITY TOOLKIT
+          <span className="home-hero-eyebrow-est">EST. 2026</span>
+        </div>
+        <h1 className="home-hero-title">
+          Canadian research security,<br />
+          <em>without the guesswork.</em>
+        </h1>
         <p className="home-hero-subtitle">
-          Interactive tools to help Canadian researchers and institutions navigate federal
-          research security policies, check compliance, and assess risks.
+          Interactive, plain-language tools for researchers, security officers, and grant
+          administrators navigating federal policy — STRAC, NSGRP, NROs, STRAs, export
+          controls, and the practices that tie them together.
         </p>
-      </div>
+        <div className="home-hero-pills">
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">🍁</span>Canadian policy</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">📄</span>Government sources</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">🔒</span>No accounts</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">🚫</span>Zero tracking</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">✦</span>Always free</span>
+        </div>
+        <p className="home-hero-fineprint">
+          <strong>Sources:</strong> Government of Canada — Safeguarding Your Research,
+          NSERC, CIHR, SSHRC, Global Affairs Canada, and Ontario MCU.
+        </p>
+      </section>
 
       {/* Start Here */}
-      <section className="home-start">
-        <h2 className="home-start-title">Where do I start?</h2>
+      <section className="home-section">
+        <header className="home-section-head">
+          <h2 className="home-section-title">Where do I start?</h2>
+          <span className="home-section-count">{SCENARIOS.length} scenarios</span>
+          <span className="home-section-desc">Common starting points</span>
+        </header>
         <div className="home-scenario-grid">
           {SCENARIOS.map(scenario => (
             <div key={scenario.id} className="home-scenario-card">
@@ -79,33 +104,39 @@ export default function Home({ onNavigate }) {
       </section>
 
       {/* All tools by category */}
-      <div className="home-all-tools-label">All Tools</div>
-      {CATEGORIES.map(cat => (
-        <section key={cat.id} className="home-category">
-          <h2 className="home-category-title">
-            <span className="home-category-emoji">{cat.emoji}</span>
-            {cat.label}
-          </h2>
-          <p className="home-category-desc">{cat.description}</p>
-          <div className="home-card-grid">
-            {cat.tools.map(tool => (
-              <button
-                key={tool.id}
-                className="home-card"
-                onClick={() => onNavigate(tool.slug)}
-              >
-                <h3 className="home-card-title">{tool.name}</h3>
-                <p className="home-card-desc">{tool.description}</p>
-                <div className="home-card-tags">
-                  {tool.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="home-card-tag">{tag}</span>
-                  ))}
-                </div>
-              </button>
-            ))}
+      <section className="home-section">
+        <header className="home-section-head">
+          <h2 className="home-section-title">All tools</h2>
+          <span className="home-section-count">{totalTools} total</span>
+          <span className="home-section-desc">Browse by category</span>
+        </header>
+        {CATEGORIES.map(cat => (
+          <div key={cat.id} className="home-category">
+            <h3 className="home-category-title">
+              <span className="home-category-emoji">{cat.emoji}</span>
+              {cat.label}
+              <span className="home-section-count">{cat.tools.length}</span>
+            </h3>
+            <div className="home-card-grid">
+              {cat.tools.map(tool => (
+                <button
+                  key={tool.id}
+                  className="home-card"
+                  onClick={() => onNavigate(tool.slug)}
+                >
+                  <h4 className="home-card-title">{tool.name}</h4>
+                  <p className="home-card-desc">{tool.description}</p>
+                  <div className="home-card-tags">
+                    {tool.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="home-card-tag">{tag}</span>
+                    ))}
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </section>
-      ))}
+        ))}
+      </section>
 
       <footer className="home-footer">
         <p>
