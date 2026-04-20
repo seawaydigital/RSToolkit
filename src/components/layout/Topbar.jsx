@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Shield, Menu, Search } from 'lucide-react';
+import { useEffect } from 'react';
+import { Menu, Search } from 'lucide-react';
 
 export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSearchOpen }) {
   useEffect(() => {
@@ -22,10 +22,11 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
           </button>
         )}
         <span className="topbar-logo" onClick={onLogoClick} style={{ cursor: 'pointer' }}>
-          <Shield size={20} />
-          RS Toolkit
+          <span className="topbar-logo-mark">RS</span>
+          <span className="topbar-logo-word">Toolkit</span>
         </span>
-        <span className="topbar-subtitle">Research Security Toolkit</span>
+        <span className="topbar-divider" aria-hidden="true"></span>
+        <span className="topbar-subtitle">Research Security</span>
       </div>
       <div className="topbar-right">
         <button
@@ -34,10 +35,11 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
           aria-label="Search tools (Ctrl+K)"
           title="Search tools (Ctrl+K)"
         >
-          <Search size={16} />
-          <span className="topbar-search-label">Search</span>
-          <kbd className="topbar-search-kbd">Ctrl+K</kbd>
+          <Search size={15} />
+          <span className="topbar-search-label">Search tools</span>
+          <kbd className="topbar-search-kbd">Ctrl K</kbd>
         </button>
+        <span className="topbar-badge">Canadian sources</span>
       </div>
     </header>
   );

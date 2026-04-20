@@ -187,7 +187,15 @@ Header pattern:
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
 - **Map tiles**: CartoDB Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`) — chosen specifically for English-language place name labels.
-- **Source links**: All policy sources must be hyperlinked, never plain text. Inline hyperlinks across the site use `var(--link)` (`#93c5fd`) — a soft blue that's readable on dark backgrounds without being harsh. Hover state uses `var(--link-hover)` (`#fff`). Do not use `var(--accent)` for plain text links; that color is reserved for interactive UI elements (buttons, active states, borders).
+- **Design system (v2 — 2026-04)**: The toolkit uses an editorial/serif aesthetic with a deep forest-slate base and terracotta-copper accent — deliberately distinct from generic dark-navy + blue/gold SaaS looks. Key tokens in `global.css`:
+  - `--bg-primary: #0a1411` (forest-slate base; `body` has a subtle radial-gradient overlay for warmth)
+  - `--accent: #e76f51` (terracotta-copper — primary interactive color and brand accent)
+  - `--link: #f4a58f` (warm peach — inline links; hover `#ffe2d2`)
+  - `--font-serif: 'Fraunces'` (hero, `.home-section-title`, `.home-scenario-label`, `.tool-page-header h1`, topbar `RS` mark — uses `font-variation-settings` with `SOFT` + `opsz` axes for characterful italics)
+  - `--font-sans: 'Geist'` (body text)
+  - `--font-mono: 'JetBrains Mono'` (counts, kbd)
+  - Fonts load from Google Fonts via `<link>` in `index.html`. CSP `style-src` allows `https://fonts.googleapis.com`; `font-src` allows `https://fonts.gstatic.com`.
+- **Source links**: All policy sources must be hyperlinked, never plain text. Inline hyperlinks across the site use `var(--link)` (`#f4a58f`) — warm peach readable on the dark forest-slate base. Hover state uses `var(--link-hover)` (`#ffe2d2`). Do not use `var(--accent)` for plain text links; that color is reserved for interactive UI elements (buttons, active states, borders).
 - **UBC attribution**: Do not attribute any content to UBC specifically. Use "Canadian university research security programs" for the Risk Mitigation tool sourcing.
 - **Sanctioned countries**: NRO Lookup shows a banner for comprehensively sanctioned countries (North Korea/DPRK, Belarus). Russia and Iran appear in the NRO list and are noted as also comprehensively sanctioned.
 - **NRO map cluster colors**: `MarkerCluster` in `NroLookup.jsx` uses a custom `iconCreateFunction` — do NOT rely on Leaflet's default cluster icons. Clusters tally their children by `fillColor` and render as a solid `divIcon` in the **dominant** country color (Russia `#ef4444`, China `#3b82f6`, Iran `#22c55e`), matching the legend. Leaflet's default green/yellow/orange cluster colors (which scale with count, not country) must not be reintroduced. If adding a new country, update `COUNTRY_COLORS` at the top of `NroLookup.jsx` and the legend will pick it up automatically.

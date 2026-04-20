@@ -40,6 +40,7 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
       {isOpen && <div className="sidebar-backdrop" onClick={onClose} />}
       <nav className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} aria-label="Tool navigation">
         <div className="sidebar-scroll">
+          <div className="sidebar-eyebrow">Toolkit · Categories</div>
           {CATEGORIES.map(cat => {
             const isExpanded = expanded.has(cat.id);
             return (
