@@ -136,7 +136,7 @@ export const triAgencyData = {
       ],
       relatedTool: 'nsgrp-flowchart',
       relatedToolLabel: 'NSGRP Flowchart',
-      officialUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships',
+      officialUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
     },
     {
       id: 'strac',

@@ -3,7 +3,7 @@ export const nsgrpFlow = {
   title: "NSGRP Research Partnership Decision Flow",
   lastUpdated: "2025-01-24",
   policySource: "National Security Guidelines for Research Partnerships",
-  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships",
+  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   nodes: [
     {
       id: "start",
