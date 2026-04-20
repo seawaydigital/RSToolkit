@@ -87,7 +87,7 @@ All policy content is drawn from official Canadian Government sources:
 
 - [Safeguarding Your Research](https://science.gc.ca/site/science/en/safeguarding-your-research) — Government of Canada
 - [STRAC Policy](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-and-affiliations-concern) — Government of Canada
-- [NSGRP](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships) — Government of Canada
+- [NSGRP](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships) — Government of Canada
 - [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/named-research-organizations) — Government of Canada
 - [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-areas) — Government of Canada
 - [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario

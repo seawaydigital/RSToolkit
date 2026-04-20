@@ -20,7 +20,7 @@ export const glossaryData = {
       definition:
         'In the context of research security, due diligence refers to the process by which researchers and institutions assess potential risks associated with research partnerships, collaborators, and funding sources prior to and during the research relationship. This includes verifying the identity and affiliations of partners, assessing whether research areas fall under STRA, and determining whether any partners appear on the NRO list. The NSGRP states that researchers and institutions share responsibility for conducting appropriate due diligence.',
       source: 'National Security Guidelines for Research Partnerships (NSGRP), Government of Canada',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
       category: 'Policy Terms',
       tags: ['compliance', 'partnerships'],
     },
@@ -64,7 +64,7 @@ export const glossaryData = {
       definition:
         'Guidelines established by the Government of Canada (administered through the tri-agency: NSERC, SSHRC, CIHR) requiring that research partnership applications be assessed against national security considerations. The NSGRP applies to all research partnership applications involving private-sector organizations, non-governmental organizations, and international organizations. Applicants must complete a risk assessment questionnaire, and tri-agency program officers review for national security concerns before funding is awarded. Applications flagged for elevated risk may be referred to national security bodies for further review.',
       source: 'National Security Guidelines for Research Partnerships (NSGRP), Government of Canada, 2021',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
       category: 'Policy Terms',
       tags: ['nsgrp', 'partnerships', 'compliance'],
     },
@@ -86,7 +86,7 @@ export const glossaryData = {
       definition:
         'The process of systematically evaluating the potential national security risks associated with a research project, partnership, or funding arrangement. Under the NSGRP, all eligible partnership grant applications must include a risk assessment completed by the applying researcher(s). The assessment considers factors such as the sensitivity of the research area (STRA status), the nature of the partner organization (NRO status, country of origin), the potential for misuse of research outcomes, and proposed safeguards. Institutions are expected to support researchers in conducting meaningful risk assessments.',
       source: 'National Security Guidelines for Research Partnerships (NSGRP), Government of Canada',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
       category: 'Policy Terms',
       tags: ['compliance', 'assessment'],
     },
@@ -97,7 +97,7 @@ export const glossaryData = {
       definition:
         'Steps taken by researchers and institutions to reduce the likelihood or impact of national security risks identified through a risk assessment. Under the NSGRP, when a partnership grant application is flagged as elevated risk, the tri-agency may work with the applicant to implement mitigation measures as a condition of funding. Common mitigation strategies include restricting access to sensitive research outputs, implementing data management controls, limiting partner involvement in certain research activities, requiring publication approval processes, or restructuring the partnership to exclude higher-risk elements. Mitigation does not eliminate risk but brings it to an acceptable level.',
       source: 'National Security Guidelines for Research Partnerships (NSGRP), Government of Canada',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/national-security-guidelines-research-partnerships',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
       category: 'Policy Terms',
       tags: ['compliance', 'assessment', 'nsgrp'],
     },

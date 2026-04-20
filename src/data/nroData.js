@@ -8,7 +8,7 @@
  */
 
 const nroData = {
-  lastUpdated: "2025-03-11",
+  lastUpdated: "2024-04-18",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations",
   organizations: [
