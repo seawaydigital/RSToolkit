@@ -203,6 +203,8 @@ export default function NroLookup({ onNavigate }) {
   const [myInstitution, setMyInstitution] = useState(null);
   const [geocoding, setGeocoding] = useState(false);
   const [geocodeError, setGeocodeError] = useState('');
+  const [tier1Open, setTier1Open] = useState(false);
+  const [tier2Open, setTier2Open] = useState(false);
 
   const organizations = nroData.organizations;
 
@@ -335,30 +337,89 @@ export default function NroLookup({ onNavigate }) {
         </p>
       </div>
 
-      {/* Fully sanctioned countries warning */}
+      {/* Sanctions context for research collaboration */}
       <div className="nro-sanctioned-banner">
-        <div className="nro-sanctioned-title">
-          ⚠️ Comprehensively Sanctioned Countries
-        </div>
-        <p className="nro-sanctioned-body">
-          The following countries are subject to comprehensive Canadian sanctions — all research
-          collaboration, funding, and technology transfer is prohibited regardless of whether
-          a specific organization appears on the NRO list below.
-        </p>
-        <div className="nro-sanctioned-countries">
-          {[
-            { name: 'North Korea (DPRK)', basis: 'UNA + SEMA — ban on all new investment; comprehensive trade, financial, and technical restrictions' },
-            { name: 'Belarus', basis: 'SEMA — broad sectoral restrictions on finance, energy, exports, and controlled technology' },
-          ].map(c => (
-            <div key={c.name} className="nro-sanctioned-country">
-              <span className="nro-sanctioned-country-name">{c.name}</span>
-              <span className="nro-sanctioned-country-basis">{c.basis}</span>
+        <button
+          type="button"
+          className={`nro-sanctioned-toggle nro-sanctioned-toggle--tier1 ${tier1Open ? 'is-open' : ''}`}
+          onClick={() => setTier1Open(v => !v)}
+          aria-expanded={tier1Open}
+          aria-controls="nro-sanctioned-tier1-content"
+        >
+          <span className="nro-sanctioned-title nro-sanctioned-title--tier1">
+            ⛔ Tier 1 — Comprehensive prohibitions (no research engagement)
+          </span>
+          <span className="nro-sanctioned-count">2 destinations</span>
+          <span className="nro-sanctioned-chevron" aria-hidden="true">▸</span>
+        </button>
+        {tier1Open && (
+          <div id="nro-sanctioned-tier1-content" className="nro-sanctioned-content">
+            <p className="nro-sanctioned-body">
+              Canadian sanctions functionally prohibit all research collaboration, funding,
+              technology transfer, and most in-kind support with these destinations,
+              regardless of whether a specific organization appears on the NRO list.
+            </p>
+            <div className="nro-sanctioned-countries">
+              {[
+                { name: 'North Korea (DPRK)', basis: 'UNA + SEMA — near-total trade, financial, and technical embargo; asset freeze on all listed persons' },
+                { name: 'Occupied regions of Ukraine', basis: 'SEMA — Crimea, Donetsk, Luhansk, Zaporizhzhia, and Kherson treated as comprehensively sanctioned territories' },
+              ].map(c => (
+                <div key={c.name} className="nro-sanctioned-country">
+                  <span className="nro-sanctioned-country-name">{c.name}</span>
+                  <span className="nro-sanctioned-country-basis">{c.basis}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        )}
+
+        <div className="nro-sanctioned-divider" />
+
+        <button
+          type="button"
+          className={`nro-sanctioned-toggle nro-sanctioned-toggle--tier2 ${tier2Open ? 'is-open' : ''}`}
+          onClick={() => setTier2Open(v => !v)}
+          aria-expanded={tier2Open}
+          aria-controls="nro-sanctioned-tier2-content"
+        >
+          <span className="nro-sanctioned-title nro-sanctioned-title--tier2">
+            ⚠️ Tier 2 — Broad sectoral sanctions (heightened scrutiny required)
+          </span>
+          <span className="nro-sanctioned-count">4 destinations</span>
+          <span className="nro-sanctioned-chevron" aria-hidden="true">▸</span>
+        </button>
+        {tier2Open && (
+          <div id="nro-sanctioned-tier2-content" className="nro-sanctioned-content">
+            <p className="nro-sanctioned-body">
+              Sanctions vary in scope but are substantial enough to warrant
+              institutional review of any proposed partnership. Scope is sector-
+              or list-based rather than comprehensive, so research is not
+              categorically banned — but due diligence must confirm no listed
+              person, controlled good, or restricted sector is involved. Many
+              Canadian institutions have elected to pause new collaborations in
+              these jurisdictions pending federal guidance.
+            </p>
+            <div className="nro-sanctioned-countries">
+              {[
+                { name: 'Russia', basis: 'SEMA — sweeping list-based asset freezes, dealings prohibitions, and sectoral restrictions on finance, energy, defence, and dual-use technology' },
+                { name: 'Belarus', basis: 'SEMA — broad restrictions on finance, energy, exports, and controlled technology; extensive list of designated persons' },
+                { name: 'Iran', basis: 'SEMA + UNA — list-based designations plus prohibitions on nuclear, missile, and military-related goods, services, and financial dealings' },
+                { name: 'Myanmar (Burma)', basis: 'SEMA — targeted designations of senior military officials and affiliated entities, arms embargo, and prohibition on supplying technical data related to military activities' },
+              ].map(c => (
+                <div key={c.name} className="nro-sanctioned-country">
+                  <span className="nro-sanctioned-country-name">{c.name}</span>
+                  <span className="nro-sanctioned-country-basis">{c.basis}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <p className="nro-sanctioned-note">
-          Russia and Iran appear in the NRO list below and are also subject to comprehensive sanctions.
-          Consult <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx" target="_blank" rel="noopener noreferrer">Global Affairs Canada</a> for the current full sanctions list.
+          This is a high-level summary for research collaboration decisions, not legal advice.
+          The authoritative and frequently-updated list lives with{' '}
+          <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx" target="_blank" rel="noopener noreferrer">Global Affairs Canada</a>.
+          Always confirm with your institution&rsquo;s research security or legal office before engaging.
         </p>
       </div>
 
