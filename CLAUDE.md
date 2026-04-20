@@ -236,7 +236,8 @@ Header pattern:
 - **Branch**: `master` — every push triggers the GitHub Actions workflow
 - **Workflow**: `.github/workflows/deploy.yml` — builds with Node 20, uploads `dist/`, deploys to GitHub Pages
 - **Build command**: `npm run build` → `vite build`
-- **Preview locally**: `npm run dev` (Vite dev server)
+- **Preview locally**: `npm run dev` (Vite dev server — defaults to port 5173)
+- **Dev port override**: `vite.config.js` reads `process.env.PORT` when set and enables `strictPort` in that case. This lets the Claude Code preview tool assign its own port without Vite drifting to 5174. Production builds are unaffected.
 
 ---
 
