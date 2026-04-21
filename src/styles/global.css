@@ -517,22 +517,23 @@ a:hover {
 }
 
 .sidebar-sister-mark {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-style: italic;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-style: normal;
   font-size: 22px;
-  color: var(--accent);
-  letter-spacing: -0.04em;
-  font-variation-settings: 'SOFT' 80, 'opsz' 48;
+  color: #facc15;
+  letter-spacing: -0.01em;
 }
 
 .sidebar-sister-word {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: #ffffff;
   letter-spacing: -0.01em;
-  margin-left: 2px;
+  margin-left: 4px;
+  font-variation-settings: 'SOFT' 50, 'opsz' 36;
 }
 
 .sidebar-sister-tagline {
