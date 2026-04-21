@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { CATEGORIES } from '../../data/toolRegistry';
 
 export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) {
@@ -81,10 +81,12 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
           title="Visit our sister site: RDM Toolkit"
           aria-label="Sister site: RDM Toolkit (opens in new tab)"
         >
-          <span className="sidebar-sister-wordmark">
-            <span className="sidebar-sister-wordmark-rdm">RDM</span>
-            <span className="sidebar-sister-wordmark-toolkit">Toolkit</span>
+          <ArrowUpRight className="sidebar-sister-arrow" size={16} aria-hidden="true" />
+          <span className="sidebar-sister-logo">
+            <span className="sidebar-sister-mark">RDM</span>
+            <span className="sidebar-sister-word">Toolkit</span>
           </span>
+          <span className="sidebar-sister-tagline">Research Data Management</span>
         </a>
       </nav>
     </>
