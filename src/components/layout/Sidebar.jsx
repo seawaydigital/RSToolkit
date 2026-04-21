@@ -73,6 +73,19 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
             );
           })}
         </div>
+        <a
+          className="sidebar-sister"
+          href="https://rdmtoolkit.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Visit our sister site: RDM Toolkit"
+          aria-label="Sister site: RDM Toolkit (opens in new tab)"
+        >
+          <span className="sidebar-sister-wordmark">
+            <span className="sidebar-sister-wordmark-rdm">RDM</span>
+            <span className="sidebar-sister-wordmark-toolkit">Toolkit</span>
+          </span>
+        </a>
       </nav>
     </>
   );
