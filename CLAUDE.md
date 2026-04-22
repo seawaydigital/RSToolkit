@@ -43,7 +43,7 @@ src/
       Home.jsx                   # Landing page: "Where do I start?" scenarios + all-tools grid
     layout/
       Topbar.jsx                 # Title, hamburger (mobile), Ctrl+K search trigger
-      Sidebar.jsx                # Category/tool nav, collapsible on mobile (<768px)
+      Sidebar.jsx                # Category/tool nav + RDM Toolkit sister-site card (bottom); collapsible on mobile (<768px)
       MainContent.jsx            # Scroll container for tool pages
     ui/
       SearchBar.jsx              # GlobalSearchModal (Ctrl+K command palette)
@@ -216,6 +216,12 @@ Header pattern:
 - **npm audit**: Run `npm audit fix` after any dependency changes. As of 2026-04-08 the project has 0 known vulnerabilities.
 - **Git worktrees**: Feature branches use `.worktrees/<branch-name>/` (already in `.gitignore`). Create with `git worktree add .worktrees/<name> -b <branch>`, remove with `git worktree remove .worktrees/<name>` after merging.
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
+- **Sister-site sidebar card (RDM Toolkit)**: `Sidebar.jsx` pins a sister-site card at the bottom-left of the sidebar (below `.sidebar-scroll`, which is `flex: 1` — no `position: fixed`). It links to `https://rdmtoolkit.ca` in a new tab and uses the **RDM Toolkit brand wordmark** (do NOT mirror the RS Toolkit pairing here):
+  - `.sidebar-sister-mark` ("RDM") — **Geist sans-serif, weight 800, upright, gold `#facc15`**
+  - `.sidebar-sister-word` ("Toolkit") — **Fraunces serif, weight 700, upright (not italic), white `#ffffff`**
+  - `.sidebar-sister-tagline` ("Research Data Management") — small uppercase letter-spaced muted text, reuses `.sidebar-eyebrow` typography pattern
+  - `.sidebar-sister-arrow` — absolute-positioned `ArrowUpRight` (lucide, 16px) in the top-right; slides up-right and warms to `var(--accent)` on hover
+  - Card: `#0b1a14` bg, `var(--border)` border that warms to copper on hover with a soft glow + 1px lift. This is a peer-brand affordance, not an ad-hoc chip — treat it accordingly when editing.
 
 ---
 
