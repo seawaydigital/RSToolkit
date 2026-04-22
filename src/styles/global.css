@@ -2326,6 +2326,54 @@ a:hover {
   text-decoration: underline;
 }
 
+.ec-guide-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  background: rgba(231, 111, 81, 0.08);
+  border: 1px solid rgba(231, 111, 81, 0.35);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.ec-guide-cta:hover {
+  background: rgba(231, 111, 81, 0.14);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.ec-guide-cta-body {
+  flex: 1;
+}
+
+.ec-guide-cta-body strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.ec-guide-cta-body p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ec-guide-cta-body em {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.ec-guide-cta-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
 /* ===== Tri-Agency Guide ===== */
 .trag-agencies {
   display: flex;

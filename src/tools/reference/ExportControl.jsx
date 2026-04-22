@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { ChevronDown, ChevronRight } from 'lucide-react';
+import { ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
 import { exportControlData } from '../../data/exportControlData';
 
 const fuseOptions = {
@@ -68,6 +68,21 @@ export default function ExportControl({ onNavigate }) {
           </a>
         </div>
       </div>
+
+      <a
+        className="ec-guide-cta"
+        href="https://www.international.gc.ca/trade-commerce/controls-controles/ecl-lec/index.aspx?lang=eng"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="ec-guide-cta-body">
+          <strong>Looking up a specific ECL item?</strong>
+          <p>
+            The full Export Control List contains over 2,000 individually-numbered items across nine Groups (Wassenaar dual-use, Munitions, Nuclear, MTCR, CBW, CWC, Information Security). Browse the official <em>Guide to Canada's Export Control List</em> published by Global Affairs Canada for item-level technical parameters.
+          </p>
+        </div>
+        <ExternalLink size={18} className="ec-guide-cta-icon" aria-hidden />
+      </a>
 
       <input
         className="stra-search"
