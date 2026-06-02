@@ -82,6 +82,25 @@ async function nominatimSearch(query) {
   return res.json();
 }
 
+// Photon (komoot) — different OSM index, often finds institutions Nominatim misses
+// Returns same shape as Nominatim: [{ display_name, lat, lon }]
+async function photonSearch(query) {
+  const res = await fetch(
+    `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&limit=5&lang=en`
+  );
+  if (!res.ok) throw new Error('Photon error');
+  const data = await res.json();
+  return data.features.map((f) => {
+    const p = f.properties;
+    const label = [p.name, p.street, p.city, p.state, p.country].filter(Boolean).join(', ');
+    return {
+      display_name: label,
+      lat: f.geometry.coordinates[1],
+      lon: f.geometry.coordinates[0],
+    };
+  });
+}
+
 // Strip institution name — return everything after the first comma, or null
 function extractAddressPart(query) {
   const commaIdx = query.indexOf(',');
@@ -333,10 +352,14 @@ export default function NroLookup({ onNavigate }) {
     setCoordError('');
     try {
       let data = await nominatimSearch(q);
-      // If no results and query has address info after a comma, retry with address only
+      // Retry with address-only portion if institution name not in Nominatim
       if (data.length === 0) {
         const addr = extractAddressPart(q);
         if (addr) data = await nominatimSearch(addr);
+      }
+      // Final fallback: Photon geocoder (different OSM index)
+      if (data.length === 0) {
+        data = await photonSearch(q);
       }
       if (data.length === 0) {
         setGeocodeError('No results found. Try a different name, or enter coordinates manually below.');
@@ -617,6 +640,16 @@ export default function NroLookup({ onNavigate }) {
               </button>
             </form>
             {coordError && <p className="nro-proximity-error">{coordError}</p>}
+            <p className="nro-proximity-coord-hint">
+              <a
+                href={`https://www.google.com/maps/search/${encodeURIComponent(institutionQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Find on Google Maps ↗
+              </a>
+              {' '}— right-click the location, then click the coordinates at the top of the menu to copy them.
+            </p>
           </div>
         )}
 
