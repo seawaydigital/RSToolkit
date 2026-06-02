@@ -25,6 +25,18 @@ const COUNTRY_COLORS = {
   Iran: '#22c55e',
 };
 
+// Jaccard word-overlap score between two name strings (0–1)
+function nameOverlapScore(a, b) {
+  const tokenize = (s) =>
+    s.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter((w) => w.length >= 3);
+  const ta = new Set(tokenize(a));
+  const tb = new Set(tokenize(b));
+  if (ta.size === 0 || tb.size === 0) return 0;
+  const intersection = [...ta].filter((w) => tb.has(w)).length;
+  const union = new Set([...ta, ...tb]).size;
+  return intersection / union;
+}
+
 // Haversine distance between two lat/lng points, returns km
 function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371;
@@ -248,13 +260,18 @@ export default function NroLookup({ onNavigate }) {
   const nearestNros = useMemo(() => {
     if (!myInstitution) return [];
     return organizations
-      .map((org) => ({
-        ...org,
-        distanceKm: haversineKm(myInstitution.lat, myInstitution.lng, org.lat, org.lng),
-      }))
+      .map((org) => {
+        const distanceKm = haversineKm(myInstitution.lat, myInstitution.lng, org.lat, org.lng);
+        const queryNames = [institutionQuery, myInstitution.shortLabel];
+        const orgNames = [org.name, ...(org.aliases || [])];
+        const maxScore = Math.max(
+          ...queryNames.flatMap((q) => orgNames.map((n) => nameOverlapScore(q, n)))
+        );
+        return { ...org, distanceKm, isMatch: maxScore >= 0.5 && distanceKm < 2 };
+      })
       .sort((a, b) => a.distanceKm - b.distanceKm)
       .slice(0, 5);
-  }, [myInstitution, organizations]);
+  }, [myInstitution, organizations, institutionQuery]);
 
   // Handle clicking a map pin
   const handleMarkerClick = useCallback((id) => {
@@ -562,7 +579,7 @@ export default function NroLookup({ onNavigate }) {
                       </span>
                     </td>
                     <td className="nro-proximity-distance">
-                      {org.distanceKm < 0.1
+                      {org.isMatch
                         ? <span className="nro-proximity-match">Match</span>
                         : org.distanceKm < 1
                         ? `${Math.round(org.distanceKm * 1000)} m`
