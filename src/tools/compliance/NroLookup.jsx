@@ -562,7 +562,9 @@ export default function NroLookup({ onNavigate }) {
                       </span>
                     </td>
                     <td className="nro-proximity-distance">
-                      {org.distanceKm < 1
+                      {org.distanceKm < 0.1
+                        ? <span className="nro-proximity-match">Match</span>
+                        : org.distanceKm < 1
                         ? `${Math.round(org.distanceKm * 1000)} m`
                         : org.distanceKm < 100
                         ? `${org.distanceKm.toFixed(1)} km`
