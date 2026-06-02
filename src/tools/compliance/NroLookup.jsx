@@ -73,6 +73,32 @@ function buildFuse(orgs) {
   });
 }
 
+async function nominatimSearch(query) {
+  const res = await fetch(
+    `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=5`,
+    { headers: { 'Accept-Language': 'en' } }
+  );
+  if (!res.ok) throw new Error('Nominatim error');
+  return res.json();
+}
+
+// Strip institution name — return everything after the first comma, or null
+function extractAddressPart(query) {
+  const commaIdx = query.indexOf(',');
+  if (commaIdx === -1) return null;
+  const addr = query.slice(commaIdx + 1).trim();
+  return addr.length >= 4 ? addr : null;
+}
+
+function parseLatLng(input) {
+  const m = input.trim().match(/^(-?\d+\.?\d*)[,\s]+(-?\d+\.?\d*)$/);
+  if (!m) return null;
+  const lat = parseFloat(m[1]);
+  const lng = parseFloat(m[2]);
+  if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
+  return { lat, lng };
+}
+
 // Custom MarkerCluster component for react-leaflet v4
 function MarkerCluster({ markers, onMarkerClick, activeId }) {
   const map = useMap();
@@ -215,6 +241,9 @@ export default function NroLookup({ onNavigate }) {
   const [myInstitution, setMyInstitution] = useState(null);
   const [geocoding, setGeocoding] = useState(false);
   const [geocodeError, setGeocodeError] = useState('');
+  const [showCoordInput, setShowCoordInput] = useState(false);
+  const [coordInput, setCoordInput] = useState('');
+  const [coordError, setCoordError] = useState('');
   const [tier1Open, setTier1Open] = useState(false);
   const [tier2Open, setTier2Open] = useState(false);
 
@@ -291,7 +320,7 @@ export default function NroLookup({ onNavigate }) {
     setFlyTarget({ lat: org.lat, lng: org.lng, id: org.id });
   }, []);
 
-  // Geocode an institution name via Nominatim
+  // Geocode an institution name via Nominatim, with address-only fallback
   const handleInstitutionSearch = async (e) => {
     e?.preventDefault();
     const q = institutionQuery.trim();
@@ -299,15 +328,19 @@ export default function NroLookup({ onNavigate }) {
     setGeocoding(true);
     setGeocodeError('');
     setInstitutionSuggestions([]);
+    setShowCoordInput(false);
+    setCoordInput('');
+    setCoordError('');
     try {
-      const res = await fetch(
-        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5`,
-        { headers: { 'Accept-Language': 'en' } }
-      );
-      if (!res.ok) throw new Error();
-      const data = await res.json();
+      let data = await nominatimSearch(q);
+      // If no results and query has address info after a comma, retry with address only
       if (data.length === 0) {
-        setGeocodeError('No results found. Try a more specific name, or include the city and country.');
+        const addr = extractAddressPart(q);
+        if (addr) data = await nominatimSearch(addr);
+      }
+      if (data.length === 0) {
+        setGeocodeError('No results found. Try a different name, or enter coordinates manually below.');
+        setShowCoordInput(true);
       } else {
         setInstitutionSuggestions(
           data.map((r) => ({
@@ -338,7 +371,28 @@ export default function NroLookup({ onNavigate }) {
     setInstitutionQuery('');
     setInstitutionSuggestions([]);
     setGeocodeError('');
+    setShowCoordInput(false);
+    setCoordInput('');
+    setCoordError('');
   }, []);
+
+  const handleCoordSubmit = useCallback((e) => {
+    e.preventDefault();
+    const parsed = parseLatLng(coordInput);
+    if (!parsed) {
+      setCoordError('Enter a valid lat, lng (e.g. 31.2304, 121.4737)');
+      return;
+    }
+    const shortLabel = institutionQuery.split(',')[0].trim() || 'Custom location';
+    handleSelectInstitution({
+      displayName: `${shortLabel} (${parsed.lat.toFixed(4)}, ${parsed.lng.toFixed(4)})`,
+      lat: parsed.lat,
+      lng: parsed.lng,
+    });
+    setShowCoordInput(false);
+    setGeocodeError('');
+    setCoordError('');
+  }, [coordInput, institutionQuery, handleSelectInstitution]);
 
   return (
     <div className="tool-page">
@@ -539,6 +593,32 @@ export default function NroLookup({ onNavigate }) {
         )}
 
         {geocodeError && <p className="nro-proximity-error">{geocodeError}</p>}
+
+        {showCoordInput && (
+          <div className="nro-proximity-coord-fallback">
+            <p className="nro-proximity-coord-label">Enter coordinates manually:</p>
+            <form className="nro-proximity-form" onSubmit={handleCoordSubmit}>
+              <input
+                type="text"
+                className="nro-proximity-input"
+                placeholder="lat, lng  (e.g. 31.2304, 121.4737)"
+                value={coordInput}
+                onChange={(e) => {
+                  setCoordInput(e.target.value);
+                  if (coordError) setCoordError('');
+                }}
+              />
+              <button
+                type="submit"
+                className="nro-proximity-btn"
+                disabled={!coordInput.trim()}
+              >
+                Use
+              </button>
+            </form>
+            {coordError && <p className="nro-proximity-error">{coordError}</p>}
+          </div>
+        )}
 
         {myInstitution && nearestNros.length > 0 && (
           <div className="nro-proximity-results">

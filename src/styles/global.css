@@ -1885,6 +1885,18 @@ a:hover {
   color: var(--red);
 }
 
+.nro-proximity-coord-fallback {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.nro-proximity-coord-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+}
+
 .nro-proximity-results {
   margin-top: 12px;
   padding-top: 12px;
