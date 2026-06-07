@@ -315,7 +315,7 @@ export default function NroLookup({ onNavigate }) {
         const maxScore = Math.max(
           ...queryNames.flatMap((q) => orgNames.map((n) => nameOverlapScore(q, n)))
         );
-        return { ...org, distanceKm, isMatch: (maxScore >= 0.5 && distanceKm < 2) || distanceKm < 1 };
+        return { ...org, distanceKm, isMatch: maxScore >= 0.5 && distanceKm < 2 };
       })
       .sort((a, b) => a.distanceKm - b.distanceKm)
       .slice(0, 5);
