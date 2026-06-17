@@ -21,10 +21,15 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
             <Menu size={20} />
           </button>
         )}
-        <span className="topbar-logo" onClick={onLogoClick} style={{ cursor: 'pointer' }}>
+        <button
+          type="button"
+          className="topbar-logo"
+          onClick={onLogoClick}
+          aria-label="Research Security Toolkit — go to home"
+        >
           <span className="topbar-logo-mark">RS</span>
           <span className="topbar-logo-word">Toolkit</span>
-        </span>
+        </button>
         <span className="topbar-divider" aria-hidden="true"></span>
         <span className="topbar-subtitle">Research Security</span>
       </div>

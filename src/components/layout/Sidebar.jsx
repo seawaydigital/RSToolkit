@@ -37,7 +37,14 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
 
   return (
     <>
-      {isOpen && <div className="sidebar-backdrop" onClick={onClose} />}
+      {isOpen && (
+        <button
+          type="button"
+          className="sidebar-backdrop"
+          aria-label="Close menu"
+          onClick={onClose}
+        />
+      )}
       <nav className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} aria-label="Tool navigation">
         <div className="sidebar-scroll">
           <div className="sidebar-eyebrow">Toolkit · Categories</div>

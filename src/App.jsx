@@ -30,7 +30,7 @@ function getHashRoute() {
 function ErrorFallback({ error, onReset }) {
   return (
     <div className="error-fallback">
-      <h2>Something went wrong</h2>
+      <h1>Something went wrong</h1>
       <p>{error?.message || 'An unexpected error occurred.'}</p>
       <button onClick={onReset}>Go Home</button>
     </div>
@@ -98,6 +98,18 @@ export default function App() {
 
   return (
     <div className="app">
+      <a
+        href="#main-content"
+        className="skip-link"
+        onClick={(e) => {
+          // Hash is used for routing, so move focus manually instead of
+          // letting the anchor change window.location.hash.
+          e.preventDefault();
+          document.getElementById('main-content')?.focus();
+        }}
+      >
+        Skip to main content
+      </a>
       <Topbar
         onMenuToggle={() => setSidebarOpen(prev => !prev)}
         showMenuButton={isMobile}

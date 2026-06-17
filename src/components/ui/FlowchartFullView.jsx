@@ -211,6 +211,8 @@ export default function FlowchartFullView({ data, onNavigate }) {
           height={svgHeight}
           viewBox={`0 0 ${svgWidth} ${svgHeight}`}
           style={{ display: 'block', margin: '0 auto' }}
+          role="img"
+          aria-label={`${data.title} decision flowchart. Use Guided Mode for a step-by-step, keyboard-accessible version.`}
         >
           <g transform={`translate(${PADDING}, ${PADDING})`}>
             {edges.map((edge, i) => (

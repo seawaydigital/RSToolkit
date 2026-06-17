@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { ChevronDown, ChevronRight, X } from 'lucide-react';
 import { straData } from '../../data/straData';
@@ -24,6 +24,16 @@ export default function StraLookup({ onNavigate }) {
   const [expanded, setExpanded] = useState(new Set());
   const [wizardOpen, setWizardOpen] = useState(false);
   const [wizardHistory, setWizardHistory] = useState([straWizard.startQuestion]);
+
+  // Close the wizard dialog with Escape (keyboard equivalent to clicking the backdrop).
+  useEffect(() => {
+    if (!wizardOpen) return;
+    function onKey(e) {
+      if (e.key === 'Escape') setWizardOpen(false);
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [wizardOpen]);
 
   // Filter categories based on search
   const { filteredCategories, matchedSubIds } = useMemo(() => {
@@ -161,8 +171,20 @@ export default function StraLookup({ onNavigate }) {
 
       {/* Wizard Modal */}
       {wizardOpen && currentQ && (
-        <div className="wizard-overlay" onClick={() => setWizardOpen(false)}>
-          <div className="wizard-modal" onClick={e => e.stopPropagation()} style={{ position: 'relative' }}>
+        // Backdrop click-to-dismiss is a pointer convenience; Escape closes the
+        // dialog for keyboard users (see effect above).
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
+        <div
+          className="wizard-overlay"
+          onClick={e => { if (e.target === e.currentTarget) setWizardOpen(false); }}
+        >
+          <div
+            className="wizard-modal"
+            style={{ position: 'relative' }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="STRA guided assessment"
+          >
             <button
               onClick={() => setWizardOpen(false)}
               style={{
