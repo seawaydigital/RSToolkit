@@ -20,7 +20,7 @@
   /* Text — cool near-white on cobalt */
   --text-primary: #eef3f8;
   --text-secondary: #9fb4c9;
-  --text-muted: #6b8197;
+  --text-muted: #7d98b0;
 
   /* Accent — Blaze. Primary interactive color and brand accent */
   --accent: #FFC20E;
@@ -72,7 +72,6 @@
 html, body {
   height: 100%;
   font-family: var(--font-sans);
-  font-feature-settings: 'ss01', 'ss03', 'cv01';
   background:
     radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(255, 194, 14, 0.05), transparent 60%),
     radial-gradient(ellipse 900px 500px at 10% 100%, rgba(0, 66, 122, 0.10), transparent 60%),
@@ -145,7 +144,7 @@ a:hover {
 .topbar-logo-mark {
   font-family: var(--font-display);
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
   font-size: 22px;
   color: var(--accent);
   letter-spacing: -0.04em;
@@ -214,7 +213,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   padding: 7px 12px 7px 14px;
-  background: rgba(22, 40, 34, 0.6);
+  background: rgba(11, 34, 56, 0.6);
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--text-muted);
@@ -228,7 +227,7 @@ a:hover {
 .topbar-search-btn:hover {
   border-color: var(--border-strong);
   color: var(--text-secondary);
-  background: rgba(24, 46, 38, 0.8);
+  background: rgba(15, 44, 73, 0.8);
 }
 
 .topbar-search-label {
@@ -265,7 +264,7 @@ a:hover {
   color: var(--green);
   padding: 5px 12px;
   background: var(--green-subtle);
-  border: 1px solid rgba(109, 179, 126, 0.25);
+  border: 1px solid rgba(45, 90, 140, 0.25);
   border-radius: 999px;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -293,7 +292,7 @@ a:hover {
 /* ===== Sidebar ===== */
 .sidebar {
   width: var(--sidebar-width);
-  background: rgba(15, 28, 23, 0.5);
+  background: rgba(6, 23, 39, 0.5);
   border-right: 1px solid var(--border);
   flex-shrink: 0;
   overflow: hidden;
@@ -451,7 +450,7 @@ a:hover {
 
 .sidebar-tool-item:hover {
   color: var(--text-primary);
-  background: rgba(231, 111, 81, 0.06);
+  background: rgba(255, 194, 14, 0.06);
 }
 
 .sidebar-tool-item--active {
@@ -480,7 +479,7 @@ a:hover {
   gap: 6px;
   margin: 10px 10px 14px;
   padding: 14px 16px;
-  background: #0b1a14;
+  background: #0a1e36;
   border: 1px solid var(--border);
   border-radius: 10px;
   text-decoration: none;
@@ -491,9 +490,9 @@ a:hover {
 .sidebar-sister:hover,
 .sidebar-sister:focus-visible {
   transform: translateY(-1px);
-  border-color: rgba(231, 111, 81, 0.45);
-  background: #0d2018;
-  box-shadow: 0 8px 20px -10px rgba(231, 111, 81, 0.35);
+  border-color: rgba(255, 194, 14, 0.45);
+  background: #0d2444;
+  box-shadow: 0 8px 20px -10px rgba(255, 194, 14, 0.35);
   outline: none;
 }
 
@@ -575,8 +574,8 @@ a:hover {
   padding: 48px 40px 52px;
   margin-bottom: 44px;
   background:
-    radial-gradient(ellipse 600px 300px at 85% 0%, rgba(231, 111, 81, 0.10), transparent 60%),
-    linear-gradient(180deg, rgba(24, 46, 38, 0.6), rgba(15, 28, 23, 0.3));
+    radial-gradient(ellipse 600px 300px at 85% 0%, rgba(255, 194, 14, 0.10), transparent 60%),
+    linear-gradient(180deg, rgba(15, 44, 73, 0.6), rgba(6, 23, 39, 0.3));
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
@@ -589,7 +588,7 @@ a:hover {
   background-image:
     radial-gradient(1px 1px at 20% 30%, rgba(240, 237, 228, 0.08) 1px, transparent 1px),
     radial-gradient(1px 1px at 60% 70%, rgba(240, 237, 228, 0.06) 1px, transparent 1px),
-    radial-gradient(1px 1px at 85% 20%, rgba(231, 111, 81, 0.1) 1px, transparent 1px);
+    radial-gradient(1px 1px at 85% 20%, rgba(255, 194, 14, 0.1) 1px, transparent 1px);
   background-size: 180px 180px, 220px 220px, 300px 300px;
   pointer-events: none;
   opacity: 0.6;
@@ -635,7 +634,7 @@ a:hover {
 
 .home-hero-title em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--accent);
   padding-right: 0.04em;
 }
@@ -660,7 +659,7 @@ a:hover {
   align-items: center;
   gap: 8px;
   padding: 7px 14px;
-  background: rgba(22, 40, 34, 0.75);
+  background: rgba(11, 34, 56, 0.75);
   border: 1px solid var(--border);
   border-radius: 999px;
   font-size: 12px;
@@ -773,7 +772,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   padding: 18px;
-  background: linear-gradient(180deg, rgba(22, 40, 34, 0.6), rgba(15, 28, 23, 0.3));
+  background: linear-gradient(180deg, rgba(11, 34, 56, 0.6), rgba(6, 23, 39, 0.3));
   border: 1px solid var(--border);
   border-radius: 14px;
   cursor: pointer;
@@ -848,7 +847,7 @@ a:hover {
 }
 
 .home-scenario-card {
-  background: linear-gradient(180deg, rgba(24, 46, 38, 0.8), rgba(15, 28, 23, 0.5));
+  background: linear-gradient(180deg, rgba(15, 44, 73, 0.8), rgba(6, 23, 39, 0.5));
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 20px;
@@ -894,7 +893,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   background: var(--accent-subtle);
-  border: 1px solid rgba(231, 111, 81, 0.25);
+  border: 1px solid rgba(255, 194, 14, 0.25);
   border-radius: 9px;
   flex-shrink: 0;
 }
@@ -923,8 +922,8 @@ a:hover {
 
 .home-scenario-tool-btn {
   padding: 5px 11px;
-  background: rgba(231, 111, 81, 0.08);
-  border: 1px solid rgba(231, 111, 81, 0.25);
+  background: rgba(255, 194, 14, 0.08);
+  border: 1px solid rgba(255, 194, 14, 0.25);
   border-radius: 999px;
   color: var(--accent-soft);
   font-size: 11.5px;
@@ -1036,7 +1035,7 @@ a:hover {
   background: var(--accent);
   border: none;
   border-radius: var(--radius);
-  color: white;
+  color: #061727;
   cursor: pointer;
   font-size: 14px;
 }
@@ -1317,7 +1316,7 @@ a:hover {
 
 .flowchart-toggle-btn--active {
   background: var(--accent);
-  color: white;
+  color: #061727;
 }
 
 /* Flowchart Full View */
@@ -1506,7 +1505,7 @@ a:hover {
 .guided-btn--continue {
   background: var(--accent);
   border-color: var(--accent);
-  color: white;
+  color: #061727;
 }
 
 .guided-btn--continue:hover {
@@ -1540,7 +1539,7 @@ a:hover {
 
 .guided-cross-link:hover {
   background: var(--accent);
-  color: white;
+  color: #061727;
 }
 
 /* ===== NRO Sanctioned Banner ===== */
@@ -1709,7 +1708,7 @@ a:hover {
 .nro-filter-chip--active {
   background: var(--accent);
   border-color: var(--accent);
-  color: white;
+  color: #061727;
 }
 
 .nro-filter-chip:hover:not(.nro-filter-chip--active) {
@@ -1811,7 +1810,7 @@ a:hover {
 .nro-proximity-btn {
   padding: 8px 16px;
   background: var(--accent);
-  color: #fff;
+  color: #061727;
   border: none;
   border-radius: var(--radius);
   font-size: 13px;
@@ -2230,7 +2229,7 @@ a:hover {
   background: var(--accent);
   border: none;
   border-radius: var(--radius);
-  color: white;
+  color: #061727;
   font-size: 14px;
   cursor: pointer;
   margin-top: 16px;
@@ -2329,8 +2328,8 @@ a:hover {
   gap: 14px;
   padding: 14px 16px;
   margin-bottom: 18px;
-  background: rgba(231, 111, 81, 0.08);
-  border: 1px solid rgba(231, 111, 81, 0.35);
+  background: rgba(255, 194, 14, 0.08);
+  border: 1px solid rgba(255, 194, 14, 0.35);
   border-radius: var(--radius);
   color: var(--text-primary);
   text-decoration: none;
@@ -2338,7 +2337,7 @@ a:hover {
 }
 
 .ec-guide-cta:hover {
-  background: rgba(231, 111, 81, 0.14);
+  background: rgba(255, 194, 14, 0.14);
   border-color: var(--accent);
   transform: translateY(-1px);
 }
@@ -2393,7 +2392,7 @@ a:hover {
 
 .trag-agency-badge:hover {
   background: var(--accent);
-  color: #fff;
+  color: #061727;
 }
 
 .trag-tabs {
@@ -2548,7 +2547,7 @@ a:hover {
 
 .trag-nav-btn:hover {
   background: var(--accent);
-  color: #fff;
+  color: #061727;
 }
 
 /* Principles tab */
@@ -2871,7 +2870,7 @@ a:hover {
 
 .trag-tool-btn:hover {
   background: var(--accent);
-  color: #fff;
+  color: #061727;
 }
 
 .trag-source-link {
@@ -3326,7 +3325,7 @@ a:hover {
 
 .faq-related-tool:hover {
   background: var(--accent);
-  color: #fff;
+  color: #061727;
 }
 
 .faq-related-tools {
@@ -3854,7 +3853,7 @@ a:hover {
 
 .csec-related-tool-btn:hover {
   background: var(--accent);
-  color: #fff;
+  color: #061727;
   border-color: var(--accent);
 }
 
