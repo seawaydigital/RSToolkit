@@ -100,6 +100,7 @@ export default function ExportControl({ onNavigate }) {
             <button
               className="ec-section-header"
               onClick={() => toggleSection(section.id)}
+              aria-expanded={isOpen}
             >
               {isOpen ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
               <span style={{ flex: 1 }}>{section.title}</span>

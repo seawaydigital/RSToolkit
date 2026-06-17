@@ -510,12 +510,14 @@ export default function NroLookup({ onNavigate }) {
         {institutionSuggestions.length > 0 && (
           <ul className="nro-proximity-suggestions">
             {institutionSuggestions.map((s, i) => (
-              <li
-                key={i}
-                className="nro-proximity-suggestion"
-                onClick={() => handleSelectInstitution(s)}
-              >
-                {s.displayName}
+              <li key={i}>
+                <button
+                  type="button"
+                  className="nro-proximity-suggestion"
+                  onClick={() => handleSelectInstitution(s)}
+                >
+                  {s.displayName}
+                </button>
               </li>
             ))}
           </ul>

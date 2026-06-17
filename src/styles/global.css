@@ -20,7 +20,7 @@
   /* Text — cool near-white on cobalt */
   --text-primary: #eef3f8;
   --text-secondary: #9fb4c9;
-  --text-muted: #7d98b0;
+  --text-muted: #93acc2; /* lightened from #7d98b0 to clear WCAG AA 4.5:1 on the lightest raised surface */
 
   /* Accent — Blaze. Primary interactive color and brand accent */
   --accent: #FFC20E;
@@ -42,8 +42,8 @@
   --green-subtle: rgba(92, 184, 122, 0.15);
   --amber: #f0a836;
   --amber-subtle: rgba(240, 168, 54, 0.15);
-  --red: #e05a44;
-  --red-subtle: rgba(224, 90, 68, 0.15);
+  --red: #e86a54; /* lightened from #e05a44 to clear WCAG AA 4.5:1 for red text on raised surfaces */
+  --red-subtle: rgba(232, 106, 84, 0.15);
   --purple: #a892c4;
 
   /* Borders — cobalt-tinted to match the base */
@@ -95,6 +95,65 @@ a:hover {
   color: var(--link-hover);
 }
 
+/* ===== Accessibility: screen-reader-only utility ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Accessibility: global focus indicator (WCAG 2.4.7) ===== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* main-content receives programmatic focus from the skip link; no ring needed */
+.main-content:focus,
+.main-content:focus-visible {
+  outline: none;
+}
+
+/* ===== Skip to main content link (WCAG 2.4.1) ===== */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -56px;
+  z-index: 2000;
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #061727;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+  color: #061727;
+  outline: 2px solid #061727;
+  outline-offset: 2px;
+}
+
+/* ===== Accessibility: respect reduced-motion preference (WCAG 2.3.3) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* ===== App Layout ===== */
 .app {
   display: flex;
@@ -139,6 +198,10 @@ a:hover {
   line-height: 1;
   padding: 4px 0;
   user-select: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
 }
 
 .topbar-logo-mark {
@@ -326,6 +389,9 @@ a:hover {
     inset: 0;
     top: var(--topbar-height);
     background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
     z-index: 80;
     animation: backdropFadeIn 0.2s ease;
   }
@@ -1025,7 +1091,7 @@ a:hover {
   color: var(--text-secondary);
 }
 
-.error-fallback h2 {
+.error-fallback h1 {
   font-size: 18px;
   color: var(--text-primary);
 }
@@ -1075,6 +1141,11 @@ a:hover {
   color: var(--text-primary);
   font-size: 15px;
   outline: none;
+}
+
+.search-modal-input:focus {
+  border-bottom-color: var(--accent);
+  box-shadow: 0 1px 0 0 var(--accent);
 }
 
 .search-modal-input::placeholder {
@@ -1801,6 +1872,8 @@ a:hover {
 
 .nro-proximity-input:focus {
   border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 .nro-proximity-input::placeholder {
@@ -1857,11 +1930,17 @@ a:hover {
 }
 
 .nro-proximity-suggestion {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
   padding: 8px 12px;
+  font-family: inherit;
   font-size: 12px;
   color: var(--text-secondary);
   cursor: pointer;
-  border-bottom: 1px solid var(--border);
   line-height: 1.4;
   transition: background 0.1s;
 }
@@ -1959,7 +2038,8 @@ a:hover {
 }
 
 .stra-search:focus {
-  outline: none;
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
   border-color: var(--accent);
 }
 
