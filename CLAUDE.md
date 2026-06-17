@@ -187,15 +187,17 @@ Header pattern:
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
 - **Map tiles**: CartoDB Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`) — chosen specifically for English-language place name labels.
-- **Design system (v2 — 2026-04)**: The toolkit uses an editorial/serif aesthetic with a deep forest-slate base and terracotta-copper accent — deliberately distinct from generic dark-navy + blue/gold SaaS looks. Key tokens in `global.css`:
-  - `--bg-primary: #0a1411` (forest-slate base; `body` has a subtle radial-gradient overlay for warmth)
-  - `--accent: #e76f51` (terracotta-copper — primary interactive color and brand accent)
-  - `--link: #f4a58f` (warm peach — inline links; hover `#ffe2d2`)
-  - `--font-serif: 'Fraunces'` (hero, `.home-section-title`, `.home-scenario-label`, `.tool-page-header h1`, topbar `RS` mark — uses `font-variation-settings` with `SOFT` + `opsz` axes for characterful italics)
-  - `--font-sans: 'Geist'` (body text)
+- **Design system (v3 — 2026-06, Lakehead brand)**: The toolkit uses a clean institutional aesthetic aligned with Lakehead University branding — a deep cobalt-navy base with a Blaze-yellow accent, deliberately on-brand (Cobalt + Blaze). Key tokens in `global.css`:
+  - `--bg-primary: #061727` (deep cobalt-navy base; `body` has a subtle Blaze + Cobalt radial-gradient overlay). Surfaces ladder up `#0b2238` → `#0f2c49` → `#143a5e`.
+  - `--cobalt: #00427A` (Lakehead Cobalt — brand cobalt for active nav / focus fields)
+  - `--accent: #FFC20E` (Lakehead Blaze — primary interactive color and brand accent; hover `#ffce3a`). **Text on a Blaze background must be dark `#061727`, never white** (white on Blaze fails contrast ~1.6:1).
+  - `--link: #6fb2e8` (sky-blue — inline links readable on cobalt; hover `#a9d4f8`)
+  - `--font-display: 'Archivo'` (hero, `.home-section-title`, `.home-scenario-label`, `.tool-page-header h1`, topbar `RS` mark — a clean grotesque standing in for Lakehead's Trade Gothic; replaced Fraunces. No `font-variation-settings`.)
+  - `--font-sans: 'Inter'` (body text; replaced Geist)
   - `--font-mono: 'JetBrains Mono'` (counts, kbd)
-  - Fonts load from Google Fonts via `<link>` in `index.html`. CSP `style-src` allows `https://fonts.googleapis.com`; `font-src` allows `https://fonts.gstatic.com`.
-- **Source links**: All policy sources must be hyperlinked, never plain text. Inline hyperlinks across the site use `var(--link)` (`#f4a58f`) — warm peach readable on the dark forest-slate base. Hover state uses `var(--link-hover)` (`#ffe2d2`). Do not use `var(--accent)` for plain text links; that color is reserved for interactive UI elements (buttons, active states, borders).
+  - Status colors stay **semantic** (`--green`/`--amber`/`--red`), tuned for cobalt; `--amber: #f0a836` is kept orange-leaning so it never reads as a Blaze button. NRO map country colors (Russia red / China blue / Iran green) are data identity and are NOT part of this palette.
+  - Fonts load from Google Fonts via `<link>` in `index.html` (Archivo + Inter, both with italic axes). CSP `style-src` allows `https://fonts.googleapis.com`; `font-src` allows `https://fonts.gstatic.com`.
+- **Source links**: All policy sources must be hyperlinked, never plain text. Inline hyperlinks across the site use `var(--link)` (`#6fb2e8`, sky-blue) — readable on the dark cobalt base. Hover state uses `var(--link-hover)` (`#a9d4f8`). Do not use `var(--accent)` (Blaze) for plain text links; that color is reserved for interactive UI elements (buttons, active states, borders) and yellow text links read like warnings.
 - **UBC attribution**: Do not attribute any content to UBC specifically. Use "Canadian university research security programs" for the Risk Mitigation tool sourcing.
 - **Sanctioned countries banner (NRO Lookup)**: The banner above the map is a **two-tier, collapsible** summary tuned for research-collaboration decisions (not legal advice). Both tiers are **collapsed by default**; each header is a `<button>` showing a destination count and chevron, with `aria-expanded` / `aria-controls` wiring. State: `tier1Open`, `tier2Open` in `NroLookup.jsx`.
   - **Tier 1 — Comprehensive prohibitions** (red, `.nro-sanctioned-title--tier1`): North Korea (DPRK); Occupied regions of Ukraine (Crimea, Donetsk, Luhansk, Zaporizhzhia, Kherson).
@@ -221,7 +223,7 @@ Header pattern:
   - `.sidebar-sister-word` ("Toolkit") — **Fraunces serif, weight 700, upright (not italic), white `#ffffff`**
   - `.sidebar-sister-tagline` ("Research Data Management") — small uppercase letter-spaced muted text, reuses `.sidebar-eyebrow` typography pattern
   - `.sidebar-sister-arrow` — absolute-positioned `ArrowUpRight` (lucide, 16px) in the top-right; slides up-right and warms to `var(--accent)` on hover
-  - Card: `#0b1a14` bg, `var(--border)` border that warms to copper on hover with a soft glow + 1px lift. This is a peer-brand affordance, not an ad-hoc chip — treat it accordingly when editing.
+  - Card: `#0a1e36` cobalt bg (hover `#0d2444`), `var(--border)` border that warms to Blaze on hover with a soft glow + 1px lift. The card chrome follows the Lakehead palette, but the **RDM wordmark itself keeps its own gold (`#facc15`) + white colors** — peer brand, do not recolor it. This is a peer-brand affordance, not an ad-hoc chip — treat it accordingly when editing.
 
 ---
 
