@@ -6,46 +6,50 @@
 }
 
 :root {
-  /* Surfaces — deep forest-slate, warmer & more distinctive than generic navy */
-  --bg-primary: #0a1411;
-  --bg-secondary: #0f1c17;
-  --bg-tertiary: #162822;
-  --bg-card: #0f1c17;
-  --bg-card-hover: #14251e;
-  --bg-elevated: #182e26;
+  /* Surfaces — deep cobalt-navy base (Lakehead Cobalt #00427A derived) */
+  --bg-primary: #061727;
+  --bg-secondary: #0b2238;
+  --bg-tertiary: #0f2c49;
+  --bg-card: #0b2238;
+  --bg-card-hover: #0f2c49;
+  --bg-elevated: #143a5e;
 
-  /* Text — warm off-white, avoids cold bluish grays */
-  --text-primary: #f0ede4;
-  --text-secondary: #a7b1a8;
-  --text-muted: #6f7a72;
+  /* Brand cobalt — active nav, focus field backgrounds */
+  --cobalt: #00427A;
 
-  /* Accent — terracotta-copper. Warm, authoritative, distinct from RDM's gold */
-  --accent: #e76f51;
-  --accent-hover: #d65d3f;
-  --accent-soft: #f4a58f;
-  --accent-subtle: rgba(231, 111, 81, 0.12);
-  --accent-glow: rgba(231, 111, 81, 0.22);
+  /* Text — cool near-white on cobalt */
+  --text-primary: #eef3f8;
+  --text-secondary: #9fb4c9;
+  --text-muted: #6b8197;
 
-  /* Gold — reserved for small accent marks (brand logo), never primary interactive */
-  --gold: #e0a458;
+  /* Accent — Blaze. Primary interactive color and brand accent */
+  --accent: #FFC20E;
+  --accent-hover: #ffce3a;
+  --accent-soft: #ffd866;
+  --accent-subtle: rgba(255, 194, 14, 0.12);
+  --accent-glow: rgba(255, 194, 14, 0.22);
 
-  /* Link — warm peach for inline links on dark backgrounds */
-  --link: #f4a58f;
-  --link-hover: #ffe2d2;
+  /* Gold — folded into Blaze (brand mark) */
+  --gold: #FFC20E;
 
-  /* Status — preserved semantics (map legend, banners) but nudged to feel cohesive */
-  --green: #6db37e;
-  --green-subtle: rgba(109, 179, 126, 0.15);
-  --amber: #e0a458;
-  --amber-subtle: rgba(224, 164, 88, 0.15);
-  --red: #d6573f;
-  --red-subtle: rgba(214, 87, 63, 0.15);
+  /* Link — sky-blue for inline links on dark cobalt (Blaze reserved for UI) */
+  --link: #6fb2e8;
+  --link-hover: #a9d4f8;
+
+  /* Status — semantic (map legend, banners), tuned for cobalt; amber kept
+     orange-leaning so it never reads as a Blaze button */
+  --green: #5cb87a;
+  --green-subtle: rgba(92, 184, 122, 0.15);
+  --amber: #f0a836;
+  --amber-subtle: rgba(240, 168, 54, 0.15);
+  --red: #e05a44;
+  --red-subtle: rgba(224, 90, 68, 0.15);
   --purple: #a892c4;
 
-  /* Borders — low-chroma green-gray to match the base */
-  --border: #1e3329;
-  --border-light: #2c4a3d;
-  --border-strong: #3d6452;
+  /* Borders — cobalt-tinted to match the base */
+  --border: #143052;
+  --border-light: #1d456f;
+  --border-strong: #2a5a8c;
 
   /* Shape & motion */
   --radius-sm: 6px;
@@ -54,14 +58,14 @@
   --radius-xl: 20px;
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.35);
-  --shadow-glow: 0 0 0 1px var(--accent-glow), 0 8px 24px rgba(231,111,81,0.18);
+  --shadow-glow: 0 0 0 1px var(--accent-glow), 0 8px 24px rgba(255,194,14,0.18);
 
   --topbar-height: 60px;
   --sidebar-width: 268px;
 
-  /* Typography — Fraunces display serif + Geist body sans, distinctive pairing */
-  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  /* Typography — Archivo grotesque display (Trade Gothic stand-in) + Inter body */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Archivo', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', Menlo, monospace;
 }
 
