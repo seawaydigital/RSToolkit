@@ -74,8 +74,8 @@ html, body {
   font-family: var(--font-sans);
   font-feature-settings: 'ss01', 'ss03', 'cv01';
   background:
-    radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(231, 111, 81, 0.06), transparent 60%),
-    radial-gradient(ellipse 900px 500px at 10% 100%, rgba(109, 179, 126, 0.04), transparent 60%),
+    radial-gradient(ellipse 1200px 600px at 80% -10%, rgba(255, 194, 14, 0.05), transparent 60%),
+    radial-gradient(ellipse 900px 500px at 10% 100%, rgba(0, 66, 122, 0.10), transparent 60%),
     var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -143,13 +143,12 @@ a:hover {
 }
 
 .topbar-logo-mark {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   font-style: italic;
   font-size: 22px;
   color: var(--accent);
   letter-spacing: -0.04em;
-  font-variation-settings: 'SOFT' 80, 'opsz' 48;
 }
 
 .topbar-logo-word {
@@ -530,14 +529,13 @@ a:hover {
 }
 
 .sidebar-sister-word {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
   color: #ffffff;
   letter-spacing: -0.01em;
   margin-left: 4px;
-  font-variation-settings: 'SOFT' 50, 'opsz' 36;
 }
 
 .sidebar-sister-tagline {
@@ -625,7 +623,7 @@ a:hover {
 }
 
 .home-hero-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(36px, 5vw, 60px);
   line-height: 1.02;
@@ -633,14 +631,12 @@ a:hover {
   color: var(--text-primary);
   margin-bottom: 22px;
   max-width: 900px;
-  font-variation-settings: 'SOFT' 30, 'opsz' 96;
 }
 
 .home-hero-title em {
   font-style: italic;
   font-weight: 300;
   color: var(--accent);
-  font-variation-settings: 'SOFT' 100, 'opsz' 144;
   padding-right: 0.04em;
 }
 
@@ -711,12 +707,11 @@ a:hover {
 }
 
 .home-section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 500;
   font-size: 24px;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  font-variation-settings: 'SOFT' 20, 'opsz' 48;
 }
 
 .home-section-count {
@@ -905,13 +900,12 @@ a:hover {
 }
 
 .home-scenario-label {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 17px;
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.25;
   letter-spacing: -0.01em;
-  font-variation-settings: 'SOFT' 20, 'opsz' 36;
 }
 
 .home-scenario-desc {
@@ -982,12 +976,11 @@ a:hover {
 }
 
 .tool-page-header h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 30px;
   font-weight: 500;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
-  font-variation-settings: 'SOFT' 20, 'opsz' 48;
 }
 
 .tool-page-header p {
