@@ -1,8 +1,13 @@
 # Accessibility (AODA / WCAG 2.0 AA) — Handoff & Testing Guide
 
-> Status as of 2026-06-17. This file is the handoff record for the WCAG 2.0 AA
+> Status as of 2026-06-18. This file is the handoff record for the WCAG 2.0 AA
 > remediation pass (PR seawaydigital/RSToolkit#12). For the durable engineering
 > conventions, see the **Accessibility** entry in [CLAUDE.md](CLAUDE.md).
+>
+> **Verification: the §3 manual checklist (keyboard, screen reader, zoom/reflow,
+> contrast, reduced motion) was completed by a human tester on 2026-06-18 — all
+> checks passed.** The checklist below remains the reusable template to re-run
+> after any significant UI change (§5).
 
 The Research Security Toolkit targets **WCAG 2.0 AA**, the conformance level the
 Accessibility for Ontarians with Disabilities Act (AODA) references for web
