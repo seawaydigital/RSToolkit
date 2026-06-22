@@ -1,8 +1,16 @@
 # Dual-Use Research Guide — Design Spec
 
-**Date:** 2026-06-19
-**Status:** Draft for review
+**Date:** 2026-06-19 (updated 2026-06-22)
+**Status:** Implemented — shipped on branch `claude/silly-boyd-891b37` ([PR #14](https://github.com/seawaydigital/RSToolkit/pull/14))
 **Author:** Andrew Austin (with Claude Code)
+
+> **Changelog (2026-06-22):** This spec was reconciled with the as-built tool. Two changes
+> landed after the original design: (1) the Self-Assessment question tree was simplified to four
+> conceptual questions (see §4 — the "what transfers" / "touches STRA" themes were not built as
+> questions; the tool routes to those tools instead); (2) an always-visible "How this assessment
+> works" logic disclosure was added to the Self-Assessment tab (§4). The Research Security Centre
+> external URL was also corrected (the publicsafety.gc.ca path 404s — now points to the live
+> canada.ca page).
 
 ---
 
@@ -103,25 +111,38 @@ export const dualUseWizard = {
 };
 ```
 
-**Conceptual question themes** (kept distinct from STRA Lookup's category-enumeration wizard):
+**As-built question logic** (kept distinct from STRA Lookup's category-enumeration wizard;
+4 question nodes → 4 result nodes — the authoritative tree is `src/data/dualUseWizard.js`):
 
-1. Could the research's outputs **advance a military, intelligence, defence, or
-   population-targeting capability** — even if the civilian framing is the primary intent?
-   (e.g., weapons, surveillance, targeting, psychological/behavioural ops, genetic-vulnerability
-   identification.)
-2. What is **transferring** — tangible goods, *or* intangible knowledge / methods / tacit
-   expertise? (Reinforces the "published papers omit the crucial details" point.)
-3. Does the work touch any **STRA / export-controlled / controlled-good / human-pathogen** area?
-   (Routes to STRA Lookup / Export Control rather than re-deriving.)
-4. **Partner & funding exposure** — international collaborators, foreign funding, or any
-   team member with an entities-of-concern / NRO affiliation? (Routes to NRO Lookup.)
+1. **q1** — Could the outputs **advance a military, defence, intelligence, security, or weapons
+   capability**, even unintentionally? *Yes → q-partner (step 3); No → q1b (step 2).*
+2. **q1b** — Could the outputs **surveil, target, manipulate, or identify vulnerabilities in a
+   population** (incl. health, behavioural, or social-science data)? *Yes → q-partner; No → q-stra
+   (step 4).*
+3. **q-partner** (reached only when q1 or q1b was Yes) — **Partner/funding exposure**:
+   international collaborators, foreign funding, or any team member affiliated with / funded by an
+   NRO / entity of concern? *Yes → `result-likely-partner`; No → `result-likely-solo`.*
+4. **q-stra** (reached only when q1 and q1b were both No) — Does the work develop/advance an
+   **emerging technology** (AI, quantum, advanced materials, biotech, advanced sensing, robotics,
+   aerospace)? *Yes → `result-possible`; No → `result-low`.*
+
+Note the wizard does **not** ask a "what transfers" or a direct "does this touch STRA/export
+controls" question (those were exploratory themes during design); instead it routes users to STRA
+Lookup / Export Control for those determinations.
 
 **Result nodes** produce:
-- A **signal read** — *Likely dual-use* / *Possible dual-use* / *Low signal* (with explicit
-  "this is a prompt to do due diligence, not a determination or legal advice" hedge).
+- A **signal read** — *Likely dual-use* (two variants: with / without partner exposure) /
+  *Possible dual-use — verify* / *Low signal* (with explicit "this is a prompt to do due diligence,
+  not a determination or legal advice" hedge).
 - A **flag list** — the indicators that fired along the path.
 - **Tailored next-steps** — deep-link buttons to STRA Lookup, NRO Lookup, Export Control,
   Risk Checklist, STRAC/NSGRP flowcharts, as relevant.
+
+**Always-visible logic disclosure** (`.dual-howitworks`): the tab opens with a permanently-visible
+"How this assessment works" `<section>` (not a collapsed `<details>` — the logic is shared openly to
+build user trust). Its content lives in `dualUseData.assessmentLogic` and plainly describes the
+intro, the four questions and their routing, what each signal means, and the assessment's
+limitations. It **must be kept in sync with `dualUseWizard.js`** whenever the question tree changes.
 
 **Wizard controls:** Yes / No / choice buttons (real `<button>`s), a **Back** button (pops the
 back-stack), and a **Start over** reset.
@@ -264,9 +285,11 @@ figures from the workshop notes. Cite **11 STRA categories** (consistent with th
 | Human Pathogens and Toxins Act — PHAC | https://laws-lois.justice.gc.ca/eng/acts/h-5.67/ |
 | Global Affairs sanctions index | https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx |
 | OpenSanctions | https://www.opensanctions.org/ |
-| Public Safety Canada Research Security Centre | https://www.publicsafety.gc.ca/cnt/ntnl-scrt/rsrch-scrt-cntr-en.aspx |
+| Research Security Centre (Government of Canada) | https://www.canada.ca/en/services/defence/researchsecurity/about.html |
 
-(External URLs to be confirmed live during implementation; any that 404 get the nearest canonical page.)
+(External URLs were confirmed during implementation. The original publicsafety.gc.ca Research
+Security Centre path returned 404 and was replaced with the live canada.ca page above. The
+canada.ca controlled-goods page returns 403/000 to automated fetchers but is live in a browser.)
 
 ---
 
@@ -274,7 +297,7 @@ figures from the workshop notes. Cite **11 STRA categories** (consistent with th
 
 | File | Change |
 |---|---|
-| `src/data/dualUseData.js` | **new** — areas, redFlags, mice, myths, scenarioLessons, diligence, lastUpdated, sourceUrl |
+| `src/data/dualUseData.js` | **new** — assessmentLogic (the "how it works" disclosure), areas, areaCallouts, redFlags, mice, myths, scenarioLessons, diligence, lastUpdated, sourceUrl |
 | `src/data/dualUseWizard.js` | **new** — guided assessment question tree |
 | `src/tools/compliance/DualUseGuide.jsx` | **new** — 4-tab component |
 | `src/data/toolRegistry.js` | add `dual-use` entry under `compliance-tools` |

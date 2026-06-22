@@ -10,6 +10,23 @@
 
 **Spec:** `docs/superpowers/specs/2026-06-19-dual-use-research-guide-design.md`
 
+> **Status (2026-06-22):** All 7 tasks below were implemented and shipped on branch
+> `claude/silly-boyd-891b37` ([PR #14](https://github.com/seawaydigital/RSToolkit/pull/14)).
+> The original-plan code is in the early commits; this file is left as the execution record.
+>
+> **Post-plan additions** (made after the tasks above, in response to review feedback):
+> - **Always-visible "How this assessment works" logic disclosure** on the Self-Assessment tab —
+>   a permanently-visible `<section className="dual-howitworks">` (started as a collapsed
+>   `<details>`, then opened up so the decision logic is shared openly to build user trust). Its
+>   content lives in a new `dualUseData.assessmentLogic` object and **must stay in sync with
+>   `dualUseWizard.js`**.
+> - **Research Security Centre URL fix** in `dualUseData.js` — the original
+>   `publicsafety.gc.ca/.../rsrch-scrt-cntr-en.aspx` path 404s; repointed to the live
+>   `canada.ca/en/services/defence/researchsecurity/about.html`.
+> - **Live smoke-test** completed (dev server + browser): all tabs, both wizard outcome paths,
+>   cross-tool deep-links, the print summary, and the always-visible logic panel verified; no
+>   console errors.
+
 ---
 
 ## File Structure
@@ -241,7 +258,7 @@ export const dualUseData = {
       actions: [
         { text: "Treat research security as a shared responsibility — not one person's job. Educate your team about dual-use risks.", link: null },
         { text: "Document your due-diligence steps and any mitigations (you can print a record from the Self-Assessment tab).", link: null },
-        { text: "When something feels uncertain, contact your Research Security office or Public Safety Canada's Research Security Centre.", link: { url: "https://www.publicsafety.gc.ca/cnt/ntnl-scrt/rsrch-scrt-cntr-en.aspx", label: "Public Safety Canada — Research Security Centre" } },
+        { text: "When something feels uncertain, contact your Research Security office or Public Safety Canada's Research Security Centre.", link: { url: "https://www.canada.ca/en/services/defence/researchsecurity/about.html", label: "Research Security Centre (Government of Canada)" } },
       ],
     },
   ],
