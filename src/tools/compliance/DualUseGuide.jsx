@@ -97,8 +97,8 @@ export default function DualUseGuide({ onNavigate }) {
       {/* Tab: Self-Assessment */}
       {activeTab === 'assess' && (
         <div className="dual-tab-content">
-          <details className="dual-howitworks dual-no-print">
-            <summary className="dual-howitworks-summary">How this assessment works</summary>
+          <section className="dual-howitworks dual-no-print" aria-label="How this assessment works">
+            <h3 className="dual-howitworks-summary">How this assessment works</h3>
             <div className="dual-howitworks-body">
               <p className="dual-howitworks-intro">{dualUseData.assessmentLogic.intro}</p>
 
@@ -126,7 +126,7 @@ export default function DualUseGuide({ onNavigate }) {
                 {dualUseData.assessmentLogic.limitations.map((l, i) => <li key={i}>{l}</li>)}
               </ul>
             </div>
-          </details>
+          </section>
 
           {currentNode.type !== 'result' ? (
             <div className="dual-wizard">
