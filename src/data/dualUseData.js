@@ -10,6 +10,56 @@ export const dualUseData = {
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research",
   sourceLabel: "Safeguarding Your Research (Government of Canada) & Public Safety Canada Safeguarding Science",
 
+  // ── Tab 1: "How this assessment works" disclosure ──
+  // This MUST stay in sync with dualUseWizard.js. It plainly describes the
+  // question logic so users understand the result and reviewers can vet it.
+  assessmentLogic: {
+    intro:
+      "This is a short, conceptual self-check — not a determination. It asks a few questions about how your research could be used and who you work with, then points you to the authoritative tools and your Research Security office. It deliberately does NOT classify your work against the Sensitive Technology Research Areas list itself — that is what STRA Lookup is for; this assessment hands off to it.",
+    steps: [
+      {
+        n: 1,
+        q: "Could your outputs advance a military, defence, intelligence, security, or weapons capability — even unintentionally?",
+        routing: "If yes, the assessment jumps straight to the partner-exposure question (step 3). If no, it continues to step 2.",
+      },
+      {
+        n: 2,
+        q: "Could your outputs be used to surveil, target, manipulate, or identify vulnerabilities in a population — including via health, behavioural, or social-science data?",
+        routing: "If yes, it goes to the partner-exposure question (step 3). If no, it continues to step 4.",
+      },
+      {
+        n: 3,
+        q: "Partner exposure: international collaborators, foreign funding, or any team member affiliated with / funded by an organization on Canada's Named Research Organizations (entities-of-concern) list?",
+        routing: "Reached only when step 1 or step 2 was \"yes.\" If yes here → \"Likely dual-use, with partner exposure.\" If no → \"Likely dual-use.\" Either way the signal is Likely, because a potential military/intelligence/targeting use was already identified.",
+      },
+      {
+        n: 4,
+        q: "Emerging technology: does the work develop or advance an emerging technology (AI, quantum, advanced materials, biotechnology, advanced sensing, robotics, aerospace)?",
+        routing: "Reached only when steps 1 and 2 were both \"no.\" If yes → \"Possible dual-use — verify.\" If no → \"Low signal.\"",
+      },
+    ],
+    signals: [
+      {
+        level: "Likely dual-use",
+        meaning: "You identified a plausible military, intelligence, or population-targeting use. Run the full due-diligence chain (STRA, NRO screening, export controls, risk checklist) before applying or signing. A \"with partner exposure\" variant means you also flagged international/foreign-funded/NRO-affiliated team involvement.",
+      },
+      {
+        level: "Possible dual-use — verify",
+        meaning: "No obvious military or targeting use surfaced, but your work is an emerging technology that may still fall under a Sensitive Technology Research Area or export controls. Verify against the authoritative lists.",
+      },
+      {
+        level: "Low signal",
+        meaning: "None of the indicators in this short check surfaced. This is not an all-clear — dual-use concerns are context-dependent. Review the Dual-Use Areas examples and consult your Research Security office if anything is uncertain.",
+      },
+    ],
+    limitations: [
+      "It reasons only from your self-reported answers — it does not inspect your data, code, or partners.",
+      "It is a prompt to do due diligence, not a determination, eligibility ruling, or legal advice.",
+      "It does not replace STRA Lookup, NRO screening, export-control review, or your Research Security office — it routes you to them.",
+      "Re-run it whenever your research scope, team, funding, or partners change.",
+    ],
+  },
+
   // ── Tab 2: Dual-Use Areas (civilian vs. military/misuse) ──
   areas: [
     {

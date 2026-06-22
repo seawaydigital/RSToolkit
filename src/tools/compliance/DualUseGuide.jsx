@@ -97,6 +97,37 @@ export default function DualUseGuide({ onNavigate }) {
       {/* Tab: Self-Assessment */}
       {activeTab === 'assess' && (
         <div className="dual-tab-content">
+          <details className="dual-howitworks dual-no-print">
+            <summary className="dual-howitworks-summary">How this assessment works</summary>
+            <div className="dual-howitworks-body">
+              <p className="dual-howitworks-intro">{dualUseData.assessmentLogic.intro}</p>
+
+              <h4 className="dual-howitworks-head">The questions and how they route</h4>
+              <ol className="dual-howitworks-steps">
+                {dualUseData.assessmentLogic.steps.map(s => (
+                  <li key={s.n}>
+                    <span className="dual-howitworks-q">{s.q}</span>
+                    <span className="dual-howitworks-routing">{s.routing}</span>
+                  </li>
+                ))}
+              </ol>
+
+              <h4 className="dual-howitworks-head">What the result means</h4>
+              <ul className="dual-howitworks-signals">
+                {dualUseData.assessmentLogic.signals.map(s => (
+                  <li key={s.level}>
+                    <strong>{s.level}.</strong> {s.meaning}
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="dual-howitworks-head">Limitations</h4>
+              <ul className="dual-howitworks-limits">
+                {dualUseData.assessmentLogic.limitations.map((l, i) => <li key={i}>{l}</li>)}
+              </ul>
+            </div>
+          </details>
+
           {currentNode.type !== 'result' ? (
             <div className="dual-wizard">
               <div className="dual-wizard-progress dual-no-print">Step {history.length}</div>
