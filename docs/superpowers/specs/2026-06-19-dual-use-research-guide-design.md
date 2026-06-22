@@ -7,8 +7,8 @@
 > **Changelog (2026-06-22):** This spec was reconciled with the as-built tool. Two changes
 > landed after the original design: (1) the Self-Assessment question tree was simplified to four
 > conceptual questions (see §4 — the "what transfers" / "touches STRA" themes were not built as
-> questions; the tool routes to those tools instead); (2) an always-visible "How this assessment
-> works" logic disclosure was added to the Self-Assessment tab (§4). The Research Security Centre
+> questions; the tool routes to those tools instead); (2) a collapsed-by-default "How this
+> assessment works" logic disclosure was added to the Self-Assessment tab (§4). The Research Security Centre
 > external URL was also corrected (the publicsafety.gc.ca path 404s — now points to the live
 > canada.ca page).
 
@@ -138,9 +138,9 @@ Lookup / Export Control for those determinations.
 - **Tailored next-steps** — deep-link buttons to STRA Lookup, NRO Lookup, Export Control,
   Risk Checklist, STRAC/NSGRP flowcharts, as relevant.
 
-**Always-visible logic disclosure** (`.dual-howitworks`): the tab opens with a permanently-visible
-"How this assessment works" `<section>` (not a collapsed `<details>` — the logic is shared openly to
-build user trust). Its content lives in `dualUseData.assessmentLogic` and plainly describes the
+**Logic disclosure** (`.dual-howitworks`): the tab includes a collapsed-by-default
+"How this assessment works" `<details>` disclosure (transparency to build user trust; users expand
+it to read the logic). Its content lives in `dualUseData.assessmentLogic` and plainly describes the
 intro, the four questions and their routing, what each signal means, and the assessment's
 limitations. It **must be kept in sync with `dualUseWizard.js`** whenever the question tree changes.
 

@@ -4177,12 +4177,16 @@ a:hover {
   border-radius: var(--radius);
 }
 .dual-howitworks-summary {
-  margin: 0;
+  cursor: pointer;
   padding: 12px 16px;
   font-size: 14px;
   font-weight: 600;
   color: var(--accent);
+  list-style: none;
 }
+.dual-howitworks-summary::-webkit-details-marker { display: none; }
+.dual-howitworks-summary::before { content: "▸ "; }
+.dual-howitworks[open] .dual-howitworks-summary::before { content: "▾ "; }
 .dual-howitworks-body {
   padding: 0 16px 16px;
   border-top: 1px solid var(--border);

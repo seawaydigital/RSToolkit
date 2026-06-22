@@ -15,11 +15,11 @@
 > The original-plan code is in the early commits; this file is left as the execution record.
 >
 > **Post-plan additions** (made after the tasks above, in response to review feedback):
-> - **Always-visible "How this assessment works" logic disclosure** on the Self-Assessment tab —
->   a permanently-visible `<section className="dual-howitworks">` (started as a collapsed
->   `<details>`, then opened up so the decision logic is shared openly to build user trust). Its
->   content lives in a new `dualUseData.assessmentLogic` object and **must stay in sync with
->   `dualUseWizard.js`**.
+> - **"How this assessment works" logic disclosure** on the Self-Assessment tab — a
+>   collapsed-by-default `<details className="dual-howitworks">` users expand to read the decision
+>   logic (transparency to build trust). Its content lives in a new `dualUseData.assessmentLogic`
+>   object and **must stay in sync with `dualUseWizard.js`**. (It briefly shipped always-visible,
+>   then was set back to collapsed-by-default per review.)
 > - **Research Security Centre URL fix** in `dualUseData.js` — the original
 >   `publicsafety.gc.ca/.../rsrch-scrt-cntr-en.aspx` path 404s; repointed to the live
 >   `canada.ca/en/services/defence/researchsecurity/about.html`.
