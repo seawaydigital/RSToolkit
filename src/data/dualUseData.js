@@ -201,7 +201,7 @@ export const dualUseData = {
       actions: [
         { text: "Treat research security as a shared responsibility — not one person's job. Educate your team about dual-use risks.", link: null },
         { text: "Document your due-diligence steps and any mitigations (you can print a record from the Self-Assessment tab).", link: null },
-        { text: "When something feels uncertain, contact your Research Security office or Public Safety Canada's Research Security Centre.", link: { url: "https://www.publicsafety.gc.ca/cnt/ntnl-scrt/rsrch-scrt-cntr-en.aspx", label: "Public Safety Canada — Research Security Centre" } },
+        { text: "When something feels uncertain, contact your Research Security office or Public Safety Canada's Research Security Centre.", link: { url: "https://www.canada.ca/en/services/defence/researchsecurity/about.html", label: "Research Security Centre (Government of Canada)" } },
       ],
     },
   ],
