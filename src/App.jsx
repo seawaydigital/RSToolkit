@@ -16,6 +16,7 @@ const TOOL_COMPONENTS = {
   'nro-lookup': lazy(() => import('./tools/compliance/NroLookup')),
   'risk-checklist': lazy(() => import('./tools/compliance/RiskChecklist')),
   'risk-mitigation': lazy(() => import('./tools/compliance/RiskMitigation')),
+  'dual-use': lazy(() => import('./tools/compliance/DualUseGuide')),
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
