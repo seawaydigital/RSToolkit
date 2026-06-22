@@ -79,6 +79,14 @@ export const CATEGORIES = [
         tags: ['risk', 'mitigation', 'best practices', 'partners', 'security'],
         related: ['risk-checklist', 'nsgrp-flowchart', 'nro-lookup'],
       },
+      {
+        id: 'dual-use',
+        name: 'Dual-Use Research Guide',
+        slug: 'dual-use',
+        description: 'Identify dual-use research, vet collaborators, and run due diligence — self-assessment, civilian-vs-military examples, red flags, and action steps',
+        tags: ['dual-use', 'dual use', 'military', 'vetting', 'collaborators', 'due diligence', 'assessment', 'mice'],
+        related: ['stra-lookup', 'nro-lookup', 'export-control'],
+      },
     ],
   },
   {

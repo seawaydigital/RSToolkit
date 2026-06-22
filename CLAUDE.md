@@ -60,6 +60,8 @@ src/
     glossaryData.js              # 12 terms with official Canadian/Ontario Gov definitions
     faqData.js                   # 24 FAQs across 6 categories
     riskMitigationData.js        # 22 measures across 5 categories
+    dualUseData.js               # Dual-use areas (civ vs mil), red flags, MICE, myths, scenarios, due-diligence actions
+    dualUseWizard.js             # Guided "Is my research dual-use?" question tree
     triAgencyData.js             # Tri-Agency RS guidance: principles, policies, agencies
     cybersecurityData.js         # 7 essential actions, file/device encryption, passwords, AI warning, sensitive data
     flowcharts/
@@ -79,6 +81,7 @@ src/
       NroLookup.jsx              # Map + table; CartoDB tiles; sanctioned countries banner
       RiskChecklist.jsx          # 3-state toggle; localStorage persistence; progress bar
       RiskMitigation.jsx         # Category + measure accordion; tag filter chips
+      DualUseGuide.jsx           # 4-tab: Self-Assessment wizard / Dual-Use Areas / Vetting Collaborators / Due Diligence
     reference/
       ExportControl.jsx          # Searchable accordion reference
       Glossary.jsx               # 12-term expandable cards with category filter
@@ -106,6 +109,7 @@ src/
 | `nro-lookup` | NRO Lookup & Map | `nroData.js` |
 | `risk-checklist` | Risk Assessment Checklist | `riskChecklist.js` |
 | `risk-mitigation` | Risk Mitigation Guide | `riskMitigationData.js` |
+| `dual-use` | Dual-Use Research Guide | `dualUseData.js` + `dualUseWizard.js` |
 
 ### Reference
 | Slug | Tool Name | Data File |
@@ -229,6 +233,7 @@ Header pattern:
   - **Lint gate**: `eslint-plugin-jsx-a11y` (flat `recommended` config) runs via `npm run lint` to catch a11y regressions — interactive elements must be real `<button>`/`<a>` (or carry a role + keyboard handler). Modal/drawer close-backdrops use the `e.target === e.currentTarget` click pattern with a documented `eslint-disable` line, since keyboard close is provided by Escape (search modal, STRA wizard) or a real `<button>` backdrop (mobile sidebar). `react-hooks/set-state-in-effect` is set to `warn` (not error) so the a11y errors stay the signal; pre-existing `no-unused-vars` (unused `onNavigate` props) remain and are unrelated to a11y.
 - **npm audit**: Run `npm audit fix` after any dependency changes. As of 2026-06-17 the project has 0 known vulnerabilities (Vite/Babel/PostCSS/js-yaml advisories were patched via `npm audit fix`).
 - **Git worktrees**: Feature branches use `.worktrees/<branch-name>/` (already in `.gitignore`). Create with `git worktree add .worktrees/<name> -b <branch>`, remove with `git worktree remove .worktrees/<name>` after merging.
+- **Dual-Use Research Guide**: A combined hub (CSS prefix `dual-`) in Compliance Tools, structured on the workshop arc *Know Your Research → Know Your Partners → Assess the Risk*. The Self-Assessment wizard is deliberately **conceptual** (intent/use, knowledge transfer, partner exposure) and hands off to STRA Lookup / NRO Lookup / Export Control rather than re-deriving STRA categories — it does not duplicate the STRA wizard. Results give a **signal read** (Likely / Possible / Low), never a "cleared" verdict or legal advice, and offer a Print summary (reuses the global print CSS + `.dual-print-only`/`.dual-no-print` toggles). Content is attributed to Public Safety Canada's Safeguarding Science program + Government of Canada guidance (not UBC). The stale workshop figures (74 subcategories / 356 entities) were dropped; cite "11 STRA categories" and link the live NRO list instead. The guide reuses the `straWizard` node shape (`dualUseWizard.js`) and the tabbed-tool button pattern from `CybersecurityGuide`.
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
 - **Sister-site sidebar card (RDM Toolkit)**: `Sidebar.jsx` pins a sister-site card at the bottom-left of the sidebar (below `.sidebar-scroll`, which is `flex: 1` — no `position: fixed`). It links to `https://rdmtoolkit.ca` in a new tab and uses the **RDM Toolkit brand wordmark** (do NOT mirror the RS Toolkit pairing here):
   - `.sidebar-sister-mark` ("RDM") — **Geist sans-serif, weight 800, upright, gold `#facc15`**
