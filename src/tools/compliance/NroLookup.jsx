@@ -94,6 +94,8 @@ function MarkerCluster({ markers, onMarkerClick, activeId }) {
         // Size scales with count, capped
         const size = count < 10 ? 32 : count < 50 ? 38 : count < 150 ? 44 : 50;
 
+        // Count text is dark on the country fill: white measured 2.28:1 on Iran green
+        // and 3.68:1 on China blue, below the 4.5:1 WCAG 1.4.3 floor.
         return L.divIcon({
           html: `
             <div style="
@@ -106,11 +108,11 @@ function MarkerCluster({ markers, onMarkerClick, activeId }) {
               display:flex;
               align-items:center;
               justify-content:center;
-              color:#fff;
+              color:#061727;
               font-weight:700;
               font-size:${size >= 44 ? '14px' : '13px'};
               font-family:system-ui,-apple-system,sans-serif;
-              text-shadow:0 1px 2px rgba(0,0,0,0.5);
+              text-shadow:0 1px 1px rgba(255,255,255,0.35);
             ">${count}</div>
           `,
           className: 'nro-cluster-icon',
@@ -337,14 +339,16 @@ export default function NroLookup({ onNavigate }) {
         </p>
       </div>
 
-      {/* Sanctions context for research collaboration */}
+      {/* Sanctions context for research collaboration.
+          Each tier's content is unmounted when collapsed, so aria-controls is set
+          only while the panel exists — a dangling IDREF is an ARIA error. */}
       <div className="nro-sanctioned-banner">
         <button
           type="button"
           className={`nro-sanctioned-toggle nro-sanctioned-toggle--tier1 ${tier1Open ? 'is-open' : ''}`}
           onClick={() => setTier1Open(v => !v)}
           aria-expanded={tier1Open}
-          aria-controls="nro-sanctioned-tier1-content"
+          aria-controls={tier1Open ? 'nro-sanctioned-tier1-content' : undefined}
         >
           <span className="nro-sanctioned-title nro-sanctioned-title--tier1">
             ⛔ Tier 1 — Comprehensive prohibitions (no research engagement)
@@ -380,7 +384,7 @@ export default function NroLookup({ onNavigate }) {
           className={`nro-sanctioned-toggle nro-sanctioned-toggle--tier2 ${tier2Open ? 'is-open' : ''}`}
           onClick={() => setTier2Open(v => !v)}
           aria-expanded={tier2Open}
-          aria-controls="nro-sanctioned-tier2-content"
+          aria-controls={tier2Open ? 'nro-sanctioned-tier2-content' : undefined}
         >
           <span className="nro-sanctioned-title nro-sanctioned-title--tier2">
             ⚠️ Tier 2 — Broad sectoral sanctions (heightened scrutiny required)

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import { TabList, TabPanel } from '../../components/ui/Tabs';
 import { triAgencyData } from '../../data/triAgencyData';
 
 const TABS = [
@@ -59,21 +60,17 @@ export default function TriAgencyGuide({ onNavigate }) {
       </div>
 
       {/* Tabs */}
-      <div className="trag-tabs">
-        {TABS.map(tab => (
-          <button
-            key={tab.id}
-            className={`trag-tab${activeTab === tab.id ? ' trag-tab--active' : ''}`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      <TabList
+        tabs={TABS}
+        activeId={activeTab}
+        onChange={setActiveTab}
+        prefix="trag"
+        label="Tri-Agency guide sections"
+      />
 
       {/* ── Overview Tab ── */}
       {activeTab === 'overview' && (
-        <div className="trag-tab-content">
+        <TabPanel id="overview" prefix="trag">
           {/* Definition */}
           <div className="trag-definition">
             <div className="trag-definition-label">What is Research Security?</div>
@@ -119,12 +116,12 @@ export default function TriAgencyGuide({ onNavigate }) {
               </button>
             </div>
           </div>
-        </div>
+        </TabPanel>
       )}
 
       {/* ── Principles Tab ── */}
       {activeTab === 'principles' && (
-        <div className="trag-tab-content">
+        <TabPanel id="principles" prefix="trag">
           <p className="trag-intro-text">
             Canada's research security framework is built on 10 guiding principles that balance national security with the values of open science, academic freedom, and inclusion. Every policy and requirement must be interpreted in light of these principles.
           </p>
@@ -171,12 +168,12 @@ export default function TriAgencyGuide({ onNavigate }) {
               );
             })}
           </div>
-        </div>
+        </TabPanel>
       )}
 
       {/* ── Policies Tab ── */}
       {activeTab === 'policies' && (
-        <div className="trag-tab-content">
+        <TabPanel id="policies" prefix="trag">
           <p className="trag-intro-text">
             The tri-agency guidance covers two distinct policies. They have different triggers, different processes, and different consequences. Understanding the difference is essential.
           </p>
@@ -264,7 +261,7 @@ export default function TriAgencyGuide({ onNavigate }) {
               The <strong>STRAC Policy</strong> is a rule — if you are in a STRA and have an NRO affiliation, you are ineligible. There is no review that could result in approval.
             </p>
           </div>
-        </div>
+        </TabPanel>
       )}
     </div>
   );

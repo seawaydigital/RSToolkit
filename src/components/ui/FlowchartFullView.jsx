@@ -10,29 +10,6 @@ const PADDING = 36;
 const EDGE_COLOR = '#16a34a';
 const EDGE_COLOR_NO = '#ef4444'; // "No" branch line/arrow, matching the red NO pill
 
-// First point on the polyline at/below the given y, plus the unit direction of
-// the segment it lies on. Used to anchor a label just past the source shape's
-// bottom edge — the top of the visible arrow run — regardless of shape width.
-function pointBelowY(pts, yThreshold) {
-  for (let i = 0; i < pts.length - 1; i++) {
-    const a = pts[i], b = pts[i + 1];
-    if (b.y >= yThreshold) {
-      const t = b.y === a.y ? 0 : Math.max(0, Math.min(1, (yThreshold - a.y) / (b.y - a.y)));
-      const segLen = Math.hypot(b.x - a.x, b.y - a.y) || 1;
-      return {
-        x: a.x + (b.x - a.x) * t,
-        y: a.y + (b.y - a.y) * t,
-        dx: (b.x - a.x) / segLen,
-        dy: (b.y - a.y) / segLen,
-      };
-    }
-  }
-  const a = pts[pts.length - 2] || pts[0];
-  const b = pts[pts.length - 1];
-  const segLen = Math.hypot(b.x - a.x, b.y - a.y) || 1;
-  return { x: b.x, y: b.y, dx: (b.x - a.x) / segLen, dy: (b.y - a.y) / segLen };
-}
-
 // The "No" branch out of a decision is drawn red to match its label; everything
 // else (including the "Yes" branch) stays green. If an edge is BOTH the yes and
 // no target (a decision whose answers converge), Yes/green wins — matching the
@@ -259,11 +236,6 @@ function EdgeLabel({ edge, layout, nodes }) {
   const isNo = sourceNode.no === edge.w;
   if (!isYes && !isNo) return null;
 
-  // Anchor the pill just below the source shape's bottom edge — the top of the
-  // visible arrow run — so it clears the shape no matter how wide it is. Then
-  // push it perpendicular to the LOCAL segment direction (branches can be
-  // diagonal), to whichever side points AWAY from the source centre, so the
-  // pill lands in open space beside the branch and never touches the line.
   const pts = edgeData.points;
   const src = layout.node(edge.v);
   // Centre the pill ON the branch's vertical descent so the line runs straight

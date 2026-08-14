@@ -42,9 +42,12 @@
   --green-subtle: rgba(92, 184, 122, 0.15);
   --amber: #f0a836;
   --amber-subtle: rgba(240, 168, 54, 0.15);
-  --red: #e86a54; /* lightened from #e05a44 to clear WCAG AA 4.5:1 for red text on raised surfaces */
-  --red-subtle: rgba(232, 106, 84, 0.15);
-  --purple: #a892c4;
+  --red: #f2998c; /* lightened from #e86a54: that value only cleared 4.5:1 on the two darkest
+                     surfaces — it measured 4.48:1 on --bg-tertiary, 3.69:1 on --bg-elevated, and
+                     4.28:1 as red-on-red-subtle (the NO buttons / "Likely dual-use" badge).
+                     #f2998c clears 4.5:1 in all four contexts. */
+  --red-subtle: rgba(242, 153, 140, 0.15); /* tint tracks --red so the composite stays AA */
+  --purple: #b9a6d2; /* lightened from #a892c4 (4.22:1 on --bg-elevated) to clear 4.5:1 */
 
   /* Borders — cobalt-tinted to match the base */
   --border: #143052;
@@ -2058,7 +2061,8 @@ a:hover {
   background: var(--purple);
   border: none;
   border-radius: 20px;
-  color: white;
+  /* Dark text on the light purple fill — white measured 2.77:1 (WCAG 1.4.3) */
+  color: var(--bg-primary);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.15s;
