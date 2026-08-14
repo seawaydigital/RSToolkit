@@ -1,8 +1,14 @@
 # Accessibility (AODA / WCAG 2.0 AA) — Handoff & Testing Guide
 
-> Status as of 2026-06-17. This file is the handoff record for the WCAG 2.0 AA
-> remediation pass (PR seawaydigital/RSToolkit#12). For the durable engineering
-> conventions, see the **Accessibility** entry in [CLAUDE.md](CLAUDE.md).
+> Status as of 2026-08-14. This file records the WCAG 2.0 AA remediation work:
+> the original pass (PR seawaydigital/RSToolkit#12) and the **second audit**
+> below, which covered the tools added afterwards (Dual-Use Guide, Cybersecurity
+> Guide, reworked flowcharts). For the durable engineering conventions, see the
+> **Accessibility** entry in [CLAUDE.md](CLAUDE.md).
+
+**AODA note**: Ontario's IASR requires **WCAG 2.0 Level AA**. Criteria cited as
+2.1-only below (1.4.10 Reflow, 1.4.11 Non-text Contrast, 4.1.3 Status Messages)
+are tracked as good practice, not as AODA obligations.
 
 The Research Security Toolkit targets **WCAG 2.0 AA**, the conformance level the
 Accessibility for Ontarians with Disabilities Act (AODA) references for web
@@ -27,6 +33,32 @@ guarded against regression, and the manual checks a human still needs to run.
 | Colour contrast | `--text-muted` `#7d98b0`→`#93acc2`, `--red` `#e05a44`→`#e86a54` to clear 4.5:1 on the lightest surface | 1.4.3 |
 | Motion | `prefers-reduced-motion: reduce` honored globally | 2.3.3 |
 | Headings | Error page heading corrected `h2`→`h1`; per-page hierarchy verified | 1.3.1 |
+
+## 1b. Second audit — 2026-08-14 (code-level, done)
+
+Covers the tools that landed after the first pass. Contrast figures are
+**measured from the rendered DOM** (computed colour vs. the real composited
+background), not read off the stylesheet — which is how the `-subtle` tint
+failures below were missed the first time.
+
+| Area | Finding | Fix | WCAG |
+|---|---|---|---|
+| STRA Lookup "guided assessment" button | white on `--purple` — **2.77:1** | dark `#061727` text; `--purple` `#a892c4`→`#b9a6d2` | 1.4.3 |
+| NO buttons, "Likely dual-use" badge | `--red` on `--red-subtle` — **4.28:1** | `--red` `#e86a54`→`#f2998c`, `--red-subtle` rgb tracks it | 1.4.3 |
+| NRO map cluster counts | white on cluster fill — **2.28:1** (Iran green), 3.68:1 (China blue) | dark `#061727` count text + light text-shadow | 1.4.3 |
+| `--red` / `--purple` tokens | 3.69:1 / 4.22:1 on `--bg-elevated` — the old CLAUDE.md claim that red cleared AA there was wrong | token values raised; claim corrected | 1.4.3 |
+| Tri-Agency, Cybersecurity, Dual-Use tabs | plain `<button>`s — active state lived only in a CSS class, so AT could not tell which tab was current | shared `Tabs.jsx`: `role=tablist/tab/tabpanel`, `aria-selected`, `aria-controls`, roving tabindex + Arrow/Home/End | 4.1.2, 2.1.1 |
+| Every route | `document.title` never changed — all 13 tools reported "Research Security Toolkit" | title set per route in `App.jsx` | **2.4.2 (Level A)** |
+| Every route | focus stayed on the activated sidebar link; no signal the view changed | focus moves to `#main-content` on navigation | 2.4.3 |
+| NRO sanctions tiers | `aria-controls` pointed at unmounted panels (dangling IDREF) while collapsed | set only while expanded | 4.1.2 |
+
+Also fixed in the same pass (not accessibility, found while verifying):
+**5 dead external links** — three science.gc.ca policy pages (the site moved
+`guidelines-and-tools-universities-researchers-and-sponsors` →
+`guidelines-and-tools-implement-research-security`), the PSPC Controlled Goods
+page, and the 2023 U15 guide PDF (replaced with the June 2026 edition). All 38
+external links now resolve 200. Two inline text links used `var(--accent)`,
+which CLAUDE.md reserves for interactive UI — switched to `var(--link)`.
 
 ### Equivalent-alternative decisions
 - **NRO Leaflet map**: the on-page **data table** is the conformant keyboard/
@@ -79,11 +111,14 @@ Unplug/ignore the mouse and use **Tab / Shift+Tab / Enter / Space / Esc / arrow 
 - [ ] **Risk Checklist**: the 3-state toggles are reachable and operable by keyboard.
 - [ ] **NRO Lookup**: the proximity "institution" suggestions are reachable as buttons and selectable by keyboard. The data table is fully keyboard-navigable (the map itself may not be — that's expected; the table is the equivalent).
 - [ ] **Flowcharts**: switch to **Guided Mode** and confirm the full decision flow can be completed with the keyboard.
+- [ ] **Tabbed tools** (Tri-Agency, Cybersecurity, Dual-Use): Tab reaches the tab strip **once**, then Left/Right arrows move between tabs, Home/End jump to first/last, and the panel below updates. Tab again moves *past* the strip into the panel content.
 
 ### 3b. Screen reader
 Use **NVDA** (Windows, free — nvaccess.org) or **VoiceOver** (Mac: Cmd+F5).
 
 - [ ] Page landmarks are announced: a banner/header, a navigation, and a main region.
+- [ ] Navigating to a tool announces the new page (focus lands in `main`), and the browser tab/window title changes to that tool's name.
+- [ ] Tabs announce as "tab, selected, N of M" and the panel is associated with its tab.
 - [ ] The logo button announces as "Research Security Toolkit — go to home, button".
 - [ ] Search dialog announces as a dialog; the input has a label; the result count is announced as results change.
 - [ ] Accordion headers announce expanded/collapsed state.
@@ -116,7 +151,9 @@ effects → Animation effects off; Mac: System Settings → Accessibility → Di
 
 ## 4. Known limitations / out of scope
 - The Leaflet map markers are not individually keyboard-focusable by design; the data table is the equivalent (§1).
-- 10 pre-existing `no-unused-vars` lint errors (unused `onNavigate` props) are unrelated to accessibility and were left as-is.
+- **Flowchart Full View nodes** open their detail panel on click only — the SVG `<g>` wrappers are not keyboard-focusable. The SVG is `role="img"` and its label points to **Guided Mode**, which is the keyboard/AT-accessible equivalent of the same content. This is the conforming-alternate-version route, not an oversight; if Full View ever becomes the only way to reach node detail, the nodes must become real focusable controls.
+- 10 pre-existing `no-unused-vars` lint errors (unused `onNavigate` props) plus 4 `no-undef` on `process` in `vite.config.js` are unrelated to accessibility and were left as-is.
+- Automated colour-contrast checking covered every route and every tab/accordion/wizard state at desktop, 640px (≈200% zoom) and 375px, but cannot judge whether a colour *conveys meaning on its own* (1.4.1) — that stays a human check.
 - A formal third-party AODA audit is recommended before any public conformance claim; this pass establishes the baseline and the regression guard.
 
 ---
