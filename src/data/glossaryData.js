@@ -53,7 +53,7 @@ export const glossaryData = {
       definition:
         'Organizations identified by the Government of Canada as posing a risk to national security due to their involvement with the military, national security apparatus, or state-sponsored programs of countries with demonstrated intent to acquire Canadian sensitive technology. Under the Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy), Canadian researchers receiving tri-agency funding must not conduct research with, or receive funding from, Named Research Organizations. The NRO list is maintained and updated by the Government of Canada.',
       source: 'Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy), Government of Canada',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/named-research-organizations',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations',
       category: 'Policy Terms',
       tags: ['strac', 'nro', 'security'],
     },
@@ -119,7 +119,7 @@ export const glossaryData = {
       definition:
         'A list of research areas identified by the Government of Canada as particularly sensitive from a national security perspective, maintained by the tri-agency. Researchers conducting work in STRA fields are at higher risk of unwanted foreign interference and technology transfer. Under the STRAC Policy, researchers with tri-agency funding who work in STRA fields and who have affiliations with Named Research Organizations are not eligible for continued funding. The STRA list currently covers approximately 12 broad categories including AI, quantum science, advanced biology, aerospace, space technology, advanced energy, advanced manufacturing, and advanced sensing.',
       source: 'Sensitive Technology Research Areas, Government of Canada',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-areas',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas',
       category: 'Policy Terms',
       tags: ['stra', 'strac', 'technology'],
     },
@@ -130,7 +130,7 @@ export const glossaryData = {
       definition:
         'A federal policy issued jointly by NSERC, SSHRC, and CIHR that requires researchers applying for or holding tri-agency funding to not have current affiliations with Named Research Organizations if their research falls within a Sensitive Technology Research Area. Researchers must attest at the time of application and annually that they have no such affiliations. Non-compliance can result in ineligibility for tri-agency funding. The policy does not prohibit international collaboration broadly — only affiliations with specifically listed organizations in sensitive research areas.',
       source: 'Policy on Sensitive Technology Research and Affiliations of Concern, NSERC/SSHRC/CIHR',
-      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-and-affiliations-concern',
+      sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern',
       category: 'Policy Terms',
       tags: ['strac', 'policy', 'compliance'],
     },

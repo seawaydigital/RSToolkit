@@ -190,7 +190,7 @@ export const dualUseData = {
       group: "Know the Regulatory Regimes",
       actions: [
         { text: "Export Controls regulate goods, services, and technology (including data on cloud platforms and temporary transfers) leaving Canada — Global Affairs Canada.", link: { url: "https://www.international.gc.ca/controls-controles/index.aspx", label: "Global Affairs Canada — Export Controls" } },
-        { text: "The Controlled Goods Program regulates examination, possession, and transfer of certain goods within Canada — Public Services and Procurement Canada.", link: { url: "https://www.canada.ca/en/public-services-procurement/services/controlled-goods.html", label: "Controlled Goods Program (PSPC)" } },
+        { text: "The Controlled Goods Program regulates examination, possession, and transfer of certain goods within Canada — Public Services and Procurement Canada.", link: { url: "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods.html", label: "Controlled Goods Program (PSPC)" } },
         { text: "The Human Pathogens and Toxins Act governs activities involving human pathogens and toxins — Public Health Agency of Canada.", link: { url: "https://laws-lois.justice.gc.ca/eng/acts/h-5.67/", label: "Human Pathogens and Toxins Act" } },
         { text: "Check sanctions before partnering — Global Affairs Canada sanctions index, and OpenSanctions (aggregates 120+ sources; verify matches against official sources).", link: { url: "https://www.opensanctions.org/", label: "OpenSanctions" } },
       ],

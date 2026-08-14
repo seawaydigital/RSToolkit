@@ -9,7 +9,7 @@ export const triAgencyData = {
   agencies: [
     { id: 'cihr', name: 'CIHR', fullName: 'Canadian Institutes of Health Research', url: 'https://cihr-irsc.gc.ca/e/193.html' },
     { id: 'nserc', name: 'NSERC', fullName: 'Natural Sciences and Engineering Research Council of Canada', url: 'https://www.nserc-crsng.gc.ca/' },
-    { id: 'sshrc', name: 'SSHRC', fullName: 'Social Sciences and Humanities Research Council of Canada', url: 'https://sshrc-crsh.gc.ca/' },
+    { id: 'sshrc', name: 'SSHRC', fullName: 'Social Sciences and Humanities Research Council of Canada', url: 'https://sshrc-crsh.canada.ca/' },
     { id: 'cfi', name: 'CFI', fullName: 'Canada Foundation for Innovation', url: 'https://www.innovation.ca/' },
   ],
 
@@ -157,7 +157,7 @@ export const triAgencyData = {
       ],
       relatedTool: 'strac-flowchart',
       relatedToolLabel: 'STRAC Flowchart',
-      officialUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-and-affiliations-concern',
+      officialUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern',
     },
   ],
 
