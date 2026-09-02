@@ -1,10 +1,15 @@
 # Accessibility (AODA / WCAG 2.0 AA) — Handoff & Testing Guide
 
-> Status as of 2026-08-14. This file records the WCAG 2.0 AA remediation work:
-> the original pass (PR seawaydigital/RSToolkit#12) and the **second audit**
-> below, which covered the tools added afterwards (Dual-Use Guide, Cybersecurity
-> Guide, reworked flowcharts). For the durable engineering conventions, see the
-> **Accessibility** entry in [CLAUDE.md](CLAUDE.md).
+> Status as of 2026-09-02. This file records the WCAG 2.0 AA remediation work:
+> the original pass (PR seawaydigital/RSToolkit#12), the **second audit**
+> covering the tools added afterwards (Dual-Use Guide, Cybersecurity Guide,
+> reworked flowcharts), and the footer/accessibility-statement work.
+> For the durable engineering conventions, see the **Accessibility** entry in
+> [CLAUDE.md](CLAUDE.md).
+>
+> **Manual testing (§3) was completed by a human on 2026-09-02** — keyboard-only
+> and screen reader. A formal third-party audit is being carried out separately
+> by another team.
 
 **AODA note**: Ontario's IASR requires **WCAG 2.0 Level AA**. Criteria cited as
 2.1-only below (1.4.10 Reflow, 1.4.11 Non-text Contrast, 4.1.3 Status Messages)
@@ -13,7 +18,7 @@ are tracked as good practice, not as AODA obligations.
 The Research Security Toolkit targets **WCAG 2.0 AA**, the conformance level the
 Accessibility for Ontarians with Disabilities Act (AODA) references for web
 content. This document records what was remediated, what is automatically
-guarded against regression, and the manual checks a human still needs to run.
+guarded against regression, and the manual checks that were run.
 
 ---
 
@@ -73,9 +78,9 @@ which is what makes it a real `contentinfo` landmark (a `<footer>` nested inside
 `main` maps to nothing). It states the WCAG 2.0 AA target and links a contact
 address for reporting a barrier or requesting another format.
 
-> **Confirm the contact address before launch.** It currently points at
-> `andrew@seawaydigital.ca`, taken from git config. If accessibility requests
-> should route somewhere else, change it in `SiteFooter.jsx`.
+> **Contact confirmed 2026-09-02**: accessibility requests route to
+> `andrew@seawaydigital.ca`. If that ever changes, update it in
+> `SiteFooter.jsx` — it is the only place the address appears.
 
 Landmark structure is now banner / navigation / main / contentinfo, one of each.
 
@@ -102,12 +107,18 @@ Expected: **0 `jsx-a11y` errors.** (There are 10 pre-existing, unrelated
 `no-unused-vars` errors and a few `react-hooks/set-state-in-effect` *warnings* —
 these are not accessibility issues and do not affect the a11y gate.)
 
-Automated tooling catches roughly 30% of issues. The manual checks below cover
-the rest and are required before declaring AODA conformance.
+Automated tooling catches roughly 30% of issues. The §3 manual checks cover the
+rest; they were completed on 2026-09-02 and should be re-run after any
+significant UI change.
 
 ---
 
-## 3. Manual testing checklist (human required)
+## 3. Manual testing checklist
+
+> **Completed 2026-09-02** (keyboard-only and screen reader passes). Re-run this
+> section after any significant UI change — it is the regression checklist, not
+> a one-time gate. Automated tooling covers roughly 30% of WCAG; everything
+> below is the part it cannot reach.
 
 Run these against a production build:
 
@@ -173,7 +184,8 @@ effects → Animation effects off; Mac: System Settings → Accessibility → Di
 - **Flowchart Full View nodes** open their detail panel on click only — the SVG `<g>` wrappers are not keyboard-focusable. The SVG is `role="img"` and its label points to **Guided Mode**, which is the keyboard/AT-accessible equivalent of the same content. This is the conforming-alternate-version route, not an oversight; if Full View ever becomes the only way to reach node detail, the nodes must become real focusable controls.
 - 10 pre-existing `no-unused-vars` lint errors (unused `onNavigate` props) plus 4 `no-undef` on `process` in `vite.config.js` are unrelated to accessibility and were left as-is.
 - Automated colour-contrast checking covered every route and every tab/accordion/wizard state at desktop, 640px (≈200% zoom) and 375px, but cannot judge whether a colour *conveys meaning on its own* (1.4.1) — that stays a human check.
-- A formal third-party AODA audit is recommended before any public conformance claim; this pass establishes the baseline and the regression guard.
+- A formal third-party AODA audit is being carried out separately by another team. This work establishes the baseline and the regression guard it will assess against; §1/§1b/§1c are the record of what changed and why.
+- The §3 checkboxes are deliberately left unticked. They are a **reusable regression checklist**, not a sign-off sheet — the completion record lives in the header note at the top of this file.
 
 ---
 
