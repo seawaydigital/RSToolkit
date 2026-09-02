@@ -60,6 +60,25 @@ page, and the 2023 U15 guide PDF (replaced with the June 2026 edition). All 38
 external links now resolve 200. Two inline text links used `var(--accent)`,
 which CLAUDE.md reserves for interactive UI — switched to `var(--link)`.
 
+## 1c. Accessibility statement + footer landmark — 2026-09-02
+
+The site previously had **no `contentinfo` landmark at all** and no accessibility
+statement or feedback contact. AODA's Information and Communications standards
+expect an organisation to provide accessible formats and a feedback process on
+request, so a public-facing Ontario site should say so and give people a way to
+ask.
+
+`SiteFooter.jsx` now renders as a sibling of `.app-body` — **outside `<main>`**,
+which is what makes it a real `contentinfo` landmark (a `<footer>` nested inside
+`main` maps to nothing). It states the WCAG 2.0 AA target and links a contact
+address for reporting a barrier or requesting another format.
+
+> **Confirm the contact address before launch.** It currently points at
+> `andrew@seawaydigital.ca`, taken from git config. If accessibility requests
+> should route somewhere else, change it in `SiteFooter.jsx`.
+
+Landmark structure is now banner / navigation / main / contentinfo, one of each.
+
 ### Equivalent-alternative decisions
 - **NRO Leaflet map**: the on-page **data table** is the conformant keyboard/
   screen-reader equivalent to the interactive map. Keep the table complete and
@@ -111,12 +130,12 @@ Unplug/ignore the mouse and use **Tab / Shift+Tab / Enter / Space / Esc / arrow 
 - [ ] **Risk Checklist**: the 3-state toggles are reachable and operable by keyboard.
 - [ ] **NRO Lookup**: the proximity "institution" suggestions are reachable as buttons and selectable by keyboard. The data table is fully keyboard-navigable (the map itself may not be — that's expected; the table is the equivalent).
 - [ ] **Flowcharts**: switch to **Guided Mode** and confirm the full decision flow can be completed with the keyboard.
-- [ ] **Tabbed tools** (Tri-Agency, Cybersecurity, Dual-Use): Tab reaches the tab strip **once**, then Left/Right arrows move between tabs, Home/End jump to first/last, and the panel below updates. Tab again moves *past* the strip into the panel content.
+- [ ] **Tabbed tools** (Tri-Agency, Cybersecurity, Dual-Use, Travel Security): Tab reaches the tab strip **once**, then Left/Right arrows move between tabs, Home/End jump to first/last, and the panel below updates. Tab again moves *past* the strip into the panel content.
 
 ### 3b. Screen reader
 Use **NVDA** (Windows, free — nvaccess.org) or **VoiceOver** (Mac: Cmd+F5).
 
-- [ ] Page landmarks are announced: a banner/header, a navigation, and a main region.
+- [ ] Page landmarks are announced: a banner/header, a navigation, a main region, and a contentinfo/footer.
 - [ ] Navigating to a tool announces the new page (focus lands in `main`), and the browser tab/window title changes to that tool's name.
 - [ ] Tabs announce as "tab, selected, N of M" and the panel is associated with its tab.
 - [ ] The logo button announces as "Research Security Toolkit — go to home, button".

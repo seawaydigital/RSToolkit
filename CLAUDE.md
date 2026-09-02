@@ -42,6 +42,7 @@ src/
     home/
       Home.jsx                   # Landing page: "Where do I start?" scenarios + all-tools grid
     layout/
+      SiteFooter.jsx             # contentinfo landmark: AODA accessibility statement + feedback contact
       Topbar.jsx                 # Title, hamburger (mobile), Ctrl+K search trigger
       Sidebar.jsx                # Category/tool nav + RDM Toolkit sister-site card (bottom); collapsible on mobile (<768px)
       MainContent.jsx            # Scroll container for tool pages
@@ -65,6 +66,7 @@ src/
     dualUseWizard.js             # Guided "Is my research dual-use?" question tree
     triAgencyData.js             # Tri-Agency RS guidance: principles, policies, agencies
     cybersecurityData.js         # 7 essential actions, file/device encryption, passwords, AI warning, sensitive data
+    travelSecurityData.js        # 26 checklist items across before/during/after + emergency contacts
     flowcharts/
       stracFlow.js               # STRAC policy decision nodes
       nsgrpFlow.js               # NSGRP partnership risk assessment nodes
@@ -89,6 +91,7 @@ src/
       Faq.jsx                    # Accordion; auto-expands matched results when searching
     operational-security/
       CybersecurityGuide.jsx     # 4-tab guide: Quick Start / Encryption / Passwords & 2FA / AI & Sensitive Data
+      TravelSecurity.jsx         # 3-phase travel checklist + emergency contacts
 ```
 
 ---
@@ -123,6 +126,7 @@ src/
 | Slug | Tool Name | Data File |
 |---|---|---|
 | `cybersecurity-guide` | Cybersecurity Best Practices | `cybersecurityData.js` |
+| `travel-security` | Research Travel Security | `travelSecurityData.js` |
 
 ---
 
@@ -240,6 +244,8 @@ Header pattern:
 - **Git worktrees**: Feature branches use `.worktrees/<branch-name>/` (already in `.gitignore`). Create with `git worktree add .worktrees/<name> -b <branch>`, remove with `git worktree remove .worktrees/<name>` after merging.
 - **Dual-Use Research Guide**: A combined hub (CSS prefix `dual-`) in Compliance Tools, structured on the workshop arc *Know Your Research → Know Your Partners → Assess the Risk*. The Self-Assessment wizard is deliberately **conceptual** (intent/use, knowledge transfer, partner exposure) and hands off to STRA Lookup / NRO Lookup / Export Control rather than re-deriving STRA categories — it does not duplicate the STRA wizard. Results give a **signal read** (Likely / Possible / Low), never a "cleared" verdict or legal advice, and offer a Print summary (reuses the global print CSS + `.dual-print-only`/`.dual-no-print` toggles). Content is attributed to Public Safety Canada's Safeguarding Science program + Government of Canada guidance (not UBC). The stale workshop figures (74 subcategories / 356 entities) were dropped; cite "11 STRA categories" and link the live NRO list instead. The guide reuses the `straWizard` node shape (`dualUseWizard.js`) and the tabbed-tool button pattern from `CybersecurityGuide`.
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
+- **Site footer**: `SiteFooter.jsx` renders as a **sibling of `.app-body` inside `.app`** — deliberately *outside* `<main>`, because a `<footer>` nested in `main` does not map to the `contentinfo` landmark. It carries the AODA accessibility statement and the feedback contact address that a public-facing Ontario site is expected to provide. It is a persistent slim bar (35px desktop / 61px mobile), so keep the text short; hidden in `@media print`.
+- **Research Travel Security**: Operational Security category, CSS prefix `trav-`. Structured on the federal three-phase guidance (Before You Go / While Away / When You Return) using the shared `Tabs.jsx`. Checklist state persists to localStorage key `rs-toolkit-travel-v1` (separate from the risk checklist's `rs-toolkit-checklist-v1`). The **emergency contacts block sits outside the tabs** — a traveller in trouble should not have to find the right tab first. Print CSS deliberately *reveals* the collapsed `.trav-item-detail` text, since a printed pre-trip checklist is more useful with the rationale included.
 - **Sister-site sidebar card (RDM Toolkit)**: `Sidebar.jsx` pins a sister-site card at the bottom-left of the sidebar (below `.sidebar-scroll`, which is `flex: 1` — no `position: fixed`). It links to `https://rdmtoolkit.ca` in a new tab and uses the **RDM Toolkit brand wordmark** (do NOT mirror the RS Toolkit pairing here):
   - `.sidebar-sister-mark` ("RDM") — **Geist sans-serif, weight 800, upright, gold `#facc15`**
   - `.sidebar-sister-word` ("Toolkit") — **Fraunces serif, weight 700, upright (not italic), white `#ffffff`**
@@ -261,6 +267,8 @@ Header pattern:
 | NRO List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations` |
 | STRA List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas` |
 | Safeguarding Your Research | `https://science.gc.ca/site/science/en/safeguarding-your-research` |
+| Research travel guidance | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/how-can-you-protect-your-research-during-travel` |
+| Safeguarding Science workshops | `https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx` |
 | Global Affairs Sanctions | `https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx` |
 
 ---

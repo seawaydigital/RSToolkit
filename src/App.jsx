@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import Topbar from './components/layout/Topbar';
 import Sidebar from './components/layout/Sidebar';
 import MainContent from './components/layout/MainContent';
+import SiteFooter from './components/layout/SiteFooter';
 import Home from './components/home/Home';
 import { ALL_TOOLS } from './data/toolRegistry';
 import GlobalSearchModal from './components/ui/SearchBar';
@@ -21,6 +22,7 @@ const TOOL_COMPONENTS = {
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
+  'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
 };
 
 const SITE_TITLE = 'Research Security Toolkit';
@@ -159,6 +161,7 @@ export default function App() {
           </ErrorBoundary>
         </MainContent>
       </div>
+      <SiteFooter />
       <GlobalSearchModal
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
