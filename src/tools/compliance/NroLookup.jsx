@@ -435,9 +435,22 @@ export default function NroLookup({ onNavigate }) {
           style={{ height: '100%', width: '100%' }}
           scrollWheelZoom={true}
         >
+          {/* Esri Light Gray Canvas, as base + separate label layer. CARTO
+              Voyager was dropped 2026-09 when CARTO began watermarking keyless
+              basemaps with "API KEY REQUIRED". Esri needs no key and, crucially,
+              still renders place names in English — the reason plain OSM tiles
+              are unsuitable here (they label China, Russia and Iran in local
+              script). Both layers live in the default tilePane and stack in
+              render order, so labels sit over the base and every marker pane
+              stays above both. */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            attribution='Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, and the GIS user community'
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+            maxZoom={16}
+          />
+          <TileLayer
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
+            maxZoom={16}
           />
           <MarkerCluster
             markers={markers}

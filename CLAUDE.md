@@ -22,7 +22,7 @@
 | Routing | Hash-based (`window.location.hash`), no router library |
 | Search | Fuse.js 7 (threshold: 0.35, ignoreLocation: true) |
 | Map | Leaflet 1.9 + react-leaflet 5 + leaflet.markercluster |
-| Map tiles | CartoDB Voyager — always English labels |
+| Map tiles | Esri Light Gray Canvas (base + label layer) — no API key, English labels |
 | Icons | lucide-react |
 | Graph layout | dagre (flowcharts) |
 | Persistence | localStorage (checklist state only) |
@@ -82,7 +82,7 @@ src/
       OntarioFlowchart.jsx       # FlowchartViewer wrapper
     compliance/
       StraLookup.jsx             # STRA search + guided wizard
-      NroLookup.jsx              # Map + table; CartoDB tiles; sanctioned countries banner
+      NroLookup.jsx              # Map + table; Esri gray tiles; sanctioned countries banner
       RiskChecklist.jsx          # 3-state toggle; localStorage persistence; progress bar
       RiskMitigation.jsx         # Category + measure accordion; tag filter chips
       DualUseGuide.jsx           # 4-tab: Self-Assessment wizard / Dual-Use Areas / Vetting Collaborators / Due Diligence
@@ -198,7 +198,10 @@ Header pattern:
 
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
-- **Map tiles**: CartoDB Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`) — chosen specifically for English-language place name labels.
+- **Map tiles**: **Esri Light Gray Canvas**, as two layers — `Canvas/World_Light_Gray_Base` then `Canvas/World_Light_Gray_Reference` (labels), both `https://server.arcgisonline.com/ArcGIS/rest/services/.../MapServer/tile/{z}/{y}/{x}`. Note the **`{z}/{y}/{x}`** order — Esri is row-major, unlike the usual XYZ `{z}/{x}/{y}`; swapping them silently serves the wrong tiles. Both sit in the default `tilePane` and stack in render order, so labels draw over the base and every marker pane stays above both. `maxZoom={16}`; the app never goes past ~10.
+  - **Why not CARTO**: CartoDB Voyager was used until 2026-09, when CARTO began watermarking keyless basemaps with a diagonal "API KEY REQUIRED" overlay. Their free tier now needs an account, and this is a keyless static site.
+  - **Why not plain OSM**: OSM standard tiles label places in the **local script** — China, Russia and Iran render in Chinese, Cyrillic and Farsi, which defeats the point of this map. English labels are the hard requirement; verify any replacement provider on a tile over Asia before switching.
+  - Attribution is set on the base layer only (Leaflet concatenates attributions, so repeating it on the label layer prints it twice).
 - **Design system (v3 — 2026-06, Lakehead brand)**: The toolkit uses a clean institutional aesthetic aligned with Lakehead University branding — a deep cobalt-navy base with a Blaze-yellow accent, deliberately on-brand (Cobalt + Blaze). Key tokens in `global.css`:
   - `--bg-primary: #061727` (deep cobalt-navy base; `body` has a subtle Blaze + Cobalt radial-gradient overlay). Surfaces ladder up `#0b2238` → `#0f2c49` → `#143a5e`.
   - `--cobalt: #00427A` (Lakehead Cobalt — brand cobalt for active nav / focus fields)
@@ -222,7 +225,7 @@ Header pattern:
 - **Glossary scope**: Exactly 12 terms — STRA, STRAC Policy, NSGRP, Dual-Use, Controlled Goods, Export Controls, Due Diligence, NRO, Research Security, Risk Assessment, Risk Mitigation, Sanctions.
 - **Print support**: RiskChecklist and RiskMitigation both have print buttons (`window.print()`); print CSS is in `global.css`. Print uses `@page { size: A4 portrait; margin: 1.5cm }` and explicitly overrides `height`/`overflow`/`flex` on every layout container (`.app`, `.app-body`, `.main-content`, etc.) individually — required because `height: 100vh; overflow: hidden` on `.app` would otherwise clip all content to one page.
 - **Checklist print state**: Each checklist item renders a `<div className="checklist-print-state">` element showing the current state (✓ No Risk / ⚠ Risk Identified / — N/A). It is `display: none` on screen and `display: block` in `@media print`, so the printed output reflects the user's selections.
-- **Security headers**: `index.html` includes a `Content-Security-Policy` meta tag restricting scripts to `self + unsafe-inline`, images to self + CartoDB tile domains. `connect-src` allows `'self'` plus `https://nominatim.openstreetmap.org` (required for the NRO proximity search geocoding panel). Also includes `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`.
+- **Security headers**: `index.html` includes a `Content-Security-Policy` meta tag restricting scripts to `self + unsafe-inline`, and `img-src` to `'self' data: blob: https://server.arcgisonline.com` (the map tile host — update this whenever the tile provider changes, or tiles fail silently). `connect-src` allows `'self'` plus `https://nominatim.openstreetmap.org` (required for the NRO proximity search geocoding panel). Also includes `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`.
 - **NRO proximity search**: `NroLookup.jsx` includes a "Check proximity to NROs" panel. It geocodes arbitrary institution names via `https://nominatim.openstreetmap.org/search` (free, no API key, rate-limited to ~1 req/s — fine for interactive use). The user picks from up to 5 suggestions; a gold `★` `divIcon` (class `.nro-my-institution-icon`) is placed on the map and the 5 nearest NROs are listed with distances computed by Haversine formula (pure JS, no external calls). Clicking a nearest-NRO row highlights it in the main table and flies the map to it. `FlyToHandler` accepts an optional `zoom` field — institution placement uses zoom 7 so nearby NROs are visible; row clicks use zoom 10.
 - **Flowchart node detail panel**: Clicking a flowchart node in Full View mode opens a sticky side panel to the **right** of the SVG container (not an absolute overlay). Layout: `.flowchart-outer` is `display: flex; flex-direction: row; gap: 12px`. The panel (`.flowchart-node-panel`) is `position: sticky; top: 16px; width: 240px; flex-shrink: 0`, so it stays in view while scrolling tall flowcharts. On mobile (<640px) it falls back to `column` direction and `position: static` below the SVG. `resourceLink` in node data renders as a green button linking to an external resource (PDF, form, etc.).
 - **Flowchart visual style**: Decision diamonds: dark fill `#111827` + gold stroke `#eab308`. Edges/arrowheads are colored per branch — the **"No" branch out of a decision is red `#ef4444`** (matching its NO pill), everything else (including "Yes") is green `#16a34a` (`edgeColor()` in `FlowchartFullView.jsx`; if an edge is both the yes and no target — a decision whose answers converge — Yes/green wins). Yes/No labels: SVG pill badges (`<rect rx=10>` + `<text>`) — YES in green (`#14532d` fill, `#22c55e` stroke), NO in red (`#450a0a` fill, `#ef4444` stroke). Selected node: white stroke + `drop-shadow` glow. Node text uses `dominantBaseline="central"` on tspans for precise vertical centering.
