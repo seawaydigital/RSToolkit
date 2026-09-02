@@ -23,6 +23,7 @@ const TOOL_COMPONENTS = {
   'faq': lazy(() => import('./tools/reference/Faq')),
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
   'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
+  'report-concern': lazy(() => import('./tools/operational-security/ReportConcern')),
 };
 
 const SITE_TITLE = 'Research Security Toolkit';

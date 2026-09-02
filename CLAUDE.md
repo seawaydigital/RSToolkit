@@ -67,6 +67,7 @@ src/
     triAgencyData.js             # Tri-Agency RS guidance: principles, policies, agencies
     cybersecurityData.js         # 7 essential actions, file/device encryption, passwords, AI warning, sensitive data
     travelSecurityData.js        # 26 checklist items across before/during/after + emergency contacts
+    reportConcernData.js         # 7 incident scenarios + federal/institutional contact directory
     flowcharts/
       stracFlow.js               # STRAC policy decision nodes
       nsgrpFlow.js               # NSGRP partnership risk assessment nodes
@@ -92,6 +93,7 @@ src/
     operational-security/
       CybersecurityGuide.jsx     # 4-tab guide: Quick Start / Encryption / Passwords & 2FA / AI & Sensitive Data
       TravelSecurity.jsx         # 3-phase travel checklist + emergency contacts
+      ReportConcern.jsx          # Scenario accordion -> what to do now + who to contact
 ```
 
 ---
@@ -127,6 +129,7 @@ src/
 |---|---|---|
 | `cybersecurity-guide` | Cybersecurity Best Practices | `cybersecurityData.js` |
 | `travel-security` | Research Travel Security | `travelSecurityData.js` |
+| `report-concern` | Report a Concern | `reportConcernData.js` |
 
 ---
 
@@ -246,6 +249,7 @@ Header pattern:
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
 - **Site footer**: `SiteFooter.jsx` renders as a **sibling of `.app-body` inside `.app`** — deliberately *outside* `<main>`, because a `<footer>` nested in `main` does not map to the `contentinfo` landmark. It carries the AODA accessibility statement and the feedback contact address that a public-facing Ontario site is expected to provide. It is a persistent slim bar (35px desktop / 61px mobile), so keep the text short; hidden in `@media print`.
 - **Research Travel Security**: Operational Security category, CSS prefix `trav-`. Structured on the federal three-phase guidance (Before You Go / While Away / When You Return) using the shared `Tabs.jsx`. Checklist state persists to localStorage key `rs-toolkit-travel-v1` (separate from the risk checklist's `rs-toolkit-checklist-v1`). The **emergency contacts block sits outside the tabs** — a traveller in trouble should not have to find the right tab first. Print CSS deliberately *reveals* the collapsed `.trav-item-detail` text, since a printed pre-trip checklist is more useful with the rationale included.
+- **Report a Concern**: Operational Security, CSS prefix `rept-`. A single-open scenario accordion ("what happened?") rather than a wizard — people arriving here already know their situation and need an answer, not a questionnaire. The page leads with **"start with your own institution"**: for almost every scenario the institutional research security office is the correct first call, and sending researchers straight to CSIS or the RCMP would be actively unhelpful. Federal contacts (Public Safety Research Security Centre, Cyber Centre, CSIS, RCMP NSIN) are listed per scenario and again in a full directory. The `protections` block exists because fear of consequences is the main reason concerns go unreported.
 - **Sister-site sidebar card (RDM Toolkit)**: `Sidebar.jsx` pins a sister-site card at the bottom-left of the sidebar (below `.sidebar-scroll`, which is `flex: 1` — no `position: fixed`). It links to `https://rdmtoolkit.ca` in a new tab and uses the **RDM Toolkit brand wordmark** (do NOT mirror the RS Toolkit pairing here):
   - `.sidebar-sister-mark` ("RDM") — **Geist sans-serif, weight 800, upright, gold `#facc15`**
   - `.sidebar-sister-word` ("Toolkit") — **Fraunces serif, weight 700, upright (not italic), white `#ffffff`**
@@ -269,6 +273,8 @@ Header pattern:
 | Safeguarding Your Research | `https://science.gc.ca/site/science/en/safeguarding-your-research` |
 | Research travel guidance | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/how-can-you-protect-your-research-during-travel` |
 | Safeguarding Science workshops | `https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx` |
+| Report a cyber incident (Cyber Centre) | `https://www.cyber.gc.ca/en/incident-management` |
+| Foreign interference guidance | `https://www.publicsafety.gc.ca/cnt/ntnl-scrt/frgn-ntrfrnc/prtct-gnst-frgn-ntrfrnc-en.aspx` |
 | Global Affairs Sanctions | `https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx` |
 
 ---

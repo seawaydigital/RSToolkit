@@ -171,6 +171,178 @@ a:hover {
   overflow: hidden;
 }
 
+/* ===== Report a Concern (rept-) ===== */
+.rept-first {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 28px;
+}
+.rept-first-title { font-size: 16px; margin-bottom: 8px; }
+.rept-first p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.rept-first-exception {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--amber) !important;
+  font-weight: 500;
+}
+
+.rept-section-title { font-size: 18px; margin: 28px 0 12px; }
+
+.rept-scenarios { display: flex; flex-direction: column; gap: 8px; }
+
+.rept-scenario {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.rept-scenario--open { border-color: var(--border-strong); }
+
+/* The heading carries the semantics; the button inside it is the control. */
+.rept-scenario-heading { margin: 0; font-size: inherit; font-weight: inherit; }
+.rept-scenario-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.rept-scenario-toggle:hover { background: var(--bg-card-hover); }
+.rept-chevron {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.rept-scenario-body {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.rept-sublabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: 14px 0 8px;
+}
+
+.rept-steps {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.rept-then {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--border-light);
+  padding-left: 10px;
+}
+
+.rept-contact-list { list-style: none; margin: 0; padding: 0; }
+
+.rept-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.rept-contact:first-child { border-top: none; }
+.rept-contact--urgent .rept-contact-label { color: var(--red); }
+
+.rept-contact-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.rept-contact-tag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--accent-subtle);
+  color: var(--accent);
+}
+.rept-contact-detail { font-size: 12px; line-height: 1.5; color: var(--text-muted); }
+.rept-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.rept-contact-list--full {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 16px 12px;
+}
+
+.rept-scenario-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+.rept-crosslink {
+  font-size: 13px;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rept-crosslink:hover { color: var(--link-hover); }
+
+.rept-protections {
+  margin-top: 28px;
+  background: var(--green-subtle);
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.rept-protections-title { font-size: 15px; color: var(--green); margin-bottom: 8px; }
+.rept-protections-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
 /* ===== Research Travel Security (trav-) =====
    Tabs reuse the shared Tabs.jsx contract: .trav-tabs / .trav-tab /
    .trav-tab--active / .trav-tab-content. */
