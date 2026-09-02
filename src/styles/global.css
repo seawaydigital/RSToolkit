@@ -42,9 +42,12 @@
   --green-subtle: rgba(92, 184, 122, 0.15);
   --amber: #f0a836;
   --amber-subtle: rgba(240, 168, 54, 0.15);
-  --red: #e86a54; /* lightened from #e05a44 to clear WCAG AA 4.5:1 for red text on raised surfaces */
-  --red-subtle: rgba(232, 106, 84, 0.15);
-  --purple: #a892c4;
+  --red: #f2998c; /* lightened from #e86a54: that value only cleared 4.5:1 on the two darkest
+                     surfaces — it measured 4.48:1 on --bg-tertiary, 3.69:1 on --bg-elevated, and
+                     4.28:1 as red-on-red-subtle (the NO buttons / "Likely dual-use" badge).
+                     #f2998c clears 4.5:1 in all four contexts. */
+  --red-subtle: rgba(242, 153, 140, 0.15); /* tint tracks --red so the composite stays AA */
+  --purple: #b9a6d2; /* lightened from #a892c4 (4.22:1 on --bg-elevated) to clear 4.5:1 */
 
   /* Borders — cobalt-tinted to match the base */
   --border: #143052;
@@ -166,6 +169,406 @@ a:hover {
   display: flex;
   flex: 1;
   overflow: hidden;
+}
+
+/* ===== Report a Concern (rept-) ===== */
+.rept-first {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 28px;
+}
+.rept-first-title { font-size: 16px; margin-bottom: 8px; }
+.rept-first p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.rept-first-exception {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--amber) !important;
+  font-weight: 500;
+}
+
+.rept-section-title { font-size: 18px; margin: 28px 0 12px; }
+
+.rept-scenarios { display: flex; flex-direction: column; gap: 8px; }
+
+.rept-scenario {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.rept-scenario--open { border-color: var(--border-strong); }
+
+/* The heading carries the semantics; the button inside it is the control. */
+.rept-scenario-heading { margin: 0; font-size: inherit; font-weight: inherit; }
+.rept-scenario-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.rept-scenario-toggle:hover { background: var(--bg-card-hover); }
+.rept-chevron {
+  flex-shrink: 0;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.rept-scenario-body {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.rept-sublabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: 14px 0 8px;
+}
+
+.rept-steps {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.rept-then {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--border-light);
+  padding-left: 10px;
+}
+
+.rept-contact-list { list-style: none; margin: 0; padding: 0; }
+
+.rept-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.rept-contact:first-child { border-top: none; }
+.rept-contact--urgent .rept-contact-label { color: var(--red); }
+
+.rept-contact-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.rept-contact-tag {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--accent-subtle);
+  color: var(--accent);
+}
+.rept-contact-detail { font-size: 12px; line-height: 1.5; color: var(--text-muted); }
+.rept-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.rept-contact-list--full {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 16px 12px;
+}
+
+.rept-scenario-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+.rept-crosslink {
+  font-size: 13px;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rept-crosslink:hover { color: var(--link-hover); }
+
+.rept-protections {
+  margin-top: 28px;
+  background: var(--green-subtle);
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.rept-protections-title { font-size: 15px; color: var(--green); margin-bottom: 8px; }
+.rept-protections-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ===== Research Travel Security (trav-) =====
+   Tabs reuse the shared Tabs.jsx contract: .trav-tabs / .trav-tab /
+   .trav-tab--active / .trav-tab-content. */
+.trav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.trav-tab {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.trav-tab:hover { color: var(--text-primary); }
+.trav-tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.trav-tab-content { animation: fadeIn 0.2s ease; }
+
+.trav-phase-intro {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.trav-phase-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.trav-group { margin-bottom: 24px; }
+.trav-group-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.trav-list { list-style: none; margin: 0; padding: 0; }
+
+.trav-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.trav-item--done { border-left-color: var(--green); }
+
+.trav-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* 18px box with room to breathe — comfortably above the 24px hit area once
+   the label is included, and the label is clickable via htmlFor. */
+.trav-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.trav-item-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.trav-item--done .trav-item-label { color: var(--text-secondary); }
+
+.trav-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0 0 28px;
+}
+
+.trav-detail-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: var(--link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.trav-detail-toggle:hover { color: var(--link-hover); }
+
+.trav-crosslink {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.trav-crosslink:hover { color: var(--link-hover); }
+
+.trav-item-detail {
+  margin: 8px 0 0 28px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  border-left: 2px solid var(--border-light);
+  padding-left: 10px;
+}
+.trav-detail-hidden { display: none; }
+
+/* Emergency block — amber rather than red: this is "where to get help",
+   not "something is wrong". */
+.trav-emergency {
+  margin-top: 28px;
+  background: var(--amber-subtle);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.trav-emergency-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.trav-emergency-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.trav-contact-list { list-style: none; margin: 0; padding: 0; }
+.trav-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-light);
+}
+.trav-contact-label { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.trav-contact-detail { font-size: 12px; color: var(--text-muted); }
+.trav-contact-links { font-size: 13px; color: var(--text-muted); }
+
+.trav-training {
+  margin-top: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.trav-training-title { font-size: 14px; margin-bottom: 6px; }
+.trav-training p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+@media print {
+  .trav-no-print { display: none !important; }
+  /* Detail text is useful on a printed pre-trip checklist. */
+  .trav-detail-hidden { display: block !important; }
+  .trav-item { break-inside: avoid; }
+}
+
+/* ===== Site footer =====
+   Rendered as a sibling of .app-body (not inside <main>) so it exposes the
+   contentinfo landmark, and carries the AODA accessibility statement +
+   feedback contact required of a public-facing Ontario site. */
+.site-footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 20px;
+  padding: 8px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.site-footer p { margin: 0; }
+
+.site-footer-a11y-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.site-footer a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer a:hover { color: var(--link-hover); }
+
+@media (max-width: 767px) {
+  /* Persistent bar, so keep it small — it costs vertical space on every screen. */
+  .site-footer {
+    padding: 6px 16px;
+    gap: 2px 12px;
+    font-size: 11px;
+    line-height: 1.4;
+    justify-content: flex-start;
+  }
 }
 
 /* ===== Topbar ===== */
@@ -2058,7 +2461,8 @@ a:hover {
   background: var(--purple);
   border: none;
   border-radius: 20px;
-  color: white;
+  /* Dark text on the light purple fill — white measured 2.77:1 (WCAG 1.4.3) */
+  color: var(--bg-primary);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.15s;
@@ -3975,7 +4379,7 @@ a:hover {
   .checklist-print-btn, .checklist-reset-btn, .checklist-saved-indicator,
   .checklist-state-btn, .checklist-learn-more-toggle,
   .checklist-progress-bar-wrap, .checklist-progress,
-  .checklist-actions,
+  .checklist-actions, .site-footer,
   .rm-filters, .stra-search, .rm-result-count,
   .rm-category-header .rm-category-count,
   button { display: none !important; }

@@ -1,7 +1,8 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import Topbar from './components/layout/Topbar';
 import Sidebar from './components/layout/Sidebar';
 import MainContent from './components/layout/MainContent';
+import SiteFooter from './components/layout/SiteFooter';
 import Home from './components/home/Home';
 import { ALL_TOOLS } from './data/toolRegistry';
 import GlobalSearchModal from './components/ui/SearchBar';
@@ -21,7 +22,11 @@ const TOOL_COMPONENTS = {
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
+  'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
+  'report-concern': lazy(() => import('./tools/operational-security/ReportConcern')),
 };
+
+const SITE_TITLE = 'Research Security Toolkit';
 
 function getHashRoute() {
   const hash = window.location.hash.replace('#', '').replace('/', '');
@@ -67,6 +72,8 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [searchOpen, setSearchOpen] = useState(false);
+  // Skip the focus move on first paint — only *navigations* should reposition focus.
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     function onHashChange() {
@@ -84,6 +91,25 @@ export default function App() {
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
+
+  // The document title is the primary way a screen-reader user knows which view
+  // they landed on. Hash routing never reloads the document, so we retitle here
+  // (WCAG 2.4.2 Page Titled) and move focus to <main> so the new page is
+  // announced instead of leaving focus on the link that was just activated.
+  useEffect(() => {
+    const tool = ALL_TOOLS.find(t => t.slug === currentRoute);
+    document.title = tool ? `${tool.name} — ${SITE_TITLE}` : SITE_TITLE;
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const main = document.getElementById('main-content');
+    if (main) {
+      main.focus();
+      main.scrollTop = 0;
+    }
+  }, [currentRoute]);
 
   function navigate(slug) {
     window.location.hash = slug;
@@ -136,6 +162,7 @@ export default function App() {
           </ErrorBoundary>
         </MainContent>
       </div>
+      <SiteFooter />
       <GlobalSearchModal
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}

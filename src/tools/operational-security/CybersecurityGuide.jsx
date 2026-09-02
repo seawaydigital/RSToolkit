@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   Shield, KeyRound, HardDrive, Wifi, AlertTriangle, Database, Bell,
 } from 'lucide-react';
+import { TabList, TabPanel } from '../../components/ui/Tabs';
 import { cybersecurityData } from '../../data/cybersecurityData';
 
 const ICON_MAP = { Shield, KeyRound, HardDrive, Wifi, AlertTriangle, Database, Bell };
@@ -31,21 +32,17 @@ export default function CybersecurityGuide({ onNavigate }) {
       </div>
 
       {/* ── Main tabs ── */}
-      <div className="csec-tabs">
-        {TABS.map(tab => (
-          <button
-            key={tab.id}
-            className={`csec-tab${activeTab === tab.id ? ' csec-tab--active' : ''}`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      <TabList
+        tabs={TABS}
+        activeId={activeTab}
+        onChange={setActiveTab}
+        prefix="csec"
+        label="Cybersecurity guide sections"
+      />
 
       {/* ── Tab: Quick Start ── */}
       {activeTab === 'quick-start' && (
-        <div className="csec-tab-content">
+        <TabPanel id="quick-start" prefix="csec">
           <p className="csec-intro-text">
             These seven actions provide a strong security baseline for any researcher. If you do nothing else, do these.
           </p>
@@ -66,34 +63,30 @@ export default function CybersecurityGuide({ onNavigate }) {
               );
             })}
           </ol>
-        </div>
+        </TabPanel>
       )}
 
       {/* ── Tab: Encryption ── */}
       {activeTab === 'encryption' && (
-        <div className="csec-tab-content">
+        <TabPanel id="encryption" prefix="csec">
 
           {/* File Encryption */}
           <h2 className="csec-section-title">Encrypting Files Before Uploading to Cloud Storage</h2>
           <p className="csec-section-intro">{cybersecurityData.fileEncryption.intro}</p>
 
           {/* Platform sub-tabs */}
-          <div className="csec-os-tabs">
-            {cybersecurityData.fileEncryption.platforms.map(p => (
-              <button
-                key={p.id}
-                className={`csec-os-tab${encPlatform === p.id ? ' csec-os-tab--active' : ''}`}
-                onClick={() => setEncPlatform(p.id)}
-              >
-                {p.label}
-              </button>
-            ))}
-          </div>
+          <TabList
+            tabs={cybersecurityData.fileEncryption.platforms.map(p => ({ id: p.id, label: p.label }))}
+            activeId={encPlatform}
+            onChange={setEncPlatform}
+            prefix="csec-os"
+            label="Operating system"
+          />
 
           {cybersecurityData.fileEncryption.platforms.map(platform => {
             if (platform.id !== encPlatform) return null;
             return (
-              <div key={platform.id} className="csec-platform-content">
+              <TabPanel key={platform.id} id={platform.id} prefix="csec-os" className="csec-platform-content">
                 {platform.bestFor && (
                   <div className="csec-best-for">
                     <strong>Best for:</strong> {platform.bestFor}
@@ -120,7 +113,7 @@ export default function CybersecurityGuide({ onNavigate }) {
                     <strong>Tip:</strong> {platform.tip}
                   </div>
                 )}
-              </div>
+              </TabPanel>
             );
           })}
 
@@ -141,12 +134,12 @@ export default function CybersecurityGuide({ onNavigate }) {
               </div>
             ))}
           </div>
-        </div>
+        </TabPanel>
       )}
 
       {/* ── Tab: Passwords & 2FA ── */}
       {activeTab === 'passwords' && (
-        <div className="csec-tab-content">
+        <TabPanel id="passwords" prefix="csec">
 
           {/* Strong Passphrases */}
           <div className="csec-subsection">
@@ -211,12 +204,12 @@ export default function CybersecurityGuide({ onNavigate }) {
             </div>
             <p className="csec-backup-note">{cybersecurityData.passwordsAnd2FA.backupRule.note}</p>
           </div>
-        </div>
+        </TabPanel>
       )}
 
       {/* ── Tab: AI & Sensitive Data ── */}
       {activeTab === 'ai-data' && (
-        <div className="csec-tab-content">
+        <TabPanel id="ai-data" prefix="csec">
 
           {/* AI Warning */}
           <div className="csec-warning">
@@ -263,7 +256,7 @@ export default function CybersecurityGuide({ onNavigate }) {
           <div className="csec-consult-note">
             {cybersecurityData.sensitiveData.callToAction}
           </div>
-        </div>
+        </TabPanel>
       )}
     </div>
   );

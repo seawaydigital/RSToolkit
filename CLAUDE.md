@@ -42,6 +42,7 @@ src/
     home/
       Home.jsx                   # Landing page: "Where do I start?" scenarios + all-tools grid
     layout/
+      SiteFooter.jsx             # contentinfo landmark: AODA accessibility statement + feedback contact
       Topbar.jsx                 # Title, hamburger (mobile), Ctrl+K search trigger
       Sidebar.jsx                # Category/tool nav + RDM Toolkit sister-site card (bottom); collapsible on mobile (<768px)
       MainContent.jsx            # Scroll container for tool pages
@@ -50,6 +51,7 @@ src/
       FlowchartViewer.jsx        # Wrapper: Full View / Guided Mode toggle
       FlowchartFullView.jsx      # SVG flowchart using dagre layout
       FlowchartGuidedMode.jsx    # Card stepper: Yes/No/Continue, back stack
+      Tabs.jsx                   # Shared accessible tablist/tabpanel (see Accessibility)
   data/
     toolRegistry.js              # CATEGORIES + ALL_TOOLS — single source of truth for nav/home
     nroData.js                   # 126 NROs with per-institution lat/lng (see Key Decisions)
@@ -64,6 +66,8 @@ src/
     dualUseWizard.js             # Guided "Is my research dual-use?" question tree
     triAgencyData.js             # Tri-Agency RS guidance: principles, policies, agencies
     cybersecurityData.js         # 7 essential actions, file/device encryption, passwords, AI warning, sensitive data
+    travelSecurityData.js        # 26 checklist items across before/during/after + emergency contacts
+    reportConcernData.js         # 7 incident scenarios + federal/institutional contact directory
     flowcharts/
       stracFlow.js               # STRAC policy decision nodes
       nsgrpFlow.js               # NSGRP partnership risk assessment nodes
@@ -88,6 +92,8 @@ src/
       Faq.jsx                    # Accordion; auto-expands matched results when searching
     operational-security/
       CybersecurityGuide.jsx     # 4-tab guide: Quick Start / Encryption / Passwords & 2FA / AI & Sensitive Data
+      TravelSecurity.jsx         # 3-phase travel checklist + emergency contacts
+      ReportConcern.jsx          # Scenario accordion -> what to do now + who to contact
 ```
 
 ---
@@ -122,6 +128,8 @@ src/
 | Slug | Tool Name | Data File |
 |---|---|---|
 | `cybersecurity-guide` | Cybersecurity Best Practices | `cybersecurityData.js` |
+| `travel-security` | Research Travel Security | `travelSecurityData.js` |
+| `report-concern` | Report a Concern | `reportConcernData.js` |
 
 ---
 
@@ -199,7 +207,8 @@ Header pattern:
   - `--font-display: 'Archivo'` (hero, `.home-section-title`, `.home-scenario-label`, `.tool-page-header h1`, topbar `RS` mark — a clean grotesque standing in for Lakehead's Trade Gothic; replaced Fraunces. No `font-variation-settings`.)
   - `--font-sans: 'Inter'` (body text; replaced Geist)
   - `--font-mono: 'JetBrains Mono'` (counts, kbd)
-  - Status colors stay **semantic** (`--green`/`--amber`/`--red`), tuned for cobalt; `--amber: #f0a836` is kept orange-leaning so it never reads as a Blaze button. NRO map country colors (Russia red / China blue / Iran green) are data identity and are NOT part of this palette.
+  - Status colors stay **semantic** (`--green`/`--amber`/`--red`), tuned for cobalt; `--amber: #f0a836` is kept orange-leaning so it never reads as a Blaze button. NRO map country colors (Russia red / China blue / Iran green) are data identity and are NOT part of this palette — but text drawn *on* those fills (the map cluster counts) must be dark `#061727`, since white measured 2.28:1 on the Iran green.
+  - `--red: #f2998c` and `--purple: #b9a6d2` are set at the level required to clear 4.5:1 **including on their own `-subtle` tint backgrounds** (`--red-subtle` is the worst case at ~5.7:1). Do not darken either. `--red-subtle`'s rgb tracks `--red`; change them together.
   - Fonts load from Google Fonts via `<link>` in `index.html` (Archivo + Inter, both with italic axes). CSP `style-src` allows `https://fonts.googleapis.com`; `font-src` allows `https://fonts.gstatic.com`.
 - **Source links**: All policy sources must be hyperlinked, never plain text. Inline hyperlinks across the site use `var(--link)` (`#6fb2e8`, sky-blue) — readable on the dark cobalt base. Hover state uses `var(--link-hover)` (`#a9d4f8`). Do not use `var(--accent)` (Blaze) for plain text links; that color is reserved for interactive UI elements (buttons, active states, borders) and yellow text links read like warnings.
 - **UBC attribution**: Do not attribute any content to UBC specifically. Use "Canadian university research security programs" for the Risk Mitigation tool sourcing.
@@ -218,7 +227,7 @@ Header pattern:
 - **Flowchart node detail panel**: Clicking a flowchart node in Full View mode opens a sticky side panel to the **right** of the SVG container (not an absolute overlay). Layout: `.flowchart-outer` is `display: flex; flex-direction: row; gap: 12px`. The panel (`.flowchart-node-panel`) is `position: sticky; top: 16px; width: 240px; flex-shrink: 0`, so it stays in view while scrolling tall flowcharts. On mobile (<640px) it falls back to `column` direction and `position: static` below the SVG. `resourceLink` in node data renders as a green button linking to an external resource (PDF, form, etc.).
 - **Flowchart visual style**: Decision diamonds: dark fill `#111827` + gold stroke `#eab308`. Edges/arrowheads are colored per branch — the **"No" branch out of a decision is red `#ef4444`** (matching its NO pill), everything else (including "Yes") is green `#16a34a` (`edgeColor()` in `FlowchartFullView.jsx`; if an edge is both the yes and no target — a decision whose answers converge — Yes/green wins). Yes/No labels: SVG pill badges (`<rect rx=10>` + `<text>`) — YES in green (`#14532d` fill, `#22c55e` stroke), NO in red (`#450a0a` fill, `#ef4444` stroke). Selected node: white stroke + `drop-shadow` glow. Node text uses `dominantBaseline="central"` on tspans for precise vertical centering.
 - **Flowchart node sizing**: Nodes are **sized to fit their wrapped label** (no fixed width), and those dimensions are fed into dagre so text never overflows. `computeNodeMeta()` wraps the label by estimated pixel width (`CHAR_W≈6.7` for Inter 12px/500, `LINE_H=16`) and computes per-shape dimensions: rects/pills grow by label width + padding; **diamonds** are sized via the inscribed-rectangle rule (`w/W + h/H ≤ DIAMOND_FILL=0.82`, with `DIAMOND_H_FACTOR=0.33` splitting the budget) so multi-line text stays inside the slanted edges. Floors: `NODE_HEIGHT_ACTION=58`, `NODE_HEIGHT_DECISION=84`, `NODE_HEIGHT_TERMINAL=42`, `MIN_WIDTH=150`.
-- **Flowchart edge rendering**: Three SVG layers so nothing is clipped: edge **paths** (behind nodes) → nodes → **arrowheads + Yes/No pills** (on top). Arrowheads stop `ARROW_GAP=6`px short of the target shape (they used to point `ARROW_LEN=9`px *into* it) via `arrowGeometry()`. YES/NO pills are **centered on the branch's vertical descent** (the line runs straight down through the pill), anchored at the top of that run but kept below the source shape's bottom edge (`+12`) so they never overlap even short, wide diamonds. `pointBelowY()` finds the anchor.
+- **Flowchart edge rendering**: Three SVG layers so nothing is clipped: edge **paths** (behind nodes) → nodes → **arrowheads + Yes/No pills** (on top). Arrowheads stop `ARROW_GAP=6`px short of the target shape (they used to point `ARROW_LEN=9`px *into* it) via `arrowGeometry()`. YES/NO pills are **centered on the branch's vertical descent** (the line runs straight down through the pill), anchored at the top of that run but kept below the source shape's bottom edge (`+12`) so they never overlap even short, wide diamonds. `EdgeLabel` computes that anchor inline by scanning the routed points for the first vertical run.
 - **Flowchart layout constants** (in `FlowchartFullView.jsx`): `PADDING=36`, `ranksep=55`, `nodesep=36`. Tuned so the widest flowchart (NSGRP, 3-column branching) fits within its container at typical desktop widths with the side panel open.
 - **NSGRP flowchart accuracy**: Flow reflects dual-trigger logic (both Annex A AND Annex B required for mandatory RAF). Non-federal partnerships exit to a terminal at step 1. Annex A "No" branch exits to "Document due diligence and proceed" terminal. Attestation step added before RAF submission. Agency review node clarifies funding agency (not institution) makes final determination. RAF node links to official Risk Assessment Form page via `resourceLink`.
 - **Accessibility (AODA / WCAG 2.0 AA)**: The site targets WCAG 2.0 AA. Full remediation record + the human manual-testing checklist live in [`ACCESSIBILITY.md`](ACCESSIBILITY.md). Conventions to preserve when editing:
@@ -228,13 +237,19 @@ Header pattern:
   - **Search modal** (`SearchBar.jsx`) is a real dialog: `role="dialog"` + `aria-modal`, labelled input, Tab focus trap, and focus return to the trigger on close. Keep these if refactoring.
   - **Interactive controls must be real elements**: use `<button>` (not `<span onClick>`) — e.g. the topbar logo is a `<button class="topbar-logo">`. Accordions expose `aria-expanded`.
   - **Flowchart Full View** SVG is `role="img"` with an `aria-label` pointing to Guided Mode as the keyboard-accessible equivalent; the NRO map's data table is the conformant alternative to the Leaflet map.
-  - **Contrast**: `--text-muted` (`#93acc2`) and `--red` (`#e86a54`) were lightened from earlier values specifically to clear 4.5:1 against the lightest raised surface (`#143a5e`). Do not darken them back below AA. Re-run contrast math (foreground vs. each surface in the ladder) before changing any text token.
+  - **Tabbed tools use the shared `Tabs.jsx`** (`TabList` / `TabPanel`), not bare `<button>`s. It supplies `role="tablist"/"tab"/"tabpanel"`, `aria-selected`, tab↔panel `aria-controls`/`aria-labelledby`, and roving tabindex with Arrow/Home/End keys. Pass the tool's CSS prefix (`trag`, `csec`, `csec-os`, `dual`) — it generates `${prefix}-tab`, `${prefix}-tab--active`, `${prefix}-tabs`, so existing styles keep working. Any new tabbed tool must use it.
+  - **Conditionally-rendered panels**: `aria-controls` is set **only while the panel is mounted** (tabs, and the NRO sanctions tiers). A dangling IDREF is an ARIA error, and these panels unmount when inactive.
+  - **Page title + focus on navigation**: hash routing never reloads the document, so `App.jsx` sets `document.title` to `"<Tool name> — Research Security Toolkit"` on every route change (2.4.2, Level A) and moves focus to `#main-content` so the new view is announced instead of focus sitting on the link just clicked. The first render is skipped deliberately.
+  - **Contrast**: `--text-muted` (`#93acc2`), `--red` (`#f2998c`) and `--purple` (`#b9a6d2`) are set at the minimum that clears 4.5:1 against **every** surface they render on — including the `-subtle` tint backgrounds, which are the binding constraint, not the surface ladder. Do not darken them back below AA. Re-run the contrast math (foreground vs. each surface *and* each tint composite) before changing any text token.
   - `prefers-reduced-motion: reduce` is honored globally in `global.css`.
   - **Lint gate**: `eslint-plugin-jsx-a11y` (flat `recommended` config) runs via `npm run lint` to catch a11y regressions — interactive elements must be real `<button>`/`<a>` (or carry a role + keyboard handler). Modal/drawer close-backdrops use the `e.target === e.currentTarget` click pattern with a documented `eslint-disable` line, since keyboard close is provided by Escape (search modal, STRA wizard) or a real `<button>` backdrop (mobile sidebar). `react-hooks/set-state-in-effect` is set to `warn` (not error) so the a11y errors stay the signal; pre-existing `no-unused-vars` (unused `onNavigate` props) remain and are unrelated to a11y.
 - **npm audit**: Run `npm audit fix` after any dependency changes. As of 2026-06-17 the project has 0 known vulnerabilities (Vite/Babel/PostCSS/js-yaml advisories were patched via `npm audit fix`).
 - **Git worktrees**: Feature branches use `.worktrees/<branch-name>/` (already in `.gitignore`). Create with `git worktree add .worktrees/<name> -b <branch>`, remove with `git worktree remove .worktrees/<name>` after merging.
 - **Dual-Use Research Guide**: A combined hub (CSS prefix `dual-`) in Compliance Tools, structured on the workshop arc *Know Your Research → Know Your Partners → Assess the Risk*. The Self-Assessment wizard is deliberately **conceptual** (intent/use, knowledge transfer, partner exposure) and hands off to STRA Lookup / NRO Lookup / Export Control rather than re-deriving STRA categories — it does not duplicate the STRA wizard. Results give a **signal read** (Likely / Possible / Low), never a "cleared" verdict or legal advice, and offer a Print summary (reuses the global print CSS + `.dual-print-only`/`.dual-no-print` toggles). Content is attributed to Public Safety Canada's Safeguarding Science program + Government of Canada guidance (not UBC). The stale workshop figures (74 subcategories / 356 entities) were dropped; cite "11 STRA categories" and link the live NRO list instead. The guide reuses the `straWizard` node shape (`dualUseWizard.js`) and the tabbed-tool button pattern from `CybersecurityGuide`.
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
+- **Site footer**: `SiteFooter.jsx` renders as a **sibling of `.app-body` inside `.app`** — deliberately *outside* `<main>`, because a `<footer>` nested in `main` does not map to the `contentinfo` landmark. It carries the AODA accessibility statement and the feedback contact address that a public-facing Ontario site is expected to provide. It is a persistent slim bar (35px desktop / 61px mobile), so keep the text short; hidden in `@media print`.
+- **Research Travel Security**: Operational Security category, CSS prefix `trav-`. Structured on the federal three-phase guidance (Before You Go / While Away / When You Return) using the shared `Tabs.jsx`. Checklist state persists to localStorage key `rs-toolkit-travel-v1` (separate from the risk checklist's `rs-toolkit-checklist-v1`). The **emergency contacts block sits outside the tabs** — a traveller in trouble should not have to find the right tab first. Print CSS deliberately *reveals* the collapsed `.trav-item-detail` text, since a printed pre-trip checklist is more useful with the rationale included.
+- **Report a Concern**: Operational Security, CSS prefix `rept-`. A single-open scenario accordion ("what happened?") rather than a wizard — people arriving here already know their situation and need an answer, not a questionnaire. The page leads with **"start with your own institution"**: for almost every scenario the institutional research security office is the correct first call, and sending researchers straight to CSIS or the RCMP would be actively unhelpful. Federal contacts (Public Safety Research Security Centre, Cyber Centre, CSIS, RCMP NSIN) are listed per scenario and again in a full directory. The `protections` block exists because fear of consequences is the main reason concerns go unreported.
 - **Sister-site sidebar card (RDM Toolkit)**: `Sidebar.jsx` pins a sister-site card at the bottom-left of the sidebar (below `.sidebar-scroll`, which is `flex: 1` — no `position: fixed`). It links to `https://rdmtoolkit.ca` in a new tab and uses the **RDM Toolkit brand wordmark** (do NOT mirror the RS Toolkit pairing here):
   - `.sidebar-sister-mark` ("RDM") — **Geist sans-serif, weight 800, upright, gold `#facc15`**
   - `.sidebar-sister-word` ("Toolkit") — **Fraunces serif, weight 700, upright (not italic), white `#ffffff`**
@@ -248,14 +263,18 @@ Header pattern:
 
 | Document | URL |
 |---|---|
-| STRAC Policy | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-and-affiliations-concern` |
+| STRAC Policy | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern` |
 | NSGRP | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships` |
 | NSGRP Risk Assessment Form | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form` |
 | Ontario RS Guidelines | `https://forms.mgcs.gov.on.ca/en/dataset/on00708` |
 | Tri-Agency RS Guidance | `https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security` |
-| NRO List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/named-research-organizations` |
-| STRA List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-areas` |
+| NRO List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations` |
+| STRA List | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas` |
 | Safeguarding Your Research | `https://science.gc.ca/site/science/en/safeguarding-your-research` |
+| Research travel guidance | `https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/how-can-you-protect-your-research-during-travel` |
+| Safeguarding Science workshops | `https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx` |
+| Report a cyber incident (Cyber Centre) | `https://www.cyber.gc.ca/en/incident-management` |
+| Foreign interference guidance | `https://www.publicsafety.gc.ca/cnt/ntnl-scrt/frgn-ntrfrnc/prtct-gnst-frgn-ntrfrnc-en.aspx` |
 | Global Affairs Sanctions | `https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx` |
 
 ---

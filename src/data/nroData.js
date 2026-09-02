@@ -8,6 +8,12 @@
  */
 
 const nroData = {
+  // Verified 2026-09-02: matches the federal NRO page exactly (dateModified
+  // 2024-04-18 — the federal list itself has not been revised since). All 126
+  // entries here are covered by the 102 top-level federal entries; the extra 24
+  // are CAEP sub-institutes, which the federal list carries as aliases under
+  // "Chinese Academy of Engineering Physics" and which we split out so each
+  // campus gets its own map pin.
   lastUpdated: "2024-04-18",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations",

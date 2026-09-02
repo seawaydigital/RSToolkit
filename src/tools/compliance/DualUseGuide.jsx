@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { TabList, TabPanel } from '../../components/ui/Tabs';
 import { dualUseData } from '../../data/dualUseData';
 import { dualUseWizard } from '../../data/dualUseWizard';
 
@@ -82,21 +83,18 @@ export default function DualUseGuide({ onNavigate }) {
       </div>
 
       {/* Tabs */}
-      <div className="dual-tabs dual-no-print">
-        {TABS.map(tab => (
-          <button
-            key={tab.id}
-            className={`dual-tab${activeTab === tab.id ? ' dual-tab--active' : ''}`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
+      <TabList
+        tabs={TABS}
+        activeId={activeTab}
+        onChange={setActiveTab}
+        prefix="dual"
+        label="Dual-use guide sections"
+        extraClass="dual-no-print"
+      />
 
       {/* Tab: Self-Assessment */}
       {activeTab === 'assess' && (
-        <div className="dual-tab-content">
+        <TabPanel id="assess" prefix="dual">
           {currentNode.type !== 'result' ? (
             <div className="dual-wizard">
               <div className="dual-wizard-progress dual-no-print">Step {history.length}</div>
@@ -172,12 +170,12 @@ export default function DualUseGuide({ onNavigate }) {
               </div>
             </div>
           )}
-        </div>
+        </TabPanel>
       )}
 
       {/* Tab: Dual-Use Areas */}
       {activeTab === 'areas' && (
-        <div className="dual-tab-content">
+        <TabPanel id="areas" prefix="dual">
           <div className="dual-callouts">
             {dualUseData.areaCallouts.map(c => (
               <div key={c.id} className="dual-callout">
@@ -206,12 +204,12 @@ export default function DualUseGuide({ onNavigate }) {
           <button className="dual-nextstep-btn" onClick={() => onNavigate('stra-lookup')}>
             Check your specific area against the STRA list &rarr;
           </button>
-        </div>
+        </TabPanel>
       )}
 
       {/* Tab: Vetting Collaborators */}
       {activeTab === 'vetting' && (
-        <div className="dual-tab-content">
+        <TabPanel id="vetting" prefix="dual">
           <h2 className="dual-section-title">Red flags when vetting collaborators</h2>
           <ul className="dual-redflag-list">
             {dualUseData.redFlags.map((f, i) => <li key={i}>{f}</li>)}
@@ -257,12 +255,12 @@ export default function DualUseGuide({ onNavigate }) {
           <button className="dual-nextstep-btn" onClick={() => onNavigate('nro-lookup')}>
             Screen names against the NRO list &rarr;
           </button>
-        </div>
+        </TabPanel>
       )}
 
       {/* Tab: Due Diligence */}
       {activeTab === 'diligence' && (
-        <div className="dual-tab-content">
+        <TabPanel id="diligence" prefix="dual">
           {dualUseData.diligence.map(group => (
             <div key={group.id} className="dual-diligence-group">
               <h2 className="dual-section-title">{group.group}</h2>
@@ -285,7 +283,7 @@ export default function DualUseGuide({ onNavigate }) {
               </ul>
             </div>
           ))}
-        </div>
+        </TabPanel>
       )}
     </div>
   );

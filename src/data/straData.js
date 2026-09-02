@@ -5,7 +5,11 @@
  */
 
 export const straData = {
-  lastUpdated: "2025-05-07",
+  // Verified 2026-09-02 against the federal STRA page (dateModified 2026-07-30):
+  // 11 categories and all 74 subcategories match. The one extra subcategory in
+  // this file ("Advanced Weapons") is a UI placeholder — that category has no
+  // subdivisions on the federal list, and an empty category renders badly.
+  lastUpdated: "2026-07-30",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas",
   categories: [
