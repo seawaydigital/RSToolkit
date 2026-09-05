@@ -995,7 +995,7 @@ Three separate issues live in `index.html`, and fixing them in one pass avoids t
 
 1. **No page metadata.** No `<meta name="description">`, no Open Graph, no Twitter card, no canonical. A link shared into Teams, email, or social currently previews as a bare URL — for a site whose entire purpose is to be forwarded to researchers, that is a real loss.
 2. **Icon links point at the deleted `favicon.svg`.**
-3. **Two of the three security headers do nothing.** `X-Content-Type-Options` and `Referrer-Policy` are set via `<meta http-equiv>`. **Browsers ignore both as meta tags** — they are only honoured as real HTTP response headers. They have never been in effect. CSP *is* valid via meta, so that one genuinely works. Leaving inert tags in place is worse than having none, because it reads as protection to anyone reviewing the file.
+3. **Three security protections in the head do nothing.** `X-Content-Type-Options` and `Referrer-Policy` are set via `<meta http-equiv>` — **browsers ignore both in that form**, honouring them only as real HTTP response headers, so they have never been in effect. And CSP's `frame-ancestors 'none'` — the anti-clickjacking directive — is likewise ignored inside a meta CSP; the browser logs `The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element` on **every page load**, which is how this one was caught. The rest of the CSP *is* valid via meta and genuinely works. Leaving inert protections in place is worse than having none, because it reads as protection to anyone reviewing the file.
 
 Also: CSP's `style-src` allows `https://unpkg.com` and `https://cdnjs.cloudflare.com`, but nothing loads from either — Leaflet's CSS is bundled from npm (`import 'leaflet/dist/leaflet.css'` in `NroLookup.jsx`). Dead allowances invite exactly the question you don't want in a security review.
 
@@ -1045,12 +1045,13 @@ Replace everything in `index.html` from `<head>` to `</head>` with:
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#061727" />
 
-    <!-- CSP is one of the few security headers browsers DO honour via a meta
-         tag, so it is real here. X-Content-Type-Options and Referrer-Policy
-         are NOT — they were previously set as meta tags and had no effect at
-         all. They must be sent as HTTP response headers by the web server.
-         See the "Security headers" section of HANDOFF.md for the config the
-         hosting team needs to apply. -->
+    <!-- CSP mostly works via a meta tag, so what remains here is real.
+         Three things do NOT work this way and have been moved to the web
+         server: X-Content-Type-Options and Referrer-Policy (previously inert
+         meta tags), and CSP's own frame-ancestors directive, which browsers
+         explicitly ignore outside an HTTP header — it was logging a console
+         error on every page load. See the "Security headers" section of
+         HANDOFF.md for the config the hosting team must apply. -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' 'unsafe-inline';
@@ -1061,7 +1062,6 @@ Replace everything in `index.html` from `<head>` to `</head>` with:
       object-src 'none';
       base-uri 'self';
       form-action 'none';
-      frame-ancestors 'none';
     " />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1087,6 +1087,7 @@ Confirm:
 2. Map controls and markers are correctly styled — proves Leaflet's bundled CSS loaded and the removed CDN allowances were genuinely unused.
 3. Fonts render as Archivo/Inter, not a fallback serif (`style-src` + `font-src`).
 4. The browser console shows **no `Content Security Policy` violation messages** and no errors.
+5. Specifically confirm the console no longer logs `The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element`. That error fired on every page load before this task and is the reason `frame-ancestors` was moved to the server-header list.
 
 Then visit `http://localhost:5173/` and confirm the tab icon is the new Blaze "RS" mark, not a purple logo. Hard-refresh if the old icon is cached.
 
@@ -1105,7 +1106,7 @@ Expected: `OK` on all eight.
 Then confirm the removals actually took:
 
 ```bash
-grep -c "unpkg\|cdnjs\|X-Content-Type-Options\|Referrer-Policy\|favicon.svg" dist/index.html
+grep -c "unpkg\|cdnjs\|X-Content-Type-Options\|Referrer-Policy\|frame-ancestors\|favicon.svg" dist/index.html
 ```
 Expected: `0`.
 
@@ -1120,7 +1121,7 @@ Replace the `**Security headers**` bullet:
 with:
 
 ```markdown
-- **Security headers**: `index.html` carries a `Content-Security-Policy` meta tag — scripts `self + unsafe-inline`, images self + CartoDB tiles, `connect-src` self + `https://nominatim.openstreetmap.org` (NRO proximity geocoding), fonts + styles + Google Fonts. CSP is one of the few headers browsers honour via `<meta http-equiv>`, so it is genuinely in effect. **`X-Content-Type-Options` and `Referrer-Policy` were previously set as meta tags and did nothing** — browsers only honour those as real HTTP response headers. They now belong to the web server config; see the Security headers section of HANDOFF.md for what the hosting team must set (including HSTS). Do not re-add them as meta tags. `style-src` lists only what is actually loaded: Leaflet's CSS is bundled from npm, so the old `unpkg.com` / `cdnjs.cloudflare.com` allowances were removed as dead.
+- **Security headers**: `index.html` carries a `Content-Security-Policy` meta tag — scripts `self + unsafe-inline`, images self + CartoDB tiles, `connect-src` self + `https://nominatim.openstreetmap.org` (NRO proximity geocoding), fonts + styles + Google Fonts. Most CSP directives are honoured via `<meta http-equiv>`, so what remains there is genuinely in effect. **Three things were not and have been moved to the web server config**: `X-Content-Type-Options` and `Referrer-Policy` (browsers only honour those as real HTTP response headers — as meta tags they did nothing at all), and CSP's own **`frame-ancestors`**, which browsers explicitly ignore outside an HTTP header and which was logging `The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element` to the console on every page load. See the Security headers section of HANDOFF.md for what the hosting team must set (including HSTS). **Do not re-add any of the three as meta tags** — they cannot work there. `style-src` lists only what is actually loaded: Leaflet's CSS is bundled from npm, so the old `unpkg.com` / `cdnjs.cloudflare.com` allowances were removed as dead.
 ```
 
 - [ ] **Step 6: Commit**
@@ -1136,11 +1137,15 @@ Metadata: there was no description, no Open Graph, no Twitter card, no
 canonical. A link to this site previewed as a bare URL — poor for a tool
 whose whole distribution model is being forwarded to researchers.
 
-Security headers: X-Content-Type-Options and Referrer-Policy were set via
-<meta http-equiv>, which browsers ignore for both. They have never been
-in effect. Removed rather than left looking like protection; HANDOFF.md
-now tells the hosting team to set them (plus HSTS) as real HTTP headers.
-CSP stays as meta — that one browsers do honour.
+Security headers: three protections in the head were doing nothing.
+X-Content-Type-Options and Referrer-Policy were <meta http-equiv> tags,
+which browsers ignore in that form. CSP's frame-ancestors — the
+anti-clickjacking directive — is likewise ignored inside a meta CSP, and
+was logging a console error on every page load, which is how it surfaced.
+None of the three has ever been in effect. Removed rather than left
+looking like protection; HANDOFF.md now tells the hosting team to set all
+three (plus HSTS) as real HTTP response headers. The rest of the CSP
+stays as meta — those directives browsers do honour.
 
 Also dropped unpkg.com and cdnjs.cloudflare.com from style-src. Nothing
 loads from either; Leaflet's CSS is bundled from npm. Verified the map,
@@ -1592,19 +1597,25 @@ The site uses a Cobalt + Blaze palette aligned with Lakehead University branding
 
 ## 4. Security headers — action required
 
-`index.html` carries a **Content-Security-Policy** meta tag, which browsers do honour. It is real and it is working.
+`index.html` carries a **Content-Security-Policy** meta tag. Most CSP directives work that way, so what is left in the file is genuinely in effect.
 
-**Two headers cannot be set from HTML and must be configured on your web server.** They were previously present as `<meta http-equiv>` tags, which browsers silently ignore — they were never in effect, and they have been removed rather than left looking like protection.
+**Three protections cannot be delivered from HTML and must be configured on your web server.** All three were previously in the HTML looking like protection while doing nothing:
 
-Set these as HTTP response headers:
+- `X-Content-Type-Options` and `Referrer-Policy` were `<meta http-equiv>` tags. Browsers ignore both in that form — they were never in effect.
+- CSP's **`frame-ancestors`** (the anti-clickjacking directive) was in the meta CSP. Browsers explicitly ignore it outside an HTTP header, and it was logging a console error on every single page load.
+
+They have been removed from the HTML rather than left as false assurance. **Set them as HTTP response headers:**
 
 ```
 X-Content-Type-Options: nosniff
 Referrer-Policy: strict-origin-when-cross-origin
+Content-Security-Policy: frame-ancestors 'none'
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-You may also prefer to move the CSP itself to a response header — a real header takes precedence and is easier to audit. The current policy, for reference:
+`frame-ancestors 'none'` is what stops the site being framed by another origin. If your stack does not let you add a CSP header, `X-Frame-Options: DENY` is the older equivalent and is honoured by every browser you care about — but do not set both to conflicting values.
+
+You may also prefer to move the whole CSP to a response header — a real header takes precedence over the meta tag, is easier to audit, and lets `frame-ancestors` live with the rest of the policy. The current policy, for reference (add `frame-ancestors 'none'` to it if you do this, and then drop the meta tag from `index.html`):
 
 ```
 default-src 'self';
@@ -1616,7 +1627,6 @@ font-src 'self' https://fonts.gstatic.com;
 object-src 'none';
 base-uri 'self';
 form-action 'none';
-frame-ancestors 'none';
 ```
 
 `'unsafe-inline'` on `script-src` is required by the current Vite output. Removing it means adopting a nonce or hash strategy — worth doing if your policy demands it, but it is a build change, not a config change.
