@@ -10,6 +10,7 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import Fuse from 'fuse.js';
 import nroData from '../../data/nroData';
+import { activeTileProvider } from '../../data/mapTiles';
 
 // Fix Leaflet default icon paths for Vite
 delete L.Icon.Default.prototype._getIconUrl;
@@ -436,8 +437,10 @@ export default function NroLookup({ onNavigate }) {
           scrollWheelZoom={true}
         >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            attribution={activeTileProvider.attribution}
+            url={activeTileProvider.url}
+            subdomains={activeTileProvider.subdomains ?? 'abc'}
+            maxZoom={activeTileProvider.maxZoom}
           />
           <MarkerCluster
             markers={markers}

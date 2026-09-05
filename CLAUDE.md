@@ -22,7 +22,7 @@
 | Routing | Hash-based (`window.location.hash`), no router library |
 | Search | Fuse.js 7 (threshold: 0.35, ignoreLocation: true) |
 | Map | Leaflet 1.9 + react-leaflet 5 + leaflet.markercluster |
-| Map tiles | CartoDB Voyager — always English labels |
+| Map tiles | Esri World Street Map (no API key) — English labels worldwide; provider is swappable, see `src/data/mapTiles.js` |
 | Icons | lucide-react |
 | Graph layout | dagre (flowcharts) |
 | Persistence | localStorage (checklist state only) |
@@ -55,6 +55,7 @@ src/
   data/
     toolRegistry.js              # CATEGORIES + ALL_TOOLS — single source of truth for nav/home
     nroData.js                   # 126 NROs with per-institution lat/lng (see Key Decisions)
+    mapTiles.js                  # Basemap tile providers + env-var key selection (see Key Decisions)
     straData.js                  # STRA categories and subcategories
     straWizard.js                # Guided STRA assessment question tree
     riskChecklist.js             # 4 sections, ~24 items; NSGRP-sourced
@@ -82,7 +83,7 @@ src/
       OntarioFlowchart.jsx       # FlowchartViewer wrapper
     compliance/
       StraLookup.jsx             # STRA search + guided wizard
-      NroLookup.jsx              # Map + table; CartoDB tiles; sanctioned countries banner
+      NroLookup.jsx              # Map + table; tiles from mapTiles.js; sanctioned countries banner
       RiskChecklist.jsx          # 3-state toggle; localStorage persistence; progress bar
       RiskMitigation.jsx         # Category + measure accordion; tag filter chips
       DualUseGuide.jsx           # 4-tab: Self-Assessment wizard / Dual-Use Areas / Vetting Collaborators / Due Diligence
@@ -198,7 +199,11 @@ Header pattern:
 
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
-- **Map tiles**: CartoDB Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`) — chosen specifically for English-language place name labels.
+- **Map tiles**: Configured in `src/data/mapTiles.js`, not inline in the component. The hard requirement is **English place labels** — the map plots Chinese, Russian and Iranian institutions, and the standard OpenStreetMap basemap renders those in local script (Hanzi / Cyrillic / Perso-Arabic), which would make the map unreadable for its audience. Any replacement provider must be checked against that.
+  - **Default (no key)**: Esri World Street Map (`https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}`). Note the **`{z}/{y}/{x}` ordering** — Esri is y-before-x, unlike the OSM-style `{z}/{x}/{y}` providers. No key, no signup, no watermark.
+  - **Why not CARTO Voyager any more**: CARTO began enforcing API keys on `basemaps.cartocdn.com` in **August 2026**. Unkeyed requests still return HTTP 200 tiles, so nothing appears broken in the network tab — but every tile is stamped with a repeating "API KEY REQUIRED" watermark. CARTO has also put raster basemaps on a deprecation path in favour of vector. Do **not** reinstate the unkeyed CARTO URL.
+  - **Switching providers**: set `VITE_CARTO_API_KEY` (free, 5M tiles/month, restores the original Voyager look) or `VITE_STADIA_API_KEY` (Alidade Smooth; key is domain-lockable so it is safe in a public bundle) at build time. A key wins over the default; CARTO is checked first. See `.env.example`; the deploy workflow passes both through from repo secrets. Never commit a real key.
+  - Adding a provider means adding its host to the CSP `img-src` in `index.html`.
 - **Design system (v3 — 2026-06, Lakehead brand)**: The toolkit uses a clean institutional aesthetic aligned with Lakehead University branding — a deep cobalt-navy base with a Blaze-yellow accent, deliberately on-brand (Cobalt + Blaze). Key tokens in `global.css`:
   - `--bg-primary: #061727` (deep cobalt-navy base; `body` has a subtle Blaze + Cobalt radial-gradient overlay). Surfaces ladder up `#0b2238` → `#0f2c49` → `#143a5e`.
   - `--cobalt: #00427A` (Lakehead Cobalt — brand cobalt for active nav / focus fields)
@@ -222,7 +227,7 @@ Header pattern:
 - **Glossary scope**: Exactly 12 terms — STRA, STRAC Policy, NSGRP, Dual-Use, Controlled Goods, Export Controls, Due Diligence, NRO, Research Security, Risk Assessment, Risk Mitigation, Sanctions.
 - **Print support**: RiskChecklist and RiskMitigation both have print buttons (`window.print()`); print CSS is in `global.css`. Print uses `@page { size: A4 portrait; margin: 1.5cm }` and explicitly overrides `height`/`overflow`/`flex` on every layout container (`.app`, `.app-body`, `.main-content`, etc.) individually — required because `height: 100vh; overflow: hidden` on `.app` would otherwise clip all content to one page.
 - **Checklist print state**: Each checklist item renders a `<div className="checklist-print-state">` element showing the current state (✓ No Risk / ⚠ Risk Identified / — N/A). It is `display: none` on screen and `display: block` in `@media print`, so the printed output reflects the user's selections.
-- **Security headers**: `index.html` includes a `Content-Security-Policy` meta tag restricting scripts to `self + unsafe-inline`, images to self + CartoDB tile domains. `connect-src` allows `'self'` plus `https://nominatim.openstreetmap.org` (required for the NRO proximity search geocoding panel). Also includes `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`.
+- **Security headers**: `index.html` includes a `Content-Security-Policy` meta tag restricting scripts to `self + unsafe-inline`, images to self + the basemap tile hosts (CartoDB, Esri `server.arcgisonline.com`, Stadia `tiles.stadiamaps.com`) — a new tile provider needs its host added to `img-src`. `connect-src` allows `'self'` plus `https://nominatim.openstreetmap.org` (required for the NRO proximity search geocoding panel). Also includes `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`.
 - **NRO proximity search**: `NroLookup.jsx` includes a "Check proximity to NROs" panel. It geocodes arbitrary institution names via `https://nominatim.openstreetmap.org/search` (free, no API key, rate-limited to ~1 req/s — fine for interactive use). The user picks from up to 5 suggestions; a gold `★` `divIcon` (class `.nro-my-institution-icon`) is placed on the map and the 5 nearest NROs are listed with distances computed by Haversine formula (pure JS, no external calls). Clicking a nearest-NRO row highlights it in the main table and flies the map to it. `FlyToHandler` accepts an optional `zoom` field — institution placement uses zoom 7 so nearby NROs are visible; row clicks use zoom 10.
 - **Flowchart node detail panel**: Clicking a flowchart node in Full View mode opens a sticky side panel to the **right** of the SVG container (not an absolute overlay). Layout: `.flowchart-outer` is `display: flex; flex-direction: row; gap: 12px`. The panel (`.flowchart-node-panel`) is `position: sticky; top: 16px; width: 240px; flex-shrink: 0`, so it stays in view while scrolling tall flowcharts. On mobile (<640px) it falls back to `column` direction and `position: static` below the SVG. `resourceLink` in node data renders as a green button linking to an external resource (PDF, form, etc.).
 - **Flowchart visual style**: Decision diamonds: dark fill `#111827` + gold stroke `#eab308`. Edges/arrowheads are colored per branch — the **"No" branch out of a decision is red `#ef4444`** (matching its NO pill), everything else (including "Yes") is green `#16a34a` (`edgeColor()` in `FlowchartFullView.jsx`; if an edge is both the yes and no target — a decision whose answers converge — Yes/green wins). Yes/No labels: SVG pill badges (`<rect rx=10>` + `<text>`) — YES in green (`#14532d` fill, `#22c55e` stroke), NO in red (`#450a0a` fill, `#ef4444` stroke). Selected node: white stroke + `drop-shadow` glow. Node text uses `dominantBaseline="central"` on tspans for precise vertical centering.
