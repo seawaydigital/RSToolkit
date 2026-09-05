@@ -1103,12 +1103,14 @@ done
 ```
 Expected: `OK` on all eight.
 
-Then confirm the removals actually took:
+Then confirm the removals actually took. Match the *tag and directive forms*, not the bare names — the explanatory comment in the new head deliberately names all three removed protections, so a plain substring grep returns hits from the prose and looks like a failure:
 
 ```bash
-grep -c "unpkg\|cdnjs\|X-Content-Type-Options\|Referrer-Policy\|frame-ancestors\|favicon.svg" dist/index.html
+grep -cE "http-equiv=\"(X-Content-Type-Options|Referrer-Policy)\"|frame-ancestors '|unpkg\.com|cdnjs\.cloudflare\.com|favicon\.svg" dist/index.html
 ```
 Expected: `0`.
+
+The strongest check is the running page, not the file. Load it and read the console: before this task the browser logged `The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element` on every load. Afterwards a **freshly opened tab** must show no errors at all. Use a new tab rather than reloading — the console buffer retains history across reloads and will keep replaying the old error, which reads as a failed fix when it isn't.
 
 - [ ] **Step 5: Update the CLAUDE.md security headers entry**
 
