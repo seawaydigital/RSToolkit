@@ -14,10 +14,13 @@
       object-src 'none';
       base-uri 'self';
       form-action 'none';
-      frame-ancestors 'none';
     " />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <!--
+      Referrer policy MUST use name="referrer", not http-equiv -- "Referrer-Policy"
+      is not one of the valid http-equiv pragma directives. See CLAUDE.md
+      ("Security headers") before adding any security-related meta tag here.
+    -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500&display=swap" />
