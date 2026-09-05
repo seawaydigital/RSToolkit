@@ -99,6 +99,17 @@ form-action 'none';
 
 `'unsafe-inline'` on `script-src` is required by the current Vite output. Removing it means adopting a nonce or hash strategy — worth doing if your policy demands it, but it is a build change, not a config change.
 
+### One CSP error you will see in development, and should ignore
+
+Running `npm run dev` and opening the console shows:
+
+```
+Creating a worker from 'blob:...' violates the following Content Security
+Policy directive: "script-src 'self' 'unsafe-inline'" ... has been blocked.
+```
+
+This is **Vite's dev-server HMR client** (`node_modules/vite/dist/client/client.mjs`), not application code. The production bundle contains zero `new Worker` calls — verified — so it cannot occur in a deployed build. Do not loosen `script-src` or add `worker-src` to silence it; you would be widening the shipped policy to accommodate a dev-only tool. Check the console against `npm run build` output rather than the dev server if you want a clean read.
+
 ---
 
 ## 5. Third-party services the site calls at runtime
