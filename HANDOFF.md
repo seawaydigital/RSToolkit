@@ -89,7 +89,7 @@ You may also prefer to move the whole CSP to a response header — a real header
 default-src 'self';
 script-src 'self' 'unsafe-inline';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com;
+img-src 'self' data: blob: https://*.basemaps.cartocdn.com;
 connect-src 'self' https://nominatim.openstreetmap.org;
 font-src 'self' https://fonts.gstatic.com;
 object-src 'none';

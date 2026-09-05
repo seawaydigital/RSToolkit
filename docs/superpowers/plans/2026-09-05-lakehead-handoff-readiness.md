@@ -1056,7 +1056,7 @@ Replace everything in `index.html` from `<head>` to `</head>` with:
       default-src 'self';
       script-src 'self' 'unsafe-inline';
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com;
+      img-src 'self' data: blob: https://*.basemaps.cartocdn.com;
       connect-src 'self' https://nominatim.openstreetmap.org;
       font-src 'self' https://fonts.gstatic.com;
       object-src 'none';
@@ -1623,7 +1623,7 @@ You may also prefer to move the whole CSP to a response header — a real header
 default-src 'self';
 script-src 'self' 'unsafe-inline';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com;
+img-src 'self' data: blob: https://*.basemaps.cartocdn.com;
 connect-src 'self' https://nominatim.openstreetmap.org;
 font-src 'self' https://fonts.gstatic.com;
 object-src 'none';
@@ -1841,16 +1841,23 @@ rm -rf dist-subdir
 
 - [ ] **Step 5: Confirm nothing host-specific survives in source**
 
+Search the **whole tracked tree**, not a hand-picked list of directories. Scoping this to `src/`, `index.html` and `public/` is how `vite.config.js` — which carried a stale `seawaydigital.github.io/RSToolkit/` example in its header comment — survived an entire pass and was caught only by final review. Config files at the repo root are exactly where this kind of reference hides.
+
 ```bash
-grep -rn "seawaydigital\|rdmtoolkit" src/ index.html public/ 2>/dev/null
+git ls-files -z | xargs -0 grep -n "seawaydigital\|rdmtoolkit\|RSToolkit" 2>/dev/null | grep -v "^docs/superpowers/plans/"
 ```
 
-Expected — exactly three hits, all intentional:
-1. `src/siteConfig.js` — `ACCESSIBILITY_CONTACT` (documented, Lakehead changes it)
-2. `src/siteConfig.js` — `SITE_URL` (documented, Lakehead changes it)
-3. `src/components/layout/Sidebar.jsx` — the sister-site `href`, gated behind `SHOW_SISTER_SITE_CARD`
+Expected — only these, all intentional and all documented:
+1. `src/siteConfig.js` — `ACCESSIBILITY_CONTACT` (Lakehead changes it)
+2. `src/siteConfig.js` — `SITE_URL` (Lakehead changes it)
+3. `src/siteConfig.js` — the comment explaining the sister-site card
+4. `src/components/layout/Sidebar.jsx` — the sister-site `href`, gated behind `SHOW_SISTER_SITE_CARD`
+5. `index.html` × 4 — canonical, `og:url`, `og:image`, `twitter:image`, which HANDOFF.md §3b tells them to update
+6. `package.json` — `repository.url`, the genuine origin of the code
+7. `.github/workflows/deploy.yml` — the CNAME written for *our* deployment
+8. `LICENSE` / `HANDOFF.md` / `README.md` — attribution and instructions that legitimately name the original author
 
-Plus the canonical/`og:` URLs in `index.html`, which HANDOFF.md §3b explicitly tells them to update. **Any other hit is a leak — fix it before finishing.**
+**Any hit outside that list is a leak — fix it before finishing.** Pay particular attention to comments: they are not covered by any build or lint check, so a stale one survives every automated gate.
 
 - [ ] **Step 6: Commit anything the pass turned up**
 
