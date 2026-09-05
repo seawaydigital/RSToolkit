@@ -61,6 +61,23 @@ def square_mark(size):
     return img.resize((size, size), Image.LANCZOS)
 
 
+def touch_icon(size):
+    """Opaque square for iOS home screens.
+
+    Deliberately NOT the rounded square_mark(): iOS applies its own corner
+    mask, and a touch icon carrying alpha in the corners can render with
+    black corners in Safari's Reading List, pinned tabs, and the share
+    sheet. Apple asks for full-bleed and fully opaque, so that is what this
+    produces — no rounding, no alpha channel.
+    """
+    s = size * SUPERSAMPLE
+    img = Image.new("RGB", (s, s), COBALT[:3])
+    draw = ImageDraw.Draw(img)
+    font = _font(int(s * 0.52))
+    draw.text(_centered_text(draw, "RS", font, s), "RS", font=font, fill=BLAZE)
+    return img.resize((size, size), Image.LANCZOS)
+
+
 def social_card():
     """1200x630 Open Graph card."""
     w, h = 1200, 630
@@ -86,7 +103,7 @@ def main():
     out = os.path.abspath(PUBLIC)
     os.makedirs(out, exist_ok=True)
 
-    square_mark(180).save(os.path.join(out, "apple-touch-icon.png"))
+    touch_icon(180).save(os.path.join(out, "apple-touch-icon.png"))
     # Multi-size ICO so 16px tab rendering doesn't downscale a 48px bitmap.
     square_mark(48).save(
         os.path.join(out, "favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48)]
