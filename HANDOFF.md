@@ -57,7 +57,13 @@ Node 20 or newer. The current GitHub Actions workflow (`.github/workflows/deploy
 
 Static meta tags can't read JS config, so if you change `SITE_URL` you must also update the matching `<link rel="canonical">`, `og:url`, `og:image`, and `twitter:image` values in `index.html`. There are four.
 
-### 3c. Ownership and branding
+### 3c. `package.json` — if you fork to your own organization
+
+`repository.url` points at `github.com/seawaydigital/RSToolkit.git`, which is genuinely where this code originated. If you fork or re-host the repository under a Lakehead GitHub organization, update that field so `npm` and tooling resolve to the copy you actually maintain. Nothing breaks if you leave it — it is metadata, not a build input.
+
+The MIT `LICENSE` retains the original copyright line. That is normal and correct for MIT: you may host, modify and redistribute freely, and the notice stays with the code.
+
+### 3d. Ownership and branding
 
 The site uses a Cobalt + Blaze palette aligned with Lakehead University branding, but **it makes no ownership claim anywhere in the UI** — no logo, no "published by", no institutional footer. That was deliberate: it is your decision, not ours. If you want attribution, `src/components/layout/SiteFooter.jsx` is the place, and it is a deliberately slim persistent bar (35px desktop / 61px mobile), so keep additions short.
 
