@@ -19,7 +19,7 @@ const fuse = new Fuse(searchItems, {
   ignoreLocation: true,
 });
 
-export default function StraLookup({ onNavigate }) {
+export default function StraLookup() {
   const [search, setSearch] = useState('');
   const [expanded, setExpanded] = useState(new Set());
   const [wizardOpen, setWizardOpen] = useState(false);

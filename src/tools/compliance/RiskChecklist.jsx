@@ -22,7 +22,7 @@ function buildInitial() {
   return initial;
 }
 
-export default function RiskChecklist({ onNavigate }) {
+export default function RiskChecklist() {
   const [itemStates, setItemStates] = useState(() => {
     const saved = loadSaved();
     if (saved) return { ...buildInitial(), ...saved };

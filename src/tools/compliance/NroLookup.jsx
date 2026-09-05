@@ -62,7 +62,7 @@ function buildFuse(orgs) {
 }
 
 // Custom MarkerCluster component for react-leaflet v4
-function MarkerCluster({ markers, onMarkerClick, activeId }) {
+function MarkerCluster({ markers, onMarkerClick }) {
   const map = useMap();
   const clusterRef = useRef(null);
 
@@ -192,7 +192,7 @@ function MyInstitutionLayer({ institution }) {
   return null;
 }
 
-export default function NroLookup({ onNavigate }) {
+export default function NroLookup() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCountry, setActiveCountry] = useState('All');
   const [activeRowId, setActiveRowId] = useState(null);
@@ -442,7 +442,6 @@ export default function NroLookup({ onNavigate }) {
           <MarkerCluster
             markers={markers}
             onMarkerClick={handleMarkerClick}
-            activeId={activeRowId}
           />
           <MyInstitutionLayer institution={myInstitution} />
           <FlyToHandler target={flyTarget} />

@@ -10,7 +10,7 @@ const fuse = new Fuse(glossaryData.terms, {
 
 const CATEGORIES = [...new Set(glossaryData.terms.map(t => t.category))].sort();
 
-export default function Glossary({ onNavigate }) {
+export default function Glossary() {
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [expandedId, setExpandedId] = useState(null);
