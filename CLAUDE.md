@@ -77,6 +77,7 @@ src/
   tools/
     policy-guides/
       TriAgencyGuide.jsx         # 3-tab: Overview / 10 Principles / Key Policies
+    flowcharts/                  # Nav category is "Policy Guides"; the files live here
       StracFlowchart.jsx         # FlowchartViewer wrapper
       NsgrpFlowchart.jsx         # FlowchartViewer wrapper
       OntarioFlowchart.jsx       # FlowchartViewer wrapper
@@ -197,6 +198,7 @@ Header pattern:
 ## Key Decisions & Conventions
 
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
+- **Nav category ≠ directory for flowcharts**: the three flowchart tools appear under the **Policy Guides** category in `toolRegistry.js` but their components live in `src/tools/flowcharts/`, not `src/tools/policy-guides/`. This is deliberate — they share `FlowchartViewer` and are grouped by implementation, while the sidebar groups by what a user is looking for. Don't "fix" it by moving the files.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
 - **Map tiles**: CartoDB Voyager (`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`) — chosen specifically for English-language place name labels.
 - **Design system (v3 — 2026-06, Lakehead brand)**: The toolkit uses a clean institutional aesthetic aligned with Lakehead University branding — a deep cobalt-navy base with a Blaze-yellow accent, deliberately on-brand (Cobalt + Blaze). Key tokens in `global.css`:
