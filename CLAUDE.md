@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-**Purpose**: A React + Vite static site helping Canadian researchers and institutions navigate federal research security policies. Deployed to GitHub Pages at the `rs.rdmtoolkit.ca` custom subdomain (CNAME file in `public/` is copied into the build artifact). No backend — 100% client-side.
+**Purpose**: A React + Vite static site helping Canadian researchers and institutions navigate federal research security policies. No backend — 100% client-side. The build output is host-neutral: the `rs.rdmtoolkit.ca` CNAME is written by `.github/workflows/deploy.yml` at deploy time, **not** carried in `public/`, so any other host gets a clean `dist/`.
 
 **Audience**: Canadian researchers, research security officers, grant administrators.
 
@@ -28,7 +28,7 @@
 | Persistence | localStorage (checklist state only) |
 | Styling | Single CSS file: `src/styles/global.css` with CSS variables |
 | Deploy | GitHub Actions → GitHub Pages |
-| Base path | `/` by default (for the custom subdomain); override with `BASE_PATH=/RSToolkit/` for the legacy project-pages URL. See `vite.config.js`. |
+| Base path | `/` by default (root/subdomain hosting); set `BASE_PATH=/subdir/` to host under a subdirectory — verified working, rewrites every asset URL. See `vite.config.js` and HANDOFF.md. |
 
 ---
 

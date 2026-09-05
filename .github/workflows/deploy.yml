@@ -25,6 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # The custom domain belongs to this deployment, not to the source tree.
+      # Anyone else building this repo gets a clean dist/ with no CNAME.
+      - name: Write CNAME for the rs.rdmtoolkit.ca deployment
+        run: echo "rs.rdmtoolkit.ca" > dist/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
