@@ -22,7 +22,7 @@
 | Routing | Hash-based (`window.location.hash`), no router library |
 | Search | Fuse.js 7 (threshold: 0.35, ignoreLocation: true) |
 | Map | Leaflet 1.9 + react-leaflet 5 + leaflet.markercluster |
-| Map tiles | Esri World Street Map (no API key) — English labels worldwide; provider is swappable, see `src/data/mapTiles.js` |
+| Map tiles | Provider-swappable, see `src/data/mapTiles.js`. CARTO Voyager + free key recommended (Latin labels at every zoom); keyless Esri fallback if no key is set |
 | Icons | lucide-react |
 | Graph layout | dagre (flowcharts) |
 | Persistence | localStorage (checklist state only) |
@@ -200,7 +200,9 @@ Header pattern:
 - **No backend**: All data is compiled into the bundle at build time. Data updates require a new deploy.
 - **localStorage key**: `rs-toolkit-checklist-v1` — stores checklist item states as a flat object keyed by item ID.
 - **Map tiles**: Configured in `src/data/mapTiles.js`, not inline in the component. The hard requirement is **English place labels** — the map plots Chinese, Russian and Iranian institutions, and the standard OpenStreetMap basemap renders those in local script (Hanzi / Cyrillic / Perso-Arabic), which would make the map unreadable for its audience. Any replacement provider must be checked against that.
-  - **Default (no key)**: Esri World Street Map (`https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}`). Note the **`{z}/{y}/{x}` ordering** — Esri is y-before-x, unlike the OSM-style `{z}/{x}/{y}` providers. No key, no signup, no watermark.
+  - **Label coverage was verified tile-by-tile over Beijing / Moscow / Tehran.** CARTO Voyager and Stadia Alidade are Latin at *every* zoom. Esri is Latin through **z10** and then switches to local script — a z12 tile over Beijing comes back with Hanzi street names. The UI only drives you to z3 (overview), z7 (proximity placement) and z10 (table-row fly-to), so the keyless default is correct everywhere the tool actually takes you, and degrades only if a user deliberately zooms past z10.
+  - **Recommended production setup**: CARTO Voyager with a free key — the only option that is Latin at every zoom, and it restores the site's original appearance exactly.
+  - **Fallback default (no key)**: Esri World Street Map (`https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}`). Note the **`{z}/{y}/{x}` ordering** — Esri is y-before-x, unlike the OSM-style `{z}/{x}/{y}` providers. No key, no signup, no watermark.
   - **Why not CARTO Voyager any more**: CARTO began enforcing API keys on `basemaps.cartocdn.com` in **August 2026**. Unkeyed requests still return HTTP 200 tiles, so nothing appears broken in the network tab — but every tile is stamped with a repeating "API KEY REQUIRED" watermark. CARTO has also put raster basemaps on a deprecation path in favour of vector. Do **not** reinstate the unkeyed CARTO URL.
   - **Switching providers**: set `VITE_CARTO_API_KEY` (free, 5M tiles/month, restores the original Voyager look) or `VITE_STADIA_API_KEY` (Alidade Smooth; key is domain-lockable so it is safe in a public bundle) at build time. A key wins over the default; CARTO is checked first. See `.env.example`; the deploy workflow passes both through from repo secrets. Never commit a real key.
   - Adding a provider means adding its host to the CSP `img-src` in `index.html`.

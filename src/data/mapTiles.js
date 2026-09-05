@@ -10,19 +10,29 @@
 // Russian and Iranian institutions, and the standard OpenStreetMap basemap
 // renders those in local script (Hanzi / Cyrillic / Perso-Arabic), which would
 // make the map unreadable for its audience. Every provider below is checked
-// against that requirement.
+// against that requirement, at the zoom levels this tool actually uses
+// (z3 overview, z7 proximity placement, z10 table-row fly-to).
 //
-// The default requires no key and no signup, so the site builds and deploys
-// with nothing configured. To switch to a keyed provider, set the matching
-// env var at build time (see .env.example).
+// Label coverage, verified tile-by-tile over Beijing / Moscow / Tehran:
+//
+//   CARTO Voyager   Latin at EVERY zoom. Best English experience, needs a key.
+//   Stadia Alidade  Latin at every zoom (OpenMapTiles name:latin), needs a key.
+//   Esri Street     Latin through z10, then switches to local script -- a z12
+//                   tile over Beijing comes back with Hanzi street names.
+//
+// So: the keyless Esri default is correct through the zooms the UI drives you
+// to, and only degrades if a user deliberately zooms in past z10. Setting
+// VITE_CARTO_API_KEY removes that caveat entirely and is the recommended
+// production setup. See .env.example.
 
 const CARTO_KEY = import.meta.env.VITE_CARTO_API_KEY;
 const STADIA_KEY = import.meta.env.VITE_STADIA_API_KEY;
 
 export const TILE_PROVIDERS = {
-  // Default. No API key, no signup, no watermark. Latin/English labels
-  // worldwide. Note the {z}/{y}/{x} ordering — Esri is y-before-x, unlike the
-  // {z}/{x}/{y} of the OSM-style providers below.
+  // Fallback default. No API key, no signup, no watermark. Latin labels through
+  // z10; local script appears past that (see the note above). Note the
+  // {z}/{y}/{x} ordering — Esri is y-before-x, unlike the {z}/{x}/{y} of the
+  // OSM-style providers below.
   esri: {
     id: 'esri',
     name: 'Esri World Street Map',
@@ -32,8 +42,9 @@ export const TILE_PROVIDERS = {
     maxZoom: 19,
   },
 
-  // The original basemap, restored to an unwatermarked state by a key.
-  // Free tier is 5 million tile requests per calendar month.
+  // RECOMMENDED. The original basemap, restored to an unwatermarked state by a
+  // key, and the only option verified Latin at every zoom level. Free tier is
+  // 5 million tile requests per calendar month and needs no CARTO account.
   // Request one at https://carto.com/basemaps/apikey/
   carto: {
     id: 'carto',
