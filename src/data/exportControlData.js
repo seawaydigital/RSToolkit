@@ -1,5 +1,12 @@
 export const exportControlData = {
-  lastUpdated: "2025-01-24",
+  // Partially verified 2026-09-06. CHECKED: the NSGRP Annex A structure this
+  // derives from (federal page dateModified 2026-07-29) and every officialUrl
+  // below, all of which resolve. NOT CHECKED: the individual control-list
+  // entries against the current Export Control List, Controlled Goods List and
+  // sanctions regulations — that means reading the schedules themselves, which
+  // is subject-matter work. Treat the date as "sources confirmed live", not
+  // "every entry re-derived". See HANDOFF.md section 7.
+  lastUpdated: "2026-09-06",
   policySource: "National Security Guidelines for Research Partnerships, Annex A",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   sections: [

@@ -164,13 +164,21 @@ Every tool displays a `lastUpdated` date from its data file in `src/data/`. Thos
 | `straData.js` | 2026-07-30 | ✅ All 11 categories / 74 subcategories diffed clean 2026-09-02 |
 | `reportConcernData.js`, `travelSecurityData.js` | 2026-09-02 | ✅ Current |
 | `dualUseData.js` | 2026-06-19 | ✅ Current |
+| `flowcharts/stracFlow.js` | 2026-09-06 | ✅ Verified against the STRAC policy page (dateModified 2026-07-29); policy unchanged since it took effect 2024-05-01 |
+| `flowcharts/nsgrpFlow.js` | 2026-09-06 | ✅ Verified against the NSGRP page; every `policyRef` matches a real heading |
+| `flowcharts/ontarioFlow.js` | 2026-09-06 | ✅ Verified against form **ON00708E (2024/06)**, the current Central Forms Repository version |
+| `riskChecklist.js` | 2026-09-06 | ✅ Verified against NSGRP Annex A / Annex B structure |
 | `cybersecurityData.js` | 2026-04-16 | ⚠️ Review |
 | `faqData.js`, `glossaryData.js`, `riskMitigationData.js`, `triAgencyData.js` | 2026-03-31 | ⚠️ Review |
-| `exportControlData.js` | 2025-01-24 | ⚠️ **Needs verification** |
-| `riskChecklist.js` | 2025-01-24 | ⚠️ **Needs verification** |
-| `flowcharts/stracFlow.js`, `nsgrpFlow.js`, `ontarioFlow.js` | 2025-01-24 | ⚠️ **Needs verification** |
+| `exportControlData.js` | 2026-09-06 | ⚠️ **Partially verified** — see below |
 
-The five marked **Needs verification** derive from policy *documents* rather than published lists, so checking them means reading the current policy rather than diffing a web page. They were deliberately out of scope for the last data pass.
+### What the 2026-09-06 verification did and did not cover
+
+The four ✅ files were checked heading-by-heading against the live federal and provincial sources, and **that pass found real defects, not just stale dates**: the STRAC and Ontario flowcharts had been citing section numbers that do not exist in either document (STRAC uses descriptive headings; the Ontario guidelines number process *stages*), and `riskChecklist.js` cited "Annex A, Item 1–4" when Annex A does not number its items. All are corrected, and each file now carries a comment recording what was checked.
+
+`exportControlData.js` is marked **partially** verified deliberately. Its source structure and every outbound link were confirmed, but the individual control-list entries were *not* re-derived against the current Export Control List, Controlled Goods List, and sanctions regulations — that means reading the schedules themselves. Read its date as "sources confirmed live", not "every entry re-checked". A researcher relying on a specific entry should still confirm it against the linked regulation.
+
+The three files still marked ⚠️ Review are guidance and definitional content rather than legal lists; they are lower-risk but have not been re-read since their dates.
 
 **When you re-verify:** update `lastUpdated` only on evidence, and leave a comment next to it recording what you checked, the way `nroData.js` and `straData.js` do. A date bumped on assumption is worse than an honestly old one.
 
