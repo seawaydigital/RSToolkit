@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { CATEGORIES } from '../../data/toolRegistry';
+import { SHOW_SISTER_SITE_CARD } from '../../siteConfig';
 
 export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) {
   const [expanded, setExpanded] = useState(new Set());
@@ -80,21 +81,23 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
             );
           })}
         </div>
-        <a
-          className="sidebar-sister"
-          href="https://rdmtoolkit.ca"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Visit our sister site: RDM Toolkit"
-          aria-label="Sister site: RDM Toolkit (opens in new tab)"
-        >
-          <ArrowUpRight className="sidebar-sister-arrow" size={16} aria-hidden="true" />
-          <span className="sidebar-sister-logo">
-            <span className="sidebar-sister-mark">RDM</span>
-            <span className="sidebar-sister-word">Toolkit</span>
-          </span>
-          <span className="sidebar-sister-tagline">Research Data Management</span>
-        </a>
+        {SHOW_SISTER_SITE_CARD && (
+          <a
+            className="sidebar-sister"
+            href="https://rdmtoolkit.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Visit our sister site: RDM Toolkit"
+            aria-label="Sister site: RDM Toolkit (opens in new tab)"
+          >
+            <ArrowUpRight className="sidebar-sister-arrow" size={16} aria-hidden="true" />
+            <span className="sidebar-sister-logo">
+              <span className="sidebar-sister-mark">RDM</span>
+              <span className="sidebar-sister-word">Toolkit</span>
+            </span>
+            <span className="sidebar-sister-tagline">Research Data Management</span>
+          </a>
+        )}
       </nav>
     </>
   );

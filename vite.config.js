@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Base path is selectable so the same repo can deploy to either a custom
-// subdomain (served at /) or the old project-pages URL (served at /RSToolkit/).
+// Base path is selectable so the same build works at a domain root or under
+// a subdirectory. It rewrites every asset URL in the output.
 //
-//   BASE_PATH=/          → custom subdomain, e.g. rs.rdmtoolkit.ca       (default)
-//   BASE_PATH=/RSToolkit/ → legacy seawaydigital.github.io/RSToolkit/
+//   BASE_PATH=/                     → domain or subdomain root        (default)
+//   BASE_PATH=/research-security/   → served from a subdirectory
 //
-// Local dev uses '/' so assets load cleanly at http://localhost:5173/.
+// Include both the leading and trailing slash. Local dev uses '/' so assets
+// load cleanly at http://localhost:5173/. See HANDOFF.md for deployment.
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
