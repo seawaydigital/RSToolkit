@@ -28,3 +28,8 @@ dist-ssr
 
 # Git worktrees
 .worktrees/
+
+# Local env files (may contain map API keys)
+.env
+.env.local
+.env.*.local

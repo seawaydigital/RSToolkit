@@ -39,7 +39,7 @@ Both slashes matter. This rewrites every asset URL in the output; it has been ve
 
 ### Build requirements
 
-Node 20 or newer. The current GitHub Actions workflow (`.github/workflows/deploy.yml`) pins Node 20 and is a working reference even if you deploy differently.
+Node 20 or newer — `package.json`'s `engines` field states that floor. The GitHub Actions workflow and `.nvmrc` both use **Node 24**, which is what the deployed site is actually built with; treat that as the tested configuration and `>=20` as the supported range. The workflow is a working reference even if you deploy differently.
 
 ---
 
@@ -73,19 +73,20 @@ The site uses a Cobalt + Blaze palette aligned with Lakehead University branding
 
 `index.html` carries a **Content-Security-Policy** meta tag. Most CSP directives work that way, so what is left in the file is genuinely in effect.
 
-**Three protections cannot be delivered from HTML and must be configured on your web server.** All three were previously in the HTML looking like protection while doing nothing:
+**Two protections cannot be delivered from HTML and must be configured on your web server.** Both were previously in the HTML looking like protection while doing nothing:
 
-- `X-Content-Type-Options` and `Referrer-Policy` were `<meta http-equiv>` tags. Browsers ignore both in that form — they were never in effect.
+- `X-Content-Type-Options` was a `<meta http-equiv>` tag. It is not a valid pragma directive at all, so browsers ignored it — it was never in effect.
 - CSP's **`frame-ancestors`** (the anti-clickjacking directive) was in the meta CSP. Browsers explicitly ignore it outside an HTTP header, and it was logging a console error on every single page load.
 
-They have been removed from the HTML rather than left as false assurance. **Set them as HTTP response headers:**
+Both have been removed from the HTML rather than left as false assurance. **Set them as HTTP response headers:**
 
 ```
 X-Content-Type-Options: nosniff
-Referrer-Policy: strict-origin-when-cross-origin
 Content-Security-Policy: frame-ancestors 'none'
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
+
+**Referrer policy is not in that group.** It is handled in the page by `<meta name="referrer" content="strict-origin-when-cross-origin">`, which *is* a valid and browser-honoured mechanism — unlike `http-equiv="Referrer-Policy"`, which is not. Do not "tidy" it back to `http-equiv`, and you do not need a server header for it. (Modern browsers already default to this value, so it is belt-and-braces.)
 
 `frame-ancestors 'none'` is what stops the site being framed by another origin. If your stack does not let you add a CSP header, `X-Frame-Options: DENY` is the older equivalent and is honoured by every browser you care about — but do not set both to conflicting values.
 
@@ -95,7 +96,7 @@ You may also prefer to move the whole CSP to a response header — a real header
 default-src 'self';
 script-src 'self' 'unsafe-inline';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-img-src 'self' data: blob: https://*.basemaps.cartocdn.com;
+img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
 connect-src 'self' https://nominatim.openstreetmap.org;
 font-src 'self' https://fonts.gstatic.com;
 object-src 'none';
@@ -125,8 +126,12 @@ Three external dependencies. If your institution restricts third-party resource 
 | Service | Used for | If you must remove it |
 |---|---|---|
 | **Google Fonts** (`fonts.googleapis.com`, `fonts.gstatic.com`) | Archivo, Inter, JetBrains Mono | Self-host the font files and update the `<link>` in `index.html` plus `font-src`/`style-src` in the CSP. Straightforward. |
-| **CartoDB basemap tiles** (`*.basemaps.cartocdn.com`) | The NRO map background | The map needs a tile source. Swap the `TileLayer` URL in `NroLookup.jsx` for another provider. CartoDB Voyager was chosen specifically because its labels are English. |
+| **Basemap tiles** — Esri (`server.arcgisonline.com`) by default, or CARTO (`*.basemaps.cartocdn.com`) / Stadia (`tiles.stadiamaps.com`) with a key | The NRO map background | The map needs a tile source. Providers are configured in `src/data/mapTiles.js`; add a new one there **and add its host to `img-src` in `index.html`**, or the tiles silently fail to load. See the note below. |
 | **Nominatim** (`nominatim.openstreetmap.org`) | Geocoding in the NRO "Check proximity to NROs" panel | See the note below. |
+
+**About the basemap — worth two minutes of your time.** The map plots Chinese, Russian and Iranian institutions, so **English place labels are a functional requirement**, not a preference. CARTO began enforcing API keys in August 2026, which is why the default is now keyless Esri. Esri renders Latin labels through zoom 10 — correct everywhere the UI actually navigates — but switches to local script (Hanzi / Cyrillic / Perso-Arabic) past that if a user zooms in manually.
+
+Setting `VITE_CARTO_API_KEY` removes that caveat entirely and is the recommended production setup: the free tier is 5 million tile requests/month and needs no CARTO account. See `.env.example`. For the deployed site, add it as a GitHub Actions repository secret — `deploy.yml` already passes both `VITE_CARTO_API_KEY` and `VITE_STADIA_API_KEY` through to the build. **Never commit a real key.**
 
 **About Nominatim:** it is a free, volunteer-run OpenStreetMap service with a published usage policy that asks for an identifying User-Agent and discourages heavy or automated use. Current usage is interactive and low-volume — a user typing an institution name — which is within the spirit of that policy. But it is a community service with no availability guarantee, and if it is unreachable the proximity panel is the only thing that breaks; the rest of the NRO tool works. If your institution needs a guaranteed geocoder, that panel is the single place to swap one in.
 

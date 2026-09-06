@@ -30,25 +30,33 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#061727" />
 
-    <!-- CSP mostly works via a meta tag, so what remains here is real.
-         Three things do NOT work this way and have been moved to the web
-         server: X-Content-Type-Options and Referrer-Policy (previously inert
-         meta tags), and CSP's own frame-ancestors directive, which browsers
-         explicitly ignore outside an HTTP header — it was logging a console
-         error on every page load. See the "Security headers" section of
-         HANDOFF.md for the config the hosting team must apply. -->
+    <!-- CSP mostly works via a meta tag, so what remains here is enforced.
+         Two things do NOT and are absent by design: X-Content-Type-Options
+         (not a valid http-equiv pragma directive at all) and CSP's own
+         frame-ancestors (ignored by the spec outside an HTTP header — it was
+         logging a console error on every page load). Both must be set as real
+         HTTP response headers; see the "Security headers" section of
+         HANDOFF.md. Referrer policy is NOT in that group — it works via
+         <meta name="referrer"> below, which is why it is still in the page.
+         img-src must list every basemap host in src/data/mapTiles.js; adding
+         a tile provider without adding its host here silently breaks the map. -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' 'unsafe-inline';
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' data: blob: https://*.basemaps.cartocdn.com;
+      img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
       connect-src 'self' https://nominatim.openstreetmap.org;
       font-src 'self' https://fonts.gstatic.com;
       object-src 'none';
       base-uri 'self';
       form-action 'none';
     " />
-
+    <!--
+      Referrer policy MUST use name="referrer", not http-equiv -- "Referrer-Policy"
+      is not one of the valid http-equiv pragma directives. See CLAUDE.md
+      ("Security headers") before adding any security-related meta tag here.
+    -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500&display=swap" />
