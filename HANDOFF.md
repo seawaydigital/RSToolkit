@@ -97,7 +97,7 @@ default-src 'self';
 script-src 'self' 'unsafe-inline';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
 img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
-connect-src 'self' https://nominatim.openstreetmap.org;
+connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org;
 font-src 'self' https://fonts.gstatic.com;
 object-src 'none';
 base-uri 'self';
@@ -121,19 +121,24 @@ This is **Vite's dev-server HMR client** (`node_modules/vite/dist/client/client.
 
 ## 5. Third-party services the site calls at runtime
 
-Three external dependencies. If your institution restricts third-party resource loading, these are the ones to review.
+Four external dependencies. If your institution restricts third-party resource loading, these are the ones to review.
 
 | Service | Used for | If you must remove it |
 |---|---|---|
 | **Google Fonts** (`fonts.googleapis.com`, `fonts.gstatic.com`) | Archivo, Inter, JetBrains Mono | Self-host the font files and update the `<link>` in `index.html` plus `font-src`/`style-src` in the CSP. Straightforward. |
 | **Basemap tiles** — Esri (`server.arcgisonline.com`) by default, or CARTO (`*.basemaps.cartocdn.com`) / Stadia (`tiles.stadiamaps.com`) with a key | The NRO map background | The map needs a tile source. Providers are configured in `src/data/mapTiles.js`; add a new one there **and add its host to `img-src` in `index.html`**, or the tiles silently fail to load. See the note below. |
-| **Nominatim** (`nominatim.openstreetmap.org`) | Geocoding in the NRO "Check proximity to NROs" panel | See the note below. |
+| **Nominatim** (`nominatim.openstreetmap.org`) | Primary geocoder for the NRO "Check proximity to NROs" panel | See the note below. |
+| **Wikipedia** (`en.wikipedia.org`) | Fallback geocoder for the same panel, used only when Nominatim finds nothing | See the note below. |
 
 **About the basemap — worth two minutes of your time.** The map plots Chinese, Russian and Iranian institutions, so **English place labels are a functional requirement**, not a preference. CARTO began enforcing API keys in August 2026, which is why the default is now keyless Esri. Esri renders Latin labels through zoom 10 — correct everywhere the UI actually navigates — but switches to local script (Hanzi / Cyrillic / Perso-Arabic) past that if a user zooms in manually.
 
 Setting `VITE_CARTO_API_KEY` removes that caveat entirely and is the recommended production setup: the free tier is 5 million tile requests/month and needs no CARTO account. See `.env.example`. For the deployed site, add it as a GitHub Actions repository secret — `deploy.yml` already passes both `VITE_CARTO_API_KEY` and `VITE_STADIA_API_KEY` through to the build. **Never commit a real key.**
 
-**About Nominatim:** it is a free, volunteer-run OpenStreetMap service with a published usage policy that asks for an identifying User-Agent and discourages heavy or automated use. Current usage is interactive and low-volume — a user typing an institution name — which is within the spirit of that policy. But it is a community service with no availability guarantee, and if it is unreachable the proximity panel is the only thing that breaks; the rest of the NRO tool works. If your institution needs a guaranteed geocoder, that panel is the single place to swap one in.
+**About the two geocoders:** Nominatim is a free, volunteer-run OpenStreetMap service with a published usage policy that asks for an identifying User-Agent and discourages heavy or automated use. Current usage is interactive and low-volume — a user typing an institution name — which is within the spirit of that policy. The Wikipedia API is queried **only when Nominatim returns no match**, so it adds at most one extra request per search and none at all for institutions OpenStreetMap already knows.
+
+The fallback exists because OpenStreetMap's coverage of universities outside Western Europe and North America is patchy — Minnan Normal University and Bauman Moscow State Technical University, for example, are not in OSM at all, and returned nothing before it was added. Wikipedia supplies article-level coordinates (main-campus centroid) rather than street addresses, which is why each suggestion in the UI is labelled with the source it came from.
+
+Both are community services with no availability guarantee. If they are unreachable the proximity panel is the only thing that breaks; the rest of the NRO tool works. If your institution needs a guaranteed geocoder, that panel is the single place to swap one in — the two lookups are isolated in `geocodeNominatim()` and `geocodeWikipedia()` at the top of `NroLookup.jsx`.
 
 ---
 

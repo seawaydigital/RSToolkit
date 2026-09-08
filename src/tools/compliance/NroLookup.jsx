@@ -20,6 +20,70 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
+// --- Institution geocoding -------------------------------------------------
+// Nominatim is the primary geocoder: it returns precise street addresses.
+// But it only knows what is mapped in OpenStreetMap, and OSM's coverage of
+// universities outside Western Europe / North America is patchy — Minnan
+// Normal University and Bauman Moscow State Technical University, for example,
+// are both absent. Wikipedia article coordinates cover that long tail, so they
+// are used as a fallback whenever Nominatim comes back empty. Wikipedia coords
+// are article-level (main campus centroid), which is accurate enough for the
+// tens-to-hundreds-of-km distances this panel reports.
+
+async function geocodeNominatim(query) {
+  const res = await fetch(
+    `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=5`,
+    { headers: { 'Accept-Language': 'en' } }
+  );
+  if (!res.ok) throw new Error('nominatim');
+  const data = await res.json();
+  return data.map((r) => ({
+    displayName: r.display_name,
+    lat: parseFloat(r.lat),
+    lng: parseFloat(r.lon),
+    source: 'OpenStreetMap',
+  }));
+}
+
+// Normalize a title/query for exact-match comparison
+const normalizeName = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+async function geocodeWikipedia(query) {
+  const params = new URLSearchParams({
+    action: 'query',
+    format: 'json',
+    origin: '*',
+    generator: 'search',
+    gsrlimit: '8',
+    gsrsearch: query,
+    prop: 'coordinates',
+  });
+  const res = await fetch(`https://en.wikipedia.org/w/api.php?${params}`);
+  if (!res.ok) throw new Error('wikipedia');
+  const data = await res.json();
+  const pages = Object.values(data?.query?.pages ?? {});
+  const q = normalizeName(query);
+  return pages
+    .filter((p) => p.coordinates?.length)
+    .map((p) => {
+      const title = normalizeName(p.title);
+      // Wikipedia's relevance ranking is loose — searching for a specific
+      // university also surfaces the city and neighbouring institutions — so
+      // pull exact and prefix title matches to the top before its own ordering.
+      const titleRank = title === q ? 0 : title.startsWith(q) || q.startsWith(title) ? 1 : 2;
+      return {
+        displayName: p.title,
+        lat: p.coordinates[0].lat,
+        lng: p.coordinates[0].lon,
+        source: 'Wikipedia',
+        titleRank,
+        index: p.index ?? 99,
+      };
+    })
+    .sort((a, b) => a.titleRank - b.titleRank || a.index - b.index)
+    .slice(0, 5);
+}
+
 const COUNTRY_COLORS = {
   Russia: '#ef4444',
   China: '#3b82f6',
@@ -277,7 +341,7 @@ export default function NroLookup() {
     setFlyTarget({ lat: org.lat, lng: org.lng, id: org.id });
   }, []);
 
-  // Geocode an institution name via Nominatim
+  // Geocode an institution name: OpenStreetMap first, Wikipedia as fallback
   const handleInstitutionSearch = async (e) => {
     e?.preventDefault();
     const q = institutionQuery.trim();
@@ -286,22 +350,24 @@ export default function NroLookup() {
     setGeocodeError('');
     setInstitutionSuggestions([]);
     try {
-      const res = await fetch(
-        `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=5`,
-        { headers: { 'Accept-Language': 'en' } }
-      );
-      if (!res.ok) throw new Error();
-      const data = await res.json();
-      if (data.length === 0) {
-        setGeocodeError('No results found. Try a more specific name, or include the city and country.');
-      } else {
-        setInstitutionSuggestions(
-          data.map((r) => ({
-            displayName: r.display_name,
-            lat: parseFloat(r.lat),
-            lng: parseFloat(r.lon),
-          }))
+      let results = [];
+      let osmFailed = false;
+      try {
+        results = await geocodeNominatim(q);
+      } catch {
+        osmFailed = true;
+      }
+      if (results.length === 0) {
+        results = await geocodeWikipedia(q);
+      }
+      if (results.length === 0) {
+        setGeocodeError(
+          osmFailed
+            ? 'Search failed. Check your connection and try again.'
+            : 'No match found. Try the institution’s full official name, or search for its city instead — city-level accuracy is enough for a proximity check.'
         );
+      } else {
+        setInstitutionSuggestions(results);
       }
     } catch {
       setGeocodeError('Search failed. Check your connection and try again.');
@@ -485,7 +551,7 @@ export default function NroLookup() {
       <div className="nro-proximity-panel">
         <div className="nro-proximity-header">
           <strong>Check proximity to NROs</strong>
-          <span>Search any institution to see the nearest Named Research Organizations and their distances. Searches OpenStreetMap data worldwide — for best results, include the city or country (e.g. "Beihang University, Beijing"). If nothing is found, try a partial name or full address.</span>
+          <span>Search any institution to see the nearest Named Research Organizations and their distances. Searches OpenStreetMap first, then Wikipedia for institutions that OpenStreetMap does not map — for best results, include the city or country (e.g. &quot;Beihang University, Beijing&quot;). Each result shows which source it came from; Wikipedia results are main-campus locations rather than exact addresses.</span>
         </div>
         <form className="nro-proximity-form" onSubmit={handleInstitutionSearch}>
           <input
@@ -523,6 +589,7 @@ export default function NroLookup() {
                   onClick={() => handleSelectInstitution(s)}
                 >
                   {s.displayName}
+                  <span className="nro-proximity-suggestion-source">via {s.source}</span>
                 </button>
               </li>
             ))}
