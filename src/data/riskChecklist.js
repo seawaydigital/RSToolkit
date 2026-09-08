@@ -1,5 +1,10 @@
 export const riskChecklist = {
-  lastUpdated: "2025-01-24",
+  // Verified 2026-09-06 against the federal NSGRP page (dateModified 2026-07-29).
+  // Annex A's real structure is "Research areas covered by export controls",
+  // "List 1", "Additional research areas that can be considered sensitive" and
+  // "List 2" — it does NOT number items, so the previous "Annex A, Item 1-4"
+  // refs were wrong. Annex B has no sub-headings. Corrected.
+  lastUpdated: "2026-09-06",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   sections: [
     {
@@ -11,63 +16,63 @@ export const riskChecklist = {
           id: "nuclear-cbrn",
           label: "Does the research involve nuclear, chemical, biological, or radiological applications?",
           learnMore: "Research in these fields has a clear link to advancing military or intelligence capabilities and is subject to export controls under the Export and Import Permits Act (EIPA) and the Nuclear Non-proliferation Import and Export Control Regulations. Permits may be required before transferring technology to researchers outside Canada.",
-          policyRef: "NSGRP, Annex A, Item 1",
+          policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
         {
           id: "conventional-weapons",
           label: "Does the research relate to conventional weapons or dual-use goods?",
           learnMore: "Research relating to conventional weapons and dual-use goods may be subject to the Export Control List (ECL) of the EIPA and may require permits prior to transfer of technology to researchers outside of Canada.",
-          policyRef: "NSGRP, Annex A, Item 2",
+          policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
         {
           id: "missile-space",
           label: "Does the research involve missile, rocket, or space technology?",
           learnMore: "Research related to missile and rocket technology, space technology, and chemical and biological weapons agents may be subject to the ECL of the EIPA. These areas have direct military and intelligence applications.",
-          policyRef: "NSGRP, Annex A, Item 3",
+          policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
         {
           id: "controlled-goods",
           label: "Does the research involve goods or technology on the Controlled Goods List?",
           learnMore: "Research related to goods or technology identified in the Schedule of the Defence Production Act (the Controlled Goods List) is sensitive and subject to the Controlled Goods Program administered by Public Services and Procurement Canada.",
-          policyRef: "NSGRP, Annex A, Item 4",
+          policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
         {
           id: "sensitive-dual-use",
           label: "Does the research advance sensitive or dual-use technologies (e.g., AI, quantum, biotech)?",
           learnMore: "Some new and emerging technologies have military, intelligence, or dual military/civilian applications but are not yet covered by international arms and export control regimes. Review the Sensitive Technology Research Areas list for the current inventory of areas considered sensitive.",
-          policyRef: "NSGRP, Annex A, List 1",
+          policyRef: "NSGRP, Annex A — List 1",
           defaultState: null
         },
         {
           id: "critical-minerals",
           label: "Does the research relate to critical minerals or critical mineral supply chains?",
           learnMore: "Research areas related to critical minerals, including supply chains, as identified on the Government of Canada's Critical Minerals List, are considered sensitive due to their strategic importance to national security and the economy.",
-          policyRef: "NSGRP, Annex A, Additional sensitive areas",
+          policyRef: "NSGRP, Annex A — Additional research areas that can be considered sensitive",
           defaultState: null
         },
         {
           id: "critical-infrastructure",
           label: "Does the research fall within a critical infrastructure sector?",
           learnMore: "Critical infrastructure encompasses processes, systems, facilities, technologies, networks, assets, and services essential to the health, safety, security, or economic well-being of Canadians and the effective functioning of government, as defined under the National Strategy for Critical Infrastructure.",
-          policyRef: "NSGRP, Annex A, Additional sensitive areas",
+          policyRef: "NSGRP, Annex A — Additional research areas that can be considered sensitive",
           defaultState: null
         },
         {
           id: "large-datasets",
           label: "Does the research use large datasets that could reveal sensitive patterns about human behaviour?",
           learnMore: "Research using large datasets that can be analyzed to reveal patterns, trends, and associations related to human behaviour may have ethical, commercial, or legal impact. The sensitivity depends on the nature, type, and state of the information and how it may be used in aggregate.",
-          policyRef: "NSGRP, Annex A, Additional sensitive areas",
+          policyRef: "NSGRP, Annex A — Additional research areas that can be considered sensitive",
           defaultState: null
         },
         {
           id: "sensitive-personal-data",
           label: "Does the research use sensitive personal data (health, genetic, biometric, financial, geolocation)?",
           learnMore: "Personal data that could be leveraged by hostile state actors to harm national and economic security includes: personally identifiable health or genetic data, biometric data, financial data, private communications, geolocation data, and personal data concerning government officials or members of the military or intelligence community.",
-          policyRef: "NSGRP, Annex A, List 2",
+          policyRef: "NSGRP, Annex A — List 2",
           defaultState: null
         }
       ]
@@ -109,14 +114,14 @@ export const riskChecklist = {
           id: "knowledge-transfer-risk",
           label: "Is there potential for unwanted transfer of research knowledge to a foreign government or military?",
           learnMore: "Assess your partner's goals and objectives for the shared research outcomes. Consider any potential intention or risk to transfer the research knowledge or results to a foreign government, military, their proxies, or other actors where doing so may harm Canada's national security interests.",
-          policyRef: "NSGRP, Partner considerations",
+          policyRef: "NSGRP — Partner: who are you working with?",
           defaultState: null
         },
         {
           id: "nro-listed",
           label: "Is the partner on the Named Research Organizations list?",
           learnMore: "The Named Research Organizations list identifies universities, research institutions, or laboratories connected to military, national defence, or state security organizations that could pose a risk to Canadian national security. Affiliations with NROs trigger additional requirements under both the STRAC policy and the NSGRP.",
-          policyRef: "NSGRP, Annex B; STRAC Policy, Section 4",
+          policyRef: "NSGRP, Annex B; STRAC Policy — Steps for Researchers",
           defaultState: null
         }
       ]
@@ -130,28 +135,28 @@ export const riskChecklist = {
           id: "data-storage",
           label: "Will research data be stored in or accessible from jurisdictions with elevated security risks?",
           learnMore: "Influence over and access to data and infrastructure, including data storage, governance, and access provisions of the partnership agreement, could be used to support unwanted data access or knowledge transfer outside the scope of the research partnership.",
-          policyRef: "NSGRP, Research area considerations",
+          policyRef: "NSGRP — Research area: what are you working on?",
           defaultState: null
         },
         {
           id: "cybersecurity",
           label: "Are sound cybersecurity and data management practices in place?",
           learnMore: "A strong risk mitigation plan should include sound cybersecurity and data management practices. Ensure that digital and physical infrastructure access controls are adequate to protect research data and intellectual property from unauthorized access.",
-          policyRef: "NSGRP, Mitigation measures",
+          policyRef: "NSGRP — Mitigation Measures",
           defaultState: null
         },
         {
           id: "ip-ownership",
           label: "Are intellectual property rights and ownership of research results clearly defined?",
           learnMore: "Ensuring that Canada's research ecosystem serves the public interest requires a clear and shared understanding across all partners of the purpose, use, and ownership of research results. This understanding must be upheld across all stages of the research and in all jurisdictions.",
-          policyRef: "NSGRP, Guiding principles - Research in the Public Interest",
+          policyRef: "NSGRP — Guiding principles",
           defaultState: null
         },
         {
           id: "data-governance",
           label: "Are data governance and access provisions in the partnership agreement adequate?",
           learnMore: "Review the data storage, governance, and access provisions of the research partnership agreement to ensure they cannot be used to support unwanted data access or knowledge transfer outside the scope of the partnership. Consider both physical and digital infrastructure.",
-          policyRef: "NSGRP, Research area considerations",
+          policyRef: "NSGRP — Research area: what are you working on?",
           defaultState: null
         }
       ]
@@ -165,35 +170,35 @@ export const riskChecklist = {
           id: "team-strength",
           label: "Has the research team been assessed for security risks and conflicts of interest?",
           learnMore: "Building a strong research team involves assessing all individuals for potential conflicts of interest and commitment. Identify any undisclosed affiliations, dual appointments, or obligations to foreign entities for all team members.",
-          policyRef: "NSGRP, Mitigation measures",
+          policyRef: "NSGRP — Mitigation Measures",
           defaultState: null
         },
         {
           id: "partner-motivations",
           label: "Have you assessed the alignment of your partner's motivations with your own?",
           learnMore: "Assess whether your partner's goals and objectives for the shared research outcomes are transparent and aligned with yours. Consider whether there is any potential intention or risk to transfer research knowledge in ways that may harm Canadian national security.",
-          policyRef: "NSGRP, Mitigation measures",
+          policyRef: "NSGRP — Mitigation Measures",
           defaultState: null
         },
         {
           id: "research-use-agreement",
           label: "Is there an agreement on the intended use of research findings?",
           learnMore: "Fully transparent and reciprocal sharing of the methods, data, and outcomes of research is crucial to research collaboration and integrity. Ensure there is a clear agreement on how findings may be used, published, and disseminated by all partners.",
-          policyRef: "NSGRP, Mitigation measures",
+          policyRef: "NSGRP — Mitigation Measures",
           defaultState: null
         },
         {
           id: "export-controls",
           label: "Have applicable export control requirements been identified and addressed?",
           learnMore: "Research in areas covered by the Export and Import Permits Act, the Defence Production Act, the Area Control List, the Special Economic Measures Act, or the United Nations Act may require permits or prior authorization. Consult with your institution's export control office.",
-          policyRef: "NSGRP, Annex A - Research areas covered by export controls",
+          policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
         {
           id: "institutional-resources",
           label: "Have you engaged your institution's research services or partnerships office?",
           learnMore: "Each research institution has a range of resources, policies, and processes to help researchers identify and mitigate risks. For any project with identified national security risks, researchers should use the full range of institutional resources at their disposal.",
-          policyRef: "NSGRP, Identify potential risks",
+          policyRef: "NSGRP — Identify potential risks",
           defaultState: null
         }
       ]

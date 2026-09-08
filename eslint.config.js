@@ -31,4 +31,11 @@ export default defineConfig([
       'react-hooks/set-state-in-effect': 'warn',
     },
   },
+  {
+    // Config files execute in Node, not the browser — `process` is defined there.
+    files: ['vite.config.js', 'eslint.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

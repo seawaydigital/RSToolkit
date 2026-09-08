@@ -30,6 +30,10 @@ jobs:
           # Add either as a repository secret to switch providers.
           VITE_CARTO_API_KEY: ${{ secrets.VITE_CARTO_API_KEY }}
           VITE_STADIA_API_KEY: ${{ secrets.VITE_STADIA_API_KEY }}
+      # The custom domain belongs to this deployment, not to the source tree.
+      # Anyone else building this repo gets a clean dist/ with no CNAME.
+      - name: Write CNAME for the rs.rdmtoolkit.ca deployment
+        run: echo "rs.rdmtoolkit.ca" > dist/CNAME
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

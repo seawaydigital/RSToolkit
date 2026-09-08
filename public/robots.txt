@@ -1,0 +1,8 @@
+# Research Security Toolkit
+# Public reference content — crawling is welcome.
+#
+# No sitemap: the site uses hash-based routing, so every tool is served
+# from the same URL (/#tool-slug). A sitemap would list one entry.
+
+User-agent: *
+Allow: /

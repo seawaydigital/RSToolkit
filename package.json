@@ -1,8 +1,17 @@
 {
-  "name": "rs-temp",
+  "name": "research-security-toolkit",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A client-side web toolkit helping Canadian researchers and research administrators navigate federal research security policy — STRAC, NSGRP, NROs, STRAs, and export controls.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seawaydigital/RSToolkit.git"
+  },
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

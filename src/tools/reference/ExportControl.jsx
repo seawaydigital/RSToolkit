@@ -29,7 +29,7 @@ const tagClassMap = {
   sanctions: 'ec-tag--sanctions',
 };
 
-export default function ExportControl({ onNavigate }) {
+export default function ExportControl() {
   const [search, setSearch] = useState('');
   const [openSections, setOpenSections] = useState({});
 

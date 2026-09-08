@@ -1,7 +1,11 @@
 export const nsgrpFlow = {
   id: "nsgrp",
   title: "NSGRP Research Partnership Decision Flow",
-  lastUpdated: "2025-01-24",
+  // Verified 2026-09-06 against the federal page (dateModified 2026-07-29).
+  // Every policyRef below matches a real heading in the document ("Guiding
+  // principles", "Identify potential risks", "Mitigation Measures",
+  // "Implementation", "Annex A", "Annex B"). No corrections needed.
+  lastUpdated: "2026-09-06",
   policySource: "National Security Guidelines for Research Partnerships",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   nodes: [

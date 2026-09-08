@@ -2,13 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Research Security Toolkit</title>
+    <meta name="description" content="Free, plain-language tools for Canadian researchers and research administrators navigating federal research security policy — STRAC, NSGRP, Named Research Organizations, Sensitive Technology Research Areas, and export controls. No account required." />
+
+    <!-- Update SITE_URL in src/siteConfig.js and mirror it here when the
+         hosting domain changes: static meta tags can't read JS config. -->
+    <link rel="canonical" href="https://rs.rdmtoolkit.ca/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Research Security Toolkit" />
+    <meta property="og:title" content="Research Security Toolkit" />
+    <meta property="og:description" content="Free, plain-language tools for Canadian researchers navigating federal research security policy — STRAC, NSGRP, NROs, STRAs, and export controls." />
+    <meta property="og:url" content="https://rs.rdmtoolkit.ca/" />
+    <meta property="og:image" content="https://rs.rdmtoolkit.ca/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Research Security Toolkit — Canadian research security, without the guesswork." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Research Security Toolkit" />
+    <meta name="twitter:description" content="Free, plain-language tools for Canadian researchers navigating federal research security policy." />
+    <meta name="twitter:image" content="https://rs.rdmtoolkit.ca/og-image.png" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#061727" />
+
+    <!-- CSP mostly works via a meta tag, so what remains here is enforced.
+         Two things do NOT and are absent by design: X-Content-Type-Options
+         (not a valid http-equiv pragma directive at all) and CSP's own
+         frame-ancestors (ignored by the spec outside an HTTP header — it was
+         logging a console error on every page load). Both must be set as real
+         HTTP response headers; see the "Security headers" section of
+         HANDOFF.md. Referrer policy is NOT in that group — it works via
+         <meta name="referrer"> below, which is why it is still in the page.
+         img-src must list every basemap host in src/data/mapTiles.js; adding
+         a tile provider without adding its host here silently breaks the map. -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self' 'unsafe-inline';
-      style-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-      img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
       connect-src 'self' https://nominatim.openstreetmap.org;
       font-src 'self' https://fonts.gstatic.com;
       object-src 'none';
@@ -24,7 +60,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500&display=swap" />
-    <title>Research Security Toolkit</title>
   </head>
   <body>
     <div id="root"></div>
