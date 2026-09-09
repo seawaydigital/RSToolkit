@@ -2348,6 +2348,15 @@ a:hover {
   transition: background 0.1s;
 }
 
+.nro-proximity-suggestion-source {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
 .nro-proximity-suggestion:last-child {
   border-bottom: none;
 }
