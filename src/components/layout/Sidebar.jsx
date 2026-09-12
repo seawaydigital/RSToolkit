@@ -1,33 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { CATEGORIES } from '../../data/toolRegistry';
 
 export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) {
-  const [expanded, setExpanded] = useState(new Set());
-
-  useEffect(() => {
-    if (currentToolId) {
-      for (const cat of CATEGORIES) {
-        if (cat.tools.some(t => t.id === currentToolId)) {
-          setExpanded(prev => {
-            if (prev.has(cat.id)) return prev;
-            const next = new Set(prev);
-            next.add(cat.id);
-            return next;
-          });
-          break;
-        }
-      }
-    }
-  }, [currentToolId]);
+  const [expanded, setExpanded] = useState({});
 
   function toggleCategory(catId) {
-    setExpanded(prev => {
-      const next = new Set(prev);
-      if (next.has(catId)) next.delete(catId);
-      else next.add(catId);
-      return next;
-    });
+    setExpanded(prev => ({ ...prev, [catId]: !(prev[catId] ?? CATEGORIES.find(c => c.id === catId).tools.some(t => t.id === currentToolId)) }));
   }
 
   function handleToolClick(toolSlug) {
@@ -38,11 +17,11 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
   return (
     <>
       {isOpen && <div className="sidebar-backdrop" onClick={onClose} />}
-      <nav className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} aria-label="Tool navigation">
+      <nav id="tool-navigation" inert={!isOpen} className={`sidebar ${isOpen ? 'sidebar--open' : ''}`} aria-label="Tool navigation" onKeyDown={event => { if (event.key === 'Escape') { onClose?.(); document.querySelector('[aria-controls="tool-navigation"]')?.focus(); } }}>
         <div className="sidebar-scroll">
           <div className="sidebar-eyebrow">Toolkit · Categories</div>
           {CATEGORIES.map(cat => {
-            const isExpanded = expanded.has(cat.id);
+            const isExpanded = expanded[cat.id] ?? cat.tools.some(t => t.id === currentToolId);
             return (
               <div key={cat.id} className="sidebar-category">
                 <button
@@ -62,6 +41,7 @@ export default function Sidebar({ currentToolId, onNavigate, isOpen, onClose }) 
                         <button
                           className={`sidebar-tool-item ${currentToolId === tool.id ? 'sidebar-tool-item--active' : ''}`}
                           onClick={() => handleToolClick(tool.slug)}
+                          aria-current={currentToolId === tool.id ? 'page' : undefined}
                         >
                           {tool.name}
                         </button>

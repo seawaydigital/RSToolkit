@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Menu, Search } from 'lucide-react';
 
-export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSearchOpen }) {
+export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSearchOpen, menuOpen }) {
   useEffect(() => {
     function onKeyDown(e) {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -17,14 +17,14 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
     <header className="topbar">
       <div className="topbar-left">
         {showMenuButton && (
-          <button className="topbar-menu-btn" onClick={onMenuToggle} aria-label="Toggle sidebar">
+          <button className="topbar-menu-btn" onClick={onMenuToggle} aria-label="Toggle sidebar" aria-expanded={menuOpen} aria-controls="tool-navigation">
             <Menu size={20} />
           </button>
         )}
-        <span className="topbar-logo" onClick={onLogoClick} style={{ cursor: 'pointer' }}>
+        <button className="topbar-logo" onClick={onLogoClick} aria-label="Research Security Toolkit home">
           <span className="topbar-logo-mark">RS</span>
           <span className="topbar-logo-word">Toolkit</span>
-        </span>
+        </button>
         <span className="topbar-divider" aria-hidden="true"></span>
         <span className="topbar-subtitle">Research Security</span>
       </div>
@@ -32,11 +32,11 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
         <button
           className="topbar-search-btn"
           onClick={onSearchOpen}
-          aria-label="Search tools (Ctrl+K)"
-          title="Search tools (Ctrl+K)"
+          aria-label="Find a tool (Ctrl+K)"
+          title="Find a tool (Ctrl+K)"
         >
           <Search size={15} />
-          <span className="topbar-search-label">Search tools</span>
+          <span className="topbar-search-label">Find a tool</span>
           <kbd className="topbar-search-kbd">Ctrl K</kbd>
         </button>
         <span className="topbar-badge">Canadian sources</span>

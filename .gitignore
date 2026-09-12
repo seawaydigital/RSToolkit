@@ -28,3 +28,7 @@ dist-ssr
 
 # Git worktrees
 .worktrees/
+artifacts/
+test-results/
+playwright-report/
+.vitest/

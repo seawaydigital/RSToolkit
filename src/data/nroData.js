@@ -1,842 +1,551 @@
-/**
- * Named Research Organizations (NRO) List
- * Source: Government of Canada - Policy on Sensitive Technology Research and Affiliations of Concern
- * Last Updated: March 11, 2025
- *
- * This data is extracted from the official NRO list published by
- * Innovation, Science and Economic Development Canada.
- */
-
+// Official organization entries and source-labelled aliases. No geographic inference.
 const nroData = {
-  lastUpdated: "2024-04-18",
-  sourceUrl:
-    "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations",
-  organizations: [
-    // ===== A =====
+  "verifiedOn": "2026-09-12",
+  "sourceUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+  "sourceSnapshotSha256": "50ec22a30475c6d357bd252528ae3bc6c8ed8807cd2f515d0e4c97c906568150",
+  "sourceSnapshotRetrievedAt": "2026-09-12T12:54:33.376Z",
+  "organizations": [
     {
-      id: "iitp-ras",
-      name: "A.A. Kharkevich Institute for Information Transmission Problems, IITP, Russian Academy of Sciences",
-      aliases: ["IITP", "Kharkevich Institute"],
-      country: "Russia",
-      city: "Moscow",
-      lat: 55.7707,
-      lng: 37.6114,
-      parentOrg: null,
-      notes: "Part of the Russian Academy of Sciences",
+      "id": "iitp-ras",
+      "name": "A.A. Kharkevich Institute for Information Transmission Problems, IITP, Russian Academy of Sciences",
+      "aliases": [],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "academy-of-military-medical-sciences",
-      name: "Academy of Military Medical Sciences",
-      aliases: ["AMMS"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9006,
-      lng: 116.2643,
-      parentOrg: null,
-      notes: null,
+      "id": "academy-of-military-medical-sciences",
+      "name": "Academy of Military Medical Sciences",
+      "aliases": [
+        "AMMS"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "academy-of-military-science",
-      name: "Academy of Military Science",
-      aliases: ["AMS"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9906,
-      lng: 116.2035,
-      parentOrg: null,
-      notes: null,
+      "id": "academy-of-military-science",
+      "name": "Academy of Military Science",
+      "aliases": [
+        "AMS"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "aerospace-research-institute-iran",
-      name: "Aerospace Research Institute",
-      aliases: ["ARI"],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.763,
-      lng: 51.3783,
-      parentOrg: null,
-      notes: null,
+      "id": "aerospace-research-institute-iran",
+      "name": "Aerospace Research Institute",
+      "aliases": [
+        "ARI"
+      ],
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "air-force-medical-university",
-      name: "Air Force Medical University",
-      aliases: [
+      "id": "air-force-medical-university",
+      "name": "Air Force Medical University",
+      "aliases": [
         "Air Force Military Medical University",
         "Fourth Military Medical University",
-        "Fourth Medical University",
+        "Fourth Medical University"
       ],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.2668,
-      lng: 108.9919,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "air-force-research-institute",
-      name: "Air Force Research Institute",
-      aliases: [
+      "id": "air-force-research-institute",
+      "name": "Air Force Research Institute",
+      "aliases": [
         "Air Force Equipment Academy",
-        "Key Laboratory of Complex Aviation System Simulation",
+        "Key Laboratory of Complex Aviation System Simulation"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.7956,
-      lng: 116.3879,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "air-force-xian-flight-academy",
-      name: "Air Force Xi'an Flight Academy",
-      aliases: [
+      "id": "air-force-xian-flight-academy",
+      "name": "Air Force Xi’an Flight Academy",
+      "aliases": [
         "PLA Air Force Xi'an Flight Academy",
-        "Xi'an Flying College of PLA Air Force",
+        "Air Force Xi'an Flight Academy",
+        "Xi'an Flying College of PLA Air Force"
       ],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.438,
-      lng: 108.7504,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-command-college",
-      name: "Airforce Command College",
-      aliases: [
+      "id": "airforce-command-college",
+      "name": "Airforce Command College",
+      "aliases": [
         "PLA Air Force Command College",
         "Air Force Command College",
         "AFCC",
-        "PLA Air Force Command Academy",
+        "PLA Air Force Command Academy"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9935,
-      lng: 116.254,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-communication-nco-academy",
-      name: "Airforce Communication NCO Academy",
-      aliases: ["Dalian Communications NCO Academy"],
-      country: "China",
-      city: "Dalian",
-      lat: 38.9682,
-      lng: 121.5937,
-      parentOrg: null,
-      notes: null,
+      "id": "airforce-communication-nco-academy",
+      "name": "Airforce Communication NCO Academy",
+      "aliases": [
+        "Dalian Communications NCO Academy"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-early-warning-academy",
-      name: "Airforce Early Warning Academy",
-      aliases: ["Wuhan Radar Institute"],
-      country: "China",
-      city: "Wuhan",
-      lat: 30.8822,
-      lng: 114.3726,
-      parentOrg: null,
-      notes: null,
+      "id": "airforce-early-warning-academy",
+      "name": "Airforce Early Warning Academy",
+      "aliases": [
+        "Wuhan Radar Institute"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-engineering-university",
-      name: "Airforce Engineering University",
-      aliases: ["AFEU"],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.2738,
-      lng: 109.0228,
-      parentOrg: null,
-      notes: null,
+      "id": "airforce-engineering-university",
+      "name": "Airforce Engineering University",
+      "aliases": [
+        "AFEU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-flight-academy-shijiazhuang",
-      name: "Airforce Flight Academy Shijiazhuang",
-      aliases: [
+      "id": "airforce-flight-academy-shijiazhuang",
+      "name": "Airforce Flight Academy Shijiazhuang",
+      "aliases": [
         "PLA Air Force Shijiazhuang Flight Academy",
         "Shijiazhuang Flying College of the PLA Airforce",
-        "Shijiazhuang Flight College of Air Force",
+        "Shijiazhuang Flight College of Air Force"
       ],
-      country: "China",
-      city: "Shijiazhuang",
-      lat: 38.0824,
-      lng: 114.4179,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-harbin-flight-academy",
-      name: "Airforce Harbin Flight Academy",
-      aliases: ["Harbin Flight College of Air Force"],
-      country: "China",
-      city: "Harbin",
-      lat: 45.5989,
-      lng: 126.6581,
-      parentOrg: null,
-      notes: null,
+      "id": "airforce-harbin-flight-academy",
+      "name": "Airforce Harbin Flight Academy",
+      "aliases": [
+        "Harbin Flight College of Air Force"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "airforce-logistics-university",
-      name: "Airforce Logistics University",
-      aliases: [],
-      country: "China",
-      city: "Xuzhou",
-      lat: 34.2693,
-      lng: 117.1846,
-      parentOrg: null,
-      notes: null,
+      "id": "airforce-logistics-university",
+      "name": "Airforce Logistics University",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-academy-of-armored-forces",
-      name: "Army Academy of Armored Forces",
-      aliases: [
+      "id": "army-academy-of-armored-forces",
+      "name": "Army Academy of Armored Forces",
+      "aliases": [
         "Army Armored Forces Academy",
-        "Armored Forces Engineering Academy",
+        "Armored Forces Engineering Academy"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.8487,
-      lng: 116.2137,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-academy-of-artillery-and-air-defense",
-      name: "Army Academy of Artillery and Air Defense",
-      aliases: [],
-      country: "China",
-      city: "Hefei",
-      lat: 31.8653,
-      lng: 117.2172,
-      parentOrg: null,
-      notes: null,
+      "id": "army-academy-of-artillery-and-air-defense",
+      "name": "Army Academy of Artillery and Air Defense",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-academy-of-border-and-coastal-defense",
-      name: "Army Academy of Border and Coastal Defense",
-      aliases: [],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.1587,
-      lng: 108.9365,
-      parentOrg: null,
-      notes: null,
+      "id": "army-academy-of-border-and-coastal-defense",
+      "name": "Army Academy of Border and Coastal Defense",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-aviation-college",
-      name: "Army Aviation College",
-      aliases: ["Army Aviation School"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.8372,
-      lng: 116.6302,
-      parentOrg: null,
-      notes: null,
+      "id": "army-aviation-college",
+      "name": "Army Aviation College",
+      "aliases": [
+        "Army Aviation School"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-engineering-university",
-      name: "Army Engineering University",
-      aliases: ["Army Engineering University of the PLA"],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.0439,
-      lng: 118.812,
-      parentOrg: null,
-      notes: null,
+      "id": "army-engineering-university",
+      "name": "Army Engineering University",
+      "aliases": [
+        "Army Engineering University of the PLA"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-infantry-academy",
-      name: "Army Infantry Academy",
-      aliases: [
+      "id": "army-infantry-academy",
+      "name": "Army Infantry Academy",
+      "aliases": [
         "Army Infantry Academy of PLA",
         "PLA Army Infantry Academy",
-        "Nachang Army Academy",
+        "Nachang Army Academy"
       ],
-      country: "China",
-      city: "Nanchang",
-      lat: 28.6734,
-      lng: 115.7802,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-medical-university",
-      name: "Army Medical University",
-      aliases: ["Third Military Medical University"],
-      country: "China",
-      city: "Chongqing",
-      lat: 29.5384,
-      lng: 106.4382,
-      parentOrg: null,
-      notes: null,
+      "id": "army-medical-university",
+      "name": "Army Medical University",
+      "aliases": [
+        "Third Military Medical University"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-military-transportation-academy",
-      name: "Army Military Transportation Academy",
-      aliases: ["Academy of Military Transportation"],
-      country: "China",
-      city: "Tianjin",
-      lat: 39.1516,
-      lng: 117.3466,
-      parentOrg: null,
-      notes: null,
+      "id": "army-military-transportation-academy",
+      "name": "Army Military Transportation Academy",
+      "aliases": [
+        "Academy of Military Transportation"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-research-institute",
-      name: "Army Research Institute",
-      aliases: [],
-      country: "China",
-      city: "Beijing",
-      lat: 39.98,
-      lng: 116.21,
-      parentOrg: null,
-      notes: null,
+      "id": "army-research-institute",
+      "name": "Army Research Institute",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-service-academy",
-      name: "Army Service Academy",
-      aliases: ["PLA Army Service Academy"],
-      country: "China",
-      city: "Wuhan",
-      lat: 30.5104,
-      lng: 114.4079,
-      parentOrg: null,
-      notes: null,
+      "id": "army-service-academy",
+      "name": "Army Service Academy",
+      "aliases": [
+        "PLA Army Service Academy"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "army-special-operations-academy",
-      name: "Army Special Operations Academy",
-      aliases: ["Army Special Operations College"],
-      country: "China",
-      city: "Guilin",
-      lat: 25.2547,
-      lng: 110.2895,
-      parentOrg: null,
-      notes: null,
+      "id": "army-special-operations-academy",
+      "name": "Army Special Operations Academy",
+      "aliases": [
+        "Army Special Operations College"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "ano-po-ksi",
-      name: "Autonomous Noncommercial Organization Professional Association of Designers of Data Processing Systems",
-      aliases: ["ANO PO KSI"],
-      country: "Russia",
-      city: "Moscow",
-      lat: 55.9742,
-      lng: 37.1475,
-      parentOrg: null,
-      notes: null,
+      "id": "ano-po-ksi",
+      "name": "Autonomous Noncommercial Organization Professional Association of Designers of Data Processing Systems",
+      "aliases": [
+        "ANO PO KSI"
+      ],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "aviation-university-of-air-force",
-      name: "Aviation University of Air Force",
-      aliases: [
+      "id": "aviation-university-of-air-force",
+      "name": "Aviation University of Air Force",
+      "aliases": [
         "PLA Air Force Aviation University",
         "Aviation University Air Force",
         "Air Force Aviation University",
         "AUAF",
-        "Aviation University of PLA Air Force",
+        "Aviation University of PLA Air Force"
       ],
-      country: "China",
-      city: "Changchun",
-      lat: 43.8429,
-      lng: 125.3234,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "a",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== B =====
     {
-      id: "baghyatollah-medical-sciences-university",
-      name: "Baghyatollah Medical Sciences University",
-      aliases: [
+      "id": "baghyatollah-medical-sciences-university",
+      "name": "Baghyatollah Medical Sciences University",
+      "aliases": [
         "BMSU",
         "Bagiatollah Medical Sciences University",
         "Baghiatollah Medical Sciences University",
         "Baqyatollah Medical Sciences University",
         "Baqiyatallah Medical Sciences University",
         "Baqiyatallah University of Medical Sciences",
-        "Baqiatollah Medical Sciences University",
+        "Baqiatollah Medical Sciences University"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.753,
-      lng: 51.3931,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "beihang-university",
-      name: "Beihang University",
-      aliases: [
+      "id": "beihang-university",
+      "name": "Beihang University",
+      "aliases": [
         "Beijing University of Aeronautics and Astronautics",
-        "BUAA",
+        "BUAA"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.982,
-      lng: 116.3495,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "beijing-computational-science-research-centre",
-      name: "Beijing Computational Science Research Centre",
-      aliases: [
+      "id": "beijing-computational-science-research-centre",
+      "name": "Beijing Computational Science Research Centre",
+      "aliases": [
         "BCSRC",
         "Beijing Computing Science Research Centre",
-        "CSRC",
+        "CSRC"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 40.0353,
-      lng: 116.2945,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "beijing-electronic-science-and-technology-institute",
-      name: "Beijing Electronic Science and Technology Institute",
-      aliases: ["BESTI"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.814,
-      lng: 116.2925,
-      parentOrg: null,
-      notes: null,
+      "id": "beijing-electronic-science-and-technology-institute",
+      "name": "Beijing Electronic Science and Technology Institute",
+      "aliases": [
+        "BESTI"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "beijing-institute-of-technology",
-      name: "Beijing Institute of Technology",
-      aliases: ["BIT"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9578,
-      lng: 116.3098,
-      parentOrg: null,
-      notes: null,
+      "id": "beijing-institute-of-technology",
+      "name": "Beijing Institute of Technology",
+      "aliases": [
+        "BIT"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "beijing-university-of-posts-and-telecommunications",
-      name: "Beijing University of Posts and Telecommunications",
-      aliases: ["BUPT"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9602,
-      lng: 116.3519,
-      parentOrg: null,
-      notes: null,
+      "id": "beijing-university-of-posts-and-telecommunications",
+      "name": "Beijing University of Posts and Telecommunications",
+      "aliases": [
+        "BUPT"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "b",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== C =====
     {
-      id: "center-for-high-pressure-science-and-technology",
-      name: "Center for High Pressure Science and Technology Advanced Research",
-      aliases: [
+      "id": "center-for-high-pressure-science-and-technology",
+      "name": "Center for High Pressure Science and Technology Advanced Research",
+      "aliases": [
         "HPSTAR",
-        "Beijing High Voltage Science Research Center",
+        "Beijing High Voltage Science Research Center"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 40.0449,
-      lng: 116.2788,
-      parentOrg: null,
-      notes: "Also listed as a subsidiary/alias of CAEP",
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "chengdu-fine-optical-engineering-research-center",
-      name: "Chengdu Fine Optical Engineering Research Center",
-      aliases: [],
-      country: "China",
-      city: "Chengdu",
-      lat: 30.6271,
-      lng: 104.0383,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "Subsidiary of CAEP",
+      "id": "chengdu-fine-optical-engineering-research-center",
+      "name": "Chengdu Fine Optical Engineering Research Center",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "china-academy-of-electronics-and-information-technology",
-      name: "China Academy of Electronics and Information Technology",
-      aliases: ["CAEIT", "CETC CAEIT"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9351,
-      lng: 116.1867,
-      parentOrg: null,
-      notes: null,
+      "id": "china-academy-of-electronics-and-information-technology",
+      "name": "China Academy of Electronics and Information Technology",
+      "aliases": [
+        "CAEIT",
+        "CETC CAEIT"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "cas-shenyang-institute-of-automation",
-      name: "China Academy of Science - Shenyang Institute of Automation",
-      aliases: [],
-      country: "China",
-      city: "Shenyang",
-      lat: 41.7615,
-      lng: 123.4411,
-      parentOrg: null,
-      notes: "Part of Chinese Academy of Sciences",
+      "id": "cas-shenyang-institute-of-automation",
+      "name": "China Academy of Science – Shenyang Institute of Automation",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "china-aerodynamics-research-and-development-center",
-      name: "China Aerodynamics Research and Development Center",
-      aliases: [
+      "id": "china-aerodynamics-research-and-development-center",
+      "name": "China Aerodynamics Research and Development Center",
+      "aliases": [
         "CARDC",
         "Unit 63820",
         "29th Testing and Training Base",
-        "Academy of Military Science Aerodynamics Testing Base",
+        "Academy of Military Science Aerodynamics Testing Base"
       ],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4307,
-      lng: 104.6722,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "china-coast-guard-academy",
-      name: "China Coast Guard Academy",
-      aliases: [
+      "id": "china-coast-guard-academy",
+      "name": "China Coast Guard Academy",
+      "aliases": [
         "China Maritime Police Academy",
         "People's Armed Police China Coast Guard Academy",
-        "PAP China Coast Guard Academy",
+        "PAP China Coast Guard Academy"
       ],
-      country: "China",
-      city: "Ningbo",
-      lat: 29.9439,
-      lng: 121.711,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "china-peoples-police-university",
-      name: "China People's Police University",
-      aliases: [
+      "id": "china-peoples-police-university",
+      "name": "China People’s Police University",
+      "aliases": [
         "CPPU",
         "Ministry of Public Security China People's Police University",
-        "MPS China People's Police University",
+        "MPS China People's Police University"
       ],
-      country: "China",
-      city: "Langfang",
-      lat: 39.5314,
-      lng: 116.6513,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "chinese-academy-of-engineering-physics",
-      name: "Chinese Academy of Engineering Physics",
-      aliases: [
+      "id": "chinese-academy-of-engineering-physics",
+      "name": "Chinese Academy of Engineering Physics",
+      "aliases": [
         "China Academy of Engineering Physics",
         "CAEP",
+        "Beijing Computational Science Research Center",
         "Ninth Academy",
+        "Southwest Computing Center",
+        "Southwest Institute of Applied Electronics",
+        "Southwest Institute of Chemical Materials",
+        "Southwest Institute of Electronic Engineering",
+        "Southwest Institute of Environmental Testing",
+        "Southwest Institute of Explosives and Chemical Engineering",
+        "Southwest Institute of Fluid Physics",
+        "Southwest Institute of General Designing and Assembly",
+        "Southwest Institute of Machining Technology",
+        "Southwest Institute of Materials",
+        "Southwest Institute of Nuclear Physics and Chemistry",
+        "Southwest Institute of Research and Applications of Special Materials Factory",
+        "Southwest Institute of Structural Mechanics",
+        "The High Power Laser Laboratory",
+        "The Institute of Applied Physics and Computational Mathematics",
+        "901 Institute",
+        "Center for High Pressure Science & Technology Advanced Research",
+        "HPSTAR",
+        "China Jiuyuan Trading Corporation",
+        "Peac Institute of Multiscale Science",
+        "Sichuan Dingcheng Material Trade Co. Ltd.",
+        "Sichuan Haitian New Technology Group Co. Ltd.",
+        "Sichuan Zhonghe Import and Export Trade Co. Ltd.",
+        "Skyeye Laser Technology Limited",
+        "Chengdu Fine Optical Engineering Research Center",
+        "Beijing Jincheng Huanyu Electronics Co. Ltd."
       ],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4974,
-      lng: 104.7589,
-      parentOrg: null,
-      notes:
-        "Major nuclear weapons research institution with numerous subsidiaries",
-    },
-    // CAEP Subsidiaries
-    {
-      id: "caep-beijing-computational-science-research-center",
-      name: "Beijing Computational Science Research Center (CAEP)",
-      aliases: [],
-      country: "China",
-      city: "Beijing",
-      lat: 40.0451,
-      lng: 116.2795,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "caep-southwest-computing-center",
-      name: "Southwest Computing Center",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4985,
-      lng: 104.7595,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-applied-electronics",
-      name: "Southwest Institute of Applied Electronics",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.496,
-      lng: 104.7605,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-chemical-materials",
-      name: "Southwest Institute of Chemical Materials",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4995,
-      lng: 104.7555,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-electronic-engineering",
-      name: "Southwest Institute of Electronic Engineering",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4945,
-      lng: 104.762,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-environmental-testing",
-      name: "Southwest Institute of Environmental Testing",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.501,
-      lng: 104.761,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-explosives-and-chemical-engineering",
-      name: "Southwest Institute of Explosives and Chemical Engineering",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.502,
-      lng: 104.7545,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-fluid-physics",
-      name: "Southwest Institute of Fluid Physics",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4955,
-      lng: 104.7545,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-general-designing-and-assembly",
-      name: "Southwest Institute of General Designing and Assembly",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.493,
-      lng: 104.7575,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-machining-technology",
-      name: "Southwest Institute of Machining Technology",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.4925,
-      lng: 104.7615,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-materials",
-      name: "Southwest Institute of Materials",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5005,
-      lng: 104.763,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-nuclear-physics-and-chemistry",
-      name: "Southwest Institute of Nuclear Physics and Chemistry",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.489,
-      lng: 104.7562,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-research-and-applications-of-special-materials",
-      name: "Southwest Institute of Research and Applications of Special Materials Factory",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.503,
-      lng: 104.758,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-southwest-institute-of-structural-mechanics",
-      name: "Southwest Institute of Structural Mechanics",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.497,
-      lng: 104.7525,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-high-power-laser-laboratory",
-      name: "The High Power Laser Laboratory",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5433,
-      lng: 104.7395,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-institute-of-applied-physics-and-computational-mathematics",
-      name: "The Institute of Applied Physics and Computational Mathematics",
-      aliases: ["901 Institute"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9727,
-      lng: 116.3603,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-china-jiuyuan-trading-corporation",
-      name: "China Jiuyuan Trading Corporation",
-      aliases: [],
-      country: "China",
-      city: "Beijing",
-      lat: 39.971,
-      lng: 116.3585,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary - trading entity",
-    },
-    {
-      id: "caep-peac-institute-of-multiscale-science",
-      name: "Peac Institute of Multiscale Science (CAEP)",
-      aliases: [
-        "Peak Multiscale Science Institute",
-        "Peak Multi-Scale Scientific Research Institute",
-      ],
-      country: "China",
-      city: "Mianyang",
-      lat: 30.7453,
-      lng: 103.8654,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-sichuan-dingcheng-material-trade",
-      name: "Sichuan Dingcheng Material Trade Co. Ltd.",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5185,
-      lng: 104.7103,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary - trading entity",
-    },
-    {
-      id: "caep-sichuan-haitian-new-technology",
-      name: "Sichuan Haitian New Technology Group Co. Ltd.",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5245,
-      lng: 104.7208,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-sichuan-zhonghe-import-and-export",
-      name: "Sichuan Zhonghe Import and Export Trade Co. Ltd.",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5142,
-      lng: 104.7325,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary - trading entity",
-    },
-    {
-      id: "caep-skyeye-laser-technology",
-      name: "Skyeye Laser Technology Limited",
-      aliases: [],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.5298,
-      lng: 104.7015,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "caep-beijing-jincheng-huanyu-electronics",
-      name: "Beijing Jincheng Huanyu Electronics Co. Ltd.",
-      aliases: [],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9205,
-      lng: 116.4398,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "CAEP subsidiary",
-    },
-    {
-      id: "cas-institute-of-computing-technology",
-      name: "Chinese Academy of Sciences Institute of Computing Technology",
-      aliases: [
+      "id": "cas-institute-of-computing-technology",
+      "name": "Chinese Academy of Sciences Institute of Computing Technology",
+      "aliases": [
         "Institute of Computing Technology Chinese Academy of Sciences",
         "Institute of Computing Technology",
         "CAS ICT",
-        "ICT CAS",
+        "ICT CAS"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9806,
-      lng: 116.3205,
-      parentOrg: null,
-      notes: "Part of Chinese Academy of Sciences",
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "criminal-investigation-police-university-of-china",
-      name: "Criminal Investigation Police University of China",
-      aliases: ["CIPUC"],
-      country: "China",
-      city: "Shenyang",
-      lat: 41.8422,
-      lng: 123.3789,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== D =====
-    {
-      id: "dalian-naval-academy",
-      name: "Dalian Naval Academy",
-      aliases: ["PLA Dalian Naval Academy"],
-      country: "China",
-      city: "Dalian",
-      lat: 38.8766,
-      lng: 121.6505,
-      parentOrg: null,
-      notes: null,
+      "id": "criminal-investigation-police-university-of-china",
+      "name": "Criminal Investigation Police University of China",
+      "aliases": [
+        "CIPUC"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "c",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "defence-industries-organization-training-and-research-institute",
-      name: "Defence Industries Organization Training and Research Institute",
-      aliases: [
+      "id": "dalian-naval-academy",
+      "name": "Dalian Naval Academy",
+      "aliases": [
+        "PLA Dalian Naval Academy"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "d",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "defence-industries-organization-training-and-research-institute",
+      "name": "Defence Industries Organization Training and Research Institute",
+      "aliases": [
         "Defence Industry's Training and Research Institute",
         "Defence Industry's Training and Education Institute",
         "Defence Industries Training and Research Institute",
@@ -844,112 +553,98 @@ const nroData = {
         "DRTI",
         "Defence Ministry's Institute for Defence Education and Research",
         "Institution for Research and Training of the Defence Industries",
-        "Organization for Defence Education and Research",
+        "Organization for Defence Education and Research"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.759,
-      lng: 51.478,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== E =====
-    {
-      id: "engineering-university-of-the-capf",
-      name: "Engineering University of the CAPF",
-      aliases: ["PAP Engineering University"],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.2828,
-      lng: 108.8473,
-      parentOrg: null,
-      notes: "Chinese Armed Police Force",
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "d",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "explosion-and-impact-technology-research-centre",
-      name: "Explosion and Impact Technology Research Centre",
-      aliases: [
+      "id": "engineering-university-of-the-capf",
+      "name": "Engineering University of the CAPF",
+      "aliases": [
+        "PAP Engineering University"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "e",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "explosion-and-impact-technology-research-centre",
+      "name": "Explosion and Impact Technology Research Centre",
+      "aliases": [
         "Research Centre for Explosion and Impact",
-        "METFAZ",
+        "METFAZ"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.685,
-      lng: 51.695,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== H =====
-    {
-      id: "harbin-engineering-university",
-      name: "Harbin Engineering University",
-      aliases: ["HEU"],
-      country: "China",
-      city: "Harbin",
-      lat: 45.7749,
-      lng: 126.6765,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "e",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "harbin-institute-of-technology",
-      name: "Harbin Institute of Technology",
-      aliases: ["HIT"],
-      country: "China",
-      city: "Harbin",
-      lat: 45.7416,
-      lng: 126.6256,
-      parentOrg: null,
-      notes: null,
+      "id": "harbin-engineering-university",
+      "name": "Harbin Engineering University",
+      "aliases": [
+        "HEU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "h",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "hefei-national-laboratory-for-physical-sciences-at-microscale",
-      name: "Hefei National Laboratory for Physical Sciences at Microscale",
-      aliases: [
+      "id": "harbin-institute-of-technology",
+      "name": "Harbin Institute of Technology",
+      "aliases": [
+        "HIT"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "h",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "hefei-national-laboratory-for-physical-sciences-at-microscale",
+      "name": "Hefei National Laboratory for Physical Sciences at Microscale",
+      "aliases": [
         "National Research Center for Microscale",
-        "Microscale National Research Center",
+        "Microscale National Research Center"
       ],
-      country: "China",
-      city: "Hefei",
-      lat: 31.8409,
-      lng: 117.2639,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "h",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "hunan-university",
-      name: "Hunan University",
-      aliases: ["HNU"],
-      country: "China",
-      city: "Changsha",
-      lat: 28.1797,
-      lng: 112.9413,
-      parentOrg: null,
-      notes: null,
+      "id": "hunan-university",
+      "name": "Hunan University",
+      "aliases": [
+        "HNU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "h",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== I =====
     {
-      id: "imam-hossein-university",
-      name: "Imam Hossein University",
-      aliases: [
+      "id": "imam-hossein-university",
+      "name": "Imam Hossein University",
+      "aliases": [
         "Imam Hussein University",
         "IHU",
-        "Imam Hossein University of the Revolutionary Guards",
+        "Imam Hossein University of the Revolutionary Guards"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.7506,
-      lng: 51.5875,
-      parentOrg: null,
-      notes: "Connected to the Islamic Revolutionary Guard Corps",
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "i",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "information-engineering-university",
-      name: "Information Engineering University",
-      aliases: [
+      "id": "information-engineering-university",
+      "name": "Information Engineering University",
+      "aliases": [
         "PLAIEU",
         "IEU",
         "Luoyang Foreign Languages University",
@@ -959,533 +654,467 @@ const nroData = {
         "Zhengzhou Institute of Surveying and Mapping",
         "Zhengzhou Information Science and Technology Institute",
         "National Digital Switching System Engineering and Technology Research Center",
-        "State Key Laboratory of Mathematical Engineering and Advanced Computing",
+        "State Key Laboratory of Mathematical Engineering and Advanced Computing"
       ],
-      country: "China",
-      city: "Zhengzhou",
-      lat: 34.8154,
-      lng: 113.5679,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "i",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "institute-of-applied-physics-iran",
-      name: "Institute of Applied Physics",
-      aliases: [
+      "id": "institute-of-applied-physics-iran",
+      "name": "Institute of Applied Physics",
+      "aliases": [
         "IAP",
         "Applied Physics Institute",
-        "Institute for Applied Physics",
+        "Institute for Applied Physics"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.742,
-      lng: 51.445,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "i",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "institute-of-nbc-defense",
-      name: "Institute of NBC Defense",
-      aliases: [],
-      country: "China",
-      city: "Beijing",
-      lat: 40.1289,
-      lng: 116.1158,
-      parentOrg: null,
-      notes: "Nuclear, Biological, Chemical defense research",
+      "id": "institute-of-nbc-defense",
+      "name": "Institute of NBC Defense",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "i",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "iranian-research-organization-for-science-and-technology",
-      name: "Iranian Research Organization for Science and Technology",
-      aliases: ["IROST"],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.6259,
-      lng: 51.1884,
-      parentOrg: null,
-      notes: null,
+      "id": "iranian-research-organization-for-science-and-technology",
+      "name": "Iranian Research Organization for Science and Technology",
+      "aliases": [
+        "IROST"
+      ],
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "i",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== J =====
     {
-      id: "jiangnan-social-university",
-      name: "Jiangnan Social University",
-      aliases: [
+      "id": "jiangnan-social-university",
+      "name": "Jiangnan Social University",
+      "aliases": [
         "Institute of Cadre Management",
         "Institute of International Relations Suzhou Campus",
         "Jiangnan Institute of Social Studies",
-        "Ministry of State Security Administrative Institute",
+        "Ministry of State Security Administrative Institute"
       ],
-      country: "China",
-      city: "Suzhou",
-      lat: 31.2325,
-      lng: 120.6833,
-      parentOrg: null,
-      notes: "Connected to Ministry of State Security",
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "j",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== K =====
     {
-      id: "key-laboratory-of-information-systems-engineering",
-      name: "Key Laboratory of Information Systems Engineering",
-      aliases: ["KLISE"],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9568,
-      lng: 116.3542,
-      parentOrg: null,
-      notes: null,
+      "id": "key-laboratory-of-information-systems-engineering",
+      "name": "Key Laboratory of Information Systems Engineering",
+      "aliases": [
+        "KLISE"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "k",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== L =====
     {
-      id: "logistics-university-of-pap",
-      name: "Logistics University of the People's Armed Police Force",
-      aliases: ["PAP Logistics University"],
-      country: "China",
-      city: "Tianjin",
-      lat: 39.0915,
-      lng: 117.4258,
-      parentOrg: null,
-      notes: null,
+      "id": "logistics-university-of-pap",
+      "name": "Logistics University of the People's Armed Police Force",
+      "aliases": [
+        "PAP Logistics University"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "l",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== M =====
     {
-      id: "mps-institute-of-forensic-science",
-      name: "Ministry of Public Security's Institute of Forensic Science of China",
-      aliases: [
+      "id": "mps-institute-of-forensic-science",
+      "name": "Ministry of Public Security's Institute of Forensic Science of China",
+      "aliases": [
         "Forensic Identification Center of the Ministry of Public Security of the People's Republic of China",
-        "Material Identification Center of the Ministry of Public Security of the People's Republic of China",
+        "Material Identification Center of the Ministry of Public Security of the People's Republic of China"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.9087,
-      lng: 116.3392,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== N =====
-    {
-      id: "nanjing-army-command-college",
-      name: "Nanjing Army Command College",
-      aliases: ["PLA Nanjing Army Command College"],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.1053,
-      lng: 118.6425,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "m",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "nanjing-institute-of-information-technology",
-      name: "Nanjing Institute of Information Technology",
-      aliases: [
+      "id": "nanjing-army-command-college",
+      "name": "Nanjing Army Command College",
+      "aliases": [
+        "PLA Nanjing Army Command College"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "nanjing-institute-of-information-technology",
+      "name": "Nanjing Institute of Information Technology",
+      "aliases": [
         "Nanjing 841 Institute",
         "Nanjing Research Institute of Information Technology",
-        "Nanjing Information Technology Institute",
+        "Nanjing Information Technology Institute"
       ],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.0752,
-      lng: 118.7834,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "nanjing-university-of-aeronautics-and-astronautics",
-      name: "Nanjing University of Aeronautics and Astronautics",
-      aliases: ["Nanhang University", "NUAA"],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.0374,
-      lng: 118.8154,
-      parentOrg: null,
-      notes: null,
+      "id": "nanjing-university-of-aeronautics-and-astronautics",
+      "name": "Nanjing University of Aeronautics and Astronautics",
+      "aliases": [
+        "Nanhang University",
+        "NUAA"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "nanjing-university-of-science-and-technology",
-      name: "Nanjing University of Science and Technology",
-      aliases: ["NJUST"],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.0318,
-      lng: 118.8521,
-      parentOrg: null,
-      notes: null,
+      "id": "nanjing-university-of-science-and-technology",
+      "name": "Nanjing University of Science and Technology",
+      "aliases": [
+        "NJUST"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "national-defense-university",
-      name: "National Defense University",
-      aliases: ["NDU"],
-      country: "China",
-      city: "Beijing",
-      lat: 40.0201,
-      lng: 116.2447,
-      parentOrg: null,
-      notes: null,
+      "id": "national-defense-university",
+      "name": "National Defense University",
+      "aliases": [
+        "NDU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "national-university-of-defense-technology",
-      name: "National University of Defense Technology",
-      aliases: [
+      "id": "national-university-of-defense-technology",
+      "name": "National University of Defense Technology",
+      "aliases": [
         "NUDT",
         "Changsha Institute of Technology",
         "National Key Laboratory for Parallel and Distributed Processing",
-        "Hunan Guofang Kei University",
+        "Hunan Guofang Kei University"
       ],
-      country: "China",
-      city: "Changsha",
-      lat: 28.229,
-      lng: 112.9949,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "naval-command-college",
-      name: "Naval Command College",
-      aliases: [
+      "id": "naval-command-college",
+      "name": "Naval Command College",
+      "aliases": [
         "PLA Navy Command College",
         "Navy Command College",
-        "Naval Command Academy",
+        "Naval Command Academy"
       ],
-      country: "China",
-      city: "Nanjing",
-      lat: 32.0748,
-      lng: 118.8231,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "naval-petty-officer-academy",
-      name: "Naval Petty Officer Academy",
-      aliases: [
-        "PLA Navy Bengbu Petty Officer Academy",
+      "id": "naval-petty-officer-academy",
+      "name": "Naval Petty Officer Academy",
+      "aliases": [
+        "PLA Navy Bengbu Petty Officer Academy"
       ],
-      country: "China",
-      city: "Bengbu",
-      lat: 32.9079,
-      lng: 117.3162,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "naval-research-academy",
-      name: "Naval Research Academy",
-      aliases: [
+      "id": "naval-research-academy",
+      "name": "Naval Research Academy",
+      "aliases": [
         "PLA Navy Research Academy",
         "PLA Navy Equipment Academy",
         "Naval Equipment Academy",
-        "Naval Academy",
+        "Naval Academy"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.968,
-      lng: 116.345,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "naval-university-of-engineering",
-      name: "Naval University of Engineering",
-      aliases: ["Naval Engineering University", "NUE"],
-      country: "China",
-      city: "Wuhan",
-      lat: 30.5837,
-      lng: 114.2378,
-      parentOrg: null,
-      notes: null,
+      "id": "naval-university-of-engineering",
+      "name": "Naval University of Engineering",
+      "aliases": [
+        "Naval Engineering University",
+        "NUE"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "navy-aviation-university",
-      name: "Navy Aviation University",
-      aliases: [
+      "id": "navy-aviation-university",
+      "name": "Navy Aviation University",
+      "aliases": [
         "Naval Aviation University",
-        "Naval Aeronautics and Astronautics University",
+        "Naval Aeronautics and Astronautics University"
       ],
-      country: "China",
-      city: "Yantai",
-      lat: 37.5309,
-      lng: 121.4248,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "navy-logistics-academy",
-      name: "Navy Logistics Academy",
-      aliases: [],
-      country: "China",
-      city: "Tianjin",
-      lat: 39.154,
-      lng: 117.242,
-      parentOrg: null,
-      notes: null,
+      "id": "navy-logistics-academy",
+      "name": "Navy Logistics Academy",
+      "aliases": [],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "navy-medical-university",
-      name: "Navy Medical University",
-      aliases: ["Second Military Medical University"],
-      country: "China",
-      city: "Shanghai",
-      lat: 31.3075,
-      lng: 121.5231,
-      parentOrg: null,
-      notes: null,
+      "id": "navy-medical-university",
+      "name": "Navy Medical University",
+      "aliases": [
+        "Second Military Medical University"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "navy-submarine-academy",
-      name: "Navy Submarine Academy",
-      aliases: ["PLA Navy Submarine Academy"],
-      country: "China",
-      city: "Qingdao",
-      lat: 36.095,
-      lng: 120.441,
-      parentOrg: null,
-      notes: null,
+      "id": "navy-submarine-academy",
+      "name": "Navy Submarine Academy",
+      "aliases": [
+        "PLA Navy Submarine Academy"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "north-china-institute-of-aerospace-engineering",
-      name: "North China Institute of Aerospace Engineering",
-      aliases: ["NCIAE"],
-      country: "China",
-      city: "Langfang",
-      lat: 39.5267,
-      lng: 116.7266,
-      parentOrg: null,
-      notes: null,
+      "id": "north-china-institute-of-aerospace-engineering",
+      "name": "North China Institute of Aerospace Engineering",
+      "aliases": [
+        "NCIAE"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "north-university-of-china",
-      name: "North University of China",
-      aliases: ["NUC"],
-      country: "China",
-      city: "Taiyuan",
-      lat: 38.0149,
-      lng: 112.4423,
-      parentOrg: null,
-      notes: null,
+      "id": "north-university-of-china",
+      "name": "North University of China",
+      "aliases": [
+        "NUC"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "northwest-institute-of-nuclear-technology",
-      name: "Northwest Institute of Nuclear Technology",
-      aliases: [
+      "id": "northwest-institute-of-nuclear-technology",
+      "name": "Northwest Institute of Nuclear",
+      "aliases": [
         "NINT",
         "Institute of Northwest Nuclear Technology",
-        "Northwest Nuclear Technology",
+        "Northwest Nuclear Technology"
       ],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.3303,
-      lng: 109.1371,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "northwestern-polytechnical-university",
-      name: "Northwestern Polytechnical University",
-      aliases: [
+      "id": "northwestern-polytechnical-university",
+      "name": "Northwestern Polytechnical University",
+      "aliases": [
         "NWPU",
         "NPU",
         "Northwest Polytechnic University",
-        "Northwest Polytechnical University",
+        "Northwest Polytechnical University"
       ],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.2426,
-      lng: 108.9061,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "n",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== O =====
     {
-      id: "officers-college-of-the-pap",
-      name: "Officers College of the PAP",
-      aliases: [
+      "id": "officers-college-of-the-pap",
+      "name": "Officers College of the PAP",
+      "aliases": [
         "PAP Officers' College",
-        "People's Armed Police Officers' College",
+        "People's Armed Police Officers' College"
       ],
-      country: "China",
-      city: "Chengdu",
-      lat: 30.746,
-      lng: 103.956,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== P =====
-    {
-      id: "pap-nco-college",
-      name: "PAP NCO College",
-      aliases: ["People's Armed Police NCO College"],
-      country: "China",
-      city: "Hangzhou",
-      lat: 30.305,
-      lng: 120.218,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "o",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "pasteur-institute-of-iran",
-      name: "Pasteur Institute of Iran",
-      aliases: [
+      "id": "pap-nco-college",
+      "name": "PAP NCO College",
+      "aliases": [
+        "People's Armed Police NCO College"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "pasteur-institute-of-iran",
+      "name": "Pasteur Institute of Iran",
+      "aliases": [
         "Iranian Pasteur Institute",
         "Pasteur Institute",
         "Institute Pasteur of Iran",
         "Institute Pasteur",
-        "Institute de l'Iran",
+        "Institute de l'Iran"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.691,
-      lng: 51.3902,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "peac-institute-of-multiscale-science",
-      name: "Peac Institute of Multiscale Science",
-      aliases: [
+      "id": "peac-institute-of-multiscale-science",
+      "name": "Peac Institute of Multiscale Science",
+      "aliases": [
         "Peak Multiscale Science Institute",
-        "Peak Multi-Scale Scientific Research Institute",
+        "Peak Multi-Scale Scientific Research Institute"
       ],
-      country: "China",
-      city: "Mianyang",
-      lat: 31.528,
-      lng: 104.754,
-      parentOrg: "chinese-academy-of-engineering-physics",
-      notes: "Also listed as standalone entity; CAEP subsidiary",
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "peoples-armed-police-command-college",
-      name: "People's Armed Police Command College",
-      aliases: [
+      "id": "peoples-armed-police-command-college",
+      "name": "People's Armed Police Command College",
+      "aliases": [
         "PAP Command College",
         "The People's Armed Police College China",
-        "The Chinese People's Armed Police Forces Academy",
+        "The Chinese People's Armed Police Forces Academy"
       ],
-      country: "China",
-      city: "Tianjin",
-      lat: 39.1459,
-      lng: 117.2518,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "peoples-public-security-university-of-china",
-      name: "People's Public Security University of China",
-      aliases: [
+      "id": "peoples-public-security-university-of-china",
+      "name": "People's Public Security University of China",
+      "aliases": [
         "Chinese People Public Security University",
-        "PPUSC",
+        "PPUSC"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.8991,
-      lng: 116.3315,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "physics-research-center-iran",
-      name: "Physics Research Center",
-      aliases: [
+      "id": "physics-research-center-iran",
+      "name": "Physics Research Center",
+      "aliases": [
         "PHRC",
         "Physics Research Centre",
-        "Physic Research Center",
+        "Physic Research Center"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.7731,
-      lng: 51.4978,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "p",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== R =====
     {
-      id: "railway-police-college",
-      name: "Railway Police College",
-      aliases: [
+      "id": "railway-police-college",
+      "name": "Railway Police College",
+      "aliases": [
         "Ministry of Public Security Railway Police College",
-        "MPS Railway Police College",
+        "MPS Railway Police College"
       ],
-      country: "China",
-      city: "Zhengzhou",
-      lat: 34.7901,
-      lng: 113.6454,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "r",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "rocket-force-command-college",
-      name: "Rocket Force Command College",
-      aliases: [
+      "id": "rocket-force-command-college",
+      "name": "Rocket Force Command College",
+      "aliases": [
         "SMF Command College",
-        "Strategic Missile Force Command College",
+        "Strategic Missile Force Command College"
       ],
-      country: "China",
-      city: "Wuhan",
-      lat: 30.6288,
-      lng: 114.2985,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "r",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "rocket-force-research-institute",
-      name: "Rocket Force Research Institute",
-      aliases: [
+      "id": "rocket-force-research-institute",
+      "name": "Rocket Force Research Institute",
+      "aliases": [
         "Second Artillery Equipment Academy",
-        "Rocket Force Equipment Academy",
+        "Rocket Force Equipment Academy"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 39.985,
-      lng: 116.356,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "r",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "rocket-force-sergeant-school",
-      name: "Rocket Force Sergeant School",
-      aliases: [
+      "id": "rocket-force-sergeant-school",
+      "name": "Rocket Force Sergeant School",
+      "aliases": [
         "PLA Rocket Force NCO College",
         "Rocket Force Sergeancy School",
         "Rocket Force Sergeant School of the PLA",
         "PLA Rocket Force Academy",
         "Rocket Force NCO College",
-        "Rocket Sergeant School",
+        "Rocket Sergeant School"
       ],
-      country: "China",
-      city: "Qingzhou",
-      lat: 36.683,
-      lng: 118.465,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "r",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "rocket-force-university-of-engineering",
-      name: "Rocket Force University of Engineering",
-      aliases: [
+      "id": "rocket-force-university-of-engineering",
+      "name": "Rocket Force University of Engineering",
+      "aliases": [
         "Rocket Force Engineering University",
         "RFUE",
         "RFEU",
         "Xi'an Research Institute of High Technology",
-        "Xi'an Research Institute of High-Tech",
+        "Xi'an Research Institute of High-Tech"
       ],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.312,
-      lng: 109.1244,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "r",
+      "aliasProvenance": "Official source alias paragraph"
     },
-
-    // ===== S =====
     {
-      id: "shahid-beheshti-university",
-      name: "Shahid Beheshti University",
-      aliases: [
+      "id": "shahid-beheshti-university",
+      "name": "Shahid Beheshti University",
+      "aliases": [
         "SBU",
         "Martyr Baheshti University",
         "University of Shahid Beheshti",
@@ -1493,164 +1122,146 @@ const nroData = {
         "Shaheed Beheshti University",
         "Beheshti University",
         "Shahid Martyr Beheshti University",
-        "National (Shahid Beheshti) University",
+        "National (Shahid Beheshti) University"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.8022,
-      lng: 51.3933,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "s",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "shahid-sattari-air-force-university",
-      name: "Shahid Sattari Air Force University",
-      aliases: [
+      "id": "shahid-sattari-air-force-university",
+      "name": "Shahid Sattari Air Force University",
+      "aliases": [
         "Shahid Sattari Air Academy",
-        "Shahid Sattari Academy for Air Sciences and Technology",
+        "Shahid Sattari Academy for Air Sciences and Technology"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.673,
-      lng: 51.333,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "s",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "sharif-university-of-technology",
-      name: "Sharif University of Technology",
-      aliases: [
+      "id": "sharif-university-of-technology",
+      "name": "Sharif University of Technology",
+      "aliases": [
         "Arya-Mehr University of Technology",
         "SHFT",
-        "SUT",
-        "Sharif Technical University",
+        "SUT: Sharif Technical University"
       ],
-      country: "Iran",
-      city: "Tehran",
-      lat: 35.7018,
-      lng: 51.3514,
-      parentOrg: null,
-      notes: null,
+      "country": "Iran",
+      "sourceId": "nro",
+      "sourceAnchor": "s",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "sichuan-university",
-      name: "Sichuan University",
-      aliases: ["SCU"],
-      country: "China",
-      city: "Chengdu",
-      lat: 30.6335,
-      lng: 104.0816,
-      parentOrg: null,
-      notes: null,
+      "id": "sichuan-university",
+      "name": "Sichuan University",
+      "aliases": [
+        "SCU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "s",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "space-engineering-university",
-      name: "Space Engineering University",
-      aliases: [
+      "id": "space-engineering-university",
+      "name": "Space Engineering University",
+      "aliases": [
         "PLA Equipment Academy",
         "Aerospace Engineering University",
         "A/SEU",
-        "PLA Equipment Command and Technology Academy",
+        "PLA Equipment Command and Technology Academy"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 40.3556,
-      lng: 116.6583,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== T =====
-    {
-      id: "tianjin-university",
-      name: "Tianjin University",
-      aliases: ["TJU"],
-      country: "China",
-      city: "Tianjin",
-      lat: 39.1088,
-      lng: 117.1647,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== U =====
-    {
-      id: "university-of-electronic-science-and-technology-of-china",
-      name: "University of Electronic Science and Technology of China",
-      aliases: ["UESTC"],
-      country: "China",
-      city: "Chengdu",
-      lat: 30.7534,
-      lng: 103.9294,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "s",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "university-of-international-relations",
-      name: "University of International Relations",
-      aliases: [
+      "id": "tianjin-university",
+      "name": "Tianjin University",
+      "aliases": [
+        "TJU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "t",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "university-of-electronic-science-and-technology-of-china",
+      "name": "University of Electronic Science and Technology of China",
+      "aliases": [
+        "UESTC"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "u",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "university-of-international-relations",
+      "name": "University of International Relations",
+      "aliases": [
         "UIR",
-        "Institute of International Politics",
+        "Institute of International Politics"
       ],
-      country: "China",
-      city: "Beijing",
-      lat: 40.0025,
-      lng: 116.2799,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== X =====
-    {
-      id: "xian-technological-university",
-      name: "Xi'an Technological University",
-      aliases: ["XATU"],
-      country: "China",
-      city: "Xi'an",
-      lat: 34.3809,
-      lng: 108.9813,
-      parentOrg: null,
-      notes: null,
-    },
-
-    // ===== # (Numbered) =====
-    {
-      id: "27th-scientific-center-russian-mod",
-      name: "27th Scientific Center of the Russian Ministry of Defense",
-      aliases: ["27th NTs"],
-      country: "Russia",
-      city: "Moscow",
-      lat: 55.7657,
-      lng: 37.6795,
-      parentOrg: null,
-      notes: null,
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "u",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "33rd-scientific-research-and-testing-institute",
-      name: "33rd Scientific Research and Testing Institute",
-      aliases: ["33rd TsNII"],
-      country: "Russia",
-      city: "Moscow",
-      lat: 52.1165,
-      lng: 47.2047,
-      parentOrg: null,
-      notes: null,
+      "id": "xian-technological-university",
+      "name": "Xi'an Technological University",
+      "aliases": [
+        "XATU"
+      ],
+      "country": "People’s Republic of China",
+      "sourceId": "nro",
+      "sourceAnchor": "x",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "46th-tsnii-central-scientific-research-institute",
-      name: "46th TSNII Central Scientific Research Institute",
-      aliases: ["48 TsNII", "46 TsNII MO RF"],
-      country: "Russia",
-      city: "Moscow",
-      lat: 55.872,
-      lng: 37.664,
-      parentOrg: null,
-      notes: null,
+      "id": "27th-scientific-center-russian-mod",
+      "name": "27th Scientific Center of the Russian Ministry of Defense",
+      "aliases": [
+        "27th NTs"
+      ],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "#",
+      "aliasProvenance": "Official source alias paragraph"
     },
     {
-      id: "48th-central-scientific-research-institute",
-      name: "48th Central Scientific Research Institute",
-      aliases: [
+      "id": "33rd-scientific-research-and-testing-institute",
+      "name": "33rd Scientific Research and Testing Institute",
+      "aliases": [
+        "33rd TsNII"
+      ],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "#",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "46th-tsnii-central-scientific-research-institute",
+      "name": "46th TSNII Central Scientific Research Institute",
+      "aliases": [
+        "48 TsNII",
+        "46 TsNII MO RF"
+      ],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "#",
+      "aliasProvenance": "Official source alias paragraph"
+    },
+    {
+      "id": "48th-central-scientific-research-institute",
+      "name": "48th Central Scientific Research Institute",
+      "aliases": [
         "48th TsNII Sergiev Posad",
         "Zargorsk Institute",
         "Scientific Research Institute of Medicine",
@@ -1660,17 +1271,13 @@ const nroData = {
         "Center for Military Technical Problems of Biological Defense",
         "48th TsNII Kirov",
         "Scientific Research Institute of Microbiology",
-        "Scientific Research Institute of Epidemiology and Hygiene",
+        "Scientific Research Institute of Epidemiology and Hygiene"
       ],
-      country: "Russia",
-      city: "Sergiev Posad",
-      lat: 56.2575,
-      lng: 38.115,
-      parentOrg: null,
-      notes:
-        "Biological defense research institute with facilities in Sergiev Posad, Yekaterinburg, and Kirov",
-    },
-  ],
+      "country": "Russia",
+      "sourceId": "nro",
+      "sourceAnchor": "#",
+      "aliasProvenance": "Official source alias paragraph"
+    }
+  ]
 };
-
 export default nroData;
