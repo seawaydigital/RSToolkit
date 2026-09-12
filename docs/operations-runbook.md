@@ -50,6 +50,8 @@ Rehearsal: build the containment artifact, verify all tool routes are disabled w
 
 ## Sustainable review
 
+RC2 visual tools: follow [visual-tools-restoration.md](visual-tools-restoration.md) for location provenance and explicit review of candidate snapshots. The map review deadline is separate from the official NRO-list review. Missing sources stay unmapped. Never copy geocoder candidates into production automatically or revive legacy coordinates. At staging, verify that local use has no external requests, each opt-in works and revocation stops new requests. Provider tests in CI use fixtures; do not run automated pan/zoom or bulk downloads against live OpenStreetMap tiles. Review provider terms before release or a provider change. The CSP permits en.wikipedia.org connections and tile.openstreetmap.org images only for these features.
+
 Andrew reviews reports promptly when available, checks source availability and dependencies weekly, and reviews consequential content at least monthly and immediately when a material official change is identified. This is an operating plan, not a promised response-time service level. Dependabot proposes dependency/action updates; its proposals still need verification.
 
 The first source review deadline is 12 October 2026. Before extending it, compare actual official definitions, program scope, dates, forms and lists. Keep a change log and test the relevant counterexamples. Reconcile data into artifacts before changing bundled records.

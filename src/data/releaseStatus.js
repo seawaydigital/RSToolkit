@@ -3,7 +3,7 @@
 const containment = import.meta.env.VITE_CONTAINMENT === '1';
 export const releaseStatus = {
   containment,
-  version: '0.1.0-rc.1',
+  version: '0.1.0-rc.2',
   stage: 'Release candidate',
   disabledTools: [...['dual-use', 'travel-security', 'report-concern'], ...(containment ? ['tri-agency-guide', 'nsgrp-flowchart', 'strac-flowchart', 'ontario-flowchart', 'stra-lookup', 'nro-lookup', 'risk-checklist', 'risk-mitigation', 'export-control', 'glossary', 'faq', 'cybersecurity-guide'] : [])],
   operator: 'Andrew Austin at Lakehead University',

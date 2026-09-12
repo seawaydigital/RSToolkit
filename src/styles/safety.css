@@ -50,6 +50,44 @@ summary { cursor: pointer; font-weight: 600; min-height: 44px; padding: 8px 0; }
 .guided-card-label { font-family: var(--font-serif); }
 .guided-card-desc { white-space: normal; }
 .full-flow .review-card { border-left: 3px solid var(--accent-soft); }
+.flowchart-toggle { flex-wrap: wrap; }
+.diagram-viewport { height: 620px; max-height: 75vh; overflow: auto; border: 1px solid var(--border-strong); border-radius: var(--radius); background: #101e18; cursor: grab; touch-action: pan-x pan-y; }
+.diagram-canvas { position: relative; transform-origin: top left; }
+.diagram-canvas svg { position: absolute; inset: 0; }
+.diagram-shape { fill: #1b3428; stroke: #90b6a2; stroke-width: 2; }
+.diagram-shape--decision { fill: #302a19; stroke: #d9bc78; }
+.diagram-shape--start, .diagram-shape--end { fill: #193d38; stroke: #8bc7bd; }
+.diagram-shape.is-selected { stroke: #ffb7a0; stroke-width: 4; }
+.diagram-edge { color: #b0cbbb; }
+.diagram-edge path { stroke: currentColor; stroke-width: 2; fill: none; }
+.diagram-edge rect { fill: #243e31; stroke: #6e9380; }
+.diagram-edge text { fill: #f5eee4; font: 600 14px var(--font-sans); }
+.tool-page .diagram-node, .tool-page .diagram-node:hover { position: absolute; display: flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 12px; background: transparent; color: #fff6ed; font: 600 14px/22px var(--font-sans); text-align: center; cursor: pointer; }
+.diagram-node-line { display: block; }
+.diagram-toolbar { align-items: center; }
+.diagram-detail ul { list-style: none; padding-left: 0; }
+.diagram-detail li button { text-align: left; }
+.nro-map-section { margin: 30px 0; border-block: 1px solid var(--border-strong); padding: 26px 0; }
+.tool-page .nro-map-canvas { height: 510px; width: 100%; background: #10261f; border: 1px solid var(--border-strong); border-radius: var(--radius); z-index: 0; }
+.map-coverage { padding: 12px 16px; border-left: 3px solid var(--accent-soft); background: var(--bg-tertiary); }
+.map-pin { display: block; width: 18px; height: 18px; margin: 3px; border: 2px solid #fff; border-radius: 50%; background: #b64c32; box-shadow: 0 1px 5px #0009; }
+.map-pin--comparison { background: #f3cf76; border-color: #25342d; border-radius: 3px; transform: rotate(45deg); }
+.map-marker:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.map-legend { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 13px; }
+.legend-dot { width: 14px; height: 14px; border-radius: 50%; background: #b64c32; border: 2px solid white; }
+.legend-dot--comparison { background: #f3cf76; border-radius: 2px; }
+.tool-page .leaflet-container a { color: #174d35; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #fffdf7; color: #202922; }
+.leaflet-popup-content { font: 14px/1.5 var(--font-sans); overflow-wrap: anywhere; }
+.leaflet-control-attribution { max-width: 270px; }
+.leaflet-tooltip { color: #182e23; background: #fffdf7; }
+.location-controls .location-form { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
+.location-controls input:not([type=checkbox]):not([type=radio]) { width: 100%; min-height: 44px; padding: 10px; border: 1px solid var(--border-strong); border-radius: 6px; color: var(--text-primary); background: var(--bg-tertiary); font: inherit; }
+.location-controls form button { margin-top: 12px; }
+.location-confirmation { border-left: 3px solid var(--gold); padding: 16px; background: var(--bg-tertiary); }
+.distance-list li, .map-location-list li { padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+.distance-list button, .map-location-list button { margin: 8px 0 8px 8px; }
+@media (max-width: 640px) { .location-controls .location-form { grid-template-columns: 1fr; } .tool-page .nro-map-canvas { height: 420px; } .diagram-viewport { height: 520px; } }
 .native-dialog { position: fixed; inset: 0; margin: auto; padding: 24px; width: min(620px, calc(100vw - 32px)); max-height: min(85vh, 760px); overflow-y: auto; border: 1px solid var(--border-strong); border-radius: var(--radius-lg); color: var(--text-primary); background: var(--bg-secondary); }
 .native-dialog::backdrop { background: rgb(0 0 0 / 75%); }
 .dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }

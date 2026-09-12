@@ -1,6 +1,6 @@
 # Launch closure record
 
-Candidate: 0.1.0-rc.1. Content: 2026-09-12.1. Prepared 12 September 2026.
+Candidate: 0.1.0-rc.2. Content: 2026-09-12.1. Prepared 12 September 2026.
 Operator confirmed by the user: Andrew Austin at Lakehead University.
 Contact confirmed by the user: security.research@lakeheadu.ca.
 Implementation/source reviewer: Codex, with self-review and automated verification. No outside specialist, institutional endorsement or independent certification is asserted.
@@ -13,7 +13,7 @@ The audit baseline was 9fa4db4. Implementation began in commit 16dad66 on codex/
 
 The launch exposes the 12 tools from the agreed plan plus About. The master-only dual-use, travel-security and report-concern tools are preserved but disabled, omitted from navigation and absent from built chunks. Their original content/classifier was not validated by this project. Their routes return a clear unavailable state. This is an explicit scope difference from newer master, not an accidental merge omission.
 
-The prior map, proximity inference and geocoding are removed. The old STRA classifier is replaced, not validated. The dark forest/copper visual system of the audited checkout is retained; master’s later visual redesign is not silently represented as tested in this candidate.
+The owner explicitly approved restoring visual flowcharts and the NRO map after RC1. RC2 provides diagrams from corrected shared policy branches and a new attributed location snapshot, with local defaults, campus confirmation and separate optional Wikipedia/OSM consent. Geographic risk inference and the legacy coordinates remain unvalidated and absent. See visual-tools-restoration.md for evidence and limits. The old STRA classifier is replaced, not validated. The dark forest/copper visual system of the audited checkout is retained.
 
 ## Findings
 
@@ -29,11 +29,11 @@ The prior map, proximity inference and geocoding are removed. The old STRA class
 | B06 | Weak password-ZIP recipe removed; managed procedures and exact Apple instructions linked | Replaced; no claim of a tested physical Mac procedure |
 | B07 | Universal residency/retention claims removed; institution/ethics/account/community context and First Nations-specific OCAP attribution | Resolved for scope |
 | B08 | Likelihood wizard deleted from active source; official category explorer and explicit user assessment | Replaced; 11 categories/74 named subcategories reconciled |
-| B09 | 103 official entries/252 aliases, source anchors/hash, exact/alias/candidate distinctions, no proximity inference | Resolved for scope; no historical list archive or relationship verification |
-| B10 | Map/popup HTML sinks and dependencies removed; React text/native controls retained | Removed; inert-query and CSP browser checks |
-| B11 | External geocoders, tiles, analytics and remote fonts absent from active build | Removed; network observations and nonempty bundle scan |
+| B09 | 103 official entries/252 aliases, source anchors/hash, exact/alias/candidate distinctions; 55 separately sourced points for 54 entries | Resolved for scope; 49 unmapped; no historical list archive, campus-boundary or relationship verification |
+| B10 | Restored map uses DOM textContent for popups/tooltips; remote responses are validated and fixed-host source links constructed | Replaced; malicious-label, malformed-response and CSP browser checks |
+| B11 | Bundled overview/local comparisons; Wikipedia search and OSM tiles off by default with separate opt-ins, revocation and no fallback | Replaced; external disclosure remains explicit and optional; no analytics or remote fonts |
 | B12 | Unique blank worksheets, explicit resume/undo/clear, validated opt-in persistence, unknown/unanswered/risk counts | Resolved for scope; unencrypted browser storage remains opt-in |
-| B13 | Native dialog/controls, explicit focus containment/restoration, keyboard flow/menu/radios, source/link contrast and reflow | Technical checks implemented; final results below; owner assistive-technology acceptance open |
+| B13 | Native dialog/controls and diagram step buttons, complete text alternatives, keyboard flow/map/source-list controls, contrast and reflow | Technical checks below; equivalent large text controls for overlapping map pins; owner assistive-technology acceptance open |
 | R01 | Source register, 107 attributed content/path records, dated rule matrix, review deadline, overdue/visibility safeguards, disable/containment controls | Implemented; owner must maintain or withdraw |
 | R02 | Separate Lakehead/general context and verified public research/RDM/IT/REB links | Resolved for scope; links do not imply institutional approval |
 | R03 | Neutral worksheet prompts, evidence/identity verification, mistaken-name and proportionality guidance; demographic/geographic scoring absent | Resolved for scope |
@@ -50,17 +50,17 @@ The prior map, proximity inference and geocoding are removed. The old STRA class
 ## Verification evidence
 
 - Clean npm ci under Node 24.21.0 completed; dependency audit reported zero vulnerabilities. Advisory results are point-in-time dependency evidence, not a security certificate.
-- Lint, 28 policy/state/search unit tests, data checks and production build pass.
+- Lint, 37 policy/state/search/diagram/geography unit tests, data checks and production build pass. RC2 adds nine unit cases and 30 browser cases for restored visual tools.
 - 21 source records; 76 reference/worksheet items plus 31 path records in claim-register.json.
 - Official STRA name reconciliation: zero missing/extra among 74 named subcategories. NRO data reconciliation and source hashes are described in policy-rule-matrix.md.
 - Source availability: 20 direct HTTP 200 responses; FNIGC bot-protection 403 documented with official-page content inspection through the research browser. See evidence/source-availability-2026-09-12.json.
-- The full browser suite passed 87/87 cases across Chromium, Firefox and WebKit. After the final narrow-screen header and menu-focus fixes, all 45 affected accessibility, reflow and keyboard cases passed again across those engines. CI runs the complete suite for the proposed revision.
-- Dedicated containment: 3/3 browser-engine checks passed. A separate local containment build is retained under artifacts/containment.
+- RC1 passed 87/87 browser cases across Chromium, Firefox and WebKit. RC2's first expanded run passed 114/117; the three failures exposed a test assumption that BUAA returned one record, when it correctly includes an exact alias plus a separately labelled possible candidate. The print assertion was corrected to require both. All 45 affected visual, print, map, policy-history and accessibility cases passed after the final changes. CI runs the complete 117-case suite for the proposed revision; use that revision's verify result before promotion.
+- Dedicated containment: 3/3 browser-engine checks passed again for RC2. Its separate local build is retained under artifacts/containment-rc2; the RC1 fallback remains under artifacts/containment. The normal candidate was rebuilt after the rehearsal.
 - PDF inspection: A4 and Letter mitigation guides and a Letter worksheet were rendered; sampled pages were inspected for completeness, source/version metadata, visible unanswered states, grayscale legibility and clipping. Focus outlines in print and split worksheet blocks were corrected. Native PDF tagging/reader order is not certified.
 - Production headers were read after enabling HTTPS. The HTTP redirect works. The existing Pages site still lacks the required custom response headers; the production checker correctly fails it.
 - Repository master protection was read back: strict required verify status, enforce_admins enabled, force pushes/deletion disabled. Dependabot security fixes, secret scanning and push protection are enabled. Account MFA/recovery and registrar domain-verification state were not established from the available API responses.
-- The browser skill’s native bridge failed initialization on this device. Reproducible Playwright tests and rendered artifacts provided browser verification instead.
-- No actual grant, confidential query, personal allegation, external message or public deployment was performed.
+- The preferred browser skill bridge failed initialization on this device. Reproducible Playwright tests and rendered artifacts supplied regression evidence; the available CUA fallback also verified the visible RC2 map, a live public Wikipedia search and a confirmed library-to-NRO distance comparison. Automated OSM tile tests use fixtures, with real-provider street-detail acceptance reserved for release. Letter flowchart and filtered-map PDFs were rendered and sampled for metadata, complete source records and clipping.
+- No actual grant, confidential query, personal allegation, external message or public deployment was performed. Live source maintenance and the single public-institution search used public information only.
 
 ## Known limits and remaining owner release steps
 

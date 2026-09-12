@@ -6,7 +6,7 @@ const files = await readdir('dist/assets');
 const assetFiles = files.filter(f => /\.(js|css)$/.test(f));
 assert(assetFiles.length > 10, 'Build scan did not find the expected assets');
 const text = (await Promise.all(assetFiles.map(f => readFile('dist/assets/' + f, 'utf8')))).join('\n');
-for (const value of ['nominatim.openstreetmap.org', 'photon.komoot.io', 'fonts.googleapis.com', 'fonts.gstatic.com', 'basemaps.cartocdn.com', 'api.mapbox.com', 'en.wikipedia.org/w/api.php']) assert(!text.includes(value), 'Unexpected remote provider: ' + value);
+for (const value of ['nominatim.openstreetmap.org', 'photon.komoot.io', 'fonts.googleapis.com', 'fonts.gstatic.com', 'basemaps.cartocdn.com', 'api.mapbox.com', 'server.arcgisonline.com']) assert(!text.includes(value), 'Unexpected remote provider: ' + value);
 assert(!files.some(f => /DualUseGuide|TravelSecurity|ReportConcern|straWizard/.test(f)), 'Excluded tool in build');
 const html = await readFile('dist/index.html', 'utf8');
 const page = load(html);

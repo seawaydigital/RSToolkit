@@ -1,6 +1,6 @@
 # Deployment and maintenance handoff
 
-The earlier map-based handoff is superseded for this candidate.
+The earlier map-based handoff is superseded. RC2 restores visual diagrams and a newly sourced map under the safeguards in [visual-tools-restoration.md](docs/visual-tools-restoration.md); legacy map coordinates and assumptions remain unvalidated.
 
 Start with [README](README.md), the [operations runbook](docs/operations-runbook.md), [closure record](docs/launch-closure-record.md) and [owner acceptance script](docs/owner-acceptance.md).
 

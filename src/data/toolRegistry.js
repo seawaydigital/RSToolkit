@@ -58,10 +58,10 @@ const categoryDefinitions = [
       },
       {
         id: 'nro-lookup',
-        name: 'NRO Name Lookup',
+        name: 'NRO Lookup and Map',
         slug: 'nro-lookup',
-        description: 'Search the local official-name and alias snapshot; a result does not establish a relationship',
-        tags: ['nro', 'organizations', 'search', 'organisations de recherche nommées', 'ORN'],
+        description: 'Search official names and explore sourced locations with approximate distance comparisons',
+        tags: ['nro', 'organizations', 'search', 'map', 'locations', 'organisations de recherche nommées', 'ORN'],
         related: ['strac-flowchart', 'stra-lookup'],
       },
       {

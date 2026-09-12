@@ -3,6 +3,8 @@
 Updated: 12 September 2026. Current application baseline: `9fa4db4`.
 Execution update: the plan has been implemented as candidate 0.1.0-rc.1 on codex/launch-safety, integrated with master 3a44e38. The historical checkboxes below describe the approved plan, not current completion evidence. Use [launch-closure-record.md](launch-closure-record.md) for actual results, exclusions and remaining owner/hosting steps.
 
+Owner-approved amendment, 12 September 2026: RC2 restores interactive flowcharts and geographic context with new attributed approximate points, explicit campus confirmation, local defaults and separate external-service opt-ins. This supersedes the map-removal scope below. It does not reinstate geographic risk inference or validate legacy coordinates. See [visual-tools-restoration.md](visual-tools-restoration.md).
+
 **Objective:** you and I will address all 25 findings in the [safety review](launch-safety-review.md) and prepare a tested public release with claims and features that the available evidence supports.
 
 This supersedes the [10 September implementation plan](launch-remediation-plan.md). No outside reviewer, consultant, institutional committee, translation service or user-recruitment exercise is a prerequisite in this plan. The old staffing assumptions and 26–43-day estimate do not apply. The sections below preserve the plan as approved; the execution update and closure record above describe subsequent implementation.

@@ -131,7 +131,7 @@ test('unknown route and missing lazy chunk offer explicit recovery', async ({ pa
  await go(page, 'not-a-tool'); await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
  await page.route('**/assets/NroLookup-*.js', route => route.abort());
  await go(page, '');
- await page.getByRole('button', { name: /NRO Name Lookup/ }).first().click();
+ await page.getByRole('button', { name: /NRO Lookup and Map/ }).first().click();
  await expect(page.getByRole('heading', { name: 'Something went wrong' })).toBeVisible();
  await expect(page.getByRole('link', { name: 'Official research-security resources' })).toBeVisible();
  await page.getByRole('button', { name: 'Go Home', exact: true }).click();
@@ -159,8 +159,13 @@ test('browser blocks inline script injection under the real candidate CSP', asyn
 for (const route of routes) test('accessible and reflowing route: ' + (route || 'home'), async ({ page, browserName }) => {
  await go(page, route);
  for (const summary of await page.locator('.screen-only details > summary').all()) await summary.click();
- const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
+ const scan = new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']);
+ // Only spatial pins use the equivalent-target exception; all other marker
+ // rules and all text-list control sizes are still checked (ACCESSIBILITY.md).
+ if (route === 'nro-lookup') scan.disableRules(['target-size']);
+ const result = await scan.analyze();
  expect(result.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => n.target) }))).toEqual([]);
+ if (route === 'nro-lookup') expect((await new AxeBuilder({ page }).withRules(['target-size']).exclude('.leaflet-marker-icon').analyze()).violations).toEqual([]);
  await page.setViewportSize({ width: 320, height: 900 });
  await expect(page.locator('#tool-navigation')).toHaveAttribute('inert', '');
  expect(await page.locator('.topbar').evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);

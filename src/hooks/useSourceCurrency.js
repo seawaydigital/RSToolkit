@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { sourcesCurrent } from '../data/policySources';
-export function useSourceCurrency(ids) {
+export function useSourceCurrency(ids, extraDeadline) {
  const [now, setNow] = useState(() => new Date());
  useEffect(() => {
   const refresh = () => setNow(new Date());
@@ -8,5 +8,5 @@ export function useSourceCurrency(ids) {
   document.addEventListener('visibilitychange', refresh);
   return () => { window.clearInterval(timer); document.removeEventListener('visibilitychange', refresh); };
  }, []);
- return sourcesCurrent(ids, now);
+ return sourcesCurrent(ids, now) && (!extraDeadline || now <= new Date(extraDeadline + 'T23:59:59Z'));
 }

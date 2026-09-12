@@ -2,7 +2,7 @@
 
 A static, English-language reference and preparation resource for Canadian researchers and research security professionals. Operator: Andrew Austin at Lakehead University. Contact: security.research@lakeheadu.ca. Institutional links and the operator's affiliation do not assert formal endorsement.
 
-**Release candidate 0.1.0-rc.1.** This branch implements the [two-person launch plan](docs/two-person-launch-plan.md). See the [closure record](docs/launch-closure-record.md) for evidence and remaining release decisions. The live rs.rdmtoolkit.ca site is separate from this unpromoted candidate.
+**Release candidate 0.1.0-rc.2.** This branch implements the [two-person launch plan](docs/two-person-launch-plan.md), including the owner's approved restoration of visual flowcharts and sourced geographic context. See the [closure record](docs/launch-closure-record.md) for evidence and remaining release decisions. The live rs.rdmtoolkit.ca site is separate from this unpromoted candidate.
 
 ## Scope
 
@@ -11,7 +11,9 @@ Twelve tools cover selected federal and Ontario requirements, official NRO names
 - NRO: 103 official organization entries, 252 aliases; exact names, aliases and possible candidates are labelled separately.
 - STRA: 11 categories, 74 named subcategories and one explicitly labelled category overview. User assessment replaces the old likelihood classifier.
 - Worksheets are temporary unless explicitly saved to this browser. A new worksheet starts blank; resume is explicit and version-validated.
-- Search runs locally. No map, geocoder, analytics or remote fonts are used. Hosting access logs and external links still have their own privacy implications.
+- All three policy flowcharts offer an interactive box-and-arrow Full View, Guided Mode and a complete Text View, using the same corrected branches.
+- The bundled NRO overview has 55 source points for 54 of 103 entries. The other 49 remain searchable but unmapped. Rounded straight-line distances cover mapped sites only and do not establish affiliation or risk. See [map provenance and safeguards](docs/visual-tools-restoration.md).
+- NRO name/category lookups and coordinate entry work locally. Optional Wikipedia place search and OpenStreetMap street tiles each require a separate opt-in. No analytics or remote fonts are used. Hosting access logs and external links still have their own privacy implications.
 - dual-use, travel-security and report-concern, added on newer master after the audit baseline, are preserved in source but unavailable in this bounded release.
 
 ## Develop and verify

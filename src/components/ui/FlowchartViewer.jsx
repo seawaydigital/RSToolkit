@@ -1,5 +1,7 @@
 import FlowchartFullView from './FlowchartFullView';
 import FlowchartGuidedMode from './FlowchartGuidedMode';
+import FlowchartDiagram from './FlowchartDiagram';
+import PrintMeta from './PrintMeta';
 import SourceNote from './SourceNote';
 import SupportLinks from './SupportLinks';
 import { useAssessment } from '../../state/useAssessment';
@@ -14,16 +16,18 @@ export default function FlowchartViewer({ data, onNavigate }) {
   const flow = compatible ? saved : { mode: 'guided', history: ['start'], version: data.contentVersion };
   function change(patch) { update({ flows: { ...state.flows, [data.id]: { ...flow, ...patch } } }); }
   return <div>
+    <PrintMeta />
     <SourceNote ids={data.sourceIds} />
     <p className="notice">Your answers guide a policy-specific preparation path. They do not establish funding approval or overall compliance.</p>
     {saved && !compatible && <p role="status">The previous path used different content or invalid steps. Start this version again.</p>}
     {!current ? <p className="notice" role="status">This walkthrough is awaiting source review. Use the official instructions above; definitive toolkit outcomes are unavailable.</p> :
       <>
-        <div className="flowchart-toggle" aria-label="Walkthrough display">
+        <div className="flowchart-toggle screen-only" aria-label="Walkthrough display">
           <button className={'flowchart-toggle-btn ' + (flow.mode === 'guided' ? 'flowchart-toggle-btn--active' : '')} aria-pressed={flow.mode === 'guided'} onClick={() => change({ mode: 'guided' })}>Guided Mode</button>
           <button className={'flowchart-toggle-btn ' + (flow.mode === 'full' ? 'flowchart-toggle-btn--active' : '')} aria-pressed={flow.mode === 'full'} onClick={() => change({ mode: 'full' })}>Full View</button>
+          <button className={'flowchart-toggle-btn ' + (flow.mode === 'text' ? 'flowchart-toggle-btn--active' : '')} aria-pressed={flow.mode === 'text'} onClick={() => change({ mode: 'text' })}>Text View</button>
         </div>
-        {flow.mode === 'full' ? <FlowchartFullView data={data} onNavigate={onNavigate} /> :
+        {flow.mode === 'full' ? <><FlowchartDiagram data={data} onNavigate={onNavigate} /><div className="print-only"><FlowchartFullView data={data} onNavigate={onNavigate} /></div></> : flow.mode === 'text' ? <FlowchartFullView data={data} onNavigate={onNavigate} /> :
           <FlowchartGuidedMode data={data} history={flow.history} setHistory={history => change({ history })} onNavigate={onNavigate} />}
       </>}
     <SupportLinks />
