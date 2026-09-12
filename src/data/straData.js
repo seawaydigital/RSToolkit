@@ -5,11 +5,8 @@
  */
 
 export const straData = {
-  // Verified 2026-09-02 against the federal STRA page (dateModified 2026-07-30):
-  // 11 categories and all 74 subcategories match. The one extra subcategory in
-  // this file ("Advanced Weapons") is a UI placeholder — that category has no
-  // subdivisions on the federal list, and an empty category renders badly.
-  lastUpdated: "2026-07-30",
+  verifiedOn: "2026-09-12",
+  descriptionStatus: "Toolkit summaries and keyword aids; consult official definitions",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas",
   categories: [
@@ -493,7 +490,7 @@ export const straData = {
         },
         {
           id: "magnetic-field-sensors",
-          name: "Magnetic Field Sensors (Magnetometers)",
+          name: "Magnetic field sensors (or magnetometers)",
           description:
             "Sensors detecting or measuring changes in magnetic fields, their intensity or direction.",
           keywords: [
@@ -505,7 +502,7 @@ export const straData = {
         },
         {
           id: "mems-nems",
-          name: "Micro/Nano Electro-Mechanical Systems (M/NEMS)",
+          name: "Micro (or nano) electro-mechanical systems (M/NEMS)",
           description:
             "Miniaturized, lightweight electro-mechanical devices integrating mechanical and electrical functionality at microscopic or nano level.",
           keywords: [
@@ -580,7 +577,8 @@ export const straData = {
       subcategories: [
         {
           id: "advanced-weapons-general",
-          name: "Advanced Weapons",
+          name: "Advanced Weapons category overview",
+          kind: "category-overview",
           description:
             "Directed energy weapons, hypersonic weapons, autonomous weapons and enhancements enabled by nanotechnology, synthetic biology and AI.",
           keywords: [

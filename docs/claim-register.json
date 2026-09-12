@@ -1,0 +1,2677 @@
+{
+  "contentVersion": "2026-09-12.1",
+  "reviewer": "Codex, official-source comparison and self-review; no independent certification",
+  "interpretation": "This is a content inventory. Scenario and exception interpretation is in policy-rule-matrix.md. Availability alone is not verification.",
+  "records": [
+    {
+      "id": "tri-agency/program",
+      "type": "toolkit explanation or recommendation",
+      "title": "Identify the program, competition and roles",
+      "content": "Record the funding opportunity, submission date and participating organizations. Read the actual competition instructions before deciding which documents to prepare. This toolkit does not maintain a complete catalogue of every funding call.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/nsgrp",
+      "type": "toolkit explanation or recommendation",
+      "title": "NSGRP: partnership assessment",
+      "content": "The RAF submission rule depends on the applicable opportunity and qualifying private-sector partners. Research and partner risk findings inform the assessment; they do not waive a form that is required.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/strac",
+      "type": "toolkit explanation or recommendation",
+      "title": "STRAC: sensitive research and connections",
+      "content": "For an in-scope opportunity, whether the work advances a listed STRA affects attestation duties. Check current affiliation, funding and in-kind support, and the agency-specific roles. Evaluate STRAC separately from NSGRP.",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/ontario",
+      "type": "toolkit explanation or recommendation",
+      "title": "Ontario has its own process",
+      "content": "Federal definitions and submission outcomes cannot be transferred automatically into an Ontario application. Check the provincial instructions, disclosure period and forms.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/fairness",
+      "type": "toolkit explanation or recommendation",
+      "title": "Protect research and fair treatment",
+      "content": "Base concerns on relevant evidence about an activity and relationship. Nationality, language or ethnicity alone must not become a toolkit risk score. Check mistaken identity, record uncertainty and avoid spreading unverified allegations.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/separate",
+      "type": "toolkit explanation or recommendation",
+      "title": "Keep four different questions separate",
+      "content": "A technology category, an organization listing, a person’s actual connection and the applicable obligation are different questions. A search match answers only a narrow lookup question.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "tri-agency/ongoing",
+      "type": "toolkit explanation or recommendation",
+      "title": "Review changes against the applicable terms",
+      "content": "Keep the application-date list version and award terms. New team members, scope changes and extensions may require action. This guide does not impose a blanket annual attestation or automatically apply later list additions to older awards.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/raf",
+      "type": "toolkit explanation or recommendation",
+      "title": "Do I need a RAF when I have not identified a risk?",
+      "content": "Yes, if the applicable NSGRP program and qualifying private-partner submission conditions are met. A no-risk assessment does not waive a required form. Check the NSGRP walkthrough for the scope questions.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/both",
+      "type": "toolkit explanation or recommendation",
+      "title": "Are NSGRP and STRAC the same requirement?",
+      "content": "They are distinct. A funding opportunity can apply both, one or neither. Establish each requirement separately using its competition instructions.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/attest",
+      "type": "toolkit explanation or recommendation",
+      "title": "Does everyone on a team have to submit an attestation?",
+      "content": "STRAC attesting roles depend on the funding agency and whether the in-scope grant advances a listed STRA. Unnamed trainees can have ongoing compliance duties without an application attestation. Check the official agency-specific role definitions.",
+      "locationOverride": "Questions 2–4",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/annual",
+      "type": "toolkit explanation or recommendation",
+      "title": "Must STRAC attestations be renewed annually?",
+      "content": "This toolkit does not establish a blanket annual renewal requirement. Follow the particular competition, award and institutional instructions. Distinguish application attestations from ongoing duties and required reporting of changes.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/older",
+      "type": "toolkit explanation or recommendation",
+      "title": "What about older awards and later list updates?",
+      "content": "Do not apply a current list retrospectively by default. Determine the applicable application-date list, award terms and the treatment of extensions or changed research. This release provides a current reference snapshot, not a complete historical list service.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/ontario",
+      "type": "toolkit explanation or recommendation",
+      "title": "Can I reuse the federal process for Ontario?",
+      "content": "Ontario has separate disclosure definitions, time periods and forms. Check its complete Relevant Period and application instructions rather than importing a federal no-action outcome.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/stra",
+      "type": "toolkit explanation or recommendation",
+      "title": "Does using AI or another listed technology automatically make my work a STRA?",
+      "content": "The policy asks whether funded research advances a listed subcategory. Inspect the official definitions and examples. The category explorer helps locate information but does not classify your research.",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stra",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Sensitive Technology Research Areas",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+          "section": "Categories and subcategories",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/nro",
+      "type": "toolkit explanation or recommendation",
+      "title": "Does a name match prove an NRO affiliation?",
+      "content": "No. Verify the organization’s identity and the actual relationship independently. Alias and fuzzy matches are search aids. An unrelated co-publication does not itself establish a person’s NRO affiliation.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/negative",
+      "type": "toolkit explanation or recommendation",
+      "title": "Does no search result mean the partner is cleared?",
+      "content": "No. Try official names and aliases, clear filters and consult the complete official source. The NRO list is not a comprehensive register of all possible risks or sanctions.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/canadian",
+      "type": "toolkit explanation or recommendation",
+      "title": "Is a Canadian company automatically lower risk?",
+      "content": "Assess relevant ownership, relationships, activities and evidence in context. An address, nationality or country label alone is not a risk assessment.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/student",
+      "type": "toolkit explanation or recommendation",
+      "title": "Can an international student work in a Canadian laboratory?",
+      "content": "This tool cannot decide access from nationality. Determine the actual controlled-goods, export, sanctions and any applicable foreign-origin requirements. The reference explains the separate regimes without issuing a legal clearance.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "goods",
+          "publisherHost": "www.canada.ca",
+          "title": "Controlled Goods Program exemptions",
+          "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+          "section": "Exclusions, exemptions and security assessments",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/storage",
+      "type": "toolkit explanation or recommendation",
+      "title": "Where should research data be stored and how long should it be kept?",
+      "content": "Use the requirements applicable to the data, consent/ethics commitments, community governance, institution, agreement and funder. The toolkit does not impose one retention period or a blanket geography-only rule.",
+      "sources": [
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "privacy",
+          "publisherHost": "www.priv.gc.ca",
+          "title": "Privacy Commissioner: processing across borders",
+          "url": "https://www.priv.gc.ca/en/privacy-topics/airports-and-borders/gl_dab_090127/?wbdisable=true",
+          "section": "PIPEDA scope, accountability and cross-border processing",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/complete",
+      "type": "toolkit explanation or recommendation",
+      "title": "Does a completed worksheet mean approval?",
+      "content": "No. Completion means responses were recorded. Risks, unanswered questions and uncertainty remain visible. The worksheet does not replace the official RAF or institutional review.",
+      "sources": [
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "faq/report",
+      "type": "toolkit explanation or recommendation",
+      "title": "How should I report an urgent concern?",
+      "content": "Follow the published institutional incident process promptly. Do not post confidential research or allegations in a public toolkit issue. This guide does not promise a universal legal protection for every kind of report.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadHelp",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead research support directory",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/support",
+          "section": "Published institutional contact routes",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/stra",
+      "type": "toolkit explanation or recommendation",
+      "title": "STRA: Sensitive Technology Research Areas",
+      "content": "Listed technology categories and subcategories relevant to STRAC. Use the official descriptions to assess whether research advances a listed area.",
+      "sources": [
+        {
+          "id": "stra",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Sensitive Technology Research Areas",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+          "section": "Categories and subcategories",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/strac",
+      "type": "toolkit explanation or recommendation",
+      "title": "STRAC policy",
+      "content": "A policy connecting in-scope sensitive research funding with restrictions on specified NRO affiliations, funding and in-kind support. Attestation and ongoing duties must be checked separately.",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/nsgrp",
+      "type": "toolkit explanation or recommendation",
+      "title": "NSGRP: National Security Guidelines for Research Partnerships",
+      "content": "A framework implemented by selected funding opportunities to assess partnership risks and mitigation. Submission requirements depend on the relevant program and partner definition.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/nro",
+      "type": "toolkit explanation or recommendation",
+      "title": "NRO: Named Research Organizations",
+      "content": "Organizations and aliases named in the policy list. A listed entry, a similar name and a person’s actual relationship are different facts.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/dual",
+      "type": "toolkit explanation or recommendation",
+      "title": "Dual use",
+      "content": "Potential civilian and military or other security applications. The phrase alone does not determine a legal classification, export permit or STRA result.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stra",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Sensitive Technology Research Areas",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+          "section": "Categories and subcategories",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/goods",
+      "type": "toolkit explanation or recommendation",
+      "title": "Controlled goods",
+      "content": "Goods and technology subject to the Canadian domestic controlled-goods framework. Check examination, possession and transfer requirements, including applicable exclusions and exemptions.",
+      "sources": [
+        {
+          "id": "goods",
+          "publisherHost": "www.canada.ca",
+          "title": "Controlled Goods Program exemptions",
+          "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+          "section": "Exclusions, exemptions and security assessments",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/export",
+      "type": "toolkit explanation or recommendation",
+      "title": "Export controls",
+      "content": "Rules governing specified cross-border transfers and related activities. Analysis may include technical information as well as physical items.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/sanctions",
+      "type": "toolkit explanation or recommendation",
+      "title": "Sanctions",
+      "content": "Restrictions under applicable legislation and regulations on certain dealings, activities, goods, services or parties. A current list search alone is not a complete legal assessment.",
+      "sources": [
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/diligence",
+      "type": "toolkit explanation or recommendation",
+      "title": "Due diligence",
+      "content": "Evidence-based steps to understand a relevant activity or relationship, document uncertainty and manage identified concerns proportionately.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/security",
+      "type": "toolkit explanation or recommendation",
+      "title": "Research security",
+      "content": "Practices that help protect research and its integrity from misuse, interference and unauthorized transfer while supporting responsible collaboration.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/assessment",
+      "type": "toolkit explanation or recommendation",
+      "title": "Risk assessment",
+      "content": "A contextual examination of possible harm, evidence and uncertainty. A filled-in worksheet or missing search result is not itself an acceptable-risk determination.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "glossary/mitigation",
+      "type": "toolkit explanation or recommendation",
+      "title": "Risk mitigation",
+      "content": "Measures tied to identified concerns, with responsibilities and follow-through. Their adequacy is assessed under the applicable process and funding terms.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/ecl-guide",
+      "type": "toolkit explanation or recommendation",
+      "title": "Look up a specific Export Control List item",
+      "content": "Open the official Guide to Canada’s Export Control List for item-level technical parameters and the applicable version. The toolkit’s short summaries do not reproduce the full list or determine classification.",
+      "sources": [
+        {
+          "id": "ecl",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Guide to Canada’s Export Control List",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/ecl-lec/index.aspx?lang=eng",
+          "section": "Select the applicable guide and item-level technical parameters",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/export",
+      "type": "toolkit explanation or recommendation",
+      "title": "Canadian exports and intangible transfers",
+      "content": "Review the item or technical information, destination, recipient, end use and applicable controls before a transfer. Email, cloud access, remote collaboration or oral disclosure can involve technology transfers. Academic purpose alone does not establish a permit exemption.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/domestic",
+      "type": "toolkit explanation or recommendation",
+      "title": "Controlled goods inside Canada",
+      "content": "Examination, possession and transfer of controlled goods in Canada have a distinct framework. Check registration, security assessments and applicable exclusions or exemptions. Do not replace that analysis with a general export checklist.",
+      "sources": [
+        {
+          "id": "goods",
+          "publisherHost": "www.canada.ca",
+          "title": "Controlled Goods Program exemptions",
+          "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+          "section": "Exclusions, exemptions and security assessments",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/student",
+      "type": "toolkit explanation or recommendation",
+      "title": "International students and foreign-origin technology",
+      "content": "Do not label access in a Canadian laboratory a Canadian deemed export solely because a student is international. Establish the Canadian controls and any applicable foreign-origin restrictions separately. The toolkit cannot determine access from citizenship alone.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "goods",
+          "publisherHost": "www.canada.ca",
+          "title": "Controlled Goods Program exemptions",
+          "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+          "section": "Exclusions, exemptions and security assessments",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/acl",
+      "type": "toolkit explanation or recommendation",
+      "title": "Area controls concern regulated activities",
+      "content": "A partnership label is not itself an export permit. Check the actual goods, technology or activities, the destination rules and the relevant permit process in the current handbook.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/regimes",
+      "type": "toolkit explanation or recommendation",
+      "title": "Identify the applicable Canadian restrictions",
+      "content": "Check the governing regulations, parties, ownership or indirect dealings, services, technology and financial transactions. Exceptions and permits depend on the actual regime. NRO status is not a sanctions determination.",
+      "sources": [
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/lists",
+      "type": "toolkit explanation or recommendation",
+      "title": "One search is not complete screening",
+      "content": "Use the official guidance on UN and Canadian autonomous lists together with applicable regulations. US and EU lists are not automatically Canadian law; any foreign obligation needs an applicable nexus. An unlisted counterparty can still present an indirect-dealing issue.",
+      "sources": [
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/fairness",
+      "type": "toolkit explanation or recommendation",
+      "title": "Avoid country-wide admissions or employment conclusions",
+      "content": "Canadian sanctions do not prohibit education or employment for every person from a sanctioned country. Examine the actual activity and relevant relationships. Verify names before drawing a consequential conclusion.",
+      "sources": [
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "export/facts",
+      "type": "toolkit explanation or recommendation",
+      "title": "Gather the facts without collecting unnecessary personal data",
+      "content": "Record the proposed transfer or activity, technical classification if known, destination, entities and source/date of checks in an approved institutional record. Separate verified facts from assumptions. Keep confidential case details out of public issues and this toolkit.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/updates",
+      "type": "toolkit explanation or recommendation",
+      "title": "Use supported software and security updates",
+      "content": "Follow managed-device update policies. Keep operating systems, browsers and research software supported and patched. Identify who owns updates for lab equipment whose software cannot be changed routinely.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/mfa",
+      "type": "toolkit explanation or recommendation",
+      "title": "Use the institution’s supported MFA and password tools",
+      "content": "Enable the supported authentication methods, use unique credentials and keep recovery arrangements protected. This toolkit does not establish Lakehead entitlement to a password manager or prescribe a universal Duo/Google configuration.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadCyber",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead cybersecurity resources for researchers",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+          "section": "Local support and institutional guidance; account-specific instructions must be confirmed",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/access",
+      "type": "toolkit explanation or recommendation",
+      "title": "Limit and review access",
+      "content": "Grant access appropriate to the work. Remove access when roles change, protect administrator accounts and agree on approved remote-access methods. A VPN is not permission to use an otherwise unapproved service.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/backups",
+      "type": "toolkit explanation or recommendation",
+      "title": "Test restoration as well as backup creation",
+      "content": "Use the approved backup service and verify restoration with non-sensitive test files. Keep recovery material in the institutionally designated location. Do not assume a personal cloud account is an acceptable recovery store.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadCyber",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead cybersecurity resources for researchers",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+          "section": "Local support and institutional guidance; account-specific instructions must be confirmed",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/incident",
+      "type": "toolkit explanation or recommendation",
+      "title": "Report suspected incidents promptly",
+      "content": "Use the published institutional reporting process. Do not delay urgent reporting to finish a private investigation. Preserve relevant information safely and follow the incident handler’s instructions; avoid posting sensitive cases publicly.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadCyber",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead cybersecurity resources for researchers",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+          "section": "Local support and institutional guidance; account-specific instructions must be confirmed",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/files",
+      "type": "toolkit explanation or recommendation",
+      "title": "Confirm format, recipients and recovery",
+      "content": "A password prompt alone does not establish strong encryption. Select a documented method supported by the institution and recipient, and test opening and recovery with synthetic files. Keep the recovery secret separate from the transfer.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "appleEncryption",
+          "publisherHost": "support.apple.com",
+          "title": "Apple: encrypted disk images",
+          "url": "https://support.apple.com/en-ca/guide/disk-utility/dskutl11888/mac",
+          "section": "Creating an encrypted disk image; protect the password",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/mac",
+      "type": "toolkit explanation or recommendation",
+      "title": "macOS: Apple’s encrypted disk-image procedure",
+      "content": "Apple documents how to create an encrypted disk image in Disk Utility. Follow the procedure for the installed macOS version and confirm institutional suitability. The password is needed to open the image. This release links to the vendor procedure; it does not claim a locally tested Mac workflow.",
+      "sources": [
+        {
+          "id": "appleEncryption",
+          "publisherHost": "support.apple.com",
+          "title": "Apple: encrypted disk images",
+          "url": "https://support.apple.com/en-ca/guide/disk-utility/dskutl11888/mac",
+          "section": "Creating an encrypted disk image; protect the password",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/managed",
+      "type": "toolkit explanation or recommendation",
+      "title": "Managed device encryption",
+      "content": "Use the supported institutional device-encryption configuration and recovery process. Check recovery before changing encryption settings. Do not disable managed protections or move organizational recovery keys to a personal account.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadCyber",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead cybersecurity resources for researchers",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+          "section": "Local support and institutional guidance; account-specific instructions must be confirmed",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/residency",
+      "type": "toolkit explanation or recommendation",
+      "title": "Storage location is one requirement among several",
+      "content": "Identify the applicable institutional policy, jurisdiction, agreement, funder and consent/ethics commitments. Canadian hosting alone does not establish compliance. PIPEDA is not a universal ban on foreign processing, and its scope does not cover every public-sector university activity.",
+      "sources": [
+        {
+          "id": "privacy",
+          "publisherHost": "www.priv.gc.ca",
+          "title": "Privacy Commissioner: processing across borders",
+          "url": "https://www.priv.gc.ca/en/privacy-topics/airports-and-borders/gl_dab_090127/?wbdisable=true",
+          "section": "PIPEDA scope, accountability and cross-border processing",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/retention",
+      "type": "toolkit explanation or recommendation",
+      "title": "Use the applicable retention and disposal schedule",
+      "content": "There is no universal seven-year timer in this toolkit. Establish the governing records, funder, agreement, ethics and disciplinary requirements. Document retention, access, legal holds where applicable and secure disposal through the approved process.",
+      "sources": [
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/indigenous",
+      "type": "toolkit explanation or recommendation",
+      "title": "Respect community-specific data governance",
+      "content": "OCAP concerns First Nations ownership, control, access and possession. It must not stand in for Inuit, Métis or a particular community’s own governance and agreements. A checklist does not supply community consent or authority.",
+      "sources": [
+        {
+          "id": "ocap",
+          "publisherHost": "fnigc.ca",
+          "title": "First Nations Information Governance Centre: OCAP",
+          "url": "https://fnigc.ca/ocap-training/",
+          "section": "First Nations ownership, control, access and possession",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity/ai",
+      "type": "toolkit explanation or recommendation",
+      "title": "AI and online research services depend on the account and agreement",
+      "content": "Check permitted data, institutional account terms, retention, access and participant commitments before submitting information. An enterprise label does not approve every dataset. For human-participant work at Lakehead, consult the published online-tools and REB guidance.",
+      "sources": [
+        {
+          "id": "lakeheadReb",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead: online tools and human-participant research",
+          "url": "https://www.lakeheadu.ca/sites/default/files/uploads/111/Guideline%20-%20Use%20of%20online%20tools%20for%20research%20involving%20human%20participants%2C%20REVISED%202026.pdf",
+          "section": "Institutional accounts, agreements and participant information",
+          "version": "2026",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/identity",
+      "type": "toolkit explanation or recommendation",
+      "title": "Verify identity before interpreting a match",
+      "content": "Compare official names, aliases, organizational context and the relevant relationship. Record uncertainty and resolve homonyms. Proximity, citizenship or a Canadian address alone does not establish risk or safety.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/due-diligence",
+      "type": "toolkit explanation or recommendation",
+      "title": "Use proportionate due diligence",
+      "content": "Identify the project-specific concern, check credible evidence and document the reasoning in an approved location. Avoid blanket background checks, unnecessary sensitive information and circulation of unverified allegations.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/roles",
+      "type": "toolkit explanation or recommendation",
+      "title": "Define roles, responsibilities and disclosure routes",
+      "content": "Agree who oversees access, partner changes, conflicts and relevant disclosures. Explain applicable requirements to the team without assuming every member has the same form-submission duties.",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/access",
+      "type": "toolkit explanation or recommendation",
+      "title": "Control access to identified sensitive information",
+      "content": "Identify the data or technology requiring protection, give people appropriate access and review it when work or roles change. Use supported institutional systems and an explicit handover/revocation process.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/agreements",
+      "type": "toolkit explanation or recommendation",
+      "title": "Document intended use and sharing conditions",
+      "content": "Establish responsibilities for data, intellectual property, confidentiality, publication and permitted onward sharing through the applicable institutional agreements. This toolkit does not draft binding terms or determine export permissions.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/recovery",
+      "type": "toolkit explanation or recommendation",
+      "title": "Prepare for interruption or compromise",
+      "content": "Test backups and restoration, identify the private incident-reporting route and know how to suspend affected access without destroying evidence or research records.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/accountability",
+      "type": "toolkit explanation or recommendation",
+      "title": "Assign a measure, owner and review point",
+      "content": "Connect each identified risk with a feasible action, responsible role and evidence of implementation. Record unresolved matters. The fact that every worksheet item has an answer does not establish acceptability.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "mitigation/changes",
+      "type": "toolkit explanation or recommendation",
+      "title": "Revisit changes under the applicable rules",
+      "content": "Review team, partner, activity and funding changes against the award terms and applicable list version. A newly published NRO addition is not automatically a retroactive condition of an earlier award.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/scope-program",
+      "type": "preparation prompt",
+      "title": "Funding opportunity, competition and applicable requirements",
+      "content": "Have you established which NSGRP, STRAC, provincial and institutional requirements apply?",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/scope-roles",
+      "type": "preparation prompt",
+      "title": "Research team roles and relevant connections",
+      "content": "Review agency-specific roles and any relevant affiliation, funding or in-kind support. Keep uncertainty explicit.",
+      "sources": [
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/scope-forms",
+      "type": "preparation prompt",
+      "title": "Forms, list version and submission instructions",
+      "content": "Identify the official forms and version applicable to this application. This worksheet is not the official RAF.",
+      "sources": [
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/research-stra",
+      "type": "preparation prompt",
+      "title": "Contribution to a listed STRA",
+      "content": "Inspect the official subcategories and consider the funded research contribution. Using a technology is not automatically advancing it.",
+      "sources": [
+        {
+          "id": "stra",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Sensitive Technology Research Areas",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+          "section": "Categories and subcategories",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/research-sensitive",
+      "type": "preparation prompt",
+      "title": "Other sensitive research and information",
+      "content": "Review the official RAF and Annex A for sensitive research, critical infrastructure/minerals and datasets. STRA categories do not cover every RAF consideration.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/research-export",
+      "type": "preparation prompt",
+      "title": "Controlled technology and proposed transfers",
+      "content": "Identify technical information, goods, recipients, destinations and access arrangements. Record uncertainty rather than assume an exemption.",
+      "sources": [
+        {
+          "id": "exports",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Export and brokering controls handbook",
+          "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+          "section": "Controlled technology, intangible transfers and permits",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "goods",
+          "publisherHost": "www.canada.ca",
+          "title": "Controlled Goods Program exemptions",
+          "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+          "section": "Exclusions, exemptions and security assessments",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/research-data",
+      "type": "preparation prompt",
+      "title": "Data classification and governance commitments",
+      "content": "Consider participant consent, ethics, agreements, retention and applicable community governance before deciding how information may be used or stored.",
+      "sources": [
+        {
+          "id": "lakeheadRdm",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead Research Data Management",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+          "section": "Local policies, data classification and support",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ocap",
+          "publisherHost": "fnigc.ca",
+          "title": "First Nations Information Governance Centre: OCAP",
+          "url": "https://fnigc.ca/ocap-training/",
+          "section": "First Nations ownership, control, access and possession",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/partner-identity",
+      "type": "preparation prompt",
+      "title": "Verified partner identity and relationships",
+      "content": "Resolve names, aliases and the actual relationship. A match, location or nationality alone is not a risk conclusion.",
+      "sources": [
+        {
+          "id": "nro",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Named Research Organizations list",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+          "section": "Organization entries and known aliases; list read on verification date",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/partner-sanctions",
+      "type": "preparation prompt",
+      "title": "Applicable sanctions and indirect dealings",
+      "content": "Use current official guidance on parties and activities. NRO and sanctions checks serve different purposes.",
+      "sources": [
+        {
+          "id": "sanctions",
+          "publisherHost": "www.international.gc.ca",
+          "title": "Canadian sanctions: academic and research guidance",
+          "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+          "section": "Overview and due diligence",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/partner-use",
+      "type": "preparation prompt",
+      "title": "Intended use, onward sharing and agreements",
+      "content": "Establish the proposed uses and responsibilities, including who can receive or exploit results. Use the relevant institutional agreement process.",
+      "sources": [
+        {
+          "id": "nsgrpFramework",
+          "publisherHost": "science.gc.ca",
+          "title": "National Security Guidelines for Research Partnerships",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+          "section": "Risk assessment, Annex A and Annex B",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/measure-access",
+      "type": "preparation prompt",
+      "title": "Access, device and account safeguards",
+      "content": "Identify appropriate access and supported systems. Confirm operational instructions for your institution and account type.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "lakeheadCyber",
+          "publisherHost": "www.lakeheadu.ca",
+          "title": "Lakehead cybersecurity resources for researchers",
+          "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+          "section": "Local support and institutional guidance; account-specific instructions must be confirmed",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/measure-recovery",
+      "type": "preparation prompt",
+      "title": "Backup, recovery and incident reporting",
+      "content": "Check that recovery is feasible and the reporting route is known. Avoid delaying urgent reporting.",
+      "sources": [
+        {
+          "id": "cyber",
+          "publisherHost": "www.cyber.gc.ca",
+          "title": "Canadian Centre for Cyber Security: baseline controls",
+          "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+          "section": "Updates, access, training, backups and incident response",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/measure-plan",
+      "type": "preparation prompt",
+      "title": "Mitigation measures, owners and unresolved matters",
+      "content": "Tie each action to an identified concern and responsible role. Record what still needs evidence or a decision in the approved institutional record.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "worksheet/measure-change",
+      "type": "preparation prompt",
+      "title": "Review of changes and applicable award terms",
+      "content": "Plan to reassess relevant changes in team, partners, research and funding under the applicable terms and list version.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/start",
+      "type": "bounded policy path start",
+      "title": "Identify the funding opportunity",
+      "content": "This walkthrough covers the tri-agency NSGRP submission rule. Have your competition instructions available. CFI and other funders may implement separate processes.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/program",
+      "type": "bounded policy path decision",
+      "title": "Do the current competition instructions apply the NSGRP?",
+      "content": "Check the specific NSERC, SSHRC or CIHR opportunity and competition date. Federal funding by itself does not answer this question.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/partner",
+      "type": "bounded policy path decision",
+      "title": "Is at least one qualifying private-sector partner involved?",
+      "content": "Include for-profit partners and organizations representing for-profit interests, including an industry association or consortium. The tri-agency definition excludes Canadian Crown corporations and producer groups. Mixed public/private partnerships can qualify.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/raf",
+      "type": "bounded policy path action",
+      "title": "Include the official Risk Assessment Form",
+      "content": "An in-scope application with a qualifying private-sector partner requires the RAF even when no sensitivity or partner risk has been identified. Consider all relevant private-sector partners in the form.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/assessment",
+      "type": "bounded policy path decision",
+      "title": "Have you identified risks that need mitigation?",
+      "content": "Assess research and partner factors using the official form. A lack of identified risks does not remove the submission requirement. The toolkit worksheet is a preparation aid.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/mitigation",
+      "type": "bounded policy path action",
+      "title": "Describe measures addressing the identified risks",
+      "content": "Connect each measure to evidence, a responsible person and ongoing implementation. Use proportionate measures without profiling researchers.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/document",
+      "type": "bounded policy path action",
+      "title": "Record the basis of your assessment",
+      "content": "Explain the information considered and complete the required form. Do not invent risk-free certification.",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/submit",
+      "type": "bounded policy path end",
+      "title": "Prepare the RAF for submission",
+      "content": "Follow the competition submission instructions. The agency makes its funding decision. STRAC requirements must be considered separately; this walkthrough does not grant approval.",
+      "outcome": "raf-required",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/outside",
+      "type": "bounded policy path end",
+      "title": "No RAF obligation established by this walkthrough",
+      "content": "Follow the actual funding opportunity, institutional and contractual instructions. A result outside this tri-agency rule is not a general exemption from research-security duties.",
+      "outcome": "outside-scope",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/no-private",
+      "type": "bounded policy path end",
+      "title": "The qualifying private-partner trigger is absent",
+      "content": "Under the rule examined here, that trigger for RAF submission is not met. Check for other program-specific requirements and assess the partnership proportionately.",
+      "outcome": "no-private-partner",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/investigate",
+      "type": "bounded policy path end",
+      "title": "Resolve assessment gaps before finalizing the RAF",
+      "content": "The form is still required. Identify missing evidence and address unresolved risks using the competition guidance. Do not treat uncertainty as no risk.",
+      "outcome": "raf-required-unresolved",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "nsgrp/unknown",
+      "type": "bounded policy path end",
+      "title": "Confirm the program or partner definition",
+      "content": "Use the official opportunity instructions and funder guidance to establish the missing fact. This walkthrough cannot determine the submission requirement from an unknown input.",
+      "outcome": "needs-information",
+      "sources": [
+        {
+          "id": "nsgrp",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "Tri-agency NSGRP implementation",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+          "section": "About; funding opportunities; frequently asked questions",
+          "version": "2026-03-27",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "raf",
+          "publisherHost": "science.gc.ca",
+          "title": "Official Risk Assessment Form",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+          "section": "Use the form and current competition instructions",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/start",
+      "type": "bounded policy path start",
+      "title": "Start with a specific grant application",
+      "content": "This walkthrough uses your assessment of the research and the applicable competition instructions. It does not classify research or determine funding eligibility.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/program",
+      "type": "bounded policy path decision",
+      "title": "Does this competition apply the STRAC policy?",
+      "content": "Confirm the funder, competition and implementation date. Historical awards, extensions and changed project scope require the applicable award/program instructions.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/stra",
+      "type": "bounded policy path decision",
+      "title": "Does the proposed funded work advance a listed STRA?",
+      "content": "Consider the whole funded project and official subcategories. Using a technology is not automatically advancing it. Select Not sure if your assessment remains unresolved.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/connection",
+      "type": "bounded policy path decision",
+      "title": "Does anyone involved in the funded activities have an NRO connection?",
+      "content": "Consider current affiliation, funding and in-kind support, using the applicable list version. A name search does not establish a person’s relationship. Unrelated co-authorship does not by itself establish an affiliation.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/roles",
+      "type": "bounded policy path action",
+      "title": "Identify which named roles must attest",
+      "content": "Use the agency-specific role definitions. CIHR collaborators are excluded from its named attesting roles. For CFI, named project leaders, co-project leaders and team members attest; other named users do not. Unnamed trainees may have compliance duties without a submission attestation.",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/attest",
+      "type": "bounded policy path end",
+      "title": "Prepare the required attestations",
+      "content": "Complete the current forms through the competition process. All team members involved in funded activities must meet ongoing policy duties. Follow the applicable application-date list version and report changes as required. This is not a finding of overall compliance.",
+      "outcome": "attestation-required",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/resolve",
+      "type": "bounded policy path end",
+      "title": "Resolve the identified connection before attesting",
+      "content": "Do not sign an inaccurate attestation. Review the official policy and available options with the funding/institutional process. The toolkit does not direct dismissal, withdrawal or termination of a relationship.",
+      "outcome": "connection-unresolved",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/no-stra",
+      "type": "bounded policy path end",
+      "title": "No STRAC attestation indicated by this assessment",
+      "content": "This result depends on your assessment that the funded work does not advance a listed STRA. Other research-security requirements, including NSGRP, can still apply. Revisit a changed research scope.",
+      "outcome": "no-stra-attestation",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/outside",
+      "type": "bounded policy path end",
+      "title": "Outside the competition scope you identified",
+      "content": "Use the actual program and award instructions. This result does not establish an exemption from other policies or legal requirements.",
+      "outcome": "outside-scope",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "strac/unknown",
+      "type": "bounded policy path end",
+      "title": "More information is needed",
+      "content": "Establish the competition scope, research contribution or relationship before drawing a conclusion. The official FAQ and program instructions explain these boundaries.",
+      "outcome": "needs-information",
+      "sources": [
+        {
+          "id": "strac",
+          "publisherHost": "nserc-crsng.canada.ca",
+          "title": "STRAC implementation guidance",
+          "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+          "section": "Applicability, attestations and ongoing responsibilities",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "stracFaq",
+          "publisherHost": "science.gc.ca",
+          "title": "Official STRAC questions and answers",
+          "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+          "section": "Questions 1–5, 9, 11–20",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/start",
+      "type": "bounded policy path start",
+      "title": "Check the Ontario competition instructions",
+      "content": "Ontario has a distinct process. Use the guidelines and forms required for your competition.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/scope",
+      "type": "bounded policy path decision",
+      "title": "Does the competition use these Ontario guidelines?",
+      "content": "Check the funding program and current instructions.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/period",
+      "type": "bounded policy path action",
+      "title": "Review the full Relevant Period",
+      "content": "Review two years before signing through anticipated project completion, including other projects. Ontario’s collaboration definition includes co-authorship and co-publication. See definitions on pages 2–3.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/nro",
+      "type": "bounded policy path decision",
+      "title": "Are there NRO connections to disclose during that period?",
+      "content": "Consider collaborations, funding and in-kind support, including planned connections. Check the named researchers and form scope in the official application instructions.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/option-b",
+      "type": "bounded policy path action",
+      "title": "Provide Option B details where required",
+      "content": "Disclose relevant NRO associations. The PI addresses those associations in the mitigation checklist. Other concerning entities do not automatically establish an NRO connection.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/forms",
+      "type": "bounded policy path action",
+      "title": "Complete and review the official forms",
+      "content": "Check attestation duties and exclusions on pages 4–5. The PI completes the checklist; an authorized institutional officer reviews and signs it. Include other concerns through the appropriate disclosure process.",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/end",
+      "type": "bounded policy path end",
+      "title": "Prepare the competition submission package",
+      "content": "Follow the official packaging instructions. The toolkit has not selected forms for every researcher or predicted adjudication.",
+      "outcome": "prepare-ontario-forms",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/outside",
+      "type": "bounded policy path end",
+      "title": "Use the applicable funding instructions",
+      "content": "This walkthrough has not established the requirements for another program.",
+      "outcome": "outside-scope",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    },
+    {
+      "id": "ontario/unknown",
+      "type": "bounded policy path end",
+      "title": "Resolve the missing information",
+      "content": "Do not assume a no-connection answer or select a declaration while information is unresolved. Use the official definitions and competition instructions.",
+      "outcome": "needs-information",
+      "sources": [
+        {
+          "id": "ontario",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario research security guidelines",
+          "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+          "section": "Definitions pp. 2–3; application stage pp. 4–5",
+          "version": "2024-06",
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        },
+        {
+          "id": "ontarioForms",
+          "publisherHost": "forms.mgcs.gov.on.ca",
+          "title": "Ontario guidelines and forms catalogue",
+          "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+          "section": "Check the version required for your competition",
+          "version": null,
+          "verifiedOn": "2026-09-12",
+          "reviewDue": "2026-10-12"
+        }
+      ]
+    }
+  ]
+}

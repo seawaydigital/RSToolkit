@@ -1,0 +1,15 @@
+# Apache candidate configuration. Requires mod_headers and mod_rewrite.
+# GitHub Pages ignores this file. Verify the actual responses after deployment.
+Options -Indexes
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://tile.openstreetmap.org; font-src 'self'; connect-src 'self' https://en.wikipedia.org; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "no-referrer"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+Header always set Strict-Transport-Security "max-age=31536000"
+<FilesMatch "\.html$">
+ Header set Cache-Control "no-cache"
+</FilesMatch>

@@ -1,0 +1,18 @@
+import { load } from 'cheerio';
+import { createHash } from 'node:crypto';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { straData } from '../src/data/straData.js';
+import { policySources } from '../src/data/policySources.js';
+const response = await fetch(policySources.stra.url, { signal: AbortSignal.timeout(30000) });
+if (!response.ok) throw new Error('Official STRA source unavailable: ' + response.status);
+const html = await response.text(), $ = load(html);
+const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+const official = $('main p.h4').map((i, el) => $(el).text().trim()).get();
+const local = straData.categories.flatMap(c => c.subcategories).filter(s => s.kind !== 'category-overview').map(s => s.name);
+const missing = official.filter(s => !local.some(l => normalize(l) === normalize(s)));
+const extra = local.filter(s => !official.some(o => normalize(o) === normalize(s)));
+const report = { source: policySources.stra.url, retrievedAt: new Date().toISOString(), sha256: createHash('sha256').update(html).digest('hex'), officialSubcategories: official.length, localSubcategories: local.length, missing, extra, overviewException: 'Advanced Weapons is presented as a category overview, not an additional official subcategory.' };
+await mkdir('artifacts/verification', { recursive: true });
+await writeFile('artifacts/verification/stra-reconciliation.json', JSON.stringify(report, null, 2));
+console.log(JSON.stringify(report, null, 2));
+if (official.length !== 74 || missing.length || extra.length) process.exitCode = 1;

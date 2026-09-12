@@ -16,7 +16,7 @@
  * request. This address is what the footer offers users, so it MUST be an
  * address the hosting organization actively monitors. It is not decorative.
  */
-export const ACCESSIBILITY_CONTACT = 'andrew@seawaydigital.ca';
+export const ACCESSIBILITY_CONTACT = 'security.research@lakeheadu.ca';
 
 /**
  * The site's canonical public URL, no trailing slash.

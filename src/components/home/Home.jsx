@@ -5,21 +5,21 @@ const SCENARIOS = [
     id: 'new-partner',
     label: 'Checking a new research partner?',
     icon: '🔍',
-    desc: 'Verify whether a potential collaborator or funder is on the Named Research Organizations list and understand the compliance implications.',
+    desc: 'Find official organization names and aliases, then distinguish a name result from the actual relationship and applicable requirements.',
     tools: ['nro-lookup', 'strac-flowchart', 'risk-mitigation'],
   },
   {
     id: 'partnership-grant',
     label: 'Applying for a partnership grant?',
     icon: '📋',
-    desc: 'Walk through the NSGRP risk assessment process and complete a pre-application compliance check.',
+    desc: 'Identify the NSGRP submission requirements and organize evidence and unresolved questions in a preparation worksheet.',
     tools: ['risk-checklist', 'nsgrp-flowchart', 'stra-lookup'],
   },
   {
     id: 'sensitive-area',
     label: 'Working in a sensitive technology area?',
     icon: '⚡',
-    desc: 'Check if your research falls under a Sensitive Technology Research Area and understand what that means for your tri-agency funding.',
+    desc: 'Explore official technology subcategories and record your assessment before checking the relevant funding requirements.',
     tools: ['stra-lookup', 'strac-flowchart', 'export-control'],
   },
   {
@@ -48,7 +48,7 @@ export default function Home({ onNavigate }) {
         </div>
         <h1 className="home-hero-title">
           Canadian research security,<br />
-          <em>without the guesswork.</em>
+          <em>with sources in view.</em>
         </h1>
         <p className="home-hero-subtitle">
           Interactive, plain-language tools for researchers, security officers, and grant
@@ -59,8 +59,8 @@ export default function Home({ onNavigate }) {
           <span className="home-hero-pill"><span className="home-hero-pill-icon">🍁</span>Canadian policy</span>
           <span className="home-hero-pill"><span className="home-hero-pill-icon">📄</span>Government sources</span>
           <span className="home-hero-pill"><span className="home-hero-pill-icon">🔒</span>No accounts</span>
-          <span className="home-hero-pill"><span className="home-hero-pill-icon">🚫</span>Zero tracking</span>
-          <span className="home-hero-pill"><span className="home-hero-pill-icon">✦</span>Always free</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">🚫</span>No analytics</span>
+          <span className="home-hero-pill"><span className="home-hero-pill-icon">✦</span>Local lookups</span>
         </div>
         <p className="home-hero-fineprint">
           <strong>Sources:</strong> Government of Canada — Safeguarding Your Research,

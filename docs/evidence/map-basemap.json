@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_110m_admin_0_countries.geojson",
+  "retrievedAt": "2026-09-12T17:11:28.587Z",
+  "sourceSha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+  "license": "Public domain",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "scale": "1:110 million; general geographic context, not street detail",
+  "features": 177
+}

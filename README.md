@@ -1,162 +1,50 @@
 # Research Security Toolkit
 
-A free, open-source web toolkit helping Canadian researchers and research administrators navigate federal research security policy. No login, no backend, no tracking — 100% client-side.
+A static, English-language reference and preparation resource for Canadian researchers and research security professionals. Operator: Andrew Austin at Lakehead University. Contact: security.research@lakeheadu.ca. Institutional links and the operator's affiliation do not assert formal endorsement.
 
-**Live site → [rs.rdmtoolkit.ca](https://rs.rdmtoolkit.ca)**
+**Release candidate 0.1.0-rc.2.** This branch implements the [two-person launch plan](docs/two-person-launch-plan.md), including the owner's approved restoration of visual flowcharts and sourced geographic context. See the [closure record](docs/launch-closure-record.md) for evidence and remaining release decisions. The live rs.rdmtoolkit.ca site is separate from this unpromoted candidate.
 
-> **Hosting this yourself?** Start with **[HANDOFF.md](HANDOFF.md)** — build, deploy, configure, and maintain.
+## Scope
 
----
+Twelve tools cover selected federal and Ontario requirements, official NRO names/aliases, STRA categories, preparation worksheets, mitigation, export/sanctions references, cybersecurity, FAQ and glossary. They do not issue funding, legal or institutional clearance.
 
-## What's Inside
+- NRO: 103 official organization entries, 252 aliases; exact names, aliases and possible candidates are labelled separately.
+- STRA: 11 categories, 74 named subcategories and one explicitly labelled category overview. User assessment replaces the old likelihood classifier.
+- Worksheets are temporary unless explicitly saved to this browser. A new worksheet starts blank; resume is explicit and version-validated.
+- All three policy flowcharts offer an interactive box-and-arrow Full View, Guided Mode and a complete Text View, using the same corrected branches.
+- The bundled NRO overview has 55 source points for 54 of 103 entries. The other 49 remain searchable but unmapped. Rounded straight-line distances cover mapped sites only and do not establish affiliation or risk. See [map provenance and safeguards](docs/visual-tools-restoration.md).
+- NRO name/category lookups and coordinate entry work locally. Optional Wikipedia place search and OpenStreetMap street tiles each require a separate opt-in. No analytics or remote fonts are used. Hosting access logs and external links still have their own privacy implications.
+- dual-use, travel-security and report-concern, added on newer master after the audit baseline, are preserved in source but unavailable in this bounded release.
 
-15 tools across four categories.
+## Develop and verify
 
-### 📜 Policy Guides
-| Tool | Description |
-|---|---|
-| Tri-Agency Research Security Guide | Plain-language explainer of the federal granting agencies' research security framework, 10 guiding principles, NSGRP and STRAC policies |
-| STRAC Policy Flowchart | Interactive decision flow for the Policy on Sensitive Technology Research and Affiliations of Concern |
-| NSGRP Flowchart | National Security Guidelines for Research Partnerships — decision flow with cross-links to the Risk Assessment Form |
-| Ontario RS Guidelines | Ontario Research Security Guidelines decision flow |
+Use Node 24.21.0 and npm. No API keys are needed.
 
-### ✅ Compliance Tools
-| Tool | Description |
-|---|---|
-| STRA Lookup | Search and browse Sensitive Technology Research Areas; includes a guided assessment wizard |
-| NRO Lookup & Map | Search all 126 Named Research Organizations with an interactive map, proximity search, and sanctioned-country flags |
-| Risk Assessment Checklist | Interactive NSGRP-sourced grant risk checklist with 3-state toggles and print support |
-| Risk Mitigation Guide | 22 practical measures across 5 categories — personnel, partners, data, legal, monitoring |
-| Dual-Use Research Guide | Self-assessment wizard, dual-use research areas, collaborator vetting, and due-diligence actions |
-
-### 📖 Reference
-| Tool | Description |
-|---|---|
-| Export Control Quick Reference | Searchable reference for EIPA, Controlled Goods List, Defence Production Act, sanctions, and the UN Act |
-| Glossary / Jargon Decoder | Official definitions for 12 key research security terms from Canadian and Ontario Government sources |
-| Research Security FAQ | 24 answers to common questions about STRAC, NRO, NSGRP, export controls, and compliance |
-
-### 🔒 Operational Security
-| Tool | Description |
-|---|---|
-| Cybersecurity Best Practices | Day-to-day security hygiene — 2FA, device encryption, password managers, AI tool risks, backup rules, sensitive data storage |
-| Research Travel Security | Three-phase travel checklist (before / during / after) with emergency contacts |
-| Report a Concern | Incident scenarios mapped to what to do now and who to contact, institutional first |
-
----
-
-## Tech Stack
-
-| Layer | Choice |
-|---|---|
-| Framework | React 19 + Vite 8 |
-| Routing | Hash-based, no router library |
-| Search | Fuse.js (fuzzy, threshold 0.35) |
-| Map | Leaflet + react-leaflet + leaflet.markercluster |
-| Icons | lucide-react |
-| Flowcharts | dagre layout engine |
-| Styling | Single CSS file with CSS custom properties |
-| Output | Static files — no server-side runtime of any kind |
-
----
-
-## Local Development
-
-```bash
-npm install     # install dependencies
-npm run dev     # dev server at localhost:5173
-npm run lint    # ESLint incl. jsx-a11y accessibility gate — must stay at 0 errors
-npm run build   # production build to dist/
-npm run preview # serve the production build locally
+```text
+npm ci
+npm run verify
+npx playwright install chromium firefox webkit
+npm run test:e2e
+node scripts/serve-candidate.js
 ```
 
----
+The last command serves the production build at http://127.0.0.1:4187 with the candidate response headers. It is a loopback verification server, not a production service. npm run dev provides Vite development mode. Set BASE_PATH only when hosting under a subdirectory.
 
-## Deployment
+Source maintenance tools produce review artifacts and do not automatically publish or approve new guidance:
 
-The build output is a folder of static files. There is no backend, no database, no server-side rendering, and no environment secrets.
-
-**Any static host works** — Apache, nginx, IIS, S3, GitHub Pages, a university web server.
-
-```bash
-npm ci && npm run build   # → dist/
+```text
+node scripts/check-sources.js
+node scripts/reconcile-nro.js
+node scripts/reconcile-stra.js
+node scripts/build-release-manifest.js
 ```
 
-Then serve `dist/` at your document root.
+An HTTP success means availability, not policy correctness. FNIGC may reject automated fetches; record manual source inspection instead of suppressing the failure.
 
-**No URL rewrite rules are needed.** Routing is hash-based (`/#nro-lookup`), so the browser only ever requests `/`. This is the usual SPA deployment headache and this site doesn't have it.
+## Release and maintenance
 
-**Hosting under a subdirectory?** Set `BASE_PATH` at build time:
+[Operations runbook](docs/operations-runbook.md), [owner acceptance script](docs/owner-acceptance.md), [policy matrix](docs/policy-rule-matrix.md), [accessibility scope](ACCESSIBILITY.md), [security reporting](SECURITY.md).
 
-```bash
-BASE_PATH=/research-security/ npm run build
-```
+CI requires lint, unit/policy tests, data/source-date integrity, a production build, browser tests and an advisory check. It uploads a candidate artifact; it has no publication step. Choose a host that supports the supplied response headers and verify actual responses after authorized deployment. GitHub Pages cannot apply the supplied custom header files.
 
-Every asset URL is rewritten accordingly. Include both leading and trailing slashes.
-
-Full details — configuration, security headers, external services, maintenance — are in **[HANDOFF.md](HANDOFF.md)**.
-
----
-
-## Configuration
-
-Three values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
-
-| Value | What it controls |
-|---|---|
-| `ACCESSIBILITY_CONTACT` | Where AODA barrier reports and alternate-format requests go. **Must be an address your organization monitors.** |
-| `SITE_URL` | Canonical public URL, used for the canonical + Open Graph tags |
-| `SHOW_SISTER_SITE_CARD` | Whether the RDM Toolkit card appears in the sidebar |
-
-Changing the hosting domain also means updating the canonical and `og:` URLs in `index.html` — static meta tags can't read JS config.
-
----
-
-## Accessibility
-
-The site targets **WCAG 2.0 AA**, the level AODA references for web content. `npm run lint` runs `eslint-plugin-jsx-a11y` as a regression gate and must stay at **0 errors**.
-
-See **[ACCESSIBILITY.md](ACCESSIBILITY.md)** for the full remediation record, the equivalent-alternative decisions (the NRO data table for the map; flowchart Guided Mode for the SVG), and the manual keyboard/screen-reader checklist to re-run after significant UI changes.
-
----
-
-## Adding a New Tool
-
-1. Create `src/data/<toolData>.js` — export a named const with `lastUpdated`, `sourceUrl`, and content
-2. Create `src/tools/<category>/<ToolName>.jsx`
-3. Register in `src/data/toolRegistry.js` under the appropriate `CATEGORIES` entry
-4. Add a lazy import to `TOOL_COMPONENTS` in `src/App.jsx`
-5. Add CSS to `src/styles/global.css` (use a consistent prefix for the new tool)
-6. Update `CLAUDE.md` with the new tool, data file, and any new conventions
-
-See [CLAUDE.md](CLAUDE.md) for full architecture details and conventions.
-
----
-
-## Data Sources
-
-All policy content is drawn from official Canadian Government sources:
-
-- [Safeguarding Your Research](https://science.gc.ca/site/science/en/safeguarding-your-research) — Government of Canada
-- [STRAC Policy](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern) — Government of Canada
-- [NSGRP](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships) — Government of Canada
-- [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations) — Government of Canada
-- [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas) — Government of Canada
-- [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario
-- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security) — NSERC/CIHR/SSHRC
-- [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx) — Public Safety Canada
-- [Cybersecurity guidance](https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity) — Lakehead University
-
-Policy content carries a `lastUpdated` date shown on each tool page. See HANDOFF.md for how to re-verify against the federal sources.
-
----
-
-## License
-
-[MIT](LICENSE).
-
----
-
-## Disclaimer
-
-This toolkit is provided for informational purposes only. It is not legal advice. Always consult your institution's Research Security or Research Ethics office and refer to official Government of Canada sources for authoritative policy guidance.
+The original software license is [MIT](LICENSE), retained from master. Third-party software/font notices are generated into the build from the installed packages. Government policies, linked works and third-party marks retain their own terms. OCAP® is a registered trademark of FNIGC.

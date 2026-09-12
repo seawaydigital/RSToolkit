@@ -1,119 +1,19 @@
+import { CONTENT_VERSION, policySources } from '../policySources.js';
 export const nsgrpFlow = {
-  id: "nsgrp",
-  title: "NSGRP Research Partnership Decision Flow",
-  // Verified 2026-09-06 against the federal page (dateModified 2026-07-29).
-  // Every policyRef below matches a real heading in the document ("Guiding
-  // principles", "Identify potential risks", "Mitigation Measures",
-  // "Implementation", "Annex A", "Annex B"). No corrections needed.
-  lastUpdated: "2026-09-06",
-  policySource: "National Security Guidelines for Research Partnerships",
-  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+  id: 'nsgrp', title: 'NSGRP partnership requirements', contentVersion: CONTENT_VERSION,
+  sourceIds: ['nsgrp', 'raf'], sourceUrl: policySources.nsgrp.url, policySource: 'Tri-agency NSGRP implementation',
   nodes: [
-    {
-      id: "start",
-      type: "start",
-      label: "New Research Partnership Opportunity",
-      description: "You are considering a research partnership involving external collaborators, funders, or organizations.",
-      next: "check-federal-funding"
-    },
-    {
-      id: "check-federal-funding",
-      type: "decision",
-      label: "Is the partnership federally funded?",
-      description: "Determine whether the research partnership will involve funding from a federal granting council (NSERC, SSHRC, CIHR) or CFI. The NSGRP applies to relevant federal research partnership funding opportunities.",
-      policyRef: "NSGRP, Implementation",
-      whyItMatters: "Federally funded research partnerships are subject to mandatory NSGRP requirements. Non-federal partnerships are encouraged but not required to follow the guidelines.",
-      yes: "check-sensitive-area",
-      no: "recommend-voluntary"
-    },
-    {
-      id: "recommend-voluntary",
-      type: "end",
-      label: "Voluntary assessment recommended",
-      description: "NSGRP compliance is not mandatory for non-federally funded partnerships. However, all researchers are encouraged to assess partnerships using the NSGRP framework — review Annex A (sensitive research areas) and Annex B (partner risk factors), document your findings, and manage risks through your institution. No RAF submission to a federal agency is required.",
-      policyRef: "NSGRP, Summary"
-    },
-    {
-      id: "check-sensitive-area",
-      type: "decision",
-      label: "Does research involve sensitive areas (Annex A)?",
-      description: "Review whether your research falls within sensitive areas including: export-controlled fields, dual-use technologies, critical minerals, critical infrastructure sectors, large datasets, or sensitive personal data.",
-      policyRef: "NSGRP, Annex A",
-      whyItMatters: "Both Annex A (sensitive research) AND Annex B (partner risk factors) must be present to trigger the mandatory RAF submission requirement. If Annex A does not apply, no further compliance steps are required.",
-      crossLink: { tool: "stra-lookup", label: "Open STRA Lookup" },
-      yes: "check-partner-risk",
-      no: "end-no-sensitive"
-    },
-    {
-      id: "end-no-sensitive",
-      type: "end",
-      label: "Document due diligence and proceed",
-      description: "Your research does not involve sensitive areas under Annex A. The mandatory RAF requirement does not apply. Document your due diligence assessment and proceed with the standard grant application process."
-    },
-    {
-      id: "check-partner-risk",
-      type: "decision",
-      label: "Does the partner pose risk factors (Annex B)?",
-      description: "Assess whether your partner organization is state-owned, subject to state influence, lacks institutional autonomy, or operates under laws compelling knowledge transfer to foreign governments. Consider whether partner personnel have ties to foreign militaries or governments.",
-      policyRef: "NSGRP, Annex B",
-      whyItMatters: "Both Annex A and Annex B triggers must be present for mandatory RAF submission. Annex B alone — without sensitive research — does not trigger the requirement.",
-      crossLink: { tool: "risk-checklist", label: "Open Risk Checklist" },
-      yes: "develop-mitigation",
-      no: "low-risk-path"
-    },
-    {
-      id: "low-risk-path",
-      type: "action",
-      label: "Document due diligence findings",
-      description: "No elevated partner risk factors identified. Document your assessment using the NSGRP framework, then proceed to complete the attestation and submit your grant application with the RAF.",
-      policyRef: "NSGRP, Identify potential risks",
-      next: "attest"
-    },
-    {
-      id: "develop-mitigation",
-      type: "action",
-      label: "Develop risk mitigation plan",
-      description: "Create a plan addressing identified risks. Consider: building a strong research team, assessing partner motivations, using sound cybersecurity and data management practices, and agreeing on intended use of research findings.",
-      policyRef: "NSGRP, Mitigation measures",
-      next: "attest"
-    },
-    {
-      id: "attest",
-      type: "action",
-      label: "All named researchers complete the attestation",
-      description: "All researchers with a named role on the grant must sign an attestation form confirming compliance with research security requirements. This is required as part of the federal grant application.",
-      policyRef: "NSGRP, Implementation",
-      next: "submit-raf"
-    },
-    {
-      id: "submit-raf",
-      type: "action",
-      label: "Submit Risk Assessment Form with application",
-      description: "Complete and submit the Risk Assessment Form along with your proposed risk mitigation measures as part of the grant application. The form will be reviewed by the funding agency in consultation with national security partners as appropriate.",
-      policyRef: "NSGRP, Implementation",
-      resourceLink: { url: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form", label: "Open Risk Assessment Form" },
-      next: "agency-review"
-    },
-    {
-      id: "agency-review",
-      type: "decision",
-      label: "Funding agency determines risk is acceptable?",
-      description: "The funding agency (NSERC, SSHRC, or CIHR), in consultation with national security partners, assesses the application. Even a well-mitigated RAF is subject to agency adjudication — the institution does not make the final determination. High-risk partnerships where risks cannot be appropriately mitigated will not be funded.",
-      policyRef: "NSGRP, Implementation",
-      yes: "end-proceed",
-      no: "end-declined"
-    },
-    {
-      id: "end-proceed",
-      type: "end",
-      label: "Partnership funded and approved",
-      description: "The funding agency has assessed the partnership as acceptable. Continue to monitor and manage risks throughout the lifecycle of the project."
-    },
-    {
-      id: "end-declined",
-      type: "end",
-      label: "Application not funded",
-      description: "The funding agency assessed the partnership as posing unacceptable national security risks that could not be appropriately mitigated. Consider restructuring the partnership or seeking alternative collaborators."
-    }
-  ]
+    { id: 'start', type: 'start', label: 'Identify the funding opportunity', description: 'This walkthrough covers the tri-agency NSGRP submission rule. Have your competition instructions available. CFI and other funders may implement separate processes.', next: 'program' },
+    { id: 'program', type: 'decision', label: 'Do the current competition instructions apply the NSGRP?', description: 'Check the specific NSERC, SSHRC or CIHR opportunity and competition date. Federal funding by itself does not answer this question.', yes: 'partner', no: 'outside', unknown: 'unknown' },
+    { id: 'partner', type: 'decision', label: 'Is at least one qualifying private-sector partner involved?', description: 'Include for-profit partners and organizations representing for-profit interests, including an industry association or consortium. The tri-agency definition excludes Canadian Crown corporations and producer groups. Mixed public/private partnerships can qualify.', yes: 'raf', no: 'no-private', unknown: 'unknown' },
+    { id: 'raf', type: 'action', label: 'Include the official Risk Assessment Form', description: 'An in-scope application with a qualifying private-sector partner requires the RAF even when no sensitivity or partner risk has been identified. Consider all relevant private-sector partners in the form.', next: 'assessment', resourceLink: { url: policySources.raf.url, label: 'Open the official RAF' } },
+    { id: 'assessment', type: 'decision', label: 'Have you identified risks that need mitigation?', description: 'Assess research and partner factors using the official form. A lack of identified risks does not remove the submission requirement. The toolkit worksheet is a preparation aid.', yes: 'mitigation', no: 'document', unknown: 'investigate', crossLink: { tool: 'risk-checklist', label: 'Open the preparation worksheet' } },
+    { id: 'mitigation', type: 'action', label: 'Describe measures addressing the identified risks', description: 'Connect each measure to evidence, a responsible person and ongoing implementation. Use proportionate measures without profiling researchers.', next: 'submit', crossLink: { tool: 'risk-mitigation', label: 'Explore mitigation measures' } },
+    { id: 'document', type: 'action', label: 'Record the basis of your assessment', description: 'Explain the information considered and complete the required form. Do not invent risk-free certification.', next: 'submit' },
+    { id: 'submit', type: 'end', label: 'Prepare the RAF for submission', description: 'Follow the competition submission instructions. The agency makes its funding decision. STRAC requirements must be considered separately; this walkthrough does not grant approval.', outcome: 'raf-required', crossLink: { tool: 'strac-flowchart', label: 'Check STRAC separately' } },
+    { id: 'outside', type: 'end', label: 'No RAF obligation established by this walkthrough', description: 'Follow the actual funding opportunity, institutional and contractual instructions. A result outside this tri-agency rule is not a general exemption from research-security duties.', outcome: 'outside-scope' },
+    { id: 'no-private', type: 'end', label: 'The qualifying private-partner trigger is absent', description: 'Under the rule examined here, that trigger for RAF submission is not met. Check for other program-specific requirements and assess the partnership proportionately.', outcome: 'no-private-partner' },
+    { id: 'investigate', type: 'end', label: 'Resolve assessment gaps before finalizing the RAF', description: 'The form is still required. Identify missing evidence and address unresolved risks using the competition guidance. Do not treat uncertainty as no risk.', outcome: 'raf-required-unresolved' },
+    { id: 'unknown', type: 'end', label: 'Confirm the program or partner definition', description: 'Use the official opportunity instructions and funder guidance to establish the missing fact. This walkthrough cannot determine the submission requirement from an unknown input.', outcome: 'needs-information' },
+  ],
 };

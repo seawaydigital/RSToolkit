@@ -1,4 +1,5 @@
-export const CATEGORIES = [
+import { releaseStatus } from './releaseStatus';
+const categoryDefinitions = [
   {
     id: 'policy-guides',
     label: 'Policy Guides',
@@ -10,7 +11,7 @@ export const CATEGORIES = [
         id: 'tri-agency-guide',
         name: 'Tri-Agency Research Security Guide',
         slug: 'tri-agency-guide',
-        description: 'Plain-language explainer of the tri-agency research security framework, 10 guiding principles, and the NSGRP and STRAC policies',
+        description: 'Source-backed introduction to the separate NSGRP and STRAC requirements',
         tags: ['tri-agency', 'nserc', 'cihr', 'sshrc', 'policy', 'guide', 'principles'],
         related: ['strac-flowchart', 'nsgrp-flowchart', 'stra-lookup'],
       },
@@ -42,32 +43,32 @@ export const CATEGORIES = [
   },
   {
     id: 'compliance-tools',
-    label: 'Compliance Tools',
+    label: 'Preparation Tools',
     emoji: '\u2705',
     primary: true,
-    description: 'Tools to check STRA, NRO affiliations, and assess risks',
+    description: 'Explore technology categories, organization names, and preparation topics',
     tools: [
       {
         id: 'stra-lookup',
-        name: 'STRA Lookup',
+        name: 'STRA Category Explorer',
         slug: 'stra-lookup',
-        description: 'Search and browse Sensitive Technology Research Areas with guided assessment',
-        tags: ['stra', 'technology', 'search', 'assessment', 'wizard'],
+        description: 'Browse official technology categories with keyword aids and your own recorded assessment',
+        tags: ['stra', 'technology', 'search', 'assessment', 'technologies sensibles'],
         related: ['strac-flowchart', 'nro-lookup'],
       },
       {
         id: 'nro-lookup',
-        name: 'NRO Lookup & Map',
+        name: 'NRO Lookup and Map',
         slug: 'nro-lookup',
-        description: 'Search Named Research Organizations with interactive map visualization',
-        tags: ['nro', 'organizations', 'map', 'search'],
+        description: 'Search official names and explore sourced locations with approximate distance comparisons',
+        tags: ['nro', 'organizations', 'search', 'map', 'locations', 'organisations de recherche nommées', 'ORN'],
         related: ['strac-flowchart', 'stra-lookup'],
       },
       {
         id: 'risk-checklist',
-        name: 'Risk Assessment Checklist',
+        name: 'Research Security Preparation Worksheet',
         slug: 'risk-checklist',
-        description: 'Interactive grant application risk assessment walkthrough',
+        description: 'Temporary worksheet that separates answered topics from unresolved concerns',
         tags: ['risk', 'checklist', 'assessment', 'grant'],
         related: ['nsgrp-flowchart', 'export-control'],
       },
@@ -75,17 +76,9 @@ export const CATEGORIES = [
         id: 'risk-mitigation',
         name: 'Risk Mitigation Guide',
         slug: 'risk-mitigation',
-        description: 'Practical measures to reduce research security risks — personnel, partners, data, legal, and monitoring',
+        description: 'Proportionate measures for people, partnerships, research data and ongoing review',
         tags: ['risk', 'mitigation', 'best practices', 'partners', 'security'],
         related: ['risk-checklist', 'nsgrp-flowchart', 'nro-lookup'],
-      },
-      {
-        id: 'dual-use',
-        name: 'Dual-Use Research Guide',
-        slug: 'dual-use',
-        description: 'Identify dual-use research, vet collaborators, and run due diligence — self-assessment, civilian-vs-military examples, red flags, and action steps',
-        tags: ['dual-use', 'dual use', 'military', 'vetting', 'collaborators', 'due diligence', 'assessment', 'mice'],
-        related: ['stra-lookup', 'nro-lookup', 'export-control'],
       },
     ],
   },
@@ -133,30 +126,15 @@ export const CATEGORIES = [
         id: 'cybersecurity-guide',
         name: 'Cybersecurity Best Practices',
         slug: 'cybersecurity-guide',
-        description: 'Plain-language guide to personal and operational security hygiene — 2FA, encryption, password managers, AI tool risks, and backup rules',
+        description: 'Source-backed practices for accounts, devices, approved services and recovery',
         tags: ['cybersecurity', 'security', 'encryption', 'passwords', '2fa', 'backup', 'ai', 'devices'],
-        related: ['risk-mitigation', 'stra-lookup', 'travel-security'],
-      },
-      {
-        id: 'travel-security',
-        name: 'Research Travel Security',
-        slug: 'travel-security',
-        description: 'Before/during/after checklist for protecting research, devices, and data on international travel — with emergency contacts',
-        tags: ['travel', 'international', 'conference', 'devices', 'border', 'abroad', 'checklist', 'field work'],
-        related: ['cybersecurity-guide', 'dual-use', 'report-concern'],
-      },
-      {
-        id: 'report-concern',
-        name: 'Report a Concern',
-        slug: 'report-concern',
-        description: 'What to do and who to contact when something goes wrong — lost devices, suspicious approaches, cyber incidents, undisclosed affiliations, or coercion',
-        tags: ['report', 'incident', 'concern', 'contact', 'csis', 'rcmp', 'cyber centre', 'foreign interference', 'help'],
-        related: ['cybersecurity-guide', 'travel-security', 'dual-use'],
+        related: ['risk-mitigation', 'stra-lookup'],
       },
     ],
   },
 ];
 
+export const CATEGORIES = categoryDefinitions.map(c => ({ ...c, tools: c.tools.filter(t => !releaseStatus.disabledTools.includes(t.id)) })).filter(c => c.tools.length);
 export const PRIMARY_CATEGORIES = CATEGORIES.filter(c => c.primary);
 export const MORE_CATEGORIES = CATEGORIES.filter(c => !c.primary);
 

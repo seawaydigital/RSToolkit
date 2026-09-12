@@ -1,0 +1,382 @@
+{
+  "reviewedOn": "2026-09-12",
+  "method": "Manually selected entity associations; source coordinate statements copied and range-checked. Source reporting is not independent geographic validation. Candidate requires review before publication.",
+  "mappedOrganizations": 54,
+  "sites": 55,
+  "excluded": [
+    {
+      "organizationId": "air-force-medical-university",
+      "entity": "Q5476138",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "airforce-harbin-flight-academy",
+      "entity": "Q10873028",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "army-academy-of-armored-forces",
+      "entity": "Q10873110",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "army-academy-of-border-and-coastal-defense",
+      "entity": "Q10873121",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "army-engineering-university",
+      "entity": "Q10873019",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "china-peoples-police-university",
+      "entity": "Q5100586",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "chinese-academy-of-engineering-physics",
+      "entity": "Q5099555",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "cas-institute-of-computing-technology",
+      "entity": "Q2118986",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "hefei-national-laboratory-for-physical-sciences-at-microscale",
+      "entity": "Q55361939",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "iranian-research-organization-for-science-and-technology",
+      "entity": "Q6067338",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "naval-university-of-engineering",
+      "entity": "Q10872997",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "peoples-armed-police-command-college",
+      "entity": "Q10872902",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "peoples-public-security-university-of-china",
+      "entity": "Q5100590",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "railway-police-college",
+      "entity": "Q15914809",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "rocket-force-command-college",
+      "entity": "Q10873093",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "rocket-force-university-of-engineering",
+      "entity": "Q10873092",
+      "reason": "No usable coordinate found on the reviewed entity or its linked pages."
+    },
+    {
+      "organizationId": "air-force-research-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "air-force-xian-flight-academy",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "airforce-flight-academy-shijiazhuang",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "airforce-logistics-university",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "army-research-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "ano-po-ksi",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "beijing-computational-science-research-centre",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "center-for-high-pressure-science-and-technology",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "chengdu-fine-optical-engineering-research-center",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "china-academy-of-electronics-and-information-technology",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "defence-industries-organization-training-and-research-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "engineering-university-of-the-capf",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "explosion-and-impact-technology-research-centre",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "institute-of-applied-physics-iran",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "institute-of-nbc-defense",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "key-laboratory-of-information-systems-engineering",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "logistics-university-of-pap",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "mps-institute-of-forensic-science",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "nanjing-institute-of-information-technology",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "naval-command-college",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "naval-petty-officer-academy",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "naval-research-academy",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "navy-logistics-academy",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "northwest-institute-of-nuclear-technology",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "officers-college-of-the-pap",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "pap-nco-college",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "peac-institute-of-multiscale-science",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "physics-research-center-iran",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "rocket-force-research-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "rocket-force-sergeant-school",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "27th-scientific-center-russian-mod",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "33rd-scientific-research-and-testing-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    },
+    {
+      "organizationId": "46th-tsnii-central-scientific-research-institute",
+      "reason": "No unambiguous location source selected. Legacy coordinates are not reused."
+    }
+  ],
+  "retrievals": [
+    {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q16655725%7CQ10872936%7CQ4671492%7CQ5908453%7CQ5476138%7CQ10873034%7CQ10873029%7CQ10873061%7CQ10873032%7CQ10873028%7CQ10873110%7CQ10872954%7CQ10873121%7CQ10873133%7CQ10873019%7CQ10872957%7CQ7784898%7CQ10872935%7CQ6124050%7CQ126960101%7CQ10873057%7CQ4857819%7CQ2299797%7CQ4881127%7CQ23101%7CQ4881210%7CQ7494343%7CQ5099558%7CQ10892862%7CQ5100586%7CQ5099555%7CQ2118986%7CQ4222416%7CQ1018771%7CQ23102%7CQ632558%7CQ55361939%7CQ649868%7CQ1165865%7CQ10872931%7CQ6067338%7CQ23006203%7CQ10872956%7CQ23110%7CQ3953805%7CQ6147859%7CQ831227%7CQ10872997%7CQ10873009%7CQ7443422&props=labels%7Cdescriptions%7Cclaims%7Cinfo%7Csitelinks&languages=en&format=json&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:07.905Z",
+      "sha256": "7b61d71699049adda2cf874acf49af6a0d0a9b412ba69ae765d8478ec8fa60f9"
+    },
+    {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q10873002%7CQ10902562%7CQ1041978%7CQ832550%7CQ17013593%7CQ10872902%7CQ5100590%7CQ15914809%7CQ10873093%7CQ10873092%7CQ609586%7CQ7461717%7CQ2096604%7CQ2281517%7CQ10873109%7CQ2031560%7CQ5971900%7CQ2492836%7CQ17066865%7CQ4310644&props=labels%7Cdescriptions%7Cclaims%7Cinfo%7Csitelinks&languages=en&format=json&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:08.285Z",
+      "sha256": "3f5de46a4cbfe582594399010813748cf343abd4c10cfbcfea8e10fc6932e114"
+    },
+    {
+      "url": "https://ru.wikipedia.org/w/api.php?action=query&titles=%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC+%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B8+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%90.+%D0%90.+%D0%A5%D0%B0%D1%80%D0%BA%D0%B5%D0%B2%D0%B8%D1%87%D0%B0+%D0%A0%D0%90%D0%9D&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:08.534Z",
+      "sha256": "3e5f306425eb07361d3be4da5eea2c8a8d705cbae4438d296e91492219043b7e"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Air+Force+Medical+University&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:08.792Z",
+      "sha256": "94b125001600c38cbb16d74912f7980dca9bd49ffc9ca603fdc9162e24f0919e"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E7%A9%BA%E5%86%9B%E5%86%9B%E5%8C%BB%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.162Z",
+      "sha256": "701378916f1282aa55d3b5286af07ee15e4681a8694e378aa39252fddc7f51fc"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Harbin+Flight+Academy&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.284Z",
+      "sha256": "8e38955492babd463d8210be3cf878c7563f260574994aea3f9c5cb5c640b679"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E7%A9%BA%E5%86%9B%E5%93%88%E5%B0%94%E6%BB%A8%E9%A3%9E%E8%A1%8C%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.414Z",
+      "sha256": "55061a4f6efb20dc50baa85e77f8f7e849412d036b67d2f2ef72fefce3d4b4ca"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Army+Academy+of+Armored+Forces&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.551Z",
+      "sha256": "b211f69e12290825049b9133be8240f7b27d95eba4ebe7c0eaf0d801ea7c0be3"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E9%99%86%E5%86%9B%E8%A3%85%E7%94%B2%E5%85%B5%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.684Z",
+      "sha256": "e3a495839a3a5cdd0b89a44f05fa36a6fa0d5b93579387a478db845fd7946882"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Army+Academy+of+Border+and+Coastal+Defence&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:09.991Z",
+      "sha256": "686b431a2a3cbcb14403e5a53c47ffd9b0544a818bb624b17ba68d88b4ddf443"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E9%99%86%E5%86%9B%E8%BE%B9%E6%B5%B7%E9%98%B2%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.087Z",
+      "sha256": "a5d1041784a40d62a6d1b46e2c5b3ac65fb436224376868eb7aa3f90e53436fd"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E9%99%86%E5%86%9B%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.214Z",
+      "sha256": "6e4210d8f59f469cbce17c1b9b74e74ec780764f2e6d42c53298282103d5a860"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=China+People%27s+Police+University&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.319Z",
+      "sha256": "65a89c5e11738b149e411043acc540ae603c7be85a904d4a492a9dd3a52e8a15"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%AD%A6%E5%AF%9F%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.468Z",
+      "sha256": "bdb71a3a063eb215e7d2fb4ad6709578c0030197ec51f47836a2df173709e4e7"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=China+Academy+of+Engineering+Physics&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.636Z",
+      "sha256": "37932fad4270809d916899ed57065ad301d5cd228ca89dc806440401969c62a8"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E5%B7%A5%E7%A8%8B%E7%89%A9%E7%90%86%E7%A0%94%E7%A9%B6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.747Z",
+      "sha256": "09a8069ec4eac565fb6441a3b61f415bccb25c3bd3c111eab34ce6bff1c606fb"
+    },
+    {
+      "url": "https://ru.wikipedia.org/w/api.php?action=query&titles=%D0%9A%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F+%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F+%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%D0%B9+%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.831Z",
+      "sha256": "43842ae640da0769ea0a754d8907ee880b690d04f0e97b7bb2db20dafe23c2cb"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Institute+of+Computing+Technology&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:10.977Z",
+      "sha256": "54a19d46c243e7dd773c455aa3828b6edc76da98271e8d7817ff39eb183ed1a5"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E6%89%80&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:11.110Z",
+      "sha256": "31a0997a8e8e72edffbdfe317b65b7ea6f6a4ec6a890002ca6dd442376815b1a"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Iranian+Research+Organization+for+Science+and+Technology&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:11.329Z",
+      "sha256": "18a311a0fac671009813bb84d689b9a9ab2cf6b19a9b06556da09fc44a4086da"
+    },
+    {
+      "url": "https://fa.wikipedia.org/w/api.php?action=query&titles=%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86+%D9%BE%DA%98%D9%88%D9%87%D8%B4%E2%80%8C%D9%87%D8%A7%DB%8C+%D8%B9%D9%84%D9%85%DB%8C+%D9%88+%D8%B5%D9%86%D8%B9%D8%AA%DB%8C+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:11.604Z",
+      "sha256": "dbd357e8d5cc914e8044fbc7398dce2e4afbc5f04b85a25b240001e1728f0e95"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=PLA+Naval+University+of+Engineering&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:11.743Z",
+      "sha256": "2a99318822f6bf08f4c491f6ca6cc6774547765fd9b6e499356be15974a378c2"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E6%B5%B7%E5%86%9B%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:11.838Z",
+      "sha256": "d21453f497a4c394a9a50132412f7c4e3b853de8709cad226008c3b0574b73f2"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=North+University+of+China&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.002Z",
+      "sha256": "5a70777a04d0fc3755806678cff5faf5a1a959a8c2bf8ab041584bfd4304fa77"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E6%AD%A6%E8%A3%85%E8%AD%A6%E5%AF%9F%E9%83%A8%E9%98%9F%E6%8C%87%E6%8C%A5%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.127Z",
+      "sha256": "c674a180fdffcd26679e06a8c1a07cbcfb0be639dce051147f87a88603af1229"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=People%27s+Public+Security+University+of+China&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.277Z",
+      "sha256": "dcd3e8cbeef7ff93fc7d38be457b39323e3ac289d7afc05c73469c50c3af1e71"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%85%AC%E5%AE%89%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.370Z",
+      "sha256": "eed9e7159d4e987489248f051af793f531afe5e3837d979ec142c5081e880f29"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E9%83%91%E5%B7%9E%E8%AD%A6%E5%AF%9F%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.509Z",
+      "sha256": "afe8041e00394df530a726a25f1e257085119ebbec776861e8217fed5e61c8cd"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Rocket+Force+Command+College&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.645Z",
+      "sha256": "8ff03683650d66bc42b5915b0ae4ea6063c45ce3be570bd99dbd2ca28b51f62a"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E7%81%AB%E7%AE%AD%E5%86%9B%E6%8C%87%E6%8C%A5%E5%AD%A6%E9%99%A2&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.752Z",
+      "sha256": "f3b7f57f077a8d113adf64aa04e97caec9f629d84001a4c7c2829137a2db5820"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Rocket+Force+University+of+Engineering&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:12.908Z",
+      "sha256": "343fc02b8c93916f219aa4834816278dcfb021b54cded9bf8470a913b5714f57"
+    },
+    {
+      "url": "https://zh.wikipedia.org/w/api.php?action=query&titles=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E7%81%AB%E7%AE%AD%E5%86%9B%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6&prop=coordinates%7Cpageprops%7Crevisions&rvprop=ids&coprop=type%7Cdim%7Cname%7Cglobe&format=json&formatversion=2&maxlag=5",
+      "retrievedAt": "2026-09-12T17:23:13.028Z",
+      "sha256": "e0e138a752f463d978ccba101ccab0a3f552c2dbdaa585112336a755efce6300"
+    }
+  ]
+}
