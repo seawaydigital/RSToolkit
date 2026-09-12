@@ -11,6 +11,11 @@
 .tool-page button, .context-bar button, .native-dialog button { border: 1px solid var(--border-strong); border-radius: 6px; color: var(--text-primary); background: var(--bg-elevated); padding: 10px 16px; min-height: 44px; font: inherit; cursor: pointer; }
 .tool-page button:hover, .context-bar button:hover, .native-dialog button:hover { border-color: var(--accent-soft); background: var(--bg-card-hover); }
 .topbar-logo { background: transparent; border: 0; padding: 6px; min-height: 44px; }
+.topbar-menu-btn, .topbar-search-btn { min-height: 44px; min-width: 44px; }
+@media (max-width: 767px) {
+  .sidebar { background: var(--bg-secondary); }
+  .sidebar:not(.sidebar--open) { visibility: hidden; pointer-events: none; }
+}
 .tool-page p { margin: 10px 0; }
 .tool-page ul, .tool-page ol { padding-left: 24px; }
 .tool-page li { margin: 6px 0; }
@@ -19,6 +24,8 @@
 .source-note { color: var(--text-secondary); font-size: 13px; line-height: 1.6; margin: 16px 0; overflow-wrap: anywhere; }
 .source-note ul { padding-left: 18px; }
 .source-note span { color: var(--text-muted); }
+.tool-page a { text-decoration: underline; text-underline-offset: 3px; }
+@media print { .source-note > .print-only { display: none !important; } }
 .notice { border-left: 3px solid var(--gold); padding: 14px 18px; background: var(--bg-tertiary); border-radius: 4px; margin: 18px 0; }
 .scope-note { color: var(--text-secondary); font-size: 14px; }
 .review-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 22px; margin: 18px 0; min-width: 0; overflow-wrap: anywhere; }
@@ -49,6 +56,8 @@ summary { cursor: pointer; font-weight: 600; min-height: 44px; padding: 8px 0; }
 .native-dialog .search-modal-result { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; width: 100%; margin: 8px 0; text-align: left; }
 .native-dialog .search-modal-results { max-height: none; }
 @media (max-width: 640px) {
+  .topbar-search-btn { width: 44px; min-width: 44px; padding: 10px; justify-content: center; }
+  .topbar-search-label, .topbar-search-kbd { display: none; }
   .home-card-grid, .home-scenario-grid { grid-template-columns: minmax(0, 1fr); }
   .home, .home-hero, .home-section { min-width: 0; overflow-wrap: anywhere; }
   .home-hero-eyebrow, .home-section-head { flex-wrap: wrap; }

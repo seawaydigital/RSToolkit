@@ -31,7 +31,7 @@ export default function Topbar({ onMenuToggle, showMenuButton, onLogoClick, onSe
       <div className="topbar-right">
         <button
           className="topbar-search-btn"
-          onClick={onSearchOpen}
+          onClick={event => { event.currentTarget.focus(); onSearchOpen(); }}
           aria-label="Find a tool (Ctrl+K)"
           title="Find a tool (Ctrl+K)"
         >

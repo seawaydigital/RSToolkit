@@ -1,0 +1,4 @@
+export const corrections = [
+ { date: '2026-09-12', version: '0.1.0-rc.1', title: 'RAF submission and policy scope corrected', text: 'Earlier versions could waive an NSGRP Risk Assessment Form based on risk answers. This candidate instead checks the competition and qualifying private-partner submission conditions. It also separates STRAC role/connection requirements and Ontario disclosure definitions. Recheck earlier working outputs against the official instructions.' },
+ { date: '2026-09-12', version: '0.1.0-rc.1', title: 'Organization and technology lookup scope changed', text: 'Map/proximity results and external geocoding are removed. STRA likelihood results are replaced with category exploration. NRO aliases are grouped under the official 103-entry structure. Previous location or likelihood outputs are not validated by this release.' },
+];

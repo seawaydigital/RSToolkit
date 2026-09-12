@@ -1,0 +1,15 @@
+import { readFile, readdir } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const files = await readdir('dist/assets');
+const assetFiles = files.filter(f => /\.(js|css)$/.test(f));
+assert(assetFiles.length > 10, 'Build scan did not find the expected assets');
+const text = (await Promise.all(assetFiles.map(f => readFile('dist/assets/' + f, 'utf8')))).join('\n');
+for (const value of ['nominatim.openstreetmap.org', 'photon.komoot.io', 'fonts.googleapis.com', 'fonts.gstatic.com', 'basemaps.cartocdn.com', 'api.mapbox.com', 'en.wikipedia.org/w/api.php']) assert(!text.includes(value), 'Unexpected remote provider: ' + value);
+assert(!files.some(f => /DualUseGuide|TravelSecurity|ReportConcern|straWizard/.test(f)), 'Excluded tool in build');
+const html = await readFile('dist/index.html', 'utf8');
+assert(html.includes("script-src 'self';"));
+assert(!html.includes("script-src 'self' 'unsafe-inline'"));
+assert(!html.includes('frame-ancestors'), 'Anti-framing must be a response header');
+await readFile('dist/THIRD_PARTY_NOTICES.txt');
+await readFile('dist/LICENSE.txt');
+console.log('Built assets: local providers, excluded tools and license checks passed.');

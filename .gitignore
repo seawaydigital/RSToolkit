@@ -32,3 +32,8 @@ artifacts/
 test-results/
 playwright-report/
 .vitest/
+.env
+.env.*
+!.env.example
+public/THIRD_PARTY_NOTICES.txt
+public/LICENSE.txt

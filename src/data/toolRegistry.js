@@ -1,4 +1,5 @@
-export const CATEGORIES = [
+import { releaseStatus } from './releaseStatus';
+const categoryDefinitions = [
   {
     id: 'policy-guides',
     label: 'Policy Guides',
@@ -133,6 +134,7 @@ export const CATEGORIES = [
   },
 ];
 
+export const CATEGORIES = categoryDefinitions.map(c => ({ ...c, tools: c.tools.filter(t => !releaseStatus.disabledTools.includes(t.id)) })).filter(c => c.tools.length);
 export const PRIMARY_CATEGORIES = CATEGORIES.filter(c => c.primary);
 export const MORE_CATEGORIES = CATEGORIES.filter(c => !c.primary);
 

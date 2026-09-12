@@ -1,0 +1,191 @@
+[
+  {
+    "id": "ecl",
+    "url": "https://www.international.gc.ca/trade-commerce/controls-controles/ecl-lec/index.aspx?lang=eng",
+    "finalUrl": "https://www.international.gc.ca/trade-commerce/controls-controles/ecl-lec/index.aspx?lang=eng",
+    "status": 200,
+    "title": "A Guide to Canada’s Export Control List (ECL)",
+    "sha256": "3134f7c309c668296e4adfa24e7c2ccbf62a457136e6166da23fcd1c454065ab",
+    "checkedAt": "2026-09-12T13:25:12.608Z"
+  },
+  {
+    "id": "nsgrp",
+    "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+    "finalUrl": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-guidance",
+    "status": 200,
+    "title": "Tri-agency guidance on the National Security Guidelines for Research Partnerships (NSGRP) | Natural Sciences and Engineering Research Council of Canada",
+    "sha256": "c5f21ed358d1a4ef22bcc96f04c86eb0f41dd25298122a7d8bd8e71468941485",
+    "checkedAt": "2026-09-12T13:25:12.800Z"
+  },
+  {
+    "id": "nsgrpFramework",
+    "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+    "finalUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+    "status": 200,
+    "title": "National Security Guidelines for Research Partnerships",
+    "sha256": "450861707083689314730e62e6775b205cc80ea46397f6f2d5b2a3f75ff422d5",
+    "checkedAt": "2026-09-12T13:25:14.641Z"
+  },
+  {
+    "id": "raf",
+    "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+    "finalUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form",
+    "status": 200,
+    "title": "The National Security Guidelines for Research Partnerships’ Risk Assessment Form",
+    "sha256": "440bf72ce4914d10856332f7623554d57a09a391bd9b74da0831ff3e6afe3e4e",
+    "checkedAt": "2026-09-12T13:25:14.433Z"
+  },
+  {
+    "id": "strac",
+    "url": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+    "finalUrl": "https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/research-security/tri-agency-0",
+    "status": 200,
+    "title": "Tri-agency guidance on the Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy) | Natural Sciences and Engineering Research Council of Canada",
+    "sha256": "5de82ffbec9bb941820c3664b6b4427f2fe320cc0b4fb88a649fb9d74be2754d",
+    "checkedAt": "2026-09-12T13:25:12.947Z"
+  },
+  {
+    "id": "stracFaq",
+    "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+    "finalUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/frequently-asked-questions-faq-policy-sensitive-technology-research-and-affiliations-concern",
+    "status": 200,
+    "title": "Frequently Asked Questions (FAQ): Policy on Sensitive Technology Research and Affiliations of Concern",
+    "sha256": "da3cf44730c759ff8ad6e202dbdfa67d1c505bffaf901b71650c116de7928126",
+    "checkedAt": "2026-09-12T13:25:14.959Z"
+  },
+  {
+    "id": "nro",
+    "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+    "finalUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+    "status": 200,
+    "title": "Named Research Organizations",
+    "sha256": "50ec22a30475c6d357bd252528ae3bc6c8ed8807cd2f515d0e4c97c906568150",
+    "checkedAt": "2026-09-12T13:25:13.855Z"
+  },
+  {
+    "id": "stra",
+    "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+    "finalUrl": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
+    "status": 200,
+    "title": "Sensitive Technology Research Areas",
+    "sha256": "030ff42ee4e36e3f7a3991d92edd90324545fad064ad06308d63fb557b6129bc",
+    "checkedAt": "2026-09-12T13:25:13.859Z"
+  },
+  {
+    "id": "ontario",
+    "url": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+    "finalUrl": "https://forms.mgcs.gov.on.ca/dataset/875d7629-9ddc-4545-a1c3-881ece0cb3a3/resource/6219fff3-aa2e-49ae-955c-0ebbd21059f1/download/on00708e.pdf",
+    "status": 200,
+    "title": "PDF (inspect separately)",
+    "sha256": "b1f2361b1766a9ee45f26bd75bf7007322c413b34e0fe7236a28b953e72fc62d",
+    "checkedAt": "2026-09-12T13:25:13.607Z"
+  },
+  {
+    "id": "ontarioForms",
+    "url": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+    "finalUrl": "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
+    "status": 200,
+    "title": "Research Security Guidelines for Ontario Research Funding Programs - Forms - Central Forms Repository (CFR)",
+    "sha256": "a9bc1015e410d7d021250b392d10212eb01838d7f9b0645f0ed097e9cf10fe9c",
+    "checkedAt": "2026-09-12T13:25:12.879Z"
+  },
+  {
+    "id": "exports",
+    "url": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+    "finalUrl": "https://www.international.gc.ca/trade-commerce/controls-controles/reports-rapports/ebc_handbook-cce_manuel.aspx?lang=eng",
+    "status": 200,
+    "title": "Export and brokering controls handbook",
+    "sha256": "ce01852ae91abfadd31a455591ee8cf042080393cd017070c0f38e5fda14770a",
+    "checkedAt": "2026-09-12T13:25:13.238Z"
+  },
+  {
+    "id": "goods",
+    "url": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+    "finalUrl": "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods/about-program/program-registration-exemptions.html",
+    "status": 200,
+    "title": "Exemptions from registration in the Controlled Goods Program - Canada.ca",
+    "sha256": "7d57287c17d568b575e16666ce7f6787786e0c1047c85c98dcb1f9ce7fd5a15b",
+    "checkedAt": "2026-09-12T13:25:12.706Z"
+  },
+  {
+    "id": "sanctions",
+    "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+    "finalUrl": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng",
+    "status": 200,
+    "title": "Canadian sanctions guidance — Academic and research sector",
+    "sha256": "12abc17f511cb64af1b9c0c5d8d7e8d80e1358afdfaf5f9917596086f00289af",
+    "checkedAt": "2026-09-12T13:25:12.786Z"
+  },
+  {
+    "id": "privacy",
+    "url": "https://www.priv.gc.ca/en/privacy-topics/airports-and-borders/gl_dab_090127/?wbdisable=true",
+    "finalUrl": "https://www.priv.gc.ca/en/privacy-topics/airports-and-borders/gl_dab_090127/?wbdisable=true",
+    "status": 200,
+    "title": "Guidelines for processing personal data across borders - Office of the Privacy Commissioner of Canada",
+    "sha256": "ece5dd5596f63bee3a58fc1e83987c3f296ecae8cc7017843f8a2eed00f10a86",
+    "checkedAt": "2026-09-12T13:25:12.738Z"
+  },
+  {
+    "id": "ocap",
+    "url": "https://fnigc.ca/ocap-training/",
+    "finalUrl": "https://fnigc.ca/ocap-training/",
+    "status": 403,
+    "title": "Attention Required! | Cloudflare",
+    "sha256": "cef8bf6385a966baa2d6fea912d8cdfc3a27266a5070913d2d0de9b63750c66e",
+    "checkedAt": "2026-09-12T13:25:12.633Z"
+  },
+  {
+    "id": "lakeheadRdm",
+    "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+    "finalUrl": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/research-data-management",
+    "status": 200,
+    "title": "Research Data Management | Lakehead University",
+    "sha256": "e688e55d71453019f497a9ca2dc925e125ed398021eb86cb4c63f4433b4023b8",
+    "checkedAt": "2026-09-12T13:25:12.694Z"
+  },
+  {
+    "id": "lakeheadHelp",
+    "url": "https://www.lakeheadu.ca/research-and-innovation/support",
+    "finalUrl": "https://www.lakeheadu.ca/research-and-innovation/support",
+    "status": 200,
+    "title": "Who Can Help Me? | Lakehead University",
+    "sha256": "f7d0bb74e850248a34759a032c101030b57d311bbbb08bc964acf1eac425e44f",
+    "checkedAt": "2026-09-12T13:25:12.726Z"
+  },
+  {
+    "id": "lakeheadCyber",
+    "url": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+    "finalUrl": "https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity",
+    "status": 200,
+    "title": "Cyber Security | Lakehead University",
+    "sha256": "63bc8c8347455f348eda98d19f41842b86e880f6776a26ddeadfd72e13d9ae60",
+    "checkedAt": "2026-09-12T13:25:13.109Z"
+  },
+  {
+    "id": "lakeheadReb",
+    "url": "https://www.lakeheadu.ca/sites/default/files/uploads/111/Guideline%20-%20Use%20of%20online%20tools%20for%20research%20involving%20human%20participants%2C%20REVISED%202026.pdf",
+    "finalUrl": "https://www.lakeheadu.ca/sites/default/files/uploads/111/Guideline%20-%20Use%20of%20online%20tools%20for%20research%20involving%20human%20participants%2C%20REVISED%202026.pdf",
+    "status": 200,
+    "title": "PDF (inspect separately)",
+    "sha256": "0a1ce4327202ce64526ae491ea6eb3a22e8b51d9d760a61c38832df4dc845194",
+    "checkedAt": "2026-09-12T13:25:12.775Z"
+  },
+  {
+    "id": "cyber",
+    "url": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+    "finalUrl": "https://www.cyber.gc.ca/en/guidance/baseline-cyber-security-controls-small-and-medium-organizations",
+    "status": 200,
+    "title": "Baseline cyber security controls for small and medium organizations - Canadian Centre for Cyber Security",
+    "sha256": "19f742a07ece134706bfb27994712e9c322c55a61fe4f23d2b85ffa56212e357",
+    "checkedAt": "2026-09-12T13:25:13.090Z"
+  },
+  {
+    "id": "appleEncryption",
+    "url": "https://support.apple.com/en-ca/guide/disk-utility/dskutl11888/mac",
+    "finalUrl": "https://support.apple.com/en-ca/guide/disk-utility/dskutl11888/mac",
+    "status": 200,
+    "title": "Create a disk image using Disk Utility on Mac - Apple Support (CA)",
+    "sha256": "11e4bb7c6fa9f413414900427ace5f1c3fdc643067930cad97e29870417fc16e",
+    "checkedAt": "2026-09-12T13:25:13.180Z"
+  }
+]

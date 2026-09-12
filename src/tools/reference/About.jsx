@@ -1,6 +1,7 @@
 import { policySources, CONTENT_VERSION } from '../../data/policySources';
 import { releaseStatus } from '../../data/releaseStatus';
 import SupportLinks from '../../components/ui/SupportLinks';
+import { corrections } from '../../data/corrections';
 
 export default function About() {
   return <div className="tool-page">
@@ -23,9 +24,11 @@ export default function About() {
       <p>For an urgent research or cybersecurity incident, follow your institution’s reporting process. The toolkit is not an emergency response service.</p>
     </section>
     <section className="review-card"><h2>Verification and limitations</h2>
-      <p>This candidate is undergoing source, code, browser, accessibility and print checks. It has not received an independent security audit or formal accessibility certification. Release evidence and remaining checks are maintained in the repository’s launch closure record.</p>
+      <p>The release process checks policy scenarios, data integrity, browser journeys, automated accessibility findings and printed output. It has not received an independent security audit or formal accessibility certification. Actual results and remaining checks are recorded in the repository’s launch closure record.</p>
+      <p><a href="./THIRD_PARTY_NOTICES.txt">Third-party software and font notices</a> · <a href="./LICENSE.txt">Software license</a>. Linked policies and third-party marks retain their own terms.</p>
       <p>Guidance may change after a check. Verification dates are toolkit review dates, not a guarantee that a source remains current. Overdue policy paths stop providing definitive results and retain official links. Material corrections require a new release; previously printed copies cannot update themselves.</p>
     </section>
+    <section className="review-card"><h2>Correction record</h2>{corrections.map(c => <article key={c.title}><h3>{c.title}</h3><p>{c.date} · {c.version}</p><p>{c.text}</p></article>)}</section>
     <section><h2>Source register</h2><p>Source dates and toolkit verification are recorded separately. Use the version applicable to your application or award.</p>
       {Object.entries(policySources).map(([id, s]) => <article className="review-card" key={id}><h3><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a></h3><p>{s.section}</p><p>Source version: {s.version || 'not asserted'} · Toolkit verified: {s.verifiedOn} · Review due: {s.reviewDue}</p></article>)}
     </section><SupportLinks />

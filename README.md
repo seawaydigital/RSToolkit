@@ -1,101 +1,48 @@
 # Research Security Toolkit
 
-A free, open-source web toolkit helping Canadian researchers and research administrators navigate federal research security policies. No login, no backend — 100% client-side, deployed to GitHub Pages.
+A static, English-language reference and preparation resource for Canadian researchers and research security professionals. Operator: Andrew Austin at Lakehead University. Contact: security.research@lakeheadu.ca. Institutional links and the operator's affiliation do not assert formal endorsement.
 
-**Live site → [seawaydigital.github.io/RSToolkit](https://seawaydigital.github.io/RSToolkit/)**
+**Release candidate 0.1.0-rc.1.** This branch implements the [two-person launch plan](docs/two-person-launch-plan.md). See the [closure record](docs/launch-closure-record.md) for evidence and remaining release decisions. The live rs.rdmtoolkit.ca site is separate from this unpromoted candidate.
 
----
+## Scope
 
-## What's Inside
+Twelve tools cover selected federal and Ontario requirements, official NRO names/aliases, STRA categories, preparation worksheets, mitigation, export/sanctions references, cybersecurity, FAQ and glossary. They do not issue funding, legal or institutional clearance.
 
-### 📜 Policy Guides
-| Tool | Description |
-|---|---|
-| Tri-Agency Research Security Guide | Plain-language explainer of the federal granting agencies' research security framework, 10 guiding principles, NSGRP and STRAC policies |
-| STRAC Policy Flowchart | Interactive decision flow for the Policy on Sensitive Technology Research and Affiliations of Concern |
-| NSGRP Flowchart | National Security Guidelines for Research Partnerships — decision flow with cross-links to the Risk Assessment Form |
-| Ontario RS Guidelines | Ontario Research Security Guidelines decision flow |
+- NRO: 103 official organization entries, 252 aliases; exact names, aliases and possible candidates are labelled separately.
+- STRA: 11 categories, 74 named subcategories and one explicitly labelled category overview. User assessment replaces the old likelihood classifier.
+- Worksheets are temporary unless explicitly saved to this browser. A new worksheet starts blank; resume is explicit and version-validated.
+- Search runs locally. No map, geocoder, analytics or remote fonts are used. Hosting access logs and external links still have their own privacy implications.
+- dual-use, travel-security and report-concern, added on newer master after the audit baseline, are preserved in source but unavailable in this bounded release.
 
-### ✅ Compliance Tools
-| Tool | Description |
-|---|---|
-| STRA Lookup | Search and browse Sensitive Technology Research Areas; includes a guided assessment wizard |
-| NRO Lookup & Map | Search all 126 Named Research Organizations with an interactive map, proximity search, and sanctioned-country flags |
-| Risk Assessment Checklist | Interactive NSGRP-sourced grant risk checklist with 3-state toggles and print support |
-| Risk Mitigation Guide | 22 practical measures across 5 categories — personnel, partners, data, legal, monitoring |
+## Develop and verify
 
-### 📖 Reference
-| Tool | Description |
-|---|---|
-| Export Control Quick Reference | Searchable reference for EIPA, Controlled Goods List, Defence Production Act, sanctions, and the UN Act |
-| Glossary / Jargon Decoder | Official definitions for 12 key research security terms from Canadian and Ontario Government sources |
-| Research Security FAQ | 24 answers to common questions about STRAC, NRO, NSGRP, export controls, and compliance |
+Use Node 24.21.0 and npm. No API keys are needed.
 
-### 🔒 Operational Security
-| Tool | Description |
-|---|---|
-| Cybersecurity Best Practices | Day-to-day security hygiene for researchers — 2FA, device encryption, password managers, AI tool risks, backup rules, and sensitive data storage guidance |
-
----
-
-## Tech Stack
-
-| Layer | Choice |
-|---|---|
-| Framework | React 19 + Vite |
-| Routing | Hash-based, no router library |
-| Search | Fuse.js (fuzzy, threshold 0.35) |
-| Map | Leaflet + react-leaflet + leaflet.markercluster |
-| Icons | lucide-react |
-| Flowcharts | dagre layout engine |
-| Styling | Single CSS file with CSS custom properties |
-| Deployment | GitHub Actions → GitHub Pages |
-
----
-
-## Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start dev server (localhost:5173)
-npm run dev
-
-# Production build
-npm run build
+```text
+npm ci
+npm run verify
+npx playwright install chromium firefox webkit
+npm run test:e2e
+node scripts/serve-candidate.js
 ```
 
----
+The last command serves the production build at http://127.0.0.1:4187 with the candidate response headers. It is a loopback verification server, not a production service. npm run dev provides Vite development mode. Set BASE_PATH only when hosting under a subdirectory.
 
-## Adding a New Tool
+Source maintenance tools produce review artifacts and do not automatically publish or approve new guidance:
 
-1. Create `src/data/<toolData>.js` — export a named const with `lastUpdated`, `sourceUrl`, and content
-2. Create `src/tools/<category>/<ToolName>.jsx` — accepts `{ onNavigate }` prop
-3. Register in `src/data/toolRegistry.js` under the appropriate `CATEGORIES` entry
-4. Add lazy import to `TOOL_COMPONENTS` in `src/App.jsx`
-5. Add CSS classes to `src/styles/global.css` (use a consistent `xx-` prefix for the new tool)
-6. Update `CLAUDE.md` with the new tool, data file, and any new conventions
+```text
+node scripts/check-sources.js
+node scripts/reconcile-nro.js
+node scripts/reconcile-stra.js
+node scripts/build-release-manifest.js
+```
 
-See `CLAUDE.md` for full architecture details and conventions.
+An HTTP success means availability, not policy correctness. FNIGC may reject automated fetches; record manual source inspection instead of suppressing the failure.
 
----
+## Release and maintenance
 
-## Data Sources
+[Operations runbook](docs/operations-runbook.md), [owner acceptance script](docs/owner-acceptance.md), [policy matrix](docs/policy-rule-matrix.md), [accessibility scope](ACCESSIBILITY.md), [security reporting](SECURITY.md).
 
-All policy content is drawn from official Canadian Government sources:
+CI requires lint, unit/policy tests, data/source-date integrity, a production build, browser tests and an advisory check. It uploads a candidate artifact; it has no publication step. Choose a host that supports the supplied response headers and verify actual responses after authorized deployment. GitHub Pages cannot apply the supplied custom header files.
 
-- [Safeguarding Your Research](https://science.gc.ca/site/science/en/safeguarding-your-research) — Government of Canada
-- [STRAC Policy](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-and-affiliations-concern) — Government of Canada
-- [NSGRP](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships) — Government of Canada
-- [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/named-research-organizations) — Government of Canada
-- [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-universities-researchers-and-sponsors/sensitive-technology-research-areas) — Government of Canada
-- [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario
-- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security) — NSERC/CIHR/SSHRC
-- [Cybersecurity guidance](https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity) — Lakehead University
-
----
-
-## Disclaimer
-
-This toolkit is provided for informational purposes only. It is not legal advice. Always consult your institution's Research Security or Research Ethics office and refer to official Government of Canada sources for authoritative policy guidance.
+The original software license is [MIT](LICENSE), retained from master. Third-party software/font notices are generated into the build from the installed packages. Government policies, linked works and third-party marks retain their own terms. OCAP® is a registered trademark of FNIGC.

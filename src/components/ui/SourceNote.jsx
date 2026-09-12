@@ -1,8 +1,9 @@
-import { CONTENT_VERSION, policySources, sourcesCurrent } from '../../data/policySources';
+import { CONTENT_VERSION, policySources } from '../../data/policySources';
+import { useSourceCurrency } from '../../hooks/useSourceCurrency';
 
 export default function SourceNote({ ids, location }) {
   const unique = [...new Set(ids)];
-  const current = sourcesCurrent(unique);
+  const current = useSourceCurrency(unique);
   return (
     <div className="source-note">
       <ul>{unique.map(id => {

@@ -1,6 +1,6 @@
-export default function MainContent({ children }) {
+export default function MainContent({ children, inert }) {
   return (
-    <main className="main-content" id="main-content" tabIndex={-1}>
+    <main className="main-content" id="main-content" tabIndex={-1} inert={inert}>
       {children}
     </main>
   );

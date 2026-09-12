@@ -64,6 +64,9 @@ test('global tool search traps keyboard focus and restores it on Escape', async 
  }
  await page.keyboard.press('Escape');
  await expect(dialog).toHaveCount(0); await expect(opener).toBeFocused();
+ await page.keyboard.press('Control+k');
+ await expect(page.getByLabel('Tool name, policy or topic')).toBeFocused();
+ await page.keyboard.press('Escape'); await expect(opener).toBeFocused();
 });
 test('worksheet requires explicit saving and resume; new assessment and undo are isolated', async ({ page }) => {
  await go(page, 'risk-checklist');
@@ -143,15 +146,57 @@ test('real candidate response headers enforce the configured document policy', a
  expect(headers['referrer-policy']).toBe('no-referrer');
  expect((await request.get('/assets/nonexistent.js')).status()).toBe(404);
 });
+test('browser blocks inline script injection under the real candidate CSP', async ({ page }) => {
+ await go(page, 'nro-lookup');
+ await page.evaluate(() => {
+  window.syntheticInjected = false;
+  const script = document.createElement('script');
+  script.textContent = 'window.syntheticInjected = true';
+  document.head.append(script);
+ });
+ expect(await page.evaluate(() => window.syntheticInjected)).toBe(false);
+});
 for (const route of routes) test('accessible and reflowing route: ' + (route || 'home'), async ({ page, browserName }) => {
  await go(page, route);
+ for (const summary of await page.locator('.screen-only details > summary').all()) await summary.click();
  const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
  expect(result.violations.map(v => ({ id: v.id, nodes: v.nodes.map(n => n.target) }))).toEqual([]);
  await page.setViewportSize({ width: 320, height: 900 });
+ await expect(page.locator('#tool-navigation')).toHaveAttribute('inert', '');
+ expect(await page.locator('.topbar').evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
  expect(await page.locator('main').evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
  if (browserName === 'chromium' && ['', 'risk-checklist', 'nro-lookup'].includes(route)) {
   await mkdir('artifacts/verification', { recursive: true });
   await page.screenshot({ path: 'artifacts/verification/' + (route || 'home') + '-320.png', fullPage: true });
  }
+});
+test('excluded newer tools have a clear unavailable route', async ({ page }) => {
+ for (const route of ['dual-use', 'travel-security', 'report-concern']) {
+  await go(page, route); await expect(page.getByRole('heading', { name: 'Tool unavailable', exact: true })).toBeVisible();
+ }
+});
+test('source review expiry is applied when a long-lived tab becomes visible', async ({ page }) => {
+ await go(page, 'nsgrp-flowchart');
+ await expect(page.getByRole('button', { name: 'Continue', exact: true })).toBeVisible();
+ await page.clock.setFixedTime(new Date('2026-10-13T12:00:00Z'));
+ await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+ await expect(page.getByText(/This walkthrough is awaiting source review/)).toBeVisible();
+});
+test('keyboard-only guided decisions, worksheet answers and mobile menu work', async ({ page }) => {
+ await page.setViewportSize({ width: 320, height: 900 });
+ await go(page, 'nsgrp-flowchart');
+ await page.getByRole('button', { name: 'Continue', exact: true }).focus(); await page.keyboard.press('Enter');
+ await expect(page.locator('#guided-heading')).toBeFocused();
+ await page.keyboard.press('Tab'); await page.keyboard.press('Tab'); await page.keyboard.press('Enter');
+ await expect(page.getByRole('heading', { name: 'Is at least one qualifying private-sector partner involved?' })).toBeFocused();
+ await page.getByRole('button', { name: 'Toggle sidebar' }).click();
+ await expect(page.getByRole('button', { name: 'Toggle sidebar' })).toHaveAttribute('aria-expanded', 'true');
+ await expect(page.locator('main')).toHaveAttribute('inert', '');
+ await page.getByRole('button', { name: /Policy Guides 4/ }).focus(); await page.keyboard.press('Escape');
+ await expect(page.getByRole('button', { name: 'Toggle sidebar' })).toBeFocused();
+ await expect(page.getByRole('button', { name: 'Toggle sidebar' })).toHaveAttribute('aria-expanded', 'false');
+ await go(page, 'risk-checklist');
+ const response = page.getByLabel('Concern or risk identified', { exact: true }).first();
+ await response.focus(); await page.keyboard.press('Space'); await expect(response).toBeChecked();
 });

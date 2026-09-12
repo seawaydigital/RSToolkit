@@ -128,7 +128,7 @@ export default function App() {
           isOpen={isMobile ? sidebarOpen : true}
           onClose={() => setSidebarOpen(false)}
         />
-        <MainContent>
+        <MainContent inert={isMobile && sidebarOpen}>
           <div className="context-bar screen-only">
             <label htmlFor="institution-context">Institution context</label>
             <select id="institution-context" value={state.institution} onChange={event => update({ institution: event.target.value })}><option value="other">Other / general Canadian guidance</option><option value="lakehead">Lakehead University</option></select>
@@ -142,6 +142,8 @@ export default function App() {
               </Suspense>
             ) : currentRoute ? (
               <div className="tool-page"><h1>{disabled ? 'Tool unavailable' : 'Page not found'}</h1><p>{disabled ? 'This tool is excluded from the current release.' : 'The requested route does not identify a toolkit page.'}</p><button onClick={goHome}>Go Home</button><button onClick={() => navigate('about')}>Official sources and help</button></div>
+            ) : releaseStatus.containment ? (
+              <div className="tool-page"><h1>Toolkit guidance temporarily unavailable</h1><p>The preparation tools are disabled while a material issue is addressed. Use the official sources and your institution’s process.</p><button onClick={() => navigate('about')}>Official sources and help</button></div>
             ) : (
               <Home onNavigate={navigate} />
             )}
