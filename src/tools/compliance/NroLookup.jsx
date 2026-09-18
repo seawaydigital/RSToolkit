@@ -48,6 +48,13 @@ async function geocodeNominatim(query) {
 // Normalize a title/query for exact-match comparison
 const normalizeName = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
+// Leaflet's bindPopup(string) sets innerHTML, so every value interpolated into
+// a popup must be escaped. The institution label comes straight from a
+// Nominatim display_name or a Wikipedia title — third-party data that anyone
+// can edit upstream — and the NRO popups are escaped too so both follow one rule.
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => HTML_ESCAPES[c]);
+
 async function geocodeWikipedia(query) {
   const params = new URLSearchParams({
     action: 'query',
@@ -195,7 +202,7 @@ function MarkerCluster({ markers, onMarkerClick }) {
         fillOpacity: 0.8,
       });
       marker.bindPopup(
-        `<b>${m.name}</b><br/>${m.aliases.length > 0 ? m.aliases.join(', ') + '<br/>' : ''}${m.city}, ${m.country}`
+        `<b>${escapeHtml(m.name)}</b><br/>${m.aliases.length > 0 ? escapeHtml(m.aliases.join(', ')) + '<br/>' : ''}${escapeHtml(m.city)}, ${escapeHtml(m.country)}`
       );
       marker.on('click', () => onMarkerClick(m.id));
       cluster.addLayer(marker);
@@ -245,7 +252,7 @@ function MyInstitutionLayer({ institution }) {
 
     const marker = L.marker([institution.lat, institution.lng], { icon });
     marker.bindPopup(
-      `<b>${institution.shortLabel}</b><br/><span style="font-size:11px;color:#888">Your institution</span>`
+      `<b>${escapeHtml(institution.shortLabel)}</b><br/><span style="font-size:11px;color:#888">Your institution</span>`
     );
     marker.addTo(map);
 
