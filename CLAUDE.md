@@ -307,7 +307,7 @@ Header pattern:
 
 - **Branch**: `master` — every push triggers the GitHub Actions workflow
 - **Action versions**: pinned to the majors that run on **Node 24** — `checkout@v5`, `setup-node@v5`, `upload-pages-artifact@v5`, `deploy-pages@v5`. Do not downgrade any of these: the `@v4`/`@v3` majors declare `using: node20` and GitHub annotates every run with a deprecation warning. Two non-obvious traps: (1) the `node-version:` input does **not** affect this — it sets the Node that runs `npm`, while the warning is about each action's own runtime, which is fixed by the action's version; (2) `upload-pages-artifact@v4` does **not** clear it either, because it still delegates to `upload-artifact@v4.6.2` (node20) — only `@v5` pulls `upload-artifact@v7` (node24).
-- **Workflow**: `.github/workflows/deploy.yml` — builds with Node 20, uploads `dist/`, deploys to GitHub Pages
+- **Workflow**: `.github/workflows/deploy.yml` — three jobs: `verify` (npm ci, `npm audit --audit-level=high`, lint, build; runs on every PR and every push to master) → `build` (skipped on PRs; builds with the tile-key secrets and writes the CNAME) → `deploy` (GitHub Pages). **Branch protection on master requires a status check literally named `verify`, with `enforce_admins` on** — the job's `name:` must stay `verify` or no PR can merge, admins included. The requirement was originally created for draft PR #21's separate CI workflow; this job satisfies it on the master line. Audit level is `high` deliberately: every advisory to date has been a dev-only toolchain package and a low-severity one must not block a content fix.
 - **Build command**: `npm run build` → `vite build`
 - **Preview locally**: `npm run dev` (Vite dev server)
 

@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,11 +12,35 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
+  # Branch protection on master requires a status check named "verify"
+  # (strict, admins included). This job is that check. It runs on every PR
+  # and on every push to master; nothing deploys unless it passes.
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Fail only on high/critical: every advisory so far has been a
+      # dev-only toolchain package, and a low-severity one should not block
+      # shipping a content fix. Re-check `npm audit` by hand periodically.
+      - run: npm audit --audit-level=high
+      - run: npm run lint
+      - run: npm run build
+
   build:
+    # PRs are verified but never deployed.
+    if: github.event_name != 'pull_request'
+    needs: verify
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
