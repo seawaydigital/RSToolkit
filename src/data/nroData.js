@@ -16,7 +16,7 @@ const nroData = {
   // campus gets its own map pin.
   lastUpdated: "2024-04-18",
   sourceUrl:
-    "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations",
+    "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
   organizations: [
     // ===== A =====
     {

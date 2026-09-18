@@ -21,6 +21,7 @@ const TOOL_COMPONENTS = {
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
+  'how-it-works': lazy(() => import('./tools/reference/HowItWorks')),
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
   'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
   'report-concern': lazy(() => import('./tools/operational-security/ReportConcern')),
@@ -121,7 +122,11 @@ export default function App() {
   }
 
   const currentTool = ALL_TOOLS.find(t => t.slug === currentRoute);
-  const ToolComponent = currentRoute ? TOOL_COMPONENTS[currentRoute] : null;
+  // Own-property check: the hash is user-controlled, and a route such as
+  // "#constructor" or "#__proto__" would otherwise resolve to an
+  // Object.prototype member and be handed to React as a component.
+  const ToolComponent =
+    currentRoute && Object.hasOwn(TOOL_COMPONENTS, currentRoute) ? TOOL_COMPONENTS[currentRoute] : null;
 
   return (
     <div className="app">

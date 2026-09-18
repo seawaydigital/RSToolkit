@@ -49,7 +49,7 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 
 | Value | Change it to | Why it matters |
 |---|---|---|
-| `ACCESSIBILITY_CONTACT` | **An address your organization monitors** | AODA's Information and Communications standard expects a public Ontario site to offer a feedback process and accessible formats on request. This address is the *only* route the footer gives a user who hits a barrier. It currently points at the original author. |
+| `ACCESSIBILITY_CONTACT` | **An address your organization monitors** | AODA's Information and Communications standard expects a public Ontario site to offer a feedback process and accessible formats on request. This address is the *only* route the footer gives a user who hits a barrier. It points at Lakehead's Research Security & Data Management Services (RSDMS) inbox. |
 | `SITE_URL` | Your public URL, no trailing slash | Used for canonical and Open Graph tags |
 | `SHOW_SISTER_SITE_CARD` | `false` if you don't want an off-site link | Controls the "RDM Toolkit" card at the bottom of the sidebar, which links to rdmtoolkit.ca — a separate project by the original author |
 
@@ -94,7 +94,7 @@ You may also prefer to move the whole CSP to a response header — a real header
 
 ```
 default-src 'self';
-script-src 'self' 'unsafe-inline';
+script-src 'self';
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
 img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
 connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org;
@@ -104,7 +104,7 @@ base-uri 'self';
 form-action 'none';
 ```
 
-`'unsafe-inline'` on `script-src` is required by the current Vite output. Removing it means adopting a nonce or hash strategy — worth doing if your policy demands it, but it is a build change, not a config change.
+`script-src` deliberately has **no** `'unsafe-inline'`. The production build emits one external module script and no inline scripts or handlers, so the allowance was never needed — and it is precisely what an injected `onerror=` attribute would need in order to execute. Do not add it back to silence a warning; find the source of the inline script instead. (`style-src` does still need `'unsafe-inline'`: React and Leaflet both set inline `style` attributes.)
 
 ### One CSP error you will see in development, and should ignore
 
@@ -112,7 +112,7 @@ Running `npm run dev` and opening the console shows:
 
 ```
 Creating a worker from 'blob:...' violates the following Content Security
-Policy directive: "script-src 'self' 'unsafe-inline'" ... has been blocked.
+Policy directive: "script-src 'self'" ... has been blocked.
 ```
 
 This is **Vite's dev-server HMR client** (`node_modules/vite/dist/client/client.mjs`), not application code. The production bundle contains zero `new Worker` calls — verified — so it cannot occur in a deployed build. Do not loosen `script-src` or add `worker-src` to silence it; you would be widening the shipped policy to accommodate a dev-only tool. Check the console against `npm run build` output rather than the dev server if you want a clean read.

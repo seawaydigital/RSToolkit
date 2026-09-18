@@ -11,7 +11,7 @@ export const straData = {
   // subdivisions on the federal list, and an empty category renders badly.
   lastUpdated: "2026-07-30",
   sourceUrl:
-    "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas",
+    "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
   categories: [
     {
       id: "advanced-digital-infrastructure",

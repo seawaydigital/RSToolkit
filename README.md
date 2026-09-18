@@ -10,7 +10,7 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 
 ## What's Inside
 
-15 tools across four categories.
+16 tools across four categories.
 
 ### 📜 Policy Guides
 | Tool | Description |
@@ -34,7 +34,8 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 |---|---|
 | Export Control Quick Reference | Searchable reference for EIPA, Controlled Goods List, Defence Production Act, sanctions, and the UN Act |
 | Glossary / Jargon Decoder | Official definitions for 12 key research security terms from Canadian and Ontario Government sources |
-| Research Security FAQ | 24 answers to common questions about STRAC, NRO, NSGRP, export controls, and compliance |
+| Research Security FAQ | 25 answers to common questions about STRAC, NRO, NSGRP, export controls, and compliance |
+| How This Site Works | Plain-language explanation of the client-side architecture: what leaves the browser (complete list), what is stored locally, how it compares with chatbots/portals/email, built-in safeguards, and how to verify it yourself |
 
 ### 🔒 Operational Security
 | Tool | Description |
@@ -138,10 +139,10 @@ See [CLAUDE.md](CLAUDE.md) for full architecture details and conventions.
 All policy content is drawn from official Canadian Government sources:
 
 - [Safeguarding Your Research](https://science.gc.ca/site/science/en/safeguarding-your-research) — Government of Canada
-- [STRAC Policy](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern) — Government of Canada
+- [STRAC Policy](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/policy-sensitive-technology-research-and-affiliations-concern) — Government of Canada
 - [NSGRP](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships) — Government of Canada
-- [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/named-research-organizations) — Government of Canada
-- [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-areas) — Government of Canada
+- [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations) — Government of Canada
+- [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas) — Government of Canada
 - [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario
 - [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security) — NSERC/CIHR/SSHRC
 - [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx) — Public Safety Canada

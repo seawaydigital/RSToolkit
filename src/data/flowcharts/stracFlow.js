@@ -7,7 +7,7 @@ export const stracFlow = {
   // exist: the policy uses descriptive headings. Replaced with real ones.
   lastUpdated: "2026-09-06",
   policySource: "Policy on Sensitive Technology Research and Affiliations of Concern",
-  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/policy-sensitive-technology-research-and-affiliations-concern",
+  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/policy-sensitive-technology-research-and-affiliations-concern",
   nodes: [
     { id: "start", type: "start", label: "New Grant Application", description: "You are applying for funding from NSERC, SSHRC, CIHR, or CFI.", next: "check-stra" },
     { id: "check-stra", type: "decision", label: "Does research advance a STRA?", description: "Review the Sensitive Technology Research Areas list to determine if your research advances any listed area.", policyRef: "STRAC Policy — Steps for Researchers (step 1 of 2)", whyItMatters: "If your research advances a STRA, additional compliance steps apply to all researchers on the grant.", crossLink: { tool: "stra-lookup", label: "Open STRA Lookup" }, yes: "check-nro", no: "no-action" },

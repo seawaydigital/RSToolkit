@@ -1155,6 +1155,33 @@ a:hover {
   font-weight: 500;
 }
 
+/* Privacy callout under the hero pills — the one-sentence trust statement,
+   linking to the How This Site Works page. */
+.home-hero-privacy {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin: 4px 0 18px;
+  max-width: 680px;
+}
+.home-hero-privacy strong { color: var(--text-primary); font-weight: 600; }
+.home-hero-privacy-link {
+  font: inherit;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.home-hero-privacy-link:hover { color: var(--link-hover); }
+
 @media (max-width: 640px) {
   .home-hero { padding: 32px 22px 36px; }
   .home-hero-title { font-size: 34px; }
@@ -4797,4 +4824,185 @@ a:hover {
 /* Responsive */
 @media (max-width: 640px) {
   .dual-area-cols { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   HOW THIS SITE WORKS (hiw-)
+   Single scrolling explainer. Mirrors the rept- page vocabulary
+   (headline callout, section titles, crosslinks) so the two
+   "trust" pages read as siblings.
+   ============================================================ */
+.hiw-headline {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+.hiw-headline-title { font-size: 18px; margin-bottom: 10px; line-height: 1.35; }
+.hiw-headline p { font-size: 14px; line-height: 1.65; color: var(--text-secondary); }
+
+.hiw-section-title { font-size: 18px; margin: 32px 0 12px; }
+.hiw-lead, .hiw-outro {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  max-width: 760px;
+}
+.hiw-outro { margin-top: 12px; color: var(--text-primary); }
+
+/* Numbered steps */
+.hiw-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.hiw-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.hiw-step-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #061727; /* dark on Blaze — white fails contrast */
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hiw-step-title { font-size: 15px; margin: 3px 0 4px; }
+.hiw-step-body { font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+
+/* Tables */
+.hiw-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+}
+.hiw-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.hiw-table th, .hiw-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.hiw-table thead th {
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  white-space: nowrap;
+}
+.hiw-table tbody th { font-weight: 600; color: var(--text-primary); min-width: 140px; }
+.hiw-table tbody td { color: var(--text-secondary); }
+.hiw-table tbody tr:last-child th, .hiw-table tbody tr:last-child td { border-bottom: none; }
+.hiw-row--highlight th, .hiw-row--highlight td { background: var(--amber-subtle); }
+.hiw-row--highlight th { color: var(--amber); }
+.hiw-row--self th, .hiw-row--self td { background: var(--green-subtle); }
+.hiw-row--self th { color: var(--green); }
+
+/* Local storage list + clear button */
+.hiw-storage-list {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.hiw-storage-what { color: var(--text-secondary); }
+.hiw-clear {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.hiw-clear-caution { font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); margin: 0 0 12px; }
+.hiw-clear-btn {
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #061727;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  cursor: pointer;
+}
+.hiw-clear-btn:hover { background: var(--accent-hover); }
+.hiw-clear-status { font-size: 13px; color: var(--green); margin: 10px 0 0; min-height: 1.2em; }
+
+/* Safeguards */
+.hiw-safeguards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.hiw-safeguard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.hiw-safeguard-title { font-size: 14px; margin: 0 0 6px; }
+.hiw-safeguard-body { font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin: 0; }
+
+/* Limits — the honesty block */
+.hiw-limits {
+  margin-top: 32px;
+  background: var(--amber-subtle);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+}
+.hiw-limits-title { font-size: 16px; margin: 0 0 10px; }
+.hiw-limits-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+.hiw-limits-links { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+
+.hiw-crosslink {
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--link);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.hiw-crosslink:hover { color: var(--link-hover); }
+
+@media (max-width: 640px) {
+  .hiw-headline-title { font-size: 16px; }
+  .hiw-table { font-size: 12.5px; }
+  .hiw-table th, .hiw-table td { padding: 8px 10px; }
+  .hiw-table tbody th { min-width: 110px; }
+}
+
+@media print {
+  .hiw-clear { display: none; }
+  .hiw-table-wrap { overflow: visible; border: none; }
 }
