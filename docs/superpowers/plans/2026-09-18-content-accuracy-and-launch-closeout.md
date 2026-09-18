@@ -36,7 +36,7 @@
 | File | Change |
 |---|---|
 | `tests/flowcharts.test.mjs` | **Create.** Graph-integrity test for all three flowcharts. |
-| `package.json` | Add `"test": "node --test tests/"`. |
+| `package.json` | Add `"test": "node --test \"tests/**/*.test.mjs\""`. |
 | `.github/workflows/deploy.yml` | Add `npm test` to the `verify` job. |
 | `src/data/flowcharts/nsgrpFlow.js` | Restructure: program + private-partner trigger; Annex A/B inform mitigation only; STRAC attestation removed from this flow. |
 | `src/data/triAgencyData.js` | NSGRP `when` / `what` / keyPoints reflect F1. |
@@ -160,7 +160,7 @@ In `package.json`, change the `scripts` block to:
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "test": "node --test tests/",
+    "test": "node --test \"tests/**/*.test.mjs\"",
     "preview": "vite preview"
   },
 ```
