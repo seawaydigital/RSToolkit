@@ -77,3 +77,24 @@ for (const [name, flow] of Object.entries(FLOWS)) {
     assert.ok(reachesEnd(start.id, new Set()), `${name}: a path from start never reaches an end node`);
   });
 }
+
+test('nsgrpFlow: a required RAF is never waived by the Annex A / Annex B answers', () => {
+  const byId = Object.fromEntries(nsgrpFlow.nodes.map((n) => [n.id, n]));
+  // Once raf-required is reached, every downstream path must pass through submit-raf.
+  const start = 'raf-required';
+  assert.ok(byId[start], 'raf-required node must exist');
+  const seen = new Set();
+  const stack = [start];
+  while (stack.length) {
+    const id = stack.pop();
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const n = byId[id];
+    if (n.type === 'end') {
+      assert.notEqual(id, 'recommend-voluntary', 'a required RAF must not route to the no-RAF terminal');
+    }
+    for (const key of ['next', 'yes', 'no']) if (n[key]) stack.push(n[key]);
+  }
+  assert.ok(seen.has('submit-raf'), 'submit-raf must be reachable from raf-required');
+  assert.ok(!nsgrpFlow.nodes.some((n) => n.id === 'attest'), 'STRAC attestation does not belong in the NSGRP flow');
+});
