@@ -1,5 +1,5 @@
 export const faqData = {
-  lastUpdated: '2026-03-31',
+  lastUpdated: '2026-09-18',
   categories: [
     {
       id: 'strac-policy',
@@ -10,7 +10,7 @@ export const faqData = {
           id: 'strac-what',
           question: 'What is the STRAC Policy and who does it apply to?',
           answer:
-            'The Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy) is a federal requirement that applies to all researchers who hold or apply for funding from NSERC, SSHRC, or CIHR (the "tri-agency"). It requires that researchers whose work falls within a Sensitive Technology Research Area (STRA) must not have affiliations with any organization on the Named Research Organizations (NRO) list. If you are a researcher at a Canadian university or institution applying for tri-agency funding, this policy applies to you.',
+            'The Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy) applies to grant applications submitted to NSERC, SSHRC and CIHR (the "tri-agency") and to the Canada Foundation for Innovation from May 1, 2024 onward, where the proposed research aims to advance a Sensitive Technology Research Area (STRA). For those applications, every researcher with a named role — applicants, co-applicants, collaborators and highly qualified personnel — must not be affiliated with, or receive funding or in-kind support from, any organization on the Named Research Organizations (NRO) list. The policy is not retroactive: grants awarded before May 1, 2024 are not reassessed under it, although the agencies reserve the right to consider affiliations of concern if a risk is identified.',
           tags: ['strac', 'policy', 'eligibility'],
         },
         {
@@ -24,21 +24,21 @@ export const faqData = {
           id: 'strac-affiliation',
           question: 'What counts as an "affiliation" with an NRO?',
           answer:
-            'An affiliation with a Named Research Organization includes: receiving funding or in-kind support from an NRO, holding a formal or informal research position at an NRO (e.g., adjunct professor, visiting researcher, courtesy appointment), being a co-investigator or collaborator on a project where an NRO is a partner, and receiving grants or scholarships through an NRO. Past affiliations that have fully ended do not count, but researchers must be transparent about current and planned affiliations when applying for tri-agency funds. When in doubt, consult your institution\'s research security or research services office.',
+            'Under the STRAC Policy you are "affiliated" with an organization if you are employed by it, hold an appointment there (including adjunct, visiting, honorary or courtesy appointments), or conduct research there. The policy separately captures researchers who receive funding or in-kind support from an NRO, even without a formal appointment. Only current affiliations count: the policy states explicitly that past affiliations will not be considered, and a former student or employee with no continuing obligation to return is not affiliated. You attest to your status at the time of application and must remain compliant for the duration of the grant, so disclose anything you are unsure about and ask your institution\'s research security or research services office.',
           tags: ['strac', 'nro', 'affiliation'],
         },
         {
           id: 'strac-consequence',
           question: 'What happens if a researcher violates the STRAC Policy?',
           answer:
-            'A researcher found to have an undisclosed or ongoing affiliation with an NRO while holding tri-agency funding in a STRA may be required to end the affiliation, have their funding placed on hold, be required to return funding, or be declared ineligible for future tri-agency funding for a period of time. The tri-agency takes a risk-based and supportive approach, and researchers are encouraged to proactively disclose and seek guidance rather than risk non-compliance. Institutions also have responsibilities to support researcher compliance.',
+            'Applications that do not meet the policy are ineligible for federal funding. If the agencies later validate an attestation and find it was inaccurate, the consequences follow the Tri-Agency Framework: Responsible Conduct of Research and can include termination of the grant, a requirement to reimburse funds, and temporary or permanent ineligibility to apply for or hold federal funding. The agencies take a supportive approach — researchers are encouraged to disclose and seek guidance early rather than risk non-compliance — and institutions have a responsibility to help their researchers comply.',
           tags: ['strac', 'compliance', 'consequences'],
         },
         {
           id: 'strac-stra-check',
           question: 'How do I know if my research is in a Sensitive Technology Research Area (STRA)?',
           answer:
-            'Use the STRA Lookup tool in this toolkit (or the Government of Canada\'s official STRA list) to search for keywords related to your research area. The STRA list covers approximately 12 broad categories including artificial intelligence, quantum science, advanced biology, aerospace, and others — each broken down into specific subcategories. If you are unsure whether your research fits, use the "Guided Assessment" wizard in the STRA Lookup tool, or contact your institution\'s research security office. When in doubt, it is better to seek guidance early than to assume your work is not covered.',
+            'Use the STRA Lookup tool in this toolkit (or the Government of Canada\'s official STRA list) to search for keywords related to your research area. The STRA list has 11 categories — advanced digital infrastructure; advanced energy; advanced materials and manufacturing; advanced sensing and surveillance; advanced weapons; aerospace, space and satellite; artificial intelligence and big data; human-machine integration; life science; quantum science; and robotics and autonomous systems — each broken down into specific subcategories. If you are unsure whether your research fits, use the "Guided Assessment" wizard in the STRA Lookup tool, or contact your institution\'s research security office. When in doubt, it is better to seek guidance early than to assume your work is not covered.',
           tags: ['stra', 'lookup', 'compliance'],
           relatedTool: 'stra-lookup',
         },
@@ -53,7 +53,7 @@ export const faqData = {
           id: 'nro-what',
           question: 'What is a Named Research Organization (NRO)?',
           answer:
-            'A Named Research Organization (NRO) is an organization identified by the Government of Canada as posing a risk to national security due to its links with the military, national security apparatus, or state-sponsored programs of a foreign country that has demonstrated intent to acquire Canadian sensitive technologies. The NRO list currently includes hundreds of organizations, primarily from China, Russia, and Iran. The list is maintained by the Government of Canada and updated periodically.',
+            'A Named Research Organization (NRO) is an organization identified by the Government of Canada as posing a risk to national security due to its links with the military, national security apparatus, or state-sponsored programs of a foreign country that has demonstrated intent to acquire Canadian sensitive technologies. The current list names 103 organizations: 85 in China, 12 in Iran and 6 in Russia. The Government of Canada last modified it on 2024-04-18 and updates it as threats evolve. (The NRO Lookup in this toolkit plots 126 pins because the Chinese Academy of Engineering Physics\' listed sub-institutes are mapped as separate campuses.)',
           tags: ['nro', 'policy'],
         },
         {
@@ -89,21 +89,21 @@ export const faqData = {
           id: 'nsgrp-what',
           question: 'What is the NSGRP and when does it apply?',
           answer:
-            'The National Security Guidelines for Research Partnerships (NSGRP) are federal guidelines that require all research partnership grant applications submitted to the tri-agency (NSERC, SSHRC, CIHR) to be assessed for national security risks. The NSGRP applies whenever you apply for a partnership grant that involves a private-sector organization, non-governmental organization, or international organization as a partner. Pure academic collaborations between universities are generally not subject to the NSGRP, but any partner from outside the academic sector may trigger the requirements.',
+            'The National Security Guidelines for Research Partnerships (NSGRP) set out how national security considerations are assessed in federally funded research partnerships. For the federal partnership funding opportunities the guidelines apply to, applicants complete a Risk Assessment Form (RAF) as part of the application. The funding organization reviews it, consulting national security departments and agencies where appropriate, and may fund the project as proposed, fund it with additional mitigation measures, or decline it if the risks cannot be mitigated. The Government of Canada also encourages all researchers to use the guidelines as a due-diligence tool with any partner or funder, whether or not a form is required. Check the specific funding opportunity\'s requirements to see whether an RAF is mandatory for your application.',
           tags: ['nsgrp', 'partnerships'],
         },
         {
           id: 'nsgrp-vs-strac',
           question: 'What is the difference between the NSGRP and the STRAC Policy?',
           answer:
-            'The NSGRP and the STRAC Policy are separate but related frameworks. The NSGRP is a risk assessment process applied at the time of partnership grant application — it requires researchers to complete a questionnaire evaluating national security risks, and the tri-agency may deny or condition funding based on that assessment. The STRAC Policy is a hard eligibility rule: researchers whose work is in a STRA and who have NRO affiliations are simply ineligible for tri-agency funding — no case-by-case assessment is done. Think of the NSGRP as a risk review process and the STRAC Policy as a bright-line prohibition.',
+            'The NSGRP and the STRAC Policy are separate but related frameworks. The NSGRP is a risk assessment process applied at the time of partnership grant application — it requires researchers to complete a Risk Assessment Form evaluating national security risks, and the funding organization may deny or condition funding based on that assessment. The STRAC Policy is a hard eligibility rule: researchers whose work is in a STRA and who have NRO affiliations are simply ineligible for tri-agency funding — no case-by-case assessment is done. Think of the NSGRP as a risk review process and the STRAC Policy as a bright-line prohibition.',
           tags: ['nsgrp', 'strac', 'policy'],
         },
         {
           id: 'nsgrp-assessment',
           question: 'What does the NSGRP risk assessment involve?',
           answer:
-            'The NSGRP risk assessment is a questionnaire completed by the applying researcher(s) as part of the grant application. It asks about: the nature of the research and whether it involves sensitive technologies, the identity and background of partner organizations (including country of ownership and affiliations), proposed intellectual property arrangements, any publication restrictions, and safeguards in place to protect sensitive information. The tri-agency uses this information to assess the national security risk of the partnership. Higher-risk applications may require additional review or mitigation measures.',
+            'The NSGRP risk assessment is the Risk Assessment Form (RAF), completed by the applying researcher(s) as part of the grant application. It asks about: the nature of the research and whether it involves sensitive technologies, the identity and background of partner organizations (including country of ownership and affiliations), proposed intellectual property arrangements, any publication restrictions, and safeguards in place to protect sensitive information. The funding organization uses this information to assess the national security risk of the partnership, consulting national security departments and agencies where appropriate. Higher-risk applications may require additional review or mitigation measures.',
           tags: ['nsgrp', 'risk', 'assessment'],
           relatedTool: 'nsgrp-flowchart',
         },
@@ -111,7 +111,7 @@ export const faqData = {
           id: 'nsgrp-low-risk',
           question: 'My industry partner is a Canadian company — do I still need to worry about the NSGRP?',
           answer:
-            'Yes, potentially. The NSGRP applies to any partnership with a non-academic partner, including Canadian companies. However, the risk level assigned to a Canadian company with no foreign ownership or affiliations will generally be much lower than for a foreign-owned entity. The risk assessment will consider factors like whether the Canadian company is foreign-owned or controlled, the nature of the research, and whether the research has dual-use potential. Many partnerships with Canadian companies will complete the NSGRP review without issue, but the process still applies.',
+            'Yes, potentially. Where a funding opportunity requires a Risk Assessment Form, it applies to private-sector partners wherever they are based, including Canadian companies. However, the risk level assigned to a Canadian company with no foreign ownership or affiliations will generally be much lower than for a foreign-owned entity. The risk assessment will consider factors like whether the Canadian company is foreign-owned or controlled, the nature of the research, and whether the research has dual-use potential. Many partnerships with Canadian companies will complete the NSGRP review without issue, but the process still applies.',
           tags: ['nsgrp', 'industry', 'canadian'],
         },
       ],
@@ -206,6 +206,14 @@ export const faqData = {
           answer:
             'No. This Research Security Toolkit is an independent reference tool created to help Canadian researchers navigate research security requirements. It is not produced by or affiliated with the Government of Canada, the tri-agency, or any federal agency. While we aim to keep information current and accurate, you should always consult the official Government of Canada sources (particularly science.gc.ca) and your institution\'s research security office for authoritative guidance. Policy requirements can change, and official sources are always the most current.',
           tags: ['disclaimer', 'about'],
+        },
+        {
+          id: 'help-safe',
+          question: 'Is it safe to type details of my research into this toolkit?',
+          answer:
+            'Yes, because nothing you type is sent anywhere. The toolkit has no server behind it: the whole site is downloaded to your browser once, and every search, wizard, and checklist then runs locally on your own device. There is no account, no database, no analytics, and no form that submits — the browser-enforced security policy on the page forbids it. Two checklists save your ticks in your browser\'s local storage so they survive a refresh; that stays on your device and can be cleared with one click. The single exception is the "Check proximity to NROs" panel on the NRO map, which sends the institution name you type to OpenStreetMap (and Wikipedia as a fallback) to find its coordinates — use it for institution names only. Compare that with asking a consumer AI chatbot, where your prompt is stored on the vendor\'s servers and may be used for training. The "How This Site Works" page lists every outbound request the site makes and shows you how to verify it yourself.',
+          tags: ['privacy', 'safety', 'data', 'about'],
+          relatedTools: ['how-it-works', 'cybersecurity-guide'],
         },
         {
           id: 'help-stra-lookup',

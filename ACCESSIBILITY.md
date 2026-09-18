@@ -79,7 +79,7 @@ which is what makes it a real `contentinfo` landmark (a `<footer>` nested inside
 address for reporting a barrier or requesting another format.
 
 > **Contact confirmed 2026-09-02**: accessibility requests route to
-> `andrew@seawaydigital.ca`. If that ever changes, update it in
+> `security.research@lakeheadu.ca`. If that ever changes, update it in
 > `SiteFooter.jsx` — it is the only place the address appears.
 
 Landmark structure is now banner / navigation / main / contentinfo, one of each.
@@ -184,7 +184,7 @@ effects → Animation effects off; Mac: System Settings → Accessibility → Di
 - **Flowchart Full View nodes** open their detail panel on click only — the SVG `<g>` wrappers are not keyboard-focusable. The SVG is `role="img"` and its label points to **Guided Mode**, which is the keyboard/AT-accessible equivalent of the same content. This is the conforming-alternate-version route, not an oversight; if Full View ever becomes the only way to reach node detail, the nodes must become real focusable controls.
 - 10 pre-existing `no-unused-vars` lint errors (unused `onNavigate` props) plus 4 `no-undef` on `process` in `vite.config.js` are unrelated to accessibility and were left as-is.
 - Automated colour-contrast checking covered every route and every tab/accordion/wizard state at desktop, 640px (≈200% zoom) and 375px, but cannot judge whether a colour *conveys meaning on its own* (1.4.1) — that stays a human check.
-- A formal third-party AODA audit is being carried out separately by another team. This work establishes the baseline and the regression guard it will assess against; §1/§1b/§1c are the record of what changed and why.
+- A formal third-party AODA audit was carried out separately by another team and reported complete with no outstanding issues (confirmed by the site owner, 2026-09-18). §1/§1b/§1c remain the record of what changed and why, and §3 remains the regression checklist for future changes.
 - The §3 checkboxes are deliberately left unticked. They are a **reusable regression checklist**, not a sign-off sheet — the completion record lives in the header note at the top of this file.
 
 ---

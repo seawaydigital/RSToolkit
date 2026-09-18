@@ -2,7 +2,7 @@ export const travelSecurityData = {
   id: 'travel-security',
   lastUpdated: '2026-09-02',
   sourceUrl:
-    'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/how-can-you-protect-your-research-during-travel',
+    'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/mitigating-your-research-security-risks/how-can-you-protect-your-research-during-travel',
   sourceLabel: 'Government of Canada — Protecting your research during travel',
 
   intro:

@@ -1,6 +1,6 @@
 export const riskMitigationData = {
-  lastUpdated: '2026-03-31',
-  sourceNote: 'Best practices drawn from Canadian university research security programs, the U15 Guide on Mitigating Economic and Geopolitical Risks, and Government of Canada guidance.',
+  lastUpdated: '2026-09-18',
+  sourceNote: 'Best practices drawn from Canadian university research security programs, the U15 / Universities Canada guide "Mitigating Economic and/or Geopolitical Risks in Sensitive Research Projects" (2019), and Government of Canada guidance.',
   intro:
     'Risk mitigation is the set of measures you take to reduce identified national security or integrity risks to an acceptable level. Not all measures apply to every project — use the categories below to identify the practices most relevant to your situation.',
   categories: [
