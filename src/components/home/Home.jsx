@@ -62,6 +62,14 @@ export default function Home({ onNavigate }) {
           <span className="home-hero-pill"><span className="home-hero-pill-icon">🚫</span>Zero tracking</span>
           <span className="home-hero-pill"><span className="home-hero-pill-icon">✦</span>Always free</span>
         </div>
+        <p className="home-hero-privacy">
+          <strong>Everything runs in your browser.</strong> There is no server, no account, and
+          no database — what you type into a search, wizard, or checklist is processed on your
+          own device and never sent anywhere.{' '}
+          <button type="button" className="home-hero-privacy-link" onClick={() => onNavigate('how-it-works')}>
+            How this works, and why it matters →
+          </button>
+        </p>
         <p className="home-hero-fineprint">
           <strong>Sources:</strong> Government of Canada — Safeguarding Your Research,
           NSERC, CIHR, SSHRC, Global Affairs Canada, and Ontario MCU.

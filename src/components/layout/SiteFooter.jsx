@@ -10,7 +10,9 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <p className="site-footer-disclaimer">
-        Guidance only &mdash; not legal advice.
+        Guidance only &mdash; not legal advice.{' '}
+        {/* A plain hash link is enough: the app's hashchange listener routes it. */}
+        <a href="#how-it-works">How this site works &amp; your privacy</a>
       </p>
       <p className="site-footer-a11y">
         <span className="site-footer-a11y-label">Accessibility:</span> this site targets WCAG 2.0 AA.{' '}

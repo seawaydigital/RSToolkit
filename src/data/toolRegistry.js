@@ -120,6 +120,14 @@ export const CATEGORIES = [
         tags: ['faq', 'questions', 'compliance', 'guidance'],
         related: ['glossary', 'stra-lookup', 'nro-lookup'],
       },
+      {
+        id: 'how-it-works',
+        name: 'How This Site Works',
+        slug: 'how-it-works',
+        description: 'What happens to what you type, what does and does not leave your browser, and why this is a safer place to work through research security questions than the alternatives',
+        tags: ['privacy', 'security', 'safe', 'data', 'how it works', 'about', 'trust', 'browser'],
+        related: ['cybersecurity-guide', 'faq', 'nro-lookup'],
+      },
     ],
   },
   {
