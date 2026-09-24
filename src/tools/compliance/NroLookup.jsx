@@ -425,7 +425,7 @@ export default function NroLookup() {
           aria-controls={tier1Open ? 'nro-sanctioned-tier1-content' : undefined}
         >
           <span className="nro-sanctioned-title nro-sanctioned-title--tier1">
-            ⛔ Tier 1 — Comprehensive prohibitions (no research engagement)
+            ⛔ Tier 1 — Comprehensive sanctions (collaboration almost certainly prohibited)
           </span>
           <span className="nro-sanctioned-count">2 destinations</span>
           <span className="nro-sanctioned-chevron" aria-hidden="true">▸</span>
@@ -433,9 +433,13 @@ export default function NroLookup() {
         {tier1Open && (
           <div id="nro-sanctioned-tier1-content" className="nro-sanctioned-content">
             <p className="nro-sanctioned-body">
-              Canadian sanctions functionally prohibit all research collaboration, funding,
-              technology transfer, and most in-kind support with these destinations,
-              regardless of whether a specific organization appears on the NRO list.
+              Canadian sanctions on these destinations prohibit dealings with listed persons —
+              even indirectly through a third party — and the supply of a wide range of goods,
+              technology and services, including research and development and scientific or
+              technical assistance. Almost any research collaboration would involve a prohibited
+              activity. Treat it as off the table unless Global Affairs Canada&rsquo;s Sanctions
+              Bureau has confirmed that the specific activity is permitted. This applies whether
+              or not an organization appears on the NRO list.
             </p>
             <div className="nro-sanctioned-countries">
               {[
@@ -461,7 +465,7 @@ export default function NroLookup() {
           aria-controls={tier2Open ? 'nro-sanctioned-tier2-content' : undefined}
         >
           <span className="nro-sanctioned-title nro-sanctioned-title--tier2">
-            ⚠️ Tier 2 — Broad sectoral sanctions (heightened scrutiny required)
+            ⚠️ Tier 2 — Broad sanctions (check the specific activity before engaging)
           </span>
           <span className="nro-sanctioned-count">4 destinations</span>
           <span className="nro-sanctioned-chevron" aria-hidden="true">▸</span>
@@ -469,13 +473,14 @@ export default function NroLookup() {
         {tier2Open && (
           <div id="nro-sanctioned-tier2-content" className="nro-sanctioned-content">
             <p className="nro-sanctioned-body">
-              Sanctions vary in scope but are substantial enough to warrant
-              institutional review of any proposed partnership. Scope is sector-
-              or list-based rather than comprehensive, so research is not
-              categorically banned — but due diligence must confirm no listed
-              person, controlled good, or restricted sector is involved. Many
-              Canadian institutions have elected to pause new collaborations in
-              these jurisdictions pending federal guidance.
+              Sanctions on these destinations are extensive but activity-specific: they
+              prohibit dealings with listed persons and entities, and restrict named sectors,
+              goods, technology and services. Research collaboration is not categorically
+              banned, but you must confirm that no listed person, controlled item, restricted
+              sector or prohibited service is involved — and that the partner is not owned or
+              controlled by a listed entity. Your institution&rsquo;s research security or legal
+              office should review any proposed partnership; some Canadian institutions have
+              paused new collaborations in these jurisdictions.
             </p>
             <div className="nro-sanctioned-countries">
               {[
@@ -495,8 +500,10 @@ export default function NroLookup() {
 
         <p className="nro-sanctioned-note">
           This is a high-level summary for research collaboration decisions, not legal advice.
-          The authoritative and frequently-updated list lives with{' '}
-          <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx" target="_blank" rel="noopener noreferrer">Global Affairs Canada</a>.
+          Global Affairs Canada publishes{' '}
+          <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/academic-research-universitaire-recherche.aspx?lang=eng" target="_blank" rel="noopener noreferrer">guidance for academic and research institutions</a>
+          {' '}and the authoritative, frequently-updated{' '}
+          <a href="https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx" target="_blank" rel="noopener noreferrer">sanctions index</a>.
           Always confirm with your institution&rsquo;s research security or legal office before engaging.
         </p>
       </div>
