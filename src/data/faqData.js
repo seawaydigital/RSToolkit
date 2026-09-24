@@ -126,16 +126,16 @@ export const faqData = {
           id: 'ec-apply-universities',
           question: 'Do export controls really apply to university research?',
           answer:
-            'Yes. Canadian export controls apply to university research just as they apply to commercial activities. The Export and Import Permits Act (EIPA) does not exempt academic institutions. If your research involves goods or technologies on the Export Control List (ECL), you may need an export permit to transfer that technology — including to foreign students working in your lab (a "deemed export"). Many universities have export control compliance programs to help researchers navigate these requirements. Contact your institution\'s research compliance or legal office for guidance.',
-          tags: ['export', 'controls', 'universities'],
+            'Yes. Canadian export controls apply to university research just as they apply to commercial activity; the Export and Import Permits Act (EIPA) does not exempt academic institutions. If your research involves goods or technology on the Export Control List (ECL), transferring that technology to a person outside Canada may need an export permit — and the permit requirement applies regardless of the means of delivery, so an email, a shared cloud folder, remote access to a server, or technical assistance given over a call all count. Separately, examining, possessing or transferring goods on the Controlled Goods List inside Canada is regulated by the Controlled Goods Program, which requires the institution to be registered and the people with access to be security-assessed. Many universities have export control compliance programs; contact your institution\'s research compliance or legal office for guidance.',
+          tags: ['export', 'controls', 'universities', 'intangible transfer', 'controlled goods'],
           relatedTool: 'export-control',
         },
         {
           id: 'ec-international-student',
           question: 'Can I share research data with my international graduate students?',
           answer:
-            'This depends on whether the data constitutes "controlled technology" under the Export Control List. For most academic research — published or publishable, not involving weapons or military systems — sharing data with international students does not require an export permit. However, if your research involves technologies on the Export Control List (e.g., certain encryption, advanced materials, aerospace propulsion), providing access to international students may constitute a "deemed export" or "intangible transfer of technology" requiring a permit. When working in sensitive technology areas, consult your institution\'s export compliance office.',
-          tags: ['export', 'controls', 'students', 'deemed-export'],
+            'Usually yes. Canada does not have a "deemed export" rule — that is a US concept. Under Canadian law, sharing controlled technology with a foreign national who is physically in Canada is not an export. Three things still need checking. First, if the data is on the Export Control List and the student will access it from outside Canada, or you will send it to them abroad, that is an export by intangible means and may need a permit. Second, if the material is a controlled good under the Defence Production Act, domestic access is governed by the Controlled Goods Program, and the student may need a security assessment before being given access. Third, if the technology is of US origin, US export rules — including the US deemed-export rule — may travel with it. For most academic research that is published or publishable and does not involve controlled technology, none of this applies. When it might, consult your institution\'s export compliance office before sharing.',
+          tags: ['export', 'controls', 'students', 'intangible transfer', 'controlled goods', 'US-origin'],
         },
         {
           id: 'ec-sanctions',

@@ -83,12 +83,12 @@ export const exportControlData = {
     {
       id: "area-control-list",
       title: "Area Control List",
-      description: "The Area Control List under the EIPA identifies countries to which exports of any goods or technology require an export permit issued by the Minister of Foreign Affairs, regardless of the nature of the goods or research. Research partnerships with institutions and/or researchers located in a listed country must be authorized regardless of the subject matter.",
+      description: "The Area Control List under the EIPA names countries to which the export of any goods or technology requires an export permit from the Minister of Foreign Affairs, regardless of the nature of the item. For researchers, this means that sending or transmitting any technology, data or technical assistance to a person in a listed country — even non-sensitive material — requires a permit. It does not, by itself, prohibit corresponding with a researcher there or co-authoring on the basis of published work.",
       entries: [
         {
           id: "acl-listed-countries",
           title: "Partnerships with Area Control List Countries",
-          description: "Any research partnership involving institutions or researchers located in a country on the Area Control List must be authorized by an export permit from the Minister of Foreign Affairs, regardless of the nature or subject matter of the research.",
+          description: "Any transfer of goods or technology — physical shipment, electronic transmission, remote access, or technical assistance — to a person or institution located in a country on the Area Control List requires an export permit, whatever the subject matter. Check the current list before any collaboration that would involve sending material there.",
           tags: ["sanctions", "export-control"],
           officialUrl: "https://laws-lois.justice.gc.ca/eng/regulations/SOR-81-543/",
           keywords: ["area control list", "country restrictions", "export permit", "Global Affairs Canada", "restricted countries"]
