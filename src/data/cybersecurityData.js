@@ -80,7 +80,7 @@ export const cybersecurityData = {
           { text: 'Open Disk Utility (Applications → Utilities)' },
           { text: 'Choose File → New Image → Image from Folder…, then select the folder' },
           { text: 'Set Encryption to 256-bit AES and enter a strong passphrase (12+ characters)' },
-          { text: 'Leave "Remember password in my keychain" unticked if you will share the image, then Save' },
+          { text: 'Leave "Remember password in my keychain" unticked so the passphrase is not cached on this Mac, then Save' },
           { text: 'Upload the resulting .dmg file to cloud storage' },
           { text: 'Apple\'s instructions:', linkUrl: 'https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac', linkLabel: 'Create a disk image using Disk Utility' },
         ],
@@ -104,12 +104,12 @@ export const cybersecurityData = {
     {
       id: 'bitlocker',
       label: 'Windows — BitLocker',
-      body: 'Go to Settings → Privacy & Security → Device Encryption and turn it on. Save your recovery key to your institutional Microsoft account, not just locally. If you lose the key and the device has issues, you lose access to everything on it.',
+      body: 'Go to Settings → Privacy & Security → Device Encryption and turn it on. If your institution manages the laptop, IT may already escrow the recovery key centrally — check with them before saving a copy anywhere else. On a personal device, save the key to your Microsoft account or print it and store it somewhere secure, not on the laptop itself. If you lose the key and the device has issues, you lose access to everything on it.',
     },
     {
       id: 'filevault',
       label: 'Mac — FileVault',
-      body: 'Go to System Settings → Privacy & Security → FileVault and turn it on. Choose to store the recovery key in your iCloud account, or write it down and keep it somewhere physically secure — not on the same laptop.',
+      body: 'Go to System Settings → Privacy & Security → FileVault and turn it on. If your institution manages the Mac (for example through Jamf), it may require the recovery key to be escrowed centrally — check with IT first, and do not tie an institution-owned laptop\'s key to a personal Apple Account. On a personal Mac, store the key with your Apple Account or write it down and keep it somewhere physically secure — not on the same laptop.',
     },
     {
       id: 'usb',
@@ -156,7 +156,7 @@ export const cybersecurityData = {
         { number: '2', label: 'different types of media (e.g., laptop SSD + external drive)' },
         { number: '1', label: 'copy offsite (institutional cloud storage, or a physically separate location)' },
       ],
-      note: 'There is no single national retention period: the Tri-Agency Framework: Responsible Conduct of Research requires complete and accurate records kept in accordance with your funding agreement, institutional policies, applicable laws and disciplinary standards. Find out which applies to your project. Backups are not optional.',
+      note: 'There is no single national retention period: the Tri-Agency Framework: Responsible Conduct of Research requires complete and accurate records kept in accordance with your funding agreement, institutional policies, applicable laws and regulations, and professional or disciplinary standards. Find out which applies to your project. Backups are not optional.',
     },
   },
 
