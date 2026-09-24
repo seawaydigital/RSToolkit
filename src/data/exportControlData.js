@@ -83,7 +83,7 @@ export const exportControlData = {
     {
       id: "area-control-list",
       title: "Area Control List",
-      description: "The Area Control List under the EIPA names countries to which the export of any goods or technology requires an export permit from the Minister of Foreign Affairs, regardless of the nature of the item. For researchers, this means that sending or transmitting any technology, data or technical assistance to a person in a listed country — even non-sensitive material — requires a permit. It does not, by itself, prohibit corresponding with a researcher there or co-authoring on the basis of published work.",
+      description: "The Area Control List under the EIPA names countries to which the export of any goods or technology requires an export permit from the Minister of Foreign Affairs, regardless of the nature of the item. For researchers, this means that sending or transmitting any technology, data or technical assistance to a person in a listed country — even non-sensitive material — requires a permit. Corresponding with a researcher there, or co-authoring on the basis of information that is already published, is generally understood not to require a permit — check with your export compliance office if in doubt.",
       entries: [
         {
           id: "acl-listed-countries",
