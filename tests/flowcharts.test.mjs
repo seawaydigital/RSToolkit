@@ -80,21 +80,19 @@ for (const [name, flow] of Object.entries(FLOWS)) {
 
 test('nsgrpFlow: a required RAF is never waived by the Annex A / Annex B answers', () => {
   const byId = Object.fromEntries(nsgrpFlow.nodes.map((n) => [n.id, n]));
-  // Once raf-required is reached, every downstream path must pass through submit-raf.
-  const start = 'raf-required';
-  assert.ok(byId[start], 'raf-required node must exist');
+  assert.ok(byId['raf-required'], 'raf-required node must exist');
+  assert.ok(byId['submit-raf'], 'submit-raf node must exist');
+  // Every path from raf-required to an end must pass through submit-raf:
+  // with submit-raf taken out of the graph, no end node may be reachable.
   const seen = new Set();
-  const stack = [start];
+  const stack = ['raf-required'];
   while (stack.length) {
     const id = stack.pop();
-    if (seen.has(id)) continue;
+    if (seen.has(id) || id === 'submit-raf') continue;
     seen.add(id);
     const n = byId[id];
-    if (n.type === 'end') {
-      assert.notEqual(id, 'recommend-voluntary', 'a required RAF must not route to the no-RAF terminal');
-    }
+    assert.notEqual(n.type, 'end', `"${id}" is reachable from raf-required without submitting the RAF`);
     for (const key of ['next', 'yes', 'no']) if (n[key]) stack.push(n[key]);
   }
-  assert.ok(seen.has('submit-raf'), 'submit-raf must be reachable from raf-required');
   assert.ok(!nsgrpFlow.nodes.some((n) => n.id === 'attest'), 'STRAC attestation does not belong in the NSGRP flow');
 });

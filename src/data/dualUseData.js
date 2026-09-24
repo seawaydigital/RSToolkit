@@ -163,7 +163,7 @@ export const dualUseData = {
         { text: "Screen every team member — including grad students and postdocs — against the NRO list.", link: { tool: "nro-lookup", label: "NRO Lookup & Map" } },
         { text: "Determine whether STRAC and NSGRP apply to your project and team.", link: { tool: "strac-flowchart", label: "STRAC Flowchart" } },
         { text: "Run the grant-application risk assessment.", link: { tool: "risk-checklist", label: "Risk Assessment Checklist" } },
-        { text: "Ensure anyone with an NRO affiliation completes the NSGRP attestation / Risk Assessment Form.", link: { url: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form", label: "NSGRP Risk Assessment Form" } },
+        { text: "If the funding opportunity requires it and the application includes a private-sector partner, complete the NSGRP Risk Assessment Form — it is mandatory even when you identify no risks.", link: { tool: "nsgrp-flowchart", label: "NSGRP Flowchart" } },
       ],
     },
     {
