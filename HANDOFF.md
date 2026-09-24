@@ -2,7 +2,7 @@
 
 Everything needed to build, host, configure, and maintain the Research Security Toolkit.
 
-**Last updated: 2026-09-05**
+**Last updated: 2026-09-24**
 
 ---
 
@@ -105,6 +105,32 @@ form-action 'none';
 ```
 
 `script-src` deliberately has **no** `'unsafe-inline'`. The production build emits one external module script and no inline scripts or handlers, so the allowance was never needed — and it is precisely what an injected `onerror=` attribute would need in order to execute. Do not add it back to silence a warning; find the source of the inline script instead. (`style-src` does still need `'unsafe-inline'`: React and Leaflet both set inline `style` attributes.)
+
+### Applying the headers on GitHub Pages: put Cloudflare in front
+
+GitHub Pages cannot set response headers. The lowest-effort fix is Cloudflare's free plan as a proxy in front of `rs.rdmtoolkit.ca`. It takes about an hour and needs no change to the site's code.
+
+**Know what moves before you start.** Cloudflare's free plan works by taking over DNS for the whole `rdmtoolkit.ca` domain, not just `rs`. As of 2026-09-24 the domain's nameservers are CanSpace's (`dns1.canspace.ca`, `dns2.canspace.ca`), and the zone contains at least: the apex `rdmtoolkit.ca` (four A records to GitHub Pages, `185.199.108.153`–`185.199.111.153`), `www` (CNAME to `seawaydigital.github.io`), `rs` (CNAME to `seawaydigital.github.io`), and an MX record. The apex and `www` serve the separate RDM Toolkit site. Export or screenshot the complete zone from CanSpace before changing anything.
+
+1. **Add `rdmtoolkit.ca` to Cloudflare** on the free plan. When Cloudflare scans the existing DNS records, compare its list with the CanSpace zone line by line and add anything it missed — especially MX and TXT records (SPF, DKIM, domain verification).
+2. **Set proxy status record by record.** `rs` → *Proxied* (orange cloud). The apex, `www`, MX and every other record → *DNS only* (grey cloud), so the RDM Toolkit site and any mail behave exactly as before.
+3. **Switch nameservers.** At CanSpace, replace the nameservers with the two Cloudflare assigns. Wait until Cloudflare shows the zone as *Active*.
+4. **SSL/TLS → Overview:** set the mode to *Full (strict)*. GitHub Pages already serves a valid certificate for `rs.rdmtoolkit.ca`. If GitHub later reports a certificate problem for the custom domain, set `rs` back to *DNS only* until GitHub reissues the certificate, then proxy it again.
+5. **SSL/TLS → Edge Certificates:** turn on *Always Use HTTPS*, and turn on *HTTP Strict Transport Security (HSTS)* with max-age 12 months and include subdomains. Leave *preload* off — it is hard to undo and is a separate decision. Cloudflare adds the HSTS header only to proxied hostnames, so the grey-clouded apex and `www` are unaffected.
+6. **Add the other headers with a response header transform rule** (in the dashboard under Rules; search for "response header" if the menu has moved). Create one rule whose expression is `(http.host eq "rs.rdmtoolkit.ca")`, with three *Set static* headers:
+   - `X-Content-Type-Options` = `nosniff`
+   - `Content-Security-Policy` = `frame-ancestors 'none'`
+   - `Permissions-Policy` = `camera=(), microphone=(), geolocation=()`
+7. **Verify.** This should print four lines:
+
+   ```
+   curl -sI https://rs.rdmtoolkit.ca/ | grep -iE "strict-transport|x-content-type|content-security|permissions-policy"
+   ```
+
+   Then load the home page and the NRO map with the browser console open and confirm there are no CSP errors, and load `https://rdmtoolkit.ca` to confirm the sister site is unaffected.
+8. **Keep the privacy page true.** The first row of `dataFlows.rows` in `src/data/howItWorksData.js` says page-load requests go to "The web host (GitHub Pages)". Once Cloudflare is proxying, change that cell to "Cloudflare, which forwards them to the web host (GitHub Pages)", and add Cloudflare to the service table in section 5 of this file. The page states that its list of outbound requests is complete, so it must name every party that sees them.
+
+**Leave these Cloudflare features off:** *Rocket Loader*, *Email Address Obfuscation* (under Scrape Shield), and *Web Analytics* / automatic RUM. The first two inject inline scripts, which the page's CSP (`script-src 'self'`) blocks, and that breaks the page. The third injects a third-party analytics beacon, which would make the site's "no analytics, no tracking" statement false. Leave caching at the defaults; the Vite build already uses hashed asset filenames.
 
 ### One CSP error you will see in development, and should ignore
 
