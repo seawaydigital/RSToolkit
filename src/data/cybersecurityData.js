@@ -45,7 +45,7 @@ export const cybersecurityData = {
       number: 6,
       icon: 'Database',
       title: 'Follow the 3-2-1 backup rule',
-      body: 'Keep 3 copies of important research data, on 2 different types of media (e.g., laptop + external drive), with 1 copy offsite (e.g., institutional Google Drive or OneDrive). Many collective agreements and granting agency policies require research data to be retained for at least 7 years.',
+      body: 'Keep 3 copies of important research data, on 2 different types of media (e.g., laptop + external drive), with 1 copy offsite (e.g., institutional Google Drive or OneDrive). Retention periods are set by your funding agreement, institutional records policy, ethics approval and any data-sharing agreement — check those before deleting anything.',
     },
     {
       id: 'report-incident',
@@ -74,14 +74,17 @@ export const cybersecurityData = {
       },
       {
         id: 'mac',
-        label: 'Mac — Terminal',
+        label: 'Mac — Disk Utility',
+        bestFor: 'Encrypting a folder for cloud storage or for another Mac user. Uses AES-256; no extra software.',
         steps: [
-          { text: 'Open Terminal (Applications → Utilities)' },
-          { text: 'Run the following command:', code: 'zip -er ~/Desktop/encrypted.zip /path/to/file' },
-          { text: 'Enter a strong passphrase when prompted' },
-          { text: 'Upload encrypted.zip to cloud storage' },
+          { text: 'Open Disk Utility (Applications → Utilities)' },
+          { text: 'Choose File → New Image → Image from Folder…, then select the folder' },
+          { text: 'Set Encryption to 256-bit AES and enter a strong passphrase (12+ characters)' },
+          { text: 'Leave "Remember password in my keychain" unticked if you will share the image, then Save' },
+          { text: 'Upload the resulting .dmg file to cloud storage' },
+          { text: 'Apple\'s instructions:', linkUrl: 'https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac', linkLabel: 'Create a disk image using Disk Utility' },
         ],
-        tip: 'For cross-platform sharing (Mac → Windows), consider VeraCrypt for consistent results.',
+        tip: 'Do not use the Terminal command zip -e / zip -er: it applies ZipCrypto, which is weak and not an AES alternative. A .dmg opens only on a Mac — for a Windows recipient use 7-Zip or VeraCrypt.',
       },
       {
         id: 'veracrypt',
@@ -153,7 +156,7 @@ export const cybersecurityData = {
         { number: '2', label: 'different types of media (e.g., laptop SSD + external drive)' },
         { number: '1', label: 'copy offsite (institutional cloud storage, or a physically separate location)' },
       ],
-      note: 'Many granting agency data management requirements and institutional collective agreements require research data to be retained for a minimum of 7 years. Backups are not optional.',
+      note: 'There is no single national retention period: the Tri-Agency Framework: Responsible Conduct of Research requires complete and accurate records kept in accordance with your funding agreement, institutional policies, applicable laws and disciplinary standards. Find out which applies to your project. Backups are not optional.',
     },
   },
 
@@ -171,7 +174,7 @@ export const cybersecurityData = {
   },
 
   sensitiveData: {
-    intro: 'Some categories of research data must be stored on Canadian-hosted servers only. Before storing sensitive data on any cloud service — including Google Drive, Dropbox, or OneDrive — confirm compliance if your project involves:',
+    intro: 'Some categories of research data carry storage-location, custody or governance obligations that can rule out a given cloud service. Before storing sensitive data on any cloud service — including Google Drive, Dropbox, or OneDrive — confirm the specific obligation that applies if your project involves:',
     categories: [
       {
         id: 'defence',
@@ -181,7 +184,7 @@ export const cybersecurityData = {
       {
         id: 'health',
         label: 'Provincial health datasets',
-        detail: 'PHIPA and PIPEDA obligations apply',
+        detail: 'Ontario\'s PHIPA and any data-sharing agreement set the terms — confirm with the data custodian and your REB',
       },
       {
         id: 'ethics',
@@ -191,7 +194,7 @@ export const cybersecurityData = {
       {
         id: 'indigenous',
         label: 'Indigenous research data',
-        detail: 'OCAP® principles — data sovereignty may require on-reserve or nation-controlled storage',
+        detail: 'Governance is set by the community or Nation. The First Nations principles of OCAP® (Ownership, Control, Access, Possession) apply to First Nations data; Inuit and Métis communities have their own frameworks. Agree storage and access terms with the community before collecting',
       },
       {
         id: 'strac',
