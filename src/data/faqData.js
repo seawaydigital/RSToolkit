@@ -17,8 +17,9 @@ export const faqData = {
           id: 'strac-applies',
           question: 'Does the STRAC Policy apply to ALL tri-agency funded researchers?',
           answer:
-            'The STRAC Policy applies when BOTH of the following are true: (1) your research falls within one or more Sensitive Technology Research Areas (STRAs), AND (2) you have an affiliation with an organization on the Named Research Organizations (NRO) list. If your research is not in a STRA, the STRAC Policy restrictions do not apply regardless of your affiliations. If your research is in a STRA but you have no NRO affiliations, you are in compliance. The policy does not restrict international collaboration broadly — only affiliations with specifically listed organizations.',
+            'No — it applies to a grant application when the proposed research aims to advance a Sensitive Technology Research Area (STRA). That covers applications to NSERC, SSHRC, CIHR and the Canada Foundation for Innovation submitted from May 1, 2024. Research that merely uses a sensitive technology as a tool, without aiming to advance it, is out of scope — for example, using AI to sort data in a social sciences project. When the policy does apply, every researcher with a named role must attest at the time of application that they are not affiliated with, and do not receive funding or in-kind support from, an organization on the Named Research Organizations (NRO) list; an NRO connection makes the application ineligible. Having no NRO connection does not remove the attestation requirement. The policy does not restrict international collaboration broadly — only connections to specifically listed organizations.',
           tags: ['strac', 'stra', 'nro'],
+          relatedTool: 'strac-flowchart',
         },
         {
           id: 'strac-affiliation',
