@@ -478,9 +478,9 @@ export default function NroLookup() {
               goods, technology and services. Research collaboration is not categorically
               banned, but you must confirm that no listed person, controlled item, restricted
               sector or prohibited service is involved — and that the partner is not owned or
-              controlled by a listed entity. Your institution&rsquo;s research security or legal
-              office should review any proposed partnership; some Canadian institutions have
-              paused new collaborations in these jurisdictions.
+              controlled, directly or indirectly, by a listed entity. Your institution&rsquo;s
+              research security or legal office should review any proposed partnership; some
+              Canadian institutions have paused new collaborations in these jurisdictions.
             </p>
             <div className="nro-sanctioned-countries">
               {[

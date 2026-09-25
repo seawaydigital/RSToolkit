@@ -55,8 +55,8 @@ export const riskMitigationData = {
         {
           id: 'dd-1',
           title: 'Screen for sanctions',
-          what: 'Search the partner organization and its key personnel against Canadian, US, and EU sanctions lists before establishing any collaboration or funding relationship.',
-          why: 'Contravening Canadian sanctions regulations is an offence, and the prohibition on dealings with a listed person applies even when the dealing is indirect, through a third party. Sanctions apply to individuals as well as organizations, and to an organization owned or controlled by a listed person.',
+          what: 'Search the partner organization, its owners and its key personnel against the Canadian sanctions list — and, as intelligence, the US and EU lists — before establishing any collaboration or funding relationship.',
+          why: 'Contravening Canadian sanctions regulations is an offence, and the prohibition on dealings with a listed person applies even when the dealing is indirect, through a third party. Sanctions apply to individuals as well as organizations, and to an organization owned, held or controlled — directly or indirectly — by a listed person.',
           how: 'Check the Consolidated Canadian Autonomous Sanctions List (Global Affairs Canada) for the organization, its owners and its named personnel — that is the list that creates Canadian obligations. US (OFAC) and EU lists are worth checking as intelligence, and become binding where a US or EU legal nexus applies (US-origin technology, EU partners or funding). Aggregators such as OpenSanctions search several lists at once. A clear search does not clear the activity: the regulations also restrict goods, technology and services by sector.',
           tags: ['always', 'international'],
         },
