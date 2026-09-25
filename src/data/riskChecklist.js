@@ -120,7 +120,7 @@ export const riskChecklist = {
         {
           id: "nro-listed",
           label: "Is the partner on the Named Research Organizations list?",
-          learnMore: "The Named Research Organizations list identifies universities, research institutions, or laboratories connected to military, national defence, or state security organizations that could pose a risk to Canadian national security. Affiliations with NROs trigger additional requirements under both the STRAC policy and the NSGRP.",
+          learnMore: "The Named Research Organizations list identifies universities, research institutions, or laboratories connected to military, national defence, or state security organizations that could pose a risk to Canadian national security. Under the STRAC Policy, if the research aims to advance a Sensitive Technology Research Area, no named researcher may be affiliated with, or receive funding or in-kind support from, a listed organization — so a listed partner contributing to the project would make the application ineligible. Under the NSGRP, a listed partner is a serious risk factor that the Risk Assessment Form and your mitigation plan must address.",
           policyRef: "NSGRP, Annex B; STRAC Policy — Steps for Researchers",
           defaultState: null
         }

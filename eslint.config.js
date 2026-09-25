@@ -38,4 +38,14 @@ export default defineConfig([
       globals: globals.node,
     },
   },
+  {
+    // node:test files run in Node, not the browser, and use the .mjs extension,
+    // so they fall outside the **/*.{js,jsx} block above and would otherwise get
+    // zero lint coverage.
+    files: ['tests/**/*.mjs'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

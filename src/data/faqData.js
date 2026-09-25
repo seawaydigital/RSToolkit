@@ -17,8 +17,9 @@ export const faqData = {
           id: 'strac-applies',
           question: 'Does the STRAC Policy apply to ALL tri-agency funded researchers?',
           answer:
-            'The STRAC Policy applies when BOTH of the following are true: (1) your research falls within one or more Sensitive Technology Research Areas (STRAs), AND (2) you have an affiliation with an organization on the Named Research Organizations (NRO) list. If your research is not in a STRA, the STRAC Policy restrictions do not apply regardless of your affiliations. If your research is in a STRA but you have no NRO affiliations, you are in compliance. The policy does not restrict international collaboration broadly — only affiliations with specifically listed organizations.',
+            'No — it applies to a grant application when the proposed research aims to advance a Sensitive Technology Research Area (STRA). That covers applications to NSERC, SSHRC, CIHR and the Canada Foundation for Innovation submitted from May 1, 2024. Research that merely uses a sensitive technology as a tool, without aiming to advance it, is out of scope — for example, using AI to sort data in a social sciences project. When the policy does apply, every researcher with a named role must attest at the time of application that they are not affiliated with, and do not receive funding or in-kind support from, an organization on the Named Research Organizations (NRO) list; an NRO connection makes the application ineligible. Having no NRO connection does not remove the attestation requirement. The policy does not restrict international collaboration broadly — only connections to specifically listed organizations.',
           tags: ['strac', 'stra', 'nro'],
+          relatedTool: 'strac-flowchart',
         },
         {
           id: 'strac-affiliation',
@@ -89,7 +90,7 @@ export const faqData = {
           id: 'nsgrp-what',
           question: 'What is the NSGRP and when does it apply?',
           answer:
-            'The National Security Guidelines for Research Partnerships (NSGRP) set out how national security considerations are assessed in federally funded research partnerships. For the federal partnership funding opportunities the guidelines apply to, applicants complete a Risk Assessment Form (RAF) as part of the application. The funding organization reviews it, consulting national security departments and agencies where appropriate, and may fund the project as proposed, fund it with additional mitigation measures, or decline it if the risks cannot be mitigated. The Government of Canada also encourages all researchers to use the guidelines as a due-diligence tool with any partner or funder, whether or not a form is required. Check the specific funding opportunity\'s requirements to see whether an RAF is mandatory for your application.',
+            'The National Security Guidelines for Research Partnerships (NSGRP) set out how national security considerations are assessed in federally funded research partnerships. A Risk Assessment Form (RAF) is mandatory when two things are true: you are applying to one of the funding opportunities the tri-agency has listed (NSERC Alliance and Idea to Innovation Phase II, CIHR Project Grants, SSHRC Partnership, Partnership Development and Partnership Engage Grants, and newer opportunities added to the list), and the application includes at least one private-sector partner organization — a for-profit company or a body representing for-profits, but not a Canadian Crown corporation or a producer group. The form is required even if you believe there are no risks. The funding organization reviews every form, consulting national security departments and agencies where appropriate, and may fund the project as proposed, fund it with conditions, or decline it. Partnerships whose only partners are universities, hospitals, governments or non-profits do not require the form, but the Government of Canada encourages every researcher to apply the guidelines to any partnership.',
           tags: ['nsgrp', 'partnerships'],
         },
         {
@@ -125,16 +126,16 @@ export const faqData = {
           id: 'ec-apply-universities',
           question: 'Do export controls really apply to university research?',
           answer:
-            'Yes. Canadian export controls apply to university research just as they apply to commercial activities. The Export and Import Permits Act (EIPA) does not exempt academic institutions. If your research involves goods or technologies on the Export Control List (ECL), you may need an export permit to transfer that technology — including to foreign students working in your lab (a "deemed export"). Many universities have export control compliance programs to help researchers navigate these requirements. Contact your institution\'s research compliance or legal office for guidance.',
-          tags: ['export', 'controls', 'universities'],
+            'Yes. Canadian export controls apply to university research just as they apply to commercial activity; the Export and Import Permits Act (EIPA) does not exempt academic institutions. If your research involves goods or technology on the Export Control List (ECL), transferring that technology to a person outside Canada may need an export permit — and the permit requirement applies regardless of the means of delivery, so an email, a shared cloud folder, remote access to a server, or technical assistance given over a call all count. Separately, examining, possessing or transferring goods on the Controlled Goods List inside Canada is regulated by the Controlled Goods Program, which requires the institution to be registered and the people with access to be security-assessed. Many universities have export control compliance programs; contact your institution\'s research compliance or legal office for guidance.',
+          tags: ['export', 'controls', 'universities', 'intangible transfer', 'controlled goods'],
           relatedTool: 'export-control',
         },
         {
           id: 'ec-international-student',
           question: 'Can I share research data with my international graduate students?',
           answer:
-            'This depends on whether the data constitutes "controlled technology" under the Export Control List. For most academic research — published or publishable, not involving weapons or military systems — sharing data with international students does not require an export permit. However, if your research involves technologies on the Export Control List (e.g., certain encryption, advanced materials, aerospace propulsion), providing access to international students may constitute a "deemed export" or "intangible transfer of technology" requiring a permit. When working in sensitive technology areas, consult your institution\'s export compliance office.',
-          tags: ['export', 'controls', 'students', 'deemed-export'],
+            'Usually yes. Canada does not have a "deemed export" rule — that is a US concept. Under Canada\'s general export-control regime, sharing controlled technology with a foreign national who is physically in Canada is not an export. Three things still need checking. First, if the data is on the Export Control List and the student will access it from outside Canada, or you will send it to them abroad, that is an export by intangible means and may need a permit. Second, if the material is a controlled good under the Defence Production Act, domestic access is governed by the Controlled Goods Program, and the student may need a security assessment before being given access. Third, if the technology is of US origin, US export rules — including the US deemed-export rule — may travel with it. For most academic research that is published or publishable and does not involve controlled technology, none of this applies. When it might, consult your institution\'s export compliance office before sharing.',
+          tags: ['export', 'controls', 'students', 'intangible transfer', 'controlled goods', 'US-origin'],
         },
         {
           id: 'ec-sanctions',
