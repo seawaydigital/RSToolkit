@@ -2,11 +2,12 @@
  * Dual-Use Research Guide content.
  * Sourced from Public Safety Canada's Safeguarding Science dual-use workshop
  * and Government of Canada research-security guidance. Not attributed to any
- * single institution. All policy figures verified 2026-06-19 (see spec).
+ * single institution. Policy statements re-verified 2026-09-24 against the STRAC FAQ (Q3 on HQP,
+ * past affiliations) and the live NRO page.
  */
 
 export const dualUseData = {
-  lastUpdated: "2026-06-19",
+  lastUpdated: "2026-09-24",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research",
   sourceLabel: "Safeguarding Your Research (Government of Canada) & Public Safety Canada Safeguarding Science",
 
@@ -128,7 +129,7 @@ export const dualUseData = {
     {
       id: "nro-student",
       title: "A grad student funded by a Named Research Organization",
-      body: "A student receiving funding from an NRO is considered \"affiliated\" under STRAC — regardless of personal intent or work quality — and that affiliation can jeopardize the PI's federal-funding eligibility for the entire project.",
+      body: "On a grant that aims to advance a Sensitive Technology Research Area, no one working on the funded research — students included — may be affiliated with, or receive funding or in-kind support from, an NRO. That applies regardless of personal intent or the quality of the work, and a breach puts the whole grant at risk, not just the student's part.",
       mitigations: [
         "Ask the student to sever ties with the NRO.",
         "Select a different team member for the sensitive-area work.",
@@ -138,7 +139,7 @@ export const dualUseData = {
     {
       id: "nro-support",
       title: "Receiving direct support from an NRO",
-      body: "Accepting NRO funding is not illegal, but it constitutes a STRAC affiliation that makes the researcher ineligible for federal funding on additional sensitive-area projects — even if the NRO agrees outputs stay in Canada. Past affiliations that predate the policy can still surface in future applications.",
+      body: "Accepting NRO funding or in-kind support is not illegal, but while it continues it makes the researcher ineligible for tri-agency or CFI funding for any project that aims to advance a Sensitive Technology Research Area — even if the NRO agrees the outputs stay in Canada. Only current support counts: the policy does not consider past affiliations or funding, so ending the arrangement restores eligibility for future applications.",
       mitigations: [
         "Evaluate any NRO arrangement with your institution before committing — not after.",
         "Disclose past and present affiliations early.",
@@ -192,7 +193,7 @@ export const dualUseData = {
         { text: "Export Controls regulate goods, services, and technology (including data on cloud platforms and temporary transfers) leaving Canada — Global Affairs Canada.", link: { url: "https://www.international.gc.ca/controls-controles/index.aspx", label: "Global Affairs Canada — Export Controls" } },
         { text: "The Controlled Goods Program regulates examination, possession, and transfer of certain goods within Canada — Public Services and Procurement Canada.", link: { url: "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods.html", label: "Controlled Goods Program (PSPC)" } },
         { text: "The Human Pathogens and Toxins Act governs activities involving human pathogens and toxins — Public Health Agency of Canada.", link: { url: "https://laws-lois.justice.gc.ca/eng/acts/h-5.67/", label: "Human Pathogens and Toxins Act" } },
-        { text: "Check sanctions before partnering — Global Affairs Canada sanctions index, and OpenSanctions (aggregates 120+ sources; verify matches against official sources).", link: { url: "https://www.opensanctions.org/", label: "OpenSanctions" } },
+        { text: "Check sanctions before partnering — Global Affairs Canada sanctions index, and OpenSanctions (aggregates sanctions lists from many countries; always verify a match against the official Canadian source).", link: { url: "https://www.opensanctions.org/", label: "OpenSanctions" } },
       ],
     },
     {

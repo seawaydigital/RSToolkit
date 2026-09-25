@@ -10,7 +10,7 @@ export const faqData = {
           id: 'strac-what',
           question: 'What is the STRAC Policy and who does it apply to?',
           answer:
-            'The Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy) applies to grant applications submitted to NSERC, SSHRC and CIHR (the "tri-agency") and to the Canada Foundation for Innovation from May 1, 2024 onward, where the proposed research aims to advance a Sensitive Technology Research Area (STRA). For those applications, every researcher with a named role — applicants, co-applicants, collaborators and highly qualified personnel — must not be affiliated with, or receive funding or in-kind support from, any organization on the Named Research Organizations (NRO) list. The policy is not retroactive: grants awarded before May 1, 2024 are not reassessed under it, although the agencies reserve the right to consider affiliations of concern if a risk is identified.',
+            'The Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy) applies to grant applications submitted to NSERC, SSHRC and CIHR (the "tri-agency") and to the Canada Foundation for Innovation from May 1, 2024 onward, where the proposed research aims to advance a Sensitive Technology Research Area (STRA). For those applications, every researcher with a named role (applicants, co-applicants, collaborators or equivalent roles, which vary slightly by agency) must attest that they are not affiliated with, or receiving funding or in-kind support from, any organization on the Named Research Organizations (NRO) list. Highly qualified personnel — students, postdocs and research staff — do not attest unless they hold a named role, but everyone working on the funded research must comply for the life of the grant. The policy is not retroactive: grants awarded before May 1, 2024 are not reassessed under it, although the agencies reserve the right to consider affiliations of concern if a risk is identified.',
           tags: ['strac', 'policy', 'eligibility'],
         },
         {
@@ -76,7 +76,7 @@ export const faqData = {
           id: 'nro-subsidiary',
           question: 'Does the NRO restriction apply to subsidiaries or spin-offs of listed organizations?',
           answer:
-            'This is an area where guidance is evolving. The NRO list names specific organizations, but the Government of Canada has indicated that researchers should exercise caution with entities that are subsidiaries, spin-offs, or closely affiliated with listed NROs. If an organization appears to be a front, subsidiary, or closely affiliated entity of a listed NRO, it may still trigger STRAC Policy concerns. When in doubt, seek guidance from your institution\'s research security office before establishing any affiliation.',
+            'Formally, the STRAC Policy applies to the organizations on the list, including the known aliases the list gives for each one. It does not automatically extend to every subsidiary or spin-off. However, the Government of Canada notes that institutions not on the list may still pose a risk, and encourages due diligence on any collaboration in a sensitive technology research area. If an organization looks like a front for, or an arm of, a listed NRO, treat it as a serious concern and seek guidance from your institution\'s research security office before establishing any affiliation.',
           tags: ['nro', 'subsidiaries'],
         },
       ],
@@ -141,7 +141,7 @@ export const faqData = {
           id: 'ec-sanctions',
           question: 'How do I know if a potential collaborator is subject to Canadian sanctions?',
           answer:
-            'Global Affairs Canada maintains the Canadian Sanctions List, which identifies individuals and entities subject to sanctions under the Special Economic Measures Act (SEMA), the United Nations Act (UNA), and other legislation. You can search the list at the Global Affairs Canada website. Transacting with sanctioned persons — including research collaboration, payments, or providing services — is prohibited. Sanctions apply to both organizations and individuals, and the list is updated frequently. Consider sanctions screening as part of your due diligence for any international collaboration.',
+            'Global Affairs Canada recommends screening any proposed engagement — hiring, admitting a student, or a research collaboration — against both the Consolidated Canadian Autonomous Sanctions List (people and entities listed under the Special Economic Measures Act and related legislation) and the UN consolidated list. Dealing with a listed person or entity is generally prohibited, and under most regulations that includes indirect dealings, for example through a third party or an organization the listed person owns or controls. Beyond listed persons, some country regimes also restrict specific goods, technology and services, including research and technical assistance. The lists change frequently, so screen at the start of a collaboration and again before renewing it, and consult your institution if anything matches.',
           tags: ['sanctions', 'collaborators'],
         },
         {
@@ -169,7 +169,7 @@ export const faqData = {
           id: 'inst-policy',
           question: 'Does my university need a formal research security policy?',
           answer:
-            'Under the Ontario Research Security Guidelines, publicly assisted universities in Ontario are expected to adopt formal research security policies covering personnel security, information security, physical security, and cybersecurity. Federally, the STRAC Policy and NSGRP create institutional obligations for universities whose researchers receive tri-agency funding. Most major Canadian research universities now have dedicated research security offices or staff embedded in research services. If your university does not yet have formal policies, it likely does or will soon under increasing federal and provincial pressure.',
+            'No single federal or Ontario rule requires a stand-alone research security policy, but in practice every university that receives tri-agency or Ontario research funding needs one. The STRAC Policy and the NSGRP place obligations on institutions as well as researchers, and Ontario\'s Research Security Guidelines require attestations from every named researcher and a security review for provincially funded applications. Most Canadian research universities now have a research security office or dedicated staff in research services, and U15 Canada published a guide to university research security policies and practices in June 2026. Ask your research services office what your institution\'s policy is.',
           tags: ['institutional', 'policy', 'ontario'],
           relatedTool: 'ontario-flowchart',
         },
@@ -184,7 +184,7 @@ export const faqData = {
           id: 'inst-report',
           question: 'What should I do if I suspect foreign interference in my research?',
           answer:
-            'If you suspect that you or your research has been targeted by foreign interference — including suspicious recruitment approaches, unauthorized access to data, or pressure from a foreign government or affiliated entity — you should report it to your institution\'s security or research integrity office, who can assist and escalate appropriately. You may also contact the Canadian Security Intelligence Service (CSIS) through their tip line (1-800-267-7685) or the RCMP. Reporting suspected foreign interference is encouraged and protected under Canadian law. Document the incident carefully before reporting.',
+            'If you suspect that you or your research has been targeted by foreign interference — including suspicious recruitment approaches, unauthorized access to data, or pressure from a foreign government or affiliated entity — you should report it to your institution\'s security or research integrity office, who can assist and escalate appropriately. You may also contact the Canadian Security Intelligence Service (CSIS) at 1-800-267-7685 or 613-993-9620, or the RCMP National Security Information Network at 1-800-420-5805; both also take online reports. Write down what happened — dates, names, messages — but do not delay reporting to do so. The Report a Concern page in this toolkit lists who to contact for each type of situation.',
           tags: ['reporting', 'foreign-interference'],
         },
       ],
@@ -198,7 +198,7 @@ export const faqData = {
           id: 'help-where',
           question: 'Where can I get official guidance on research security?',
           answer:
-            'The primary official resource is the Government of Canada\'s Safeguarding Your Research portal at science.gc.ca. It contains the current STRA and NRO lists, the STRAC Policy, the NSGRP, export control guidance, and links to training resources. For institution-specific guidance, contact your university\'s research security office, research services office, or general counsel. For export control questions specifically, the Trade Commissioner Service at Global Affairs Canada provides guidance. CSIS and the RCMP can assist with national security threat concerns.',
+            'The primary official resource is the Government of Canada\'s Safeguarding Your Research portal at science.gc.ca. It contains the current STRA and NRO lists, the STRAC Policy, the NSGRP, export control guidance, and links to training resources. For institution-specific guidance, contact your university\'s research security office, research services office, or general counsel. For export control questions specifically, contact Global Affairs Canada\'s export controls program, which publishes the Export Control List and handles permit enquiries. CSIS and the RCMP can assist with national security threat concerns.',
           tags: ['help', 'resources'],
         },
         {

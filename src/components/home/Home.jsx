@@ -72,7 +72,7 @@ export default function Home({ onNavigate }) {
         </p>
         <p className="home-hero-fineprint">
           <strong>Sources:</strong> Government of Canada — Safeguarding Your Research,
-          NSERC, CIHR, SSHRC, Global Affairs Canada, and Ontario MCU.
+          NSERC, CIHR, SSHRC, Global Affairs Canada, and the Ontario Ministry of Colleges, Universities, Research Excellence and Security.
         </p>
       </section>
 
