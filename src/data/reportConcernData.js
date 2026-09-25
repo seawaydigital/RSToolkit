@@ -1,6 +1,6 @@
 export const reportConcernData = {
   id: 'report-concern',
-  lastUpdated: '2026-09-02',
+  lastUpdated: '2026-09-24',
   sourceUrl:
     'https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx',
   sourceLabel: 'Public Safety Canada — Safeguarding Science',
@@ -134,7 +134,7 @@ export const reportConcernData = {
       label: 'Your funding agency (NSERC, CIHR, SSHRC)',
       detail:
         'Usually contacted through your institution rather than directly, since attestations and agreements run through them.',
-      url: 'https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security',
+      url: 'https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-on-research',
     },
     'psc-rsc': {
       label: 'Public Safety Canada — Research Security Centre',
@@ -149,16 +149,15 @@ export const reportConcernData = {
     },
     csis: {
       label: 'CSIS',
-      detail: 'Non-urgent national security concerns, including foreign interference.',
+      detail: 'Non-urgent national security concerns, including foreign interference. Also reachable 24/7 at 613-993-9620, or through the online reporting form.',
       phone: '1-800-267-7685',
-      url: 'https://www.canada.ca/en/security-intelligence-service/corporate/contact-us.html',
+      url: 'https://www.canada.ca/en/security-intelligence-service/corporate/reporting-national-security-information.html',
     },
     'rcmp-nsin': {
       label: 'RCMP — National Security Information Network',
-      detail: 'Suspicious incidents and activity with a possible national security dimension.',
+      detail: 'Suspicious incidents and activity with a possible national security dimension. Report by phone or the online form; anonymous reports are accepted.',
       phone: '1-800-420-5805',
-      email: 'NSIN_RISN@rcmp-grc.gc.ca',
-      url: 'https://www.rcmp-grc.gc.ca/en/national-security',
+      url: 'https://rcmp.ca/en/federal-policing/national-security/national-security-information-network',
     },
   },
 
