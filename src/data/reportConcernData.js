@@ -1,3 +1,5 @@
+import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig';
+
 export const reportConcernData = {
   id: 'report-concern',
   lastUpdated: '2026-09-24',
@@ -120,10 +122,9 @@ export const reportConcernData = {
       urgent: true,
     },
     'institution-rso': {
-      label: 'Your institution’s Research Security Office',
-      detail:
-        'First call for almost everything on this page. Often sits under the VP Research. If you do not know who this is, ask your research services or grants office.',
-      local: true,
+      label: `${RS.institution} — Research Security`,
+      detail: `${RS.name}, ${RS.title}. First call for almost everything on this page. At another institution? Contact your own research security office, which often sits under the VP Research.`,
+      email: RS.email,
     },
     'institution-it': {
       label: 'Your institution’s IT / information security team',

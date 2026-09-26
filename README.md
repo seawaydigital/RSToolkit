@@ -101,11 +101,12 @@ Full details — configuration, security headers, external services, maintenance
 
 ## Configuration
 
-Three values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
+Four values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
 
 | Value | What it controls |
 |---|---|
 | `ACCESSIBILITY_CONTACT` | Where AODA barrier reports and alternate-format requests go. **Must be an address your organization monitors.** |
+| `INSTITUTION_RS_CONTACT` | The research security contact named on Report a Concern and in the travel emergency block |
 | `SITE_URL` | Canonical public URL, used for the canonical + Open Graph tags |
 | `SHOW_SISTER_SITE_CARD` | Whether the RDM Toolkit card appears in the sidebar |
 

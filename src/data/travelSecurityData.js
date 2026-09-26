@@ -1,3 +1,5 @@
+import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig';
+
 export const travelSecurityData = {
   id: 'travel-security',
   lastUpdated: '2026-09-02',
@@ -239,6 +241,12 @@ export const travelSecurityData = {
         detail: 'Open 24/7 for Canadians in distress abroad.',
         phone: '+1-613-996-8885',
         email: 'sos@international.gc.ca',
+      },
+      {
+        id: 'institution-rso',
+        label: `${RS.institution} — Research Security`,
+        detail: `${RS.name}, ${RS.title}. Report device searches, seizures or approaches here once you are safe.`,
+        email: RS.email,
       },
       {
         id: 'rsc',

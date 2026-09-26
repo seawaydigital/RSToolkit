@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
 // DEPLOYMENT CONFIGURATION
 //
-// These three values belong to whoever hosts this site. If you are taking
+// These four values belong to whoever hosts this site. If you are taking
 // this repository over, these are the only values you need to change — and
-// you should change all three. Everything else in src/ is host-neutral.
+// you should change all four. Everything else in src/ is host-neutral.
 //
 // See HANDOFF.md for the full deployment guide.
 // ---------------------------------------------------------------------------
@@ -17,6 +17,22 @@
  * address the hosting organization actively monitors. It is not decorative.
  */
 export const ACCESSIBILITY_CONTACT = 'security.research@lakeheadu.ca';
+
+/**
+ * The hosting institution's research security contact.
+ *
+ * Report a Concern tells researchers to start with their own institution for
+ * almost every scenario, and the travel emergency block tells them to report
+ * back to it — this is who that is. Shown by name, so keep it current when
+ * the role changes hands. The email should be a monitored office inbox, not a
+ * personal address, so it survives staff turnover.
+ */
+export const INSTITUTION_RS_CONTACT = {
+  institution: 'Lakehead University',
+  name: 'Andrew Austin',
+  title: 'Research Security and Data Management Specialist',
+  email: 'security.research@lakeheadu.ca',
+};
 
 /**
  * The site's canonical public URL, no trailing slash.
