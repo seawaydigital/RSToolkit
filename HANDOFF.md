@@ -45,11 +45,12 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 
 ## 3. Configure before going live
 
-### 3a. `src/siteConfig.js` — three values
+### 3a. `src/siteConfig.js` — four values
 
 | Value | Change it to | Why it matters |
 |---|---|---|
 | `ACCESSIBILITY_CONTACT` | **An address your organization monitors** | AODA's Information and Communications standard expects a public Ontario site to offer a feedback process and accessible formats on request. This address is the *only* route the footer gives a user who hits a barrier. It points at Lakehead's Research Security & Data Management Services (RSDMS) inbox. |
+| `INSTITUTION_RS_CONTACT` | **Your research security contact** (institution, name, title, monitored email) | Report a Concern tells researchers to start with their own institution, and the travel emergency block tells them to report back to it. This names who that is. Currently Lakehead's Research Security and Data Management Specialist. |
 | `SITE_URL` | Your public URL, no trailing slash | Used for canonical and Open Graph tags |
 | `SHOW_SISTER_SITE_CARD` | `false` if you don't want an off-site link | Controls the "RDM Toolkit" card at the bottom of the sidebar, which links to rdmtoolkit.ca — a separate project by the original author |
 
@@ -240,4 +241,4 @@ Honest inventory of what is not finished.
 | [CLAUDE.md](CLAUDE.md) | Full architecture reference — conventions, design tokens, per-tool decisions, data shapes. The most detailed document here. |
 | [ACCESSIBILITY.md](ACCESSIBILITY.md) | WCAG/AODA remediation record and the manual test checklist |
 | [`src/data/toolRegistry.js`](src/data/toolRegistry.js) | Single source of truth for navigation and the home page |
-| [`src/siteConfig.js`](src/siteConfig.js) | The three values you need to change |
+| [`src/siteConfig.js`](src/siteConfig.js) | The four values you need to change |
