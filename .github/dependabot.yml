@@ -10,9 +10,27 @@ updates:
       interval: weekly
     open-pull-requests-limit: 5
     groups:
+      # react and react-dom must always be on the same version — a site
+      # deployed between two separate bumps would run mismatched copies.
+      # One PR for the pair (and their type packages), never two.
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
       # Build/lint tooling never ships to users; batch it into one PR.
       dev-dependencies:
         dependency-type: development
+    ignore:
+      # eslint-plugin-jsx-a11y (the accessibility lint gate) supports ESLint
+      # only up to v9 — ESLint 10 fails `npm ci` with a peer-dependency
+      # conflict (seen in Dependabot PR #30, 2026-10-04). Re-allow once a
+      # jsx-a11y release lists eslint ^10 in its peerDependencies.
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@eslint/js"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: /
