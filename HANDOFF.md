@@ -2,7 +2,7 @@
 
 Everything needed to build, host, configure, and maintain the Research Security Toolkit.
 
-**Last updated: 2026-09-24**
+**Last updated: 2026-10-03**
 
 ---
 
@@ -45,18 +45,24 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 
 ## 3. Configure before going live
 
-### 3a. `src/siteConfig.js` — four values
+### 3a. `src/siteConfig.js` — six values
 
 | Value | Change it to | Why it matters |
 |---|---|---|
 | `ACCESSIBILITY_CONTACT` | **An address your organization monitors** | AODA's Information and Communications standard expects a public Ontario site to offer a feedback process and accessible formats on request. This address is the *only* route the footer gives a user who hits a barrier. It points at Lakehead's Research Security & Data Management Services (RSDMS) inbox. |
 | `INSTITUTION_RS_CONTACT` | **Your research security contact** (institution, name, title, monitored email) | Report a Concern tells researchers to start with their own institution, and the travel emergency block tells them to report back to it. This names who that is. Currently Lakehead's Research Security and Data Management Specialist. |
-| `SITE_URL` | Your public URL, no trailing slash | Used for canonical and Open Graph tags |
+| `SITE_URL` | Your public URL, `https://`, no trailing slash | Filled into the canonical and Open Graph tags in `index.html` at build time. The build fails if it is not an absolute `https://` URL. |
+| `WEB_HOST` | **Who serves the files**, e.g. `'Lakehead University web servers'` | Named on the How This Site Works page, which promises a *complete* list of every party that sees a request from the site. If a proxy or CDN sits in front, name it too (e.g. `'Cloudflare, which forwards them to Lakehead University web servers'`). Leaving it as `GitHub Pages` after moving makes the privacy page false. |
+| `ENABLE_PROXIMITY_SEARCH` | `false` if no user input may leave the browser | The NRO map's proximity panel is the **only** feature that sends what a user types off the device (to OpenStreetMap and Wikipedia). `false` removes the panel and every mention of it on How This Site Works and in the FAQ. If you turn it off, also delete the two geocoder hosts from `connect-src` (in `index.html` and in your header CSP). |
 | `SHOW_SISTER_SITE_CARD` | `false` if you don't want an off-site link | Controls the "RDM Toolkit" card at the bottom of the sidebar, which links to rdmtoolkit.ca — a separate project by the original author |
 
-### 3b. `index.html` — canonical and Open Graph URLs
+### 3b. `index.html` — nothing to edit for the domain
 
-Static meta tags can't read JS config, so if you change `SITE_URL` you must also update the matching `<link rel="canonical">`, `og:url`, `og:image`, and `twitter:image` values in `index.html`. There are four.
+The canonical and Open Graph URLs are written as `%SITE_URL%` placeholders and filled in by a small plugin in `vite.config.js`, so `SITE_URL` above is the only place the domain lives. For a one-off build to a different host (e.g. staging) without editing the file:
+
+```bash
+SITE_URL=https://staging.example.lakeheadu.ca npm run build
+```
 
 ### 3c. `package.json` — if you fork to your own organization
 
@@ -91,23 +97,240 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 `frame-ancestors 'none'` is what stops the site being framed by another origin. If your stack does not let you add a CSP header, `X-Frame-Options: DENY` is the older equivalent and is honoured by every browser you care about — but do not set both to conflicting values.
 
-You may also prefer to move the whole CSP to a response header — a real header takes precedence over the meta tag, is easier to audit, and lets `frame-ancestors` live with the rest of the policy. The current policy, for reference (add `frame-ancestors 'none'` to it if you do this, and then drop the meta tag from `index.html`):
+**Recommended: send the whole CSP as a response header too**, with `frame-ancestors 'none'` added — the server configs in §4a below do exactly that. Keep the meta tag in `index.html` as well, so the page stays protected if a server config is ever lost. When a page has both, the browser enforces **both** (a request must pass each policy), so the two must list the same hosts: if you add a host to one and not the other, the stricter one silently blocks it. The policy, identical to the meta tag except for `frame-ancestors`:
 
 ```
 default-src 'self';
 script-src 'self';
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
+style-src 'self' 'unsafe-inline';
+img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
 connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org;
-font-src 'self' https://fonts.gstatic.com;
+font-src 'self';
 object-src 'none';
 base-uri 'self';
 form-action 'none';
+frame-ancestors 'none';
 ```
+
+Every allowance is in use and nothing else is: fonts are self-hosted (no Google Fonts), `img-src` is the three basemap providers plus `data:` for the inlined Leaflet marker icons, and `connect-src` is the two geocoders behind the NRO proximity panel. If `ENABLE_PROXIMITY_SEARCH` is `false`, reduce `connect-src` to `'self'`. If you use only one basemap provider, you may trim the other two from `img-src`.
 
 `script-src` deliberately has **no** `'unsafe-inline'`. The production build emits one external module script and no inline scripts or handlers, so the allowance was never needed — and it is precisely what an injected `onerror=` attribute would need in order to execute. Do not add it back to silence a warning; find the source of the inline script instead. (`style-src` does still need `'unsafe-inline'`: React and Leaflet both set inline `style` attributes.)
 
-### Applying the headers on GitHub Pages: put Cloudflare in front
+### 4a. Hosting at Lakehead (or any server you control)
+
+Serve `dist/` from a **dedicated subdomain** (e.g. `rs.<something>.lakeheadu.ca`), not a folder under an existing site. A browser treats everything on one origin as one trust zone: under a shared host, this site's saved checklists would be readable by every other application on that origin, and a flaw in any of them could reach this page. A dedicated subdomain keeps it isolated.
+
+**Do not let the hosting platform inject anything into the page.** University web platforms often add analytics, accessibility overlays, tag managers or CMS banners to every page they serve (Siteimprove, Google Tag Manager, Matomo and similar). Here, that would be blocked by the CSP and break nothing visible. But it would also make the How This Site Works page false, because that page tells researchers there are no analytics and lists every outbound request. Serve the built files byte-for-byte.
+
+Every config below does the same five things:
+1. It sends the security headers on every response, including error responses.
+2. It caches the hashed files in `assets/` for a year and makes browsers revalidate `index.html`.
+3. It allows only `GET` and `HEAD`, because a static site has no use for any other method.
+4. It turns off directory listings and server version banners.
+5. It redirects HTTP to HTTPS.
+
+Replace `rs.example.lakeheadu.ca` and the document root with your own values.
+
+<details>
+<summary><strong>nginx</strong></summary>
+
+nginx has a trap here: an `add_header` inside a `location` block **discards every `add_header` inherited from the server block**. So the headers live in one include file, and every location that sets its own `Cache-Control` must include it again.
+
+`/etc/nginx/snippets/rs-toolkit-headers.conf`:
+
+```nginx
+add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com; connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'" always;
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header X-Frame-Options "DENY" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" always;
+add_header Cross-Origin-Opener-Policy "same-origin" always;
+add_header Cross-Origin-Resource-Policy "same-origin" always;
+```
+
+Site config:
+
+```nginx
+server {
+    listen 80;
+    listen [::]:80;
+    server_name rs.example.lakeheadu.ca;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
+    server_name rs.example.lakeheadu.ca;
+    # ssl_certificate / ssl_certificate_key: your institutional certificate
+
+    root /var/www/rs-toolkit;      # the contents of dist/
+    index index.html;
+    server_tokens off;
+    autoindex off;
+
+    if ($request_method !~ ^(GET|HEAD)$) { return 405; }
+
+    include snippets/rs-toolkit-headers.conf;
+
+    location / {
+        try_files $uri =404;       # hash routing: no SPA fallback needed
+        add_header Cache-Control "public, max-age=86400" always;
+        include snippets/rs-toolkit-headers.conf;
+    }
+    location = /index.html {
+        add_header Cache-Control "no-cache" always;
+        include snippets/rs-toolkit-headers.conf;
+    }
+    location /assets/ {
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        include snippets/rs-toolkit-headers.conf;
+    }
+}
+```
+
+Requests for `/` are served from `index.html` by the `index` directive and pick up the `location = /index.html` headers.
+</details>
+
+<details>
+<summary><strong>Apache httpd 2.4</strong> (needs <code>mod_headers</code>; <code>mod_ssl</code> for HTTPS)</summary>
+
+```apache
+# Server-wide (httpd.conf): hide version banners and disable TRACE
+ServerTokens Prod
+ServerSignature Off
+TraceEnable Off
+
+<VirtualHost *:80>
+    ServerName rs.example.lakeheadu.ca
+    Redirect permanent / https://rs.example.lakeheadu.ca/
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName rs.example.lakeheadu.ca
+    DocumentRoot /var/www/rs-toolkit
+    # SSLEngine on / SSLCertificateFile / SSLCertificateKeyFile: your certificate
+
+    <Directory /var/www/rs-toolkit>
+        Options -Indexes -Includes -ExecCGI -FollowSymLinks
+        AllowOverride None
+        <LimitExcept GET HEAD>
+            Require all denied
+        </LimitExcept>
+        Require all granted
+    </Directory>
+
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com; connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+    Header set Cache-Control "public, max-age=86400"
+    <LocationMatch "^/(index\.html)?$">
+        Header set Cache-Control "no-cache"
+    </LocationMatch>
+    <Location "/assets/">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </Location>
+</VirtualHost>
+```
+</details>
+
+<details>
+<summary><strong>IIS 10</strong> (<code>web.config</code> in the site root, next to <code>index.html</code>)</summary>
+
+Bind the site to HTTPS only. For the HTTP→HTTPS redirect, use the URL Rewrite module or a separate port-80 site that redirects. IIS adds `Server` and `X-Powered-By` banners by default, and this config removes both.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <directoryBrowse enabled="false" />
+    <httpProtocol>
+      <customHeaders>
+        <remove name="X-Powered-By" />
+        <add name="Content-Security-Policy" value="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com; connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'" />
+        <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains" />
+        <add name="X-Content-Type-Options" value="nosniff" />
+        <add name="X-Frame-Options" value="DENY" />
+        <add name="Referrer-Policy" value="strict-origin-when-cross-origin" />
+        <add name="Permissions-Policy" value="camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" />
+        <add name="Cross-Origin-Opener-Policy" value="same-origin" />
+        <add name="Cross-Origin-Resource-Policy" value="same-origin" />
+      </customHeaders>
+    </httpProtocol>
+    <security>
+      <requestFiltering removeServerHeader="true">
+        <verbs allowUnlisted="false">
+          <add verb="GET" allowed="true" />
+          <add verb="HEAD" allowed="true" />
+        </verbs>
+      </requestFiltering>
+    </security>
+    <staticContent>
+      <remove fileExtension=".woff2" />
+      <mimeMap fileExtension=".woff2" mimeType="font/woff2" />
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="1.00:00:00" />
+    </staticContent>
+  </system.webServer>
+  <location path="index.html">
+    <system.webServer>
+      <staticContent><clientCache cacheControlMode="DisableCache" /></staticContent>
+    </system.webServer>
+  </location>
+  <location path="assets">
+    <system.webServer>
+      <staticContent><clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="365.00:00:00" /></staticContent>
+    </system.webServer>
+  </location>
+</configuration>
+```
+</details>
+
+**About `includeSubDomains`:** on a dedicated subdomain this applies only to hosts *beneath* that subdomain, which normally don't exist, so it is safe. Do **not** set HSTS with `preload` on the parent `lakeheadu.ca` as part of this work; that is an institution-wide decision.
+
+#### Verify the deployment
+
+Run these after go-live. Replace the host with yours.
+
+```bash
+curl -sI https://rs.example.lakeheadu.ca/ | grep -iE "content-security|strict-transport|x-content-type|x-frame|referrer-policy|permissions-policy|cross-origin|cache-control|^server"
+```
+
+Expect all eight security headers, `Cache-Control: no-cache`, and a `Server` header with no version number (or none at all).
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" -X POST https://rs.example.lakeheadu.ca/
+```
+
+Expect `405` or `403`.
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" https://rs.example.lakeheadu.ca/assets/
+```
+
+Expect `403` or `404`, not a file listing.
+
+```bash
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" http://rs.example.lakeheadu.ca/
+```
+
+Expect `301` to the `https://` URL.
+
+Then open the home page and `#nro-lookup` with the browser's developer tools open:
+- The **Console** must show no CSP errors.
+- The **Network** tab must show requests only to your host and the basemap provider.
+- Pressing *Find* in the proximity panel should add a request to `nominatim.openstreetmap.org`.
+
+Finally, scan the site with [MDN HTTP Observatory](https://developer.mozilla.org/en-US/observatory); these headers should score A+.
+
+### 4b. Applying the headers on GitHub Pages: put Cloudflare in front
 
 GitHub Pages cannot set response headers. The lowest-effort fix is Cloudflare's free plan as a proxy in front of `rs.rdmtoolkit.ca`. It takes about an hour and needs no change to the site's code.
 
@@ -129,7 +352,7 @@ GitHub Pages cannot set response headers. The lowest-effort fix is Cloudflare's 
    ```
 
    Then load the home page and the NRO map with the browser console open and confirm there are no CSP errors, and load `https://rdmtoolkit.ca` to confirm the sister site is unaffected.
-8. **Keep the privacy page true.** The first row of `dataFlows.rows` in `src/data/howItWorksData.js` says page-load requests go to "The web host (GitHub Pages)". Once Cloudflare is proxying, change that cell to "Cloudflare, which forwards them to the web host (GitHub Pages)", and add Cloudflare to the service table in section 5 of this file. The page states that its list of outbound requests is complete, so it must name every party that sees them.
+8. **Keep the privacy page true.** The How This Site Works page says page-load requests go to "The web host (GitHub Pages)", taken from `WEB_HOST` in `src/siteConfig.js`. Once Cloudflare is proxying, set `WEB_HOST` to `'Cloudflare, which forwards them to GitHub Pages'`, and add Cloudflare to the service table in section 5 of this file. The page states that its list of outbound requests is complete, so it must name every party that sees them.
 
 **Leave these Cloudflare features off:** *Rocket Loader*, *Email Address Obfuscation* (under Scrape Shield), and *Web Analytics* / automatic RUM. The first two inject inline scripts, which the page's CSP (`script-src 'self'`) blocks, and that breaks the page. The third injects a third-party analytics beacon, which would make the site's "no analytics, no tracking" statement false. Leave caching at the defaults; the Vite build already uses hashed asset filenames.
 
@@ -148,14 +371,13 @@ This is **Vite's dev-server HMR client** (`node_modules/vite/dist/client/client.
 
 ## 5. Third-party services the site calls at runtime
 
-Four external dependencies. If your institution restricts third-party resource loading, these are the ones to review.
+Three external dependencies, and none of them is contacted on an ordinary page load. The map tiles load only on the NRO map, and the geocoders are called only when a user presses *Find*. The fonts (Archivo, Inter, JetBrains Mono) are **self-hosted**: they come from npm (`@fontsource-variable/inter`, `@fontsource-variable/archivo`, `@fontsource/jetbrains-mono`) and are bundled into `dist/assets/`, so no font service sees a visitor. `vite.config.js` stops Vite from inlining small font files as `data:` URIs, because the CSP's `font-src 'self'` would block them. Keep that setting.
 
 | Service | Used for | If you must remove it |
 |---|---|---|
-| **Google Fonts** (`fonts.googleapis.com`, `fonts.gstatic.com`) | Archivo, Inter, JetBrains Mono | Self-host the font files and update the `<link>` in `index.html` plus `font-src`/`style-src` in the CSP. Straightforward. |
 | **Basemap tiles** — Esri (`server.arcgisonline.com`) by default, or CARTO (`*.basemaps.cartocdn.com`) / Stadia (`tiles.stadiamaps.com`) with a key | The NRO map background | The map needs a tile source. Providers are configured in `src/data/mapTiles.js`; add a new one there **and add its host to `img-src` in `index.html`**, or the tiles silently fail to load. See the note below. |
-| **Nominatim** (`nominatim.openstreetmap.org`) | Primary geocoder for the NRO "Check proximity to NROs" panel | See the note below. |
-| **Wikipedia** (`en.wikipedia.org`) | Fallback geocoder for the same panel, used only when Nominatim finds nothing | See the note below. |
+| **Nominatim** (`nominatim.openstreetmap.org`) | Primary geocoder for the NRO "Check proximity to NROs" panel | Set `ENABLE_PROXIMITY_SEARCH = false` in `src/siteConfig.js` and drop the host from `connect-src`. See the note below. |
+| **Wikipedia** (`en.wikipedia.org`) | Fallback geocoder for the same panel, used only when Nominatim finds nothing | Same switch as Nominatim. |
 
 **About the basemap — worth two minutes of your time.** The map plots Chinese, Russian and Iranian institutions, so **English place labels are a functional requirement**, not a preference. CARTO began enforcing API keys in August 2026, which is why the default is now keyless Esri. Esri renders Latin labels through zoom 10 — correct everywhere the UI actually navigates — but switches to local script (Hanzi / Cyrillic / Perso-Arabic) past that if a user zooms in manually.
 
@@ -222,7 +444,7 @@ Sanctions and the NRO list move fastest. Cross-check against the [Global Affairs
 
 Honest inventory of what is not finished.
 
-- **No automated test suite.** There is no unit or integration test framework. The quality gates are `npm run lint` (including the a11y rules), a clean production build, and the manual accessibility checklist. Adding tests would be a genuine improvement.
+- **Automated tests cover the flowchart graphs only.** `npm test` (Node's built-in runner, no dependencies) checks every flowchart for broken links, unreachable nodes and dead ends. There are no component or end-to-end tests. The other quality gates are `npm audit`, `npm run lint` (including the a11y rules), a clean production build, and the manual accessibility checklist. All of them run in CI on every pull request.
 - **NRO map pin highlight is not wired.** Clicking a row in the NRO table highlights the row but not the corresponding map pin. Implementing it means holding refs to individual markers inside the cluster group and opening the popup programmatically. The dead prop that half-suggested this was removed; the idea is recorded here instead.
 - **Three NRO city labels are known to be imprecise** (coordinates are correct in all three cases):
   - `33rd-tsnii` — labelled Moscow; actually in Shikhany-2, Saratov Oblast.
@@ -241,4 +463,5 @@ Honest inventory of what is not finished.
 | [CLAUDE.md](CLAUDE.md) | Full architecture reference — conventions, design tokens, per-tool decisions, data shapes. The most detailed document here. |
 | [ACCESSIBILITY.md](ACCESSIBILITY.md) | WCAG/AODA remediation record and the manual test checklist |
 | [`src/data/toolRegistry.js`](src/data/toolRegistry.js) | Single source of truth for navigation and the home page |
-| [`src/siteConfig.js`](src/siteConfig.js) | The four values you need to change |
+| [`src/siteConfig.js`](src/siteConfig.js) | The six values you need to review |
+| [SECURITY.md](SECURITY.md) | Security audit record, threat model, supply-chain controls, and how to report a vulnerability |

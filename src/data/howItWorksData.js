@@ -11,11 +11,17 @@
 //     button uses.
 // Keep the wording honest. This page says "as safe as a website can be", not
 // "100% safe", on purpose — see the limits section.
+//
+// Host-specific facts come from src/siteConfig.js: WEB_HOST names who serves
+// the files, and ENABLE_PROXIMITY_SEARCH removes every mention of the
+// geocoders when the proximity panel is switched off.
+
+import { WEB_HOST, ENABLE_PROXIMITY_SEARCH as GEO } from '../siteConfig';
 
 export const STORAGE_KEYS = ['rs-toolkit-checklist-v1', 'rs-toolkit-travel-v1'];
 
 export const howItWorksData = {
-  lastUpdated: '2026-09-18',
+  lastUpdated: '2026-09-28',
   sourceUrl: 'https://github.com/seawaydigital/RSToolkit',
   sourceLabel: 'View the source code',
 
@@ -34,7 +40,7 @@ export const howItWorksData = {
       {
         title: 'Your browser downloads the site once',
         body:
-          'Opening the toolkit fetches a fixed set of files from the web host: the page, one JavaScript bundle, the stylesheet, and the built-in reference data (the NRO list, the STRA categories, export-control summaries, and so on). This is exactly what happens when you read any web page.',
+          'Opening the toolkit fetches a fixed set of files from the web host: the page, the JavaScript and stylesheet, the fonts, and the built-in reference data (the NRO list, the STRA categories, export-control summaries, and so on). This is exactly what happens when you read any web page.',
       },
       {
         title: 'Every tool then runs locally',
@@ -63,14 +69,8 @@ export const howItWorksData = {
       {
         when: 'Every page load',
         what: 'A request for the site files',
-        to: 'The web host (GitHub Pages)',
-        learn: 'That your IP address opened the site. Not which tool you used or what you typed — the URL after the # is never sent to a server.',
-      },
-      {
-        when: 'Every page load',
-        what: 'A request for three font files',
-        to: 'Google Fonts',
-        learn: 'That your IP address loaded a page using these fonts. Nothing about the page content or your activity.',
+        to: `The web host (${WEB_HOST})`,
+        learn: 'That your IP address opened the site. Not which tool you used or what you typed — the URL after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
       },
       {
         when: 'Only on the NRO map',
@@ -78,14 +78,14 @@ export const howItWorksData = {
         to: 'The basemap provider (Esri by default)',
         learn: 'Which areas of the world map you looked at and how far you zoomed in. Not your search text, and not which pins you clicked.',
       },
-      {
+      GEO && {
         when: 'Only when you press "Find" in the proximity panel on the NRO map',
         what: 'The institution name you typed',
         to: 'OpenStreetMap (Nominatim), and Wikipedia only if OpenStreetMap finds nothing',
         learn: 'That someone at your IP address looked up that institution name. This is the one feature that sends what you type, and it is designed for an institution name, not project details.',
         highlight: true,
       },
-    ],
+    ].filter(Boolean),
     outro:
       'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
   },
@@ -151,7 +151,7 @@ export const howItWorksData = {
       },
       {
         title: 'A strict Content Security Policy',
-        body: 'The page carries a browser-enforced policy that permits scripts only from the site itself (no inline scripts, no third-party scripts), permits network connections only to the two geocoders listed above, and forbids form submissions entirely. If the code tried to send data anywhere else, the browser would block it.',
+        body: `The page carries a browser-enforced policy that permits scripts only from the site itself (no inline scripts, no third-party scripts), permits network connections only to ${GEO ? 'the two geocoders listed above' : 'the site itself'}, and forbids form submissions entirely. If the code tried to send data anywhere else, the browser would block it.`,
       },
       {
         title: 'No cookies, no analytics, no trackers',
@@ -159,7 +159,9 @@ export const howItWorksData = {
       },
       {
         title: 'Third-party responses are treated as untrusted',
-        body: 'The only outside data the site renders at runtime is the geocoder result on the NRO map. It is escaped before display so that a tampered map name could not inject code into the page.',
+        body: GEO
+          ? 'The only outside data the site renders at runtime is the geocoder result on the NRO map. It is escaped before display so that a tampered map name could not inject code into the page.'
+          : 'The site renders no outside data at runtime other than map image tiles, which are displayed as images and cannot run code.',
       },
       {
         title: 'Open source and auditable',
@@ -167,7 +169,7 @@ export const howItWorksData = {
       },
       {
         title: 'Dependencies are audited',
-        body: 'The handful of open-source libraries the site is built from (React, Leaflet, Fuse.js, dagre, lucide) are checked against the npm vulnerability database and updated when advisories appear.',
+        body: 'The handful of open-source libraries the site is built from (React, Leaflet, Fuse.js, dagre, lucide, and the self-hosted fonts) are checked against the npm vulnerability database and updated when advisories appear.',
       },
       {
         title: 'Served over HTTPS',
@@ -182,7 +184,7 @@ export const howItWorksData = {
     items: [
       {
         title: 'Watch the network',
-        body: 'Open your browser\'s developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map, and the geocoder call when you press "Find" in the proximity panel.',
+        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
       },
       {
         title: 'Read the policy',
@@ -200,8 +202,8 @@ export const howItWorksData = {
     items: [
       'It does not make the site "100% safe" — no website is. It means the site\'s own design gives it nothing of yours to lose. Your device, your browser, and your network are still yours to secure; the Cybersecurity guide covers that.',
       'It does not make the content legal advice. The toolkit explains policy; your institution\'s research security office makes determinations.',
-      'It does not make the proximity search private. That one feature sends the institution name you type to OpenStreetMap and, if needed, Wikipedia. Use it for institution names only.',
+      GEO && 'It does not make the proximity search private. That one feature sends the institution name you type to OpenStreetMap and, if needed, Wikipedia, along with your IP address. Use it for institution names only — and if the fact that you are looking at a particular partner is itself sensitive, do not type it there; filter the NRO table by city instead, which never leaves your browser.',
       'It does not protect a shared computer. The two saved checklists sit in that browser\'s local storage until cleared — use the button above before you walk away.',
-    ],
+    ].filter(Boolean),
   },
 };

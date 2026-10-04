@@ -1,3 +1,5 @@
+import { ENABLE_PROXIMITY_SEARCH } from '../siteConfig';
+
 export const faqData = {
   lastUpdated: '2026-09-18',
   categories: [
@@ -212,7 +214,11 @@ export const faqData = {
           id: 'help-safe',
           question: 'Is it safe to type details of my research into this toolkit?',
           answer:
-            'Yes, because nothing you type is sent anywhere. The toolkit has no server behind it: the whole site is downloaded to your browser once, and every search, wizard, and checklist then runs locally on your own device. There is no account, no database, no analytics, and no form that submits — the browser-enforced security policy on the page forbids it. Two checklists save your ticks in your browser\'s local storage so they survive a refresh; that stays on your device and can be cleared with one click. The single exception is the "Check proximity to NROs" panel on the NRO map, which sends the institution name you type to OpenStreetMap (and Wikipedia as a fallback) to find its coordinates — use it for institution names only. Compare that with asking a consumer AI chatbot, where your prompt is stored on the vendor\'s servers and may be used for training. The "How This Site Works" page lists every outbound request the site makes and shows you how to verify it yourself.',
+            'Yes, because nothing you type is sent anywhere. The toolkit has no server behind it: the whole site is downloaded to your browser once, and every search, wizard, and checklist then runs locally on your own device. There is no account, no database, no analytics, and no form that submits — the browser-enforced security policy on the page forbids it. Two checklists save your ticks in your browser\'s local storage so they survive a refresh; that stays on your device and can be cleared with one click.' +
+            (ENABLE_PROXIMITY_SEARCH
+              ? ' The single exception is the "Check proximity to NROs" panel on the NRO map, which sends the institution name you type to OpenStreetMap (and Wikipedia as a fallback) to find its coordinates — use it for institution names only.'
+              : '') +
+            ' Compare that with asking a consumer AI chatbot, where your prompt is stored on the vendor\'s servers and may be used for training. The "How This Site Works" page lists every outbound request the site makes and shows you how to verify it yourself.',
           tags: ['privacy', 'safety', 'data', 'about'],
           relatedTools: ['how-it-works', 'cybersecurity-guide'],
         },

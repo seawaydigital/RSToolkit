@@ -11,6 +11,7 @@ import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import Fuse from 'fuse.js';
 import nroData from '../../data/nroData';
 import { activeTileProvider } from '../../data/mapTiles';
+import { ENABLE_PROXIMITY_SEARCH } from '../../siteConfig';
 
 // Fix Leaflet default icon paths for Vite
 delete L.Icon.Default.prototype._getIconUrl;
@@ -548,29 +549,45 @@ export default function NroLookup() {
             {country}
           </span>
         ))}
-        <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)' }}>
-          <span style={{
-            width: 12,
-            height: 12,
-            borderRadius: '50%',
-            backgroundColor: '#fbbf24',
-            display: 'inline-block',
-            border: '2px solid #fff',
-          }} />
-          Your institution
-        </span>
+        {ENABLE_PROXIMITY_SEARCH && (
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)' }}>
+            <span style={{
+              width: 12,
+              height: 12,
+              borderRadius: '50%',
+              backgroundColor: '#fbbf24',
+              display: 'inline-block',
+              border: '2px solid #fff',
+            }} />
+            Your institution
+          </span>
+        )}
       </div>
 
-      {/* Institution proximity check */}
+      {/* Institution proximity check — the only feature that sends user input
+          off the device, so it carries its own privacy notice at the point of
+          entry and can be switched off in siteConfig.js. */}
+      {ENABLE_PROXIMITY_SEARCH && (
       <div className="nro-proximity-panel">
         <div className="nro-proximity-header">
           <strong>Check proximity to NROs</strong>
           <span>Search any institution to see the nearest Named Research Organizations and their distances. Searches OpenStreetMap first, then Wikipedia for institutions that OpenStreetMap does not map — for best results, include the city or country (e.g. &quot;Beihang University, Beijing&quot;). Each result shows which source it came from; Wikipedia results are main-campus locations rather than exact addresses.</span>
         </div>
+        <p id="nro-proximity-privacy" className="nro-proximity-privacy">
+          <strong>Privacy:</strong> unlike the rest of this site, what you type here leaves your
+          browser. When you press Find it is sent, with your IP address, to OpenStreetMap and
+          possibly Wikipedia. Enter an institution name only — never project details. If the fact
+          that you are looking at a particular partner is itself sensitive, filter the NRO table
+          below by city instead; that search stays on your device.{' '}
+          <a href="#how-it-works">How this site handles your data</a>
+        </p>
         <form className="nro-proximity-form" onSubmit={handleInstitutionSearch}>
           <input
             type="text"
             className="nro-proximity-input"
+            aria-label="Institution name"
+            aria-describedby="nro-proximity-privacy"
+            autoComplete="off"
             placeholder="e.g. University of Toronto, MIT, Peking University…"
             value={institutionQuery}
             onChange={(e) => {
@@ -664,6 +681,7 @@ export default function NroLookup() {
           </div>
         )}
       </div>
+      )}
 
       {/* Country filter chips */}
       <div className="nro-filters">
