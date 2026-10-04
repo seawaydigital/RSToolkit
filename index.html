@@ -7,16 +7,17 @@
     <title>Research Security Toolkit</title>
     <meta name="description" content="Free, plain-language tools for Canadian researchers and research administrators navigating federal research security policy — STRAC, NSGRP, Named Research Organizations, Sensitive Technology Research Areas, and export controls. No account required." />
 
-    <!-- Update SITE_URL in src/siteConfig.js and mirror it here when the
-         hosting domain changes: static meta tags can't read JS config. -->
-    <link rel="canonical" href="https://rs.rdmtoolkit.ca/" />
+    <!-- The SITE_URL placeholders below are filled in at build time from
+         SITE_URL in src/siteConfig.js (or a SITE_URL environment variable)
+         by the site-url plugin in vite.config.js. Do not hard-code a domain. -->
+    <link rel="canonical" href="%SITE_URL%/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Research Security Toolkit" />
     <meta property="og:title" content="Research Security Toolkit" />
     <meta property="og:description" content="Free, plain-language tools for Canadian researchers navigating federal research security policy — STRAC, NSGRP, NROs, STRAs, and export controls." />
-    <meta property="og:url" content="https://rs.rdmtoolkit.ca/" />
-    <meta property="og:image" content="https://rs.rdmtoolkit.ca/og-image.png" />
+    <meta property="og:url" content="%SITE_URL%/" />
+    <meta property="og:image" content="%SITE_URL%/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Research Security Toolkit — Canadian research security, without the guesswork." />
@@ -24,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Research Security Toolkit" />
     <meta name="twitter:description" content="Free, plain-language tools for Canadian researchers navigating federal research security policy." />
-    <meta name="twitter:image" content="https://rs.rdmtoolkit.ca/og-image.png" />
+    <meta name="twitter:image" content="%SITE_URL%/og-image.png" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -43,14 +44,17 @@
          dead weight — and it is exactly what an injected onerror= attribute
          would need in order to run. Do not re-add it to silence a warning.
          img-src must list every basemap host in src/data/mapTiles.js; adding
-         a tile provider without adding its host here silently breaks the map. -->
+         a tile provider without adding its host here silently breaks the map.
+         Fonts are self-hosted (see src/main.jsx), so style-src and font-src
+         are 'self' only — no Google Fonts. Keep this policy identical to the
+         header version in HANDOFF.md §4. -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self';
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' data: blob: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
       connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org;
-      font-src 'self' https://fonts.gstatic.com;
+      font-src 'self';
       object-src 'none';
       base-uri 'self';
       form-action 'none';
@@ -61,9 +65,6 @@
       ("Security headers") before adding any security-related meta tag here.
     -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@400;500&display=swap" />
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,20 @@
+# Keeps dependencies and the SHA-pinned GitHub Actions current.
+# Actions in deploy.yml are pinned to full commit SHAs (a moved tag cannot
+# change what runs); Dependabot bumps the SHA and the "# vX.Y.Z" comment
+# together, so pinning does not mean falling behind on fixes.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # Build/lint tooling never ships to users; batch it into one PR.
+      dev-dependencies:
+        dependency-type: development
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

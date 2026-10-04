@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
 // DEPLOYMENT CONFIGURATION
 //
-// These four values belong to whoever hosts this site. If you are taking
-// this repository over, these are the only values you need to change — and
-// you should change all four. Everything else in src/ is host-neutral.
+// These values belong to whoever hosts this site. If you are taking this
+// repository over, these are the only values you need to change — review
+// every one. Everything else in src/ is host-neutral.
 //
 // See HANDOFF.md for the full deployment guide.
 // ---------------------------------------------------------------------------
@@ -37,11 +37,35 @@ export const INSTITUTION_RS_CONTACT = {
 /**
  * The site's canonical public URL, no trailing slash.
  *
- * Used for the <link rel="canonical"> and Open Graph tags in index.html.
- * Update this to the real hosting URL before going live, or search engines
- * and social previews will point at the previous host.
+ * Filled into the <link rel="canonical"> and Open Graph tags in index.html at
+ * build time (vite.config.js replaces %SITE_URL%), so this is the only place
+ * the domain needs changing. Must be https://. A SITE_URL environment
+ * variable overrides it for a single build.
  */
 export const SITE_URL = 'https://rs.rdmtoolkit.ca';
+
+/**
+ * Who serves the site's files, named on the "How This Site Works" page.
+ *
+ * That page promises a COMPLETE list of every party that sees a request from
+ * the site, so this must name the real host — and any proxy/CDN in front of
+ * it (e.g. 'Cloudflare, which forwards them to Lakehead University web
+ * servers'). A privacy page naming the wrong host is a false statement.
+ */
+export const WEB_HOST = 'GitHub Pages';
+
+/**
+ * Whether the NRO map's "Check proximity to NROs" panel is shown.
+ *
+ * It is the ONLY feature that sends something a user types off the device:
+ * the institution name goes to OpenStreetMap's Nominatim geocoder and, if
+ * that finds nothing, to the Wikipedia API. Set to false if your institution
+ * does not want any user input leaving the browser; the panel and its row on
+ * the How This Site Works page disappear together. If you do, also remove
+ * the two geocoder hosts from connect-src in index.html (and the header CSP)
+ * so the policy allows nothing the site does not use.
+ */
+export const ENABLE_PROXIMITY_SEARCH = true;
 
 /**
  * Whether to show the RDM Toolkit sister-site card at the bottom of the

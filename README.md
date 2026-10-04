@@ -101,16 +101,18 @@ Full details — configuration, security headers, external services, maintenance
 
 ## Configuration
 
-Four values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
+Six values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
 
 | Value | What it controls |
 |---|---|
 | `ACCESSIBILITY_CONTACT` | Where AODA barrier reports and alternate-format requests go. **Must be an address your organization monitors.** |
 | `INSTITUTION_RS_CONTACT` | The research security contact named on Report a Concern and in the travel emergency block |
-| `SITE_URL` | Canonical public URL, used for the canonical + Open Graph tags |
+| `SITE_URL` | Canonical public `https://` URL. Filled into the canonical and Open Graph tags in `index.html` at build time, so it is the only place the domain is set |
+| `WEB_HOST` | Who serves the files, as named on the How This Site Works privacy page. Must match the real host |
+| `ENABLE_PROXIMITY_SEARCH` | Whether the NRO map's proximity panel, the only feature that sends typed input off the device, is shown |
 | `SHOW_SISTER_SITE_CARD` | Whether the RDM Toolkit card appears in the sidebar |
 
-Changing the hosting domain also means updating the canonical and `og:` URLs in `index.html` — static meta tags can't read JS config.
+Hosting on your own server? [HANDOFF.md §4a](HANDOFF.md) has ready-to-use nginx, Apache and IIS configs for the security headers, plus a verification checklist. [SECURITY.md](SECURITY.md) has the security audit record.
 
 ---
 
