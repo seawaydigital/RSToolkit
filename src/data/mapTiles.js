@@ -46,6 +46,14 @@ export const TILE_PROVIDERS = {
   // key, and the only option verified Latin at every zoom level. Free tier is
   // 5 million tile requests per calendar month and needs no CARTO account.
   // Request one at https://carto.com/basemaps/apikey/
+  //
+  // The key ships in the public bundle, so treat it as public: anyone can copy
+  // it and spend the quota. When requesting it, restrict it to the production
+  // domain if CARTO offers that for the key; if it cannot be restricted, watch
+  // usage against expected traffic. If the quota is exhausted or the key is
+  // revoked, every visitor gets degraded tiles until you remove the secret and
+  // redeploy (which falls back to Esri). Set only one provider secret: every
+  // configured key ends up in the bundle, not just the active one.
   carto: {
     id: 'carto',
     name: 'CARTO Voyager',

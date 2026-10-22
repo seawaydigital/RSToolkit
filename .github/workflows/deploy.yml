@@ -13,6 +13,8 @@ on:
 permissions:
   contents: read
 
+# Per-ref so PR verify runs don't queue behind each other. Production deploys
+# are serialized separately by the deploy job's own fixed group below.
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: false
@@ -43,8 +45,12 @@ jobs:
       - run: npm run build
 
   build:
-    # PRs are verified but never deployed.
-    if: github.event_name != 'pull_request'
+    # PRs are verified but never deployed, and only master is ever built for
+    # release: workflow_dispatch on another branch stops after verify. This
+    # guards the committed workflow only — a branch can edit its own copy, so
+    # the github-pages environment's "Deployment branches" rule (master only)
+    # is the control that actually binds production to master.
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     needs: verify
     runs-on: ubuntu-latest
     steps:
@@ -71,6 +77,12 @@ jobs:
           path: dist
 
   deploy:
+    # Belt-and-braces with the build gate; deploy also needs build.
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    # One fixed group across all refs, so two production deploys never overlap.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     permissions:
       pages: write
       id-token: write
