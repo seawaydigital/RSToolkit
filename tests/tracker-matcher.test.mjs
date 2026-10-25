@@ -35,15 +35,116 @@ test('long pastes are capped at 2000 lines', () => {
   assert.equal(r.totalLines, 2500);
 });
 
-test('a name made only of generic words never confirms a match', () => {
-  const generic = buildMatchIndex([{ id: 'institute-of-applied-physics', name: 'Institute of Applied Physics', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }]);
+const rec = (id, fields) => ({ id, name: id, aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [], country: 'CN', location: null, ...fields });
+const at = (city) => ({ city, province: null, lat: null, lng: null });
+
+test('a name made only of generic words confirms only when the line names its city', () => {
+  const generic = buildMatchIndex([rec('institute-of-applied-physics', { name: 'Institute of Applied Physics', country: 'RU' })]);
   const [m] = matchLine('Institute of Applied Physics, Russian Academy of Sciences', generic);
   assert.equal(m.id, 'institute-of-applied-physics');
   assert.equal(m.confidence, 'check');
+  const ieu = buildMatchIndex([rec('ieu', { name: 'Information Engineering University', location: at('Zhengzhou') })]);
+  assert.deepEqual(norm(matchLine('Information Engineering University, Zhengzhou, China', ieu)), [{ id: 'ieu', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('Information Engineering University, China', ieu)), [{ id: 'ieu', confidence: 'check' }]);
+});
+
+test('a name used worldwide confirms only when the line places it in the institution’s country', () => {
+  const ndu = buildMatchIndex([rec('ndu', { name: 'National Defense University', location: at('Beijing') })]);
+  assert.deepEqual(matchLine('National Defense University, Washington, DC, USA', ndu), []);
+  assert.deepEqual(matchLine('National Defence University, Islamabad, Pakistan', ndu), []);
+  assert.deepEqual(norm(matchLine('National Defense University', ndu)), [{ id: 'ndu', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('National Defense University, Beijing, China', ndu)), [{ id: 'ndu', confidence: 'confirmed' }]);
+});
+
+test('a name that carries its own place confirms without more context', () => {
+  const hit = buildMatchIndex([rec('hit', { name: 'Harbin Institute of Technology', location: at('Harbin') })]);
+  assert.deepEqual(norm(matchLine('Harbin Institute of Technology', hit)), [{ id: 'hit', confidence: 'confirmed' }]);
+});
+
+test('an alias confirms only when the line names the institution’s own city', () => {
+  const idx = buildMatchIndex([
+    rec('hebei-university', { name: 'Hebei University', aliases: ['Tianjin Normal University'], location: at('Baoding') }),
+    rec('beihang', { name: 'Beihang University', aliases: ['Beijing University of Aeronautics and Astronautics'], location: at('Beijing') }),
+  ]);
+  assert.deepEqual(norm(matchLine('Tianjin Normal University, Tianjin, China', idx)), [{ id: 'hebei-university', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Beijing University of Aeronautics and Astronautics', idx)), [{ id: 'beihang', confidence: 'confirmed' }]);
+});
+
+test('a specific alias of a list-only record confirms when the line names its country', () => {
+  const ioffe = buildMatchIndex([rec('ioffe', { name: 'Physics and Technology Institute named after A.F. Ioffe', aliases: ['Ioffe Institute', 'Institute of Applied Physics'], country: 'RU' })]);
+  assert.deepEqual(norm(matchLine('Ioffe Institute, St. Petersburg, Russia', ioffe)), [{ id: 'ioffe', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('Ioffe Institute', ioffe)), [{ id: 'ioffe', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Institute of Applied Physics, Moscow, Russia', ioffe)), [{ id: 'ioffe', confidence: 'check' }]);
+});
+
+test('a line placed in Taiwan never confirms a mainland institution', () => {
+  const soochow = buildMatchIndex([rec('soochow', { name: 'Soochow University', location: at('Suzhou') })]);
+  assert.deepEqual(matchLine('Soochow University, Taipei, Taiwan', soochow), []);
+  assert.deepEqual(matchLine('Soochow University, Taipei, Republic of China', soochow), []);
+  assert.deepEqual(norm(matchLine('Soochow University, Taiwan, China', soochow)), [{ id: 'soochow', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Soochow University, Suzhou, China', soochow)), [{ id: 'soochow', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('Soochow University, People’s Republic of China', soochow)), [{ id: 'soochow', confidence: 'confirmed' }]);
+});
+
+test('each affiliation in a line is judged by its own place', () => {
+  const idx = buildMatchIndex([
+    rec('hit', { name: 'Harbin Institute of Technology', location: at('Harbin') }),
+    rec('neu', { name: 'Northeastern University', location: at('Shenyang') }),
+  ]);
+  assert.deepEqual(norm(matchLine('Harbin Institute of Technology, Harbin, China; Northeastern University, Boston, MA, USA', idx)), [{ id: 'hit', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('Harbin Institute of Technology, Harbin, China; Northeastern University', idx)), [
+    { id: 'hit', confidence: 'confirmed' },
+    { id: 'neu', confidence: 'confirmed' },
+  ]);
+});
+
+test('a name two institutions share is only ever a check', () => {
+  const idx = buildMatchIndex([
+    rec('naval-research-academy', { name: 'Naval Research Academy', aliases: ['Naval Academy'], location: at('Beijing') }),
+    rec('dalian-naval-academy', { name: 'Dalian Naval Academy', aliases: ['Naval Academy'], location: at('Dalian') }),
+  ]);
+  assert.deepEqual(norm(matchLine('Naval Academy, Beijing, China', idx)), [
+    { id: 'dalian-naval-academy', confidence: 'check' },
+    { id: 'naval-research-academy', confidence: 'check' },
+  ]);
+});
+
+test('generic parts of a listed name are not matched on their own', () => {
+  const idx = buildMatchIndex([rec('cetc-29', { name: 'China Electronics Technology Group Corporation 29, Research Institute' })]);
+  assert.deepEqual(matchLine('Sunnybrook Research Institute, Toronto', idx), []);
+});
+
+test('acronyms: at least three letters, no parent abbreviations, and country context inside a longer line', () => {
+  const idx = buildMatchIndex([
+    rec('nanjing-university', { name: 'Nanjing University', acronyms: ['NU', 'NJU'], location: at('Nanjing') }),
+    rec('cas-ntsc', { name: 'National Time Service Center', acronyms: ['CAS', 'NTSC'], location: at('Xi’an') }),
+    rec('cas-ict', { name: 'Institute of Computing Technology', acronyms: ['ICT'], location: at('Beijing') }),
+  ]);
+  assert.deepEqual(matchLine('NU', idx), []);
+  assert.deepEqual(matchLine('Institute of Chemistry, CAS, Beijing', idx), []);
+  assert.deepEqual(matchLine('Department of ICT, University of Agder, Norway', idx), []);
+  assert.deepEqual(matchLine('ICT Department, Toronto', idx), []);
+  assert.deepEqual(norm(matchLine('ICT', idx)), [{ id: 'cas-ict', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('ICT, Beijing', idx)), [{ id: 'cas-ict', confidence: 'check' }]);
+});
+
+test('a Chinese short form gives only a check, and a full name confirms', () => {
+  const idx = buildMatchIndex([
+    rec('cec', { name: 'China Electronics Corporation', zh: '中国电子信息产业集团有限公司', zhAliases: ['中国电子'] }),
+    rec('hit', { name: 'Harbin Institute of Technology', zh: '哈尔滨工业大学', location: at('Harbin') }),
+  ]);
+  assert.deepEqual(norm(matchLine('中国电子学会', idx)), [{ id: 'cec', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('哈尔滨工业大学宇航学院', idx)), [{ id: 'hit', confidence: 'confirmed' }]);
+});
+
+test('a traditional-script or Taiwan line never confirms a mainland institution by its Chinese name', () => {
+  const idx = buildMatchIndex([rec('donghua', { name: 'Donghua University', zh: '东华大学', zhAliases: ['東華大學'], location: at('Shanghai') })]);
+  assert.deepEqual(norm(matchLine('國立東華大學', idx)), [{ id: 'donghua', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('东华大学', idx)), [{ id: 'donghua', confidence: 'confirmed' }]);
 });
 
 test('Airforce and Air Force spell the same name', () => {
-  const af = buildMatchIndex([{ id: 'air-force-engineering-university', name: 'Air Force Engineering University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }]);
+  const af = buildMatchIndex([{ id: 'air-force-engineering-university', name: 'Air Force Engineering University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [], country: 'CN' }]);
   assert.deepEqual(norm(matchLine('Airforce Engineering University, Xi’an', af)), [{ id: 'air-force-engineering-university', confidence: 'confirmed' }]);
 });
 
