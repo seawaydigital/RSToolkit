@@ -55,6 +55,12 @@ export function validateRecord(record) {
   if (record.country != null && !/^[A-Z]{2}$/.test(record.country)) err('country must be a two-letter code');
   if (record.zh != null && !hasCjk(record.zh)) err('zh must be a Chinese name');
   if (record.parent != null && !SLUG.test(record.parent)) err('parent must be a record id');
+  // Names are shown, searched and matched, so a stray "null" or a trailing
+  // comma from an import would match lines it has nothing to do with.
+  for (const field of ['aliases', 'zhAliases', 'acronyms']) {
+    const bad = arr(record[field]).filter((n) => typeof n !== 'string' || !n.trim() || n !== n.trim() || /^(null|undefined)$/i.test(n) || /[,;:]$/.test(n));
+    if (bad.length) err(`${field} has empty, placeholder or badly trimmed names: ${JSON.stringify(bad)}`);
+  }
 
   const loc = record.location;
   if (loc != null && (typeof loc !== 'object' || (loc.lat != null && Math.abs(loc.lat) > 90) || (loc.lng != null && Math.abs(loc.lng) > 180))) {

@@ -86,6 +86,9 @@ test('validateRecord catches schema breaks', () => {
   assert.ok(validateRecord({ ...HIT, sources: [{ ...HIT.sources[0], archive: undefined }] }).some((e) => e.includes('archive')));
   assert.ok(validateRecord({ ...HIT, status: 'seed', verifiedOn: null }).some((e) => e.includes('evidence')));
   assert.deepEqual(validateRecord(HIT), []);
+  assert.ok(validateRecord({ ...HIT, aliases: ['null'] }).some((e) => e.includes('aliases')));
+  assert.ok(validateRecord({ ...HIT, zhAliases: ['  '] }).some((e) => e.includes('zhAliases')));
+  assert.ok(validateRecord({ ...HIT, aliases: ['Harbin Polytechnic University,'] }).some((e) => e.includes('aliases')));
 });
 
 test('a list-only unit named after another record is linked to it as a listed unit', () => {

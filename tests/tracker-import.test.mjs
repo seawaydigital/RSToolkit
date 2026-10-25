@@ -93,6 +93,15 @@ test('merging ROR data fills gaps without overwriting curated coordinates', () =
   assert.deepEqual(validateRecord(merged), []);
 });
 
+test('a missing name never becomes the alias "null", and names lose stray trailing punctuation', () => {
+  const seed = mispValueToRecord({ ...MISP_HIT, meta: { ...MISP_HIT.meta, aliases: [] } }, { nroMatch: null, today: '2026-10-24' });
+  const merged = mergeEnrichment({ ...seed, zh: null }, { ...rorToEnrichment(ROR_HIT), zh: null, aliases: ['Hāĕrbīn Gōngyè Dàxué,', null, undefined] });
+  for (const field of ['aliases', 'zhAliases', 'acronyms']) {
+    assert.ok(merged[field].every((n) => typeof n === 'string' && n !== 'null' && n !== 'undefined' && !/[,;:]$/.test(n)), `${field}: ${merged[field]}`);
+  }
+  assert.ok(merged.aliases.includes('Hāĕrbīn Gōngyè Dàxué'));
+});
+
 test('an NRO organization becomes a listing-only record', () => {
   const r = nroOrgToRecord(
     { id: 'iitp-ras', name: 'A.A. Kharkevich Institute', aliases: ['IITP'], country: 'Russia', city: 'Moscow', lat: 55.77, lng: 37.61, parentOrg: null, notes: null },

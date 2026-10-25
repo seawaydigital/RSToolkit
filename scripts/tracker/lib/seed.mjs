@@ -24,7 +24,9 @@ const num = (v) => (v === undefined || v === null || v === '' || Number.isNaN(Nu
 
 function splitNames(names, primary) {
   const out = { zh: [], acronyms: [], aliases: [] };
-  for (const n of unique(names.map((x) => String(x).trim()))) {
+  // Drop missing names before String() turns them into "null", and the stray
+  // trailing commas some sources carry.
+  for (const n of unique(names.filter((x) => x != null).map((x) => String(x).trim().replace(/[,;:]+$/, '').trim()))) {
     if (n === primary) continue;
     if (hasCjk(n)) out.zh.push(n);
     else if (ACRONYM.test(n)) out.acronyms.push(n);
