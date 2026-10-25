@@ -88,3 +88,72 @@ test('meta names the licence holder and rubric version', () => {
   assert.equal(raw.meta.rubricVersion, RUBRIC_VERSION);
   assert.match(raw.meta.version, /^\d{4}\.\d{2}$/);
 });
+
+// Official lists name one institution in different ways (an Entity List
+// spelling, an SDN legal name, a Canadian translation). Each is merged into
+// one record by setting the entries' `institution`, which the sync keeps, so
+// a record never says "Not listed" for a list it is on.
+const listedOn = (id) => ds.byId.get(id)?.listings.filter((l) => l.status === 'listed').map((l) => l.listId).sort();
+
+test('an institution named differently on several lists is one record carrying all of them', () => {
+  const expected = {
+    'moscow-institute-of-physics-and-technology': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'federal-state-financed-institution-of-science-physics-and-technology-institute-n': ['ca-sanctions', 'us-sdn'],
+    'institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'all-russian-scientific-research-institute-of-experimental-physics-vniief': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'all-russian-scientific-research-institute-of-technical-physics-vniitf': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'central-research-institute-burevestnik': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'federal-state-unitary-enterprise-central-research-institute-of-structural-materi': ['us-entity-list', 'us-sdn'],
+    'institute-of-solid-state-physics-of-the-russian-academy-of-sciences': ['us-entity-list', 'us-sdn'],
+    'zhukovskiy-central-aerohydrodynamics-institute-tsagi': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'iitp-ras': ['ca-nro', 'us-entity-list', 'us-sdn'],
+    'northwest-institute-of-nuclear-technology': ['ca-nro', 'us-entity-list'],
+  };
+  for (const [id, lists] of Object.entries(expected)) assert.deepEqual(listedOn(id), lists, id);
+  for (const gone of [
+    'federal-state-institution-of-higher-vocational-education-moscow-institute-of-phy',
+    'federal-state-financed-institution-of-science-physics-and-technology-institute-n-3',
+    'russian-federal-nuclear-center-all-russian-research-institute-of-experimental-ph',
+    'joint-stock-company-central-scientific-research-institute-burevestnik',
+    'northwest-institute-of-nuclear-technology-in-the-science-research-nintf',
+  ]) assert.equal(ds.byId.has(gone), false, gone);
+  assert.equal(ds.byId.get('moscow-institute-of-physics-and-technology').name, 'Moscow Institute of Physics and Technology');
+});
+
+// Different bodies whose names reduce to the same words.
+const DISTINCT = [
+  ['joint-stock-company-scientific-research-institute-giricond', 'joint-stock-company-scientific-research-institute-of-electronic-and-mechanical-d'],
+  ['federal-state-governmental-institution-27-central-research-institute-of-the-mini', 'federal-state-governmental-institution-4-central-research-institute-of-the-minis'],
+  ['46th-central-research-and-development-institute-of-the-ministry-of-defense', 'federal-state-governmental-institution-27-central-research-institute-of-the-mini'],
+  ['46th-central-research-and-development-institute-of-the-ministry-of-defense', 'federal-state-governmental-institution-4-central-research-institute-of-the-minis'],
+  ['institute-of-high-energy-physics', 'institute-of-theoretical-and-experimental-physics'],
+  ['federal-research-center-institute-of-applied-physics-of-the-russian-academy-of-s', 'joint-stock-company-institute-of-applied-physics'],
+  ['national-university-of-science-and-technology-centre-for-quantum-communications', 'national-university-of-science-and-technology-laboratory-of-superconductor-quant'],
+  ...['joint-stock-company-russian-research-institute-electronstandart', 'scientific-production-enterprise-almaz-jsc', 'scientific-production-enterprise-salyut-jsc', 'scientific-production-enterprise-vostok-jsc']
+    .flatMap((a, i, all) => all.slice(i + 1).map((b) => [a, b])),
+].map((pair) => [...pair].sort().join(' + '));
+
+const LEGAL_FORM = new Set(('federal state unitary enterprise financed budgetary institution joint stock company jsc ao oao pao ojsc pjsc ' +
+  'fsue fgup science higher education vocational educational named after the russian federation academy sciences ras ' +
+  'public private limited liability llc national research center centre nrc open closed').split(' '));
+const coreNames = (r) => [r.name, ...(r.aliases ?? [])]
+  .map((n) => normalizePhrase(n).split(' ').filter((t) => t.length > 1 && !LEGAL_FORM.has(t)).sort().join(' '))
+  .filter((core) => core.split(' ').length >= 2);
+
+test('no two list-only records in one country are the same institution under different legal names', () => {
+  const owners = new Map();
+  for (const r of ds.records.filter((x) => x.virtual)) {
+    for (const core of coreNames(r)) {
+      const key = `${r.country}:${core}`;
+      if (!owners.has(key)) owners.set(key, new Set());
+      owners.get(key).add(r.id);
+    }
+  }
+  const clashes = new Set();
+  for (const ids of owners.values()) {
+    const list = [...ids].sort();
+    for (let i = 0; i < list.length; i++) for (let j = i + 1; j < list.length; j++) clashes.add(`${list[i]} + ${list[j]}`);
+  }
+  const unexplained = [...clashes].filter((pair) => !DISTINCT.includes(pair));
+  assert.deepEqual(unexplained, [], "Merge these (set the entries' institution to one id) or add them to DISTINCT");
+});

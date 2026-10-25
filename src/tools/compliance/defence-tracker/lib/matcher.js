@@ -39,6 +39,14 @@ const CJK_SUFFIXES = ['大学', '大學', '学院', '學院', '研究院', '研�
 const AFFILIATIONS = /[;|]/;
 
 const latinNames = (r) => [r.name, ...(r.aliases ?? [])].filter((n) => n && !hasCjk(n));
+
+// "… 14th Research Institute (CETC 14)": affiliations write the name without
+// the bracketed code. A bracketed place ("China University of Geosciences
+// (Wuhan)") tells institutions apart, so it stays.
+function withoutCodes(name) {
+  const stripped = name.replace(/\(([^)]*)\)/g, (whole, inside) => (placesIn(normalizePhrase(inside)).size ? whole : ' '));
+  return stripped === name ? null : stripped.replace(/\s+/g, ' ').trim();
+}
 const cjkNames = (r) => [r.zh, ...(r.zhAliases ?? []), ...(r.aliases ?? []).filter(hasCjk)].filter((n) => n && hasCjk(n));
 
 function addTo(map, key, id) {
@@ -60,7 +68,8 @@ export function buildMatchIndex(records) {
 
   for (const r of records) {
     info.set(r.id, { country: r.country ?? null, city: r.location?.city ? normalizePhrase(r.location.city) : null });
-    for (const name of latinNames(r)) {
+    const names = latinNames(r).flatMap((name) => [name, withoutCodes(name)].filter(Boolean).map((form) => ({ form, isPrimary: name === r.name })));
+    for (const { form: name, isPrimary } of names) {
       // A listed name like "Chinese Academy of Sciences, National Time Service
       // Center" is indexed whole. Each part can also suggest a match
       // ("check"), except parts that name a parent: see below.
@@ -69,7 +78,7 @@ export function buildMatchIndex(records) {
       const len = whole ? whole.split(' ').length : 0;
       if (len >= 2) {
         addTo(phrases, whole, r.id);
-        if (name === r.name) primary.add(`${r.id}\t${whole}`);
+        if (isPrimary) primary.add(`${r.id}\t${whole}`);
         if (isGenericPhrase(whole)) genericPhrases.add(whole);
         maxPhraseLen = Math.max(maxPhraseLen, len);
         const tokens = whole.split(' ');

@@ -4,7 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateRecord } from '../src/tools/compliance/defence-tracker/lib/schema.js';
-import { HIT, NRO_DATA, makeDataset } from './fixtures/trackerDataset.mjs';
+import { HIT, NRO_DATA, SNAPSHOTS, makeDataset } from './fixtures/trackerDataset.mjs';
 
 const ds = makeDataset();
 
@@ -86,4 +86,23 @@ test('validateRecord catches schema breaks', () => {
   assert.ok(validateRecord({ ...HIT, sources: [{ ...HIT.sources[0], archive: undefined }] }).some((e) => e.includes('archive')));
   assert.ok(validateRecord({ ...HIT, status: 'seed', verifiedOn: null }).some((e) => e.includes('evidence')));
   assert.deepEqual(validateRecord(HIT), []);
+});
+
+test('a list-only record named by several entries takes a mixed-case name over an all-caps one', () => {
+  const entry = (key, list, name) => ({ key, list, name, altNames: [], country: 'RU', date: null, citation: null, url: 'https://example.org', institution: 'mipt' });
+  const snapshots = {
+    ...SNAPSHOTS,
+    'us-csl': {
+      ...SNAPSHOTS['us-csl'],
+      entries: [
+        entry('csl:a', 'us-sdn', 'FEDERAL STATE INSTITUTION OF HIGHER VOCATIONAL EDUCATION MOSCOW INSTITUTE OF PHYSICS AND TECHNOLOGY'),
+        entry('csl:b', 'us-entity-list', 'Moscow Institute of Physics and Technology'),
+      ],
+    },
+  };
+  const record = makeDataset({ snapshots }).byId.get('mipt');
+  assert.equal(record.name, 'Moscow Institute of Physics and Technology');
+  assert.ok(record.aliases.includes('FEDERAL STATE INSTITUTION OF HIGHER VOCATIONAL EDUCATION MOSCOW INSTITUTE OF PHYSICS AND TECHNOLOGY'));
+  assert.ok(!record.aliases.includes('Moscow Institute of Physics and Technology'));
+  assert.deepEqual(record.listings.filter((l) => l.status === 'listed').map((l) => l.listId).sort(), ['us-entity-list', 'us-sdn']);
 });

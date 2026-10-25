@@ -143,6 +143,15 @@ test('a traditional-script or Taiwan line never confirms a mainland institution 
   assert.deepEqual(norm(matchLine('东华大学', idx)), [{ id: 'donghua', confidence: 'confirmed' }]);
 });
 
+test('a bracketed code is not part of the name, but a bracketed place is', () => {
+  const idx = buildMatchIndex([
+    rec('cetc-14', { name: 'China Electronics Technology Group Corporation 14th Research Institute (CETC 14)' }),
+    rec('cug-wuhan', { name: 'China University of Geosciences (Wuhan)', location: at('Wuhan') }),
+  ]);
+  assert.deepEqual(norm(matchLine('China Electronics Technology Group Corporation 14th Research Institute, Nanjing, China', idx)), [{ id: 'cetc-14', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('China University of Geosciences, Beijing, China', idx)), [{ id: 'cug-wuhan', confidence: 'check' }]);
+});
+
 test('Airforce and Air Force spell the same name', () => {
   const af = buildMatchIndex([{ id: 'air-force-engineering-university', name: 'Air Force Engineering University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [], country: 'CN' }]);
   assert.deepEqual(norm(matchLine('Airforce Engineering University, Xi’an', af)), [{ id: 'air-force-engineering-university', confidence: 'confirmed' }]);

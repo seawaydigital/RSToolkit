@@ -49,6 +49,19 @@ function addNames(record, names) {
   }
 }
 
+const allCaps = (s) => /[A-Z]/.test(s) && s === s.toUpperCase();
+
+// A record that several list entries name (an SDN legal name in capitals, an
+// Entity List spelling) shows the first name written in mixed case.
+function preferMixedCase(record, name) {
+  if (!allCaps(record.name) || !/[a-z]/.test(name ?? '')) return;
+  const old = record.name;
+  record.name = name;
+  record.type = guessType(name);
+  record.aliases = record.aliases.filter((a) => a !== name);
+  addNames(record, [old]);
+}
+
 export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
   const byId = new Map();
   for (const file of institutions) byId.set(file.id, { ...blankRecord(file.id, file.name), ...file, virtual: false });
@@ -62,7 +75,10 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
         record = { ...blankRecord(e.institution, e.name), country: e.country ?? null, virtual: true };
         byId.set(record.id, record);
       }
-      if (record.virtual) addNames(record, [e.name, ...(e.altNames ?? [])]);
+      if (record.virtual) {
+        preferMixedCase(record, e.name);
+        addNames(record, [e.name, ...(e.altNames ?? [])]);
+      }
       const forList = entriesByList.get(e.list);
       if (!forList) continue;
       if (!forList.has(record.id)) forList.set(record.id, []);

@@ -91,6 +91,8 @@ const CONFIRMED = [
   ['Information Engineering University, Zhengzhou, China', 'information-engineering-university'],
   ['Xidian University, Xi’an, China', 'xidian-university'],
   ['National Defense University, Beijing, China', 'national-defense-university'],
+  ['China Electronics Technology Group Corporation 14th Research Institute, Nanjing, China', 'china-electronics-technology-group-corporation-14th-research-institute-cetc-14'],
+  ['Ioffe Institute, St. Petersburg, Russia', 'federal-state-financed-institution-of-science-physics-and-technology-institute-n'],
   ['zhang@hit.edu.cn', 'harbin-institute-of-technology'],
   ['哈尔滨工业大学', 'harbin-institute-of-technology'],
 ];
