@@ -43,7 +43,7 @@ function trackerDataPlugin(enabled) {
       const { datasetToCsv, datasetToExport } = await load('./src/tools/compliance/defence-tracker/lib/recordText.js')
       const dataset = await loadDataset()
       this.emitFile({ type: 'asset', fileName: 'data/defence-tracker.json', source: `${JSON.stringify(datasetToExport(dataset), null, 2)}\n` })
-      this.emitFile({ type: 'asset', fileName: 'data/defence-tracker.csv', source: `﻿${datasetToCsv(dataset)}` })
+      this.emitFile({ type: 'asset', fileName: 'data/defence-tracker.csv', source: `\uFEFF${datasetToCsv(dataset)}` })
     },
   }
 }
