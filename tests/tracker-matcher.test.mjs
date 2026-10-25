@@ -47,6 +47,12 @@ test('Airforce and Air Force spell the same name', () => {
   assert.deepEqual(norm(matchLine('Airforce Engineering University, Xi’an', af)), [{ id: 'air-force-engineering-university', confidence: 'confirmed' }]);
 });
 
+test('a different compass direction is never a spelling slip', () => {
+  const ne = buildMatchIndex([{ id: 'northeastern-university', name: 'Northeastern University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }]);
+  assert.deepEqual(matchLine('Northwestern University, Evanston, IL', ne), []);
+  assert.deepEqual(matchLine('Southwest University', buildMatchIndex([{ id: 'southeast-university', name: 'Southeast University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }])), []);
+});
+
 test('personal email domains never match', () => {
   assert.deepEqual(matchLine('wang@163.com; li@gmail.com; x@qq.com', index), []);
 });

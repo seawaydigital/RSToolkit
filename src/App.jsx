@@ -26,6 +26,9 @@ const TOOL_COMPONENTS = {
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
   'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
   'report-concern': lazy(() => import('./tools/operational-security/ReportConcern')),
+  // __TRACKER_ENABLED__ is a build-time literal (vite.config.js), so with the
+  // launch flag off this import is dropped and the tracker is not shipped.
+  ...(__TRACKER_ENABLED__ ? { 'defence-tracker': lazy(() => import('./tools/compliance/defence-tracker/DefenceTracker')) } : {}),
 };
 
 const SITE_TITLE = 'Research Security Toolkit';

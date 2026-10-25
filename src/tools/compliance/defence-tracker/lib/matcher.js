@@ -95,7 +95,13 @@ function longestFirst(hits) {
   return kept;
 }
 
+// "Northwestern" and "Northeastern" are two edits apart but name different
+// places, so words that carry different compass directions never count as a
+// spelling slip.
+const compass = (t) => ['north', 'south', 'east', 'west'].filter((d) => t.includes(d)).join();
+
 function tokenAllowance(a, b) {
+  if (compass(a) !== compass(b)) return 0;
   const shorter = Math.min(a.length, b.length);
   return shorter < 5 ? 0 : shorter < 8 ? 1 : 2;
 }

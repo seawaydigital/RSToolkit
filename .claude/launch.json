@@ -12,6 +12,12 @@
       "autoPort": true
     },
     {
+      "name": "rs-toolkit-dev-tracker",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:tracker", "--", "--port", "5174", "--strictPort"],
+      "port": 5174
+    },
+    {
       "name": "rs-toolkit-preview",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "preview", "--", "--port", "4173", "--strictPort"],

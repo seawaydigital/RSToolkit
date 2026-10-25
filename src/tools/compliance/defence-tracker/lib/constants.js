@@ -159,6 +159,21 @@ export const LISTS = [
 
 export const LIST_BY_ID = Object.fromEntries(LISTS.map((l) => [l.id, l]));
 
+// Compact names for result rows and table cells.
+export const LIST_SHORT_LABELS = {
+  'ca-nro': 'NRO',
+  'ca-sanctions': 'Canadian sanctions',
+  'us-entity-list': 'US Entity List',
+  'us-meu': 'US Military End-User',
+  'us-sdn': 'US SDN',
+  'us-1286': 'US 1286',
+  'jp-eul': 'Japan End User List',
+};
+
+export const COUNTRY_LABELS = { CN: 'China', RU: 'Russia', IR: 'Iran' };
+
+export const SEARCH_PAGE_SIZE = 100;
+
 export const SNAPSHOT_NAMES = ['us-csl', 'ca-sanctions', 'us-1286', 'jp-meti-eul'];
 
 export const ANNEX_B = {

@@ -85,6 +85,6 @@ export const SHOW_SISTER_SITE_CARD = true;
  * security ties, so it stays off until its profiles have been verified and
  * reviewed. While false, the tool, every link to it and its data downloads
  * are left out of the site. To preview it locally without changing this
- * file, run the dev server with VITE_ENABLE_DEFENCE_TRACKER=true.
+ * file, run `npm run dev:tracker`.
  */
 export const ENABLE_DEFENCE_TRACKER = false;
