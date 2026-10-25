@@ -62,7 +62,7 @@ src/
     riskChecklist.js             # 4 sections, ~24 items; NSGRP-sourced
     exportControlData.js         # 5 sections: EIPA, Defence Production Act, ACL, SEMA, UN Act
     glossaryData.js              # 12 terms with official Canadian/Ontario Gov definitions
-    faqData.js                   # 25 FAQs across 6 categories
+    faqData.js                   # 25 FAQs across 6 categories (26 with the Defence Institution Tracker switched on)
     howItWorksData.js            # "How this site works": complete outbound-request list, localStorage keys, alternatives comparison, safeguards
     riskMitigationData.js        # 22 measures across 5 categories
     dualUseData.js               # Dual-use areas (civ vs mil), red flags, MICE, myths, scenarios, due-diligence actions

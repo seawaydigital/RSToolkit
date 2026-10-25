@@ -12,6 +12,7 @@ import Fuse from 'fuse.js';
 import nroData from '../../data/nroData';
 import { activeTileProvider } from '../../data/mapTiles';
 import { ENABLE_PROXIMITY_SEARCH } from '../../siteConfig';
+import { TRACKER_ENABLED } from '../../data/defenceTracker/enabled';
 
 // Fix Leaflet default icon paths for Vite
 delete L.Icon.Default.prototype._getIconUrl;
@@ -720,12 +721,13 @@ export default function NroLookup() {
               <th>Aliases</th>
               <th>City</th>
               <th>Country</th>
+              {TRACKER_ENABLED && <th>Profile</th>}
             </tr>
           </thead>
           <tbody>
             {filteredOrgs.length === 0 ? (
               <tr>
-                <td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--text-muted)' }}>
+                <td colSpan={TRACKER_ENABLED ? 5 : 4} style={{ textAlign: 'center', padding: '24px', color: 'var(--text-muted)' }}>
                   No organizations match your search criteria.
                 </td>
               </tr>
@@ -756,6 +758,15 @@ export default function NroLookup() {
                       {org.country}
                     </span>
                   </td>
+                  {TRACKER_ENABLED && (
+                    <td>
+                      {/* Every NRO has a tracker record at the same id. stopPropagation
+                          keeps the row's fly-to-map click from firing as well. */}
+                      <a className="nro-profile-link" href={`#defence-tracker/${org.id}`} onClick={(e) => e.stopPropagation()}>
+                        Tracker profile
+                      </a>
+                    </td>
+                  )}
                 </tr>
               ))
             )}

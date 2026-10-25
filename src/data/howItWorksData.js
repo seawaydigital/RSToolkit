@@ -17,6 +17,7 @@
 // geocoders when the proximity panel is switched off.
 
 import { WEB_HOST, ENABLE_PROXIMITY_SEARCH as GEO } from '../siteConfig';
+import { TRACKER_ENABLED } from './defenceTracker/enabled';
 
 export const STORAGE_KEYS = ['rs-toolkit-checklist-v1', 'rs-toolkit-travel-v1'];
 
@@ -87,7 +88,9 @@ export const howItWorksData = {
       },
     ].filter(Boolean),
     outro:
-      'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
+      'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, ' +
+      (TRACKER_ENABLED ? 'the Defence Institution Tracker’s search or batch check, ' : '') +
+      'the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
   },
 
   storage: {

@@ -2241,6 +2241,17 @@ a:hover {
   color: var(--text-primary);
 }
 
+.nro-profile-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.nro-profile-link:hover {
+  color: var(--link-hover);
+}
+
 .nro-table td {
   padding: 8px 12px;
   border-bottom: 1px solid var(--border);
