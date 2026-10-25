@@ -35,11 +35,16 @@ test('no two records claim the same email domain', () => {
   }
 });
 
-test('no full name is shared by two records', () => {
+// Official lists reuse aliases across entries (the Entity List gives two
+// Kurchatov institutes the same alias), so two listing-only records may share
+// a name; a name may never be shared with a curated (file) record.
+test('no full name is shared with a curated record', () => {
   const owner = new Map();
   const claim = (key, id) => {
-    assert.ok(!owner.has(key) || owner.get(key) === id, `"${key}" is used by ${owner.get(key)} and ${id}`);
-    owner.set(key, id);
+    const prev = owner.get(key);
+    const bothListed = prev && ds.byId.get(prev).virtual && ds.byId.get(id).virtual;
+    assert.ok(!prev || prev === id || bothListed, `"${key}" is used by ${prev} and ${id}`);
+    if (!prev || !ds.byId.get(id).virtual) owner.set(key, id);
   };
   for (const r of ds.records) {
     for (const n of [r.name, ...(r.aliases ?? [])]) {

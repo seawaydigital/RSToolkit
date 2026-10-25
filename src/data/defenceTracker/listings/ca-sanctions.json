@@ -1,7 +1,1781 @@
 {
   "snapshot": "ca-sanctions",
-  "coverage": "pending",
-  "checkedOn": null,
+  "coverage": "complete",
+  "checkedOn": "2026-10-25",
   "sourceUrl": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
-  "entries": []
+  "entries": [
+    {
+      "key": "ca:Iran:1, Part 1:117",
+      "list": "ca-sanctions",
+      "name": "Shahid Beheshti University (SBU)",
+      "altNames": [],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 117",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "shahid-beheshti-university"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:142",
+      "list": "ca-sanctions",
+      "name": "Sharif University of Technology, Department of Engineering",
+      "altNames": [
+        "Université de technologie de Sharif, Faculté de génie"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 142",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "sharif-university-of-technology-department-of-engineering"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:144",
+      "list": "ca-sanctions",
+      "name": "The Iranian Institute for Composite Materials",
+      "altNames": [],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 144",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "the-iranian-institute-for-composite-materials"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:146",
+      "list": "ca-sanctions",
+      "name": "Baghyatollah Medical Sciences University (BMSU)",
+      "altNames": [
+        "Université des sciences médicales Baghyatollah (USMB)",
+        "Bagiatollah Medical Sciences University, Baghiatollah Medical Sciences University, Baqyatollah Medical Sciences University, Baqiyatallah Medical Sciences University, Baqiyatallah University of Medical Sciences, Baqiatollah, Medical Sciences University/Université des sciences médicales Bagiatollah, Université des sciences médicales Baghiatollah, Université des sciences médicales Baqyatollah, Université des sciences médicales Baqiyatallah, Université Baqiyatallah des sciences médicales et Université des sciences médicales Baqiatollah"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 146",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "baghyatollah-medical-sciences-university"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:148",
+      "list": "ca-sanctions",
+      "name": "Explosion and Impact Technology Research Centre",
+      "altNames": [
+        "Centre de recherche en technologie des explosions et des impacts"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 148",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "explosion-and-impact-technology-research-centre"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:166",
+      "list": "ca-sanctions",
+      "name": "Al-Mustafa International University",
+      "altNames": [
+        "جامعة المصطفی العالمیه"
+      ],
+      "country": "IR",
+      "date": "2022-10-28",
+      "citation": "Schedule 1, Part 1, item 166",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "al-mustafa-international-university"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:184",
+      "list": "ca-sanctions",
+      "name": "Defence Technology and Science Research Centre (DTSRC)",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 184",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "defense-technology-and-science-research-center"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:190",
+      "list": "ca-sanctions",
+      "name": "Malek Ashtar University",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 190",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "malek-ashtar-university-of-technology"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:191",
+      "list": "ca-sanctions",
+      "name": "Rahab Engineering Institute",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 191",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "rahab-engineering-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:2",
+      "list": "ca-sanctions",
+      "name": "Aerospace Research Institute",
+      "altNames": [
+        "Institut de recherche aérospatiale"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 2",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "aerospace-research-institute-iran"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:20",
+      "list": "ca-sanctions",
+      "name": "Hara Institute",
+      "altNames": [
+        "Institut Hara"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 20",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "hara-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:207",
+      "list": "ca-sanctions",
+      "name": "Fater Institute",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 207",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "fater-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:219",
+      "list": "ca-sanctions",
+      "name": "Imensazan Consultant Engineers Institute",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 219",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "imensazan-consultant-engineers-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:22",
+      "list": "ca-sanctions",
+      "name": "Iman Hossein University",
+      "altNames": [
+        "Université Iman Hossein"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 22",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "iman-hossein-university"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:23",
+      "list": "ca-sanctions",
+      "name": "Institute of Applied Physics",
+      "altNames": [
+        "Institut de physique appliquée"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 23",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "institute-of-applied-physics-iran"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:34",
+      "list": "ca-sanctions",
+      "name": "Iranian Research Organization for Science and Technology (IROST)",
+      "altNames": [],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 34",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "iranian-research-organization-for-science-and-technology"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:52",
+      "list": "ca-sanctions",
+      "name": "Meisami Research and Development Complex",
+      "altNames": [],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 52",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "meisami-research-and-development-complex"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:65",
+      "list": "ca-sanctions",
+      "name": "Pasteur Institute of Iran",
+      "altNames": [
+        "Institut Pasteur d'Iran"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 65",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "pasteur-institute-of-iran"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:66",
+      "list": "ca-sanctions",
+      "name": "Physics Research Center (PHRC)",
+      "altNames": [
+        "Centre de recherche en physique (PHRC)"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 66",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "physics-research-center-iran"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:69",
+      "list": "ca-sanctions",
+      "name": "Razi Vaccine and Serum Research Institute in the Ministry of Jahad",
+      "altNames": [],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 69",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "razi-vaccine-and-serum-research-institute-in-the-ministry-of-jahad"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:74",
+      "list": "ca-sanctions",
+      "name": "Shahid Beheshti University, Department of Engineering",
+      "altNames": [
+        "Université Shahid Beheshti, faculté de génie"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 74",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "shahid-beheshti-university-department-of-engineering"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:75",
+      "list": "ca-sanctions",
+      "name": "Shahid Sattari Air Force University",
+      "altNames": [
+        "Université Shahid Sattari de la force aérienne"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 75",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "shahid-sattari-air-force-university"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:8",
+      "list": "ca-sanctions",
+      "name": "Defence Industries Organization Training and Research Institute",
+      "altNames": [
+        "Institut de recherche et de formation de l'organisation des industries de la défense"
+      ],
+      "country": "IR",
+      "date": "2016-02-05",
+      "citation": "Schedule 1, Part 1, item 8",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "defence-industries-organization-training-and-research-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1.1:15",
+      "list": "ca-sanctions",
+      "name": "The Ravin Academy",
+      "altNames": [
+        "آکادمی راوین"
+      ],
+      "country": "IR",
+      "date": "2023-03-23",
+      "citation": "Schedule 1, Part 1.1, item 15",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "ravin-academy"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:105",
+      "list": "ca-sanctions",
+      "name": "Aleksandrov Scientific Research Technological Institute NITI",
+      "altNames": [
+        "ФГУП \"НИТИ им. А.П. Александрова"
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 105",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "aleksandrov-scientific-research-technological-institute-niti"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:107",
+      "list": "ca-sanctions",
+      "name": "Federal Research Center Boreskov Institute of Catalysis",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки \"Федеральный исследовательский центр \"Институт катализа им. Г. К. Борескова Сибирского отделения Российской академии наук Институт катализа СО РАН"
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 107",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-research-center-boreskov-institute-of-catalysis"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:110",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise Dukhov Automatics Research Institute",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Всероссийский научно-исследовательский институт автоматики им. Н.Л. Духова» ФГУП «ВНИИА»"
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 110",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-dukhov-automatics-research-institute-vniia"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:115",
+      "list": "ca-sanctions",
+      "name": "Scientific Research Institute of Computing Machinery JSC",
+      "altNames": [
+        "Научно-исследовательский центр электронной вычислительной техники НИЦЭВТ"
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 115",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-of-computing-machinery-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:116",
+      "list": "ca-sanctions",
+      "name": "Central Research Institute of Machine Building JSC",
+      "altNames": [
+        "Центральный научно-исследовательский институт машиностроения ЦНИИМаш, АО"
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 116",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-institute-of-machine-building-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:125",
+      "list": "ca-sanctions",
+      "name": "POLYUS Research Institute of M.F. Stelmakh JSC",
+      "altNames": [
+        "Акционерное Общество \"Научно-Исследовательский Институт \"Полюс\" Им. М.Ф.Стельмаха\""
+      ],
+      "country": "RU",
+      "date": "2022-03-10",
+      "citation": "Schedule 1, Part 2, item 125",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "polyus-research-institute-of-m-f-stelmakh-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:144",
+      "list": "ca-sanctions",
+      "name": "Central Research Institute of Automation and Hydraulics",
+      "altNames": [
+        "АО Центральный научно-исследовательский институт автоматики и гидравлики"
+      ],
+      "country": "RU",
+      "date": "2022-04-08",
+      "citation": "Schedule 1, Part 2, item 144",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-institute-of-automation-and-hydraulics"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:150",
+      "list": "ca-sanctions",
+      "name": "Moscow Institute of Physics and Technology",
+      "altNames": [
+        "Московский Физико-Технический институт",
+        "МФТИ"
+      ],
+      "country": "RU",
+      "date": "2022-04-08",
+      "citation": "Schedule 1, Part 2, item 150",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "moscow-institute-of-physics-and-technology"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:155",
+      "list": "ca-sanctions",
+      "name": "Central Research and Development Institute Tsiklon",
+      "altNames": [
+        "Центральный научно-исследовательский институт \"Циклон\""
+      ],
+      "country": "RU",
+      "date": "2022-04-08",
+      "citation": "Schedule 1, Part 2, item 155",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-and-development-institute-tsiklon"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:162",
+      "list": "ca-sanctions",
+      "name": "Russian Scientific Research Institute «Elektrostandart» JSC",
+      "altNames": [
+        "АО Российский научно-исследовательский институт РНИИ Электронстандарт"
+      ],
+      "country": "RU",
+      "date": "2022-04-08",
+      "citation": "Schedule 1, Part 2, item 162",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "russian-scientific-research-institute-elektrostandart-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:164",
+      "list": "ca-sanctions",
+      "name": "N.A. Dollezhal Order of Lenin Research and Design Institute of Power Engineering JSC",
+      "altNames": [
+        "AO Ордена Ленина Научно-исследовательский и конструкторский институт энерготехники имени Н.А. Доллежаля",
+        "AO НИКИЭТ"
+      ],
+      "country": "RU",
+      "date": "2022-04-08",
+      "citation": "Schedule 1, Part 2, item 164",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "n-a-dollezhal-order-of-lenin-research-and-design-institute-of-power-engineering-2"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:194",
+      "list": "ca-sanctions",
+      "name": "Research Production Association Mars",
+      "altNames": [
+        "Научно-производственное объединение ”Марс” and 'Федеральный научно-производственный центр Акционерное общество \"Научно-производственное объединение \"Марс\""
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 194",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-production-association-mars"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:196",
+      "list": "ca-sanctions",
+      "name": "Scientific Production Centre Vigstar JSC",
+      "altNames": [
+        "Акционерное Общество \"\"Научно-производственный центр \"\"Вигстар\"\""
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 196",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-center-vigstar-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:197",
+      "list": "ca-sanctions",
+      "name": "Scientific Production Enterprise ‘Radiosviaz’",
+      "altNames": [
+        "Акционерное общество «Научно-производственное предприятие «Радиосвязь»"
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 197",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-radiosviaz"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:198",
+      "list": "ca-sanctions",
+      "name": "Scientific Research Institute Ferrite-Domen",
+      "altNames": [
+        "Акционерное общество «Научно-исследовательский институт «Феррит-Домен»”"
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 198",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-ferrite-domen"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:199",
+      "list": "ca-sanctions",
+      "name": "Scientific Research Institute of Communication Management Systems",
+      "altNames": [
+        "Акционерное общество \"Научно-Исследовательский Институт Систем Связи И Управления\""
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 199",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-of-communication-management-systems"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:200",
+      "list": "ca-sanctions",
+      "name": "Scientific-Production Enterprise Volna",
+      "altNames": [
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"НАУЧНО-ПРОИЗВОДСТВЕННОЕ ПРЕДПРИЯТИЕ \"ВОЛНА\""
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 200",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-volna"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:202",
+      "list": "ca-sanctions",
+      "name": "Electronic Computing Technology Scientific Research Centre JSC",
+      "altNames": [
+        "Акционерное Общество «Научно-исследовательский центр электронной вычислительной техники»"
+      ],
+      "country": "RU",
+      "date": "2022-06-25",
+      "citation": "Schedule 1, Part 2, item 202",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "electronic-computing-technology-scientific-research-centre-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:21",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise State Research and Production Enterprise Bazalt",
+      "altNames": [],
+      "country": "RU",
+      "date": "2014-07-24",
+      "citation": "Schedule 1, Part 2, item 21",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-state-research-and-production-enterprise-bazalt"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:239",
+      "list": "ca-sanctions",
+      "name": "Scientific-Production Enterprise Salyut JSC",
+      "altNames": [
+        "Акционерное Общество «Научно-производственное предприятие „Салют“"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 239",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-salyut-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:240",
+      "list": "ca-sanctions",
+      "name": "Scientific-Production Enterprise Almaz JSC",
+      "altNames": [
+        "Акционерное общество «Научно-производственное предприятие «Алмаз»"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 240",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-almaz-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:243",
+      "list": "ca-sanctions",
+      "name": "Ural Research Institute of Composite Materials",
+      "altNames": [
+        "Акционерное общество \"Уральский научно-исследовательский институт композиционных материалов\"",
+        "Униикм, АО"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 243",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "ural-research-institute-of-composite-materials"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:244",
+      "list": "ca-sanctions",
+      "name": "Scientific-Production Enterprise Kant",
+      "altNames": [
+        "«Научно-производственное предприятие «Кант» and АО «НПП «Кант»"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 244",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-kant"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:245",
+      "list": "ca-sanctions",
+      "name": "Scientific-Production Enterprise Svyaz",
+      "altNames": [
+        "Научно-производственное предприятие «Связь» and АО «НПП «Связь»"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 245",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-svyaz"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:246",
+      "list": "ca-sanctions",
+      "name": "Scientific-Research Institute Argon",
+      "altNames": [
+        "Научно-исследовательский институт \"Аргон\", АО \"НИИ\"Аргон\""
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 246",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-argon"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:247",
+      "list": "ca-sanctions",
+      "name": "Scientific-Research Institute and Factory Platan",
+      "altNames": [
+        "Акционерное Общество \"Научно-Исследовательский Институт \"Платан\" С Заводом При Нии\""
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 247",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-and-factory-platan"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:248",
+      "list": "ca-sanctions",
+      "name": "Scientific-Research Institute of Automated Systems and Communications Complexes Neptune JSC",
+      "altNames": [
+        "Акционерное Общество \"Научно-Исследовательский Институт Автоматизированных Систем И Комплексов Связи \"Нептун\" and АО \"НИИ \"Нептун\""
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 248",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-institute-of-automated-systems-and-communications-complexes"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:252",
+      "list": "ca-sanctions",
+      "name": "Research and Design Institute Morteplotekhnika JSC",
+      "altNames": [
+        "Акционерное Общество \"Научно-Исследовательский Институт Морской Теплотехники\" and НИИ Мортеплотехники, АО"
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 252",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-design-institute-morteplotekhnika-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:254",
+      "list": "ca-sanctions",
+      "name": "Temp-Avia Arzamas Research and Production Association JSC",
+      "altNames": [
+        "Публичное Акционерное Общество \"Арзамасское Научно-Производственное Предприятие \"Темп-Авиа\""
+      ],
+      "country": "RU",
+      "date": "2022-07-29",
+      "citation": "Schedule 1, Part 2, item 254",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "arzam-scientific-production-enterprise-temp-avia"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:278",
+      "list": "ca-sanctions",
+      "name": "Internet Research Agency (IRA)",
+      "altNames": [],
+      "country": "RU",
+      "date": "2023-02-02",
+      "citation": "Schedule 1, Part 2, item 278",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "internet-research-agency-ira"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:281",
+      "list": "ca-sanctions",
+      "name": "Rzhanov Institute of Semiconductor Physics Siberian Branch of Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Институт физики полупроводников им. А.В. Ржанова Сибирского отделения Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 281",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "rzhanov-institute-of-semiconductor-physics-siberian-branch-of-russian-academy-of"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:284",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Association Strela",
+      "altNames": [
+        "\"Научно-производственное объединение Стрела”",
+        "“НПО Стрела”"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 284",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-association-strela"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:287",
+      "list": "ca-sanctions",
+      "name": "Research and Production Association named after S.A. Lavochkina JSC",
+      "altNames": [
+        "НПО Лавочкина, АО",
+        "Акционерное Общество \"Научно-Производственное Объединение Им. С.А.Лавочкина\""
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 287",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-production-association-named-after-s-a-lavochkina-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:297",
+      "list": "ca-sanctions",
+      "name": "Central Research Institute “BUREVESTNIK”",
+      "altNames": [
+        "Центральный научно-исследовательский институт « Буревестник »"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 297",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-institute-burevestnik"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:299",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Association Russian Basic Information Technology JSC",
+      "altNames": [
+        "Научно-Производственное Объединение Русские Базовые Информационные Технологии"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 299",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-association-russian-basic-information-technology-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:30",
+      "list": "ca-sanctions",
+      "name": "OJSC Dolgoprudny Research Production Enterprise (DNPP)",
+      "altNames": [],
+      "country": "RU",
+      "date": "2014-09-16",
+      "citation": "Schedule 1, Part 2, item 30",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "ojsc-dolgoprudny-research-production-enterprise-dnpp"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:315",
+      "list": "ca-sanctions",
+      "name": "Scientific and Technical Center Zaslon JSC",
+      "altNames": [
+        "Акционерное Общество \"Заслон\""
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 315",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-technical-center-zaslon-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:316",
+      "list": "ca-sanctions",
+      "name": "Federal State Financed Institution of Science Higher Education Institution Spectroscopy of the Russian Federation Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Институт спектроскопии Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 316",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-financed-institution-of-science-higher-education-institution-spect"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:317",
+      "list": "ca-sanctions",
+      "name": "Research Center Elins JSC",
+      "altNames": [
+        "научно-технический центр «Элинс»",
+        "НТЦ Элинс"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 317",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-center-elins-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:322",
+      "list": "ca-sanctions",
+      "name": "Federal Institute for Scientific Research Vychislitelnykh Kompleksov named after M.A. Kartseva JSC",
+      "altNames": [
+        "АО \"Научно-исследовательский институт вычислительных комплексов им. М.А. Карцева\""
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 322",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-institute-for-scientific-research-vychislitelnykh-kompleksov-named-after"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:323",
+      "list": "ca-sanctions",
+      "name": "L.D. Landau Institute for Theoretical Physics - Russian Academy of Sciences (RAS)",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Институт теоретической физики им. Л.Д. Ландау Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 323",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "l-d-landau-institute-for-theoretical-physics-of-russian-academy-of-sciences"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:324",
+      "list": "ca-sanctions",
+      "name": "Valiev Institute of Physics and Technology of Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Физико-технологический институт имени К.А. Валиева Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 324",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n-2"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:325",
+      "list": "ca-sanctions",
+      "name": "Lebedev Physical Institute",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Физический институт имени П. Н. Лебедева Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 325",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:328",
+      "list": "ca-sanctions",
+      "name": "The Federal Research Center Institute of Applied Physics of the Russian Academy of Sciences",
+      "altNames": [
+        "Федеральный исследовательский центр Институт прикладной физики Российской академии наук"
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 328",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-research-center-institute-of-applied-physics-of-the-russian-academy-of-s"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:33",
+      "list": "ca-sanctions",
+      "name": "Institute of Instrument Design (NIIP)",
+      "altNames": [],
+      "country": "RU",
+      "date": "2014-09-16",
+      "citation": "Schedule 1, Part 2, item 33",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "institute-of-instrument-design-niip"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:34",
+      "list": "ca-sanctions",
+      "name": "Marine Scientific Research Institute of Radioelectronics “Altair” (MNIIRE “Altair”)",
+      "altNames": [],
+      "country": "RU",
+      "date": "2014-09-16",
+      "citation": "Schedule 1, Part 2, item 34",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "marine-scientific-research-institute-of-radioelectronics-altair-mniire-altair"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:341",
+      "list": "ca-sanctions",
+      "name": "Zhukovskiy Central Aerohydrodynamics Institute (TsAGI)",
+      "altNames": [
+        "Федеральное Автономное Учреждение \"Центральный Аэрогидродинамический Институт Имени Профессора Н.Е. Жуковского\""
+      ],
+      "country": "RU",
+      "date": "2023-02-23",
+      "citation": "Schedule 1, Part 2, item 341",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "zhukovskiy-central-aerohydrodynamics-institute-tsagi"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:344",
+      "list": "ca-sanctions",
+      "name": "Research and Development Enterprise Sapfir JSC",
+      "altNames": [
+        "Акционерное Общество \"Научно-Производственное Предприятие \"Сапфир\""
+      ],
+      "country": "RU",
+      "date": "2023-04-05",
+      "citation": "Schedule 1, Part 2, item 344",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-development-enterprise-sapfir-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:346",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise Scientific and Production Enterprise Gamma",
+      "altNames": [
+        "Федеральное Государственное Унитарное Предприятие Научно-Производственное Предприятие Гамма"
+      ],
+      "country": "RU",
+      "date": "2023-04-05",
+      "citation": "Schedule 1, Part 2, item 346",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-scientific-production-enterprise-gamma"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:362",
+      "list": "ca-sanctions",
+      "name": "JSC Order of the Red Banner of Labor All Russian Research Institute of Radio Equipment",
+      "altNames": [
+        "Акционерное Общество«Московский ордена Трудового Красного Знамени научно-исследовательский радиотехнический институт» МНИРТИ"
+      ],
+      "country": "RU",
+      "date": "2023-04-05",
+      "citation": "Schedule 1, Part 2, item 362",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "jsc-order-of-the-red-banner-of-labor-all-russian-research-institute-of-radio-equ"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:373",
+      "list": "ca-sanctions",
+      "name": "Research and Production Enterprise “Zvezda” named after Academician G.I. Severin JSC",
+      "altNames": [
+        "Акционерное Общество «Научно-производственное предприятие «Звезда» имени академика Г. И. Северина»"
+      ],
+      "country": "RU",
+      "date": "2023-04-05",
+      "citation": "Schedule 1, Part 2, item 373",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-production-enterprise-zvezda-named-after-academician-g-i-severin-js"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:386",
+      "list": "ca-sanctions",
+      "name": "Federal State Financed Institution of Science Physics and Technology Institute named after A.F. Ioffe",
+      "altNames": [
+        "Физико-технический институт имени А.Ф.Иоффе"
+      ],
+      "country": "RU",
+      "date": "2023-05-18",
+      "citation": "Schedule 1, Part 2, item 386",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n-3"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:389",
+      "list": "ca-sanctions",
+      "name": "Elvees Research and Development Center, JSC",
+      "altNames": [
+        "Акционерное общество Научно-производственный центр Электронные вычислительно-информационные системы"
+      ],
+      "country": "RU",
+      "date": "2023-05-18",
+      "citation": "Schedule 1, Part 2, item 389",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "elvees-research-and-development-center-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:391",
+      "list": "ca-sanctions",
+      "name": "State Scientific Research Institute for Organic Chemistry and Technology",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Государственный научно-исследовательский институт органической химии и технологии»"
+      ],
+      "country": "RU",
+      "date": "2023-05-18",
+      "citation": "Schedule 1, Part 2, item 391",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "state-scientific-research-institute-of-organic-chemistry-and-technology"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:420",
+      "list": "ca-sanctions",
+      "name": "“Omsk Scientific Research Institute of Instrument Making” JSC",
+      "altNames": [
+        "Акционерное Общество \"Омский Научно-Исследовательский Институт Приборостроения”",
+        "ОНИИП"
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 420",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "omsk-scientific-research-institute-of-instrument-making-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:423",
+      "list": "ca-sanctions",
+      "name": "Concern Avrora Scientific and Production Association JSC",
+      "altNames": [
+        "AO \"Kontsern\" NPO \"Avrora\"",
+        "Avrora JSC",
+        "Акционерное Общество \"Концерн \"Научно-Производственное Объединение \"Аврора\"",
+        "АО «Концерн «НПО «Аврора»"
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 423",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "concern-avrora-scientific-and-production-association-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:427",
+      "list": "ca-sanctions",
+      "name": "Joint Stock Company “State Science Center of the Russian Federation Troitsk Institute of Innovative and Thermonuclear Research”",
+      "altNames": [
+        "SSC RF Trinity, JSC",
+        "АКЦИОНЕРНОЕ ОБЩЕСТВО \"ГОСУДАРСТВЕННЫЙ НАУЧНЫЙ ЦЕНТР РОССИЙСКОЙ ФЕДЕРАЦИИ ТРОИЦКИЙ ИНСТИТУТ ИННОВАЦИОННЫХ И ТЕРМОЯДЕРНЫХ ИССЛЕДОВАНИЙ\"",
+        "ГНЦ РФ Тринити, АО"
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 427",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "joint-stock-company-state-science-center-of-the-russian-federation-troitsk-insti"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:428",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise All-Russian Research Institute of Experimental Physics",
+      "altNames": [
+        "RFNC - Vniief, FSUE",
+        "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"РОССИЙСКИЙ ФЕДЕРАЛЬНЫЙ ЯДЕРНЫЙ ЦЕНТР - ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ЭКСПЕРИМЕНТАЛЬНОЙ ФИЗИКИ\"",
+        "РФЯЦ - Внииэф, ФГУП"
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 428",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-all-russian-research-institute-of-experimental"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:431",
+      "list": "ca-sanctions",
+      "name": "The Federal Scientific and Production Center “M.V. Protsenko Start Production Association”",
+      "altNames": [
+        "Акционерное Общество \"Федеральный Научно-Производственный Центр \"Производственное Объединение \"Старт\" Имени М.В. Проценко\""
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 431",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "the-federal-scientific-and-production-center-m-v-protsenko-start-production-asso"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:433",
+      "list": "ca-sanctions",
+      "name": "State Scientific Centre Research Institute of Atomic Reactor JSC",
+      "altNames": [
+        "Atomic Reactor Research Institute",
+        "NIIAR",
+        "RIAR",
+        "Научно-исследовательский институт атомных реакторов",
+        "Акционерное Общество \"Государственный Научный Центр - Научно-Исследовательский Институт Атомных Реакторов\""
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 433",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "state-scientific-centre-research-institute-of-atomic-reactor-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:434",
+      "list": "ca-sanctions",
+      "name": "The National Research Centre Kurchatov Institute",
+      "altNames": [
+        "Национальный исследовательский центр «Курчатовский институт»",
+        "Федеральное Государственное Бюджетное Учреждение \"Национальный Исследовательский Центр \"Курчатовский Институт\""
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 434",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-research-center-kurchatov-institute"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:441",
+      "list": "ca-sanctions",
+      "name": "PJSC “Scientific and Production Association ‘Almaz’ named after Academician A.A. Raspletin”",
+      "altNames": [
+        "PJSC \"ALMAZ R&P Corp.\"",
+        "Публичное акционерное общество «Научно-производственное объединение «Алмаз» имени академика А.А. Расплетина»",
+        "ПАО «НПО «Алмаз»"
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 441",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "pjsc-scientific-and-production-association-almaz-named-after-academician-a-a-ras"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:446",
+      "list": "ca-sanctions",
+      "name": "Concern Central Institute for Scientific Research Elektropribor JSC",
+      "altNames": [
+        "Концерн \"ЦНИИ \"Электроприбор, АО",
+        "Акционерное Общество \"Концерн \"Центральный Научно-Исследовательский Институт \"Электроприбор\""
+      ],
+      "country": "RU",
+      "date": "2023-08-22",
+      "citation": "Schedule 1, Part 2, item 446",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "concern-central-institute-for-scientific-research-elektropribor-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:456",
+      "list": "ca-sanctions",
+      "name": "Higher School of Economics University",
+      "altNames": [
+        "Национальный исследовательский университет «Высшая школа экономики»"
+      ],
+      "country": "RU",
+      "date": "2023-09-20",
+      "citation": "Schedule 1, Part 2, item 456",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "higher-school-of-economics-university"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:460",
+      "list": "ca-sanctions",
+      "name": "Russian Institute for Strategic Studies",
+      "altNames": [
+        "Российский институт стратегических исследований"
+      ],
+      "country": "RU",
+      "date": "2023-09-20",
+      "citation": "Schedule 1, Part 2, item 460",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "russian-institute-for-strategic-studies"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:461",
+      "list": "ca-sanctions",
+      "name": "National Committee for BRICS Research",
+      "altNames": [
+        "Национальный Комитет По Исследованию Брикс"
+      ],
+      "country": "RU",
+      "date": "2023-09-20",
+      "citation": "Schedule 1, Part 2, item 461",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-committee-for-brics-research"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:462",
+      "list": "ca-sanctions",
+      "name": "Moscow State Institute of International Relations",
+      "altNames": [
+        "Федеральное государственное автономное образовательное учреждение высшего образования «Московский государственный институт международных отношений университет Министерства иностранных дел Российской Федерации»"
+      ],
+      "country": "RU",
+      "date": "2023-09-20",
+      "citation": "Schedule 1, Part 2, item 462",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "moscow-state-institute-of-international-relations"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:466",
+      "list": "ca-sanctions",
+      "name": "Global Policy Research Foundation",
+      "altNames": [
+        "Фонд исследований мировой политики"
+      ],
+      "country": "RU",
+      "date": "2023-09-20",
+      "citation": "Schedule 1, Part 2, item 466",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "global-policy-research-foundation"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:471",
+      "list": "ca-sanctions",
+      "name": "The Institute of State and Law (ISL) of the Russian Academy of Sciences (RAS)",
+      "altNames": [
+        "ИГП РАН",
+        "федеральное государственное бюджетное учреждение науки Институт государства и права Российской Академии Наук"
+      ],
+      "country": "RU",
+      "date": "2023-11-09",
+      "citation": "Schedule 1, Part 2, item 471",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "the-institute-of-state-and-law-isl-of-the-russian-academy-of-sciences-ras"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:486",
+      "list": "ca-sanctions",
+      "name": "State Research Institute of Instrument Engineering – GosNIIP",
+      "altNames": [
+        "Государственный научно-исследовательский институт приборостроения, ГосНИИП"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 486",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "state-research-institute-of-instrument-engineering-gosniip"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:487",
+      "list": "ca-sanctions",
+      "name": "Research and Production Enterprise Radar MMS JSC",
+      "altNames": [
+        "Научно-производственное предприятие «Радар ммс»",
+        "АО НПП Радар-ММС"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 487",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-production-enterprise-radar-mms-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:490",
+      "list": "ca-sanctions",
+      "name": "Moscow Research Institute Agat JSC",
+      "altNames": [
+        "Московский научно-исследовательский институт Агат",
+        "ОАО МНИИ АГАТ"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 490",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "moscow-research-institute-agat-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:493",
+      "list": "ca-sanctions",
+      "name": "All-Russian Research Institute of Optical and Physical Measurements",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Всероссийский научноисследовательский институт оптико-физических измерений»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 493",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "all-russian-research-institute-of-optical-and-physical-measurements"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:495",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise “Russian Federal Nuclear Center – Zababakhin All-Russia Research Institute of Technical Physics”",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Российский Федеральный Ядерный Центр – Всероссийский научно-исследовательский институт технической физики имени академика Е.И. Забабахина ФГУП «РФЯЦ – ВНИИТФ им. академ. Е.И. Забабахина»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 495",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-russian-federal-nuclear-center-zababakhin-all-r"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:496",
+      "list": "ca-sanctions",
+      "name": "National Research Institute for Physical Technical and Radio Engineering Measurements",
+      "altNames": [
+        "Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 496",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-research-institute-for-physical-technical-and-radio-engineering-measure"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:499",
+      "list": "ca-sanctions",
+      "name": "Federal State Unitary Enterprise “State Scientific-Research Institute for Aviation Systems” (GosNIIAS)",
+      "altNames": [
+        "ФАУ «Государственный Научно-исследовательский Институт Авиационных Систем»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 499",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-state-unitary-enterprise-state-scientific-research-institute-for-aviatio-2"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:500",
+      "list": "ca-sanctions",
+      "name": "State Scientific Research Institute of Machine Building Bakhirev (GosNIImash)",
+      "altNames": [
+        "Акционерное Общество «Государственный Научно-Исследовательский Институт Машиностроения Имени В.В.Бахирева»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 500",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:510",
+      "list": "ca-sanctions",
+      "name": "Scientific Production Enterprise Izmeritel JSC",
+      "altNames": [
+        "Акционерное общество «Научно-производственное предприятие «Измеритель»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 510",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-production-enterprise-izmeritel-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:516",
+      "list": "ca-sanctions",
+      "name": "Kaluga Research Institute of Radio Engineering JSC",
+      "altNames": [
+        "АО «Калужский научноисследовательский радиотехнический институт»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 516",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "kaluga-research-institute-of-radio-engineering-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:520",
+      "list": "ca-sanctions",
+      "name": "Krylov State Research Centre (also known as Krylov State Scientific Center Federal State Unitary Enterprise)",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Крыловский государственный научный центр»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 520",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "krylov-state-scientific-center-federal-state-unitary-enterprise"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:521",
+      "list": "ca-sanctions",
+      "name": "Kurganpribor JSC (also known as Scientific-Production Association “Kurganpribor”)",
+      "altNames": [
+        "Акционерное общество «Научно-производственное объединение «Курганприбор»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 521",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "kurganpribor-jsc-also-known-as-scientific-production-association-kurganpribor"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:526",
+      "list": "ca-sanctions",
+      "name": "Corporation Moscow Institute of Heat Technology JSC",
+      "altNames": [
+        "Акционерное Общество «Корпорация «Московский Институт Теплотехники»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 526",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "corporation-moscow-institute-of-heat-technology-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:527",
+      "list": "ca-sanctions",
+      "name": "JSC “MNITI” (also known as Moscow Scientific Research Television Institute and ZAO MNITI)",
+      "altNames": [
+        "ЗАО «МНИТИ»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 527",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "jsc-mniti-also-known-as-moscow-scientific-research-television-institute-and-zao"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:530",
+      "list": "ca-sanctions",
+      "name": "Scientific-Research Engineering Institute JSC (also known as Scientific Research Engineering Institute, AO Nauchno-Issledovatelskiy Inzhenerniy Institut and AO NIII)",
+      "altNames": [
+        "Акционерное общество «Научно-исследовательский инженерный институт»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 530",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-research-engineering-institute-jsc-also-known-as-scientific-research"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:532",
+      "list": "ca-sanctions",
+      "name": "Research and Design Institute of Sea Thermal Engineering",
+      "altNames": [
+        "Акционерное общество «Научно-исследовательский институт морской теплотехники»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 532",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-design-institute-of-sea-thermal-engineering"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:533",
+      "list": "ca-sanctions",
+      "name": "V. Tikhomirov Scientific-Research Institute of Instrument Design JSC",
+      "altNames": [
+        "Акционерное общество «Научно-исследовательский институт приборостроения имени В.В. Тихомирова»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 533",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "v-tikhomirov-scientific-research-institute-of-instrument-design-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:534",
+      "list": "ca-sanctions",
+      "name": "Mechanical Engineering Research Institute Named After V.V. Bahirev (also known as NIMI Named After V.V. Bakhirev, JSC)",
+      "altNames": [
+        "Акционерное общество «Научно-исследовательский машиностроительный институт имени В.В. Бахирева»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 534",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "mechanical-engineering-research-institute-named-after-v-v-bahirev-also-known-as"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:535",
+      "list": "ca-sanctions",
+      "name": "Special Research Bureau of Moscow Power Engineering Institute",
+      "altNames": [
+        "Акционерное общество «Особое конструкторское бюро Московского энергетического института»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 535",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "special-research-bureau-of-moscow-power-engineering-institute"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:537",
+      "list": "ca-sanctions",
+      "name": "Research and Manufacturing Association “Development of Innovative Technologies” (also known as Engineering Center of Innovative Technologies)",
+      "altNames": [
+        "Акционерное общество Научно-Производственное Объединение «Развитие Инновационных Технологий»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 537",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-manufacturing-association-development-of-innovative-technologies"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:554",
+      "list": "ca-sanctions",
+      "name": "The Russian Institute of Radionavigation and Time, JSC (also known as Open Joint Stock Company Russian Institute of Radionavigation and Time and Russian",
+      "altNames": [
+        "АО «Российский институт радионавигации и времени»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 554",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:559",
+      "list": "ca-sanctions",
+      "name": "Research and Production Association RusBITech (also known as Rusbitech)",
+      "altNames": [
+        "Акционерное общество «Научнопроизводственное объединение Русские базовые информационные технологии»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 559",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-production-association-rusbitech-also-known-as-rusbitech"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:56",
+      "list": "ca-sanctions",
+      "name": "AO Institute Giprostroymost – Saint-Petersburg",
+      "altNames": [],
+      "country": "RU",
+      "date": "2019-03-15",
+      "citation": "Schedule 1, Part 2, item 56",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "ao-institute-giprostroymost-saint-petersburg"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:571",
+      "list": "ca-sanctions",
+      "name": "Afanasyev Research and Production Enterprise Technomac (also known as Afanasyev Technomac, JSC)",
+      "altNames": [
+        "Акционерное Общество «Научнопроизводственное объединение «Техномаш» им. С.А. Афанасьева"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 571",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "afanasyev-research-and-production-enterprise-technomac-also-known-as-afanasyev-t"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:583",
+      "list": "ca-sanctions",
+      "name": "Central Research Institute “Cyclone” JSC (also known as Joint Stock Company Central Research Institute Cyclone)",
+      "altNames": [
+        "Акционерное общество «Центральный научноисследовательский институт «Циклон»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 583",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-and-development-institute-tsiklon"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:585",
+      "list": "ca-sanctions",
+      "name": "Central Research Institute of Chemistry and Mechanics, FSUE (also known as Federal State Unitary Enterprise Central Scientific Research Institute of Chemistry and Mechanics)",
+      "altNames": [
+        "Федеральное государственное унитарное предприятие «Центральный научноисследовательский институт химии и механники»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 585",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-research-institute-of-chemistry-and-mechanics-fsue-also-known-as-federal"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:615",
+      "list": "ca-sanctions",
+      "name": "Research and Production Enterprise “Almaz” JSC",
+      "altNames": [
+        "Акционерное общество «Научно-производственное предприятие «Алмаз»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 615",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-production-enterprise-almaz-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:623",
+      "list": "ca-sanctions",
+      "name": "All-Russian Research Institute of Radio-Engineering JSC",
+      "altNames": [
+        "АО «Всероссийский Научноисследовательский Институт Радиотехники»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 623",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "all-russian-research-institute-of-radio-engineering-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:624",
+      "list": "ca-sanctions",
+      "name": "Central Scientific Research Institute “Kurs” JSC",
+      "altNames": [
+        "Акционерное общество Центральный научноисследовательский институт «Курс»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 624",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "central-scientific-research-institute-kurs-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:637",
+      "list": "ca-sanctions",
+      "name": "Research and Development Association “Electromashina”, SC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2024-06-12",
+      "citation": "Schedule 1, Part 2, item 637",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-and-development-association-electromashina-sc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:667",
+      "list": "ca-sanctions",
+      "name": "IRGC Research and Self Sufficiency Jihad Organization (IRGC RSSJO)",
+      "altNames": [],
+      "country": "RU",
+      "date": "2025-02-21",
+      "citation": "Schedule 1, Part 2, item 667",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "irgc-research-and-self-sufficiency-jihad-organization-irgc-rssjo"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:693",
+      "list": "ca-sanctions",
+      "name": "Internet Development Institute (IRI)",
+      "altNames": [
+        "l'Institute for Internet Development, Институт развития интернета"
+      ],
+      "country": "RU",
+      "date": "2025-02-21",
+      "citation": "Schedule 1, Part 2, item 693",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "internet-development-institute-iri"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:743",
+      "list": "ca-sanctions",
+      "name": "Moscow State University Quantum Technology Centre",
+      "altNames": [
+        "MSU Quantum Technology Centre, QTC, QTC MSU, Moscow State University Faculty of Physics – Quantum Technology Centre"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 743",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "moscow-state-university-quantum-technology-centre"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:744",
+      "list": "ca-sanctions",
+      "name": "National University of Science and Technology Centre for Quantum Communications",
+      "altNames": [
+        "The Quantum Communication Competence Centre of NTI, The Competence Centre of NTI “Quantum Communications”, NTI Center Quantum Communications, MISIS Center for Quantum Communications, NTI Competence Center, National Technology Initiative Competence Centre, NUST MISIS Quantum Center, NUST Centre for Quantum Communications"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 744",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-university-of-science-and-technology-centre-for-quantum-communications"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:745",
+      "list": "ca-sanctions",
+      "name": "National University of Science and Technology Laboratory of Superconductor Quantum Technologies",
+      "altNames": [
+        "NUST MISIS Laboratory of Superconductive Metamaterials, NUST MISIS Laboratory of Superconductor Quantum Technologies"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 745",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-university-of-science-and-technology-laboratory-of-superconductor-quant"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:746",
+      "list": "ca-sanctions",
+      "name": "Novosibirsk State University Interdisciplinary Quantum Centre",
+      "altNames": [
+        "IQC of NSU, IQC NSU"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 746",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "novosibirsk-state-university-interdisciplinary-quantum-centre"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:747",
+      "list": "ca-sanctions",
+      "name": "Kazan National Research Technical University`s Kazan Quantum Centre",
+      "altNames": [
+        "Kazan Quantum Centre, KNRTU-KAI Quantum Centre"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 747",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "kazan-national-research-technical-university-s-kazan-quantum-centre"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:748",
+      "list": "ca-sanctions",
+      "name": "ITMO University National Centre for Quantum Internet",
+      "altNames": [
+        "Information Technologies, Mechanics and Optics University’s Centre for Quantum Internet"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 748",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "itmo-university-national-centre-for-quantum-internet"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:754",
+      "list": "ca-sanctions",
+      "name": "National Quantum Laboratory",
+      "altNames": [
+        "National Quantum Lab, Rosatom National Quantum Laboratory"
+      ],
+      "country": "RU",
+      "date": "2025-06-13",
+      "citation": "Schedule 1, Part 2, item 754",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "national-quantum-laboratory"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:769",
+      "list": "ca-sanctions",
+      "name": "Kapitza Institute for Physics Problems",
+      "altNames": [
+        "P.L. Kapitza Institute for Physical Problems, Russian Academy of Sciences Cyrillic: Институт Физических Проблем им. П. Л. Капицы",
+        "Федеральное Государственное Бюджетное Учреждение Науки Институт Физических Проблем Им. П.Л. Капицы Российской Академии Наук"
+      ],
+      "country": "RU",
+      "date": "2026-02-19",
+      "citation": "Schedule 1, Part 2, item 769",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "kapitza-institute-for-physics-problems"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:770",
+      "list": "ca-sanctions",
+      "name": "Institute of Automation and Electrometry",
+      "altNames": [
+        "IA&E, Institute of Automation and Electrometry of the Siberian Branch of the Russian Academy of Sciences, ИАиЭ",
+        "Институт автоматики и электрометрии СО РАН"
+      ],
+      "country": "RU",
+      "date": "2026-02-19",
+      "citation": "Schedule 1, Part 2, item 770",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "institute-of-automation-and-electrometry"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:772",
+      "list": "ca-sanctions",
+      "name": "Russian Artificial Intelligence Research Institute of the Russian Academy of Sciences",
+      "altNames": [
+        "RAIRI, Институт проблем искусственного интеллекта, ИПИИ, ФИЦ ИУ РАН"
+      ],
+      "country": "RU",
+      "date": "2026-02-19",
+      "citation": "Schedule 1, Part 2, item 772",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "russian-artificial-intelligence-research-institute-of-the-russian-academy-of-sci"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:787",
+      "list": "ca-sanctions",
+      "name": "Advanced Research Foundation",
+      "altNames": [
+        "ARF, FPI, ФПИ, Фонд Перспективных Исследований"
+      ],
+      "country": "RU",
+      "date": "2026-02-19",
+      "citation": "Schedule 1, Part 2, item 787",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "advanced-research-foundation"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:789",
+      "list": "ca-sanctions",
+      "name": "Federal Scientific and Production Centre",
+      "altNames": [
+        "NIIPH, Scientific Research Institute for Applied Chemistry, Акционерное Общество «Федеральный Научно-Производственный Центр “Научно-Исследовательский Институт Прикладной Химии”"
+      ],
+      "country": "RU",
+      "date": "2026-02-19",
+      "citation": "Schedule 1, Part 2, item 789",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-scientific-and-production-centre"
+    }
+  ]
 }
