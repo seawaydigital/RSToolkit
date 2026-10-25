@@ -151,9 +151,10 @@ src/
 
 ### Routing
 
-- Hash-based: `window.location.hash = 'tool-slug'` to navigate
-- No params — each tool manages its own state internally
-- `onNavigate(slug)` prop passed to all tool components for cross-tool linking
+- Hash-based: `window.location.hash = 'tool-slug'` to navigate. `parseHashRoute()` in `src/routing.js` reads `#tool` or `#tool/sub` (a leading `#/` is still accepted for old links)
+- Sub-routes: only the Defence Institution Tracker uses one (`#defence-tracker/<institution-id>`, `/batch`, `/methodology`), for citable permalinks. Every tool receives `subRoute` and `onPageTitle`; the others ignore them. No query parameters, and never put user-typed text in the hash
+- `onNavigate(slug)` prop passed to all tool components for cross-tool linking (it accepts `tool/sub`)
+- App composes `document.title` from a tool's `onPageTitle(title)`. A tool must not set `document.title` itself: React runs child effects before the parent's, so App's effect would overwrite it
 
 ### Flowchart Data Shape
 
