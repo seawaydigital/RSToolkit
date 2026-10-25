@@ -53,8 +53,7 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
 
       <div className="dit-toolbar dit-no-print">
         <a className="dit-button dit-button--primary" href="#defence-tracker/batch">Batch check</a>
-        <a className="dit-button" href="#defence-tracker/methodology">Methodology</a>
-        <a className="dit-button" href="#defence-tracker/methodology#dit-downloads">Download data</a>
+        <a className="dit-button" href="#defence-tracker/methodology">Methodology and data downloads</a>
       </div>
 
       <p className="dit-intro">

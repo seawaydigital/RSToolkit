@@ -29,6 +29,25 @@ function siteUrlPlugin() {
   }
 }
 
+// With the tracker switched on, publishes its open dataset at stable URLs
+// (data/defence-tracker.json and .csv) for scripts and other tools. Built
+// from the same loader and formatting code the page uses.
+function trackerDataPlugin(enabled) {
+  return {
+    name: 'defence-tracker-data',
+    apply: 'build',
+    async generateBundle() {
+      if (!enabled) return
+      const load = (file) => import(new URL(file, import.meta.url).href)
+      const { loadDataset } = await load('./scripts/tracker/lib/loadData.mjs')
+      const { datasetToCsv, datasetToExport } = await load('./src/tools/compliance/defence-tracker/lib/recordText.js')
+      const dataset = await loadDataset()
+      this.emitFile({ type: 'asset', fileName: 'data/defence-tracker.json', source: `${JSON.stringify(datasetToExport(dataset), null, 2)}\n` })
+      this.emitFile({ type: 'asset', fileName: 'data/defence-tracker.csv', source: `﻿${datasetToCsv(dataset)}` })
+    },
+  }
+}
+
 // Base path is selectable so the same build works at a domain root or under
 // a subdirectory. It rewrites every asset URL in the output.
 //
@@ -39,7 +58,7 @@ function siteUrlPlugin() {
 // load cleanly at http://localhost:5173/. See HANDOFF.md for deployment.
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), siteUrlPlugin()],
+  plugins: [react(), siteUrlPlugin(), trackerDataPlugin(trackerEnabled(mode))],
   base: process.env.BASE_PATH || '/',
   define: {
     __TRACKER_ENABLED__: JSON.stringify(trackerEnabled(mode)),
