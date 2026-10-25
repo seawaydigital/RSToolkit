@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {
   batchResultsToCsv,
   batchResultsToHtml,
+  batchResultsToText,
   countBatch,
   csvCell,
   datasetToCsv,
@@ -48,6 +49,15 @@ test('the CSV header is fixed', () => {
 
 test('CSV quotes commas, quotes and newlines', () => {
   assert.equal(csvCell('Dept, "A"\nB'), '"Dept, ""A""\nB"');
+});
+
+test('the copied table neutralises formula-like cells too, since it is pasted into spreadsheets', () => {
+  const lines = [{ input: '=HYPERLINK("http://x","y")', matches: [] }, { input: '@SUM(A1)', matches: [] }];
+  const text = batchResultsToText(lines, byId).split('\n').slice(1).map((row) => row.split('\t')[0]);
+  assert.deepEqual(text, [`'=HYPERLINK("http://x","y")`, `'@SUM(A1)`]);
+  const html = batchResultsToHtml(lines, byId);
+  assert.ok(html.includes(`<td>'=HYPERLINK(&quot;http://x&quot;,&quot;y&quot;)</td>`), html);
+  assert.ok(html.includes(`<td>'@SUM(A1)</td>`), html);
 });
 
 test('CSV neutralises formula-like cells', () => {

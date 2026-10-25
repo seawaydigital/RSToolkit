@@ -245,7 +245,10 @@ export function diffEntries(before, after) {
 // For text that ends up in a GitHub issue: a code span, so a name or message
 // from outside the repository can't mention anyone (@) or link elsewhere.
 export const sanitizeForIssue = (s) => `\`${String(s).replace(/`/g, "'").replace(/@/g, '')}\``;
-const entryLine = (e) => `${sanitizeForIssue(e.name)} (${[e.list, e.date, e.citation].filter(Boolean).join(', ')}) → ${sanitizeForIssue(e.institution ?? 'unmapped')}`;
+const entryLine = (e) => {
+  const details = [e.list, e.date, e.citation].filter(Boolean).join(', ');
+  return `${sanitizeForIssue(e.name)}${details ? ` (${sanitizeForIssue(details)})` : ''} → ${sanitizeForIssue(e.institution ?? 'unmapped')}`;
+};
 
 export function renderSyncReport(sections, failures = []) {
   const lines = [];

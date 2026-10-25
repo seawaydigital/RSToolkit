@@ -105,10 +105,15 @@ export function searchLogLine({ date, meta, counts }) {
 }
 
 // Spreadsheet apps run cells that start with these characters as formulas,
-// and batch input is pasted text, so such cells get a leading apostrophe.
+// and batch input is pasted text, so such cells get a leading apostrophe:
+// in the CSV and in the copied table, which is pasted into spreadsheets too.
+const neutralise = (value) => {
+  const s = value == null ? '' : String(value);
+  return /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
+};
+
 export function csvCell(value) {
-  let s = value == null ? '' : String(value);
-  if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
+  const s = neutralise(value);
   return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
@@ -146,7 +151,7 @@ export function batchResultsToCsv(lines, byId, { baseUrl = '' } = {}) {
 }
 
 export function batchResultsToText(lines, byId, { baseUrl = '' } = {}) {
-  const clean = (c) => String(c).replace(/[\t\r\n]+/g, ' ');
+  const clean = (c) => neutralise(c).replace(/[\t\r\n]+/g, ' ');
   return [BATCH_COLUMNS, ...batchRows(lines, byId, baseUrl)].map((row) => row.map(clean).join('\t')).join('\n');
 }
 
@@ -156,7 +161,7 @@ const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 export function batchResultsToHtml(lines, byId, { baseUrl = '' } = {}) {
   const head = `<tr>${BATCH_COLUMNS.map((c) => `<th>${escapeHtml(c)}</th>`).join('')}</tr>`;
   const body = batchRows(lines, byId, baseUrl)
-    .map((row) => `<tr>${row.map((c) => `<td>${escapeHtml(c)}</td>`).join('')}</tr>`)
+    .map((row) => `<tr>${row.map((c) => `<td>${escapeHtml(neutralise(c))}</td>`).join('')}</tr>`)
     .join('');
   return `<table>${head}${body}</table>`;
 }

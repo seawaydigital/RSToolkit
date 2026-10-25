@@ -45,6 +45,16 @@ test('failure messages, which can quote a server’s reply, go in code spans wit
   assert.ok(r.body.includes('`US CSL: Unexpected token "admin see owner/repo#1"`'), r.body);
 });
 
+test('a list entry’s date and citation, which come from outside, are neutralised too', () => {
+  const r = renderWatchReport({
+    month: '2026-11',
+    sync: { sections: [{ title: 'US CSL', added: [{ name: 'New Univ', list: 'us-entity-list', date: '2026-11-01', citation: '@octocat see owner/repo#1 https://evil.example' }] }], failures: [] },
+    sources: noSources,
+  });
+  assert.ok(!r.body.includes('@'), r.body);
+  assert.ok(r.body.includes("`us-entity-list, 2026-11-01, octocat see owner/repo#1 https://evil.example`"), r.body);
+});
+
 test('dead sources and missing archives are findings that name the record and source', () => {
   const r = renderWatchReport({
     month: '2026-11',
