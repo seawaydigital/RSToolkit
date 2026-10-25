@@ -1,0 +1,68 @@
+{
+  "id": "north-china-institute-of-aerospace-engineering",
+  "name": "North China Institute of Aerospace Engineering",
+  "zh": "北华航天工业学院",
+  "zhAliases": [],
+  "aliases": [
+    "null"
+  ],
+  "acronyms": [
+    "NCIAE"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Langfang",
+    "province": "Hebei",
+    "lat": 39.5267,
+    "lng": 116.7266
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "743d0dfa-c993-4bbb-97c7-8603a63f73b6",
+    "nro": "north-china-institute-of-aerospace-engineering",
+    "ror": "02m7msy24"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China Aerospace Science and Technology Corporation (CASC)",
+      "China Aerospace Science and Industry Corporation (CASIC)"
+    ],
+    "majorDefenceLaboratories": [
+      "Aerospace Engineering and Manufacturing Craft Research and Development Center (航天工程制造工艺研发中心)\n",
+      "Jointly established with CASC’s China Academy of Space Technology",
+      "Electrical Craft Engineering Technology Research and Development Center (电子工艺工程技术研究中心)",
+      "Jointly established with CASC’s China Academy of Aerospace Electronics Technology (中国航天电子技术研究院)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology"
+    ],
+    "address": "North China Institute of Aerospace Engineering, Guangyang, Langfang, China"
+  }
+}

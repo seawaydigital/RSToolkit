@@ -1,0 +1,72 @@
+{
+  "id": "shenyang-aerospace-university",
+  "name": "Shenyang Aerospace University",
+  "zh": "沈阳航空航天大学",
+  "zhAliases": [],
+  "aliases": [
+    "Shenyang Institute of Aeronautical Engineering"
+  ],
+  "acronyms": [
+    "SAU"
+  ],
+  "domains": [
+    "sau.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shenyang",
+    "province": "Liaoning",
+    "lat": 41.9224691279455,
+    "lng": 123.39907472209018
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "55e6f67b-e596-4f08-aedf-ccef8c2ac835",
+    "ror": "02423gm04",
+    "wikidata": "Q7494336"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Liaoning Provincial Government",
+      "Aviation Industry Corporation of China (AVIC)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Fundamental Science for National Defence of Aeronautical Digital Manufacturing Process (航空制造工艺数字化国防重点学科实验室)",
+      "AVIC Shenyang Aviation Corporation National Technology Center Shenyang Research Institute (中航工业沈飞国家级技术中心沈航研究院)"
+    ],
+    "subsidiaries": [
+      "Shenyang Hangda Onboard Devices Co., Ltd. (沈阳航达机载设备有限公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Mechanical engineering"
+    ],
+    "address": "37 Daoyi S St, Shenbei Xinqu, Shenyang Shi, Liaoning Sheng, China, 110148"
+  }
+}

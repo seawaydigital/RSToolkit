@@ -1,0 +1,62 @@
+{
+  "id": "heilongjiang-institute-of-technology",
+  "name": "Heilongjiang Institute of Technology",
+  "zh": "黑龙江工程学院",
+  "zhAliases": [],
+  "aliases": [
+    "null"
+  ],
+  "acronyms": [
+    "HLJIY"
+  ],
+  "domains": [
+    "hljit.edu.cn"
+  ],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "lat": 45.78646000419653,
+    "lng": 126.68662331104508
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a1d71a46-6e06-4a4a-9ff8-9b507b917c11",
+    "ror": "05x0m9n95"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Heilongjiang Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology",
+      "Optical engineering"
+    ],
+    "address": "999 Hongqi St, Daowai Qu, Haerbin Shi, Heilongjiang Sheng, China, 150056"
+  }
+}

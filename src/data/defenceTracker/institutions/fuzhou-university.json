@@ -1,0 +1,61 @@
+{
+  "id": "fuzhou-university",
+  "name": "Fuzhou University",
+  "zh": "福州大学",
+  "zhAliases": [],
+  "aliases": [
+    "Fúzhōu Dàxué"
+  ],
+  "acronyms": [
+    "FZU"
+  ],
+  "domains": [
+    "fzu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Fuzhou",
+    "province": "Fujian",
+    "lat": 26.064480152428146,
+    "lng": 119.19726850476684
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "16a191cb-f61d-46f6-9b45-147efc2a51de",
+    "ror": "011xvna82",
+    "wikidata": "Q470963"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Fujian Provincial Government",
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "2 Xiyuangong Rd, Minhou Xian, Fuzhou Shi, Fujian Sheng, China, 350008"
+  }
+}

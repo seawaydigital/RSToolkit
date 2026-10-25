@@ -1,0 +1,89 @@
+{
+  "id": "chinese-academy-of-engineering-physics",
+  "name": "Chinese Academy of Engineering Physics",
+  "zh": "中国工程物理研究院",
+  "zhAliases": [
+    "九院",
+    "北京高压科学研究中心"
+  ],
+  "aliases": [
+    "China Academy of Engineering Physics",
+    "Ninth Academy",
+    "The High Power Laser Laboratory, Shanghai",
+    "The Institute of Applied Physics and Computational Mathematics, Beijing"
+  ],
+  "acronyms": [
+    "CAEP",
+    "HPSTAR"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Mianyang",
+    "province": null,
+    "lat": 31.4974,
+    "lng": 104.7589
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5615fe86-7305-4115-abc0-4e66c30e436b",
+    "nro": "chinese-academy-of-engineering-physics"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "Central Military Commission (CMC)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Shockwave and Detonation Physics (冲击波物理与爆轰物理国防科技重点实验室)",
+      "Laboratory of High Power Microwave Technology（高功率微波技术国防科技重点实验室）",
+      "National KeyLaboratory of High Temperature and Density Plasma Physics (高温高密度等离子体物理国防科技重点实验室)"
+    ],
+    "subsidiaries": [
+      "Beijing Computational Science Research Center （北京计算科学研究中心)",
+      "Beijing Jingjiu Electron Technology Co., Ltd. (北京京九电子信息有限公司)",
+      "[Probable] Panda International Information Technology Company (熊猫（北京）国际信息技术有限公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mathematics",
+      "Mechanical engineering",
+      "Mechanics",
+      "Nuclear science and technology",
+      "Nuclear weapons",
+      "Optical engineering",
+      "Physics",
+      "Quantum"
+    ],
+    "address": null
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "shahid-sattari-air-force-university",
+  "name": "Shahid Sattari Air Force University",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Shahid Sattari Air Academy",
+    "Shahid Sattari Academy for Air Sciences and Technology"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "IR",
+  "type": "military",
+  "location": {
+    "city": "Tehran",
+    "province": null,
+    "lat": 35.673,
+    "lng": 51.333
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "shahid-sattari-air-force-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

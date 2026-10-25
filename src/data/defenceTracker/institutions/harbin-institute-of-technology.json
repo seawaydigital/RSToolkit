@@ -1,0 +1,82 @@
+{
+  "id": "harbin-institute-of-technology",
+  "name": "Harbin Institute of Technology",
+  "zh": "哈尔滨工业大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "HIT"
+  ],
+  "domains": [
+    "hit.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "lat": 45.7416,
+    "lng": 126.6256
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7e1827c7-cc6b-4b73-a557-8bd2b9a7f65d",
+    "nro": "harbin-institute-of-technology",
+    "ror": "01yqg2h08",
+    "wikidata": "Q632558"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Defence Key Laboratory of Micro and Small-Scale Spacecraft Technology (微小型航天器技术实验室国防重点学科实验室)",
+      "National Defence Key Laboratory of Satellite Laser Communications Technology (卫星激光通信技术实验室国防重点学科实验室)",
+      "National Defence Key Laboratory of Deep-space Probe Landing and Return Control Technology (深空探测着陆与返回控制技术国防重点学科实验室)",
+      "National Defence Key Laboratory of Spaceflight Space Structure and Control Technology (宇航空间机构及控制技术国防重点学科实验室)",
+      "National Key Laboratory of Science and Technology on Tunable Laser (可调谐(气体)激光国防科技重点实验室/可调谐(气体)激光技术国家级重点实验室)",
+      "National Key Laboratory of Science and Technology on Advanced Composites in Special Environments (特种环境复合材料技术国家级重点实验室/特种环境复合材料技术国防科技重点实验室)",
+      "National Defense Science and Technology Key Lab for Space Materials Behavior and Evaluation (空间环境材料行为与评价技术国家级重点实验室/空间环境材料行为及评价技术国防科技重点实验室)",
+      "National Key Laboratory for Precision Hot Forming of Metals (金属精密热加工国家级重点实验室/金属精密热加工国防科技重点实验室)",
+      "State Key Laboratory of Advanced Welding and Joining (先进焊接与连接国家重点实验室/现代焊接生产技术国家重点实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Instrument science and technology",
+      "Materials science and technology",
+      "Mathematics",
+      "Mechanical engineering",
+      "Mechanics",
+      "Optical engineering"
+    ],
+    "address": null
+  }
+}

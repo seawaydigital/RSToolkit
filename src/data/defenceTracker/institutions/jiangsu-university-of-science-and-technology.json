@@ -1,0 +1,64 @@
+{
+  "id": "jiangsu-university-of-science-and-technology",
+  "name": "Jiangsu University of Science and Technology",
+  "zh": "江苏科技大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "JUST"
+  ],
+  "domains": [
+    "just.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Zhenjiang",
+    "province": "Jiangsu",
+    "lat": 32.1972840858429,
+    "lng": 119.46563800859826
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "95a1c2a8-2029-4c3a-bbdc-ef076bbb4f47",
+    "ror": "00tyjp878",
+    "wikidata": "Q11135052"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangsu Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China Shipbuilding Industry Corporation (CSIC)",
+      "China State Shipbuilding Corporation (CSSC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Materials science and technology",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": "2 Mengxi Rd, Jingkou Qu, Zhenjiang Shi, Jiangsu Sheng, China, 212014"
+  }
+}

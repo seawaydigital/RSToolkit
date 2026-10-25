@@ -1,0 +1,69 @@
+{
+  "id": "south-china-university-of-technology",
+  "name": "South China University of Technology",
+  "zh": "华南理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Huánán Lǐgōng Dàxué"
+  ],
+  "acronyms": [
+    "SCUT"
+  ],
+  "domains": [
+    "scut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Guangzhou",
+    "province": "Guangdong",
+    "lat": 23.151326,
+    "lng": 113.34468300000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "8c73a050-fa6f-4440-bfc2-27a3eb61f43e",
+    "ror": "0530pts50",
+    "wikidata": "Q835366"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "State Oceanic Administration"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of High-efficiency Near-net-shape Forming Technology and Equipments for Metallic Materials, Ministry of Education (金属材料高效近净成形技术与装备教育部重点实验室(B类))",
+      "Not included on the university’s webpage listing Ministry of Education laboratories"
+    ],
+    "subsidiaries": [
+      "Guangzhou Huanan Naokong Zhineng Keji Gongsi (广州华南脑控智能科技公司)",
+      "SCUT Capital Management Co., Ltd. (广州华南理工大学资产经营有限公司)"
+    ],
+    "topics": [
+      "Materials science and technology"
+    ],
+    "address": "South China University of Technology, Wushan Road, Tianhe, Guangzhou, Guangdong, China"
+  }
+}

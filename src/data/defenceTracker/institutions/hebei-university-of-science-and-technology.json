@@ -1,0 +1,62 @@
+{
+  "id": "hebei-university-of-science-and-technology",
+  "name": "Hebei University of Science and Technology",
+  "zh": "河北科技大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "HEBUST"
+  ],
+  "domains": [
+    "hebust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shijiazhuang",
+    "province": "Hebei",
+    "lat": 37.97639169345314,
+    "lng": 114.52176751498462
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "3ebd8d59-7efa-47a6-9dcf-8e3bc3e70189",
+    "ror": "05h3pkk68",
+    "wikidata": "Q15938742"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Materials science and technology",
+      "Mechanics"
+    ],
+    "address": "26 Yuxiang St, Yuhua Qu, Shijiazhuang Shi, Hebei Sheng, China"
+  }
+}

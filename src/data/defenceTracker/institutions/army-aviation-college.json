@@ -1,0 +1,59 @@
+{
+  "id": "army-aviation-college",
+  "name": "Army Aviation College",
+  "zh": "中国人民解放军陆军航空兵学院",
+  "zhAliases": [
+    "陆军航空兵学院"
+  ],
+  "aliases": [
+    "Army Aviation School"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 39.8372,
+    "lng": 116.6302
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "837d8af0-86cd-4c42-966a-70ed6562f0e7",
+    "nro": "army-aviation-college"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Ground Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "北京市通州区台湖镇台湖大街9号"
+  }
+}

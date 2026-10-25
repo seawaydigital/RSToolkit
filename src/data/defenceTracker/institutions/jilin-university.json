@@ -1,0 +1,71 @@
+{
+  "id": "jilin-university",
+  "name": "Jilin University",
+  "zh": "吉林大学",
+  "zhAliases": [],
+  "aliases": [
+    "Jílín Dàxué"
+  ],
+  "acronyms": [
+    "JLU"
+  ],
+  "domains": [
+    "jlu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Changchun",
+    "province": "Jilin",
+    "lat": 43.82572,
+    "lng": 125.2850161
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9acb5e15-e4cc-463c-87e3-99e3ecb58947",
+    "ror": "00js3aw79",
+    "wikidata": "Q1432030"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of High-performance Plastics, Ministry of Education",
+      "Key Laboratory of Attack and Defense Simulation Technology for Naval Warfare, Ministry of Education (海战场攻防对抗仿真技术教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Computer science and technology",
+      "Electronics science and technology",
+      "Instrument science and technology",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Nuclear weapons"
+    ],
+    "address": "China, Jilin, Changchun, Chaoyang, Qianjin Street, 吉林大学"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "huazhong-university-of-science-and-technology",
+  "name": "Huazhong University of Science and Technology",
+  "zh": "华中科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Huázhōng Kējì Dàxué"
+  ],
+  "acronyms": [
+    "HUST"
+  ],
+  "domains": [
+    "hust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": 30.508964,
+    "lng": 114.41057699999999
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "f8c2d54e-71d5-4698-9b7e-b5a667bbb88c",
+    "ror": "00p991c53",
+    "wikidata": "Q1711196"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Health",
+      "State Oceanic Administration"
+    ],
+    "majorDefenceLaboratories": [
+      "State Key Lab of Multi-spectral Image Information Processing Technology (多谱图像信息处理技术国防科技重点实验室/多谱信息处理技术国防科技重点实验室)",
+      "Under HUST’s Institute of Pattern Recognition and Artificial Intelligence (图像识别与人工只能研究所), one of seven research centers under HUST’s National Defence Research Institute",
+      "Originally a Ministry of Education laboratory that was upgraded in 2002",
+      "China Aerospace Pattern Recognition Technology Research Institute(中国航天图像识别技术研究所)",
+      "MOE Key Laboratory of Functional Materials for Electronic Information (电子信息功能材料教育部重点实验室)",
+      "Key Laboratory of Gravity Navigation of Ministry of Education (重力导航教育部重点实验室)",
+      "Ministry of Education Key Laboratory of Warship Power Electronics and Energy Management (舰船电力电子与能量管理教育部重点实验室)",
+      "Key Laboratory of Pulsed Power Technology (脉冲功率技术教育部重点实验室)"
+    ],
+    "subsidiaries": [
+      "HGTECH Military Laser Technology Research Institute (华工科技军用激光技术研究所)",
+      "HGTECH Co., Ltd. (华工科技产业股份有限公司)"
+    ],
+    "topics": [
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Mechanical engineering",
+      "Naval architecture and ocean engineering",
+      "Optical engineering"
+    ],
+    "address": "Huazhong University of Science and Technology （South Gate 2）, Yingbin Road, Hongshan, Wuhan, Hubei, China"
+  }
+}

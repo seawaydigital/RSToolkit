@@ -1,0 +1,48 @@
+{
+  "id": "baghyatollah-medical-sciences-university",
+  "name": "Baghyatollah Medical Sciences University",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Bagiatollah Medical Sciences University",
+    "Baghiatollah Medical Sciences University",
+    "Baqyatollah Medical Sciences University",
+    "Baqiyatallah Medical Sciences University",
+    "Baqiyatallah University of Medical Sciences",
+    "Baqiatollah Medical Sciences University"
+  ],
+  "acronyms": [
+    "BMSU"
+  ],
+  "domains": [],
+  "country": "IR",
+  "type": "university",
+  "location": {
+    "city": "Tehran",
+    "province": null,
+    "lat": 35.753,
+    "lng": 51.3931
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "baghyatollah-medical-sciences-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

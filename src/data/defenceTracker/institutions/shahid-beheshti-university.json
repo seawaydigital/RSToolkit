@@ -1,0 +1,56 @@
+{
+  "id": "shahid-beheshti-university",
+  "name": "Shahid Beheshti University",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Martyr Baheshti University",
+    "University of Shahid Beheshti",
+    "Shahid Behashti University",
+    "Shaheed Beheshti University",
+    "Beheshti University",
+    "Shahid Martyr Beheshti University",
+    "National (Shahid Beheshti) University",
+    "null",
+    "National University of Iran",
+    "دانشگاه شهید بهشتی"
+  ],
+  "acronyms": [
+    "SBU"
+  ],
+  "domains": [
+    "sbu.ac.ir"
+  ],
+  "country": "IR",
+  "type": "university",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": 35.8022,
+    "lng": 51.3933
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "shahid-beheshti-university",
+    "ror": "0091vmj44",
+    "wikidata": "Q609586"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

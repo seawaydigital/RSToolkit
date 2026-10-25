@@ -1,0 +1,77 @@
+{
+  "id": "nanjing-university-of-science-and-technology",
+  "name": "Nanjing University of Science and Technology",
+  "zh": "南京理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nánjīng Lǐgōng Dàxué",
+    "Nánlǐgōng"
+  ],
+  "acronyms": [
+    "NJUST",
+    "NUST"
+  ],
+  "domains": [
+    "njust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "lat": 32.0318,
+    "lng": 118.8521
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "0d7cf3d7-ea9b-4283-bca3-927f9fe41c09",
+    "nro": "nanjing-university-of-science-and-technology",
+    "ror": "00xp9wg62",
+    "wikidata": "Q3953805"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Jiangsu Provincial Government",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Transient Physics (瞬态物理国家重点实验室)",
+      "May also known as the National Defense Key Laboratory of Science and Technology on Trajectory (弹道国防科技重点实验室)",
+      "Key Discipline Laboratory of Defense of Short-range and High-speed Target Detection Technology (近程高速目标探测技术国防重点学科实验室)",
+      "Ministerial Key Laboratory of ZNDY (智能弹药技术国防重点学科实验室)",
+      "Literally translated as the National Defence Key Discipline Laboratory of Smart Munition Technology"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Mechanics",
+      "Optical engineering"
+    ],
+    "address": "Nanjing University of Science and Technology, Xuanwu, Nanjing, Jiangsu, China"
+  }
+}

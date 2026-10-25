@@ -1,0 +1,71 @@
+{
+  "id": "beijing-university-of-chemical-technology",
+  "name": "Beijing University of Chemical Technology",
+  "zh": "北京化工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Běijīng Huàgōng Dàxué"
+  ],
+  "acronyms": [
+    "BUCT"
+  ],
+  "domains": [
+    "buct.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.97086780770906,
+    "lng": 116.42090375330349
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "daed2dde-aa32-40fe-a15b-9bff52d0e87b",
+    "ror": "00df5yc52",
+    "wikidata": "Q2496210"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "State Administration of Work Safety",
+      "Sinopec Group"
+    ],
+    "majorDefenceLaboratories": [
+      "National Defense Research Centre on New Materials (国防新材料研究中心)",
+      "Possibly the same as BUCT’s Advanced Elastic Materials Research Center (先进弹性体材料研究中心)"
+    ],
+    "subsidiaries": [
+      "Beijing Beihuada Investment Corp., Ltd."
+    ],
+    "topics": [
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Materials science and technology"
+    ],
+    "address": "Bei Jing Hua Gong Da Xue Ji Dian Gong Cheng Xue Yuan, Chaoyang Qu, Beijing Shi, China"
+  }
+}

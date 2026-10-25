@@ -1,0 +1,71 @@
+{
+  "id": "rocket-force-research-institute",
+  "name": "Rocket Force Research Institute",
+  "zh": "中国人民解放军火箭军研究院",
+  "zhAliases": [
+    "火箭军研究院",
+    "二炮兵装备研究院",
+    "火箭军装备研究院",
+    "中国人民解放军火箭军装备研究院",
+    "中国人民解放军第二炮兵装备研究院"
+  ],
+  "aliases": [
+    "Second Artillery Equipment Academy",
+    "Rocket Force Equipment Academy",
+    "PLA Rocket Force Equipment Research Institute",
+    "PLA Rocket Force Research Institute",
+    "PLA Second Artillery Equipment Research Institute",
+    "People's Liberation Army Rocket Force Academy",
+    "People's Liberation Army Rocket Force Research Institute"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.985,
+    "lng": 116.356
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "f0cdd426-c1df-4487-9440-6999837994f0",
+    "nro": "rocket-force-research-institute",
+    "ror": "03ahaae75"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Rocket Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Control science and engineering"
+    ],
+    "address": "32 Xiaoying West Road, Haidian, Beijing, China"
+  }
+}

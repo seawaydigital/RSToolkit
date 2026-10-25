@@ -1,0 +1,75 @@
+{
+  "id": "sichuan-university",
+  "name": "Sichuan University",
+  "zh": "四川大学",
+  "zhAliases": [],
+  "aliases": [
+    "Sìchuān Dàxué"
+  ],
+  "acronyms": [
+    "SCU"
+  ],
+  "domains": [
+    "scu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "lat": 30.6335,
+    "lng": 104.0816
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "3b3314c1-e6a7-4467-94f2-a91b8216010f",
+    "nro": "sichuan-university",
+    "ror": "011ashp19",
+    "wikidata": "Q2281517"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Sichuan Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Chengdu Municipal Government"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Fundamental Synthetic Vision Graphics and Image for National Defense (视觉合成图形图像技术国防重点学科实验室)",
+      "Key Laboratory of Advanced Special Materials and New Preparation and Processing Technology (Ministry of Education) (先进特种材料及制备加工新技术教育部重点实验室（B类）)",
+      "Key Laboratory of High Energy Density Physics and Technology (Ministry of Education) (高能量密度物理及技术教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Cyber",
+      "Materials science and technology",
+      "Nuclear science and technology",
+      "Nuclear weapons",
+      "Physics"
+    ],
+    "address": "Sichuan University, Shuncheng Street, Qingyang, Chengdu, Sichuan, China"
+  }
+}

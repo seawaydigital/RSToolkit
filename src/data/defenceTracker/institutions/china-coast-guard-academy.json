@@ -1,0 +1,62 @@
+{
+  "id": "china-coast-guard-academy",
+  "name": "China Coast Guard Academy",
+  "zh": "中国人民武装警察部队海警学院",
+  "zhAliases": [
+    "武警海警学院",
+    "公安海警学院"
+  ],
+  "aliases": [
+    "China Maritime Police Academy",
+    "People's Armed Police China Coast Guard Academy",
+    "PAP China Coast Guard Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Ningbo",
+    "province": null,
+    "lat": 29.9439,
+    "lng": 121.711
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "b539983f-f3e9-4542-a500-ff0dff033fa7",
+    "nro": "china-coast-guard-academy"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Information and communication engineering",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": "China, Zhejiang, Ningbo, Beilun, Zhenxing West Road, 公安海警学院"
+  }
+}

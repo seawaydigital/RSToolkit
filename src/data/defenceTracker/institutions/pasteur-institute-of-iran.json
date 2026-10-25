@@ -1,0 +1,54 @@
+{
+  "id": "pasteur-institute-of-iran",
+  "name": "Pasteur Institute of Iran",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Iranian Pasteur Institute",
+    "Pasteur Institute",
+    "Institute Pasteur of Iran",
+    "Institute Pasteur",
+    "Institute de l'Iran",
+    "null",
+    "Institut Pasteur D'Iran"
+  ],
+  "acronyms": [
+    "IPI",
+    "PII"
+  ],
+  "domains": [
+    "pasteur.ac.ir"
+  ],
+  "country": "IR",
+  "type": "research-institute",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": 35.691,
+    "lng": 51.3902
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "pasteur-institute-of-iran",
+    "ror": "00wqczk30",
+    "wikidata": "Q17013593"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

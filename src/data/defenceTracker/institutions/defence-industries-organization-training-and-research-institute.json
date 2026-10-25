@@ -1,0 +1,49 @@
+{
+  "id": "defence-industries-organization-training-and-research-institute",
+  "name": "Defence Industries Organization Training and Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Defence Industry's Training and Research Institute",
+    "Defence Industry's Training and Education Institute",
+    "Defence Industries Training and Research Institute",
+    "Defensive Research Training Institute",
+    "Defence Ministry's Institute for Defence Education and Research",
+    "Institution for Research and Training of the Defence Industries",
+    "Organization for Defence Education and Research"
+  ],
+  "acronyms": [
+    "DRTI"
+  ],
+  "domains": [],
+  "country": "IR",
+  "type": "research-institute",
+  "location": {
+    "city": "Tehran",
+    "province": null,
+    "lat": 35.759,
+    "lng": 51.478
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "defence-industries-organization-training-and-research-institute"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

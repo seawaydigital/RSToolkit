@@ -42,6 +42,11 @@ test('a name made only of generic words never confirms a match', () => {
   assert.equal(m.confidence, 'check');
 });
 
+test('Airforce and Air Force spell the same name', () => {
+  const af = buildMatchIndex([{ id: 'air-force-engineering-university', name: 'Air Force Engineering University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }]);
+  assert.deepEqual(norm(matchLine('Airforce Engineering University, Xi’an', af)), [{ id: 'air-force-engineering-university', confidence: 'confirmed' }]);
+});
+
 test('personal email domains never match', () => {
   assert.deepEqual(matchLine('wang@163.com; li@gmail.com; x@qq.com', index), []);
 });

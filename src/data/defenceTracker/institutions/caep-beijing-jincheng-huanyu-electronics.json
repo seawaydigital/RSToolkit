@@ -1,0 +1,39 @@
+{
+  "id": "caep-beijing-jincheng-huanyu-electronics",
+  "name": "Beijing Jincheng Huanyu Electronics Co. Ltd.",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "nuclear",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 39.9205,
+    "lng": 116.4398
+  },
+  "supervisors": [],
+  "parent": "chinese-academy-of-engineering-physics",
+  "ids": {
+    "nro": "caep-beijing-jincheng-huanyu-electronics"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

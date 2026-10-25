@@ -1,0 +1,91 @@
+{
+  "id": "china-aerospace-science-and-technology-corporation",
+  "name": "China Aerospace Science and Technology Corporation",
+  "zh": "中国航天科技集团",
+  "zhAliases": [
+    "中国航天"
+  ],
+  "aliases": [
+    "1st General Design Department of the China Aerospace Science and Technology Corporation’s First Academy (CALT)",
+    "Planning Department No 1 of the China Aerospace Science and Technology Corporation’s First Academy (CALT)",
+    "Beijing Institute of Astronautic Systems Engineering",
+    "Beijing Institute of Space System Engineering",
+    "13th Research Institute, 9th Academy of CASC",
+    "13th Institute, China Aerospace Science and Technology Corporation (CALT)",
+    "13th Institute China Aerospace Times Electronics Corporation (CATEC)",
+    "Beijing Aerospace Control Instruments Institute",
+    "Design and Manufacture Center of Navigation and Control Device",
+    "Beijing Aerospace Automatic Control Institute",
+    "12th Research Institute, China Aerospace Science and Technology Corporation (CALT)",
+    "Beijing Institute of Space Automatic Control",
+    "Beijing Spaceflight Autocontrol Research Institute",
+    "5th Academy of CASC",
+    "China Academy of Space Technology (CAST)"
+  ],
+  "acronyms": [
+    "CASC"
+  ],
+  "domains": [
+    "spacechina.com"
+  ],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9240356,
+    "lng": 116.30279789999997
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "793918db-723d-4e06-bcc9-0f4e62a8266e",
+    "ror": "01z8tr155",
+    "wikidata": "Q2777589"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "CASC 1st Academy, a.k.a China Academy of Launch Vehicle Technology (CALT)",
+      "CASC 4th Academy, a.k.a. Academy of Aerospace Solid Propulsion Technology",
+      "CASC 5th Academy, a.k.a. China Academy of Space Technology (CAST)",
+      "CASC 6th Academy, a.k.a. Academy of Aerospace Propulsion Technology",
+      "CASC 7th Academy, a.k.a. Sichuan Academy of Aerospace Technology",
+      "CASC 8th Academy, a.k.a. Shanghai Academy of Spaceflight Technology",
+      "CASC 9th Academy, a.k.a. China Aerospace Times Electronics Corporation",
+      "CASC 10th Academy, China Academy of Aerospace Aerodynamics"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "16 Fucheng Road, Haidian District, Beijing, China, 100048"
+  }
+}

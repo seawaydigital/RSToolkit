@@ -1,0 +1,42 @@
+{
+  "id": "hefei-national-laboratory-for-physical-sciences-at-microscale",
+  "name": "Hefei National Laboratory for Physical Sciences at Microscale",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "National Research Center for Microscale",
+    "Microscale National Research Center"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Hefei",
+    "province": null,
+    "lat": 31.8409,
+    "lng": 117.2639
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "hefei-national-laboratory-for-physical-sciences-at-microscale"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

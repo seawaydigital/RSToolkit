@@ -1,0 +1,86 @@
+{
+  "id": "aviation-industry-corporation-of-china",
+  "name": "Aviation Industry Corporation of China",
+  "zh": "中国航空工业集团有限公司",
+  "zhAliases": [
+    "航空工业"
+  ],
+  "aliases": [
+    "Beijing Aeronautical Manufacturing Technology Research Institute (a.k.a. AVIC Institute 625)"
+  ],
+  "acronyms": [
+    "AVIC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.906523,
+    "lng": 116.4640379
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9644a95a-a1f7-40b5-93ba-c34989ef0492"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "FACC AG (Austria)",
+      "AVIC International Maritime Holdings Limited (Singapore)",
+      "KHD Humboldt Wedag (Germany)",
+      "AviChina Industry & Technology Company Limited (Hong Kong)",
+      "AVIC International Holding (HK) Limited (Hong Kong)",
+      "AVIC Joy Holdings (HK) Limited (Hong Kong)",
+      "Nexteer Automotive (Hong Kong)",
+      "AVICOPTER PLC (Shanghai)",
+      "China Avionics Systems Co., Ltd. (Shanghai)",
+      "Sichuan Chengfa Aero Science &Technology Co., Ltd. (Shanghai)",
+      "Zhonghang Heibao Co., Ltd. (Shanghai)",
+      "AVIC Heavy Machinery Co., Ltd. (Shanghai)",
+      "AVIC Capital Co., Ltd. (Shanghai)",
+      "Jiangxi Hongdu Aviation Industry Co., Ltd. (Shanghai)",
+      "Baosheng Science and Technology Innovation Co., Ltd. (Shanghai)",
+      "Guizhou Guihang Automotive Components Co., Ltd. (Shanghai)",
+      "Sichuan Chengfei Integration Technology Co., Ltd. (Shenzhen)",
+      "China Aviation Optical-Electrical Technology Co., Ltd. (Shenzhen)",
+      "AVIC Sanxin Co., Ltd. (Shenzhen)",
+      "AVIC Aircraft Co., Ltd. (Shenzhen)",
+      "AVIC Electromechanical Systems Co., Ltd. (Shenzhen)",
+      "AVIC Real Estate Co., Ltd. (Shenzhen)",
+      "Rainbow Department Store Co., Ltd. (Shenzhen)",
+      "Zhonghang Electronic Measuring Instruments Co., Ltd. (Shenzhen)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology"
+    ],
+    "address": "中国北京市朝阳区建国路128号"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "officers-college-of-the-pap",
+  "name": "Officers College of the PAP",
+  "zh": "中国人民武装警察部队警官学院",
+  "zhAliases": [
+    "武警警官学院"
+  ],
+  "aliases": [
+    "PAP Officers’ College",
+    "People's Armed Police Officers’ College",
+    "PAP Officers' College",
+    "People's Armed Police Officers' College"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Chengdu",
+    "province": null,
+    "lat": 30.746,
+    "lng": 103.956
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "163ad3ea-a0c6-4fae-afca-f78626cd82d6",
+    "nro": "officers-college-of-the-pap"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Mathematics",
+      "Physics",
+      "Psychological sciences"
+    ],
+    "address": "中国四川省成都市双流区警校路一段489号"
+  }
+}

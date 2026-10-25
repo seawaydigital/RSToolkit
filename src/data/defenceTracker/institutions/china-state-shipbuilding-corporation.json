@@ -1,0 +1,58 @@
+{
+  "id": "china-state-shipbuilding-corporation",
+  "name": "China State Shipbuilding Corporation",
+  "zh": "中国船舶工业集团有限公司",
+  "zhAliases": [
+    "中船集团"
+  ],
+  "aliases": [
+    "China State Shipbuilding Corporation Limited"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.982361,
+    "lng": 116.315654
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9b207b07-7b8f-4611-aabf-1eb889f3a169"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Naval architecture and ocean engineering"
+    ],
+    "address": "中国北京市海淀区首体南路9号主语城1号楼"
+  }
+}

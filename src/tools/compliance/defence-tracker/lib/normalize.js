@@ -32,6 +32,7 @@ export const ABBREVIATIONS = {
   polytech: 'polytechnical',
   def: 'defense',
   defence: 'defense',
+  airforce: 'air force',
   centre: 'center',
   peoples: 'people',
 };
@@ -83,7 +84,7 @@ function rawTokens(segment) {
     .replace(/&/g, ' and ')
     .split(/[^\p{L}\p{N}]+/u)
     .filter(Boolean)
-    .map((t) => ABBREVIATIONS[t] ?? t);
+    .flatMap((t) => (ABBREVIATIONS[t] ?? t).split(' '));
 }
 
 // `kept` drops stopwords; `rawAfter[i]` is the raw token that follows kept

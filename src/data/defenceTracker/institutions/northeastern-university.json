@@ -1,0 +1,54 @@
+{
+  "id": "northeastern-university",
+  "name": "Northeastern University",
+  "zh": "东北大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "NEU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": null,
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "41b6e58e-f710-43b3-8b97-c88ca4e4ad66"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Liaoning Provincial Government",
+      "Shenyang Municipal Government"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Aerodynamic Equipment Vibration and Control, Ministry of Education (航空动力装备振动及控制教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Mechanics"
+    ],
+    "address": null
+  }
+}

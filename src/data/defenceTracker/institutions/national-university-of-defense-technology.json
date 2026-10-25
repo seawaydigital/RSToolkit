@@ -1,0 +1,97 @@
+{
+  "id": "national-university-of-defense-technology",
+  "name": "National University of Defense Technology",
+  "zh": "中国人民解放军国防科技大学",
+  "zhAliases": [
+    "并行与分布处理国家重点实验室",
+    "中国人民解放军国防科学技术大学"
+  ],
+  "aliases": [
+    "Changsha Institute of Technology",
+    "National Key Laboratory for Parallel and Distributed Processing",
+    "Hunan Guofang Kei University",
+    "Guófáng Kēxuéjìshù Dàxué"
+  ],
+  "acronyms": [
+    "NUDT"
+  ],
+  "domains": [
+    "nudt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Changsha",
+    "province": "Hunan",
+    "lat": 28.229,
+    "lng": 112.9949
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "77afede7-a852-4e25-882f-8caf83f066e1",
+    "nro": "national-university-of-defense-technology",
+    "ror": "05d2yfz11",
+    "wikidata": "Q831227"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "Central Military Commission (CMC)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory for Parallel and Distributed Processing (并行与分布处理国家重点实验室/并行与分布处理国防科技重点实验室)",
+      "State Key Lab of New Ceramic Fibers and Ceramic Matrix Composites (新型陶瓷纤维及其复合材料国家重点实验室/新型陶瓷纤维及其复合材料国防科技重点实验室)",
+      "State Key Laboratory of High Performance Computing (高性能计算国家重点实验室)",
+      "State Key Laboratory of Complex Electromagnetic Environment Effects on Electronics and Information System (电子信息系统复杂电磁环境效应（CEMEE）国家重点实验室)",
+      "National Laboratory of Science and Technology on ATR [Automatic Target Recognition] (ATR国家重点实验室)",
+      "State Key Laboratory of Pulsed Power Laser Technology (脉冲功率激光技术国家重点实验室)",
+      "Science and Technology on Information System Engineering Key Laboratory (信息系统工程重点实验室)",
+      "National 863 Plan Laser Gyroscope Key Laboratory (激光陀螺国家“863”高技术重点实验室)",
+      "State Key Laboratory of High Performance Computing (计算机学院拥有高性能计算国家重点实验室)",
+      "Science and Technology on Scramjet Laboratory (高超声速冲压发动机技术重点实验室)"
+    ],
+    "subsidiaries": [
+      "International Relations Institute (Nanjing, Jiangsu Province)",
+      "Information and Communications Institute (Wuhan, Hubei Province)",
+      "Electronic Countermeasures Institute (Hefei, Anhui Province)",
+      "College of Meteorology and Oceanography (Nanjing, Jiangsu Province)",
+      "National Supercomputing Center in Changsha "
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Artificial intelligence",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Nuclear weapons",
+      "Optical engineering",
+      "Quantum"
+    ],
+    "address": null
+  }
+}

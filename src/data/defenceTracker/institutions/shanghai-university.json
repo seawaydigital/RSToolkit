@@ -1,0 +1,67 @@
+{
+  "id": "shanghai-university",
+  "name": "Shanghai University",
+  "zh": "上海大学",
+  "zhAliases": [
+    "上海大學"
+  ],
+  "aliases": [
+    "Shànghǎi Dàxué"
+  ],
+  "acronyms": [
+    "SHU"
+  ],
+  "domains": [
+    "shu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": 31.3186294168732,
+    "lng": 121.39031037168888
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "bf9f2339-6153-4a4e-ac4c-e5c3eb09b9c0",
+    "ror": "006teas31",
+    "wikidata": "Q1343386"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shanghai Municipal Government",
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Electronics science and technology",
+      "Materials science and technology",
+      "Robotics"
+    ],
+    "address": "99 Shangda Rd, Baoshan Qu, Shanghai Shi, China, 200072"
+  }
+}

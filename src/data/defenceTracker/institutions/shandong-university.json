@@ -1,0 +1,78 @@
+{
+  "id": "shandong-university",
+  "name": "Shandong University",
+  "zh": "山东大学",
+  "zhAliases": [],
+  "aliases": [
+    "Shāndōng Dàxué,"
+  ],
+  "acronyms": [
+    "SDU"
+  ],
+  "domains": [
+    "sdu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Jinan",
+    "province": "Shandong",
+    "lat": 36.66833,
+    "lng": 116.99722
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "67466849-332c-4d33-99dc-490ec5162cb2",
+    "ror": "0207yh398",
+    "wikidata": "Q604470"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Functional Crystal Materials and Device (Shandong University), Ministry of Education (功能晶体材料及器件教育部重点实验室（B类）)",
+      "MOE Key Laboratory of Special Aggregated Materials (特种功能聚集体材料教育部重点实验室（B类）)",
+      "Key Laboratory of Laser and Infrared System Integration Technology of the Ministry of Education (激光与红外系统集成技术教育部重点实验室(B类))",
+      "KDP Crystal Technology Ministry of Education Technology Research Centre (KDP晶体教育部技术研究中心)",
+      "Linked to China’s nuclear warheads development facility, the Chinese Academy of Engineering Physics",
+      "Resin-based Composite Materials and Structures Manufacturing Technology Research Centre (树脂基复合材料结构制造技术研究中心)",
+      "A defence science and technology research centre established by COSTIND, the predecessor to SASTIND"
+    ],
+    "subsidiaries": [
+      "Shandong Hoteam Technologies Co., Ltd. (山东山大华天科技集团股份有限公司)",
+      "Shandong University, Weihai (山东大学（威海）)"
+    ],
+    "topics": [
+      "Control science and engineering",
+      "Cryptography",
+      "Cyber",
+      "Materials science and technology",
+      "Optical engineering",
+      "Power engineering and engineering thermophysics"
+    ],
+    "address": null
+  }
+}

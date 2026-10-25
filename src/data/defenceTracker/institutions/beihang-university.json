@@ -1,0 +1,86 @@
+{
+  "id": "beihang-university",
+  "name": "Beihang University",
+  "zh": "北京航空航天大学",
+  "zhAliases": [],
+  "aliases": [
+    "Beijing University of Aeronautics and Astronautics"
+  ],
+  "acronyms": [
+    "BUAA"
+  ],
+  "domains": [
+    "buaa.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.982,
+    "lng": 116.3495
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ab28c949-60e9-497c-85d6-f90e87d498d6",
+    "nro": "beihang-university",
+    "ror": "00wk2mp56",
+    "wikidata": "Q2299797"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "State KeyLaboratoryofSoftware Development Environment (软件开发环境国家重点实验室)",
+      "National Key Laboratory of Aero-thermodynamics of Aero-engines (航空发动机气动热力国防重点实验室/航空发动机气动热力国家重点实验室)",
+      "National Key Laboratory of Science and Technology on Aircraft Control (飞行器控制一体化技术国家级科技重点实验室/飞行器控制一体化技术国防科技重点实验室)",
+      "National Key Laboratory of Reliability and Environmental Engineering Technology (可靠性与环境工程技术国防科技重点实验室)",
+      "National Laboratory for Computational Fluid Dynamics (国家计算流体力学实验室/计算流体力学国防科技重点实验室)",
+      "Jointly established with the 29",
+      "Inertial Technology Key Laboratory of National Defense Science and Technology (惯性技术国防科技重点实验室)",
+      "Jointly established with China Aerospace Science and Industry Corporation’s 3",
+      "Key Laboratory of Fundamental Science for National Defense-Novel Inertial Instrument & Navigation System Technology (新型惯性仪表与导航系统技术国防重点学科实验室)",
+      "National Defence Key Discipline Laboratory of Ergonomics and Environmental Control (人机工效与环境控制国防重点学科实验室)",
+      "National Defence Key Discipline Laboratory of Trusted Network Computing Technology or Key Laboratory of National Defense Science and Technology for Trusted Network Computing Technology (可信网络计算技术国防重点学科实验室)"
+    ],
+    "subsidiaries": [
+      "Beijing Beihang Tianhua (北京北航天华科技有限责任公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Biomedical engineering",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Instrument science and technology",
+      "Mathematics",
+      "Mechanics",
+      "Nuclear science and technology",
+      "Physics",
+      "Stealth technology",
+      "Surveying and mapping"
+    ],
+    "address": "Beihang University, Wudaokou, Haidian, Beijing, China"
+  }
+}

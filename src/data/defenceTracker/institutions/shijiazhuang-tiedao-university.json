@@ -1,0 +1,66 @@
+{
+  "id": "shijiazhuang-tiedao-university",
+  "name": "Shijiazhuang Tiedao University",
+  "zh": "石家庄铁道大学",
+  "zhAliases": [],
+  "aliases": [
+    "Railway Engineering Institute of the People's Liberation Army",
+    "Shijiazhuang Railway Institute"
+  ],
+  "acronyms": [
+    "STDU"
+  ],
+  "domains": [
+    "stdu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shijiazhuang",
+    "province": "Hebei",
+    "lat": 38.08211099999999,
+    "lng": 114.51020900000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9c7f31dc-703e-4fbe-8003-59eddd44c3aa",
+    "ror": "022e9e065",
+    "wikidata": "Q7496504"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Education (MOE)",
+      "National Railway Administration"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Traffic and transportation engineering"
+    ],
+    "address": "17 North 2nd Ring Road East, Chang'an, Shijiazhuang, Hebei, China"
+  }
+}

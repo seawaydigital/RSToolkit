@@ -1,0 +1,61 @@
+{
+  "id": "airforce-flight-academy-shijiazhuang",
+  "name": "Air Force Flight Academy Shijiazhuang",
+  "zh": "空军石家庄飞行学院",
+  "zhAliases": [],
+  "aliases": [
+    "PLA Air Force Shijiazhuang Flight Academy",
+    "Shijiazhuang Flight Academy",
+    "Shijiazhuang Flying College of the PLA Air Force",
+    "Shijiazhuang Flight College of Air Force",
+    "Airforce Flight Academy Shijiazhuang",
+    "Shijiazhuang Flying College of the PLA Airforce"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Shijiazhuang",
+    "province": null,
+    "lat": 38.0824,
+    "lng": 114.4179
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d49954d2-002c-4008-a057-d202b9977013",
+    "nro": "airforce-flight-academy-shijiazhuang"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology"
+    ],
+    "address": "空军石家庄飞行学院"
+  }
+}

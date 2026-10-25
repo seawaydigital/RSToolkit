@@ -1,0 +1,58 @@
+{
+  "id": "chongqing-university-of-posts-and-telecommunications",
+  "name": "Chongqing University of Posts and Telecommunications",
+  "zh": "重庆邮电大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "CQUPT"
+  ],
+  "domains": [
+    "cqupt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Chongqing",
+    "province": "Chongqing",
+    "lat": 29.530441,
+    "lng": 106.60782589999997
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ac5e36f4-6859-4bc0-bea3-256f8deee408",
+    "ror": "03dgaqz26",
+    "wikidata": "Q5104676"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Chongqing Municipal Government",
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "2 Chongwen Rd, Huangjueya, Nan'an, Chongqing, China"
+  }
+}

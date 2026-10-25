@@ -1,13 +1,16 @@
 {
   "id": "peac-institute-of-multiscale-science",
   "name": "Peac Institute of Multiscale Science",
-  "zh": null,
+  "zh": "顶峰多尺度科学研究所",
   "zhAliases": [],
   "aliases": [
     "Peak Multiscale Science Institute",
-    "Peak Multi-Scale Scientific Research Institute"
+    "Peak Multi-Scale Scientific Research Institute",
+    "Peac Institute of Multiscale Sciences"
   ],
-  "acronyms": [],
+  "acronyms": [
+    "PIMS"
+  ],
   "domains": [],
   "country": "CN",
   "type": "research-institute",
@@ -23,7 +26,9 @@
     "nro": "peac-institute-of-multiscale-science",
     "nroAlso": [
       "caep-peac-institute-of-multiscale-science"
-    ]
+    ],
+    "ror": "02zy6fj64",
+    "wikidata": "Q30266665"
   },
   "evidence": [],
   "topics": [],
