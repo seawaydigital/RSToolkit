@@ -1,0 +1,45 @@
+{
+  "id": "peac-institute-of-multiscale-science",
+  "name": "Peac Institute of Multiscale Science",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Peak Multiscale Science Institute",
+    "Peak Multi-Scale Scientific Research Institute"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Mianyang",
+    "province": "Sichuan",
+    "lat": 31.528,
+    "lng": 104.754
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "peac-institute-of-multiscale-science",
+    "nroAlso": [
+      "caep-peac-institute-of-multiscale-science"
+    ]
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-24",
+      "change": "Record created to cover both NRO entries for this institute: its own entry and the CAEP alias that the NRO data splits out."
+    }
+  ],
+  "seedNotes": null
+}

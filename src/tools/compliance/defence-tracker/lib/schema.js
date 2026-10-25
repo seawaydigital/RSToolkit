@@ -66,6 +66,9 @@ export function validateRecord(record) {
     else if (PUBLIC_SUFFIXES.has(d)) err(`domain "${d}" is a public suffix, not an institution`);
   }
   if (record.ids?.ror != null && !ROR.test(record.ids.ror)) err(`ids.ror "${record.ids.ror}" is not a ROR id`);
+  if (record.ids?.nroAlso != null && !(Array.isArray(record.ids.nroAlso) && record.ids.nroAlso.every((id) => SLUG.test(id)))) {
+    err('ids.nroAlso must be a list of NRO ids');
+  }
 
   const override = record.rating?.override ?? null;
   if (override !== null && !RATING_ORDER.includes(override)) err(`rating.override must be one of ${RATING_ORDER.join(', ')}`);

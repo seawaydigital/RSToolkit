@@ -4,7 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateRecord } from '../src/tools/compliance/defence-tracker/lib/schema.js';
-import { HIT, makeDataset } from './fixtures/trackerDataset.mjs';
+import { HIT, NRO_DATA, makeDataset } from './fixtures/trackerDataset.mjs';
 
 const ds = makeDataset();
 
@@ -51,6 +51,31 @@ test('the lists summary reports coverage and check dates', () => {
   assert.equal(l['us-1286'].coverage, 'pending');
   assert.equal(l['ca-nro'].checkedOn, '2026-09-24');
   assert.equal(l['us-entity-list'].checkedOn, '2026-10-24');
+});
+
+test('one record can stand for two NRO entries that name the same institution', () => {
+  const peacTop = { id: 'peac-institute-of-multiscale-science', name: 'Peac Institute of Multiscale Science', aliases: ['Peak Multiscale Science Institute'], country: 'China', city: 'Mianyang', lat: 31.5, lng: 104.7, parentOrg: null, notes: null };
+  const peacCaep = { ...peacTop, id: 'caep-peac-institute-of-multiscale-science', name: 'Peac Institute of Multiscale Science (CAEP)', lat: 30.7, lng: 103.9 };
+  const peacFile = {
+    ...HIT,
+    id: 'peac-institute-of-multiscale-science',
+    name: 'Peac Institute of Multiscale Science',
+    zh: null,
+    acronyms: [],
+    domains: [],
+    aliases: ['Peak Multiscale Science Institute'],
+    ids: { nro: 'peac-institute-of-multiscale-science', nroAlso: ['caep-peac-institute-of-multiscale-science'] },
+    evidence: [],
+    sources: [],
+    status: 'listing-only',
+    verifiedOn: null,
+    history: [],
+  };
+  const dup = makeDataset({ institutions: [HIT, peacFile], nroData: { ...NRO_DATA, organizations: [...NRO_DATA.organizations, peacTop, peacCaep] } });
+  assert.deepEqual(validateRecord(peacFile), []);
+  assert.equal(dup.byId.get('caep-peac-institute-of-multiscale-science').id, 'peac-institute-of-multiscale-science');
+  assert.equal(dup.records.filter((r) => r.id.includes('peac')).length, 1);
+  assert.equal(dup.byId.get('peac-institute-of-multiscale-science').listings.find((l) => l.listId === 'ca-nro').status, 'listed');
 });
 
 test('validateRecord catches schema breaks', () => {

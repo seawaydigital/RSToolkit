@@ -70,8 +70,12 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
     }
   }
 
+  // The NRO data can name one institution twice (a top-level entry plus a
+  // CAEP alias split out for its own map pin). A record lists the extra NRO
+  // ids in ids.nroAlso, and those ids resolve to it.
+  const nroIdsOf = (r) => [r.ids?.nro, ...(r.ids?.nroAlso ?? [])].filter(Boolean);
   const nroById = new Map(nroData.organizations.map((o) => [o.id, o]));
-  const coveredNro = new Set([...byId.values()].map((r) => r.ids?.nro).filter(Boolean));
+  const coveredNro = new Set([...byId.values()].flatMap(nroIdsOf));
   for (const org of nroData.organizations) {
     if (coveredNro.has(org.id)) continue;
     const existing = byId.get(org.id);
@@ -84,15 +88,20 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
     byId.set(record.id, record);
   }
 
+  const records = [...byId.values()];
+  for (const record of records) {
+    for (const alias of record.ids?.nroAlso ?? []) if (!byId.has(alias)) byId.set(alias, record);
+  }
+
   const coverage = (snapshotName) => snapshots[snapshotName]?.coverage ?? 'pending';
-  for (const record of byId.values()) {
+  for (const record of records) {
     record.listings = LISTS.map((list) => {
       let status;
       let entries;
       if (list.snapshot === 'nro') {
-        const org = nroById.get(record.ids?.nro);
-        entries = org ? [{ name: org.name, date: null, citation: 'Named Research Organizations list', url: nroData.sourceUrl ?? list.sourceUrl }] : [];
-        status = org ? 'listed' : 'not-listed';
+        const orgs = nroIdsOf(record).map((id) => nroById.get(id)).filter(Boolean);
+        entries = orgs.map((org) => ({ name: org.name, date: null, citation: 'Named Research Organizations list', url: nroData.sourceUrl ?? list.sourceUrl }));
+        status = orgs.length ? 'listed' : 'not-listed';
       } else if (coverage(list.snapshot) !== 'complete') {
         entries = [];
         status = 'not-checked';
@@ -114,5 +123,5 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
     return { ...base, coverage: coverage(list.snapshot), checkedOn: snap?.checkedOn ?? null, listDate: snap?.published ?? null, sourceUrl: snap?.sourceUrl ?? list.sourceUrl };
   });
 
-  return { meta, records: [...byId.values()], byId, lists };
+  return { meta, records, byId, lists };
 }

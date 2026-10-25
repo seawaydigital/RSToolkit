@@ -39,10 +39,10 @@ export default defineConfig([
     },
   },
   {
-    // node:test files run in Node, not the browser, and use the .mjs extension,
-    // so they fall outside the **/*.{js,jsx} block above and would otherwise get
-    // zero lint coverage.
-    files: ['tests/**/*.mjs'],
+    // node:test files and the tracker maintenance scripts run in Node, not the
+    // browser, and use the .mjs extension, so they fall outside the
+    // **/*.{js,jsx} block above and would otherwise get zero lint coverage.
+    files: ['tests/**/*.mjs', 'scripts/**/*.mjs'],
     extends: [js.configs.recommended],
     languageOptions: {
       globals: globals.node,
