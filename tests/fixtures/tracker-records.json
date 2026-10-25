@@ -1,0 +1,16 @@
+[
+  { "id": "harbin-institute-of-technology", "name": "Harbin Institute of Technology", "aliases": [], "zh": "哈尔滨工业大学", "zhAliases": [], "acronyms": ["HIT"], "domains": ["hit.edu.cn"] },
+  { "id": "harbin-engineering-university", "name": "Harbin Engineering University", "aliases": [], "zh": "哈尔滨工程大学", "zhAliases": [], "acronyms": ["HEU"], "domains": ["hrbeu.edu.cn"] },
+  { "id": "northwestern-polytechnical-university", "name": "Northwestern Polytechnical University", "aliases": [], "zh": "西北工业大学", "zhAliases": [], "acronyms": ["NWPU"], "domains": ["nwpu.edu.cn"] },
+  { "id": "beijing-institute-of-technology", "name": "Beijing Institute of Technology", "aliases": [], "zh": "北京理工大学", "zhAliases": [], "acronyms": ["BIT"], "domains": ["bit.edu.cn"] },
+  { "id": "nanjing-university", "name": "Nanjing University", "aliases": [], "zh": "南京大学", "zhAliases": [], "acronyms": ["NJU"], "domains": ["nju.edu.cn"] },
+  { "id": "nanjing-university-of-science-and-technology", "name": "Nanjing University of Science and Technology", "aliases": [], "zh": "南京理工大学", "zhAliases": [], "acronyms": ["NJUST"], "domains": ["njust.edu.cn"] },
+  { "id": "nanjing-university-of-aeronautics-and-astronautics", "name": "Nanjing University of Aeronautics and Astronautics", "aliases": [], "zh": "南京航空航天大学", "zhAliases": [], "acronyms": ["NUAA"], "domains": ["nuaa.edu.cn"] },
+  { "id": "university-of-science-and-technology-of-china", "name": "University of Science and Technology of China", "aliases": [], "zh": "中国科学技术大学", "zhAliases": [], "acronyms": ["USTC"], "domains": ["ustc.edu.cn"] },
+  { "id": "university-of-electronic-science-and-technology-of-china", "name": "University of Electronic Science and Technology of China", "aliases": [], "zh": "电子科技大学", "zhAliases": [], "acronyms": ["UESTC"], "domains": ["uestc.edu.cn"] },
+  { "id": "zhejiang-university", "name": "Zhejiang University", "aliases": [], "zh": "浙江大学", "zhAliases": [], "acronyms": ["ZJU"], "domains": ["zju.edu.cn"] },
+  { "id": "national-university-of-defense-technology", "name": "National University of Defense Technology", "aliases": [], "zh": "国防科技大学", "zhAliases": [], "acronyms": ["NUDT"], "domains": ["nudt.edu.cn"] },
+  { "id": "beihang-university", "name": "Beihang University", "aliases": ["Beijing University of Aeronautics and Astronautics"], "zh": "北京航空航天大学", "zhAliases": [], "acronyms": ["BUAA"], "domains": ["buaa.edu.cn"] },
+  { "id": "chinese-academy-of-sciences", "name": "Chinese Academy of Sciences", "aliases": [], "zh": "中国科学院", "zhAliases": [], "acronyms": ["CAS"], "domains": ["cas.cn"] },
+  { "id": "university-of-chinese-academy-of-sciences", "name": "University of Chinese Academy of Sciences", "aliases": [], "zh": "中国科学院大学", "zhAliases": [], "acronyms": ["UCAS"], "domains": ["ucas.ac.cn"] }
+]
