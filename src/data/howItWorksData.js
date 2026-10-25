@@ -74,7 +74,7 @@ export const howItWorksData = {
         learn: 'That your IP address opened the site. Not which tool you used or what you typed — the URL after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
       },
       {
-        when: 'Only on the NRO map',
+        when: TRACKER_ENABLED ? 'Only on the NRO map and the Defence Institution Tracker’s map view' : 'Only on the NRO map',
         what: 'Requests for map image tiles',
         to: 'The basemap provider (Esri by default)',
         learn: 'Which areas of the world map you looked at and how far you zoomed in. Not your search text, and not which pins you clicked.',
@@ -187,7 +187,7 @@ export const howItWorksData = {
     items: [
       {
         title: 'Watch the network',
-        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
+        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${TRACKER_ENABLED ? ' or the tracker’s map view' : ''}${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
       },
       {
         title: 'Read the policy',

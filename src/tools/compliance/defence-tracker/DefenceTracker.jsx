@@ -8,7 +8,7 @@ import BatchCheck from './BatchCheck';
 import TrackerMethodology from './TrackerMethodology';
 
 const VIEW_TITLES = { batch: 'Batch check', methodology: 'Methodology', 'not-found': 'Not found' };
-const INITIAL_SEARCH_STATE = { query: '', rating: 'all', type: 'all', list: 'all', country: 'all', shown: SEARCH_PAGE_SIZE };
+const INITIAL_SEARCH_STATE = { query: '', rating: 'all', type: 'all', list: 'all', country: 'all', shown: SEARCH_PAGE_SIZE, view: 'list' };
 
 // Keeps one broken record from taking down the whole tracker; reset when the
 // sub-route changes.

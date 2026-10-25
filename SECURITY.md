@@ -42,7 +42,7 @@ The audit found **no vulnerabilities in the application code**. It made seven ha
 
 | Control | Evidence |
 |---|---|
-| No raw-HTML rendering of untrusted data | No `dangerouslySetInnerHTML`, `innerHTML`, `eval`, `new Function`, `document.write` or workers anywhere in `src/`. The only string-to-HTML sink is Leaflet's `bindPopup`, and every value going into it is escaped by `escapeHtml()` (`src/tools/compliance/NroLookup.jsx`). |
+| No raw-HTML rendering of untrusted data | No `dangerouslySetInnerHTML`, `innerHTML`, `eval`, `new Function`, `document.write` or workers anywhere in `src/`. The only string-to-HTML sink is Leaflet's `bindPopup`, and every value going into it is escaped by `escapeHtml()` (`src/components/ui/map/escapeHtml.js`, used by NRO Lookup and the Defence Institution Tracker's map view). |
 | Hash router can't be abused | User-controlled `#route` values are looked up with `Object.hasOwn`, so `#__proto__` / `#constructor` cannot resolve to a prototype member (`src/App.jsx`). |
 | Strict CSP | `default-src 'self'`, `script-src 'self'` (no `'unsafe-inline'`, no `'unsafe-eval'`), `connect-src` limited to the two geocoders, `object-src 'none'`, `base-uri 'self'`, `form-action 'none'`, `font-src 'self'`. Every allowance is in use and none is spare (checked against the built bundle). |
 | No inline scripts in the build | `dist/index.html` has one external module script and no inline handlers. The build emits no source maps. |

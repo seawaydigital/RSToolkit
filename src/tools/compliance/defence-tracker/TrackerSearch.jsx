@@ -1,7 +1,25 @@
-import { useMemo } from 'react';
+import { Component, Suspense, lazy, useMemo } from 'react';
 import { searchRecords } from './lib/matcher';
 import { COUNTRY_LABELS, INSTITUTION_TYPES, LISTS, LIST_SHORT_LABELS, RATING_LABELS, RATING_ORDER, SEARCH_PAGE_SIZE as PAGE_SIZE } from './lib/constants';
 import RatingBadge from './RatingBadge';
+
+// Leaflet loads only when someone opens the map.
+const TrackerMap = lazy(() => import('./TrackerMap'));
+
+// A map that fails to load (offline, say) leaves the list usable.
+class MapBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { failed: false };
+  }
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return <p className="dit-map-note">The map couldn&apos;t be loaded. The list view shows the same institutions.</p>;
+  }
+}
 
 const RANK = Object.fromEntries(RATING_ORDER.map((r, i) => [r, i + 1]));
 
@@ -16,8 +34,9 @@ function defaultOrder(a, b) {
 }
 
 export default function TrackerSearch({ dataset, index, state, setState }) {
-  const { query, rating, type, list, country, shown } = state;
+  const { query, rating, type, list, country, shown, view } = state;
   const update = (patch) => setState((s) => ({ ...s, shown: PAGE_SIZE, ...patch }));
+  const setView = (next) => setState((s) => ({ ...s, view: next }));
 
   const results = useMemo(() => {
     const base = query.trim()
@@ -107,12 +126,47 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
         </label>
       </div>
 
-      <p className="dit-count" aria-live="polite">
-        {results.length === 0
-          ? 'No institutions match. Not being in the tracker doesn’t mean low risk.'
-          : `${results.length.toLocaleString()} ${results.length === 1 ? 'institution' : 'institutions'}`}
-      </p>
+      <div className="dit-results-bar">
+        <p className="dit-count" aria-live="polite">
+          {results.length === 0
+            ? 'No institutions match. Not being in the tracker doesn’t mean low risk.'
+            : `${results.length.toLocaleString()} ${results.length === 1 ? 'institution' : 'institutions'}`}
+        </p>
+        <div className="dit-view-switch dit-no-print" role="group" aria-label="Show results as">
+          {[['list', 'List'], ['map', 'Map']].map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              className={`dit-view-option${view === value ? ' dit-view-option--active' : ''}`}
+              aria-pressed={view === value}
+              onClick={() => setView(value)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </div>
 
+      {view === 'map' ? (
+        results.length > 0 && (
+          <MapBoundary>
+            <Suspense fallback={<p className="dit-map-note">Loading the map…</p>}>
+              <TrackerMap records={results} />
+            </Suspense>
+          </MapBoundary>
+        )
+      ) : (
+        <ListView results={results} shown={shown} onMore={() => setState((s) => ({ ...s, shown: s.shown + PAGE_SIZE }))} />
+      )}
+
+      <p className="dit-footnote">Ratings follow the published checklist. Not being listed here doesn&apos;t mean low risk.</p>
+    </div>
+  );
+}
+
+function ListView({ results, shown, onMore }) {
+  return (
+    <>
       <ul className="dit-results">
         {results.slice(0, shown).map((r) => {
           const lists = listedOn(r);
@@ -133,12 +187,10 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
         })}
       </ul>
       {results.length > shown && (
-        <button type="button" className="dit-button dit-more" onClick={() => setState((s) => ({ ...s, shown: s.shown + PAGE_SIZE }))}>
+        <button type="button" className="dit-button dit-more" onClick={onMore}>
           Show {Math.min(PAGE_SIZE, results.length - shown)} more
         </button>
       )}
-
-      <p className="dit-footnote">Ratings follow the published checklist. Not being listed here doesn&apos;t mean low risk.</p>
-    </div>
+    </>
   );
 }
