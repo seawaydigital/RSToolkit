@@ -71,7 +71,7 @@ export const howItWorksData = {
         when: 'Every page load',
         what: 'A request for the site files',
         to: `The web host (${WEB_HOST})`,
-        learn: 'That your IP address opened the site. Not which tool you used or what you typed — the URL after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
+        learn: 'That your IP address opened the site, and which tools you opened: each tool’s code is a separate file your browser downloads the first time you open that tool. Not what you typed or chose — the part of the address after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
       },
       {
         when: TRACKER_ENABLED ? 'Only on the NRO map and the Defence Institution Tracker’s map view' : 'Only on the NRO map',
