@@ -47,6 +47,18 @@ test('Airforce and Air Force spell the same name', () => {
   assert.deepEqual(norm(matchLine('Airforce Engineering University, Xi’an', af)), [{ id: 'air-force-engineering-university', confidence: 'confirmed' }]);
 });
 
+test("a listed unit's parent name never matches the unit", () => {
+  const unit = (id, name) => ({ id, name, aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] });
+  // The parent comes first in one listed name and last in the other.
+  const idx = buildMatchIndex([
+    unit('cas-ntsc', 'Chinese Academy of Sciences, National Time Service Center'),
+    unit('cas-air', 'Aerospace Information Research Institute, Chinese Academy of Sciences'),
+  ]);
+  assert.deepEqual(matchLine('Institute of Automation, Chinese Academy of Sciences', idx), []);
+  assert.deepEqual(norm(matchLine('National Time Service Center, Chinese Academy of Sciences, Xi’an', idx)), [{ id: 'cas-ntsc', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Aerospace Information Research Institute, CAS, Beijing', idx)), [{ id: 'cas-air', confidence: 'check' }]);
+});
+
 test('a different compass direction is never a spelling slip', () => {
   const ne = buildMatchIndex([{ id: 'northeastern-university', name: 'Northeastern University', aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [] }]);
   assert.deepEqual(matchLine('Northwestern University, Evanston, IL', ne), []);

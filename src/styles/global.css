@@ -5560,6 +5560,58 @@ a:hover {
   }
 }
 
+/* Batch check */
+.dit-batch-input {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.dit-batch-input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.dit-batch-table td a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dit-row--check td {
+  background: rgba(240, 168, 54, 0.06);
+}
+
+.dit-check-label {
+  color: var(--amber);
+  font-weight: 500;
+}
+
+.dit-row--none td {
+  color: var(--text-muted);
+}
+
+.dit-logline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 14px 0 10px;
+}
+
 @media print {
   .dit-no-print { display: none !important; }
   .dit-section-body[hidden] { display: block !important; }

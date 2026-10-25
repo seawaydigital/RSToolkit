@@ -31,6 +31,7 @@ function addTo(map, key, id) {
 
 export function buildMatchIndex(records) {
   const phrases = new Map();
+  const unitPhrases = new Map();
   const genericPhrases = new Set();
   const cjk = [];
   const acronyms = new Map();
@@ -40,20 +41,28 @@ export function buildMatchIndex(records) {
 
   for (const r of records) {
     for (const name of latinNames(r)) {
-      // A listed name like "Harbin Institute of Technology, Chongqing Research
-      // Institute" is indexed whole and by its first part.
+      // A listed name like "Chinese Academy of Sciences, National Time Service
+      // Center" is indexed whole. Each part can also suggest a match
+      // ("check"), except parts that name a parent: see below.
       const parts = splitSegments(name);
-      for (const variant of new Set([parts.join(' '), parts[0]])) {
-        const phrase = normalizePhrase(variant ?? '');
-        const len = phrase ? phrase.split(' ').length : 0;
-        if (len < 2) continue;
-        addTo(phrases, phrase, r.id);
-        if (isGenericPhrase(phrase)) genericPhrases.add(phrase);
+      const whole = normalizePhrase(parts.join(' '));
+      const len = whole ? whole.split(' ').length : 0;
+      if (len >= 2) {
+        addTo(phrases, whole, r.id);
+        if (isGenericPhrase(whole)) genericPhrases.add(whole);
         maxPhraseLen = Math.max(maxPhraseLen, len);
-        const tokens = phrase.split(' ');
+        const tokens = whole.split(' ');
         const bucket = tokens[0][0];
         if (!fuzzy.has(bucket)) fuzzy.set(bucket, []);
-        fuzzy.get(bucket).push({ id: r.id, tokens, generic: isGenericPhrase(phrase) });
+        fuzzy.get(bucket).push({ id: r.id, tokens, generic: isGenericPhrase(whole) });
+      }
+      if (parts.length < 2) continue;
+      for (const part of parts) {
+        const phrase = normalizePhrase(part);
+        const partLen = phrase ? phrase.split(' ').length : 0;
+        if (partLen < 2) continue;
+        addTo(unitPhrases, phrase, r.id);
+        maxPhraseLen = Math.max(maxPhraseLen, partLen);
       }
     }
     for (const name of cjkNames(r)) {
@@ -64,6 +73,9 @@ export function buildMatchIndex(records) {
     for (const d of r.domains ?? []) domains.push({ domain: d.toLowerCase(), id: r.id });
   }
   cjk.sort((a, b) => b.text.length - a.text.length);
+  // A part shared by several listed names ("Chinese Academy of Sciences"), or
+  // one that is a record's own name, names a parent, not the unit.
+  for (const [phrase, ids] of unitPhrases) if (ids.size > 1 || phrases.has(phrase)) unitPhrases.delete(phrase);
 
   const fuse = new Fuse(
     records.map((r) => ({
@@ -82,7 +94,7 @@ export function buildMatchIndex(records) {
     },
   );
 
-  return { phrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse };
+  return { phrases, unitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse };
 }
 
 // Keeps the longest of any overlapping spans, so "Nanjing University" inside
@@ -137,14 +149,15 @@ function nameMatches(line, index) {
     for (let i = 0; i < kept.length; i++) {
       for (let len = 2; len <= Math.min(index.maxPhraseLen, kept.length - i); len++) {
         const phrase = kept.slice(i, i + len).join(' ');
-        const ids = index.phrases.get(phrase);
-        if (!ids || CONTINUATIONS.has(rawAfter[i + len - 1])) continue;
-        for (const id of ids) hits.push({ id, start: i, end: i + len, text: phrase });
+        if (CONTINUATIONS.has(rawAfter[i + len - 1])) continue;
+        for (const id of index.phrases.get(phrase) ?? []) {
+          hits.push({ id, start: i, end: i + len, text: phrase, confirmed: !index.genericPhrases.has(phrase) });
+        }
+        for (const id of index.unitPhrases.get(phrase) ?? []) hits.push({ id, start: i, end: i + len, text: phrase, confirmed: false });
       }
     }
-    for (const { id, text } of longestFirst(hits)) {
-      const generic = index.genericPhrases.has(text);
-      out.push({ id, matchedBy: 'name', confidence: generic ? 'check' : 'confirmed', text });
+    for (const { id, text, confirmed } of longestFirst(hits)) {
+      out.push({ id, matchedBy: 'name', confidence: confirmed ? 'confirmed' : 'check', text });
     }
   }
   return out;
