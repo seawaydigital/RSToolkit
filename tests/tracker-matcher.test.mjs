@@ -69,6 +69,16 @@ test('personal email domains never match', () => {
   assert.deepEqual(matchLine('wang@163.com; li@gmail.com; x@qq.com', index), []);
 });
 
+test('searchRecords keeps fuzzy guesses out when the query is found directly', () => {
+  assert.deepEqual(searchRecords('HIT', index), ['harbin-institute-of-technology']);
+  assert.deepEqual(searchRecords('nwpu.edu.cn', index), ['northwestern-polytechnical-university']);
+  assert.deepEqual(new Set(searchRecords('harbin', index)), new Set(['harbin-institute-of-technology', 'harbin-engineering-university']));
+});
+
+test('searchRecords falls back to fuzzy matching for typos', () => {
+  assert.ok(searchRecords('Harbin Instute of Technolgy', index).includes('harbin-institute-of-technology'));
+});
+
 test('searchRecords ranks exact identifiers first', () => {
   assert.equal(searchRecords('nwpu.edu.cn', index)[0], 'northwestern-polytechnical-university');
   assert.equal(searchRecords('哈尔滨工业大学', index)[0], 'harbin-institute-of-technology');

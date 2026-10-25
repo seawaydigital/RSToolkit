@@ -93,8 +93,14 @@ export function buildMatchIndex(records) {
       ignoreLocation: true,
     },
   );
+  const searchable = records.map((r) => ({
+    id: r.id,
+    texts: [r.name, ...(r.aliases ?? []), r.zh, ...(r.zhAliases ?? []), ...(r.acronyms ?? []), ...(r.domains ?? [])]
+      .filter(Boolean)
+      .map((t) => nfkc(t).toLowerCase()),
+  }));
 
-  return { phrases, unitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse };
+  return { phrases, unitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse, searchable };
 }
 
 // Keeps the longest of any overlapping spans, so "Nanjing University" inside
@@ -228,6 +234,11 @@ export function matchLines(text, index) {
   };
 }
 
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// Search box: exact identifiers first, then names that contain the query at
+// the start of a word (so "HIT" never finds "architecture"), and fuzzy
+// guesses only when nothing matched directly.
 export function searchRecords(query, index, { limit = 50 } = {}) {
   const q = String(query ?? '').trim();
   if (!q) return [];
@@ -236,6 +247,17 @@ export function searchRecords(query, index, { limit = 50 } = {}) {
     ...exact.filter((m) => m.confidence === 'confirmed'),
     ...exact.filter((m) => m.confidence !== 'confirmed'),
   ].map((m) => m.id);
-  for (const r of index.fuse.search(q, { limit: limit * 2 })) ids.push(r.item.id);
+
+  const needle = nfkc(q).toLowerCase();
+  const wordStart = hasCjk(needle) ? null : new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(needle)}`, 'u');
+  const leading = [];
+  const inside = [];
+  for (const { id, texts } of index.searchable) {
+    if (texts[0].startsWith(needle)) leading.push(id);
+    else if (texts.some((t) => (wordStart ? wordStart.test(t) : t.includes(needle)))) inside.push(id);
+  }
+  ids.push(...leading, ...inside);
+
+  if (!ids.length) for (const r of index.fuse.search(q, { limit })) ids.push(r.item.id);
   return [...new Set(ids)].slice(0, limit);
 }
