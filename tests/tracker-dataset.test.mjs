@@ -88,6 +88,35 @@ test('validateRecord catches schema breaks', () => {
   assert.deepEqual(validateRecord(HIT), []);
 });
 
+test('a list-only unit named after another record is linked to it as a listed unit', () => {
+  const snapshots = {
+    ...SNAPSHOTS,
+    'ca-sanctions': {
+      ...SNAPSHOTS['ca-sanctions'],
+      entries: [{ key: 'ca:1', list: 'ca-sanctions', name: 'Harbin Institute of Technology, School of Astronautics', altNames: [], country: 'CN', date: null, citation: null, url: 'https://example.org', institution: 'hit-school-of-astronautics' }],
+    },
+  };
+  const d = makeDataset({ snapshots });
+  assert.equal(d.byId.get('hit-school-of-astronautics').parent, 'harbin-institute-of-technology');
+  const hit = d.byId.get('harbin-institute-of-technology');
+  assert.deepEqual(hit.units, [{ id: 'hit-school-of-astronautics', name: 'Harbin Institute of Technology, School of Astronautics', lists: ['Consolidated Canadian Autonomous Sanctions List'] }]);
+  assert.equal(hit.listings.find((l) => l.listId === 'ca-sanctions').status, 'not-listed');
+  assert.deepEqual(makeDataset().byId.get('harbin-institute-of-technology').units, []);
+});
+
+test('the same name with a bracketed code is the institution itself, not a unit of it', () => {
+  const snapshots = {
+    ...SNAPSHOTS,
+    'ca-sanctions': {
+      ...SNAPSHOTS['ca-sanctions'],
+      entries: [{ key: 'ca:1', list: 'ca-sanctions', name: 'Harbin Institute of Technology (HIT)', altNames: [], country: 'CN', date: null, citation: null, url: 'https://example.org', institution: 'hit-2' }],
+    },
+  };
+  const d = makeDataset({ snapshots });
+  assert.equal(d.byId.get('hit-2').parent, null);
+  assert.deepEqual(d.byId.get('harbin-institute-of-technology').units, []);
+});
+
 test('a list-only record named by several entries takes a mixed-case name over an all-caps one', () => {
   const entry = (key, list, name) => ({ key, list, name, altNames: [], country: 'RU', date: null, citation: null, url: 'https://example.org', institution: 'mipt' });
   const snapshots = {

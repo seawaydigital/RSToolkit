@@ -4,7 +4,7 @@ import { INSTITUTION_RS_CONTACT, SITE_URL } from '../../../siteConfig';
 import { howItWorksData } from '../../../data/howItWorksData';
 import { straData } from '../../../data/straData';
 import { ANNEX_B, COUNTRY_LABELS, INSTITUTION_TYPES, RATING_LABELS, SIGNALS } from './lib/constants';
-import { formatRecordForFile, profilePath, sanctionsNotes } from './lib/recordText';
+import { UNITS_NOTE, formatRecordForFile, profilePath, sanctionsNotes } from './lib/recordText';
 import RatingBadge from './RatingBadge';
 import TrackerSection from './TrackerSection';
 
@@ -160,6 +160,20 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
           </tbody>
         </table>
       </div>
+
+      {record.units?.length > 0 && (
+        <>
+          <h3 className="dit-subheading">Listed units</h3>
+          <ul className="dit-units">
+            {record.units.map((u) => (
+              <li key={u.id}>
+                <a className="dit-text-link" href={profilePath(u.id)}>{u.name}</a>: {u.lists.join('; ')}
+              </li>
+            ))}
+          </ul>
+          <p className="dit-table-note">{UNITS_NOTE}</p>
+        </>
+      )}
 
       {verified && (
         <>

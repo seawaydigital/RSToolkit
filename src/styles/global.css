@@ -5553,6 +5553,13 @@ a:hover {
   margin: 6px 0 0;
 }
 
+.dit-units {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
 .dit-listing-entries {
   list-style: none;
   margin: 0;

@@ -25,6 +25,9 @@ const US_SDN_NOTE =
 
 const listed = (record, listId) => record.listings?.some((l) => l.listId === listId && l.status === 'listed');
 
+export const UNITS_NOTE =
+  'These units are listed in their own right; the listings above are for the institution as a whole. Check whether the work involves a listed unit.';
+
 export function sanctionsNotes(record) {
   return [listed(record, 'ca-sanctions') && CA_SANCTIONS_NOTE, listed(record, 'us-sdn') && US_SDN_NOTE].filter(Boolean);
 }
@@ -55,6 +58,9 @@ export function formatRecordForFile(record, { meta, permalink, retrievedOn }) {
   ];
   if (a?.overridden) lines.push(`Override: moved from ${RATING_LABELS[a.baseRating]} because ${a.overrideReason}`);
   lines.push('Formal listings:', ...record.listings.map(listingLine), ...sanctionsNotes(record));
+  if (record.units?.length) {
+    lines.push('Listed units:', ...record.units.map((u) => `- ${u.name}: ${u.lists.join('; ')}`), UNITS_NOTE);
+  }
 
   if (record.status === 'verified' && record.evidence?.length) {
     const sourcesById = new Map(record.sources.map((s) => [s.id, s]));
@@ -116,7 +122,10 @@ function batchRows(lines, byId, baseUrl) {
     for (const m of matches) {
       const r = byId.get(m.id);
       if (!r) continue;
-      const others = r.listings.filter((l) => l.listId !== 'ca-nro' && l.status === 'listed').map((l) => l.label);
+      const others = [
+        ...r.listings.filter((l) => l.listId !== 'ca-nro' && l.status === 'listed').map((l) => l.label),
+        ...(r.units ?? []).map((u) => `Listed unit: ${u.name} (${u.lists.join(', ')})`),
+      ];
       rows.push([
         input,
         r.name,

@@ -22,7 +22,7 @@ import {
   segmentTokens,
   splitSegments,
 } from './normalize.js';
-import { inTokens, placeContext, placesIn, traditionalOrTaiwan } from './places.js';
+import { inTokens, placeContext, placesIn, traditionalOrTaiwan, withoutCodes } from './places.js';
 
 export const MAX_BATCH_LINES = 2000;
 
@@ -39,14 +39,6 @@ const CJK_SUFFIXES = ['大学', '大學', '学院', '學院', '研究院', '研�
 const AFFILIATIONS = /[;|]/;
 
 const latinNames = (r) => [r.name, ...(r.aliases ?? [])].filter((n) => n && !hasCjk(n));
-
-// "… 14th Research Institute (CETC 14)": affiliations write the name without
-// the bracketed code. A bracketed place ("China University of Geosciences
-// (Wuhan)") tells institutions apart, so it stays.
-function withoutCodes(name) {
-  const stripped = name.replace(/\(([^)]*)\)/g, (whole, inside) => (placesIn(normalizePhrase(inside)).size ? whole : ' '));
-  return stripped === name ? null : stripped.replace(/\s+/g, ' ').trim();
-}
 const cjkNames = (r) => [r.zh, ...(r.zhAliases ?? []), ...(r.aliases ?? []).filter(hasCjk)].filter((n) => n && hasCjk(n));
 
 function addTo(map, key, id) {

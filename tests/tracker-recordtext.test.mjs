@@ -12,7 +12,7 @@ import {
   formatRecordForFile,
   searchLogLine,
 } from '../src/tools/compliance/defence-tracker/lib/recordText.js';
-import { META, makeDataset } from './fixtures/trackerDataset.mjs';
+import { META, SNAPSHOTS, makeDataset } from './fixtures/trackerDataset.mjs';
 
 const ds = makeDataset();
 const { byId } = ds;
@@ -95,4 +95,28 @@ test('the search log line has the date, dataset and counts', () => {
 test('the dataset CSV has one row per record and no seed notes in the export', () => {
   assert.equal(datasetToCsv(ds).trim().split('\r\n').length, ds.records.length + 1);
   assert.ok(datasetToExport(ds).records.every((r) => !('seedNotes' in r)));
+});
+
+// A unit listed in its own right ("Harbin Institute of Technology, School of
+// Astronautics") must show up wherever its parent does.
+const withUnit = makeDataset({
+  snapshots: {
+    ...SNAPSHOTS,
+    'ca-sanctions': {
+      ...SNAPSHOTS['ca-sanctions'],
+      entries: [{ key: 'ca:1', list: 'ca-sanctions', name: 'Harbin Institute of Technology, School of Astronautics', altNames: [], country: 'CN', date: '2026-01-01', citation: 'Schedule 1, item 9', url: 'https://example.org/sema', institution: 'hit-school-of-astronautics' }],
+    },
+  },
+});
+const parent = withUnit.byId.get('harbin-institute-of-technology');
+
+test('a copied record lists the parent’s separately listed units', () => {
+  const text = formatRecordForFile(parent, { meta, permalink: 'p', retrievedOn: '2026-10-24' });
+  assert.ok(text.includes('Listed units:'), text);
+  assert.ok(text.includes('Harbin Institute of Technology, School of Astronautics: Consolidated Canadian Autonomous Sanctions List'), text);
+});
+
+test('a batch row for the parent names its listed units', () => {
+  const csv = batchResultsToCsv([{ input: 'HIT', matches: [{ id: 'harbin-institute-of-technology', matchedBy: 'name', confidence: 'confirmed' }] }], withUnit.byId);
+  assert.ok(csv.includes('Listed unit: Harbin Institute of Technology, School of Astronautics (Consolidated Canadian Autonomous Sanctions List)'), csv);
 });

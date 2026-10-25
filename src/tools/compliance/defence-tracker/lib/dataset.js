@@ -2,7 +2,8 @@
 // module into one rated record set. Institutions known only from an official
 // list get a minimal "listing-only" record here, so they need no file and a
 // batch check never misses them.
-import { hasCjk } from './normalize.js';
+import { hasCjk, normalizePhrase, splitSegments } from './normalize.js';
+import { withoutCodes } from './places.js';
 import { LISTS, SNAPSHOT_NAMES } from './constants.js';
 import { rateInstitution } from './rubric.js';
 import { slugify } from './schema.js';
@@ -60,6 +61,36 @@ function preferMixedCase(record, name) {
   record.type = guessType(name);
   record.aliases = record.aliases.filter((a) => a !== name);
   addNames(record, [old]);
+}
+
+// A list-only unit named after another record ("Sharif University of
+// Technology, Department of Engineering") is linked to it, and every parent
+// lists its units that are listed in their own right. The unit's listings
+// stay the unit's: the parent still reads "Not listed" for them.
+function linkListedUnits(records, byId) {
+  const byName = new Map();
+  for (const r of records) {
+    for (const n of [r.name, withoutCodes(r.name)].filter(Boolean)) {
+      const key = normalizePhrase(n);
+      if (key && !byName.has(key)) byName.set(key, r.id);
+    }
+  }
+  const core = (name) => normalizePhrase(withoutCodes(name) ?? name);
+  for (const r of records) {
+    r.units = [];
+    if (!r.virtual || r.parent) continue;
+    const parts = splitSegments(r.name);
+    if (parts.length < 2) continue;
+    const parentId = parts.map((p) => byName.get(normalizePhrase(p))).find((id) => id && id !== r.id);
+    // "X (CODE)" is X itself under another list's spelling, not a unit of X.
+    r.parent = parentId && core(r.name) !== core(byId.get(parentId).name) ? parentId : null;
+  }
+  for (const r of records) {
+    const parent = r.parent ? byId.get(r.parent) : null;
+    const lists = r.listings.filter((l) => l.status === 'listed').map((l) => l.label);
+    if (parent && parent !== r && lists.length) parent.units.push({ id: r.id, name: r.name, lists });
+  }
+  for (const r of records) r.units.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
@@ -129,6 +160,7 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
     });
     record.assessment = rateInstitution(record, record.listings);
   }
+  linkListedUnits(records, byId);
 
   const lists = LISTS.map((list) => {
     const base = { listId: list.id, label: list.label, jurisdiction: list.jurisdiction, kind: list.kind };

@@ -90,6 +90,14 @@ export function placeContext(text) {
   return { tokens, countries, foreign, taiwan, placed: countries.size > 0 || foreign || taiwan };
 }
 
+// "… 14th Research Institute (CETC 14)": affiliations write the name without
+// the bracketed code. A bracketed place ("China University of Geosciences
+// (Wuhan)") tells institutions apart, so it stays.
+export function withoutCodes(name) {
+  const stripped = String(name).replace(/\(([^)]*)\)/g, (whole, inside) => (placesIn(normalizePhrase(inside)).size ? whole : ' '));
+  return stripped === name ? null : stripped.replace(/\s+/g, ' ').trim();
+}
+
 export function inTokens(context, phrase) {
   return Boolean(phrase) && has(context.tokens, phrase);
 }

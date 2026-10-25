@@ -9,6 +9,7 @@ import { loadDataset, readRawData } from '../scripts/tracker/lib/loadData.mjs';
 import { validateRecord, validateSnapshot } from '../src/tools/compliance/defence-tracker/lib/schema.js';
 import { RUBRIC_VERSION } from '../src/tools/compliance/defence-tracker/lib/rubric.js';
 import { compactCjk, isGenericPhrase, normalizePhrase } from '../src/tools/compliance/defence-tracker/lib/normalize.js';
+import { withoutCodes } from '../src/tools/compliance/defence-tracker/lib/places.js';
 
 const raw = await readRawData();
 const ds = await loadDataset(raw);
@@ -120,6 +121,12 @@ test('an institution named differently on several lists is one record carrying a
   assert.equal(ds.byId.get('moscow-institute-of-physics-and-technology').name, 'Moscow Institute of Physics and Technology');
 });
 
+test('a sanctioned department shows on its university', () => {
+  const units = (id) => ds.byId.get(id).units.map((u) => u.id);
+  assert.ok(units('sharif-university-of-technology').includes('sharif-university-of-technology-department-of-engineering'));
+  assert.ok(units('shahid-beheshti-university').includes('shahid-beheshti-university-department-of-engineering'));
+});
+
 // Different bodies whose names reduce to the same words.
 const DISTINCT = [
   ['joint-stock-company-scientific-research-institute-giricond', 'joint-stock-company-scientific-research-institute-of-electronic-and-mechanical-d'],
@@ -137,6 +144,7 @@ const LEGAL_FORM = new Set(('federal state unitary enterprise financed budgetary
   'fsue fgup science higher education vocational educational named after the russian federation academy sciences ras ' +
   'public private limited liability llc national research center centre nrc open closed').split(' '));
 const coreNames = (r) => [r.name, ...(r.aliases ?? [])]
+  .flatMap((n) => [n, withoutCodes(n)].filter(Boolean))
   .map((n) => normalizePhrase(n).split(' ').filter((t) => t.length > 1 && !LEGAL_FORM.has(t)).sort().join(' '))
   .filter((core) => core.split(' ').length >= 2);
 
