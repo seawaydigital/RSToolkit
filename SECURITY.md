@@ -10,6 +10,8 @@ Security record for the Research Security Toolkit, prepared for handoff to Lakeh
 
 The toolkit is a static site: HTML, JavaScript, CSS, fonts and images, built by Vite. It has no server-side code, database, accounts, cookies or analytics. **The site never receives anything a user types**, with one deliberate and disclosed exception: the NRO map's proximity search sends an institution name to a public geocoder, and it can be switched off (§3).
 
+The Defence Institution Tracker, added in October 2026 and switched off until launch (`ENABLE_DEFENCE_TRACKER`), follows the same rule: its searches and batch checks never leave the browser. It also adds a monthly GitHub Actions workflow and local maintenance scripts (§3a). **The tracker postdates the 2026-10-03 audit and has not had a security review yet;** one is a launch gate.
+
 The audit found **no vulnerabilities in the application code**. It made seven hardening and accuracy changes, all listed in §4. Two items are the host's responsibility and cannot be done from the code: response headers and a vulnerability-report contact (§5).
 
 **"Safe for any kind of research data" — what that does and does not mean.** Nothing a researcher enters in the STRA lookup, NRO search, wizards, flowcharts or checklists leaves their browser, and the browser-enforced Content Security Policy would block it if code ever tried to send it. So the risk to research data from *using the site* is the same as the risk from reading a web page. No website can be "100% safe", though: the user's own device, browser extensions and network are outside the site's control. The site's How This Site Works page states the same limits publicly.
@@ -24,7 +26,9 @@ The audit found **no vulnerabilities in the application code**. It made seven ha
 | Search terms, wizard answers | Memory of the open tab | Never transmitted |
 | Checklist ticks (2 tools) | `localStorage` on the user's device (`rs-toolkit-checklist-v1`, `rs-toolkit-travel-v1`) | Never transmitted. On a shared computer, readable by the next user of that browser until cleared; the site has a one-click clear button and tells users to use it |
 | Institution name typed into the proximity search | Sent to `nominatim.openstreetmap.org`, then `en.wikipedia.org` if there is no match | Disclosed at the input and on How This Site Works. Can be switched off with `ENABLE_PROXIMITY_SEARCH` |
-| Map area being viewed | Tile requests to the basemap provider (Esri by default) | Reveals map area and zoom level only. Disclosed |
+| Map area being viewed (NRO map; the tracker's map view when it is switched on) | Tile requests to the basemap provider (Esri by default) | Reveals map area and zoom level only. Disclosed. The tracker's map never moves to fit search results, so its tiles reveal nothing about a search |
+| Tracker searches and batch-check text | Memory of the open tab | Never transmitted, never stored, never put in the address |
+| Tracker dataset (ratings, listings, sources) | Compiled into the tracker's own chunk, and published at `data/defence-tracker.json` and `.csv` | Public by design (CC BY 4.0). None of it is in the build while `ENABLE_DEFENCE_TRACKER` is false |
 
 **Threats considered:**
 - **Script injection (XSS):** no HTML sink receives untrusted data unescaped, and the CSP's `script-src 'self'` with no `'unsafe-inline'` would block it anyway.
@@ -49,7 +53,22 @@ The audit found **no vulnerabilities in the application code**. It made seven ha
 | External links | All 36 `target="_blank"` links carry `rel="noopener noreferrer"`. Every external URL is a hard-coded `https://` constant. None is built from user input. |
 | Outbound requests carry no credentials | `fetch()` uses the default `credentials: 'same-origin'`, so no cookies go to the geocoders. Wikipedia is queried with `origin=*` (anonymous CORS). The referrer policy is `strict-origin-when-cross-origin`, so third parties see the origin only, never the `#tool` path. |
 | No secrets in the repo | Scanned for API keys, tokens and passwords: none found. Map-provider keys (optional) are injected at build time from CI secrets (§5). |
+| Tracker addresses are inert | `#defence-tracker/<id>` is split by `parseHashRoute()` (`src/routing.js`) with a guarded `decodeURIComponent`. The id is looked up in a `Map` of records and never rendered as HTML; an unknown or malformed id shows "not found". User-typed text is never put in the address. |
+| Exports can't carry spreadsheet formulas | The batch-check CSV and the open-data CSV pass every cell through `csvCell()`, which prefixes a `'` to any value starting with `=`, `+`, `-`, `@`, tab or carriage return. Files are built in the browser; nothing is uploaded. |
 | No cookies, analytics or trackers | None in the code. The production build contacts only the host on page load. Confirmed in a browser: on the NRO map, the only other host contacted was the Esri tile server. |
+
+### 3a. Maintenance automation (Defence Institution Tracker)
+
+Added after the 2026-10-03 audit and not yet reviewed (a launch gate). How it is built:
+
+| Control | Detail |
+|---|---|
+| The scheduled workflow can't change the repository | `.github/workflows/tracker-watch.yml` runs monthly and on demand with `permissions: contents: read, issues: write` and nothing else. It opens or updates one "Tracker watch — YYYY-MM" issue. The maintainer runs the sync locally and commits. |
+| Hardened like the deploy workflow | Actions pinned to full commit SHAs (the same versions as `deploy.yml`, kept current by Dependabot); checkout with `persist-credentials: false`; `npm ci --ignore-scripts`, since this job holds a token that can write issues. Apart from checkout, which uses the token to fetch and doesn't keep it, only the final `gh` step receives it. The issue title reaches the shell through an environment variable, never interpolated into the script. |
+| Outbound requests | `data.trade.gov` (US Consolidated Screening List), `www.international.gc.ca` (Canadian sanctions XML), `science.gc.ca` (the NRO page), `basicresearch.defense.gov` and `www.meti.go.jp` (list pages; both currently refuse scripts), and each source address cited by a verified profile (status only; the page body is discarded). Requests carry an identifying user agent. |
+| Issue text can't mention anyone | Names, page text and error messages from outside the repository go into code spans with `@` removed (`sanitizeForIssue()`), so they can't mention users or link other issues. Source addresses are the tracker's own reviewed citations. |
+| Local-only scripts | `npm run tracker:sync` writes listing snapshots (review the diff before committing). `npm run tracker:archive` submits cited sources to the Wayback Machine; its optional `ARCHIVE_ORG_ACCESS_KEY` / `ARCHIVE_ORG_SECRET` are read from the environment and never written anywhere. `npm run tracker:import` was a one-off import pinned to a MISP commit. |
+| Data is validated before it ships | Every record passes the schema checks in `npm test`, which the `verify` job runs before any deploy. |
 
 ---
 
@@ -102,6 +121,7 @@ Also removed: `blob:` from `img-src`, which nothing in the build uses.
 | A third-party service (tiles, geocoder, fonts, anything) | Add its host to the CSP in `index.html` **and** to the server header. Add a row to `dataFlows` in `src/data/howItWorksData.js`. Add it to HANDOFF.md §5. |
 | `localStorage` usage | Add the key to `STORAGE_KEYS` in `src/data/howItWorksData.js` (it drives the clear button and the privacy page). |
 | Dependencies | `npm audit`. Review Dependabot PRs. Runtime dependencies currently have minor updates available (React 19.3, Fuse.js 7.5, lucide-react) with no security advisories; take them through Dependabot with normal testing. |
+| The Defence Institution Tracker | `npm test`. Before switching `ENABLE_DEFENCE_TRACKER` on: build with it on and confirm zero CSP errors on `#defence-tracker` and its map view, and that tracker pages contact no host but the site and the basemap. Keep the watch workflow at `contents: read, issues: write` with no repository writes, and route any new external text in its issue through `sanitizeForIssue()`. |
 | The CSP | Load the production build (`npm run build && npm run preview`), not the dev server, and confirm zero CSP errors on the home page and `#nro-lookup`. The dev server's HMR client trips `script-src` by design; see HANDOFF.md §4. |
 
 ---

@@ -38,7 +38,8 @@
 src/
   App.jsx                        # Root: routing, layout, lazy tool loading, ErrorBoundary
   main.jsx                       # Mounts App; imports the self-hosted @fontsource fonts
-  siteConfig.js                  # Host-owned values: contacts, SITE_URL, WEB_HOST, ENABLE_PROXIMITY_SEARCH, sister-site card
+  routing.js                     # parseHashRoute(): #tool or #tool/sub → { route, subRoute }
+  siteConfig.js                  # Host-owned values: contacts, SITE_URL, WEB_HOST, ENABLE_PROXIMITY_SEARCH, sister-site card, ENABLE_DEFENCE_TRACKER
   components/
     home/
       Home.jsx                   # Landing page: "Where do I start?" scenarios + all-tools grid
@@ -53,6 +54,11 @@ src/
       FlowchartFullView.jsx      # SVG flowchart using dagre layout
       FlowchartGuidedMode.jsx    # Card stepper: Yes/No/Continue, back stack
       Tabs.jsx                   # Shared accessible tablist/tabpanel (see Accessibility)
+      map/                       # Shared by NRO Lookup and the tracker's map view
+        MarkerCluster.jsx        # Clustered circle markers; cluster colour from colorFor (default: dominant fill)
+        FlyToHandler.jsx         # Imperative map fly-to
+        clusterColor.js          # dominantColor(): most common fill, optional tie priority
+        escapeHtml.js            # Escapes every value going into a Leaflet popup (innerHTML)
   data/
     toolRegistry.js              # CATEGORIES + ALL_TOOLS — single source of truth for nav/home
     nroData.js                   # 126 NROs with per-institution lat/lng (see Key Decisions)
@@ -75,6 +81,12 @@ src/
       stracFlow.js               # STRAC policy decision nodes
       nsgrpFlow.js               # NSGRP partnership risk assessment nodes
       ontarioFlow.js             # Ontario RS Guidelines decision nodes
+    defenceTracker/              # Tracker dataset, CC BY 4.0 (© 2026 Andrew Austin); README.md has the schema rules
+      institutions/<id>.json     # One record per institution; the id is its permanent permalink
+      listings/                  # Official-list snapshots: us-csl, ca-sanctions (generated), us-1286, jp-meti-eul (by hand)
+      meta.json, changelog.json  # Dataset version (YYYY.MM), rubric version, licence, list check dates; dataset changes
+      index.js                   # getTrackerData(): import.meta.glob → buildDataset + match index (browser)
+      enabled.js                 # TRACKER_ENABLED, compiled from __TRACKER_ENABLED__ (browser only)
   styles/
     global.css                   # All styles; CSS variables for design system
   tools/
@@ -90,6 +102,15 @@ src/
       RiskChecklist.jsx          # 3-state toggle; localStorage persistence; progress bar
       RiskMitigation.jsx         # Category + measure accordion; tag filter chips
       DualUseGuide.jsx           # 4-tab: Self-Assessment wizard / Dual-Use Areas / Vetting Collaborators / Due Diligence
+      defence-tracker/           # Defence Institution Tracker (CSS prefix dit-), hidden until launch
+        DefenceTracker.jsx       # View switch by sub-route; keeps search + batch state in memory
+        TrackerSearch.jsx        # Search, filters, List · Map switch
+        TrackerMap.jsx           # Lazy-loaded map view, markers coloured by rating
+        InstitutionProfile.jsx   # Profile: rating, listings, Annex B evidence, sources; copy record for file
+        BatchCheck.jsx           # Paste affiliations → match table, copy / CSV / print
+        TrackerMethodology.jsx   # Rubric and signals rendered from code, list dates, licence, downloads
+        RatingBadge.jsx, TrackerSection.jsx, download.js  # Badge, accessible accordion section, in-browser file save
+        lib/                     # Plain ESM (Node-tested): constants, rubric, normalize, matcher, schema, dataset, recordText, mapMarkers, views
     reference/
       ExportControl.jsx          # Searchable accordion reference
       Glossary.jsx               # 12-term expandable cards with category filter
@@ -99,6 +120,10 @@ src/
       CybersecurityGuide.jsx     # 4-tab guide: Quick Start / Encryption / Passwords & 2FA / AI & Sensitive Data
       TravelSecurity.jsx         # 3-phase travel checklist + emergency contacts
       ReportConcern.jsx          # Scenario accordion -> what to do now + who to contact
+scripts/tracker/                 # Tracker upkeep (Node): sync-listings, watch, check-sources, archive-sources, next, import-misp; lib/
+docs/tracker/research-playbook.md  # How profiles are researched, archived and verified; the monthly routine
+.claude/skills/tracker-research/   # Project skill for Claude research sessions (same rules as the playbook)
+.github/workflows/tracker-watch.yml  # Monthly watch: opens a "Tracker watch — YYYY-MM" issue, never writes to the repo
 ```
 
 ---
@@ -121,6 +146,7 @@ src/
 | `risk-checklist` | Risk Assessment Checklist | `riskChecklist.js` |
 | `risk-mitigation` | Risk Mitigation Guide | `riskMitigationData.js` |
 | `dual-use` | Dual-Use Research Guide | `dualUseData.js` + `dualUseWizard.js` |
+| `defence-tracker` | Defence Institution Tracker (hidden until launch: `ENABLE_DEFENCE_TRACKER`) | `defenceTracker/` + `nroData.js` |
 
 ### Reference
 | Slug | Tool Name | Data File |
@@ -275,6 +301,19 @@ Header pattern:
 - **npm audit**: Run `npm audit fix` after any dependency changes. As of 2026-10-22 the project has 0 known vulnerabilities (that day's `npm audit fix` moved `vite` 8.3.2 → 8.3.5 and `source-map-js` → 1.2.2 for new high-severity dev-only advisories that had started failing the CI audit gate; the 2026-10-03 audit fixed `brace-expansion` via `eslint-plugin-jsx-a11y → minimatch`). Note that every advisory seen so far has been in **devDependencies** (`eslint → js-yaml`, `vite → postcss → nanoid`) — they affect the build toolchain, not the shipped bundle, which has no runtime dependencies beyond React/Leaflet/Fuse/dagre/lucide. Re-check before any handoff or release; advisories accumulate on their own schedule, not ours.
 - **Git worktrees**: Feature branches use `.worktrees/<branch-name>/` (already in `.gitignore`). Create with `git worktree add .worktrees/<name> -b <branch>`, remove with `git worktree remove .worktrees/<name>` after merging.
 - **Dual-Use Research Guide**: A combined hub (CSS prefix `dual-`) in Compliance Tools, structured on the workshop arc *Know Your Research → Know Your Partners → Assess the Risk*. The Self-Assessment wizard is deliberately **conceptual** (intent/use, knowledge transfer, partner exposure) and hands off to STRA Lookup / NRO Lookup / Export Control rather than re-deriving STRA categories — it does not duplicate the STRA wizard. Results give a **signal read** (Likely / Possible / Low), never a "cleared" verdict or legal advice, and offer a Print summary (reuses the global print CSS + `.dual-print-only`/`.dual-no-print` toggles). Content is attributed to Public Safety Canada's Safeguarding Science program + Government of Canada guidance (not UBC). The stale workshop figures (74 subcategories / 356 entities) were dropped; cite "11 STRA categories" and link the live NRO list instead. The guide reuses the `straWizard` node shape (`dualUseWizard.js`) and the tabbed-tool button pattern from `CybersecurityGuide`.
+- **Defence Institution Tracker** (`defence-tracker`, Compliance Tools, CSS prefix `dit-`): a free, open replacement for ASPI's now-paywalled China Defence Universities Tracker, for NSGRP/STRAC partner and co-author checks. Design: `docs/superpowers/specs/2026-10-24-defence-tracker-design.md`.
+  - **Launch flag**: `ENABLE_DEFENCE_TRACKER` (false) is compiled in as `__TRACKER_ENABLED__` by Vite `define`; it is on in `npm run dev:tracker` (`--mode tracker`) or with `VITE_ENABLE_DEFENCE_TRACKER=true`. Off removes the tool, its chunk and data, every cross-link (NRO Lookup's Profile column, Home's partner scenario, FAQ `help-tracker`, the How This Site Works sentences) and the downloads. Don't switch it to `import.meta.env`: that left an unreachable 666 KB chunk in flag-off builds. `enabled.js` is browser-only; Node scripts must not import it.
+  - **Data**: one JSON per institution; the `id` is the permanent permalink (never rename; `RESERVED_SLUGS` are `batch`, `methodology`). Canadian NRO listings join from `nroData.js` through `ids.nro` (plus `ids.nroAlso`), so the NRO list has one source. An institution known only from a list snapshot gets a virtual `listing-only` record at load time. Statuses: `seed` (MISP structured fields in `seedNotes`, never displayed or exported), `listing-only`, `verified`. Only verified records carry evidence and get a rating; the schema (`lib/schema.js`) is enforced by `tests/tracker-data.test.mjs`.
+  - **Rubric v1** (`lib/rubric.js`): the first matching rule wins; only verified evidence that cites a source counts; an override moves one level at most and needs a written reason. The methodology page renders `RUBRIC_RULES` and `SIGNALS`, so it can't drift from the code, and `RUBRIC_VERSION` goes into copied records. Sanctions notes follow the NRO sanctions-banner wording rules (activity-specific, never a blanket ban).
+  - **Matcher** (`lib/matcher.js`): email domain → Chinese name → whole-name phrase (longest span wins) → acronym (always "check") → similar name (different compass words never count as a typo). The comma parts of a listed name give "check" only. Search returns exact hits, then word-start hits, and falls back to Fuse only when nothing matched. Fixture tests (`tests/fixtures/tracker-affiliations.json`) cover the confusable names: Northwestern vs NWPU, Beijing Institute vs University of Technology, NJU vs NJUST vs NUAA, USTC vs UESTC, and a bare "HIT", which only ever gives "check" because Holon Institute of Technology shares it.
+  - **Ethics and copy**: institutions, never individuals; no ASPI text, ratings or paid data (MISP's structured fields only, as a hidden checklist); every claim sourced, every source archived (`archive.url`, or an `archive.unavailable` reason). "Not listed" never means low risk, and nothing is legal advice.
+  - **Licence**: the dataset is CC BY 4.0, © 2026 Andrew Austin (`src/data/defenceTracker/LICENSE`); the code stays MIT © Seaway Digital. The notice appears only on the methodology page and in the downloads: a deliberate, limited exception to HANDOFF §3d's "no owner named in the UI", because CC BY requires naming the licensor.
+  - **Privacy**: search and batch text stay in memory (never in the hash, never stored), and downloads are built in the browser. The map view is lazy (Leaflet loads only when it is opened) and never fits or flies to the results, so tile requests reveal nothing about a search. With the flag on, How This Site Works names the tracker's map view in its tile row. No CSP change.
+  - **Map colours**: very high `#ef4444`, high `#f97316`, medium `#a78bfa`, low `#94a3b8`; not yet rated is hollow (`#f1f5f9` fill, `#64748b` outline), like its dashed badge. A cluster takes its most common rating (ties go to the higher one). Counts are dark `#061727` on every fill; `tests/tracker-map.test.mjs` checks ≥4.5:1 and no Blaze or green hue. Rating badges never use Blaze or green either.
+  - **Open data**: `trackerDataPlugin` in `vite.config.js` emits `data/defence-tracker.json` and `.csv` (with BOM) only when the flag is on, from the same loader and rubric as the page. CSV cells are formula-neutralised (`csvCell`).
+  - **Before launch**: verified, rated profiles live on the `tracker/content` branch until the Lakehead review; master carries code, seeds and official-list data only. The launch gates are in `docs/tracker/research-playbook.md`: Lakehead review, a host or redirect that keeps the `#…` part of addresses, an accessibility pass and a security review.
+  - **Upkeep**: `npm run tracker:sync` (writes snapshots; review the diff), `tracker:check` (the watch report; writes nothing), `tracker:archive` (local only; Wayback Machine), `tracker:next` (priority queue). Research rules are in the playbook and the `tracker-research` project skill.
+  - **Known gaps**: the US 1286 and Japanese lists are pending (their pages answer 403 to scripts, so they are checked by hand); there is no main Chinese Academy of Sciences record yet; no profile is verified yet, so nothing is rated.
 - **Cybersecurity guide placement**: Added as its own "Operational Security" category (🔒) rather than under Reference, because the content is action-oriented (what to DO) rather than regulatory reference. CSS prefix is `csec-`. Source attribution goes to Lakehead University's cybersecurity researcher guidance, treated as representative of Canadian university best practices (same pattern as Risk Mitigation guide attribution).
 - **Site footer**: `SiteFooter.jsx` renders as a **sibling of `.app-body` inside `.app`** — deliberately *outside* `<main>`, because a `<footer>` nested in `main` does not map to the `contentinfo` landmark. It carries the AODA accessibility statement and the feedback contact address that a public-facing Ontario site is expected to provide. It is a persistent slim bar (35px desktop / 61px mobile), so keep the text short; hidden in `@media print`.
 - **Research Travel Security**: Operational Security category, CSS prefix `trav-`. Structured on the federal three-phase guidance (Before You Go / While Away / When You Return) using the shared `Tabs.jsx`. Checklist state persists to localStorage key `rs-toolkit-travel-v1` (separate from the risk checklist's `rs-toolkit-checklist-v1`). The **emergency contacts block sits outside the tabs** — a traveller in trouble should not have to find the right tab first. Print CSS deliberately *reveals* the collapsed `.trav-item-detail` text, since a printed pre-trip checklist is more useful with the rationale included.
@@ -316,9 +355,10 @@ Header pattern:
 
 - **Branch**: `master` — every push triggers the GitHub Actions workflow
 - **Action versions**: **pinned to full commit SHAs** with a `# vX.Y.Z` comment (checkout v7.0.1, setup-node v7.0.0, upload-pages-artifact v5.0.0, deploy-pages v5.0.1); `.github/dependabot.yml` bumps SHA + comment together. Dependabot groups `react`/`react-dom`/their `@types` into one PR (they must never ship at different versions) and ignores ESLint majors: `eslint-plugin-jsx-a11y` 6.10.2 peers on `eslint` ≤9, so ESLint 10 breaks `npm ci` — lift that ignore once jsx-a11y supports 10. Checkout uses `persist-credentials: false`. Permissions are `contents: read` at workflow level; only the `deploy` job gets `pages: write` + `id-token: write` (the `verify` job runs PR code). All on majors that run on **Node 24** (v5+). Do not downgrade any of these: the `@v4`/`@v3` majors declare `using: node20` and GitHub annotates every run with a deprecation warning. Two non-obvious traps: (1) the `node-version:` input does **not** affect this — it sets the Node that runs `npm`, while the warning is about each action's own runtime, which is fixed by the action's version; (2) `upload-pages-artifact@v4` does **not** clear it either, because it still delegates to `upload-artifact@v4.6.2` (node20) — only `@v5` pulls `upload-artifact@v7` (node24).
-- **Workflow**: `.github/workflows/deploy.yml` — three jobs: `verify` (npm ci, `npm audit --audit-level=high`, lint, `npm test` — the flowchart graph-integrity suite — build; runs on every PR and every push to master) → `build` (master only: skipped on PRs and on `workflow_dispatch` from any other branch; builds with the tile-key secrets and writes the CNAME) → `deploy` (GitHub Pages; same master-only `if:`, plus a fixed `pages` concurrency group so production deploys never overlap — the workflow-level group stays per-ref so PR runs don't queue). The in-file ref guard only protects the committed workflow: a branch or same-repo PR can edit its own copy, so the `github-pages` environment's "Deployment branches" rule must be set to master — that host setting is the binding control (2026-10-22 audit). **Branch protection on master requires a status check literally named `verify`, with `enforce_admins` on** — the job's `name:` must stay `verify` or no PR can merge, admins included. The requirement was originally created for draft PR #21's separate CI workflow; this job satisfies it on the master line. Audit level is `high` deliberately: every advisory to date has been a dev-only toolchain package and a low-severity one must not block a content fix.
+- **Workflow**: `.github/workflows/deploy.yml` — three jobs: `verify` (npm ci, `npm audit --audit-level=high`, lint, `npm test` — the flowchart graph-integrity and tracker suites — build; runs on every PR and every push to master) → `build` (master only: skipped on PRs and on `workflow_dispatch` from any other branch; builds with the tile-key secrets and writes the CNAME) → `deploy` (GitHub Pages; same master-only `if:`, plus a fixed `pages` concurrency group so production deploys never overlap — the workflow-level group stays per-ref so PR runs don't queue). The in-file ref guard only protects the committed workflow: a branch or same-repo PR can edit its own copy, so the `github-pages` environment's "Deployment branches" rule must be set to master — that host setting is the binding control (2026-10-22 audit). **Branch protection on master requires a status check literally named `verify`, with `enforce_admins` on** — the job's `name:` must stay `verify` or no PR can merge, admins included. The requirement was originally created for draft PR #21's separate CI workflow; this job satisfies it on the master line. Audit level is `high` deliberately: every advisory to date has been a dev-only toolchain package and a low-severity one must not block a content fix.
+- **Tracker watch**: `.github/workflows/tracker-watch.yml` runs monthly (`0 13 1 * *`) and on demand. Permissions are `contents: read` and `issues: write`, nothing else; checkout uses `persist-credentials: false`; `npm ci --ignore-scripts` because the job holds a token that can write issues; same SHA-pinned actions as `deploy.yml`. It runs `scripts/tracker/watch.mjs` (the list sync in check mode plus the source check) and opens or updates one "Tracker watch — YYYY-MM" issue. External names and error text go in code spans with `@` removed (`sanitizeForIssue`), so the issue can't mention anyone. **CI never writes to the repo**: the maintainer runs the sync locally and commits. The 1286 and Japanese list pages answer 403 to scripts, so every month's issue carries two hand-check items. The `gh` issue step is unverified until the first `workflow_dispatch` after merge.
 - **Build command**: `npm run build` → `vite build`
-- **Preview locally**: `npm run dev` (Vite dev server)
+- **Preview locally**: `npm run dev` (Vite dev server); `npm run dev:tracker` with the Defence Institution Tracker switched on
 
 ---
 

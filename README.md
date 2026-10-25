@@ -28,6 +28,7 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 | Risk Assessment Checklist | Interactive NSGRP-sourced grant risk checklist with 3-state toggles and print support |
 | Risk Mitigation Guide | 22 practical measures across 5 categories — personnel, partners, data, legal, monitoring |
 | Dual-Use Research Guide | Self-assessment wizard, dual-use research areas, collaborator vetting, and due-diligence actions |
+| Defence Institution Tracker | Chinese, Russian and Iranian research institutions with military or security ties: sourced ratings, the official lists each appears on, and a batch check for partner and co-author lists. **Hidden until launch** (`ENABLE_DEFENCE_TRACKER`) |
 
 ### 📖 Reference
 | Tool | Description |
@@ -66,6 +67,8 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 ```bash
 npm install     # install dependencies
 npm run dev     # dev server at localhost:5173
+npm run dev:tracker  # the same, with the Defence Institution Tracker switched on
+npm test        # flowchart graph checks and the tracker test suite
 npm run lint    # ESLint incl. jsx-a11y accessibility gate — must stay at 0 errors
 npm run build   # production build to dist/
 npm run preview # serve the production build locally
@@ -101,7 +104,7 @@ Full details — configuration, security headers, external services, maintenance
 
 ## Configuration
 
-Six values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
+Seven values are deployment-specific and live in **[`src/siteConfig.js`](src/siteConfig.js)**:
 
 | Value | What it controls |
 |---|---|
@@ -111,6 +114,7 @@ Six values are deployment-specific and live in **[`src/siteConfig.js`](src/siteC
 | `WEB_HOST` | Who serves the files, as named on the How This Site Works privacy page. Must match the real host |
 | `ENABLE_PROXIMITY_SEARCH` | Whether the NRO map's proximity panel, the only feature that sends typed input off the device, is shown |
 | `SHOW_SISTER_SITE_CARD` | Whether the RDM Toolkit card appears in the sidebar |
+| `ENABLE_DEFENCE_TRACKER` | Whether the Defence Institution Tracker is shown. Stays `false` until its launch gates are met ([research playbook](docs/tracker/research-playbook.md)) |
 
 Hosting on your own server? [HANDOFF.md §4a](HANDOFF.md) has ready-to-use nginx, Apache and IIS configs for the security headers, plus a verification checklist. [SECURITY.md](SECURITY.md) has the security audit record.
 
@@ -151,6 +155,8 @@ All policy content is drawn from official Canadian Government sources:
 - [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx) — Public Safety Canada
 - [Cybersecurity guidance](https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity) — Lakehead University
 
+The Defence Institution Tracker draws on the official lists it checks (Canada's NRO list and autonomous sanctions list, the US Consolidated Screening List and Section 1286 list, and Japan's End User List), [ROR](https://ror.org) (CC0) and the [MISP galaxy](https://github.com/MISP/misp-galaxy) list (CC0, structured fields only). Each profile cites its own sources.
+
 Policy content carries a `lastUpdated` date shown on each tool page. See HANDOFF.md for how to re-verify against the federal sources.
 
 ---
@@ -158,6 +164,8 @@ Policy content carries a `lastUpdated` date shown on each tool page. See HANDOFF
 ## License
 
 [MIT](LICENSE).
+
+The Defence Institution Tracker dataset (`src/data/defenceTracker/`) is © 2026 Andrew Austin, licensed [CC BY 4.0](src/data/defenceTracker/LICENSE).
 
 ---
 
