@@ -1,6 +1,6 @@
 // Small fetch helpers for the maintenance scripts: an identifying user agent,
 // a timeout, and a couple of retries for server errors and rate limits.
-const USER_AGENT = 'RSToolkit-tracker/1.0 (+https://github.com/seawaydigital/RSToolkit)';
+export const USER_AGENT = 'RSToolkit-tracker/1.0 (+https://github.com/seawaydigital/RSToolkit)';
 
 export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -23,4 +23,11 @@ export async function fetchText(url, { timeoutMs = 60000, retries = 2, headers =
 
 export async function fetchJson(url, options) {
   return JSON.parse(await fetchText(url, options));
+}
+
+// For link checks: the status only, without downloading the page.
+export async function fetchStatus(url, { timeoutMs = 30000 } = {}) {
+  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(timeoutMs) });
+  await res.body?.cancel();
+  return { ok: res.ok, status: res.status };
 }
