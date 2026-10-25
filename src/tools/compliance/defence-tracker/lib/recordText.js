@@ -166,12 +166,16 @@ export function batchResultsToHtml(lines, byId, { baseUrl = '' } = {}) {
   return `<table>${head}${body}</table>`;
 }
 
+// An unverified record's type comes from the seed import (MISP's categories),
+// so like its seed notes it is not published.
+const publishedType = (r) => (r.status === 'verified' ? r.type : null);
+
 export function datasetToExport(dataset) {
   return {
     meta: dataset.meta,
     lists: dataset.lists,
     records: dataset.records.map((r) => {
-      const copy = { ...r };
+      const copy = { ...r, type: publishedType(r) };
       delete copy.seedNotes;
       return copy;
     }),
@@ -187,7 +191,7 @@ export function datasetToCsv(dataset) {
     (r.acronyms ?? []).join('; '),
     (r.domains ?? []).join('; '),
     r.country ?? '',
-    r.type,
+    publishedType(r) ?? '',
     r.status,
     ratingLabel(r),
     r.verifiedOn ?? '',

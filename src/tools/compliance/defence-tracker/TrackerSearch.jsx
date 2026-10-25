@@ -22,6 +22,7 @@ class MapBoundary extends Component {
 }
 
 const RANK = Object.fromEntries(RATING_ORDER.map((r, i) => [r, i + 1]));
+const isVerified = (record) => record.status === 'verified';
 
 const listedOn = (record) => record.listings.filter((l) => l.status === 'listed').map((l) => LIST_SHORT_LABELS[l.listId]);
 
@@ -45,14 +46,17 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
     return [...new Set(base)].filter(
       (r) =>
         (rating === 'all' || (rating === 'unrated' ? !r.assessment.rating : r.assessment.rating === rating)) &&
-        (type === 'all' || r.type === type) &&
+        (type === 'all' || (isVerified(r) && r.type === type)) &&
         (country === 'all' || r.country === country) &&
         (list === 'all' || (list === 'any' ? listedOn(r).length > 0 : r.listings.some((l) => l.listId === list && l.status === 'listed'))),
     );
   }, [dataset, index, query, rating, type, list, country]);
 
   const checked = dataset.lists.map((l) => l.checkedOn).filter(Boolean).sort().at(-1);
-  const types = [...new Set(dataset.records.map((r) => r.type))].sort((a, b) => INSTITUTION_TYPES[a].localeCompare(INSTITUTION_TYPES[b]));
+  // Only verified records show a type; an unverified one's comes from the
+  // seed data, unchecked. A list not loaded yet can't be filtered on.
+  const types = [...new Set(dataset.records.filter(isVerified).map((r) => r.type))].sort((a, b) => INSTITUTION_TYPES[a].localeCompare(INSTITUTION_TYPES[b]));
+  const pending = new Set(dataset.lists.filter((l) => l.coverage !== 'complete').map((l) => l.listId));
 
   return (
     <div className="tool-page">
@@ -102,19 +106,25 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
             <option value="unrated">Not yet rated</option>
           </select>
         </label>
-        <label>
-          <span>Type</span>
-          <select value={type} onChange={(e) => update({ type: e.target.value })}>
-            <option value="all">Any type</option>
-            {types.map((t) => <option key={t} value={t}>{INSTITUTION_TYPES[t]}</option>)}
-          </select>
-        </label>
+        {types.length > 0 && (
+          <label>
+            <span>Type</span>
+            <select value={type} onChange={(e) => update({ type: e.target.value })}>
+              <option value="all">Any type</option>
+              {types.map((t) => <option key={t} value={t}>{INSTITUTION_TYPES[t]}</option>)}
+            </select>
+          </label>
+        )}
         <label>
           <span>Listed on</span>
           <select value={list} onChange={(e) => update({ list: e.target.value })}>
             <option value="all">Any or none</option>
             <option value="any">At least one list</option>
-            {LISTS.map((l) => <option key={l.id} value={l.id}>{l.jurisdiction}: {l.label}</option>)}
+            {LISTS.map((l) => (
+              <option key={l.id} value={l.id} disabled={pending.has(l.id)}>
+                {l.jurisdiction}: {l.label}{pending.has(l.id) ? ' (not checked yet)' : ''}
+              </option>
+            ))}
           </select>
         </label>
         <label>
@@ -177,7 +187,7 @@ function ListView({ results, shown, onMore }) {
                 <span className="dit-result-main">
                   <span className="dit-result-name">{r.name}</span>
                   <span className="dit-result-meta">
-                    {[r.zh, INSTITUTION_TYPES[r.type], place, lists.length ? lists.join(' · ') : 'Not on a checked list'].filter(Boolean).join(' · ')}
+                    {[r.zh, isVerified(r) ? INSTITUTION_TYPES[r.type] : null, place, lists.length ? lists.join(' · ') : 'Not on a checked list'].filter(Boolean).join(' · ')}
                   </span>
                 </span>
                 <RatingBadge assessment={r.assessment} />

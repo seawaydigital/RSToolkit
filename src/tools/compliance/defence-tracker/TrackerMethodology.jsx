@@ -55,9 +55,9 @@ export default function TrackerMethodology({ dataset, changelog }) {
       <h2 className="dit-heading">How ratings work</h2>
       <div className="dit-prose">
         <p>
-          Only verified profiles are rated. Everything else shows <RatingBadge assessment={null} /> with its official listings, which are
-          checked automatically. A rating comes from the first rule below that a profile meets, and only evidence that cites at least
-          one source counts.
+          Only verified profiles are rated. Everything else shows <RatingBadge assessment={null} /> with its official listings, taken
+          from the lists the tracker checks (&quot;The official lists checked&quot;, below, says which and when). A rating comes from the first rule below
+          that a profile meets, and only evidence that cites at least one source counts.
         </p>
       </div>
       <div className="dit-table-wrap">

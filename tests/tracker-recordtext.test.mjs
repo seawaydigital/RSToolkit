@@ -107,6 +107,16 @@ test('the dataset CSV has one row per record and no seed notes in the export', (
   assert.ok(datasetToExport(ds).records.every((r) => !('seedNotes' in r)));
 });
 
+test('an unverified record’s type is not published, since it comes from the seed data', () => {
+  const exported = new Map(datasetToExport(ds).records.map((r) => [r.id, r]));
+  assert.equal(exported.get('harbin-institute-of-technology').type, 'university');
+  assert.equal(exported.get('nro-only-institute').type, null);
+  const rows = datasetToCsv(ds).trim().split('\r\n').map((line) => line.split(','));
+  const typeColumn = rows[0].indexOf('type');
+  assert.equal(rows.find((r) => r[0] === 'nro-only-institute')[typeColumn], '');
+  assert.equal(rows.find((r) => r[0] === 'harbin-institute-of-technology')[typeColumn], 'university');
+});
+
 // A unit listed in its own right ("Harbin Institute of Technology, School of
 // Astronautics") must show up wherever its parent does.
 const withUnit = makeDataset({

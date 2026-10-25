@@ -36,9 +36,11 @@ function ListingDetails({ listing, recordName }) {
   );
 }
 
+// An unverified profile shows its names and listings only (the spec): its
+// type and alternative names come from the seed data, unchecked.
 const hasDetails = (record, verified, labs) =>
-  (verified && (labs.length > 0 || record.topics.length > 0 || record.subunits.length > 0)) ||
-  record.aliases.length + record.zhAliases.length + record.sources.length + record.history.length > 0;
+  (verified && (labs.length > 0 || record.topics.length > 0 || record.subunits.length > 0 || record.aliases.length + record.zhAliases.length > 0)) ||
+  record.sources.length + record.history.length > 0;
 
 function SourceCite({ ids, numbers }) {
   const cited = ids.map((id) => numbers.get(id)).filter(Boolean);
@@ -91,7 +93,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
             {[record.zh, record.acronyms.join(', '), record.domains.join(', '), place].filter(Boolean).join(' · ')}
           </p>
           <p className="dit-subline dit-subline--muted">
-            {[INSTITUTION_TYPES[record.type], verified && record.supervisors.length ? `Supervised by ${record.supervisors.join(', ')}` : null]
+            {[verified ? INSTITUTION_TYPES[record.type] : null, verified && record.supervisors.length ? `Supervised by ${record.supervisors.join(', ')}` : null]
               .filter(Boolean)
               .join(' · ')}
           </p>
@@ -123,8 +125,8 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
 
       {!verified && (
         <p className="dit-banner" role="note">
-          <strong>Profile under review.</strong> This institution has not been verified yet, so it is not rated. The official listings
-          below are checked automatically.
+          <strong>Profile under review.</strong> This institution has not been verified yet, so it is not rated. The listings below come
+          from the official lists the tracker checks; a list marked &quot;Not checked yet&quot; has not been loaded.
         </p>
       )}
       {notes.map((n) => (
@@ -246,7 +248,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
           </ul>
         </TrackerSection>
       )}
-      {(record.aliases.length > 0 || record.zhAliases.length > 0) && (
+      {verified && (record.aliases.length > 0 || record.zhAliases.length > 0) && (
         <TrackerSection title="Also known as" count={record.aliases.length + record.zhAliases.length}>
           <ul className="dit-plain-list">
             {[...record.aliases, ...record.zhAliases].map((n) => <li key={n}>{n}</li>)}
