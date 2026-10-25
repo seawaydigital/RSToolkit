@@ -23,13 +23,21 @@ Andrew's own due-diligence workflow (his `grant-collaborator-check` skill) score
 1. The tool is named **Defence Institution Tracker**, slug `defence-tracker`, hidden behind `ENABLE_DEFENCE_TRACKER` until launch.
 2. The dataset license is **CC BY 4.0**. The notice appears only on the tracker's methodology page and in its downloads. That is a deliberate, limited exception to HANDOFF §3d's "no owner named in the UI".
 3. **No ASPI prose is imported.** MISP's structured fields serve only as a hidden research checklist.
-4. **Unverified profiles show official listings only,** labelled "Not yet rated".
+4. **Unverified profiles show official listings only,** labelled "Not yet rated". *Amended 2026-10-25, see below.*
 5. **Canada's sanctions list and the US Treasury SDN list count as formal listings,** alongside NRO, the Entity List, the Military End-User list, the 1286 list and Japan's End User List. Confirmed at the rubric gate.
 6. A source that can't be archived gets an explicit **"no archived copy: reason"** note instead of blocking the profile.
 7. **Hosting move:** a copied record must stand on its own without its link. Launch also needs one of two things: the final host, or an old-host redirect that keeps the `#…` part of the address.
 8. **CI never writes to the repo.** The monthly watcher only opens or updates an issue.
 9. **The map comes in phase 2b,** after the list view.
 10. **Rating badges never use Blaze yellow or green.**
+
+**Amendment, 2026-10-25 (Andrew's decision, after seeing the preview)**
+With no profile researched yet, every row read "Not yet rated", which made the list hard to use. Andrew asked for a rating on every listed institution, for the lists each one is on to be visible in each row with what they mean, and for the page to work like the old ASPI tracker: a rating plus the sourced evidence behind it. So:
+- **Rubric 1.1:** an institution not researched yet is rated **High from the official lists** when any checked list names it (the `listed` rule, which needs no research), labelled "from official lists" everywhere it appears. Overrides never apply to it. On no list and not researched stays "Not yet rated", never Low. A researched profile is rated by the whole rubric, as before.
+- **Evidence from the lists:** each listing becomes a plain-language, sourced statement under "Why this rating" (who listed it, when, under which regulation, programme or Federal Register notice, with a link to the official source), and in the copied record.
+- **Search rows** show chips for the lists an institution is on and a one-line note on what each means (STRAC for an NRO; sanctions: check the activity with Global Affairs Canada; US export controls).
+- **Branches:** these ratings are computed from public official-list data alone, so they ship on master with it. Researched profiles and their ratings still wait for the Lakehead review on the content branch.
+- **Next:** "other noteworthy issues" (reported cyber operations, espionage or export-control cases, and similar) come from researching each profile, recorded as sourced `misconduct` evidence under NSGRP 2.2, which the rubric shows but never rates on.
 
 ## Goals, non-goals, anti-goals
 

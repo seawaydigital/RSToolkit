@@ -8,12 +8,12 @@ How tracker profiles are researched, verified and kept current. Claude research 
 - **Own words, every claim sourced, every source archived** (or a written reason it can't be).
 - **No ASPI text, ratings or paid data.** Don't open ASPI's subscription tracker. Its free public reports can be cited like other research, never copied.
 - **Neutral wording.** Allegations are "reported by" their publisher.
-- **The rubric rates.** Overrides move one level at most and carry a written reason that the page shows.
+- **The rubric rates.** Overrides move one level at most and carry a written reason that the page shows. Until a profile is researched, a listed institution is rated High from its lists alone (no override applies); verifying it replaces that with the rubric's rating of the evidence.
 - **Not listed is not low risk,** and a rating is not a legal determination. The official lists prevail.
 
 ## Where the work happens
 
-- **Code, listing syncs and seed records** go to `master` through pull requests, with the tracker hidden (`ENABLE_DEFENCE_TRACKER = false`). Official-list data is public, so it can merge before launch.
+- **Code, listing syncs and seed records** go to `master` through pull requests, with the tracker hidden (`ENABLE_DEFENCE_TRACKER = false`). Official-list data is public, so it can merge before launch, and so can the ratings computed from it alone ("from official lists").
 - **Verified, rated profiles** go to the long-lived branch `tracker/content` until the Lakehead review has approved the method and a sample of profiles. It touches only `institutions/*.json` and `changelog.json`, so merge `master` into it regularly and conflicts stay rare.
 
 Create it once with `git switch -c tracker/content master`, and push it so it is backed up.

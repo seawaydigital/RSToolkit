@@ -5172,9 +5172,12 @@ a:hover {
   gap: 6px;
 }
 
+/* Only the name is a link; its ::after stretches over the row, so the whole
+   row stays clickable while a screen reader hears a short link name. */
 .dit-result {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
   padding: 12px 14px;
@@ -5182,7 +5185,6 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text-primary);
-  text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
 }
 
@@ -5201,11 +5203,75 @@ a:hover {
 .dit-result-name {
   font-size: 14.5px;
   font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.dit-result-name::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.dit-result:hover .dit-result-name {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .dit-result-meta {
+  margin: 0;
   font-size: 12.5px;
   color: var(--text-secondary);
+}
+
+.dit-result-notes {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Chips for the official lists an institution is on. Measured contrast on
+   --bg-card / --bg-card-hover / the page: NRO 11.2/9.8/12.7:1, sanctions
+   5.7/5.1/6.5:1, other lists 6.7:1. Never Blaze: chips are not buttons. */
+.dit-chips {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.dit-chip {
+  padding: 1px 8px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.dit-chip--nro {
+  color: var(--text-primary);
+  background: rgba(111, 178, 232, 0.14);
+  border-color: rgba(111, 178, 232, 0.45);
+}
+
+.dit-chip--sanctions {
+  color: var(--red);
+  background: var(--red-subtle);
+  border-color: rgba(242, 153, 140, 0.45);
+}
+
+.dit-chips-none {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .dit-more {
@@ -5370,9 +5436,32 @@ a:hover {
   border: 1px dashed var(--border-strong);
 }
 
+/* A rating taken from the official lists alone carries a caption. */
+.dit-rating {
+  flex-shrink: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.dit-rating-basis {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.dit-table .dit-rating {
+  align-items: flex-start;
+}
+
 @media (max-width: 640px) {
   .dit-result {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dit-rating {
     align-items: flex-start;
   }
 
@@ -5396,6 +5485,7 @@ a:hover {
 .dit-breadcrumb a,
 .dit-text-link,
 .dit-why-link a,
+.dit-evidence a,
 .dit-listing-entries a,
 .dit-sources a {
   color: var(--link);
@@ -5406,6 +5496,7 @@ a:hover {
 .dit-breadcrumb a:hover,
 .dit-text-link:hover,
 .dit-why-link a:hover,
+.dit-evidence a:hover,
 .dit-listing-entries a:hover,
 .dit-sources a:hover {
   color: var(--link-hover);
@@ -5594,6 +5685,12 @@ a:hover {
 .dit-why-link {
   font-size: 13px;
   margin-top: 6px;
+}
+
+.dit-why-subheading {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 12px 0 6px;
 }
 
 .dit-section {

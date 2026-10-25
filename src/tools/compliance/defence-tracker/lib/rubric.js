@@ -1,12 +1,16 @@
 // Rubric v1: the published checklist behind every tracker rating.
 //
-// Only verified profiles are rated, and only evidence that cites at least one
-// of the record's own sources counts. The first rule that matches wins.
-// RUBRIC_RULES is rendered on the methodology page, so the page and the code
-// cannot drift apart; bump RUBRIC_VERSION whenever a rule changes.
+// A researched (verified) profile is rated by the whole checklist, and only
+// evidence that cites at least one of the record's own sources counts; the
+// first rule that matches wins. An institution not researched yet is rated
+// by the one rule that needs no research: formally listed is High, from the
+// official lists alone ("basis: lists"). Not listed and not researched is
+// not rated, never Low. RUBRIC_RULES is rendered on the methodology page, so
+// the page and the code cannot drift apart; bump RUBRIC_VERSION whenever a
+// rule or who it applies to changes (1.1: list-based ratings).
 import { RATING_ORDER, LIST_BY_ID, SIGNALS } from './constants.js';
 
-export const RUBRIC_VERSION = '1.0';
+export const RUBRIC_VERSION = '1.1';
 
 export const RUBRIC_RULES = [
   {
@@ -34,24 +38,22 @@ export const RUBRIC_RULES = [
   { id: 'none', rating: 'low', text: 'Verified, and none of the above was found.' },
 ];
 
-const NOT_RATED_TEXT = 'Not yet verified, so not rated. Official listings are still shown.';
+const NOT_RATED_TEXT = 'Not on any list the tracker checks and not researched yet, so not rated. That does not mean low risk.';
 
 const ruleText = (id) => RUBRIC_RULES.find((r) => r.id === id).text;
 
 const signalReason = (e) => ({ signal: e.signal, label: SIGNALS[e.signal].label });
 
 export function rateInstitution(record, listingHits = []) {
+  const listed = listingHits
+    .filter((h) => h.status === 'listed')
+    .map((h) => ({ listId: h.listId, label: LIST_BY_ID[h.listId]?.label ?? h.listId }));
+  const unchanged = { overridden: false, overrideReason: null, overrideError: null };
+
   if (record.status !== 'verified') {
-    return {
-      rating: null,
-      baseRating: null,
-      rule: 'not-yet-rated',
-      ruleText: NOT_RATED_TEXT,
-      reasons: [],
-      overridden: false,
-      overrideReason: null,
-      overrideError: null,
-    };
+    return listed.length
+      ? { rating: 'high', baseRating: 'high', rule: 'listed', ruleText: ruleText('listed'), reasons: listed, basis: 'lists', ...unchanged }
+      : { rating: null, baseRating: null, rule: 'not-yet-rated', ruleText: NOT_RATED_TEXT, reasons: [], basis: null, ...unchanged };
   }
 
   const sourceIds = new Set((record.sources || []).map((s) => s.id));
@@ -66,9 +68,6 @@ export function rateInstitution(record, listingHits = []) {
   const major = [...(labsCount >= 2 ? labs : []), ...inGroup('major')];
   const substantial = [...(labsCount === 1 ? labs : []), ...inGroup('substantial')];
   const limited = inGroup('limited');
-  const listed = listingHits
-    .filter((h) => h.status === 'listed')
-    .map((h) => ({ listId: h.listId, label: LIST_BY_ID[h.listId]?.label ?? h.listId }));
 
   let rule;
   let reasons;
@@ -81,16 +80,7 @@ export function rateInstitution(record, listingHits = []) {
   else [rule, reasons] = ['none', []];
 
   const baseRating = RUBRIC_RULES.find((r) => r.id === rule).rating;
-  const result = {
-    rating: baseRating,
-    baseRating,
-    rule,
-    ruleText: ruleText(rule),
-    reasons,
-    overridden: false,
-    overrideReason: null,
-    overrideError: null,
-  };
+  const result = { rating: baseRating, baseRating, rule, ruleText: ruleText(rule), reasons, basis: 'profile', ...unchanged };
 
   const override = record.rating?.override ?? null;
   if (override === null || override === baseRating) return result;

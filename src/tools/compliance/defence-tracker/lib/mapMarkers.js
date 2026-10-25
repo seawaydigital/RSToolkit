@@ -2,7 +2,8 @@
 // rating, with a popup that links to the record's permanent address.
 import { escapeHtml } from '../../../../components/ui/map/escapeHtml.js';
 import { dominantColor } from '../../../../components/ui/map/clusterColor.js';
-import { NOT_RATED_LABEL, RATING_LABELS, RATING_ORDER } from './constants.js';
+import { NOT_RATED_LABEL, RATING_ORDER } from './constants.js';
+import { ratingLabel } from './recordText.js';
 
 // Data identity, not the site palette, and never Blaze or green; the dark
 // #061727 cluster count clears 4.5:1 on every fill (tests check all three).
@@ -37,7 +38,7 @@ export function buildTrackerMarkers(records) {
         popupHtml: [
           `<b>${escapeHtml(r.name)}</b>`,
           r.zh && escapeHtml(r.zh),
-          rating ? `Rating: ${escapeHtml(RATING_LABELS[rating])}` : NOT_RATED_LABEL,
+          rating ? `Rating: ${escapeHtml(ratingLabel(r))}` : NOT_RATED_LABEL,
           `<a href="#defence-tracker/${escapeHtml(encodeURIComponent(r.id))}">Open profile</a>`,
         ].filter(Boolean).join('<br/>'),
       };

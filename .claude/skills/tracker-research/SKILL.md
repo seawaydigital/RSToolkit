@@ -14,7 +14,7 @@ You turn a `seed` or `listing-only` record into a `verified` profile: sourced ev
 - **Every claim has a source,** and every source has an archived copy or a written reason it can't have one.
 - **Neutral wording.** Allegations are "reported by <publisher>" and cite the report. No loaded words ("front", "spy school", "malign").
 - **`seedNotes` is a checklist, not a source.** It holds MISP's structured fields (from ASPI's 2019 data). Use it to know what to look for; a claim goes in the profile only once you have found it in a source you cite. Leave `seedNotes` in the file; it is never displayed or exported.
-- **The rubric rates, not you.** Never write a rating by hand. An override moves one level at most and needs `rating.overrideReason`.
+- **The rubric rates, not you.** Never write a rating by hand. An override moves one level at most and needs `rating.overrideReason`. Before you start, a listed institution already shows High "from official lists"; verifying it replaces that with the rubric's rating of your evidence.
 
 ## Branch rule
 

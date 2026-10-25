@@ -13,12 +13,34 @@ const ev = (signal, extra = {}) => ({ signal, summary: 'x', annexB: ['2.3'], sou
 const LISTED = [{ listId: 'ca-nro', status: 'listed', entries: [{}] }];
 const NONE = [{ listId: 'ca-nro', status: 'not-listed', entries: [] }];
 
-test('unverified profiles are not rated', () => {
+test('an unresearched institution on an official list is rated High from the lists alone', () => {
   for (const status of ['seed', 'listing-only']) {
     const a = rateInstitution(rec({ status, evidence: [ev('pla')] }), LISTED);
-    assert.equal(a.rating, null);
-    assert.equal(a.rule, 'not-yet-rated');
+    assert.equal(a.rating, 'high', status);
+    assert.equal(a.rule, 'listed');
+    assert.equal(a.basis, 'lists');
+    assert.deepEqual(a.reasons.map((r) => r.listId), ['ca-nro']);
   }
+});
+
+test('an unresearched institution on no checked list is not rated', () => {
+  const a = rateInstitution(rec({ status: 'seed' }), NONE);
+  assert.equal(a.rating, null);
+  assert.equal(a.rule, 'not-yet-rated');
+  assert.equal(a.basis, null);
+  const pending = rateInstitution(rec({ status: 'listing-only' }), [{ listId: 'us-1286', status: 'not-checked', entries: [] }]);
+  assert.equal(pending.rating, null);
+});
+
+test('an override is never applied to a rating from the lists', () => {
+  const a = rateInstitution(rec({ status: 'seed', rating: { override: 'very-high', overrideReason: 'Reported weapons work.' } }), LISTED);
+  assert.equal(a.rating, 'high');
+  assert.equal(a.overridden, false);
+});
+
+test('a researched profile’s rating comes from the profile', () => {
+  assert.equal(rateInstitution(rec(), LISTED).basis, 'profile');
+  assert.equal(rateInstitution(rec(), NONE).basis, 'profile');
 });
 
 test('any structural signal rates very high', () => {
@@ -92,10 +114,10 @@ test('reasons name the signals or listings behind the rule', () => {
   assert.ok(rateInstitution(rec(), LISTED).reasons.some((r) => r.listId === 'ca-nro'));
 });
 
-test('every rule id has rendered text, and the version is 1.0', () => {
+test('every rule id has rendered text, and the version is 1.1 (list-based ratings)', () => {
   const ids = new Set(RUBRIC_RULES.map((r) => r.id));
   for (const id of ['structural', 'listed-major', 'listed', 'major-research', 'substantial-research', 'limited-links', 'none']) assert.ok(ids.has(id), id);
-  assert.equal(RUBRIC_VERSION, '1.0');
+  assert.equal(RUBRIC_VERSION, '1.1');
 });
 
 test('every signal has a group and a label', () => {

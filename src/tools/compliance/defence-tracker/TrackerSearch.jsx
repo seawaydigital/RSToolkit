@@ -1,6 +1,8 @@
 import { Component, Suspense, lazy, useMemo } from 'react';
 import { searchRecords } from './lib/matcher';
-import { COUNTRY_LABELS, INSTITUTION_TYPES, LISTS, LIST_SHORT_LABELS, RATING_LABELS, RATING_ORDER, SEARCH_PAGE_SIZE as PAGE_SIZE } from './lib/constants';
+import { COUNTRY_LABELS, INSTITUTION_TYPES, LISTS, RATING_LABELS, RATING_ORDER, SEARCH_PAGE_SIZE as PAGE_SIZE } from './lib/constants';
+import { listNotes } from './lib/recordText';
+import ListChips from './ListChips';
 import RatingBadge from './RatingBadge';
 
 // Leaflet loads only when someone opens the map.
@@ -24,7 +26,7 @@ class MapBoundary extends Component {
 const RANK = Object.fromEntries(RATING_ORDER.map((r, i) => [r, i + 1]));
 const isVerified = (record) => record.status === 'verified';
 
-const listedOn = (record) => record.listings.filter((l) => l.status === 'listed').map((l) => LIST_SHORT_LABELS[l.listId]);
+const isListed = (record) => record.listings.some((l) => l.status === 'listed');
 
 function defaultOrder(a, b) {
   return (
@@ -48,7 +50,7 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
         (rating === 'all' || (rating === 'unrated' ? !r.assessment.rating : r.assessment.rating === rating)) &&
         (type === 'all' || (isVerified(r) && r.type === type)) &&
         (country === 'all' || r.country === country) &&
-        (list === 'all' || (list === 'any' ? listedOn(r).length > 0 : r.listings.some((l) => l.listId === list && l.status === 'listed'))),
+        (list === 'all' || (list === 'any' ? isListed(r) : r.listings.some((l) => l.listId === list && l.status === 'listed'))),
     );
   }, [dataset, index, query, rating, type, list, country]);
 
@@ -177,21 +179,26 @@ export default function TrackerSearch({ dataset, index, state, setState }) {
 function ListView({ results, shown, onMore }) {
   return (
     <>
+      {/* Only the name is the link, so a screen reader hears a short link
+          name; the link's ::after stretches it over the whole row. */}
       <ul className="dit-results">
         {results.slice(0, shown).map((r) => {
-          const lists = listedOn(r);
           const place = [r.location?.city, COUNTRY_LABELS[r.country]].filter(Boolean).join(', ');
+          const meta = [r.zh, isVerified(r) ? INSTITUTION_TYPES[r.type] : null, place].filter(Boolean).join(' · ');
+          const notes = listNotes(r);
           return (
-            <li key={r.id}>
-              <a className="dit-result" href={`#defence-tracker/${r.id}`}>
-                <span className="dit-result-main">
-                  <span className="dit-result-name">{r.name}</span>
-                  <span className="dit-result-meta">
-                    {[r.zh, isVerified(r) ? INSTITUTION_TYPES[r.type] : null, place, lists.length ? lists.join(' · ') : 'Not on a checked list'].filter(Boolean).join(' · ')}
-                  </span>
-                </span>
-                <RatingBadge assessment={r.assessment} />
-              </a>
+            <li key={r.id} className="dit-result">
+              <div className="dit-result-main">
+                <a className="dit-result-name" href={`#defence-tracker/${r.id}`}>{r.name}</a>
+                {meta && <p className="dit-result-meta">{meta}</p>}
+                <ListChips record={r} />
+                {notes.length > 0 && (
+                  <ul className="dit-result-notes">
+                    {notes.map((n) => <li key={n}>{n}</li>)}
+                  </ul>
+                )}
+              </div>
+              <RatingBadge assessment={r.assessment} />
             </li>
           );
         })}

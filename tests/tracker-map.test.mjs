@@ -92,6 +92,13 @@ test('tracker popups escape every value and link to the permanent profile addres
   assert.ok(m.popupHtml.includes('<a href="#defence-tracker/harbin-institute-of-technology">Open profile</a>'));
 });
 
+test('a popup says when a rating comes from the official lists', () => {
+  const [fromLists] = buildTrackerMarkers([rec('a', 'high', { assessment: { rating: 'high', basis: 'lists' } })]);
+  assert.ok(fromLists.popupHtml.includes('Rating: High (from official lists)'), fromLists.popupHtml);
+  const [researched] = buildTrackerMarkers([rec('b', 'high', { assessment: { rating: 'high', basis: 'profile' } })]);
+  assert.ok(researched.popupHtml.includes('Rating: High<br/>'), researched.popupHtml);
+});
+
 test('unrated popups say "Not yet rated" and leave out a missing Chinese name', () => {
   const [m] = buildTrackerMarkers([rec('x', null)]);
   assert.ok(m.popupHtml.includes('Not yet rated'));

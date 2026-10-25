@@ -3,7 +3,7 @@
     "version": "2026.10",
     "date": "2026-10-24",
     "changes": [
-      "Dataset created. No profiles are verified yet, so no institution is rated; records show their official listings only."
+      "Dataset created. No profiles have been researched yet. Institutions on an official list are rated High from those lists alone (rubric 1.1), with each listing shown as evidence; institutions on no list are not rated."
     ]
   }
 ]

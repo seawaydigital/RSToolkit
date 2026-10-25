@@ -55,9 +55,17 @@ export default function TrackerMethodology({ dataset, changelog }) {
       <h2 className="dit-heading">How ratings work</h2>
       <div className="dit-prose">
         <p>
-          Only verified profiles are rated. Everything else shows <RatingBadge assessment={null} /> with its official listings, taken
-          from the lists the tracker checks (&quot;The official lists checked&quot;, below, says which and when). A rating comes from the first rule below
-          that a profile meets, and only evidence that cites at least one source counts.
+          A researched (verified) profile is rated by the checklist below: the first rule it meets sets the rating, and only evidence
+          that cites at least one source counts.
+        </p>
+        <p>
+          An institution that has not been researched yet is rated by the one rule that needs no research: if any list the tracker
+          checks names it, it is rated High, marked &quot;from official lists&quot;, and its page shows each listing as evidence with a
+          link to the official source (&quot;The official lists checked&quot;, below, says which lists and when). Research can change that
+          rating: a listed institution found to do major defence research, or to be part of the military, the security services or
+          the defence industry, is rated Very high.
+          An institution on none of the lists that has not been researched shows <RatingBadge assessment={null} />, which does not
+          mean low risk.
         </p>
       </div>
       <div className="dit-table-wrap">
@@ -80,7 +88,8 @@ export default function TrackerMethodology({ dataset, changelog }) {
       </div>
       <div className="dit-prose">
         <p>
-          A reviewer can move a rating up or down by one level, but only with a written reason, which is shown on the profile.
+          A reviewer can move a researched profile&apos;s rating up or down by one level, but only with a written reason, which is
+          shown on the profile. A rating from the official lists alone is never adjusted.
           &quot;Formally listed&quot; means listed by Canada (Named Research Organizations or autonomous sanctions), the United States
           (Entity List, Military End-User List, Specially Designated Nationals, Section 1286 list) or Japan (End User List).
         </p>

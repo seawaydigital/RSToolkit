@@ -34,9 +34,11 @@ test('listings carry the official entry details', () => {
   assert.equal(el.citation, '85 FR 34497');
 });
 
-test('verified records are rated; listing-only records are not', () => {
-  assert.equal(ds.byId.get('harbin-institute-of-technology').assessment.rating, 'very-high');
-  assert.equal(ds.byId.get('example-listed-university').assessment.rating, null);
+test('verified records are rated by their profile; listed records not yet researched, by their lists', () => {
+  const hit = ds.byId.get('harbin-institute-of-technology').assessment;
+  assert.deepEqual([hit.rating, hit.basis], ['very-high', 'profile']);
+  const listed = ds.byId.get('example-listed-university').assessment;
+  assert.deepEqual([listed.rating, listed.basis, listed.rule], ['high', 'lists', 'listed']);
 });
 
 test('an NRO-only record takes its name, aliases and location from nroData', () => {

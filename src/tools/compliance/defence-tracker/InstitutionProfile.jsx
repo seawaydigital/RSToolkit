@@ -4,7 +4,8 @@ import { INSTITUTION_RS_CONTACT, SITE_URL } from '../../../siteConfig';
 import { howItWorksData } from '../../../data/howItWorksData';
 import { straData } from '../../../data/straData';
 import { ANNEX_B, COUNTRY_LABELS, INSTITUTION_TYPES, RATING_LABELS, SIGNALS } from './lib/constants';
-import { UNITS_NOTE, formatRecordForFile, profilePath, sanctionsNotes } from './lib/recordText';
+import { NRO_NOTE, UNITS_NOTE, displayEntries, formatRecordForFile, listEvidence, profilePath, sanctionsNotes } from './lib/recordText';
+import ListChips from './ListChips';
 import RatingBadge from './RatingBadge';
 import TrackerSection from './TrackerSection';
 
@@ -20,7 +21,7 @@ function ListingDetails({ listing, recordName }) {
   if (listing.status !== 'listed') return null;
   return (
     <ul className="dit-listing-entries">
-      {listing.entries.map((e, i) => (
+      {displayEntries(listing.listId, listing.entries).map((e, i) => (
         <li key={e.key ?? i}>
           {e.name && e.name.toLowerCase() !== recordName.toLowerCase() && <span>Listed as “{e.name}”. </span>}
           {[e.date && `Since ${e.date}`, e.citation].filter(Boolean).join(' · ')}
@@ -56,6 +57,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
   const permalink = `${SITE_URL}/${profilePath(record.id)}`;
   const sourceNumbers = new Map(record.sources.map((s, i) => [s.id, i + 1]));
   const notes = sanctionsNotes(record);
+  const fromLists = listEvidence(record);
   const place = [record.location?.city, record.location?.province, COUNTRY_LABELS[record.country]].filter(Boolean).join(', ');
 
   useEffect(() => {
@@ -99,6 +101,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
                 .join(' · ')}
             </p>
           )}
+          <ListChips record={record} />
         </div>
         <div className="dit-rating-box">
           <RatingBadge assessment={a} large />
@@ -127,13 +130,67 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
 
       {!verified && (
         <p className="dit-banner" role="note">
-          <strong>Profile under review.</strong> This institution has not been verified yet, so it is not rated. The listings below come
-          from the official lists the tracker checks; a list marked &quot;Not checked yet&quot; has not been loaded.
+          {a.rating ? (
+            <>
+              <strong>Rated from the official lists.</strong> This institution has not been researched yet, so its rating comes from its
+              listings alone. Research into its defence links could change it.
+            </>
+          ) : (
+            <>
+              <strong>Not rated.</strong> This institution is not on any list the tracker checks and has not been researched yet. That
+              does not mean low risk.
+            </>
+          )}{' '}
+          A list marked &quot;Not checked yet&quot; has not been loaded.
         </p>
       )}
       {notes.map((n) => (
         <p key={n} className="dit-banner dit-banner--sanctions" role="note">{n}</p>
       ))}
+
+      {a.rating && (
+        <>
+          <h2 className="dit-heading">Why this rating</h2>
+          <div className="dit-why">
+            <p>
+              <strong>{RATING_LABELS[a.baseRating]}:</strong> {a.ruleText}
+            </p>
+            {verified && a.reasons.length > 0 && (
+              <ul>
+                {a.reasons.map((r) => (
+                  <li key={r.signal ?? r.listId}>{r.label}</li>
+                ))}
+              </ul>
+            )}
+            {a.overridden && (
+              <p>
+                <strong>Adjusted to {RATING_LABELS[a.rating]}:</strong> {a.overrideReason}
+              </p>
+            )}
+            {fromLists.length > 0 && (
+              <>
+                <h3 className="dit-why-subheading">Evidence from the official lists</h3>
+                <ul className="dit-evidence">
+                  {fromLists.map((e) => (
+                    <li key={e.text}>
+                      {e.text}
+                      {e.url && (
+                        <>
+                          {' '}
+                          <a href={e.url} target="_blank" rel="noopener noreferrer">{e.source}</a>
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            <p className="dit-why-link">
+              <a href="#defence-tracker/methodology">How ratings work</a>
+            </p>
+          </div>
+        </>
+      )}
 
       <h2 className="dit-heading">Formal listings</h2>
       <div className="dit-table-wrap">
@@ -155,9 +212,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
                 <td className={`dit-status-cell dit-status-cell--${l.status}`}>{STATUS_TEXT[l.status]}</td>
                 <td>
                   <ListingDetails listing={l} recordName={record.name} />
-                  {l.listId === 'ca-nro' && l.status === 'listed' && (
-                    <p className="dit-table-note">A current affiliation makes a STRAC-covered grant application ineligible.</p>
-                  )}
+                  {l.listId === 'ca-nro' && l.status === 'listed' && <p className="dit-table-note">{NRO_NOTE}</p>}
                 </td>
               </tr>
             ))}
@@ -181,28 +236,6 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
 
       {verified && (
         <>
-          <h2 className="dit-heading">Why this rating</h2>
-          <div className="dit-why">
-            <p>
-              <strong>{RATING_LABELS[a.baseRating]}:</strong> {a.ruleText}
-            </p>
-            {a.reasons.length > 0 && (
-              <ul>
-                {a.reasons.map((r) => (
-                  <li key={r.signal ?? r.listId}>{r.label}</li>
-                ))}
-              </ul>
-            )}
-            {a.overridden && (
-              <p>
-                <strong>Adjusted to {RATING_LABELS[a.rating]}:</strong> {a.overrideReason}
-              </p>
-            )}
-            <p className="dit-why-link">
-              <a href="#defence-tracker/methodology">How ratings work</a>
-            </p>
-          </div>
-
           <h2 className="dit-heading">Evidence for your NSGRP form (Annex B)</h2>
           {byQuestion.map(([q, items]) => (
             <TrackerSection key={q} title={`${q} ${ANNEX_B[q]}`} count={items.length}>

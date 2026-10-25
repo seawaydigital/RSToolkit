@@ -22,11 +22,11 @@ Canadian NRO listings come from `src/data/nroData.js`, the same data NRO Lookup 
 
 ## Record statuses
 
-- **`seed`**: created from the MISP galaxy list. Its MISP fields live in `seedNotes`, which is never displayed. Not rated.
-- **`listing-only`**: known from an official list only. Not rated.
-- **`verified`**: researched, with sourced evidence. Rated by the rubric.
+- **`seed`**: created from the MISP galaxy list. Its MISP fields live in `seedNotes`, which is never displayed. Not researched.
+- **`listing-only`**: known from an official list only. Not researched.
+- **`verified`**: researched, with sourced evidence. Rated by the whole rubric.
 
-Only verified records carry `evidence`, and only they get a rating. Everything else shows "Not yet rated" with its official listings.
+Only verified records carry `evidence`. A record not researched yet is rated by the official lists alone (rubric 1.1): High, marked "from official lists", when any checked list names it, with each listing shown as evidence; "Not yet rated" when none does. Verifying a record replaces that with the rubric's rating of the profile. No one writes a rating by hand.
 
 ## Rules for verified records
 
