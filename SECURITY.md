@@ -54,7 +54,7 @@ The audit found **no vulnerabilities in the application code**. It made seven ha
 | Outbound requests carry no credentials | `fetch()` uses the default `credentials: 'same-origin'`, so no cookies go to the geocoders. Wikipedia is queried with `origin=*` (anonymous CORS). The referrer policy is `strict-origin-when-cross-origin`, so third parties see the origin only, never the `#tool` path. |
 | No secrets in the repo | Scanned for API keys, tokens and passwords: none found. Map-provider keys (optional) are injected at build time from CI secrets (§5). |
 | Tracker addresses are inert | `#defence-tracker/<id>` is split by `parseHashRoute()` (`src/routing.js`) with a guarded `decodeURIComponent`. The id is looked up in a `Map` of records and never rendered as HTML; an unknown or malformed id shows "not found". User-typed text is never put in the address. |
-| Exports can't carry spreadsheet formulas | The batch-check CSV and the open-data CSV pass every cell through `csvCell()`, which prefixes a `'` to any value starting with `=`, `+`, `-`, `@`, tab or carriage return. Files are built in the browser; nothing is uploaded. |
+| Exports can't carry spreadsheet formulas | The batch-check CSV, the copied batch table (text and HTML) and the open-data CSV pass every cell through the same rule (`csvCell()`), which prefixes a `'` to any value starting with `=`, `+`, `-`, `@`, tab or carriage return. Files are built in the browser; nothing is uploaded. |
 | No cookies, analytics or trackers | None in the code. The production build contacts only the host on page load. Confirmed in a browser: on the NRO map, the only other host contacted was the Esri tile server. |
 
 ### 3a. Maintenance automation (Defence Institution Tracker)
