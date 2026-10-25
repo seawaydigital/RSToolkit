@@ -5560,6 +5560,13 @@ a:hover {
   line-height: 1.6;
 }
 
+.dit-unit-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
 .dit-listing-entries {
   list-style: none;
   margin: 0;
@@ -5777,5 +5784,20 @@ a:hover {
   .dit-section-chevron { display: none; }
   .dit-section, .dit-why, .dit-banner { break-inside: avoid; }
   .dit-result { border: none; padding: 4px 0; }
-  .dit-badge { border: 1px solid #000 !important; color: #000 !important; background: none !important; }
+  /* Screen colours are light on dark; on paper every tracker element prints
+     dark on white, like the Risk Checklist's printout. */
+  .tool-page [class*="dit-"] {
+    color: #000 !important;
+    background: transparent !important;
+    border-color: #9ca3af !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  .tool-page .dit-table th, .tool-page .dit-table td { color: #000 !important; }
+  .tool-page .dit-subline--muted, .tool-page .dit-table-sub, .tool-page .dit-table-note,
+  .tool-page .dit-footnote, .tool-page .dit-rating-date, .tool-page .dit-count { color: #374151 !important; }
+  .tool-page a[class*="dit-"], .tool-page [class*="dit-"] a { color: #00427a !important; text-decoration: underline !important; }
+  .tool-page .dit-banner { border: 1px solid #000 !important; padding: 8px 10px !important; }
+  .tool-page .dit-banner--sanctions { border-width: 2px !important; }
+  .tool-page .dit-badge { border: 1px solid #000 !important; }
 }

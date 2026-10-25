@@ -92,11 +92,13 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
           <p className="dit-subline">
             {[record.zh, record.acronyms.join(', '), record.domains.join(', '), place].filter(Boolean).join(' · ')}
           </p>
-          <p className="dit-subline dit-subline--muted">
-            {[verified ? INSTITUTION_TYPES[record.type] : null, verified && record.supervisors.length ? `Supervised by ${record.supervisors.join(', ')}` : null]
-              .filter(Boolean)
-              .join(' · ')}
-          </p>
+          {verified && (
+            <p className="dit-subline dit-subline--muted">
+              {[INSTITUTION_TYPES[record.type], record.supervisors.length ? `Supervised by ${record.supervisors.join(', ')}` : null]
+                .filter(Boolean)
+                .join(' · ')}
+            </p>
+          )}
         </div>
         <div className="dit-rating-box">
           <RatingBadge assessment={a} large />

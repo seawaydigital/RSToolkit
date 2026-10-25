@@ -40,7 +40,14 @@ function ResultRows({ line, byId }) {
         <td>{MATCHED_BY_LABELS[m.matchedBy]}</td>
         <td><RatingBadge assessment={r.assessment} /></td>
         <td className={nro ? 'dit-status-cell--listed' : undefined}>{nro ? 'Yes' : 'No'}</td>
-        <td>{others.join(', ') || '—'}</td>
+        <td>
+          {others.join(', ') || (r.units?.length ? '' : '—')}
+          {r.units?.map((u) => (
+            <span key={u.id} className="dit-unit-note">
+              Listed unit: <a href={`#defence-tracker/${u.id}`}>{u.name}</a> ({u.lists.join(', ')})
+            </span>
+          ))}
+        </td>
       </tr>
     );
   });
