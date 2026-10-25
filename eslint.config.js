@@ -6,7 +6,8 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // .superpowers/ holds git-ignored working files (plan ledgers, test renders).
+  globalIgnores(['dist', '.superpowers']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
