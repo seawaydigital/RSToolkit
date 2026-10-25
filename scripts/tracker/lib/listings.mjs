@@ -131,10 +131,10 @@ export function compareNroNames(liveNames, orgs) {
   const ours = orgs.map((o) => [normalizePhrase(o.name), o]);
   const covers = (a, b) => a === b || a.startsWith(`${b} `);
   return [
-    ...live.filter(([k]) => !ours.some(([o]) => covers(o, k))).map(([, n]) => `On the NRO page but not in nroData.js: ${n}`),
+    ...live.filter(([k]) => !ours.some(([o]) => covers(o, k))).map(([, n]) => `On the NRO page but not in nroData.js: ${sanitizeForIssue(n)}`),
     ...ours
       .filter(([o, org]) => !org.parentOrg && !live.some(([k]) => covers(o, k)))
-      .map(([, org]) => `In nroData.js but not on the NRO page: ${org.name}`),
+      .map(([, org]) => `In nroData.js but not on the NRO page: ${sanitizeForIssue(org.name)}`),
   ];
 }
 
@@ -242,8 +242,10 @@ export function diffEntries(before, after) {
   };
 }
 
-const code = (s) => `\`${String(s).replace(/`/g, "'").replace(/@/g, '')}\``;
-const entryLine = (e) => `${code(e.name)} (${[e.list, e.date, e.citation].filter(Boolean).join(', ')}) → ${code(e.institution ?? 'unmapped')}`;
+// For text that ends up in a GitHub issue: a code span, so a name or message
+// from outside the repository can't mention anyone (@) or link elsewhere.
+export const sanitizeForIssue = (s) => `\`${String(s).replace(/`/g, "'").replace(/@/g, '')}\``;
+const entryLine = (e) => `${sanitizeForIssue(e.name)} (${[e.list, e.date, e.citation].filter(Boolean).join(', ')}) → ${sanitizeForIssue(e.institution ?? 'unmapped')}`;
 
 export function renderSyncReport(sections, failures = []) {
   const lines = [];
@@ -252,7 +254,7 @@ export function renderSyncReport(sections, failures = []) {
       ['Added', s.added ?? [], entryLine],
       ['Removed', s.removed ?? [], entryLine],
       ['Changed', s.changed ?? [], entryLine],
-      ['New listing-only records', s.created ?? [], code],
+      ['New listing-only records', s.created ?? [], sanitizeForIssue],
       ['Notes', s.notes ?? [], String],
     ].filter(([, items]) => items.length);
     if (!parts.length) continue;
@@ -263,6 +265,6 @@ export function renderSyncReport(sections, failures = []) {
       if (items.length > 200) lines.push(`  - …and ${items.length - 200} more`);
     }
   }
-  if (failures.length) lines.push("### Couldn't check", ...failures.map((f) => `- ${f}`));
+  if (failures.length) lines.push("### Couldn't check", ...failures.map((f) => `- ${sanitizeForIssue(f)}`));
   return lines.join('\n');
 }

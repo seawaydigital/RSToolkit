@@ -17,6 +17,7 @@ import {
   parseCaSanctionsXml,
   parseNroPage,
   resolveInstitutionAliases,
+  sanitizeForIssue,
 } from './listings.mjs';
 
 const DOD_1286_PAGE = 'https://basicresearch.defense.gov/Pubs/Academic-Research-Security/';
@@ -102,7 +103,7 @@ export async function runSync({ write = false, today = new Date().toISOString().
       const links = linksMatching(await fetchText(page), pattern);
       const stored = raw.snapshots[name].sourceUrl;
       const fresh = links.filter((l) => !stored || !stored.endsWith(l.split('/').pop()));
-      if (fresh.length) sections.push({ title: `${name}: list page`, notes: fresh.map((l) => `Linked file not in ${name}.json: ${l} — check whether a new list was published.`) });
+      if (fresh.length) sections.push({ title: `${name}: list page`, notes: fresh.map((l) => `Linked file not in ${name}.json: ${sanitizeForIssue(l)} — check whether a new list was published.`) });
     } catch (err) {
       failures.push(`${name} list page (${page}): ${err.message} — check it by hand.`);
     }

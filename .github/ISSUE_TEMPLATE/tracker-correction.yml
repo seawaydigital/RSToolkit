@@ -1,0 +1,36 @@
+name: Defence Institution Tracker correction
+description: Report an error in a tracker profile, rating or listing.
+title: 'Tracker correction: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the tracker accurate. This issue is public, so please don't include anything confidential, and report errors about institutions only — never personal information about individuals. You can also email the correction privately; the address is on the tracker's methodology page.
+  - type: input
+    id: institution
+    attributes:
+      label: Institution name or permalink
+      description: For example "Harbin Institute of Technology", or the profile's address ending in #defence-tracker/harbin-institute-of-technology.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Which fact, listing or rating is incorrect, and what it should say instead.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source for the correction
+      description: A link to an official list, a government document, the institution's own website, or another reliable published source.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: A way to reach you if there are questions. Leave blank to stay anonymous; anything you enter here is public.
+    validations:
+      required: false

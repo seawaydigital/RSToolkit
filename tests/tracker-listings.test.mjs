@@ -194,8 +194,8 @@ test('the NRO comparison ignores split-out units and names the page truncates', 
   ];
   const live = ['Harbin Institute of Technology', 'Northwest Institute of Nuclear', 'Chengdu Fine Optical Engineering Research Center', 'Brand New University'];
   assert.deepEqual(compareNroNames(live, orgs), [
-    'On the NRO page but not in nroData.js: Brand New University',
-    'In nroData.js but not on the NRO page: Removed Institute',
+    'On the NRO page but not in nroData.js: `Brand New University`',
+    'In nroData.js but not on the NRO page: `Removed Institute`',
   ]);
 });
 

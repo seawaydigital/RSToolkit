@@ -73,7 +73,8 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
   }
 
   const subject = encodeURIComponent(`Tracker correction: ${record.name} (${record.id})`);
-  const issueUrl = `${howItWorksData.sourceUrl}/issues/new?template=tracker-correction.yml&title=${subject}`;
+  // Issue forms prefill a field from a query parameter named after its id.
+  const issueUrl = `${howItWorksData.sourceUrl}/issues/new?template=tracker-correction.yml&title=${subject}&institution=${encodeURIComponent(`${record.name} (#defence-tracker/${record.id})`)}`;
   const byQuestion = Object.keys(ANNEX_B).map((q) => [q, record.evidence.filter((e) => e.annexB?.includes(q))]);
   const labs = record.evidence.filter((e) => e.signal === 'defence-key-labs');
 
