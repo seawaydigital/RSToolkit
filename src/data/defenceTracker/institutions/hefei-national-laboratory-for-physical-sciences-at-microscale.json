@@ -1,11 +1,14 @@
 {
   "id": "hefei-national-laboratory-for-physical-sciences-at-microscale",
   "name": "Hefei National Laboratory for Physical Sciences at Microscale",
-  "zh": null,
-  "zhAliases": [],
+  "zh": "合肥微尺度物质科学国家研究中心",
+  "zhAliases": [
+    "合肥微尺度物质科学国家实验室"
+  ],
   "aliases": [
     "National Research Center for Microscale",
-    "Microscale National Research Center"
+    "Microscale National Research Center",
+    "Hefei National Research Center for Physical Sciences at the Microscale"
   ],
   "acronyms": [],
   "domains": [],
@@ -13,29 +16,73 @@
   "type": "research-institute",
   "location": {
     "city": "Hefei",
-    "province": null,
+    "province": "Anhui",
     "lat": 31.8409,
     "lng": 117.2639
   },
-  "supervisors": [],
-  "parent": null,
+  "supervisors": [
+    "University of Science and Technology of China (host)",
+    "Ministry of Science and Technology"
+  ],
+  "parent": "university-of-science-and-technology-of-china",
   "ids": {
     "nro": "hefei-national-laboratory-for-physical-sciences-at-microscale"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "China’s Ministry of Science and Technology approved the centre in November 2017 as one of six national research centres, built on a pilot national laboratory at the University of Science and Technology of China (USTC); the US Entity List gives its address on USTC’s Hefei campus. The university’s newspaper says its research is led by quantum control and quantum information, and that the laboratory led the development of the Micius quantum science satellite and the Beijing–Shanghai quantum communication line.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "quantum-communications"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "合肥微尺度物质科学国家研究中心获批组建 (Hefei National Research Center for Physical Sciences at the Microscale approved; issue 872, 25 November 2017)",
+      "publisher": "University of Science and Technology of China (中国科大报, the university newspaper)",
+      "url": "https://zgkdb.ustc.edu.cn/download/751",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026165359/https://zgkdb.ustc.edu.cn/download/751"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Entities and Revision of Entries on the Entity List; and Addition of Entity to the Military End-User (MEU) List (86 FR 67317, 26 November 2021)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2021-11-26/html/2021-25808.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026165414/https://www.govinfo.gov/content/pkg/FR-2021-11-26/html/2021-25808.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": null
