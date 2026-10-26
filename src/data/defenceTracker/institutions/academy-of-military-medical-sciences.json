@@ -1,8 +1,10 @@
 {
   "id": "academy-of-military-medical-sciences",
   "name": "Academy of Military Medical Sciences",
-  "zh": "中国人民解放军军事医学科学院",
-  "zhAliases": [],
+  "zh": "军事科学院军事医学研究院",
+  "zhAliases": [
+    "中国人民解放军军事医学科学院"
+  ],
   "aliases": [],
   "acronyms": [
     "AMMS"
@@ -16,27 +18,80 @@
     "lat": 39.9006,
     "lng": 116.2643
   },
-  "supervisors": [],
+  "supervisors": [
+    "Academy of Military Science (PLA)"
+  ],
   "parent": null,
   "ids": {
     "nro": "academy-of-military-medical-sciences",
     "ror": "02bv3c993",
     "wikidata": "Q10872936"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The Academy of Military Medical Sciences is part of the PLA’s Academy of Military Science, which Xinhua describes as an important PLA research institution. The US Commerce Department listed it and 11 of its institutes in December 2021, finding that they use biotechnology to support Chinese military end uses and end users, including purported brain-control weaponry.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The Academy of Military Medical Sciences is part of the PLA’s Academy of Military Science.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "life-science"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Xinhua report on the inspection of the Academy of Military Science, 16 May 2018 (军事科学院)",
+      "publisher": "Xinhua News Agency, on the Chinese government website (gov.cn)",
+      "url": "https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032215/https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Certain Entities to the Entity List and Revision of an Entry on the Entity List (86 FR 71557, 17 December 2021)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2021-12-17/html/2021-27406.htm",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032307/https://www.govinfo.gov/content/pkg/FR-2021-12-17/html/2021-27406.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
