@@ -16,26 +16,76 @@
     "lat": 31.8653,
     "lng": 117.2172
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "fcd54182-9c27-446a-8ca2-f453fd7dff1f",
     "nro": "army-academy-of-artillery-and-air-defense"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Academy of Artillery and Air Defense, formed in 2017 by merging PLA artillery and air defence academies, as a PLA Army academy with its main campus in Hefei and branch campuses in Nanjing and Zhengzhou.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy reports to PLA Army headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Nanjing branch campus",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Zhengzhou campus",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 69–70",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
