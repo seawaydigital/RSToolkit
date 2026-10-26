@@ -18,7 +18,9 @@
     "lat": 39.9578,
     "lng": 116.3098
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "cfd7a229-e4d9-442c-beb8-ecbbdb3556d3",
@@ -26,20 +28,83 @@
     "ror": "01skt4w74",
     "wikidata": "Q23101"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "BIT is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. BIT describes itself as new China’s first defence-industry university (from 1952) and counts weapons science and technology among its leading disciplines.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "BIT reports to the Ministry of Industry and Information Technology.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons",
+    "robotics-autonomous-systems"
+  ],
+  "subunits": [
+    {
+      "name": "Zhuhai campus (Guangdong)",
+      "zh": "珠海校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Xiong’an campus (planned)",
+      "zh": "雄安校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About BIT)",
+      "publisher": "Beijing Institute of Technology",
+      "url": "https://www.bit.edu.cn/gbxxgk/xxjj_sjb/index.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026023123/https://www.bit.edu.cn/gbxxgk/xxjj_sjb/index.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
