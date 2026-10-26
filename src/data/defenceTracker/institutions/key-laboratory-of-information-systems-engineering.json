@@ -1,40 +1,85 @@
 {
   "id": "key-laboratory-of-information-systems-engineering",
   "name": "Key Laboratory of Information Systems Engineering",
-  "zh": null,
-  "zhAliases": [],
-  "aliases": [],
+  "zh": "信息系统工程国防科技重点实验室",
+  "zhAliases": [
+    "信息系统工程重点实验室"
+  ],
+  "aliases": [
+    "Defense S&T Key Laboratory of Information Systems Engineering"
+  ],
   "acronyms": [
     "KLISE"
   ],
   "domains": [],
   "country": "CN",
-  "type": "research-institute",
+  "type": "military",
   "location": {
-    "city": "Beijing",
-    "province": null,
-    "lat": 39.9568,
-    "lng": 116.3542
+    "city": "Changsha",
+    "province": "Hunan",
+    "lat": 28.229,
+    "lng": 112.9949
   },
-  "supervisors": [],
-  "parent": null,
+  "supervisors": [
+    "National University of Defense Technology (host, per its US Entity List address)"
+  ],
+  "parent": "national-university-of-defense-technology",
   "ids": {
     "nro": "key-laboratory-of-information-systems-engineering"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The US Entity List gives the laboratory’s address as the Science and Technology Building of the National University of Defense Technology, the PLA’s defence technology university in Changsha, and the US Defense Department’s Section 1286 list names it a national defence science and technology key laboratory (信息系统工程国防科技重点实验室). The Commerce Department added it in December 2022 with Chinese AI chip developers it said are, or are closely tied to, government bodies that support the Chinese military and defence industry.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Additions and Revisions to the Entity List and Conforming Removal From the Unverified List (87 FR 77505, 19 December 2022)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2022-12-19/html/2022-27151.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026171341/https://www.govinfo.gov/content/pkg/FR-2022-12-19/html/2022-27151.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "FY2025 Section 1286 List (published 23 July 2026)",
+      "publisher": "US Department of Defense, Office of the Under Secretary of Defense for Research and Engineering",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260913102541/https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
