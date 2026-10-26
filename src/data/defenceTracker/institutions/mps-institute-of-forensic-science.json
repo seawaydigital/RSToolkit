@@ -1,41 +1,121 @@
 {
   "id": "mps-institute-of-forensic-science",
   "name": "Ministry of Public Security's Institute of Forensic Science of China",
-  "zh": null,
-  "zhAliases": [],
+  "zh": "公安部鉴定中心",
+  "zhAliases": [
+    "公安部物证鉴定中心",
+    "公安部第二研究所"
+  ],
   "aliases": [
     "Forensic Identification Center of the Ministry of Public Security of the People's Republic of China",
-    "Material Identification Center of the Ministry of Public Security of the People's Republic of China"
+    "Material Identification Center of the Ministry of Public Security of the People's Republic of China",
+    "Institute of Forensic Science of China",
+    "Institute of Forensic Science, Ministry of Public Security"
   ],
   "acronyms": [],
   "domains": [],
   "country": "CN",
-  "type": "research-institute",
+  "type": "security",
   "location": {
     "city": "Beijing",
-    "province": null,
+    "province": "Beijing",
     "lat": 39.9087,
     "lng": 116.3392
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Public Security"
+  ],
   "parent": null,
   "ids": {
     "nro": "mps-institute-of-forensic-science"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "The institute is the Ministry of Public Security’s national forensic laboratory (公安部物证鉴定中心, now 公安部鉴定中心). Founded in the early 1970s as the ministry’s 126 Institute, later its Second Research Institute, and established on that basis in 1996, it examines physical evidence and crime scenes for the central authorities and the ministry and re-examines evidence that provincial public security bureaus submit; in 2010 it was named one of China’s ten national-level forensic authentication bodies. The ministry supervises the forensic science journal it publishes.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "In June 2020 the US Commerce Department added the institute to the Entity List, finding it implicated in human rights violations and abuses in China’s campaign of repression, mass arbitrary detention, forced labour and high-technology surveillance against Uighurs, Kazakhs and other Muslim minorities in Xinjiang. The department removed it in November 2023 after a removal review.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "10家国家级司法鉴定机构公布 (China names its ten national-level forensic authentication institutions)",
+      "publisher": "Hunan Provincial Department of Justice",
+      "url": "https://sft.hunan.gov.cn/xxgk_71079/gzdt/sjdt/201512/t20151218_2008659.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "unavailable": "The Wayback Machine could not reach the site (HTTP 523, two attempts on 2026-10-26); the page was live when read."
+      }
+    },
+    {
+      "id": "s2",
+      "title": "期刊介绍 (About the journal 刑事技术, Forensic Science and Technology)",
+      "publisher": "刑事技术 (Forensic Science and Technology), published by the Ministry of Public Security’s forensic centre",
+      "url": "http://www.xsjs-cifs.com/CN/column/column1.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026172228/https://www.xsjs-cifs.com/CN/column/column1.shtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Addition of Certain Entities to the Entity List; Revision of Existing Entries on the Entity List (85 FR 34503, 5 June 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10868.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026172414/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10868.htm"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "Entity List Removal (88 FR 80131, 17 November 2023)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2023-11-17/html/2023-25557.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026172436/https://www.govinfo.gov/content/pkg/FR-2023-11-17/html/2023-25557.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
