@@ -6,6 +6,7 @@ import {
   checkSources,
   collectSources,
   looksLikeBlockedCapture,
+  rawCaptureUrl,
   waybackSnapshotUrl,
 } from '../scripts/tracker/lib/sources.mjs';
 
@@ -28,6 +29,27 @@ test('size is measured in bytes, so a short Chinese page is not mistaken for an 
 test('a reCAPTCHA script on an ordinary page does not make the capture suspect', () => {
   const body = `${page}<script src="https://www.google.com/recaptcha/api.js"></script><script>grecaptcha.ready(() => {})</script>`;
   assert.equal(looksLikeBlockedCapture({ status: 200, body }), false);
+});
+
+// Seen on the Seven Sons pilot: justice.gov gave the Wayback Machine a blank
+// page, and a university site an HTTP 202 script challenge; both were bigger
+// than 2,000 bytes, all of it script and markup.
+test('a capture that is all script and markup, like an anti-bot challenge, is flagged', () => {
+  const challenge = `<html><head><style>${'.a{color:red}'.repeat(100)}</style><script>${'var a=1;'.repeat(400)}</script></head><body>&nbsp;</body></html>`;
+  assert.ok(Buffer.byteLength(challenge) > 2000);
+  assert.equal(looksLikeBlockedCapture({ status: 200, body: challenge }), true);
+  assert.equal(looksLikeBlockedCapture({ status: 200, body: `<p>${page}</p><script>${'var a=1;'.repeat(400)}</script>` }), false);
+});
+
+test('a capture of anything but an HTTP 200 page is flagged', () => {
+  assert.equal(looksLikeBlockedCapture({ status: 202, body: page }), true);
+});
+
+test('captures are checked as originally served, without the Wayback toolbar', () => {
+  assert.equal(
+    rawCaptureUrl('https://web.archive.org/web/20261026022954/https://www.justice.gov/usao-ndca/pr/x'),
+    'https://web.archive.org/web/20261026022954id_/https://www.justice.gov/usao-ndca/pr/x',
+  );
 });
 
 test('only sources on verified records are collected', () => {

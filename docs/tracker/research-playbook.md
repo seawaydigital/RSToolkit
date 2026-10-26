@@ -44,7 +44,7 @@ Every source on a verified profile needs an archived copy or a reason.
 
 1. Add the sources to the record while it is still a `seed` (the schema rejects evidence on unverified records), and run `npm test`.
 2. Run `npm run tracker:archive -- --id <id>`. It saves each unarchived source to the Wayback Machine, five seconds apart, and records the snapshot. Optional `ARCHIVE_ORG_ACCESS_KEY` / `ARCHIVE_ORG_SECRET` environment variables (archive.org S3 keys) raise the rate limit. Keep them out of the repo.
-3. A capture the script flags as blocked or empty (an anti-bot page, an error, a near-empty page) is not recorded. Try archive.today by hand. If that fails too, record `"archive": { "unavailable": "<reason>" }`.
+3. A capture the script flags as blocked or empty (an anti-bot page, an error, a near-empty page) is not recorded. The script judges the capture as the site served it and counts only visible text, because some sites hand the Wayback Machine a page that is all script: justice.gov sends a blank page, and some Chinese university sites an HTTP 202 challenge. First look for an earlier good capture of the same address (the Wayback Machine's calendar for that URL, or `https://web.archive.org/cdx/search/cdx?url=<url>`) and check that it shows the text you cite; justice.gov press releases usually have one. Otherwise try archive.today by hand. If that fails too, record `"archive": { "unavailable": "<reason>" }`.
 
 ## Finishing a profile
 

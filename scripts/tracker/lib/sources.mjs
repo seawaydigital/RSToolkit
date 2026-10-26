@@ -13,14 +13,23 @@ const isHttpUrl = (s) => typeof s === 'string' && /^https?:\/\/\S+$/.test(s);
 export const hasArchive = (source) =>
   isHttpUrl(source.archive?.url) || (typeof source.archive?.unavailable === 'string' && source.archive.unavailable.trim() !== '');
 
-// An error status, a near-empty page, or a block-page phrase. Scripts are left
-// out of the phrase search, so an ordinary page that loads reCAPTCHA passes.
+// Anything but a 200, a page with almost no visible text, or a block-page
+// phrase. Size is the visible text's, in bytes (scripts, styles and markup
+// left out), because anti-bot challenges are large but all script: justice.gov
+// gave the Wayback Machine a blank page and a university site an HTTP 202
+// challenge. Scripts are also left out of the phrase search, so an ordinary
+// page that loads reCAPTCHA passes.
 export function looksLikeBlockedCapture({ status, body }) {
-  if (status >= 400) return true;
-  const text = String(body ?? '');
-  if (Buffer.byteLength(text, 'utf8') < MIN_CAPTURE_BYTES) return true;
-  const visible = text.replace(/<script\b[\s\S]*?<\/script>/gi, '').toLowerCase();
-  return BLOCK_MARKERS.some((marker) => visible.includes(marker));
+  if (status !== 200) return true;
+  const visible = String(body ?? '')
+    .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;|&#160;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (Buffer.byteLength(visible, 'utf8') < MIN_CAPTURE_BYTES) return true;
+  const lower = visible.toLowerCase();
+  return BLOCK_MARKERS.some((marker) => lower.includes(marker));
 }
 
 export function collectSources(records) {
@@ -52,6 +61,10 @@ export async function checkSources(entries, { fetchImpl = fetch, concurrency = 4
   await Promise.all(Array.from({ length: Math.min(concurrency, queue.length) }, worker));
   return { dead: dead.sort((a, b) => a.index - b.index).map((d) => d.item), missingArchive };
 }
+
+// The capture as the site served it, without the Wayback toolbar ("id_"),
+// which would otherwise count as page content.
+export const rawCaptureUrl = (snapshot) => snapshot.replace(/\/web\/(\d{14})\//, '/web/$1id_/');
 
 // Save Page Now answers with the snapshot itself (after a redirect) or with
 // its address in Content-Location. Anything else is not a snapshot.

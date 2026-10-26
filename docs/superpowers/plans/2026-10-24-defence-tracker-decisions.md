@@ -107,6 +107,11 @@ Andrew saw the preview, asked why everything read "Not yet rated", and approved 
 - Ruling: chips are never Blaze (they are not buttons): NRO uses a sky tint with primary text, sanctions the red tint, others neutral; contrast measured at 5.1:1 or better on every surface they sit on — cost: none.
 - Supersedes the review ruling on "Profile under review": unverified profiles now say "Rated from the official lists" or "Not rated", which is true for each.
 
+## The Seven Sons pilot (2026-10-25)
+
+- Found while archiving the pilot's sources: the capture check passed six blank captures. justice.gov gave the Wayback Machine an empty page and a university site an HTTP 202 script challenge, each over 2,000 bytes of script and markup, and the check measured the whole page, Wayback toolbar included. Fixed: it reads the capture as served (`id_`), counts visible text only, and accepts only HTTP 200 — "a capture that is all script and markup, like an anti-bot challenge, is flagged" and "a capture of anything but an HTTP 200 page is flagged" RED→GREEN; checked against the real blank, challenge and good captures. Ruling: the script still doesn't look for an earlier good capture itself; the playbook says how to find one by hand — cost if wrong: a few minutes per flagged source each month.
+- Ruling: ESLint ignores `.worktrees/`, where the project keeps other branches' checkouts (the pilot's `tracker/content` checkout sits there) — they lint their own files — cost: none.
+
 ## Minor findings left for later
 
 - the dated log line appended to the batch CSV is unquoted, so its commas split it into three columns (BatchCheck.jsx downloadCsv).

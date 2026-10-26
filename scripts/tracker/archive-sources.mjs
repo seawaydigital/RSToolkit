@@ -14,7 +14,7 @@
 // into the record by hand.
 import { readRawData, writeInstitution } from './lib/loadData.mjs';
 import { USER_AGENT, sleep } from './lib/http.mjs';
-import { hasArchive, looksLikeBlockedCapture, waybackSnapshotUrl } from './lib/sources.mjs';
+import { hasArchive, looksLikeBlockedCapture, rawCaptureUrl, waybackSnapshotUrl } from './lib/sources.mjs';
 
 const SAVE_GAP_MS = 5000;
 
@@ -56,7 +56,7 @@ for (const record of targets) {
         failed.push({ label, url: source.url, reason: `no snapshot returned (HTTP ${res.status})` });
         continue;
       }
-      const capture = await fetch(snapshot, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(60000) });
+      const capture = await fetch(rawCaptureUrl(snapshot), { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(60000) });
       const body = await capture.text();
       if (looksLikeBlockedCapture({ status: capture.status, body })) {
         suspect.push({ label, url: source.url, snapshot });

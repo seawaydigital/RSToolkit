@@ -6,8 +6,9 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  // .superpowers/ holds git-ignored working files (plan ledgers, test renders).
-  globalIgnores(['dist', '.superpowers']),
+  // .superpowers/ holds git-ignored working files (plan ledgers, test renders);
+  // .worktrees/ holds other branches' checkouts, which lint their own files.
+  globalIgnores(['dist', '.superpowers', '.worktrees']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
