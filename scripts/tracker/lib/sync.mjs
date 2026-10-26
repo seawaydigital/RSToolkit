@@ -18,10 +18,12 @@ import {
   parseNroPage,
   resolveInstitutionAliases,
   sanitizeForIssue,
+  unknownListFiles,
 } from './listings.mjs';
 
-const DOD_1286_PAGE = 'https://basicresearch.defense.gov/Pubs/Academic-Research-Security/';
-const METI_EUL_PAGE = 'https://www.meti.go.jp/policy/anpo/law05.html';
+const DOD_1286_PAGE = 'https://www.cto.mil/fy25-ndaa-section-1286-list/';
+// METI's revision log, which links each revision's list body as YYYYMMDD_3.pdf.
+const METI_EUL_PAGE = 'https://www.meti.go.jp/policy/anpo/law09-2.html';
 
 const linksMatching = (html, pattern) =>
   [...new Set([...String(html).matchAll(/href="([^"]+)"/g)].map((m) => m[1]).filter((h) => pattern.test(h)))];
@@ -97,12 +99,12 @@ export async function runSync({ write = false, today = new Date().toISOString().
 
   for (const [name, page, pattern] of [
     ['us-1286', DOD_1286_PAGE, /1286[^"]*\.pdf/i],
-    ['jp-meti-eul', METI_EUL_PAGE, /(end.?user|eul|user_?list)[^"]*\.(pdf|xlsx?)/i],
+    ['jp-meti-eul', METI_EUL_PAGE, /\d{8}[-_]3\.pdf/i],
   ]) {
     try {
       const links = linksMatching(await fetchText(page), pattern);
-      const stored = raw.snapshots[name].sourceUrl;
-      const fresh = links.filter((l) => !stored || !stored.endsWith(l.split('/').pop()));
+      // The revision log links every past edition too; only the newest counts.
+      const fresh = unknownListFiles(name === 'jp-meti-eul' ? links.slice(0, 1) : links, raw.snapshots[name]);
       if (fresh.length) sections.push({ title: `${name}: list page`, notes: fresh.map((l) => `Linked file not in ${name}.json: ${sanitizeForIssue(l)} — check whether a new list was published.`) });
     } catch (err) {
       failures.push(`${name} list page (${page}): ${err.message} — check it by hand.`);

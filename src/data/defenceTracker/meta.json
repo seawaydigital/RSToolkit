@@ -10,7 +10,7 @@
     "year": 2026
   },
   "listsCheckedOn": {
-    "ca-nro": "2026-10-25"
+    "ca-nro": "2026-10-26"
   },
   "acknowledgement": "The original China Defence Universities Tracker (2019) by ASPI's International Cyber Policy Centre showed how useful a resource like this is. None of its text, ratings or paid content are used here.",
   "attributions": [
@@ -52,15 +52,15 @@
     },
     {
       "name": "Section 1286 list, US Department of Defense",
-      "url": "https://basicresearch.defense.gov/Pubs/Academic-Research-Security/",
+      "url": "https://www.cto.mil/fy25-ndaa-section-1286-list/",
       "license": "Public domain (US government work)",
       "note": "Foreign institutions the US Department of Defense names for problematic activity."
     },
     {
       "name": "End User List, Japan Ministry of Economy, Trade and Industry",
-      "url": "https://www.meti.go.jp/policy/anpo/law05.html",
+      "url": "https://www.meti.go.jp/policy/anpo/law09-2.html",
       "license": "Government of Japan Standard Terms of Use",
-      "note": "Japanese export-control end-user listings."
+      "note": "Japanese export-control end-user listings for research bodies in China, Russia and Iran."
     }
   ]
 }

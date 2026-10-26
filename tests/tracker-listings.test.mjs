@@ -13,6 +13,7 @@ import {
   parseCaSanctionsXml,
   parseNroPage,
   resolveInstitutionAliases,
+  unknownListFiles,
 } from '../scripts/tracker/lib/listings.mjs';
 import { buildMatchIndex } from '../src/tools/compliance/defence-tracker/lib/matcher.js';
 
@@ -197,6 +198,21 @@ test('the NRO comparison ignores split-out units and names the page truncates', 
     'On the NRO page but not in nroData.js: `Brand New University`',
     'In nroData.js but not on the NRO page: `Removed Institute`',
   ]);
+});
+
+test('a hand-kept list page reports only files that are not the entered edition or a known copy of it', () => {
+  const snapshot = {
+    sourceUrl: 'https://www.cto.mil/fy25-ndaa-section-1286-list/',
+    file: 'https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf',
+    alternateFiles: ['https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List.pdf'],
+  };
+  const links = [
+    'http://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf',
+    'http://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List.pdf',
+    '/wp-content/uploads/2027/07/FY26-Section-1286-List.pdf',
+  ];
+  assert.deepEqual(unknownListFiles(links, snapshot), ['/wp-content/uploads/2027/07/FY26-Section-1286-List.pdf']);
+  assert.deepEqual(unknownListFiles(links, { sourceUrl: snapshot.sourceUrl, file: null }), links);
 });
 
 test('the NRO page yields the organization names', () => {

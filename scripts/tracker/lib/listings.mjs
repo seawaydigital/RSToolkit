@@ -231,6 +231,17 @@ export function assignInstitutions(
   return { entries: resolveInstitutionAliases(out, aliases), created };
 }
 
+const fileName = (url) => String(url).split(/[?#]/)[0].split('/').pop().toLowerCase();
+
+// The files a hand-kept list's page links that are neither the edition entered
+// in the snapshot (`file`) nor a known copy of it (`alternateFiles`). Compared
+// by file name, since pages link the same file over http, https or a relative
+// path. The snapshot's `sourceUrl` is the list's page, not a file.
+export function unknownListFiles(links, snapshot) {
+  const known = new Set([snapshot?.file, ...(snapshot?.alternateFiles ?? [])].filter(Boolean).map(fileName));
+  return links.filter((link) => !known.has(fileName(link)));
+}
+
 export function diffEntries(before, after) {
   const was = new Map(before.map((e) => [e.key, e]));
   const now = new Set(after.map((e) => e.key));
