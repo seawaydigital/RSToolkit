@@ -3,42 +3,133 @@
   "name": "Navy Medical University",
   "zh": "中国人民解放军海军军医大学",
   "zhAliases": [
-    "中国人民解放军第二军医大",
+    "中国人民解放军第二军医大学",
+    "第二军医大学",
     "海军军医大学"
   ],
   "aliases": [
-    "Second Military Medical University"
+    "Naval Medical University",
+    "Second Military Medical University",
+    "PLA Second Military Medical University"
   ],
-  "acronyms": [],
-  "domains": [],
+  "acronyms": [
+    "SMMU"
+  ],
+  "domains": [
+    "smmu.edu.cn"
+  ],
   "country": "CN",
   "type": "military",
   "location": {
     "city": "Shanghai",
-    "province": null,
+    "province": "Shanghai",
     "lat": 31.3075,
     "lng": 121.5231
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy (from 2017)"
+  ],
   "parent": null,
   "ids": {
     "misp": "d532b3a4-ced1-4669-8c90-79aa94d37fa3",
     "nro": "navy-medical-university"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The Naval Medical University in Shanghai, called the Second Military Medical University until 2017 and still using that name externally, is the PLA Navy’s medical university. Its own profile says it has trained more than 120,000 medical personnel for the armed forces, including over 85% of the navy’s medical officers, and has served in wars such as the Korean War and in operations such as Gulf of Aden escort missions; CASI lists a Marine Military Medical School and a naval medicine department among its units, and key laboratories including a state key laboratory of medical immunology and a Shanghai key laboratory of medical bioprotection.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Its profile and CASI report that it moved from the PLA General Logistics Department to the Central Military Commission’s Training and Administration Department in 2015, and to the PLA Navy in 2017.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "life-science",
+    "cbrn-countermeasures"
+  ],
+  "subunits": [
+    {
+      "name": "Changhai Hospital (First Affiliated Hospital)",
+      "zh": "长海医院",
+      "kind": "hospital",
+      "match": true
+    },
+    {
+      "name": "Changzheng Hospital (Second Affiliated Hospital)",
+      "zh": "上海长征医院",
+      "kind": "hospital",
+      "match": true
+    },
+    {
+      "name": "Eastern Hepatobiliary Surgery Hospital (Third Affiliated Hospital)",
+      "zh": "东方肝胆外科医院",
+      "kind": "hospital",
+      "match": true
+    },
+    {
+      "name": "Marine Military Medical School",
+      "zh": "海洋军事医学院",
+      "kind": "institute"
+    },
+    {
+      "name": "State Key Laboratory of Medical Immunology",
+      "zh": "医学免疫学国家重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 135–137",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "学校简介 (About the university)",
+      "publisher": "Naval Medical University (Second Military Medical University), admissions site",
+      "url": "https://www.smmu.edu.cn/2019/0422/c423a4396/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260518182205/https://www.smmu.edu.cn/2019/0422/c423a4396/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high. A cut-short Chinese alias was completed (中国人民解放军第二军医大学), and its three affiliated hospitals are marked for batch-check matching."
     }
   ],
   "seedNotes": {
