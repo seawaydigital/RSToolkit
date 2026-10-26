@@ -26,20 +26,47 @@
     "ror": "04w9fbh59",
     "wikidata": "Q4881210"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla-collaboration",
+      "summary": "The US Commerce Department listed BUPT in December 2020, finding that it directly participates in the research, development and production of advanced weapons and weapons systems in support of PLA modernisation.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Entities to the Entity List, Revision of Entry on the Entity List, and Removal of Entities From the Entity List (85 FR 83416, 22 December 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130532/https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
