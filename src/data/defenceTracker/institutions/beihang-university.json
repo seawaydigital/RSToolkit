@@ -20,7 +20,9 @@
     "lat": 39.982,
     "lng": 116.3495
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "ab28c949-60e9-497c-85d6-f90e87d498d6",
@@ -28,20 +30,115 @@
     "ror": "00wk2mp56",
     "wikidata": "Q2299797"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "Beihang is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. It describes itself as new China’s first aerospace university and says it has developed and launched or flight-tested many types of aircraft and spacecraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "In a 2023 US guilty plea, US Army flight-control software (CIFER) was exported to Beihang in 2017 without the licence its Entity List listing required; the plea agreement says a Beihang representative proposed making the purchase in the name of a third-party company instead of Beihang. US government filings in the case say Beihang was listed for its involvement in Chinese military rocket and unmanned air vehicle systems.",
+      "annexB": [
+        "2.2",
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Beihang reports to the Ministry of Industry and Information Technology.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "aerospace-space-satellite",
+    "uncrewed-vehicles"
+  ],
+  "subunits": [
+    {
+      "name": "Xueyuan Road campus (Beijing)",
+      "zh": "学院路校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Shahe campus (Beijing)",
+      "zh": "沙河校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Hangzhou International Campus",
+      "zh": "杭州国际校园",
+      "kind": "campus"
+    },
+    {
+      "name": "Xiong’an campus (under construction)",
+      "zh": "雄安校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "今日北航 (Beihang today)",
+      "publisher": "Beihang University",
+      "url": "https://www.buaa.edu.cn/xygk/jrbh.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022919/https://www.buaa.edu.cn/xygk/jrbh.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Castro Valley Resident Pleads Guilty To Illegally Exporting American Aviation Technology To Beijing University",
+      "publisher": "US Attorney’s Office, Northern District of California (US Department of Justice)",
+      "url": "https://www.justice.gov/usao-ndca/pr/castro-valley-resident-pleads-guilty-illegally-exporting-american-aviation-technology",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20260524213321/https://www.justice.gov/usao-ndca/pr/castro-valley-resident-pleads-guilty-illegally-exporting-american-aviation-technology"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
