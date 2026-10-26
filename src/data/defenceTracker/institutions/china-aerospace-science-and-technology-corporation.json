@@ -15,12 +15,8 @@
     "13th Institute China Aerospace Times Electronics Corporation (CATEC)",
     "Beijing Aerospace Control Instruments Institute",
     "Design and Manufacture Center of Navigation and Control Device",
-    "Beijing Aerospace Automatic Control Institute",
     "12th Research Institute, China Aerospace Science and Technology Corporation (CALT)",
-    "Beijing Institute of Space Automatic Control",
-    "Beijing Spaceflight Autocontrol Research Institute",
-    "5th Academy of CASC",
-    "China Academy of Space Technology (CAST)"
+    "5th Academy of CASC"
   ],
   "acronyms": [
     "CASC"
@@ -57,6 +53,10 @@
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
     }
   ],
   "seedNotes": {

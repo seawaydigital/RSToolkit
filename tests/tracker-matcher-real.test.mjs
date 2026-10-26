@@ -97,6 +97,23 @@ const CONFIRMED = [
   ['哈尔滨工业大学', 'harbin-institute-of-technology'],
 ];
 
+// The lists name these institutes on their own. They used to match their
+// groups, which MISP gave the institutes' names as aliases.
+const GROUPS = ['aviation-industry-corporation-of-china', 'china-aerospace-science-and-industry-corporation', 'china-aerospace-science-and-technology-corporation'];
+const LISTED_UNITS = [
+  ['Beijing Aeronautical Manufacturing Technology Research Institute, Beijing, China', 'Beijing Aeronautical Manufacturing Technology Research Institute'],
+  ['Beijing Automation Control Equipment Institute, Beijing, China', 'China Aerospace Science and Industry Corporation (CASIC) 3rd Academy, 33 Research Institute'],
+  ['China Academy of Space Technology, Beijing, China', 'China Academy of Space Technology (CAST)'],
+];
+
+for (const [line, unit] of LISTED_UNITS) {
+  test(`matched to the listed unit, not its group: ${line}`, () => {
+    const id = dataset.records.find((r) => r.name === unit)?.id;
+    const ms = matchLine(line, index);
+    assert.ok(id && ms.some((m) => m.id === id) && !ms.some((m) => GROUPS.includes(m.id)), `${unit} (${id}): ${show(ms)}`);
+  });
+}
+
 for (const [line, id] of CONFIRMED) {
   test(`confirmed: ${line}`, () => {
     const ms = matchLine(line, index);

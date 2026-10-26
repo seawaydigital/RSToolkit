@@ -184,6 +184,21 @@
       "institution": "sichuan-university"
     },
     {
+      "key": "csl:07ad35734e72f7147d7dcc69e9bcb4c42740506f9743ea4aad16086d",
+      "list": "us-entity-list",
+      "name": "China Aerospace Science and Industry Corporation (CASIC) 3rd Academy",
+      "altNames": [
+        "China Haiying Electro-Mechanical Technology Academy (CHETA)",
+        "HiWING Mechanical & Electrical Technology Corporation",
+        "Beijing HY Electronic Tech Co."
+      ],
+      "country": "CN",
+      "date": "2001-05-14",
+      "citation": "66 FR 24267; 77 FR 58006 (no. 182); 84 FR 40241",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy"
+    },
+    {
       "key": "csl:08a90247bf804ddf96e500361251addb0ed18ecfd3c101ae65e62c73",
       "list": "us-entity-list",
       "name": "Scientific-Production Association and Scientific-Research Institute of Radio-Components",
@@ -214,6 +229,19 @@
       "citation": "89 FR 68548",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "federal-government-budget-institution-state-institute-for-experimental-military"
+    },
+    {
+      "key": "csl:0a1e9cfe8d7a1a5bd27306fab9bdbac0d470023d729a00c6baea84a5",
+      "list": "us-entity-list",
+      "name": "Autonomous Noncommercial Organization Professional Association of Designers of Data Processing Systems",
+      "altNames": [
+        "ANO PO KSI"
+      ],
+      "country": "RU",
+      "date": "2017-01-04",
+      "citation": "82 FR 722",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "ano-po-ksi"
     },
     {
       "key": "csl:0b580f8b516b75fe77f04baaf1d4287aadefdc086e4df396cda357d1",
@@ -316,6 +344,21 @@
       "citation": "83 FR  37423",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "china-aerospace-science-and-industry-corporation-second-academy-subordinate-inst-9"
+    },
+    {
+      "key": "csl:10985db62983826c9e4d455a909271ba41c27e4fe43b7d342d13f38e",
+      "list": "us-entity-list",
+      "name": "China Jiuyuan Trading Corporation",
+      "altNames": [
+        "China Long Term Material Trading Company",
+        "China Long-Standing Material Trading Company",
+        "China Jiuyuan High-Tech Equipment Company"
+      ],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-china-jiuyuan-trading-corporation"
     },
     {
       "key": "csl:11306f656b078c40972bc23354bc073a2f1c6a611a5648082240f092",
@@ -439,7 +482,7 @@
       "date": "2001-05-14",
       "citation": "66 FR 24265; 75 FR 78877; 84 FR 40241",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "13th-research-institute-9th-academy-china-aerospace-science-and-technology-corpo"
     },
     {
       "key": "csl:13d4b9d67fd3eae69e2e3094ceae28e88e2d59ae12dfb1c10c6764c9",
@@ -608,6 +651,20 @@
       "institution": "china-aerospace-science-and-technology-corporation-casc-9th-academy-771-research"
     },
     {
+      "key": "csl:193183dfe25ad8e7f37f359dcb28e602a44bf34f45e10d77704216e9",
+      "list": "us-entity-list",
+      "name": "Sichuan Haitian New Technology Group Co., Ltd.",
+      "altNames": [
+        "Haitian Group",
+        "Sichuan Haitian Hi-Tech Group"
+      ],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-sichuan-haitian-new-technology"
+    },
+    {
       "key": "csl:19687767fa28d9f64a9b13078bf4ef8e3259993dab0543e0518b3196",
       "list": "us-entity-list",
       "name": "China Aerospace Science and Industry Corporation Second Academy. Subordinate Institution - 201 Research Institute",
@@ -752,6 +809,26 @@
       "institution": "china-state-shipbuilding-corporation-limited-cssc-710th-research-institute"
     },
     {
+      "key": "csl:2023056424c2a1208582be16af884be877d9a0d28291e476b9e3e690",
+      "list": "us-entity-list",
+      "name": "China Aerospace Science and Industry Corporation Second Academy",
+      "altNames": [
+        "China Changfeng Mechanics and Electronics Technology Academy",
+        "China Chang Feng Mechano-Electronic Engineering Academy",
+        "CASIC Second Academy",
+        "China Chang Feng Mechano-Electronic Engineering Company",
+        "CASIC Academy of Defense Technology",
+        "Second Research Academy of CASIC",
+        "Changfeng Electromechanical Technology Design Institute",
+        "China Chang Feng Mechanics and Electronics Technology Academy"
+      ],
+      "country": "CN",
+      "date": "2018-08-01",
+      "citation": "83 FR  37423",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-aerospace-science-and-industry-corporation-second-academy"
+    },
+    {
       "key": "csl:20285",
       "list": "us-sdn",
       "name": "AO 'INSTITUTE GIPROSTROYMOST-SAINT-PETERSBURG'",
@@ -769,6 +846,19 @@
       "institution": "ao-institute-giprostroymost-saint-petersburg"
     },
     {
+      "key": "csl:21334",
+      "list": "us-sdn",
+      "name": "AUTONOMOUS NONCOMMERCIAL ORGANIZATION PROFESSIONAL ASSOCIATION OF DESIGNERS OF DATA PROCESSING SYSTEMS",
+      "altNames": [
+        "ANO PO KSI"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "CYBER2",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "ano-po-ksi"
+    },
+    {
       "key": "csl:21825b6dec538d807b6b0d27980541fd113e7aa3bdc7a8f3f6ae6a62",
       "list": "us-entity-list",
       "name": "China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute",
@@ -780,7 +870,18 @@
       "date": "1999-05-28",
       "citation": "64 FR 28909; 81 FR 64694; 84 FR 40241",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-702-research"
+    },
+    {
+      "key": "csl:225249995beb11a472f8444bbe00bf8c178be62b1efb2500a1a93e66",
+      "list": "us-entity-list",
+      "name": "Tactical Missile Corporation, NPO Electromechanics",
+      "altNames": [],
+      "country": "RU",
+      "date": "2022-04-07",
+      "citation": "87 FR 20299; 87 FR 34136",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "jsc-scientific-and-production-association-of-electro-mechanic"
     },
     {
       "key": "csl:22693",
@@ -1032,6 +1133,24 @@
       "institution": "china-aeronautical-radio-electronics-research-institute"
     },
     {
+      "key": "csl:264885cb8a5571c95ae6cc26eb915f3c741f22957927171b0ee9f5ff",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Special Research Bureau of Moscow Power Engineering Institute",
+      "altNames": [
+        "JSC Special Research Bureau of Moscow Power Engineering Institute",
+        "Aktsionernoe Obshchestvo Osoboe Konstruktorskoe Byuro Moskovskogo Energeticheskogo Instituta",
+        "AO Osoboe Konstruktorskoe Byuro Moskovskogo Energeticheskogo Instituta",
+        "Osoboe Konstruktorskoe Byuro Moskovskogo Energeticheskogo Instituta, OAO",
+        "AO OKB MEI",
+        "JSC OKB MEI"
+      ],
+      "country": "RU",
+      "date": "2024-08-27",
+      "citation": "89 FR 68548",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "special-research-bureau-of-moscow-power-engineering-institute"
+    },
+    {
       "key": "csl:26557",
       "list": "us-sdn",
       "name": "SHAHID SHOKRI SCIENCE AND TECHNOLOGY RESEARCH CENTER",
@@ -1214,6 +1333,17 @@
       "citation": "86 FR 71557",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "academy-of-military-medical-sciences-institute-of-basic-medicine"
+    },
+    {
+      "key": "csl:2dba74592b5baf0c9307c459d59c9eba020120c2823021cc78f67a86",
+      "list": "us-entity-list",
+      "name": "Sichuan Dingcheng Material Trade Co., Ltd.",
+      "altNames": [],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-sichuan-dingcheng-material-trade"
     },
     {
       "key": "csl:2e81cb5f5a4078609dd40a562f74ef60aaf39ddf1414b74fb7239970",
@@ -1463,6 +1593,26 @@
       "citation": "DPRK3",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "european-institute-justo"
+    },
+    {
+      "key": "csl:34cae7c9c87bb0e665e8ace1e0cacb1a87e0b7f5b0843f289eea2b13",
+      "list": "us-entity-list",
+      "name": "China Electronics Technology Group Corporation No. 28 Institute",
+      "altNames": [
+        "The 28th Research Institute of China Electronics Technology Group Corporation",
+        "28th Research Institute of China Electronics Technology Group Corporation",
+        "CETC 28",
+        "CETC28",
+        "The 28th Institute",
+        "Nanjing Institute of Electronic Engineering",
+        "NRIEE",
+        "NIEE."
+      ],
+      "country": "CN",
+      "date": "2022-12-16",
+      "citation": "87 FR 77505",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-electronics-technology-group-corporation-28th-research-institute-cetc-28"
     },
     {
       "key": "csl:35158",
@@ -1726,6 +1876,20 @@
       "institution": "polyus-research-institute-of-m-f-stelmakh-jsc"
     },
     {
+      "key": "csl:37669",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY OBNINSK RESEARCH AND PRODUCTION ENTERPRISE TECHNOLOGIYA NAMED AFTER A. G. ROMASHIN",
+      "altNames": [
+        "JSC ORPE TECHNOLOGIYA NAMED AFTER A. G. ROMASHIN",
+        "JSC OBNINSKOYE NPP TEKHNOLOGIYA IM. A.G.ROMASHINA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "obninsk-research-and-production-enterprise-orpe"
+    },
+    {
       "key": "csl:37682",
       "list": "us-sdn",
       "name": "KALUGA RESEARCH INSTITUTE OF RADIO ENGINEERING JSC",
@@ -1852,6 +2016,20 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "joint-stock-company-russian-research-institute-electronstandart"
+    },
+    {
+      "key": "csl:37798",
+      "list": "us-sdn",
+      "name": "AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT SREDSTV VYCHISLITELNOI TEKHNIKI",
+      "altNames": [
+        "AO NII SVT",
+        "NII SVT PAO"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv"
     },
     {
       "key": "csl:37803",
@@ -2350,6 +2528,23 @@
       "institution": "cas-institute-of-computing-technology"
     },
     {
+      "key": "csl:3c8345f4eb9fc484ed98906e21b3e7a91655333fb032d7ce4597a3cd",
+      "list": "us-entity-list",
+      "name": "Shahed Aviation Industries",
+      "altNames": [
+        "Shahed Aviation Industries Research Center",
+        "Shahed Aviation",
+        "Shahed Aviation Industries Research",
+        "Shahed Aviation Industries Research Centre",
+        "SAIRC"
+      ],
+      "country": "IR",
+      "date": "2023-01-31",
+      "citation": "88 FR 6622",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "shahed-aviation-industries-research-center"
+    },
+    {
       "key": "csl:3ccfc63bc1092dfdddd99aa01cc47d7240016e1546828335b956d9d5",
       "list": "us-entity-list",
       "name": "Scientific-Research Institute “Argon”",
@@ -2585,6 +2780,37 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "central-research-institute-burevestnik"
+    },
+    {
+      "key": "csl:40982",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY MOSCOW ORDER OF THE RED BANNER OF LABOR RESEARCH RADIO ENGINEERING INSTITUTE",
+      "altNames": [
+        "JOINT-STOCK COMPANY MOSCOW RESEARCH SCIENTIFIC RADIO COMMUNICATION INSTITUTE",
+        "JSC MNIRTI",
+        "AKTSIONERNOE OBSHCHESTVO MOSKOVSKI ORDENA TRUDOVOGO KRASNOGO ZNAMENI NAUCHNO-ISSLEDOVATELSKI RADIOTEKHNICHESKI INSTITUT",
+        "MOSKOVSKI ORDENA TRUDOVOGO KRASNOGO ZNAMENI NAUCHNO-ISSLEDOVATELSKI RADIOTEKHNICHESKI INSTITUT PAO"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "moscow-order-of-the-red-banner-of-labor-research-radio-engineering-institute-jsc"
+    },
+    {
+      "key": "csl:40e7a889dafd5fe0a86c32f28ffe48edc469479d60d894fbd6985b85",
+      "list": "us-entity-list",
+      "name": "Spacety Co., Ltd.",
+      "altNames": [
+        "Changsha Tianyi Space Science and Technology Research Institute",
+        "Spacety",
+        "Spacety Luxembourg S.A."
+      ],
+      "country": "CN",
+      "date": "2023-02-27",
+      "citation": "88 FR 12171",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "changsha-tianyi-space-science-and-technology-research-institute-co-ltd"
     },
     {
       "key": "csl:41014",
@@ -3074,6 +3300,21 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "joint-stock-company-science-research-institute-for-precise-instruments"
+    },
+    {
+      "key": "csl:44261",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY SPECIAL RESEARCH BUREAU OF MOSCOW POWER ENGINEERING INSTITUTE",
+      "altNames": [
+        "AO OKB MEI",
+        "JSC OKB MEI",
+        "AKTSIONERNOE OBSHCHESTVO OSOBOE KONSTRUKTORSKOE BYURO MOSKOVSKOGO ENERGETICHESKOGO INSTITUTA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "special-research-bureau-of-moscow-power-engineering-institute"
     },
     {
       "key": "csl:44263",
@@ -3621,7 +3862,7 @@
       "date": null,
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "joint-stock-company-federal-scientific-and-production-center-scientific-research"
+      "institution": "scientific-research-institute-of-applied-chemistry"
     },
     {
       "key": "csl:49267",
@@ -4543,7 +4784,7 @@
       "date": "2014-05-01",
       "citation": "79 FR 24566; 5/1/14; 83 FR 3580; 1/26/18 ",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "aviation-industry-corporation-of-china"
+      "institution": "beijing-aeronautical-manufacturing-technology-research-institute"
     },
     {
       "key": "csl:5c73a9f276c77db67f2f344f8df0f928fac78fb26f2c2e3d5f368045",
@@ -4771,6 +5012,30 @@
       "institution": "china-academy-of-launch-vehicle-technology-beijing-institute-of-precision-mechat"
     },
     {
+      "key": "csl:674fd26948be846b814b7bf4302e1503487fc5eabb028b08c87b1542",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company (JSC) NIIME",
+      "altNames": [
+        "Aktsionernoe Obshchestvo (AO) Nauchnoisledovatelskiy Institut Molekulyarnoy Elektroniki (NIIME)"
+      ],
+      "country": "RU",
+      "date": "2018-09-04",
+      "citation": "83 FR 44824",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "molecular-electronics-research-institute-joint-stock-company"
+    },
+    {
+      "key": "csl:67769ab203a83ad9de3843d1f9252306fddceb643751c7f95a9df91b",
+      "list": "us-entity-list",
+      "name": "Beijing Jincheng Huanyu Electronics Co., Ltd.",
+      "altNames": [],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-beijing-jincheng-huanyu-electronics"
+    },
+    {
       "key": "csl:68b533cb808cfcccb2a9bfea21042ef0d2b93a01fc6933af528078ff",
       "list": "us-entity-list",
       "name": "Chinese Academy of Science, Center for Excellence in Quantum Information and Quantum Physics",
@@ -4972,6 +5237,19 @@
       "institution": "joint-stock-company-all-russian-research-institute-signal"
     },
     {
+      "key": "csl:743722b298cb3c41919b33cfb047cb03a82405cf62297814aaaad6bb",
+      "list": "us-entity-list",
+      "name": "Skyeye Laser Technology Limited",
+      "altNames": [
+        "Mianyang Tianyan Laser Technology"
+      ],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-skyeye-laser-technology"
+    },
+    {
       "key": "csl:75a4f5ab9b6f0232007a432af8d144a95d9b9d9c1c15a59dbfa4dc7c",
       "list": "us-entity-list",
       "name": "Luoyang Institute of Science and Technology",
@@ -5103,7 +5381,7 @@
       "date": "2001-05-14",
       "citation": "66 FR 24266; 77 FR 58006; 81 FR 64694; 84 FR 40241 ",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-industry-corporation"
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-33-research-i"
     },
     {
       "key": "csl:7c91c8f42cee84df182a5b71f62f4bd34222079417fb595ff881bb82",
@@ -5691,6 +5969,21 @@
       "institution": "academy-of-military-medical-sciences-institute-of-disease-control-and-prevention"
     },
     {
+      "key": "csl:96c3faecaaabbe1ce63561d2af17dcf22faac00726160ceda76a9a99",
+      "list": "us-entity-list",
+      "name": "Aviation Industry Corporation of China 612 Institute",
+      "altNames": [
+        "Base 014",
+        "China Air-to-Air Missile Research Institute",
+        "China Airborne Missile Academy"
+      ],
+      "country": "CN",
+      "date": "2023-06-12",
+      "citation": "88 FR 38741",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "aviation-industry-corporation-of-china-612-institute"
+    },
+    {
       "key": "csl:97250cd5512e4c449474a9e9e93c9680d8a0efd58fdf93b4b59ae8a7",
       "list": "us-entity-list",
       "name": "Institute of Solid-State Physics of the Russian Academy of Sciences",
@@ -6141,6 +6434,23 @@
       "institution": "china-electronics-technology-group-corporation-16th-research-institute"
     },
     {
+      "key": "csl:b16c6f683930ede6f426089e92f55722f2971328a395b39a7b9346fa",
+      "list": "us-entity-list",
+      "name": "Tactical Missile Corporation, Joint Stock Company GosNIIMash",
+      "altNames": [
+        "PPO Rosprofprom V “GOSNIIMASH”",
+        "State Research Institute of Mechanical Engineering",
+        "Pervichnaya Profsoyuznaya Organizatsiya Rossiskogo Profsoyuza Rabotnikov Promyshlennosti V “GOSNIIMASH”",
+        "Joint Stock Company “State Research Institute of Mechanical Engineering\" named after V.V. Bakhirev”",
+        "and SKB DNIKhTI"
+      ],
+      "country": "RU",
+      "date": "2022-04-07",
+      "citation": "87 FR 20299; 87 FR 34136",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
+    },
+    {
       "key": "csl:b2be86b8d135bf45363f1227328bced895b44fe63cd623932a75234e",
       "list": "us-entity-list",
       "name": "Etalon Scientific and Production Association",
@@ -6181,6 +6491,21 @@
       "citation": "83 FR 48534",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "obninsk-research-and-production-enterprise-orpe"
+    },
+    {
+      "key": "csl:b765e55cd600ae283528d24401a18c6c5a596b955f2eca7b2ff00a42",
+      "list": "us-entity-list",
+      "name": "Federal State Budgetary Institution of Science P.I. K.A. Valiev RAS of the Ministry of Science and Higher Education of Russia",
+      "altNames": [
+        "FTIAN IM K.A. Valiev RAS",
+        "FTI RAS",
+        "FTIAN."
+      ],
+      "country": "RU",
+      "date": "2022-09-30",
+      "citation": "87 FR 60065",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n-2"
     },
     {
       "key": "csl:b81d49253ae55be5b2982538680cdf22e7c0a8b539bb5f0a8acee49d",
@@ -6548,6 +6873,20 @@
       "institution": "china-academy-of-electronics-and-information-technology"
     },
     {
+      "key": "csl:c8d9033b1bae05e1a2f0c9be3b8fb2a07da469cf6d3d910544a59f5f",
+      "list": "us-entity-list",
+      "name": "China Aerospace Science and Industry Corporation Second Academy. Subordinate Institution - Second Design Department",
+      "altNames": [
+        "Beijing Institute of Electronics Systems Engineering",
+        "Second Planning Department"
+      ],
+      "country": "CN",
+      "date": "2018-08-01",
+      "citation": "83 FR  37423",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-aerospace-science-and-industry-corporation-second-academy-subordinate-inst-10"
+    },
+    {
       "key": "csl:c9523f9eecad5101b81a9561631ed5ef4a1cfac73c6533019746c2a8",
       "list": "us-entity-list",
       "name": "Qingdao National Laboratory of Marine Science and Technology",
@@ -6654,6 +6993,20 @@
       "citation": "66 FR 24266; 84 FR 40241",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-31-research-i"
+    },
+    {
+      "key": "csl:ce5ce3d62be123725edf9af930cd5b7fee2aab598c0ca4551be46407",
+      "list": "us-entity-list",
+      "name": "China State Shipbuilding Corporation, Limited (CSSC) 7th Research Academy",
+      "altNames": [
+        "China Shipbuilding Industry Group Co., Ltd. (CSIC) 7th Research Academy",
+        "China Ship Research and Development Academy"
+      ],
+      "country": "CN",
+      "date": "2020-12-18",
+      "citation": "85 FR 83420",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-state-shipbuilding-corporation-limited-cssc-7th-research-academy"
     },
     {
       "key": "csl:cec3fcda8254233b2110fb4a1dd32216c84f9c25c451a96851aae003",
@@ -6861,6 +7214,17 @@
       "institution": "federal-state-unitary-enterprise-state-research-and-production-enterprise-bazalt"
     },
     {
+      "key": "csl:d62f3c36dc5394f42e6afb91d6c1732aeedd6b6539e5e21150d29386",
+      "list": "us-entity-list",
+      "name": "Sichuan Zhonghe Import and Export Trade Co., Ltd.",
+      "altNames": [],
+      "country": "CN",
+      "date": "2020-06-05",
+      "citation": "85 FR 34497",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "caep-sichuan-zhonghe-import-and-export"
+    },
+    {
       "key": "csl:d6861a89a842a13007a8b7c30ac29c1e191194ced3c43fedd12efe23",
       "list": "us-entity-list",
       "name": "Moscow Aviation Institute",
@@ -7056,20 +7420,6 @@
       "citation": "89 FR 87264",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "federal-state-budgetary-institution-of-science-institute-of-bioorganic-chemistry"
-    },
-    {
-      "key": "csl:dcca14daa426b77552ceeaef87d7158bb85ab5f62e2d6efb15059a39",
-      "list": "us-entity-list",
-      "name": "China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute",
-      "altNames": [
-        "Beijing Aerospace Automatic Control Institute (BICD)",
-        "12th Institute"
-      ],
-      "country": "CN",
-      "date": "2001-05-14",
-      "citation": "66 FR 24266, 77 FR 58006 (no. 182); 84 FR 40241, 84 FR 40241",
-      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-technology-corporation"
     },
     {
       "key": "csl:de00489893cde356ef79d0e65c51f744de14607a9f69dc920f18be6a",
@@ -7392,7 +7742,22 @@
       "date": "2001-05-14",
       "citation": "66 FR 24266; 77 FR 58006 (no. 182); 81 FR 64694, 84 FR 40241",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-industry-corporation"
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-35-research-i"
+    },
+    {
+      "key": "csl:ed0a55f253196374c90a7e80198375e97f39e4be090a481b5190b770",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Scientific Research Engineering Institute",
+      "altNames": [
+        "AO Nauchno-Issledovatelskiy Inzhenerniy Institut",
+        "AO NIII",
+        "JSC SREI"
+      ],
+      "country": "RU",
+      "date": "2023-05-19",
+      "citation": "88 FR 32642",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "scientific-research-engineering-institute-jsc-also-known-as-scientific-research"
     },
     {
       "key": "csl:ed7b2909db0305080ca19dee9eade5127467cd515bcb355220e4d844",
@@ -7446,18 +7811,17 @@
       "institution": "china-state-shipbuilding-corporation-limited-cssc-704th-research-institute"
     },
     {
-      "key": "csl:ef74bd67d0b0b8b8c2dab900486ab40ec9338085b90ffc0aa08ddddb",
+      "key": "csl:f09f52e8345f79293f32952668e466d5d2a1a7465eab8fbbd46ecda5",
       "list": "us-entity-list",
-      "name": "China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute",
+      "name": "China Aerospace Science and Technology Corporation (CASC) 1st Academy First Design Department",
       "altNames": [
-        "Beijing Aerospace Automatic Control Institute (BICD)",
-        "12th Institute"
+        "1st General Design Department"
       ],
       "country": "CN",
       "date": "2001-05-14",
-      "citation": "67 FR 24266, 77 FR 58006 (no. 182); 84 FR 40241, 84 FR 40241",
+      "citation": "66 FR 24266; 75 FR 78883; 77 FR 58006; 84 FR 40241",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-first-design"
     },
     {
       "key": "csl:f0e8781bb22bb1d6d060654289d0b8c343afa8c55d5b9277a84dfcb4",
@@ -7575,6 +7939,21 @@
       "institution": "china-state-shipbuilding-corporation-limited-cssc-723rd-research-institute"
     },
     {
+      "key": "csl:f67419422a2b3f72d3b9f9bfb0a24d0b2ae2715548e85d3e8fd20c7c",
+      "list": "us-entity-list",
+      "name": "China Aerospace Science and Technology Corporation (CASC) 8th Academy",
+      "altNames": [
+        "Shanghai Academy of Spaceflight Technology (SAST)",
+        "Shanghai Institute of Space",
+        "MOA#8 Academy"
+      ],
+      "country": "CN",
+      "date": "1999-05-28",
+      "citation": "64 FR 28909; 81 FR 64694; 84 FR 40241",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "shanghai-academy-of-spaceflight-technology-sast"
+    },
+    {
       "key": "csl:f6dbb31b27289fd1d56e64d5c9c19c56932c263b118424c275d25e99",
       "list": "us-entity-list",
       "name": "Xi'an Research Institute of Navigation Technology",
@@ -7602,6 +7981,21 @@
       "citation": "80 FR 8524; 84 FR 29373; 87 FR 38925; 87 FR 62202",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "national-university-of-defense-technology"
+    },
+    {
+      "key": "csl:f6f5228d814d4d90e7a41d1a0be180bc738e5be61bdaeb71eab6a1d3",
+      "list": "us-entity-list",
+      "name": "China Aerospace Science and Industry Corporation (CASIC) 3rd Academy",
+      "altNames": [
+        "China Haiying Electro-Mechanical Technology Academy (CHETA)",
+        "HiWING Mechanical & Electrical Technology Corporation",
+        "Beijing HY Electronic Tech Co."
+      ],
+      "country": "CN",
+      "date": "2001-05-14",
+      "citation": "66 FR 24267; 75 FR 78883; 77 FR 58006 (no. 182); 84 FR 40241",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy"
     },
     {
       "key": "csl:f6fd59f9b896026a0ac9a74ffc49ae2f7fdcb5f4d866e1fcdeefc4a9",
@@ -7664,6 +8058,21 @@
       "citation": "87 FR 60065",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "scientific-research-institute-of-applied-acoustics"
+    },
+    {
+      "key": "csl:f8369aab8fa535a023d07df66d4da9d40ee3c6c248003a0e7bda6ed7",
+      "list": "us-entity-list",
+      "name": "Tactical Missile Corporation, Concern “MPO – Gidropribor”",
+      "altNames": [
+        "Joint Stock Company Concern Sea Underwater Weapons Gidropribor",
+        "Research Institute “Gidpropridor”",
+        "Central Research Institute “Gidropribor”"
+      ],
+      "country": "RU",
+      "date": "2022-04-07",
+      "citation": "87 FR 20299; 87 FR 34136",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "tactical-missile-corporation-concern-mpo-gidropribor"
     },
     {
       "key": "csl:facc58ca35b8075750f2dc5df6f75451dde23eb9db404c50ef108abb",

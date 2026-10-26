@@ -3,6 +3,7 @@
 // domains and identifiers. Only structured fields are taken from MISP; its
 // description text (ASPI's prose) is never read into a record.
 import { compactCjk, hasCjk, isGenericPhrase, normalizePhrase } from '../../../src/tools/compliance/defence-tracker/lib/normalize.js';
+import { withoutCodes } from '../../../src/tools/compliance/defence-tracker/lib/places.js';
 import { slugify } from '../../../src/tools/compliance/defence-tracker/lib/schema.js';
 
 // Pinned to the last commit that touched the cluster (2020-08-22), so the
@@ -270,22 +271,44 @@ const cjkKey = (n) => {
   return text.length >= 4 ? text : null;
 };
 
+// The names official lists give bodies the tracker knows only from those
+// lists (a CASC institute the Entity List names on its own): one item per
+// snapshot entry whose institution has no file. Each name also counts without
+// its brackets, as the list sync compares them.
+export function listOnlyNames(snapshots, fileIds) {
+  return Object.values(snapshots)
+    .flatMap((s) => s.entries ?? [])
+    .filter((e) => e.institution && !fileIds.has(e.institution))
+    .map((e) => ({ id: e.institution, names: [e.name, ...(e.altNames ?? [])].flatMap((n) => [n, String(n).replace(/\s*\([^)]*\)/g, ' ')]) }));
+}
+
 // MISP lists some institutions' subsidiaries as aliases (CAEP's alias list
-// names its institutes). A name that another record carries as its own name
-// stays only with that record; an alias two records share is removed from
-// both, since it could not tell them apart. Mutates the records.
-export function resolveNameCollisions(records) {
+// names its institutes; CASC's names its academies). A name that another
+// record carries as its own name, or that a list gives a list-only body
+// (`listed`, from listOnlyNames), stays only with that body; an alias two
+// records share is removed from both, since it could not tell them apart.
+// Mutates the records.
+export function resolveNameCollisions(records, { listed = [] } = {}) {
   const owners = new Map();
   const claim = (key, id, primary) => {
     if (!key) return;
     if (!owners.has(key)) owners.set(key, []);
     owners.get(key).push({ id, primary });
   };
+  // The match index also reads an alias without a bracketed note ("… (a.k.a.
+  // AVIC Institute 625)"), so an alias claims that form too.
+  const aliasKeys = (a) => [latinKey(a), latinKey(withoutCodes(a))].filter(Boolean);
   for (const r of records.values()) {
     claim(latinKey(r.name), r.id, true);
-    for (const a of r.aliases ?? []) claim(latinKey(a), r.id, false);
+    for (const a of r.aliases ?? []) for (const k of aliasKeys(a)) claim(k, r.id, false);
     claim(cjkKey(r.zh), r.id, true);
     for (const z of r.zhAliases ?? []) claim(cjkKey(z), r.id, false);
+  }
+  for (const { id, names } of listed) {
+    for (const n of names) {
+      claim(latinKey(n), id, true);
+      claim(cjkKey(n), id, true);
+    }
   }
   const removed = [];
   for (const [key, claims] of owners) {
@@ -296,8 +319,9 @@ export function resolveNameCollisions(records) {
     for (const id of ids) {
       if (id === keeper) continue;
       const r = records.get(id);
+      if (!r) continue; // a list-only body has no file to change
       const before = r.aliases.length + r.zhAliases.length;
-      r.aliases = r.aliases.filter((a) => latinKey(a) !== key);
+      r.aliases = r.aliases.filter((a) => !aliasKeys(a).includes(key));
       r.zhAliases = r.zhAliases.filter((z) => cjkKey(z) !== key);
       if (r.aliases.length + r.zhAliases.length < before) removed.push(`"${key}" removed from ${id}${keeper ? ` (it is ${keeper}'s name)` : ''}`);
     }

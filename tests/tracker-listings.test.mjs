@@ -12,6 +12,7 @@ import {
   isResearchBody,
   parseCaSanctionsXml,
   parseNroPage,
+  recordsHeldApart,
   resolveInstitutionAliases,
   unknownListFiles,
 } from '../scripts/tracker/lib/listings.mjs';
@@ -29,6 +30,94 @@ test('banks, holdings and manufacturers are not research bodies', () => {
   assert.equal(isResearchBody('Internet Research Agency LLC'), false);
   assert.equal(isResearchBody('Ansar Bank'), false);
   assert.equal(isResearchBody('China Electronics Technology Group Corporation 13th Research Institute'), true);
+});
+
+// The lists name a group's academies and institutes after the group, so a
+// company word ("Corporation") must not hide the research unit at the end.
+test('a numbered unit named after its group is a research body; its factories are not', () => {
+  assert.equal(isResearchBody('China Electronics Technology Group Corporation No. 28 Institute'), true);
+  assert.equal(isResearchBody('Aviation Industry Corporation of China 612 Institute'), true);
+  assert.equal(isResearchBody('China Aerospace Science and Technology Corporation (CASC) 8th Academy'), true);
+  assert.equal(isResearchBody('China Aerospace Science and Industry Corporation Second Academy'), true);
+  assert.equal(isResearchBody('China Aerospace Science and Technology Corporation (CASC) 1st Academy First Design Department'), true);
+  assert.equal(isResearchBody("China Aerospace Science and Industry Corporation (CASIC) 3rd Academy's 159 Factory"), false);
+  assert.equal(isResearchBody('China Aerospace Science and Industry Corporation Second Academy. Subordinate Institution - 283 Factory'), false);
+  // A company that calls itself laboratories is still a company.
+  assert.equal(isResearchBody('Limited Liability Company Eluent Laboratories'), false);
+});
+
+const EL = 'Entity List (EL) - Bureau of Industry and Security';
+const known = (records) => {
+  const index = buildMatchIndex(records.map((r) => ({ aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [], ...r })));
+  const country = new Map(records.map((r) => [r.id, r.country]));
+  return { index, countryOf: (id) => country.get(id) ?? null };
+};
+
+test("an entry whose main name is a tracker record's name is kept, though it reads like a company", () => {
+  const tracker = known([
+    { id: 'caep-china-jiuyuan-trading-corporation', name: 'China Jiuyuan Trading Corporation', country: 'CN' },
+    { id: 'cetc-38', name: 'China Electronics Technology Group Corporation 38th Research Institute (CETC 38)', aliases: ['Hefei Institute of Electronic Engineering'], country: 'CN' },
+  ]);
+  const results = [
+    { id: 'j1', source: EL, name: 'China Jiuyuan Trading Corporation', alt_names: ['China Long Term Material Trading Company'], addresses: [{ country: 'CN' }] },
+    // The list gives a subsidiary company the institute's aliases: that alone does not make it the institute.
+    { id: 'j2', source: EL, name: 'Anhui Sun-Create Electronics', alt_names: ['Hefei Institute of Electronic Engineering'], addresses: [{ country: 'CN' }] },
+    { id: 'j3', source: EL, name: 'China Jiuyuan Trading Corporation', alt_names: [], addresses: [{ country: 'RU' }] },
+  ];
+  assert.deepEqual(cslToEntries(results), []);
+  assert.deepEqual(cslToEntries(results, tracker).map((e) => e.key), ['csl:j1']);
+});
+
+test("Canada's list keeps a body the tracker holds, though its name reads like a company", () => {
+  const xml = `<data-set><record><Country-Pays>China / Chine</Country-Pays><EntityOrShip-EntiteOuNavire>China Jiuyuan Trading Corporation/Société commerciale Jiuyuan de Chine</EntityOrShip-EntiteOuNavire><Schedule-Annexe>1, Part 1</Schedule-Annexe><Item-NumeroDarticle>5</Item-NumeroDarticle><DateOfListing-DateDinscription>2024-01-01</DateOfListing-DateDinscription></record></data-set>`;
+  const tracker = known([{ id: 'caep-china-jiuyuan-trading-corporation', name: 'China Jiuyuan Trading Corporation', country: 'CN' }]);
+  assert.deepEqual(caToEntries(parseCaSanctionsXml(xml)), []);
+  assert.deepEqual(caToEntries(parseCaSanctionsXml(xml), tracker).map((e) => e.key), ['ca:China:1, Part 1:5']);
+});
+
+// Otherwise an entry kept once would keep itself: its own record would make
+// its name "known" at the next sync, whatever the rules say by then.
+test('the known-name test trusts only records held apart from that test', () => {
+  const records = [
+    { id: 'caep-china-jiuyuan-trading-corporation', virtual: false },
+    { id: 'nro-only-institute', virtual: true, ids: { nro: 'nro-only-institute' } },
+    { id: 'spacety', virtual: true, ids: {} },
+    { id: 'cetc-28', virtual: true, ids: {} },
+    { id: 'eluent', virtual: true, ids: {} },
+  ];
+  const snapshots = {
+    'us-csl': {
+      entries: [
+        { key: 'csl:1', name: 'CHANGSHA TIANYI SPACE SCIENCE AND TECHNOLOGY RESEARCH INSTITUTE CO. LTD', institution: 'spacety' },
+        { key: 'csl:2', name: 'Spacety Co., Ltd.', institution: 'spacety' },
+        { key: 'csl:3', name: 'Limited Liability Company Eluent Laboratories', institution: 'eluent' },
+        { key: 'csl:4', name: 'China Electronics Technology Group Corporation No. 28 Institute', institution: 'cetc-28' },
+      ],
+    },
+    'jp-meti-eul': { entries: [{ key: 'eul:1', name: 'China Electronics Technology Group Corporation 28th Research Institute (CETC 28)', institution: 'cetc-28' }] },
+  };
+  assert.deepEqual(recordsHeldApart(records, snapshots).map((r) => r.id), ['caep-china-jiuyuan-trading-corporation', 'nro-only-institute', 'spacety', 'cetc-28']);
+});
+
+// The eCFR's Entity List has no entry for CASC itself: the feed repeats the
+// CASC 9th Academy 13th Research Institute's entry (same aliases, same
+// address) under the group's bare name, which would mark CASC as listed. The
+// copy's id changes between downloads, so it is known by what it is.
+test('a screening-list row whose name is cut short is skipped as a copy of the full row', () => {
+  const tracker = known([{ id: 'china-aerospace-science-and-technology-corporation', name: 'China Aerospace Science and Technology Corporation', country: 'CN' }]);
+  const aliases = ['13th Institute', 'Beijing Institute of Aerospace Control Devices (BIACD)', '230 Factory'];
+  const full = { id: 'full', source: EL, name: 'China Aerospace Science and Technology Corporation (CASC) 9th Academy 13 Research Institute', alt_names: [...aliases, 'Beijing Aerospace Times Optical-Electronic Technology Co., Ltd'], addresses: [{ country: 'CN' }] };
+  const cut = { id: 'cut', source: EL, name: 'China Aerospace Science and Technology Corporation (CASC)', alt_names: [...aliases, 'Beijing Aerospace Times Optical-Electronic Technology Co., Ltd.'], addresses: [{ country: 'CN' }] };
+  assert.deepEqual(cslToEntries([full, cut], tracker).map((e) => e.key), ['csl:full']);
+  assert.equal(cslToEntries([cut], tracker).length, 1);
+});
+
+// Two feed rows give the CASC 1st Academy's 702nd Research Institute the 12th
+// Research Institute's aliases (BICD); the eCFR gives them to the 12th.
+test('the feed rows that pair one institute with another one’s aliases are skipped', () => {
+  const row = { source: EL, name: 'China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute', alt_names: ['Beijing Aerospace Automatic Control Institute (BICD)', '12th Institute'], addresses: [{ country: 'CN' }] };
+  assert.equal(cslToEntries([{ ...row, id: 'any-other-row' }]).length, 1);
+  assert.deepEqual(cslToEntries([{ ...row, id: 'dcca14daa426b77552ceeaef87d7158bb85ab5f62e2d6efb15059a39' }]), []);
 });
 
 test('only the main name decides whether an entry is a research body', () => {

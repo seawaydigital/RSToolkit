@@ -143,7 +143,9 @@ export default function TrackerMethodology({ dataset, changelog }) {
           The US screening lists and Canada&apos;s sanctions list are compared with their official downloads every month. The US
           Section 1286 list and Japan&apos;s End User List are entered by hand from each new edition; the table gives the date of the
           edition in use. The 1286 list is entered in full. From Japan&apos;s list, as from the US screening lists and Canada&apos;s
-          sanctions list, only research bodies in China, Russia and Iran are entered. A list marked
+          sanctions list, the tracker takes research bodies in China, Russia and Iran, and any other body already in the tracker,
+          such as a trading company the NRO list names. When a list names one of a group&apos;s academies or institutes, that unit
+          has its own record and the group&apos;s profile lists it; the group itself is not shown as listed. A list marked
           &quot;Not checked yet&quot; has not been entered, so every institution shows that status for it rather than &quot;Not
           listed&quot;.
         </p>

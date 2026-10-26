@@ -21,9 +21,42 @@ const CSL_LISTS = {
 const COUNTRIES = new Set(['CN', 'RU', 'IR']);
 const CA_COUNTRIES = { China: 'CN', Russia: 'RU', Iran: 'IR' };
 
-const RESEARCH = /universit|institute|academy|college|laborator|research|polytechnic|scientific|school of|science and technology/i;
+const RESEARCH = /universit|institute|academy|college|laborator|research|polytechnic|scientific|school of|science and technology|design department/i;
 const COMMERCIAL = /\b(co\.?,?\s*ltd|company|limited|llc|trading|import|export|bank|group|corporation|holding|plant|factory|zavod)\b/i;
 const STRONG_RESEARCH = /universit|research institute|academy of|institute of/i;
+// A group's unit named after the group ("Aviation Industry Corporation of
+// China 612 Institute", "CASC 8th Academy"): the last words say what it is.
+// Not laboratories: "… Eluent Laboratories" with a company form is a company.
+const RESEARCH_UNIT = /\b(institute|academy|design department)$/i;
+
+// Rows of the US screening-list feed that the eCFR's Entity List shows are
+// broken: they give the CASC 1st Academy 702nd Research Institute's name the
+// 12th Research Institute's aliases (BICD), which the eCFR gives the 12th.
+const CSL_FEED_ERRORS = new Set([
+  'dcca14daa426b77552ceeaef87d7158bb85ab5f62e2d6efb15059a39',
+  'ef74bd67d0b0b8b8c2dab900486ab40ec9338085b90ffc0aa08ddddb',
+]);
+
+// Rows whose name is cut short: each carries exactly the aliases of a row on
+// the same list whose name continues it, so it is that row again. The feed
+// repeats the CASC 9th Academy 13th Research Institute as "China Aerospace
+// Science and Technology Corporation (CASC)", which would list CASC itself;
+// the copy's id changes between downloads.
+function cutShortRows(rows) {
+  const byAliases = new Map();
+  for (const r of rows) {
+    const aliases = [...new Set((r.alt_names ?? []).map(normalizePhrase))].sort().join('|');
+    if (!aliases) continue;
+    const k = `${r.source}\t${aliases}`;
+    if (!byAliases.has(k)) byAliases.set(k, []);
+    byAliases.get(k).push({ id: r.id, name: normalizePhrase(r.name) });
+  }
+  const cut = new Set();
+  for (const group of byAliases.values()) {
+    for (const r of group) if (group.some((s) => s.name.startsWith(`${r.name} `))) cut.add(r.id);
+  }
+  return cut;
+}
 
 const unique = (list) => [...new Set(list.filter(Boolean))];
 const tidy = (s) => String(s ?? '').replace(/\s+/g, ' ').trim();
@@ -45,15 +78,49 @@ export function decodeEntities(s) {
 export function isResearchBody(name) {
   const n = String(name ?? '');
   if (!RESEARCH.test(n)) return false;
-  return !COMMERCIAL.test(n) || STRONG_RESEARCH.test(n);
+  const bare = n.replace(/\s*\([^)]*\)/g, '').replace(/[\s.,;]+$/, '');
+  return !COMMERCIAL.test(n) || STRONG_RESEARCH.test(n) || RESEARCH_UNIT.test(bare);
 }
 
-export function cslToEntries(results) {
+const sameCountry = (a, b) => !a || !b || a === b;
+
+// Whether a list's main name for an entry is the name of a record the tracker
+// already holds in that country, compared the way assignInstitutions compares
+// names. Alternative names don't count: the US list gives CETC 38's
+// subsidiary companies the institute's own aliases.
+function namesRecord(index, countryOf) {
+  if (!index) return () => false;
+  return (name, country) =>
+    entryKeys({ name }, { distinctive: true }).some(({ key }) => [...(index.phrases.get(key) ?? [])].some((id) => sameCountry(countryOf(id), country)));
+}
+
+// The records the known-name test may trust: files and NRO organizations,
+// records on a hand-kept list, and records some list entry names as a
+// research body. A record made only by an entry the known-name test kept is
+// left out, so an entry can't keep itself once the rules change.
+const GENERATED_SNAPSHOTS = new Set(['us-csl', 'ca-sanctions']);
+export function recordsHeldApart(records, snapshots) {
+  const held = new Set(records.filter((r) => !r.virtual || r.ids?.nro).map((r) => r.id));
+  for (const [name, snapshot] of Object.entries(snapshots)) {
+    for (const e of snapshot.entries ?? []) if (e.institution && (!GENERATED_SNAPSHOTS.has(name) || isResearchBody(e.name))) held.add(e.institution);
+  }
+  return records.filter((r) => held.has(r.id));
+}
+
+// An entry is kept when its main name reads as a research body, or is a body
+// the tracker already holds (CAEP's trading companies are on Canada's NRO
+// list), so no record reads "Not listed" for a list that names it. For the
+// second test, pass `index`, a match index of recordsHeldApart, and `countryOf`.
+export function cslToEntries(results, { index = null, countryOf = () => null } = {}) {
+  const known = namesRecord(index, countryOf);
+  const rows = results
+    .map((r) => ({ r, list: CSL_LISTS[r.source], country: (r.addresses ?? []).map((a) => a.country).find((c) => COUNTRIES.has(c)) }))
+    .filter(({ r, list, country }) => list && country && !CSL_FEED_ERRORS.has(r.id));
+  const cut = cutShortRows(rows.map(({ r }) => r));
   const out = [];
-  for (const r of results) {
-    const list = CSL_LISTS[r.source];
-    const country = (r.addresses ?? []).map((a) => a.country).find((c) => COUNTRIES.has(c));
-    if (!list || !country || !isResearchBody(r.name)) continue;
+  for (const { r, list, country } of rows) {
+    if (cut.has(r.id)) continue;
+    if (!isResearchBody(r.name) && !known(r.name, country)) continue;
     out.push({
       key: `csl:${r.id}`,
       list,
@@ -94,7 +161,9 @@ function splitCaAliases(text) {
     .filter((s) => s.length >= 2);
 }
 
-export function caToEntries(rows) {
+// Kept on the same terms as the US entries (see cslToEntries).
+export function caToEntries(rows, { index = null, countryOf = () => null } = {}) {
+  const known = namesRecord(index, countryOf);
   const out = [];
   for (const r of rows) {
     const countryEn = String(r.country ?? '').split('/')[0].trim();
@@ -103,7 +172,7 @@ export function caToEntries(rows) {
     // Names are bilingual: "English name/Nom français".
     const [english, ...french] = r.entity.split('/').map(tidy);
     const altNames = unique([...french, ...splitCaAliases(r.aliases)]).filter((n) => n !== english);
-    if (!isResearchBody(english)) continue;
+    if (!isResearchBody(english) && !known(english, country)) continue;
     out.push({
       key: `ca:${countryEn}:${r.schedule}:${r.item}`,
       list: 'ca-sanctions',
@@ -192,7 +261,6 @@ export function assignInstitutions(
     for (const { key, primary } of entryKeys(p, { distinctive: true })) if (primary) byName.set(key, p.institution);
   }
   const taken = new Set(takenIds);
-  const sameCountry = (a, b) => !a || !b || a === b;
   const createdHere = [];
 
   const out = entries.map((e) => {

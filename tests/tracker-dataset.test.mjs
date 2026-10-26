@@ -125,6 +125,56 @@ test('a list-only unit named after another record is linked to it as a listed un
   assert.deepEqual(makeDataset().byId.get('harbin-institute-of-technology').units, []);
 });
 
+const seedRecord = (id, name, country = 'CN') => ({ ...HIT, id, name, zh: null, acronyms: [], domains: [], country, ids: {}, evidence: [], sources: [], status: 'seed', verifiedOn: null, history: [] });
+const listedAs = (entries) => ({
+  ...SNAPSHOTS,
+  'us-csl': {
+    ...SNAPSHOTS['us-csl'],
+    entries: entries.map(([institution, name, country = 'CN'], i) => ({ key: `csl:u${i}`, list: 'us-entity-list', name, altNames: [], country, date: null, citation: null, url: 'https://example.org', institution })),
+  },
+});
+
+// The Entity List names a group's units "<group> <unit>" without a comma
+// ("Aviation Industry Corporation of China 612 Institute").
+test('a list-only record named after a group and then a unit is linked to the group', () => {
+  const groups = [seedRecord('aviation-industry-corporation-of-china', 'Aviation Industry Corporation of China'), seedRecord('shahid-beheshti-university', 'Shahid Beheshti University', 'IR')];
+  const d = makeDataset({
+    institutions: [HIT, ...groups],
+    snapshots: listedAs([
+      ['avic-612', 'Aviation Industry Corporation of China 612 Institute'],
+      // A name that carries on with "of …" is another institution.
+      ['sbmu', 'Shahid Beheshti University of Medical Sciences', 'IR'],
+      // Russia gives many enterprises the title "Federal Scientific and
+      // Production Center"; Canada's list names one by the title alone.
+      ['fnpc-niipkh', 'Federal Scientific and Production Centre', 'RU'],
+      ['fnpc-start', 'Federal Scientific and Production Center M.V. Protsenko Start Production Association', 'RU'],
+    ]),
+  });
+  assert.equal(d.byId.get('avic-612').parent, 'aviation-industry-corporation-of-china');
+  assert.deepEqual(d.byId.get('aviation-industry-corporation-of-china').units.map((u) => u.id), ['avic-612']);
+  assert.equal(d.byId.get('aviation-industry-corporation-of-china').listings.find((l) => l.listId === 'us-entity-list').status, 'not-listed');
+  assert.equal(d.byId.get('sbmu').parent, null);
+  assert.equal(d.byId.get('fnpc-start').parent, null);
+});
+
+test('a unit is linked to the most specific record its name starts with', () => {
+  const d = makeDataset({
+    institutions: [HIT, seedRecord('casic', 'China Aerospace Science and Industry Corporation')],
+    snapshots: listedAs([
+      ['casic-3rd-academy', 'China Aerospace Science and Industry Corporation (CASIC) 3rd Academy'],
+      ['casic-31st-institute', 'China Aerospace Science and Industry Corporation (CASIC) 3rd Academy, 31 Research Institute'],
+      ['casic-2nd-academy', 'China Aerospace Science and Industry Corporation Second Academy'],
+      ['casic-25th-institute', 'China Aerospace Science and Industry Corporation Second Academy. Subordinate Institution - 25th Research Institute'],
+    ]),
+  });
+  const parentOf = (id) => d.byId.get(id).parent;
+  assert.equal(parentOf('casic-3rd-academy'), 'casic');
+  assert.equal(parentOf('casic-31st-institute'), 'casic-3rd-academy');
+  assert.equal(parentOf('casic-2nd-academy'), 'casic');
+  assert.equal(parentOf('casic-25th-institute'), 'casic-2nd-academy');
+  assert.deepEqual(d.byId.get('casic').units.map((u) => u.id), ['casic-3rd-academy', 'casic-2nd-academy']);
+});
+
 test('the same name with a bracketed code is the institution itself, not a unit of it', () => {
   const snapshots = {
     ...SNAPSHOTS,

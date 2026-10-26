@@ -16,6 +16,7 @@ import {
   diffEntries,
   parseCaSanctionsXml,
   parseNroPage,
+  recordsHeldApart,
   resolveInstitutionAliases,
   sanitizeForIssue,
   unknownListFiles,
@@ -32,6 +33,9 @@ export async function runSync({ write = false, today = new Date().toISOString().
   const raw = await readRawData();
   const dataset = await loadDataset(raw);
   const index = buildMatchIndex(dataset.records);
+  // Entries the research-body test drops are kept when they name a body the
+  // tracker holds apart from them (see recordsHeldApart).
+  const knownIndex = buildMatchIndex(recordsHeldApart(dataset.records, raw.snapshots));
   const takenIds = new Set(dataset.byId.keys());
   const countryOf = (id) => dataset.byId.get(id)?.country ?? null;
   // Shared by every list in this sync, so a record created for one list can be
@@ -50,10 +54,10 @@ export async function runSync({ write = false, today = new Date().toISOString().
   for (const [name, title, load] of [
     ['us-csl', 'US Consolidated Screening List (Entity List, Military End-User, SDN)', async () => {
       const csl = await fetchJson(CSL_URL, { timeoutMs: 180000 });
-      return cslToEntries(csl.results ?? csl);
+      return cslToEntries(csl.results ?? csl, { index: knownIndex, countryOf });
     }],
     ['ca-sanctions', 'Consolidated Canadian Autonomous Sanctions List', async () =>
-      caToEntries(parseCaSanctionsXml(await fetchText(CA_SANCTIONS_URL, { timeoutMs: 120000 })))],
+      caToEntries(parseCaSanctionsXml(await fetchText(CA_SANCTIONS_URL, { timeoutMs: 120000 })), { index: knownIndex, countryOf })],
   ]) {
     try {
       const snapshot = raw.snapshots[name];

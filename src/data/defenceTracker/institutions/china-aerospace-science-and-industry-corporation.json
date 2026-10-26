@@ -10,27 +10,14 @@
     "No. 33 Research Institute, Third Academy of CASIC",
     "No. 31 Research Institute, Third Academy of CASIC",
     "Second Academy of CASIC",
-    "China Changfeng Mechanics and Electronics Technology Academy",
-    "China Chang Feng Mechano-Electronic Engineering Academy",
-    "CASIC Second Academy",
-    "China Chang Feng Mechano-Electronic Engineering Company",
-    "CASIC Academy of Defense Technology",
-    "Second Research Academy of CASIC",
-    "Changfeng Electromechanical Technology Design Institute",
-    "China Chang Feng Mechanics and Electronics Technology Academy",
     "33 Institute of CASIC’s Third Academy",
-    "Beijing Automation Control Equipment Institute (BACEI)",
     "Beijing Institute of Automatic Control Equipment",
-    "China Haiying Electromechanical Technology Academy",
     "35 Institute of CASIC’s Third Academy",
     "Beijing Hangxing Machine Building Corporation",
     "Beijing Huahang Radio Measurements Research Institute",
     "China Haiying Electronic Mechanical Technical Research Academy",
-    "Huahang Institute of Radio Measurement",
     "Beijing Power Machinery Institute of CASIC’s 31 Institute",
-    "China Haiying Electromechanical Technology Academy (a.k.a., China Haiying Science & Technology Corporation)",
-    "Beijing Power Generating Machinery Institute",
-    "Beijing Power Machinery Research Laboratory"
+    "China Haiying Electromechanical Technology Academy (a.k.a., China Haiying Science & Technology Corporation)"
   ],
   "acronyms": [
     "CASIC"
@@ -63,6 +50,10 @@
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
     }
   ],
   "seedNotes": {
