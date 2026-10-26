@@ -6,7 +6,10 @@
     "武警工程大学"
   ],
   "aliases": [
-    "PAP Engineering University"
+    "PAP Engineering University",
+    "People's Armed Police Engineering University",
+    "Engineering University of the Chinese People's Armed Police Force",
+    "Engineering University of PAP"
   ],
   "acronyms": [],
   "domains": [],
@@ -14,30 +17,93 @@
   "type": "military",
   "location": {
     "city": "Xi'an",
-    "province": null,
-    "lat": 34.2828,
-    "lng": 108.8473
+    "province": "Shaanxi",
+    "lat": 34.282,
+    "lng": 108.8251
   },
-  "supervisors": [],
+  "supervisors": [
+    "People's Armed Police"
+  ],
   "parent": null,
   "ids": {
     "misp": "ba5fbd7a-8668-4b86-a7ec-f3a160ca08c2",
     "nro": "engineering-university-of-the-capf"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "NDU’s study of the People’s Armed Police lists PAP Engineering University among the force’s universities and academies, and CASI’s translation of the PLA’s 2024 recruitment plan lists it among the four PAP academies that admitted officer cadets that year. Under the Central Military Commission’s 2025 admissions plan it is one of the two PAP academies still admitting school-leavers, and it now also takes cadets for coast guard vessel-command and law-enforcement posts.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university belongs to the PAP, which since the reforms of 2017–2018 has answered to the Central Military Commission alone.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), pp. 11, 32",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2024 Military Academic Institution Recruitment Plan (February 2025), pp. 2–3",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20250406072411/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "2025年军队院校招生政策解读 (The 2025 military academy admissions policy explained; reprinted by China Education Online)",
+      "publisher": "Central Military Commission Training and Administration Department, Military Education Bureau",
+      "url": "https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026141435/https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
