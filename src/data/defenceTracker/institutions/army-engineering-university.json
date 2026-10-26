@@ -19,26 +19,89 @@
     "lat": 32.0439,
     "lng": 118.812
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "fc67e991-b1f9-4d74-afe3-0dbcef332f6b",
     "nro": "army-engineering-university"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes Army Engineering University in Nanjing, formed in June 2017 from the PLA University of Science and Technology and the Ordnance Engineering College, as a PLA Army university whose training centres on army communications, engineering and ordnance equipment; it has 13 military key laboratories.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university reports to PLA Army headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-digital-infrastructure",
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "Shijiazhuang campus (former Ordnance Engineering College)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Communications NCO School (Chongqing)",
+      "zh": "通信士官学校",
+      "kind": "institute"
+    },
+    {
+      "name": "Wuhan Ordnance NCO School",
+      "zh": "军械士官学校",
+      "kind": "institute"
+    },
+    {
+      "name": "Xuzhou training base",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 54–55",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
