@@ -3,11 +3,16 @@
   "name": "Logistics University of the People’s Armed Police Force",
   "zh": "中国人民武装警察部队后勤学院",
   "zhAliases": [
-    "武警后勤学院"
+    "武警后勤学院",
+    "武警医学院"
   ],
   "aliases": [
     "PAP Logistics University",
-    "Logistics University of the People's Armed Police Force"
+    "Logistics University of the People's Armed Police Force",
+    "Logistics University of Chinese People's Armed Police Force",
+    "PAP Logistics Academy",
+    "PAP Logistics College",
+    "Medical College of the Chinese People's Armed Police Force"
   ],
   "acronyms": [],
   "domains": [],
@@ -15,30 +20,94 @@
   "type": "military",
   "location": {
     "city": "Tianjin",
-    "province": null,
-    "lat": 39.0915,
-    "lng": 117.4258
+    "province": "Tianjin",
+    "lat": 39.1517,
+    "lng": 117.4655
   },
-  "supervisors": [],
+  "supervisors": [
+    "People’s Armed Police Logistics Department (as of 2014)"
+  ],
   "parent": null,
   "ids": {
     "misp": "eb166b26-eee9-40d3-b738-ddd328149114",
     "nro": "logistics-university-of-pap"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "NDU’s study of the People’s Armed Police lists the PAP Logistics Academy among the force’s universities and academies. In Tianjin’s Dongli District, it describes itself as the PAP’s in-service college for logistics, training serving officers, NCOs, civilian staff and postgraduates in military logistics, military equipment, applied psychology and transportation; its 2023 postgraduate places were open only to serving officers, civilian staff and new military academy graduates. Its 2014 profile says it began in 1984 as the PAP health school, was the PAP Medical College from 1993 until 2011, and lists deployable shelter hospitals, special military drugs and a sniper selection and training system among research outputs used by the force; its personnel served in stability operations in Tibetan areas and emergency deployments in Xinjiang.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college is graded at deputy corps level and in 2014 reported to the PAP Logistics Department; NDU notes that the 2017–2018 reforms placed the PAP under the sole authority of the Central Military Commission.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), pp. 11, 32",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "武警后勤学院2023年硕士研究生招生简章 (PAP Logistics College: 2023 master’s admissions)",
+      "publisher": "PAP Logistics College, published by China Military Online (81.cn)",
+      "url": "http://www.81.cn/jx_208569/10192258.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240710024534/http://www.81.cn/jx_208569/10192258.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "武警后勤学院概况 (About the PAP Logistics College; 2014)",
+      "publisher": "China Military Online (81.cn), PLA Daily",
+      "url": "http://www.81.cn/rdzt/2014/0421bkjx/2014-06/18/content_5964263.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260419015140/http://www.81.cn/rdzt/2014/0421bkjx/2014-06/18/content_5964263.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
