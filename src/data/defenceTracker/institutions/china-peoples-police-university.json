@@ -4,13 +4,16 @@
   "zh": "中国人民警察大学",
   "zhAliases": [
     "警察大学",
-    "中国人民武装警察部队学院"
+    "中国人民武装警察部队学院",
+    "公安部国际执法合作学院",
+    "中国维和警察培训中心"
   ],
   "aliases": [
+    "China People's Police University",
     "Ministry of Public Security China People's Police University",
     "MPS China People's Police University",
-    "China People's Police University",
-    "Zhōngguórén mín wǔzhuāng jǐngchá bùduì xuéyuàn"
+    "Chinese People's Armed Police Force Academy",
+    "China Peacekeeping Police Training Center"
   ],
   "acronyms": [
     "CPPU"
@@ -24,7 +27,9 @@
     "lat": 39.5314,
     "lng": 116.6513
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Public Security"
+  ],
   "parent": null,
   "ids": {
     "misp": "abf7d465-d85c-4a3f-857c-be302d1079bb",
@@ -32,20 +37,59 @@
     "ror": "05mg82t36",
     "wikidata": "Q5100586"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "CPPU, in Langfang, describes itself as a full-time university run directly by China’s Ministry of Public Security. It began in 1981 as the Chinese People’s Armed Police Force Academy, which trained officers for the border defence, firefighting and guard forces, and became CPPU in the 2018 reorganisation of party and state bodies; it also operates as the ministry’s International Law Enforcement Cooperation College and as the China Peacekeeping Police Training Center.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Langfang campus (Anci District)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Guangzhou campus (Tianhe District)",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "China People’s Police University",
+      "url": "https://www.cppu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026142108/https://www.cppu.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
