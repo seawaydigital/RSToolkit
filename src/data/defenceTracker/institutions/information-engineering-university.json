@@ -3,6 +3,8 @@
   "name": "Information Engineering University",
   "zh": "中国人民解放军信息工程大学",
   "zhAliases": [
+    "战略支援部队信息工程大学",
+    "解放军信息工程大学",
     "中国人民解放军外国语学院",
     "洛阳外语学院",
     "郑州测绘学院",
@@ -10,6 +12,8 @@
     "数学工程与先进计算国家重点实验室"
   ],
   "aliases": [
+    "PLA Strategic Support Force Information Engineering University",
+    "PLA Information Engineering University",
     "Luoyang Foreign Languages University",
     "PLA Foreign Languages University",
     "Luoyang Foreign Language Institute",
@@ -28,30 +32,93 @@
   "type": "military",
   "location": {
     "city": "Zhengzhou",
-    "province": null,
-    "lat": 34.8154,
-    "lng": 113.5679
+    "province": "Henan",
+    "lat": 34.7912,
+    "lng": 113.6587
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central Military Commission Training and Administration Department (from 2016, per CASI)"
+  ],
   "parent": null,
   "ids": {
     "misp": "95675d9b-cc29-4343-8b9d-e8a0442b7a51",
     "nro": "information-engineering-university"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Information Engineering University in Zhengzhou as one of the PLA’s five comprehensive universities, formed in 1999 from PLA schools of information engineering, electronic technology (founded as a school for confidential communications staff) and surveying and mapping. It hosts the State Key Laboratory of Mathematical Engineering and Advanced Computing and a national engineering laboratory for computer virus defence, runs a cyber training range, and teaches cryptography, intelligence analysis, technical reconnaissance and information countermeasures.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASI reports that the university was under the PLA General Staff Department from 1999 to 2016 and then under the Central Military Commission’s Training and Administration Department, and identifies it as a Strategic Support Force university.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "cryptography",
+    "cyber-security"
+  ],
+  "subunits": [
+    {
+      "name": "Main campus (No. 7 Jianxue Street, Jinshui District, Zhengzhou)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Zhengzhou High-tech Zone campus (No. 62 Science Avenue)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Luoyang campus (former PLA Foreign Language University)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "National Engineering Laboratory of Computer Virus Defense Technology",
+      "zh": "计算机病毒防御技术国家工程实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 221–224",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
