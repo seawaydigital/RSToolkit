@@ -18,26 +18,118 @@
     "lat": 39.9906,
     "lng": 116.2035
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central Military Commission"
+  ],
   "parent": null,
   "ids": {
     "misp": "6ba88ae5-8be1-44cb-bfba-0a01a1309dad",
     "nro": "academy-of-military-science"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The Academy of Military Science is the PLA’s main military research academy: Xinhua describes it as an important PLA research institution, and it reports directly to the Central Military Commission. It writes the internal guidelines for how China’s forces are employed, and in 2017 it absorbed research institutes from the PLA’s former general departments, including its military medicine and defence science and technology innovation institutes.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The Academy of Military Science reports directly to the Central Military Commission.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Military Medicine Institute (Academy of Military Medical Sciences)",
+      "zh": "军事医学研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "System Engineering Institute",
+      "zh": "系统工程研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "National Defense Science and Technology Innovation Institute",
+      "zh": "国防科技创新研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "War Institute",
+      "zh": "战争研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Military Political Work Institute",
+      "zh": "军队政治工作研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Military Legal Systems Institute",
+      "zh": "军事法制研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Chemical Defense Institute",
+      "zh": "防化研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "National Defense Engineering Institute",
+      "zh": "国防工程研究院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Xinhua report on the inspection of the Academy of Military Science, 16 May 2018 (军事科学院)",
+      "publisher": "Xinhua News Agency, on the Chinese government website (gov.cn)",
+      "url": "https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032215/https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s “New” Academy of Military Science: A Revolution in Theoretical Affairs? (China Brief, vol. 19, issue 2, 2019)",
+      "publisher": "Jamestown Foundation",
+      "url": "https://jamestown.org/chinas-new-academy-of-military-science-a-revolution-in-theoretical-affairs/",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032239/https://jamestown.org/chinas-new-academy-of-military-science-a-revolution-in-theoretical-affairs/"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
