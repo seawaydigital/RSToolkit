@@ -32,6 +32,7 @@ Only verified records carry `evidence`. A record not researched yet is rated by 
 
 - **Write every evidence summary in your own words.** Never copy ASPI's text (the MISP descriptions were never imported for this reason) or anyone else's.
 - **Subunits** are `{ "name", "zh", "kind" }` with kind `campus`, `hospital`, `institute` or `lab`. Add `"match": true` only to a unit whose name alone identifies the parent (a named hospital such as 西京医院 Xijing Hospital): the batch check then matches it to the parent. Never mark campuses or generic names (口腔医院, 理学院).
+- **Topics** are STRA category or subcategory ids from `src/data/straData.js` (`advanced-weapons`, `uncrewed-vehicles`), added only where a source shows research in that area. MISP's topic names in `seedNotes` ("Cyber") are not ids.
 - **Every evidence item cites at least one source** from the record's `sources`, and gets the NSGRP Annex B questions it supports (`2.1` state influence, `2.2` misconduct or lack of transparency, `2.3` military or government ties).
 - **Every source gets an archive entry**: `"archive": { "url": "https://web.archive.org/…" }`, or `"archive": { "unavailable": "<reason>" }` when no archive could capture it.
 - **Never name individual people.** Describe roles, not names.

@@ -5,6 +5,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import nroData from '../src/data/nroData.js';
+import { straData } from '../src/data/straData.js';
 import { loadDataset, readRawData } from '../scripts/tracker/lib/loadData.mjs';
 import { validateRecord, validateSnapshot } from '../src/tools/compliance/defence-tracker/lib/schema.js';
 import { RUBRIC_VERSION } from '../src/tools/compliance/defence-tracker/lib/rubric.js';
@@ -18,6 +19,17 @@ test('every institution file passes the schema and is named after its id', () =>
   for (const { file, record } of raw.institutionFiles) {
     assert.deepEqual(validateRecord(record), [], file);
     assert.equal(file, `${record.id}.json`);
+  }
+});
+
+// Topics link a profile to Canada's STRA list and are shown by their STRA
+// names, so each must be a category or subcategory id from straData.js; a MISP
+// topic name copied from seedNotes ("Cyber") would show as raw text.
+const STRA_IDS = new Set(straData.categories.flatMap((c) => [c.id, ...(c.subcategories ?? []).map((s) => s.id)]));
+
+test('every topic is a STRA category or subcategory id', () => {
+  for (const r of ds.records) {
+    for (const t of r.topics ?? []) assert.ok(STRA_IDS.has(t), `${r.id}: "${t}" is not a STRA category or subcategory id`);
   }
 });
 
