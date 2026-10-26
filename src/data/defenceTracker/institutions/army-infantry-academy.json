@@ -12,7 +12,8 @@
     "Nanchang Army Academy",
     "Nachang Army Academy",
     "Army Infantry College of PLA",
-    "Army Infantry College of People's Liberation Army"
+    "Army Infantry College of People's Liberation Army",
+    "Army Infantry College"
   ],
   "acronyms": [],
   "domains": [],
@@ -24,7 +25,9 @@
     "lat": 28.6734,
     "lng": 115.7802
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "4be885f7-9eeb-429b-9d2e-8f12a39a3521",
@@ -32,20 +35,63 @@
     "ror": "051exe838",
     "wikidata": "Q10872957"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Infantry College (陆军步兵学院), formed in 2017 by merging the Nanchang Military Academy and the Shijiazhuang Mechanized Infantry Academy, as a PLA Army academy with its main campus in Nanchang and a branch campus in Shijiazhuang.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy reports to PLA Army headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Shijiazhuang branch campus",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 59–61",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
