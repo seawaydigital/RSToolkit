@@ -12,30 +12,90 @@
   "type": "security",
   "location": {
     "city": "Shenyang",
-    "province": null,
-    "lat": 41.8422,
-    "lng": 123.3789
+    "province": "Liaoning",
+    "lat": 41.8413,
+    "lng": 123.375
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Public Security"
+  ],
   "parent": null,
   "ids": {
     "misp": "a77e1cc6-d76c-46a4-a6f6-268918dc0439",
-    "nro": "criminal-investigation-police-university-of-china"
+    "nro": "criminal-investigation-police-university-of-china",
+    "ror": "04vnevw94",
+    "wikidata": "Q77078924"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "CIPUC, in Shenyang, describes itself as an undergraduate institution run directly by China’s Ministry of Public Security; it grew from a public security training unit set up in 1948, came under the central ministry in 1954 and took its present name in 1981. It works with the ministry’s criminal investigation, economic crime, technical investigation and narcotics bureaus.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Tawan campus (Huanggu District)",
+      "zh": "塔湾校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Baishan Road campus",
+      "zh": "白山路校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Puhe campus",
+      "zh": "蒲河校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Criminal Investigation Police University of China",
+      "url": "https://www.cipuc.edu.cn/xxgk1/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026142247/https://www.cipuc.edu.cn/xxgk1/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "历史沿革 (History)",
+      "publisher": "Criminal Investigation Police University of China",
+      "url": "https://www.cipuc.edu.cn/xxgk1/lsyg.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260910061305/https://www.cipuc.edu.cn/xxgk1/lsyg.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
