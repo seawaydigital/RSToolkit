@@ -6,7 +6,8 @@
     "陆军航空兵学院"
   ],
   "aliases": [
-    "Army Aviation School"
+    "Army Aviation School",
+    "Army Aviation Academy"
   ],
   "acronyms": [],
   "domains": [],
@@ -18,26 +19,65 @@
     "lat": 39.8372,
     "lng": 116.6302
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "837d8af0-86cd-4c42-966a-70ed6562f0e7",
     "nro": "army-aviation-college"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Aviation Academy (陆军航空兵学院) in Beijing’s Tongzhou district, established in 1999 from PLA Army Aviation training regiments, as a PLA Army academy whose training covers army aviation command, flying and aircraft maintenance.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy reports to PLA Army headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 74–75",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
