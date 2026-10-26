@@ -8,13 +8,16 @@
   ],
   "aliases": [
     "Naval Engineering University",
+    "PLA Naval University of Engineering",
     "Zhōngguó Rénmín Jiěfàngjūn Haǐjūn Gōngchéng Dàxué"
   ],
   "acronyms": [
     "NUE",
     "NUEPLA"
   ],
-  "domains": [],
+  "domains": [
+    "nue.edu.cn"
+  ],
   "country": "CN",
   "type": "military",
   "location": {
@@ -23,7 +26,9 @@
     "lat": 30.5837,
     "lng": 114.2378
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "a194f987-9670-4021-b8a1-ce0778a47abf",
@@ -31,20 +36,91 @@
     "ror": "056vyez31",
     "wikidata": "Q10872997"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Naval University of Engineering in Wuhan as one of the PLA’s five comprehensive universities, formed in April 1999 by merging the PLA Navy’s engineering and electronic engineering academies. It trains naval officers in power, electronic, electrical and weapons engineering, ships and ocean engineering and information security, with water and sea training bases, a nuclear power operations training facility in Sichuan and a decommissioned destroyer for training.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI reports that the university has two national-level key laboratories, one of them the national defence science and technology key laboratory for ship integrated power technology, and six military key laboratories.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Ship Integrated Power Technology National Defence Science and Technology Key Laboratory (舰船综合电力技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university reports to PLA Navy headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Ship Integrated Power Technology National Defence Science and Technology Key Laboratory",
+      "zh": "舰船综合电力技术国防科技重点实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Mulan Lake water training base (Huangpi District, Wuhan)",
+      "zh": "木兰湖水上训练基地",
+      "kind": "campus"
+    },
+    {
+      "name": "Shanwei maritime training base (Guangdong)",
+      "zh": "汕尾海上训练基地",
+      "kind": "campus"
+    },
+    {
+      "name": "Sichuan nuclear power operations training facility",
+      "zh": "四川核动力运行实习所",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 115–117",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
