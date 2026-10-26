@@ -7,32 +7,73 @@
   "acronyms": [],
   "domains": [],
   "country": "CN",
-  "type": "nuclear",
+  "type": "company",
   "location": {
     "city": "Beijing",
     "province": null,
     "lat": 39.9205,
     "lng": 116.4398
   },
-  "supervisors": [],
+  "supervisors": [
+    "China Academy of Engineering Physics (per the Canadian and US lists)"
+  ],
   "parent": "chinese-academy-of-engineering-physics",
   "ids": {
     "nro": "caep-beijing-jincheng-huanyu-electronics"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "Canada’s Named Research Organizations list names Beijing Jincheng Huanyu Electronics among the known aliases of the China Academy of Engineering Physics (CAEP), and the US Commerce Department listed it in 2020 as one of ten entities owned by, operated by or directly affiliated with CAEP, the complex responsible for researching, developing and testing China’s nuclear weapons.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Chinese Academy of Engineering Physics and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Entities to the Entity List, Revision of Certain Entries on the Entity List (85 FR 34495, 5 June 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130307/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
