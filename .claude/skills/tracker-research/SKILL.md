@@ -58,12 +58,12 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 | `defence-industry-partnership` | Documented partnerships, joint centres or programs with defence-industry groups |
 | `defence-funded-research` | Documented projects funded by military or defence-industry bodies |
 | `pla-collaboration` | Documented joint research, joint labs or co-supervision with PLA institutions |
-| `misconduct` | Officially documented cyber operations, espionage, or export-control or sanctions violations |
+| `misconduct` | Officially documented cyber operations, espionage, export-control or sanctions violations, or human-rights abuses (e.g. a government finding that it supported surveillance or repression) |
 | `state-control` | How the state owns, funds or directs it (context; never changes the rating alone) |
 
 Each item: `{ "signal", "summary", "annexB", "sources" }`, plus `items` (and `count` if not all are listed) for labs. `summary` is one or two sentences in your own words. `annexB` lists the NSGRP Annex B questions it supports: `2.1` state influence or control, `2.2` misconduct or lack of transparency, `2.3` military or government ties. `sources` lists source ids from the record.
 
-Also check and correct, with sources: `type`, `supervisors`, `zh`, aliases, `domains`, `subunits` (`{ "name", "zh", "kind" }`, kind `campus`, `hospital`, `institute` or `lab`; add `"match": true` only when the unit's name on its own identifies the parent, such as a named hospital like Xijing Hospital, so that the batch check matches it to the parent; never for campuses or generic names like 口腔医院 or 理学院), `topics` (STRA ids from `src/data/straData.js`, only where a source shows research in that area), and `location` (main-campus coordinates to 4 decimals, never the city centre).
+Also check and correct, with sources: `type`, `supervisors`, `zh`, aliases, `domains`, `subunits` (`{ "name", "zh", "kind" }`, kind `campus`, `hospital`, `institute` or `lab`; add `"match": true` only when the unit's name on its own identifies the parent, such as a named hospital like Xijing Hospital, so that the batch check matches it to the parent; never for campuses or generic names like 口腔医院 or 理学院), `topics` (STRA category or subcategory ids from `src/data/straData.js`, never MISP's topic names; `npm test` rejects any other value; only where a source shows research in that area), and `location` (main-campus coordinates to 4 decimals, never the city centre).
 
 ## Sources
 

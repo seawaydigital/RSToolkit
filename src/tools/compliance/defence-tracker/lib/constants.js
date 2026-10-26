@@ -86,7 +86,7 @@ export const SIGNALS = {
   misconduct: {
     group: 'misconduct',
     label: 'Documented misconduct',
-    description: 'Officially documented cyber operations, espionage, or export-control or sanctions violations involving the institution. Shown under NSGRP question 2.2; can justify a one-level override.',
+    description: 'Officially documented cyber operations, espionage, export-control or sanctions violations, or human-rights abuses involving the institution (for example, a government finding that it supported surveillance or repression). Shown under NSGRP question 2.2; can justify a one-level override.',
   },
   'state-control': {
     group: 'info',
