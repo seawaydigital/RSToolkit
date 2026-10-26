@@ -5,7 +5,11 @@
   "zhAliases": [
     "国防大学"
   ],
-  "aliases": [],
+  "aliases": [
+    "PLA National Defense University",
+    "PLA National Defence University",
+    "National Defence University of the Chinese People's Liberation Army"
+  ],
   "acronyms": [
     "NDU"
   ],
@@ -14,30 +18,95 @@
   "type": "military",
   "location": {
     "city": "Beijing",
-    "province": null,
-    "lat": 40.0201,
-    "lng": 116.2447
+    "province": "Beijing",
+    "lat": 40.0146,
+    "lng": 116.2539
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central Military Commission"
+  ],
   "parent": null,
   "ids": {
     "misp": "e9072206-fbe4-4c2b-893b-d510250519a1",
     "nro": "national-defense-university"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the National Defense University in Beijing as the PLA’s only comprehensive joint command university for senior professional education. It was formed in 1986 by merging the PLA’s military, political and logistics colleges, absorbed several more PLA and People’s Armed Police colleges in 2017, and trains senior commanders from every service and the People’s Armed Police as well as senior central and provincial officials and foreign officers; its key laboratories include a war simulation laboratory and a wargaming centre laboratory.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASI reports that the university is directly subordinate to the Central Military Commission; it held military-region-leader grade from its founding until 2018, when it was lowered to theatre-command deputy leader.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "International College of Defense Studies (for foreign officers)",
+      "zh": "国际防务学院",
+      "kind": "institute"
+    },
+    {
+      "name": "National Security College",
+      "zh": "国家安全学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Joint Operations College (Shijiazhuang)",
+      "zh": "联合作战学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Political College (Nanjing)",
+      "zh": "政治学院",
+      "kind": "institute"
+    },
+    {
+      "name": "College of Military Culture (Beijing)",
+      "zh": "军事文化学院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 34–37",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
