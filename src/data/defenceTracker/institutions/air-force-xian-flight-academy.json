@@ -27,27 +27,66 @@
     "lat": 34.438,
     "lng": 108.7504
   },
-  "supervisors": [],
+  "supervisors": [
+    "Western Theater Command Air Force"
+  ],
   "parent": null,
   "ids": {
     "misp": "a9eaf2ff-6ccc-488a-be70-8e4ed4b60ac9",
     "nro": "air-force-xian-flight-academy",
     "ror": "05gzn8n94"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Air Force Xi’an Flight Academy as one of the PLA Air Force’s three flight academies, organised like an operational air unit and under the Western Theater Command Air Force, which trains transport, bomber and helicopter crews.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy comes under the Western Theater Command Air Force.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 177–179",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
