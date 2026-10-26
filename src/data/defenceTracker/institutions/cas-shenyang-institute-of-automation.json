@@ -1,38 +1,123 @@
 {
   "id": "cas-shenyang-institute-of-automation",
-  "name": "China Academy of Science - Shenyang Institute of Automation",
-  "zh": null,
-  "zhAliases": [],
-  "aliases": [],
-  "acronyms": [],
-  "domains": [],
+  "name": "Shenyang Institute of Automation, Chinese Academy of Sciences",
+  "zh": "中国科学院沈阳自动化研究所",
+  "zhAliases": [
+    "沈阳自动化研究所",
+    "沈阳自动化所"
+  ],
+  "aliases": [
+    "Shenyang Institute of Automation",
+    "China Academy of Science - Shenyang Institute of Automation",
+    "CAS Shenyang Institute of Automation"
+  ],
+  "acronyms": [
+    "SIA"
+  ],
+  "domains": [
+    "sia.cn"
+  ],
   "country": "CN",
   "type": "research-institute",
   "location": {
     "city": "Shenyang",
-    "province": null,
-    "lat": 41.7615,
-    "lng": 123.4411
+    "province": "Liaoning",
+    "lat": 41.6529,
+    "lng": 123.4646
   },
-  "supervisors": [],
+  "supervisors": [
+    "Chinese Academy of Sciences"
+  ],
   "parent": null,
   "ids": {
-    "nro": "cas-shenyang-institute-of-automation"
+    "nro": "cas-shenyang-institute-of-automation",
+    "ror": "00ft6nj33",
+    "wikidata": "Q7494343"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "SIA, founded in 1958, describes itself as a state-run research institution of the Chinese Academy of Sciences; its own history says the 15th Research Academy of China’s National Defence Science and Technology Commission managed its work from 1968 to 1970, after which it returned to the academy.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "robotics-autonomous-systems",
+    "uncrewed-vehicles",
+    "space-robotics"
+  ],
+  "subunits": [
+    {
+      "name": "Chuangxin Road campus (Hunnan District)",
+      "zh": "创新路所区",
+      "kind": "campus"
+    },
+    {
+      "name": "Nanta Street campus (Shenhe District)",
+      "zh": "南塔街所区",
+      "kind": "campus"
+    },
+    {
+      "name": "State Key Laboratory of Robotics and Intelligent Systems",
+      "zh": "机器人与智能系统全国重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "机构简介 (About the institute)",
+      "publisher": "Shenyang Institute of Automation, Chinese Academy of Sciences",
+      "url": "http://sia.cas.cn/gkjj/jgjj/",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260819050436/https://sia.cas.cn/gkjj/jgjj/"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "历史沿革 (History)",
+      "publisher": "Shenyang Institute of Automation, Chinese Academy of Sciences",
+      "url": "http://sia.cas.cn/gkjj/lsyg/",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026135622/http://sia.cas.cn/gkjj/lsyg/"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "组织机构 (Organization)",
+      "publisher": "Shenyang Institute of Automation, Chinese Academy of Sciences",
+      "url": "http://sia.cas.cn/gkjj/zzjg/",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260819050424/https://sia.cas.cn/gkjj/zzjg/"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": null
