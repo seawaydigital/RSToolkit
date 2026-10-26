@@ -237,8 +237,10 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
       {verified && (
         <>
           <h2 className="dit-heading">Evidence for your NSGRP form (Annex B)</h2>
+          {/* The evidence is the point of a researched profile, so a question
+              with evidence starts open, as do the sources it cites. */}
           {byQuestion.map(([q, items]) => (
-            <TrackerSection key={q} title={`${q} ${ANNEX_B[q]}`} count={items.length}>
+            <TrackerSection key={q} title={`${q} ${ANNEX_B[q]}`} count={items.length} defaultOpen={items.length > 0}>
               {items.length ? (
                 <ul className="dit-evidence">
                   {items.map((e, i) => (
@@ -291,7 +293,7 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
         </TrackerSection>
       )}
       {record.sources.length > 0 && (
-        <TrackerSection title="Sources" count={record.sources.length}>
+        <TrackerSection title="Sources" count={record.sources.length} defaultOpen={verified}>
           <ol className="dit-sources">
             {record.sources.map((s) => (
               <li key={s.id}>
