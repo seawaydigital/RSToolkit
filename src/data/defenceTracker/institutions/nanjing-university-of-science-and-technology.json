@@ -22,7 +22,9 @@
     "lat": 32.0318,
     "lng": 118.8521
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "0d7cf3d7-ea9b-4283-bca3-927f9fe41c09",
@@ -30,20 +32,112 @@
     "ror": "00xp9wg62",
     "wikidata": "Q3953805"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "NJUST is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. Formed from the PLA’s Military Engineering Institute and later the PLA Artillery Engineering Institute, it counts \"forging swords for the military\" among its stated missions, and its leading discipline is weapons science and technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "NJUST reports 10 defence-specialty disciplines (国防特色学科) and 13 national defence science and technology innovation teams.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "NJUST hosts one national defence science, technology and industry innovation centre and co-builds three more, and two of its four campuses (Tangshan and Xuyi) focus on defence disciplines, research and testing.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "NJUST reports to the Ministry of Industry and Information Technology and since 2018 has been co-constructed by MIIT, the Ministry of Education and Jiangsu province.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "Zhongshan campus (Nanjing, main campus)",
+      "zh": "钟山校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Tangshan campus (Nanjing; defence disciplines)",
+      "zh": "汤山校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Jiangyin campus",
+      "zh": "江阴校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Xuyi campus (defence research and testing)",
+      "zh": "盱眙校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About NJUST)",
+      "publisher": "Nanjing University of Science and Technology",
+      "url": "https://www.njust.edu.cn/xxjj/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "unavailable": "The site answers archive crawlers with an anti-bot script page (HTTP 202), so the Wayback Machine saves no text; its 2022 and 2023 captures predate the current page. Needs a manual archive.today attempt."
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
