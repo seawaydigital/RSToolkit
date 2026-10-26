@@ -7,7 +7,9 @@
   ],
   "aliases": [
     "PLA Dalian Naval Academy",
-    "Dalian Naval Academy of the PLA"
+    "Dalian Naval Academy of the PLA",
+    "Dalian Naval Ship Academy of the CPLA",
+    "Naval Dalian Ship College"
   ],
   "acronyms": [],
   "domains": [],
@@ -16,10 +18,12 @@
   "location": {
     "city": "Dalian",
     "province": "Liaoning",
-    "lat": 38.8766,
-    "lng": 121.6505
+    "lat": 38.8759,
+    "lng": 121.6626
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "68924fff-1847-4a39-9819-a2344820165a",
@@ -27,20 +31,80 @@
     "ror": "014c1mf08",
     "wikidata": "Q1018771"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes Dalian Naval Academy, founded in 1949 as the Naval School and the PLA’s first academic institution, as a PLA Navy academy; its departments, last documented in 2007, covered navigation, shipborne weapons, communications and operational command, and it has two military key laboratories, for military navigation and marine surveying. Under the Central Military Commission’s 2025 admissions plan it also takes cadets for coast guard vessel-command and law-enforcement posts, giving them their general undergraduate education.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy reports to PLA Navy headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Military Navigation Laboratory",
+      "zh": "军事航海实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Marine Surveying Engineering Laboratory",
+      "zh": "海洋测绘工程实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 121–123",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2025年军队院校招生政策解读 (The 2025 military academy admissions policy explained; reprinted by China Education Online)",
+      "publisher": "Central Military Commission Training and Administration Department, Military Education Bureau",
+      "url": "https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026141435/https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
