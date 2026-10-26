@@ -18,7 +18,9 @@
     "lat": 45.7416,
     "lng": 126.6256
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "7e1827c7-cc6b-4b73-a557-8bd2b9a7f65d",
@@ -26,20 +28,106 @@
     "ror": "01yqg2h08",
     "wikidata": "Q632558"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "HIT is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. HIT describes its own strengths as aerospace-based engineering in service of national defence.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "HIT hosts two national defence science, technology and industry innovation centres, for ultra-precision machining and for welding automation.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "HIT reports to the Ministry of Industry and Information Technology.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "aerospace-space-satellite",
+    "satellites",
+    "on-orbit-servicing",
+    "robotics-autonomous-systems"
+  ],
+  "subunits": [
+    {
+      "name": "Weihai campus (Shandong)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Shenzhen campus (Guangdong)",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About HIT)",
+      "publisher": "Harbin Institute of Technology",
+      "url": "https://www.hit.edu.cn/11538/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261015012440/http://www.hit.edu.cn/11538/list.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "重点实验室/中心/基地 (Key laboratories, centres and bases)",
+      "publisher": "Harbin Institute of Technology",
+      "url": "https://www.hit.edu.cn/11577/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261007213421/http://www.hit.edu.cn/11577/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
