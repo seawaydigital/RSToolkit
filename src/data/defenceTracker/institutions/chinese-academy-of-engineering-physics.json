@@ -3,8 +3,7 @@
   "name": "Chinese Academy of Engineering Physics",
   "zh": "中国工程物理研究院",
   "zhAliases": [
-    "九院",
-    "北京高压科学研究中心"
+    "九院"
   ],
   "aliases": [
     "China Academy of Engineering Physics",
@@ -13,15 +12,14 @@
     "The Institute of Applied Physics and Computational Mathematics, Beijing"
   ],
   "acronyms": [
-    "CAEP",
-    "HPSTAR"
+    "CAEP"
   ],
   "domains": [],
   "country": "CN",
-  "type": "military",
+  "type": "nuclear",
   "location": {
     "city": "Mianyang",
-    "province": null,
+    "province": "Sichuan",
     "lat": 31.4974,
     "lng": 104.7589
   },
@@ -29,22 +27,103 @@
   "parent": null,
   "ids": {
     "misp": "5615fe86-7305-4115-abc0-4e66c30e436b",
-    "nro": "chinese-academy-of-engineering-physics"
+    "nro": "chinese-academy-of-engineering-physics",
+    "ror": "039vqpp67",
+    "wikidata": "Q5099555"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "The US Commerce Department describes CAEP as the technology complex responsible for researching, developing and testing China’s nuclear weapons; it has been on the Entity List since 1997, and in 2020 ten entities owned by, operated by or directly affiliated with it were added. CAEP’s own page on its shock wave and detonation physics laboratory says the lab led experiments that supply key data for China’s nuclear-weapon physics design and supports safety assessment of the stockpile.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CAEP’s website lists two national defence science and technology key laboratories: shock wave and detonation physics, hosted by its Institute of Fluid Physics and described as China’s first such laboratory to enter operation (accepted in 1993), and high-power microwave technology. The shock-wave laboratory reports 396 defence research projects, including 129 defence pre-research projects.",
+      "items": [
+        "National Key Laboratory of Shock Wave and Detonation Physics (冲击波物理与爆轰物理国防科技重点实验室)",
+        "Science and Technology on High Power Microwave Laboratory (高功率微波技术国防科技重点实验室)"
+      ],
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "National Key Laboratory of Shock Wave and Detonation Physics",
+      "zh": "冲击波物理与爆轰物理国防科技重点实验室",
+      "kind": "lab",
+      "match": true
+    },
+    {
+      "name": "Science and Technology on High Power Microwave Laboratory",
+      "zh": "高功率微波技术国防科技重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Entities to the Entity List, Revision of Certain Entries on the Entity List (85 FR 34495, 5 June 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130307/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "冲击波物理与爆轰物理国防科技重点实验室 (National Defence Science and Technology Key Laboratory of Shock Wave and Detonation Physics; CAEP’s site no longer serves the page, read from the 2019 archived copy)",
+      "publisher": "China Academy of Engineering Physics",
+      "url": "http://www.caep.ac.cn/kxyj/gjzdsyshz/10827.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20190916090504/http://www.caep.ac.cn/kxyj/gjzdsyshz/10827.shtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "国家重点实验室 (Key laboratories; read from the 2019 archived copy)",
+      "publisher": "China Academy of Engineering Physics",
+      "url": "http://www.caep.ac.cn/kxyj/gjzdsyshz/index.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20190926031154/http://www.caep.ac.cn/kxyj/gjzdsyshz/index.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high. HPSTAR’s Chinese name and acronym moved to its own record."
     }
   ],
   "seedNotes": {
