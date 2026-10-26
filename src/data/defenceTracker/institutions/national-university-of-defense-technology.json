@@ -4,7 +4,9 @@
   "zh": "中国人民解放军国防科技大学",
   "zhAliases": [
     "并行与分布处理国家重点实验室",
-    "中国人民解放军国防科学技术大学"
+    "中国人民解放军国防科学技术大学",
+    "国防科学技术大学",
+    "国防科大"
   ],
   "aliases": [
     "Changsha Institute of Technology",
@@ -26,7 +28,9 @@
     "lat": 28.229,
     "lng": 112.9949
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central Military Commission"
+  ],
   "parent": null,
   "ids": {
     "misp": "77afede7-a852-4e25-882f-8caf83f066e1",
@@ -34,20 +38,108 @@
     "ror": "05d2yfz11",
     "wikidata": "Q831227"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the National University of Defense Technology in Changsha as a PLA university: founded in 1953 as the PLA Military Academy of Engineering in Harbin, it took its present name in 1978 and was rebuilt in 2017 with several other PLA schools, including the University of International Relations, the Xi’an Communication Institute and the College of Electronic Engineering. Its own publications say it carries out research on advanced weapons and equipment and key defence technologies, credit it with the Tianhe supercomputers, BeiDou satellite navigation work, hypersonic propulsion and laser gyroscopes, and count ten national-level and 12 military key laboratories.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Its admissions brochure describes it as directly under the Central Military Commission; CASI adds that it is most likely run through the commission’s Training and Administration Department and that its grade was lowered to corps leader in 2018.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-computing",
+    "space-based-pnt",
+    "propulsion-technologies",
+    "pnt-technology"
+  ],
+  "subunits": [
+    {
+      "name": "College of Foreign Languages (Nanjing)",
+      "zh": "外国语学院",
+      "kind": "institute"
+    },
+    {
+      "name": "College of Information and Communication (Wuhan)",
+      "zh": "信息通信学院",
+      "kind": "institute"
+    },
+    {
+      "name": "College of Electronic Countermeasures (Hefei)",
+      "zh": "电子对抗学院",
+      "kind": "institute"
+    },
+    {
+      "name": "College of Meteorology and Oceanography",
+      "zh": "气象海洋学院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 42–44",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "国防科技大学2025年博士研究生招生简章 (2025 doctoral admissions brochure), pp. 1–2",
+      "publisher": "National University of Defense Technology, Graduate School",
+      "url": "https://yjszs.nudt.edu.cn/attached/file/20241018/20241018202332_326.pdf",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260520160711/https://yjszs.nudt.edu.cn/attached/file/20241018/20241018202332_326.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Research",
+      "publisher": "National University of Defense Technology (English site)",
+      "url": "https://english.nudt.edu.cn/nav/Research/index.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260911155417/https://english.nudt.edu.cn/nav/Research/index.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
