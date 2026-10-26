@@ -4,10 +4,16 @@
   "zh": "中国人民解放军海军士官学校",
   "zhAliases": [
     "海军士官学校",
-    "中国人民解放军海军蚌埠士官学校"
+    "中国人民解放军海军蚌埠士官学校",
+    "海军蚌埠士官学校",
+    "海军蚌埠士官学院"
   ],
   "aliases": [
-    "PLA Navy Bengbu Petty Officer Academy"
+    "PLA Navy Bengbu Petty Officer Academy",
+    "Naval NCO School",
+    "Naval Non-Commissioned Officer School",
+    "Naval Bengbu NCO Academy",
+    "Bengbu Naval Petty Officer Academy"
   ],
   "acronyms": [],
   "domains": [],
@@ -15,30 +21,69 @@
   "type": "military",
   "location": {
     "city": "Bengbu",
-    "province": null,
+    "province": "Anhui",
     "lat": 32.9079,
     "lng": 117.3162
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "bb71e5fd-94e5-419f-ac43-957f706c084f",
     "nro": "naval-petty-officer-academy"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Naval NCO School in Bengbu as the PLA Navy’s school for non-commissioned officers. It grew from a naval aviation school founded in 1961, became the Naval Bengbu Sergeant School in 1986 (one of the PLA’s first two NCO schools and the first for navy NCOs) and took its present name in the 2017 reforms; it teaches navigation, electromechanical, communications, electronics, weapons and management majors, with weapons and electromechanical training facilities and a light-weapons range.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The school reports to PLA Navy headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 145–146",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
