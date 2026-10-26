@@ -2,41 +2,118 @@
   "id": "north-china-institute-of-aerospace-engineering",
   "name": "North China Institute of Aerospace Engineering",
   "zh": "北华航天工业学院",
-  "zhAliases": [],
+  "zhAliases": [
+    "华北航天工业学院"
+  ],
   "aliases": [],
   "acronyms": [
     "NCIAE"
   ],
-  "domains": [],
+  "domains": [
+    "nciae.edu.cn"
+  ],
   "country": "CN",
-  "type": "research-institute",
+  "type": "university",
   "location": {
     "city": "Langfang",
     "province": "Hebei",
     "lat": 39.5267,
     "lng": 116.7266
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with SASTIND, CASC and CASIC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "743d0dfa-c993-4bbb-97c7-8603a63f73b6",
     "nro": "north-china-institute-of-aerospace-engineering",
     "ror": "02m7msy24"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "The institute describes itself as run by the Hebei provincial government and co-built by the province with the defence-industry regulator SASTIND and the state aerospace groups CASC and CASIC.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports two national defence-specialty disciplines (国防特色学科), military computer application technology and aerospace manufacturing engineering, and one provincial one.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "It runs two co-built key laboratories with CASC academies (an aerospace manufacturing process centre with the Fifth Academy and an electronic process engineering centre with the Ninth Academy), says it has taken part in research and testing for the Shenzhou spacecraft, Long March rockets and the Dongfanghong-5 satellite platform, and has sent more than 20,000 graduates into the aerospace industry.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1978, it was run by a succession of China’s space-industry ministries and then the China Aerospace Corporation until 1999, when it passed to Hebei province under joint central and provincial management.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "aerospace-space-satellite"
+  ],
+  "subunits": [
+    {
+      "name": "Aerospace Engineering Manufacturing Process R&D Centre (co-built with CASC’s Fifth Academy)",
+      "zh": "航天工程制造工艺研发中心",
+      "kind": "lab"
+    },
+    {
+      "name": "Electronic Process Engineering Technology Research Centre (co-built with CASC’s Ninth Academy)",
+      "zh": "电子工艺工程技术研究中心",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the institute; figures as of 31 December 2025)",
+      "publisher": "North China Institute of Aerospace Engineering",
+      "url": "https://www.nciae.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20260517214236/https://www.nciae.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
