@@ -3,39 +3,82 @@
   "name": "Navy Logistics Academy",
   "zh": "中国人民解放军海军勤务学院",
   "zhAliases": [
-    "海军勤务学院"
+    "海军勤务学院",
+    "海军后勤学院"
   ],
-  "aliases": [],
+  "aliases": [
+    "Naval Service Academy",
+    "Naval Logistics Academy"
+  ],
   "acronyms": [],
   "domains": [],
   "country": "CN",
   "type": "military",
   "location": {
     "city": "Tianjin",
-    "province": null,
-    "lat": 39.154,
-    "lng": 117.242
+    "province": "Tianjin",
+    "lat": 39.0186,
+    "lng": 117.6518
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy"
+  ],
   "parent": null,
   "ids": {
     "misp": "37cbc4d1-8d36-4f81-8f76-9d5539bfddc4",
     "nro": "navy-logistics-academy"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Naval Service Academy (海军勤务学院) in Tanggu, Tianjin, as a PLA Navy academy for logistics and support training. It grew from a naval logistics school founded in 1952, was the Naval Logistics Academy from 1993, became part of the Naval University of Engineering in 2004 and has stood alone again since the 2017 reforms; it also gives NCOs vocational training in logistics and has more than 30 laboratories and simulation rooms.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASI gives the PLA Navy as the academy’s superior.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 141–142",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high. Map point moved from central Tianjin to its Tanggu campus area in Binhai New Area."
     }
   ],
   "seedNotes": {
