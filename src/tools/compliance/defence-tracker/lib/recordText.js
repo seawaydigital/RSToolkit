@@ -16,7 +16,15 @@ export const MATCHED_BY_LABELS = {
   name: 'Name',
   acronym: 'Acronym',
   'similar-name': 'Similar name',
+  unit: 'Unit name',
 };
+
+// How a match was made, naming the unit when a line matched through one
+// ("Unit: Xijing Hospital").
+export function matchedByLabel(m) {
+  if (m.matchedBy === 'unit' && m.unit) return `Unit: ${m.unit}`;
+  return MATCHED_BY_LABELS[m.matchedBy] ?? m.matchedBy;
+}
 
 const CA_SANCTIONS_NOTE =
   'Canada lists this institution under its sanctions regulations. Prohibitions are activity-specific and cover direct or indirect dealings; check the specific activity with Global Affairs Canada before engaging.';
@@ -295,7 +303,7 @@ function batchRows(lines, byId, baseUrl) {
       rows.push([
         input,
         r.name,
-        MATCHED_BY_LABELS[m.matchedBy] ?? m.matchedBy,
+        matchedByLabel(m),
         m.confidence === 'confirmed' ? 'Confirmed' : 'Check',
         ratingLabel(r),
         listed(r, 'ca-nro') ? 'Yes' : 'No',

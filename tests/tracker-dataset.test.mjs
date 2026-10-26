@@ -93,6 +93,22 @@ test('validateRecord catches schema breaks', () => {
   assert.ok(validateRecord({ ...HIT, aliases: ['Harbin Polytechnic University,'] }).some((e) => e.includes('aliases')));
 });
 
+test('subunits need a name and a known kind, and only "match": true marks one for matching', () => {
+  const ok = [
+    { name: 'Weihai campus (Shandong)', zh: null, kind: 'campus' },
+    { name: 'Xijing Hospital (First Affiliated Hospital)', zh: '西京医院', kind: 'hospital', match: true },
+  ];
+  assert.deepEqual(validateRecord({ ...HIT, subunits: ok }), []);
+  for (const bad of [
+    { name: ' ', kind: 'campus' },
+    { name: 'Weihai campus', kind: 'ward' },
+    { name: 'Xijing Hospital', zh: 'Xijing', kind: 'hospital' },
+    { name: 'Xijing Hospital', kind: 'hospital', match: 'yes' },
+  ]) {
+    assert.ok(validateRecord({ ...HIT, subunits: [bad] }).some((e) => e.includes('subunit')), JSON.stringify(bad));
+  }
+});
+
 test('a list-only unit named after another record is linked to it as a listed unit', () => {
   const snapshots = {
     ...SNAPSHOTS,

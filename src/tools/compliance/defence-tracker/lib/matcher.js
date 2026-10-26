@@ -9,6 +9,9 @@
 // Institute"), and an affiliation that places itself in another country is
 // not matched at all. Alternative names, which include historical names now
 // used by other institutions, confirm only with the institution's own city.
+// So does a unit a researcher marked as naming its parent on its own (a
+// subunit with "match": true, such as a university's hospital); unmarked
+// units, which include generic names and campuses, are never matched.
 import Fuse from 'fuse.js';
 import {
   PERSONAL_EMAIL_DOMAINS,
@@ -26,7 +29,7 @@ import { inTokens, placeContext, placesIn, traditionalOrTaiwan, withoutCodes } f
 
 export const MAX_BATCH_LINES = 2000;
 
-const TIERS = ['domain', 'chinese-name', 'name', 'acronym', 'similar-name'];
+const TIERS = ['domain', 'chinese-name', 'name', 'unit', 'acronym', 'similar-name'];
 const CONTINUATIONS = new Set(['of', 'and', 'for']);
 const ACRONYM = /^[A-Z][A-Z0-9&-]{1,7}$/;
 // Abbreviations of parent bodies and countries, which appear in countless
@@ -34,12 +37,19 @@ const ACRONYM = /^[A-Z][A-Z0-9&-]{1,7}$/;
 const ACRONYM_STOPLIST = new Set(['CAS', 'RAS', 'PLA', 'PRC', 'MOD', 'MOE', 'USA', 'UK']);
 // A Chinese name that ends like an institution's full name; anything else
 // ("中国电子", "中国航天") is a short form that starts many other names.
-const CJK_SUFFIXES = ['大学', '大學', '学院', '學院', '研究院', '研究所', '公司', '学校', '學校', '中心', '集团', '集團', '实验室', '實驗室', '基地', '部队'];
+const CJK_SUFFIXES = ['大学', '大學', '学院', '學院', '研究院', '研究所', '公司', '学校', '學校', '中心', '集团', '集團', '实验室', '實驗室', '基地', '部队', '医院', '醫院'];
 // Separates the affiliations in one line; commas separate the parts of one.
 const AFFILIATIONS = /[;|]/;
 
 const latinNames = (r) => [r.name, ...(r.aliases ?? [])].filter((n) => n && !hasCjk(n));
 const cjkNames = (r) => [r.zh, ...(r.zhAliases ?? []), ...(r.aliases ?? []).filter(hasCjk)].filter((n) => n && hasCjk(n));
+// Subunits marked for matching, with the name a result reports: the listed
+// name without its bracketed notes ("Xijing Hospital (First Affiliated
+// Hospital)" is matched and shown as "Xijing Hospital").
+const markedUnits = (r) =>
+  (r.subunits ?? [])
+    .filter((u) => u?.match === true && u.name)
+    .map((u) => ({ label: u.name.replace(/\s*\([^)]*\)/g, '').trim(), zh: u.zh ?? null }));
 
 function addTo(map, key, id) {
   if (!map.has(key)) map.set(key, new Set());
@@ -51,6 +61,7 @@ export function buildMatchIndex(records) {
   const primary = new Set();
   const info = new Map();
   const unitPhrases = new Map();
+  const subunitPhrases = new Map();
   const genericPhrases = new Set();
   const cjk = [];
   const acronyms = new Map();
@@ -93,6 +104,16 @@ export function buildMatchIndex(records) {
       const text = compactCjk(name);
       if (text.length >= 4) cjk.push({ text, id: r.id });
     }
+    for (const { label, zh } of markedUnits(r)) {
+      const phrase = normalizePhrase(label);
+      if (phrase && phrase.split(' ').length >= 2 && !isGenericPhrase(phrase)) {
+        if (!subunitPhrases.has(phrase)) subunitPhrases.set(phrase, new Map());
+        subunitPhrases.get(phrase).set(r.id, label);
+        maxPhraseLen = Math.max(maxPhraseLen, phrase.split(' ').length);
+      }
+      const text = zh ? compactCjk(zh) : '';
+      if (text.length >= 4) cjk.push({ text, id: r.id, unit: label });
+    }
     for (const a of r.acronyms ?? []) {
       const acronym = nfkc(a).toUpperCase();
       if (acronym.length >= 3 && !ACRONYM_STOPLIST.has(acronym)) addTo(acronyms, acronym, r.id);
@@ -122,12 +143,20 @@ export function buildMatchIndex(records) {
   );
   const searchable = records.map((r) => ({
     id: r.id,
-    texts: [r.name, ...(r.aliases ?? []), r.zh, ...(r.zhAliases ?? []), ...(r.acronyms ?? []), ...(r.domains ?? [])]
+    texts: [
+      r.name,
+      ...(r.aliases ?? []),
+      r.zh,
+      ...(r.zhAliases ?? []),
+      ...(r.acronyms ?? []),
+      ...(r.domains ?? []),
+      ...markedUnits(r).flatMap((u) => [u.label, u.zh]),
+    ]
       .filter(Boolean)
       .map((t) => nfkc(t).toLowerCase()),
   }));
 
-  return { phrases, primary, info, unitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse, searchable };
+  return { phrases, primary, info, unitPhrases, subunitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse, searchable };
 }
 
 // Keeps the longest of any overlapping spans, so "Nanjing University" inside
@@ -190,16 +219,17 @@ function cjkMatches(line, index) {
   const compact = compactCjk(line);
   const doubtful = traditionalOrTaiwan(line);
   const hits = [];
-  for (const { text, id } of index.cjk) {
+  for (const { text, id, unit } of index.cjk) {
     for (let at = compact.indexOf(text); at !== -1; at = compact.indexOf(text, at + 1)) {
-      hits.push({ id, start: at, end: at + text.length, text });
+      hits.push({ id, start: at, end: at + text.length, text, unit });
     }
   }
-  return longestFirst(hits).map(({ id, text, shared }) => ({
+  return longestFirst(hits).map(({ id, text, shared, unit }) => ({
     id,
-    matchedBy: 'chinese-name',
+    matchedBy: unit ? 'unit' : 'chinese-name',
     confidence: !shared && !doubtful && CJK_SUFFIXES.some((s) => text.endsWith(s)) ? 'confirmed' : 'check',
     text,
+    ...(unit ? { unit } : {}),
   }));
 }
 
@@ -216,11 +246,20 @@ function nameMatches(affiliation, index, context) {
           hits.push({ id, start: i, end: i + len, text: phrase, kind: index.primary.has(`${id}\t${phrase}`) ? 'name' : 'alias' });
         }
         for (const id of index.unitPhrases.get(phrase) ?? []) hits.push({ id, start: i, end: i + len, text: phrase, kind: 'unit' });
+        // A marked subunit is judged like an alternative name of its parent.
+        for (const [id, unit] of index.subunitPhrases.get(phrase) ?? []) {
+          hits.push({ id, start: i, end: i + len, text: phrase, kind: 'subunit', unit });
+        }
       }
     }
     for (const hit of longestFirst(hits)) {
       const confidence = placeConfidence(hit, context, index);
-      if (confidence) out.push({ id: hit.id, matchedBy: 'name', confidence, text: hit.text });
+      if (!confidence) continue;
+      out.push(
+        hit.kind === 'subunit'
+          ? { id: hit.id, matchedBy: 'unit', confidence, text: hit.text, unit: hit.unit }
+          : { id: hit.id, matchedBy: 'name', confidence, text: hit.text },
+      );
     }
   }
   return out;

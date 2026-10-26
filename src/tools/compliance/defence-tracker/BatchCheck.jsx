@@ -4,11 +4,11 @@ import { SITE_URL } from '../../../siteConfig';
 import { MAX_BATCH_LINES, matchLines } from './lib/matcher';
 import { LIST_SHORT_LABELS } from './lib/constants';
 import {
-  MATCHED_BY_LABELS,
   batchResultsToCsv,
   batchResultsToHtml,
   batchResultsToText,
   countBatch,
+  matchedByLabel,
   searchLogLine,
 } from './lib/recordText';
 import { downloadFile, localDate } from './download';
@@ -37,7 +37,7 @@ function ResultRows({ line, byId }) {
           {check && <span className="dit-check-label">Check: </span>}
           <a href={`#defence-tracker/${r.id}`}>{r.name}</a>
         </td>
-        <td>{MATCHED_BY_LABELS[m.matchedBy]}</td>
+        <td>{matchedByLabel(m)}</td>
         <td><RatingBadge assessment={r.assessment} /></td>
         <td className={nro ? 'dit-status-cell--listed' : undefined}>{nro ? 'Yes' : 'No'}</td>
         <td>
@@ -101,8 +101,8 @@ export default function BatchCheck({ dataset, index, state, setState }) {
       <div className="tool-page-header">
         <h1>Batch check</h1>
         <p>
-          Check a whole co-author or partner list at once. Each line is matched by name, Chinese name, acronym or email domain, and
-          gets a dated line you can paste into your search log.
+          Check a whole co-author or partner list at once. Each line is matched by name, Chinese name, acronym or email domain, or
+          by a named unit such as a university&apos;s hospital, and gets a dated line you can paste into your search log.
         </p>
       </div>
 
@@ -173,7 +173,8 @@ export default function BatchCheck({ dataset, index, state, setState }) {
           <p className="dit-footnote">
             A match is confirmed by an email domain, a full Chinese name, or a name together with the institution&apos;s country or
             city (or a name that includes them, like Harbin Institute of Technology). &quot;Check&quot; rows are possible matches: an
-            acronym, a near spelling, an alternative or shared name, or a name with no place. Confirm them before relying on them.
+            acronym, a near spelling, an alternative or shared name, a unit named without its parent&apos;s city, or a name with no
+            place. Confirm them before relying on them.
             A line that places itself in another country isn&apos;t matched. Not being in the tracker doesn&apos;t mean low risk.
           </p>
         </>

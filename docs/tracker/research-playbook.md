@@ -8,6 +8,7 @@ How tracker profiles are researched, verified and kept current. Claude research 
 - **Own words, every claim sourced, every source archived** (or a written reason it can't be).
 - **No ASPI text, ratings or paid data.** Don't open ASPI's subscription tracker. Its free public reports can be cited like other research, never copied.
 - **Neutral wording.** Allegations are "reported by" their publisher.
+- **Units that name their parent are matched.** Co-author lines often give only a hospital or institute ("Xijing Hospital, Xi'an"). Mark such a subunit `"match": true` when its name on its own identifies the parent; the batch check then matches it to the parent and says which unit matched. Never mark a campus or a generic name (口腔医院 "Stomatological Hospital", 理学院 "School of Science"), which many institutions share.
 - **The rubric rates.** Overrides move one level at most and carry a written reason that the page shows. Until a profile is researched, a listed institution is rated High from its lists alone (no override applies); verifying it replaces that with the rubric's rating of the evidence.
 - **Not listed is not low risk,** and a rating is not a legal determination. The official lists prevail.
 
