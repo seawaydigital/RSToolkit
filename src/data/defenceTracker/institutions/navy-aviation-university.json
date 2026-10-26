@@ -4,11 +4,18 @@
   "zh": "中国人民解放军海军航空大学",
   "zhAliases": [
     "海军航空大学",
-    "海军航大"
+    "海军航大",
+    "海军航空兵学院",
+    "海军飞行学院",
+    "海军航空工程学院"
   ],
   "aliases": [
     "Naval Aviation University",
-    "Naval Aeronautics and Astronautics University"
+    "Naval Aeronautics and Astronautics University",
+    "Naval Flight College",
+    "Naval Flight Academy",
+    "Naval Aeronautical and Astronautical College",
+    "Navy Aviation Engineering Academy"
   ],
   "acronyms": [],
   "domains": [],
@@ -16,30 +23,85 @@
   "type": "military",
   "location": {
     "city": "Yantai",
-    "province": null,
+    "province": "Shandong",
     "lat": 37.5309,
     "lng": 121.4248
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "3f390fae-5e8c-4479-a7a2-a1fd2da279e3",
     "nro": "navy-aviation-university"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes Naval Aviation University in Yantai as a PLA Navy university formed in July 2017 by merging the Naval Flight College, which trained the navy’s shore-based and shipborne pilots and aviation commanders, with the Naval Aeronautical and Astronautical College. It operates across 11 sites in six provinces, including flight training bases in Huludao, Changzhi, Qinhuangdao and Jiyuan and a flight simulator centre in Beijing, and is equipped with fighter, bomber, transport and helicopter aircraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university reports to PLA Navy headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Qingdao campus and enlisted specialist training base (Licang District)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Flight training bases (Huludao, Changzhi, Qinhuangdao and Jiyuan)",
+      "zh": "飞行训练基地",
+      "kind": "campus"
+    },
+    {
+      "name": "Simulator flight training centre (Beijing)",
+      "zh": "模拟飞行训练中心",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 130–131",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
