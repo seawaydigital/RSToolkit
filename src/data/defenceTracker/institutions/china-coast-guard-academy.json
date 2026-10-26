@@ -9,7 +9,8 @@
   "aliases": [
     "China Maritime Police Academy",
     "People's Armed Police China Coast Guard Academy",
-    "PAP China Coast Guard Academy"
+    "PAP China Coast Guard Academy",
+    "People's Armed Police Coast Guard Academy"
   ],
   "acronyms": [],
   "domains": [],
@@ -17,30 +18,115 @@
   "type": "military",
   "location": {
     "city": "Ningbo",
-    "province": null,
+    "province": "Zhejiang",
     "lat": 29.9439,
     "lng": 121.711
   },
-  "supervisors": [],
+  "supervisors": [
+    "People's Armed Police"
+  ],
   "parent": null,
   "ids": {
     "misp": "b539983f-f3e9-4542-a500-ff0dff033fa7",
     "nro": "china-coast-guard-academy"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI’s translation of the PLA’s 2024 academy recruitment plan lists the PAP Coast Guard Academy among the four People’s Armed Police academies that admitted officer cadets that year. Under the Central Military Commission’s 2025 admissions plan it no longer admits school-leavers directly: cadets for coast guard vessel-command and law-enforcement posts now enter through Dalian Naval Academy and PAP Engineering University, and the later specialist stage is still taught by the academies concerned.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy belongs to the PAP, which since the reforms of 2017–2018 has answered to the Central Military Commission alone; the China Coast Guard, the force its officer cadets join, moved from State Council to PAP command on 1 July 2018.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "2024 Military Academic Institution Recruitment Plan (February 2025), pp. 2–3",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20250406072411/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2025年军队院校招生政策解读 (The 2025 military academy admissions policy explained; reprinted by China Education Online)",
+      "publisher": "Central Military Commission Training and Administration Department, Military Education Bureau",
+      "url": "https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026141435/https://www.eol.cn/news/yaowen/202506/t20250618_2675325.shtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), pp. 11, 15",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "水警人员赴宁波海警学院研修 (Marine police officers train at the coast guard academy in Ningbo; Offbeat issue 1123, November 2018)",
+      "publisher": "Hong Kong Police Force",
+      "url": "https://www.police.gov.hk/offbeat/1123/sim/7321.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026141623/https://www.police.gov.hk/offbeat/1123/sim/7321.html"
+      }
+    },
+    {
+      "id": "s5",
+      "title": "水警总区代表团赴宁波参与反恐及搜救研修班 (Marine Region delegation attends a counter-terrorism and search-and-rescue course in Ningbo; Offbeat issue 1104, on a December 2017 course)",
+      "publisher": "Hong Kong Police Force",
+      "url": "https://www.police.gov.hk/offbeat/1104/sim/6269.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026141835/https://www.police.gov.hk/offbeat/1104/sim/6269.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
