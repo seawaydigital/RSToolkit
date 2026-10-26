@@ -15,33 +15,85 @@
   "acronyms": [],
   "domains": [],
   "country": "CN",
-  "type": "security",
+  "type": "research-institute",
   "location": {
     "city": "Nanjing",
-    "province": null,
-    "lat": 32.0752,
-    "lng": 118.7834
+    "province": "Jiangsu",
+    "lat": 32.0433,
+    "lng": 118.7292
   },
-  "supervisors": [],
+  "supervisors": [
+    "A national ministry it does not name in its own notices"
+  ],
   "parent": null,
   "ids": {
     "misp": "34c303ac-c477-4b15-95cc-4e5dbf785608",
     "nro": "nanjing-institute-of-information-technology"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "In recruitment notices posted on the University of Science and Technology of China’s website, the institute (also called the Nanjing 841 Institute) describes itself as a cutting-edge research institution directly under a national ministry, which it does not name, working on computing, electronics and communications from its Nanjing headquarters and branches in Beijing and Shenzhen. Its staff have received its ministerial system’s highest science and technology award and an award for young staff of central state organs.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "The notices say its business has expanded to the military, the People’s Armed Police, public security bodies and the courts, among other sectors.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "南京841研究所 (Nanjing 841 Institute: recruitment notice, October 2011)",
+      "publisher": "University of Science and Technology of China, School of Computer Science (notice for the institute)",
+      "url": "http://cs.ustc.edu.cn/2011/1010/c3022a220409/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026173008/http://cs.ustc.edu.cn/2011/1010/c3022a220409/page.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "[宣讲-09-15] 南京信息技术研究院 (Nanjing Institute of Information Technology: campus recruitment notice, 2017)",
+      "publisher": "University of Science and Technology of China, School of Computer Science (notice for the institute)",
+      "url": "https://cs.ustc.edu.cn/2017/1007/c3022a220655/pagem.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026173048/https://cs.ustc.edu.cn/2017/1007/c3022a220655/pagem.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
