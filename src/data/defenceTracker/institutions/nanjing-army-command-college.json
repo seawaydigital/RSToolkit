@@ -1,10 +1,15 @@
 {
   "id": "nanjing-army-command-college",
   "name": "Nanjing Army Command College",
-  "zh": "南京陆军指挥学院",
-  "zhAliases": [],
+  "zh": "陆军指挥学院",
+  "zhAliases": [
+    "南京陆军指挥学院"
+  ],
   "aliases": [
-    "PLA Nanjing Army Command College"
+    "PLA Nanjing Army Command College",
+    "Army Command College",
+    "PLA Army Command College",
+    "Ground Force Command College"
   ],
   "acronyms": [],
   "domains": [],
@@ -12,30 +17,69 @@
   "type": "military",
   "location": {
     "city": "Nanjing",
-    "province": null,
-    "lat": 32.1053,
-    "lng": 118.6425
+    "province": "Jiangsu",
+    "lat": 32.1757,
+    "lng": 118.6683
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "e55d02b7-9761-4c2a-913a-10082924540f",
     "nro": "nanjing-army-command-college"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Command College (陆军指挥学院) in Nanjing’s Pukou District, named Nanjing Army Command College from 1999 until 2017, as the PLA Army’s mid-level combined-arms command college. It trains command and staff officers at every degree level as well as foreign military students, with departments for joint operations, information warfare and command, and war mobilisation.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college reports to PLA Army headquarters; before the 2016 reforms it was under the General Staff Department.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 49–52",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
