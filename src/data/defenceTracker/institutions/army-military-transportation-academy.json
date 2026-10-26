@@ -6,7 +6,9 @@
     "陆军军事交通学院"
   ],
   "aliases": [
-    "Academy of Military Transportation"
+    "Academy of Military Transportation",
+    "Army Military Transportation University",
+    "Military Transportation University"
   ],
   "acronyms": [],
   "domains": [],
@@ -18,26 +20,82 @@
     "lat": 39.1516,
     "lng": 117.3466
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "ef8c6f5f-3d1a-4727-a8e6-418cb84dff93",
     "nro": "army-military-transportation-academy"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Military Transportation University (陆军军事交通学院) in Tianjin, founded in 1973 under the PLA General Logistics Department, as the PLA’s highest academic institution for military transportation, with a branch campus in Zhenjiang and an automobile NCO school in Bengbu.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university has reported to PLA Army headquarters since 2017.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Zhenjiang branch campus",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Automobile NCO School (Bengbu)",
+      "zh": "汽车士官学校",
+      "kind": "institute"
+    },
+    {
+      "name": "Military Traffic and Transportation Institute (Tianjin)",
+      "zh": "军事交通运输研究所",
+      "kind": "institute",
+      "match": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 106–107",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
