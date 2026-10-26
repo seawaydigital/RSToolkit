@@ -2,7 +2,7 @@
 // tests run validateRecord over every file, and the maintenance scripts run it
 // before they write, so a malformed record never reaches the site.
 import { hasCjk } from './normalize.js';
-import { ANNEX_B, INSTITUTION_TYPES, LISTS, RATING_ORDER, RESERVED_SLUGS, SIGNALS, SNAPSHOT_NAMES, STATUSES } from './constants.js';
+import { ANNEX_B, INSTITUTION_TYPES, LISTS, RATING_ORDER, RESERVED_SLUGS, SIGNALS, SNAPSHOT_NAMES, STATUSES, SUBUNIT_KINDS } from './constants.js';
 
 export const RECORD_KEY_ORDER = [
   'id', 'name', 'zh', 'zhAliases', 'aliases', 'acronyms', 'domains', 'country', 'type', 'location',
@@ -60,6 +60,18 @@ export function validateRecord(record) {
   for (const field of ['aliases', 'zhAliases', 'acronyms']) {
     const bad = arr(record[field]).filter((n) => typeof n !== 'string' || !n.trim() || n !== n.trim() || /^(null|undefined)$/i.test(n) || /[,;:]$/.test(n));
     if (bad.length) err(`${field} has empty, placeholder or badly trimmed names: ${JSON.stringify(bad)}`);
+  }
+
+  // A subunit marked "match": true is matched to its parent in batch checks,
+  // so the mark has to be a real boolean, never a stray string.
+  for (const u of arr(record.subunits)) {
+    if (typeof u?.name !== 'string' || !u.name.trim()) {
+      err('every subunit needs a name');
+      continue;
+    }
+    if (!SUBUNIT_KINDS.includes(u.kind)) err(`subunit "${u.name}" kind must be one of ${SUBUNIT_KINDS.join(', ')}`);
+    if (u.zh != null && !hasCjk(u.zh)) err(`subunit "${u.name}" zh must be a Chinese name`);
+    if (u.match !== undefined && typeof u.match !== 'boolean') err(`subunit "${u.name}" match must be true or false`);
   }
 
   const loc = record.location;

@@ -196,3 +196,44 @@ test('searchRecords ranks exact identifiers first', () => {
   assert.ok(harbin.includes('harbin-institute-of-technology') && harbin.includes('harbin-engineering-university'));
   assert.deepEqual(searchRecords('   ', index), []);
 });
+
+// A unit the researcher marked as naming its parent on its own ("match": true),
+// such as a university's hospital, matches the parent. Unmarked units (generic
+// names like "Stomatological Hospital", campuses) never do.
+const afmu = () =>
+  buildMatchIndex([
+    rec('afmu', {
+      name: 'Air Force Medical University',
+      location: at("Xi'an"),
+      subunits: [
+        { name: 'Xijing Hospital (First Affiliated Hospital)', zh: '西京医院', kind: 'hospital', match: true },
+        { name: 'Stomatological Hospital', zh: '口腔医院', kind: 'hospital' },
+      ],
+    }),
+  ]);
+
+test('a marked unit matches its parent, confirmed only when the line names the parent’s city', () => {
+  const [m] = matchLine("Department of Neurology, Xijing Hospital, Xi'an 710032, China", afmu());
+  assert.deepEqual([m.id, m.matchedBy, m.confidence, m.unit], ['afmu', 'unit', 'confirmed', 'Xijing Hospital']);
+  assert.deepEqual(norm(matchLine('Xijing Hospital', afmu())), [{ id: 'afmu', confidence: 'check' }]);
+  assert.deepEqual(matchLine('Xijing Hospital, Boston, USA', afmu()), []);
+});
+
+test('a marked unit’s Chinese name confirms, a hospital’s included', () => {
+  const [m] = matchLine('西京医院神经内科', afmu());
+  assert.deepEqual([m.id, m.matchedBy, m.confidence, m.unit], ['afmu', 'unit', 'confirmed', 'Xijing Hospital']);
+});
+
+test('an unmarked unit never matches on its own', () => {
+  assert.deepEqual(matchLine('Stomatological Hospital, Sichuan University, Chengdu, China', afmu()), []);
+  assert.deepEqual(matchLine('四川大学华西口腔医院', afmu()), []);
+});
+
+test('a line that also names the parent is reported as a name match', () => {
+  const [m] = matchLine("Xijing Hospital, Air Force Medical University, Xi'an, China", afmu());
+  assert.deepEqual([m.matchedBy, m.confidence], ['name', 'confirmed']);
+});
+
+test('the search box finds an institution by a marked unit', () => {
+  assert.deepEqual(searchRecords('Xijing', afmu()), ['afmu']);
+});

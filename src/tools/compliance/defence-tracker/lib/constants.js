@@ -197,3 +197,7 @@ export const INSTITUTION_TYPES = {
 export const RESERVED_SLUGS = ['batch', 'methodology'];
 
 export const STATUSES = ['seed', 'listing-only', 'verified'];
+
+// Kinds of subunit a profile lists (campuses, hospitals, labs, institutes). A
+// subunit marked "match": true is matched to its parent in batch checks.
+export const SUBUNIT_KINDS = ['campus', 'hospital', 'institute', 'lab'];

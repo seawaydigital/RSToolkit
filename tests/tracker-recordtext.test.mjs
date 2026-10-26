@@ -144,6 +144,14 @@ test('a sanctions listing adds the sanctions note without blanket-ban wording', 
   assert.ok(!/criminal offence/i.test(text));
 });
 
+test('a batch row matched through a unit names the unit', () => {
+  const csv = batchResultsToCsv(
+    [{ input: 'Xijing Hospital, Xi’an', matches: [{ id: 'harbin-institute-of-technology', matchedBy: 'unit', unit: 'Xijing Hospital', confidence: 'confirmed' }] }],
+    byId,
+  );
+  assert.ok(csv.split('\r\n')[1].includes('Unit: Xijing Hospital'), csv);
+});
+
 test('the CSV header is fixed', () => {
   assert.equal(batchResultsToCsv([], byId).split('\r\n')[0], 'Your text,Match,Matched by,Confidence,Rating,NRO,Other lists,Profile');
 });

@@ -280,7 +280,10 @@ export default function InstitutionProfile({ record, dataset, onPageTitle }) {
         <TrackerSection title="Campuses and subsidiaries" count={record.subunits.length}>
           <ul className="dit-plain-list">
             {record.subunits.map((s) => (
-              <li key={s.name}>{[s.name, s.zh].filter(Boolean).join(' · ')}</li>
+              <li key={s.name}>
+                {[s.name, s.zh].filter(Boolean).join(' · ')}
+                {s.match && <span className="dit-muted"> · matched in batch checks</span>}
+              </li>
             ))}
           </ul>
         </TrackerSection>
