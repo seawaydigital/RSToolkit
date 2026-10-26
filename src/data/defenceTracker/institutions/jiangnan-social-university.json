@@ -18,10 +18,12 @@
   "location": {
     "city": "Suzhou",
     "province": "Jiangsu",
-    "lat": 31.3587,
-    "lng": 120.7438
+    "lat": 31.2274,
+    "lng": 120.6815
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of State Security"
+  ],
   "parent": null,
   "ids": {
     "misp": "0acb8612-f4ad-494a-b100-d7ac3e667b88",
@@ -29,20 +31,60 @@
     "ror": "03q5ve753",
     "wikidata": "Q23006203"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "A 1999 Ministry of Education notice lists Jiangnan Social University, an adult higher education institution in Suzhou, with the Ministry of State Security as its supervising department, among the schools whose enrolment it suspended. A 1997 Zhejiang provincial notice on police recruitment names it, with the University of International Relations, as a school belonging to the Ministry of State Security whose graduates enter the state security organs.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "教育部关于暂停和限制部分成人高等学校1999年招生的通知 (Ministry of Education notice suspending or limiting 1999 enrolment at some adult higher education institutions), annex 1",
+      "publisher": "Ministry of Education (reprinted in People’s Daily Online’s law database)",
+      "url": "http://www.people.com.cn/item/flfgk/gwyfg/1999/206005199905.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20170115123637/http://www.people.com.cn/item/flfgk/gwyfg/1999/206005199905.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "浙江省人事厅、公安厅、国家安全厅关于从公安、安全系统院校应届毕业生中录用人民警察有关问题的通知 (浙人干〔1997〕122号; Zhejiang notice on recruiting police officers from graduates of public security and state security schools)",
+      "publisher": "Zhejiang Provincial Departments of Personnel, Public Security and State Security (published by the Ningbo Human Resources and Social Security Bureau)",
+      "url": "http://www.nbhrss.gov.cn/rsgl/klytp/zcfg/200806/t20080611_54448.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20170705021922/http://www.nbhrss.gov.cn/rsgl/klytp/zcfg/200806/t20080611_54448.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
