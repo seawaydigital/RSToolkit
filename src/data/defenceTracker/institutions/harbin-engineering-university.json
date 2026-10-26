@@ -20,7 +20,9 @@
     "lat": 45.7749,
     "lng": 126.6765
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "d691c2a3-4eaa-4ce4-8495-3821168ec8ce",
@@ -28,20 +30,114 @@
     "ror": "03x80pn82",
     "wikidata": "Q23102"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "HEU is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. HEU calls meeting national defence needs its first mission, focuses on shipbuilding, naval equipment, ocean development and nuclear power, and says more than 70% of its employed graduates go into industrialisation, informatisation or defence modernisation.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Since 2007 HEU has been jointly run (\"co-constructed\") by COSTIND, the predecessor of today’s defence-industry regulator SASTIND, together with the Ministry of Education, Heilongjiang province and the PLA Navy.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "HEU grew out of the PLA’s Military Engineering Institute, founded in 1953, and was formed in 1970 around that institute’s naval engineering department; the PLA Navy has been one of the bodies co-constructing it since 2007.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "According to a 2016 US plea agreement, people working for HEU directed the illegal export of US systems and components for underwater vehicles, including unmanned and autonomous ones, from at least 2002 to 2014, for use by HEU and other state-controlled entities; the case ended in a prison sentence.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "HEU reports to the Ministry of Industry and Information Technology; before that it came under the Sixth Ministry of Machine-Building, China State Shipbuilding Corporation and COSTIND.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "uncrewed-vehicles",
+    "advanced-nuclear"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About HEU)",
+      "publisher": "Harbin Engineering University",
+      "url": "https://www.hrbeu.edu.cn/xxgk/xxjj1.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20260925190414/https://www.hrbeu.edu.cn/xxgk/xxjj1.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Florida Woman Sentenced to Prison for Acting as an Illegal Agent of a Foreign Government and Conspiring to Commit Money Laundering",
+      "publisher": "US Department of Justice, Office of Public Affairs",
+      "url": "https://www.justice.gov/archives/opa/pr/florida-woman-sentenced-prison-acting-illegal-agent-foreign-government-and-conspiring-commit",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20260524101612/https://www.justice.gov/archives/opa/pr/florida-woman-sentenced-prison-acting-illegal-agent-foreign-government-and-conspiring-commit"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
