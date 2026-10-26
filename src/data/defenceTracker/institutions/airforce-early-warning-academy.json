@@ -20,26 +20,80 @@
     "lat": 30.8822,
     "lng": 114.3726
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Air Force headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "ccae69a7-83f2-48e2-8dcc-678322c6865d",
     "nro": "airforce-early-warning-academy"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Air Force Early Warning Academy in Wuhan, founded in 1952 as the Air Force Radar School, as a PLA Air Force academy that reports to PLA Air Force headquarters and educates officers and NCOs in early warning, radar engineering, electronic countermeasures and unmanned aerial vehicle operations.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy reports to PLA Air Force headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-sensing-surveillance",
+    "advanced-radar",
+    "uncrewed-vehicles"
+  ],
+  "subunits": [
+    {
+      "name": "Huangpi NCO School (Wuhan)",
+      "zh": "黄陂士官学校",
+      "kind": "campus"
+    },
+    {
+      "name": "Yichang Training Group",
+      "zh": "宜昌训练大队",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 172–175",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
