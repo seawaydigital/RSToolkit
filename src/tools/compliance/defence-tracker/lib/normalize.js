@@ -7,6 +7,8 @@ const CJK = /[㐀-䶿一-鿿豈-﫿]/;
 export const STOPWORDS = new Set(['of', 'and', 'the', 'for', 'at', 'in']);
 
 // Applied per token after lowercasing, so "Univ." and "univ" both expand.
+// Looked up with Object.hasOwn: "constructor" (Constructor University) is a
+// word, not Object.prototype.constructor.
 export const ABBREVIATIONS = {
   univ: 'university',
   inst: 'institute',
@@ -84,7 +86,7 @@ function rawTokens(segment) {
     .replace(/&/g, ' and ')
     .split(/[^\p{L}\p{N}]+/u)
     .filter(Boolean)
-    .flatMap((t) => (ABBREVIATIONS[t] ?? t).split(' '));
+    .flatMap((t) => (Object.hasOwn(ABBREVIATIONS, t) ? ABBREVIATIONS[t] : t).split(' '));
 }
 
 // `kept` drops stopwords; `rawAfter[i]` is the raw token that follows kept

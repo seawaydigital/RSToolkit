@@ -22,6 +22,14 @@ test('matchedBy reports how a line matched', () => {
   assert.equal(matchLine('Harbin Insitute of Technolgy', index)[0].matchedBy, 'similar-name');
 });
 
+// Constructor University (Bremen) once threw: "constructor" was looked up as an
+// abbreviation and found Object.prototype.constructor.
+test('a word that names a built-in object property is read as a plain word', () => {
+  assert.deepEqual(matchLine('Constructor University, Bremen, Germany', index), []);
+  const r = matchLines('Constructor University, Bremen, Germany\nHarbin Institute of Technology', index);
+  assert.equal(r.lines[1].matches[0].id, 'harbin-institute-of-technology');
+});
+
 test('blank lines are skipped', () => {
   const r = matchLines('\n\n  \nHIT\n', index);
   assert.equal(r.lines.length, 1);
