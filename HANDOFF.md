@@ -459,7 +459,7 @@ A free, open reference on Chinese, Russian and Iranian research institutions' mi
 
 1. On the 1st, the `Tracker watch` workflow opens an issue, "Tracker watch — YYYY-MM": changes on the official lists (US Consolidated Screening List, Canadian sanctions list, the NRO page), lists it couldn't check, and cited sources that no longer answer or have no archived copy. It never changes the repository. It runs with a token that can read the code and write issues, nothing else.
 2. Run `npm run tracker:sync` on a branch, review the diff, run `npm test`, and merge. Official-list data is public, so it can merge before launch.
-3. Check the US Section 1286 list and Japan's End User List by hand (their pages refuse scripts) and copy any new edition into `src/data/defenceTracker/listings/`.
+3. Check Japan's End User List by hand (METI's pages refuse scripts), and the US Section 1286 list when the issue flags a new file on its page, and copy any new edition into `src/data/defenceTracker/listings/` (the playbook's hand-check step says how).
 4. Fix or archive the sources the issue lists (`npm run tracker:archive`).
 5. Verify or re-check 15 to 25 profiles (`npm run tracker:next` lists what's next).
 6. Bump the dataset version (`meta.json`, `YYYY.MM`), add a `changelog.json` entry, publish, and close the issue.
@@ -481,7 +481,7 @@ Honest inventory of what is not finished.
   - `peac-institute-of-multiscale-sciences` — labelled Mianyang; headquartered at Sichuan University, Chengdu.
   - `48th-central-scientific-research-institute` — has three branches (Sergiev Posad-6, Yekaterinburg, Kirov); the federal list carries one entry.
 - **22 CAEP sub-institutes have approximate coordinates.** They sit inside the ~5 km² Mianyang Science City compound at deterministic offsets from `31.4974, 104.7589`. They render correctly but could be tightened with better public address data.
-- **Defence Institution Tracker, before launch:** no profile is verified yet, so nothing is rated; the US 1286 and Japanese lists are not loaded yet (their pages refuse scripts, so they are maintained by hand); there is no main Chinese Academy of Sciences record; the archive script's Wayback saves and the watch workflow's issue step have not run live yet. The map shows only the institutions with known coordinates (205 of 734 today) and says so; the list view shows all of them.
+- **Defence Institution Tracker, before launch:** no profile is verified yet, so every rating comes from the official lists; the US Section 1286 list and Japan's End User List are entered by hand from their PDFs, so each new edition has to be copied in; there is no main Chinese Academy of Sciences record; the archive script's Wayback saves and the watch workflow's issue step have not run live yet. The map shows only the institutions with known coordinates (205 of 734 today) and says so; the list view shows all of them.
 - **Flowchart Full View nodes are not keyboard-focusable.** This is the conforming-alternate-version route, not an oversight — Guided Mode is the accessible equivalent. See ACCESSIBILITY.md §4.
 
 ---

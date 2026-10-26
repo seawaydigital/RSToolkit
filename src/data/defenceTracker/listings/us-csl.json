@@ -1,7 +1,7 @@
 {
   "snapshot": "us-csl",
   "coverage": "complete",
-  "checkedOn": "2026-10-25",
+  "checkedOn": "2026-10-26",
   "sourceUrl": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.json",
   "entries": [
     {
@@ -380,7 +380,7 @@
       "date": null,
       "citation": "NPWMD; IRGC; IFSR; SDGT",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "fater-engineering-institute"
+      "institution": "fater-institute"
     },
     {
       "key": "csl:12058",
@@ -1523,7 +1523,7 @@
       "date": null,
       "citation": "RUSSIA-EO14024; UKRAINE-EO13662",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "state-scientific-research-institute-of-mechanical-engineering-imeni-v-v-bakhirev"
+      "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
     },
     {
       "key": "csl:35937",
@@ -2554,7 +2554,7 @@
       "date": null,
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "joint-stock-company-the-urals-scientific-research-institute-of-composite-materia"
+      "institution": "ural-research-institute-of-composite-materials"
     },
     {
       "key": "csl:40871",
@@ -6664,7 +6664,7 @@
       "date": "2022-03-09",
       "citation": "87 FR 13141",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "ural-scientific-research-institute-for-composite-materials"
+      "institution": "ural-research-institute-of-composite-materials"
     },
     {
       "key": "csl:cf7fabc718be98f7a17a830f330f942005673b397ef23e267b206c42",

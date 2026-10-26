@@ -110,17 +110,22 @@ const listedOn = (id) => ds.byId.get(id)?.listings.filter((l) => l.status === 'l
 
 test('an institution named differently on several lists is one record carrying all of them', () => {
   const expected = {
-    'moscow-institute-of-physics-and-technology': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'moscow-institute-of-physics-and-technology': ['ca-sanctions', 'us-1286', 'us-entity-list', 'us-sdn'],
     'federal-state-financed-institution-of-science-physics-and-technology-institute-n': ['ca-sanctions', 'us-sdn'],
-    'institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences': ['ca-sanctions', 'us-1286', 'us-entity-list', 'us-sdn'],
     'all-russian-scientific-research-institute-of-experimental-physics-vniief': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
     'all-russian-scientific-research-institute-of-technical-physics-vniitf': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
     'central-research-institute-burevestnik': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
     'federal-state-unitary-enterprise-central-research-institute-of-structural-materi': ['us-entity-list', 'us-sdn'],
-    'institute-of-solid-state-physics-of-the-russian-academy-of-sciences': ['us-entity-list', 'us-sdn'],
+    'institute-of-solid-state-physics-of-the-russian-academy-of-sciences': ['us-1286', 'us-entity-list', 'us-sdn'],
     'zhukovskiy-central-aerohydrodynamics-institute-tsagi': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
     'iitp-ras': ['ca-nro', 'us-entity-list', 'us-sdn'],
     'northwest-institute-of-nuclear-technology': ['ca-nro', 'us-entity-list'],
+    // Japan's End User List gives "Fater Engineering Institute" as another name of the Fater Institute,
+    // and ties the US spellings of UNIIKM (Perm) and GosNIIMash (Dzerzhinsk) to the Canadian ones.
+    'fater-institute': ['ca-sanctions', 'jp-eul', 'us-sdn'],
+    'ural-research-institute-of-composite-materials': ['ca-sanctions', 'jp-eul', 'us-entity-list', 'us-sdn'],
+    'state-scientific-research-institute-of-machine-building-bakhirev-gosniimash': ['ca-sanctions', 'jp-eul', 'us-1286', 'us-entity-list', 'us-sdn'],
   };
   for (const [id, lists] of Object.entries(expected)) assert.deepEqual(listedOn(id), lists, id);
   for (const gone of [
@@ -129,6 +134,10 @@ test('an institution named differently on several lists is one record carrying a
     'russian-federal-nuclear-center-all-russian-research-institute-of-experimental-ph',
     'joint-stock-company-central-scientific-research-institute-burevestnik',
     'northwest-institute-of-nuclear-technology-in-the-science-research-nintf',
+    'fater-engineering-institute',
+    'ural-scientific-research-institute-for-composite-materials',
+    'joint-stock-company-the-urals-scientific-research-institute-of-composite-materia',
+    'state-scientific-research-institute-of-mechanical-engineering-imeni-v-v-bakhirev',
   ]) assert.equal(ds.byId.has(gone), false, gone);
   assert.equal(ds.byId.get('moscow-institute-of-physics-and-technology').name, 'Moscow Institute of Physics and Technology');
 });
@@ -148,6 +157,8 @@ const DISTINCT = [
   ['institute-of-high-energy-physics', 'institute-of-theoretical-and-experimental-physics'],
   ['federal-research-center-institute-of-applied-physics-of-the-russian-academy-of-s', 'joint-stock-company-institute-of-applied-physics'],
   ['national-university-of-science-and-technology-centre-for-quantum-communications', 'national-university-of-science-and-technology-laboratory-of-superconductor-quant'],
+  // Both are named after V.V. Bakhirev: NIMI (Moscow) and GosNIIMash (Dzerzhinsk).
+  ['joint-stock-company-mechanical-engineering-research-institute', 'state-scientific-research-institute-of-machine-building-bakhirev-gosniimash'],
   ...['joint-stock-company-russian-research-institute-electronstandart', 'scientific-production-enterprise-almaz-jsc', 'scientific-production-enterprise-salyut-jsc', 'scientific-production-enterprise-vostok-jsc']
     .flatMap((a, i, all) => all.slice(i + 1).map((b) => [a, b])),
 ].map((pair) => [...pair].sort().join(' + '));

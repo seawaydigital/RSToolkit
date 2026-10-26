@@ -145,7 +145,7 @@ export const LISTS = [
     jurisdiction: 'United States',
     kind: 'research-security',
     snapshot: 'us-1286',
-    sourceUrl: 'https://basicresearch.defense.gov/Pubs/Academic-Research-Security/',
+    sourceUrl: 'https://www.cto.mil/fy25-ndaa-section-1286-list/',
   },
   {
     id: 'jp-eul',
@@ -153,7 +153,7 @@ export const LISTS = [
     jurisdiction: 'Japan',
     kind: 'export-control',
     snapshot: 'jp-meti-eul',
-    sourceUrl: 'https://www.meti.go.jp/policy/anpo/law05.html',
+    sourceUrl: 'https://www.meti.go.jp/policy/anpo/law09-2.html',
   },
 ];
 

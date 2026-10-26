@@ -140,8 +140,11 @@ export default function TrackerMethodology({ dataset, changelog }) {
       </div>
       <div className="dit-prose">
         <p>
-          The US lists and Canada&apos;s sanctions list are compared with their official downloads every month. Lists marked &quot;Not
-          checked yet&quot; are not yet entered in the tracker, so every institution shows that status for them rather than &quot;Not
+          The US screening lists and Canada&apos;s sanctions list are compared with their official downloads every month. The US
+          Section 1286 list and Japan&apos;s End User List are entered by hand from each new edition; the table gives the date of the
+          edition in use. The 1286 list is entered in full. From Japan&apos;s list, as from the US screening lists and Canada&apos;s
+          sanctions list, only research bodies in China, Russia and Iran are entered. A list marked
+          &quot;Not checked yet&quot; has not been entered, so every institution shows that status for it rather than &quot;Not
           listed&quot;.
         </p>
       </div>
