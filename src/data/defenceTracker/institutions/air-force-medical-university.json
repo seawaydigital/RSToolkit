@@ -67,27 +67,31 @@
     {
       "name": "Xijing Hospital (First Affiliated Hospital)",
       "zh": "西京医院",
-      "kind": "institute"
+      "kind": "hospital",
+      "match": true
     },
     {
       "name": "Tangdu Hospital",
       "zh": "唐都医院",
-      "kind": "institute"
+      "kind": "hospital",
+      "match": true
     },
     {
       "name": "Stomatological Hospital",
       "zh": "口腔医院",
-      "kind": "institute"
+      "kind": "hospital"
     },
     {
       "name": "Air Force 986th Hospital",
       "zh": "空军第九八六医院",
-      "kind": "institute"
+      "kind": "hospital",
+      "match": true
     },
     {
       "name": "Air Force Characteristic Medical Center (Beijing)",
       "zh": "空军特色医学中心",
-      "kind": "institute"
+      "kind": "hospital",
+      "match": true
     }
   ],
   "sources": [
@@ -128,6 +132,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Marked units that name the institution on their own for batch-check matching."
     }
   ],
   "seedNotes": {

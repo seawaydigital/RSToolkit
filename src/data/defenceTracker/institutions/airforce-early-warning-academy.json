@@ -59,7 +59,8 @@
     {
       "name": "Huangpi NCO School (Wuhan)",
       "zh": "黄陂士官学校",
-      "kind": "campus"
+      "kind": "campus",
+      "match": true
     },
     {
       "name": "Yichang Training Group",
@@ -94,6 +95,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Marked units that name the institution on their own for batch-check matching."
     }
   ],
   "seedNotes": {

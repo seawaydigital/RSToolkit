@@ -2,7 +2,9 @@
   "id": "academy-of-military-science",
   "name": "Academy of Military Science",
   "zh": "中国人民解放军军事科学院",
-  "zhAliases": [],
+  "zhAliases": [
+    "军事科学院"
+  ],
   "aliases": [
     "Academy of Military Sciences"
   ],
@@ -64,32 +66,38 @@
     {
       "name": "National Defense Science and Technology Innovation Institute",
       "zh": "国防科技创新研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     },
     {
       "name": "War Institute",
       "zh": "战争研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     },
     {
       "name": "Military Political Work Institute",
       "zh": "军队政治工作研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     },
     {
       "name": "Military Legal Systems Institute",
       "zh": "军事法制研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     },
     {
       "name": "Chemical Defense Institute",
       "zh": "防化研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     },
     {
       "name": "National Defense Engineering Institute",
       "zh": "国防工程研究院",
-      "kind": "institute"
+      "kind": "institute",
+      "match": true
     }
   ],
   "sources": [
@@ -130,6 +138,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Marked units that name the institution on their own for batch-check matching, and added its common short Chinese name."
     }
   ],
   "seedNotes": {

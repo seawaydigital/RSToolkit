@@ -3,7 +3,8 @@
   "name": "Academy of Military Medical Sciences",
   "zh": "军事科学院军事医学研究院",
   "zhAliases": [
-    "中国人民解放军军事医学科学院"
+    "中国人民解放军军事医学科学院",
+    "军事医学科学院"
   ],
   "aliases": [],
   "acronyms": [
@@ -92,6 +93,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Added a common short Chinese name for matching."
     }
   ],
   "seedNotes": null
