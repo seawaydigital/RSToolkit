@@ -22,7 +22,9 @@
     "lat": 32.0374,
     "lng": 118.8154
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Industry and Information Technology (MIIT)"
+  ],
   "parent": null,
   "ids": {
     "misp": "e2a8d157-9366-4ea6-a65f-e902c0b4f944",
@@ -30,20 +32,147 @@
     "ror": "01scyh794",
     "wikidata": "Q23110"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "seven-sons",
+      "summary": "NUAA is one of the Seven Sons of National Defence, the seven universities run directly by the Ministry of Industry and Information Technology, which CSET found supply about three-quarters of the graduates hired by China’s defence-industry state-owned companies. NUAA says that in defence science and technology it has taken part in the early research, technology development and testing of almost every major Chinese aircraft type.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "NUAA reports 10 defence-specialty disciplines (国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "In a Ministry of State Security espionage case that US prosecutors charged in 2018 and won at trial in 2021, aviation experts from US companies were recruited through invitations to give university presentations in China; reporting on the 2018 charging documents, NBC News named NUAA as the university for one such presentation, in 2017.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "NUAA reports to the Ministry of Industry and Information Technology, which co-constructs it with the Civil Aviation Administration of China (agreements in 2012 and 2021) and with the Ministry of Education and Jiangsu province (2018 and 2023).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "aerospace-space-satellite"
+  ],
+  "subunits": [
+    {
+      "name": "Minggugong campus (Nanjing)",
+      "zh": "明故宫校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Jiangjun Road campus (Nanjing)",
+      "zh": "将军路校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Tianmu Lake campus (Liyang)",
+      "zh": "天目湖校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Yangtze River campus (under construction)",
+      "zh": "扬子江校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "南航简介 (About NUAA)",
+      "publisher": "Nanjing University of Aeronautics and Astronautics",
+      "url": "https://www.nuaa.edu.cn/479/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026023335/https://www.nuaa.edu.cn/479/list.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Universities and the Chinese Defense Technology Workforce (revised March 2024), p. 3",
+      "publisher": "Center for Security and Emerging Technology, Georgetown University",
+      "url": "https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026022801/https://cset.georgetown.edu/wp-content/uploads/CSET-Universities-and-the-Chinese-Defense-Technology-Workforce-3.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Chinese Intelligence Officer Charged with Economic Espionage Involving Theft of Trade Secrets from Leading U.S. Aviation Companies",
+      "publisher": "US Department of Justice, Office of Public Affairs",
+      "url": "https://www.justice.gov/archives/opa/pr/chinese-intelligence-officer-charged-economic-espionage-involving-theft-trade-secrets-leading",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261012211826/https://www.justice.gov/archives/opa/pr/chinese-intelligence-officer-charged-economic-espionage-involving-theft-trade-secrets-leading"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "Jury Convicts Chinese Intelligence Officer of Espionage Crimes, Attempting to Steal Trade Secrets",
+      "publisher": "US Department of Justice, Office of Public Affairs",
+      "url": "https://www.justice.gov/archives/opa/pr/jury-convicts-chinese-intelligence-officer-espionage-crimes-attempting-steal-trade-secrets",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026023432/https://www.justice.gov/archives/opa/pr/jury-convicts-chinese-intelligence-officer-espionage-crimes-attempting-steal-trade-secrets"
+      }
+    },
+    {
+      "id": "s5",
+      "title": "Chinese intelligence officer charged with conspiring to steal secrets from U.S. firm",
+      "publisher": "NBC News",
+      "url": "https://www.nbcnews.com/news/crime-courts/chinese-intelligence-officer-charged-stealing-trade-secrets-u-s-company-n918696",
+      "lang": "en",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026023544/https://www.nbcnews.com/news/crime-courts/chinese-intelligence-officer-charged-stealing-trade-secrets-u-s-company-n918696"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
