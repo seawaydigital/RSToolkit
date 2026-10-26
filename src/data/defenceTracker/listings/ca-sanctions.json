@@ -80,6 +80,19 @@
       "institution": "al-mustafa-international-university"
     },
     {
+      "key": "ca:Iran:1, Part 1:167",
+      "list": "ca-sanctions",
+      "name": "Shahed Aviation Industries",
+      "altNames": [
+        "صنایع هوایی شاهد"
+      ],
+      "country": "IR",
+      "date": "2022-11-10",
+      "citation": "Schedule 1, Part 1, item 167",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "shahed-aviation-industries-research-center"
+    },
+    {
       "key": "ca:Iran:1, Part 1:184",
       "list": "ca-sanctions",
       "name": "Defence Technology and Science Research Centre (DTSRC)",
@@ -148,6 +161,17 @@
       "citation": "Schedule 1, Part 1, item 207",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
       "institution": "fater-institute"
+    },
+    {
+      "key": "ca:Iran:1, Part 1:217",
+      "list": "ca-sanctions",
+      "name": "MAKIN Company",
+      "altNames": [],
+      "country": "IR",
+      "date": "2023-10-18",
+      "citation": "Schedule 1, Part 1, item 217",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "makin-institute"
     },
     {
       "key": "ca:Iran:1, Part 1:219",
@@ -1066,7 +1090,7 @@
       "date": "2023-08-22",
       "citation": "Schedule 1, Part 2, item 431",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "the-federal-scientific-and-production-center-m-v-protsenko-start-production-asso"
+      "institution": "federal-scientific-and-production-center-mv-protsenko-start-production-associati"
     },
     {
       "key": "ca:Russia:1, Part 2:433",
@@ -1775,7 +1799,7 @@
       "date": "2026-02-19",
       "citation": "Schedule 1, Part 2, item 789",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "federal-scientific-and-production-centre"
+      "institution": "scientific-research-institute-of-applied-chemistry"
     }
   ]
 }

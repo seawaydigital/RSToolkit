@@ -126,6 +126,11 @@ test('an institution named differently on several lists is one record carrying a
     'fater-institute': ['ca-sanctions', 'jp-eul', 'us-sdn'],
     'ural-research-institute-of-composite-materials': ['ca-sanctions', 'jp-eul', 'us-entity-list', 'us-sdn'],
     'state-scientific-research-institute-of-machine-building-bakhirev-gosniimash': ['ca-sanctions', 'jp-eul', 'us-1286', 'us-entity-list', 'us-sdn'],
+    // NIIPKh (Sergiev Posad): the SDN gives its legal name, the Entity List its
+    // institute's name, Canada its "Federal Scientific and Production Centre"
+    // title. FNPC Start: the SDN's "MV Protsenko" is Canada's "M.V. Protsenko".
+    'scientific-research-institute-of-applied-chemistry': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'federal-scientific-and-production-center-mv-protsenko-start-production-associati': ['ca-sanctions', 'us-sdn'],
   };
   for (const [id, lists] of Object.entries(expected)) assert.deepEqual(listedOn(id), lists, id);
   for (const gone of [
@@ -138,8 +143,46 @@ test('an institution named differently on several lists is one record carrying a
     'ural-scientific-research-institute-for-composite-materials',
     'joint-stock-company-the-urals-scientific-research-institute-of-composite-materia',
     'state-scientific-research-institute-of-mechanical-engineering-imeni-v-v-bakhirev',
+    'joint-stock-company-federal-scientific-and-production-center-scientific-research',
+    'federal-scientific-and-production-centre',
+    'the-federal-scientific-and-production-center-m-v-protsenko-start-production-asso',
   ]) assert.equal(ds.byId.has(gone), false, gone);
   assert.equal(ds.byId.get('moscow-institute-of-physics-and-technology').name, 'Moscow Institute of Physics and Technology');
+});
+
+// The research-body filter reads names, so it used to drop companies and
+// numbered institutes the tracker already holds; each was "Not listed" on a
+// list that names it. Checked against the eCFR and the screening-list feed.
+test('a body the tracker holds carries every list that names it by its main name', () => {
+  const expected = {
+    'caep-china-jiuyuan-trading-corporation': ['us-entity-list'],
+    'caep-beijing-jincheng-huanyu-electronics': ['us-entity-list'],
+    'caep-sichuan-dingcheng-material-trade': ['us-entity-list'],
+    'caep-sichuan-haitian-new-technology': ['us-entity-list'],
+    'caep-sichuan-zhonghe-import-and-export': ['us-entity-list'],
+    'caep-skyeye-laser-technology': ['us-entity-list'],
+    'china-electronics-technology-group-corporation-28th-research-institute-cetc-28': ['us-entity-list', 'jp-eul'],
+    'ano-po-ksi': ['us-entity-list', 'us-sdn'],
+    'changsha-tianyi-space-science-and-technology-research-institute-co-ltd': ['us-entity-list', 'us-sdn'],
+    'obninsk-research-and-production-enterprise-orpe': ['us-entity-list', 'us-sdn'],
+  };
+  for (const [id, lists] of Object.entries(expected)) {
+    for (const list of lists) assert.ok(listedOn(id)?.includes(list), `${id} is on ${list}`);
+  }
+});
+
+// No list names CASC, CASIC or AVIC themselves (the eCFR's Entity List has no
+// entry for any of them); the lists name their academies and institutes.
+test('a group is not listed for its units, and its profile names them', () => {
+  const groups = ['china-aerospace-science-and-technology-corporation', 'china-aerospace-science-and-industry-corporation', 'aviation-industry-corporation-of-china'];
+  for (const id of groups) assert.deepEqual(listedOn(id), [], id);
+  const unitNames = (id) => ds.byId.get(id).units.map((u) => u.name);
+  assert.ok(unitNames('china-aerospace-science-and-technology-corporation').includes('China Aerospace Science and Technology Corporation (CASC) 9th Academy 13 Research Institute'));
+  assert.ok(unitNames('china-aerospace-science-and-industry-corporation').includes('China Aerospace Science and Industry Corporation Second Academy'));
+  assert.ok(unitNames('aviation-industry-corporation-of-china').includes('Aviation Industry Corporation of China 612 Institute'));
+  const named = (name) => ds.records.find((r) => r.name === name);
+  assert.deepEqual(listedOn(named('Beijing Aeronautical Manufacturing Technology Research Institute')?.id), ['jp-eul', 'us-1286', 'us-entity-list']);
+  assert.deepEqual(listedOn(named('China Academy of Space Technology (CAST)')?.id), ['jp-eul']);
 });
 
 test('a sanctioned department shows on its university', () => {

@@ -134,7 +134,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 487; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "aviation-industry-corporation-of-china"
+      "institution": "beijing-aeronautical-manufacturing-technology-research-institute"
     },
     {
       "key": "eul:CN:beijing-aerospace-automatic-control-institute-bicd",
@@ -150,7 +150,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 488; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-12-research"
     },
     {
       "key": "eul:CN:beijing-automation-control-equipment-institute-bacei",
@@ -165,7 +165,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 490; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-industry-corporation"
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-33-research-i"
     },
     {
       "key": "eul:CN:beijing-institute-of-structure-and-environmental-engineering-bise",
@@ -179,7 +179,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 493; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-702-research"
     },
     {
       "key": "eul:CN:beijing-institute-of-technology",
@@ -208,7 +208,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 499; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-industry-corporation"
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-31-research-i"
     },
     {
       "key": "eul:CN:beijing-university-of-aeronautics-and-astronautics-buaa",
@@ -249,7 +249,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 509; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-technology-corporation"
+      "institution": "china-academy-of-space-technology-cast"
     },
     {
       "key": "eul:CN:china-aerodynamics-research-and-development-center-cardc",
@@ -261,6 +261,26 @@
       "citation": "29 September 2025 revision, No. 510; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
       "institution": "china-aerodynamics-research-and-development-center"
+    },
+    {
+      "key": "eul:CN:china-aerospace-science-and-industry-corporation-second-academy",
+      "list": "jp-eul",
+      "name": "China Aerospace Science and Industry Corporation Second Academy",
+      "altNames": [
+        "China Changfeng Mechanics and Electronics Technology Academy",
+        "China Chang Feng Mechano-Electronic Engineering Academy",
+        "CASIC Second Academy",
+        "China Chang Feng Mechano-Electronic Engineering Company",
+        "CASIC Academy of Defense Technology",
+        "Second Research Academy of CASIC",
+        "Changfeng Electromechanical Technology Design Institute",
+        "China Chang Feng Mechanics and Electronics Technology Academy"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 511; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-second-academy"
     },
     {
       "key": "eul:CN:china-aerospace-science-and-technology-corporation-casc-9th-academy-771-research",
@@ -459,7 +479,7 @@
       "date": null,
       "citation": "29 September 2025 revision, No. 558; concerns: missile, conventional weapons",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
-      "institution": "china-aerospace-science-and-industry-corporation"
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-35-research-i"
     },
     {
       "key": "eul:CN:northwestern-polytechnical-university-npu",
@@ -926,6 +946,19 @@
       "citation": "29 September 2025 revision, No. 789; concerns: nuclear",
       "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
       "institution": "n-a-dollezhal-order-of-lenin-research-and-design-institute-of-power-engineering"
+    },
+    {
+      "key": "eul:RU:npo-of-electromechanics",
+      "list": "jp-eul",
+      "name": "NPO of Electromechanics",
+      "altNames": [
+        "Tactical Missile Corporation, NPO Electromechanics"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 793; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "jsc-scientific-and-production-association-of-electro-mechanic"
     },
     {
       "key": "eul:RU:polyus-research-institute-of-m-f-stelmakh-joint-stock-company",

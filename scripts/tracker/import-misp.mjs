@@ -10,6 +10,7 @@ import { fetchJson, sleep } from './lib/http.mjs';
 import {
   MISP_URL,
   assembleSeedRecords,
+  listOnlyNames,
   mergeEnrichment,
   resolveNameCollisions,
   resolveRorConflicts,
@@ -22,10 +23,13 @@ const today = new Date().toISOString().slice(0, 10);
 const skipRor = process.argv.includes('--no-ror');
 const report = { rorMatched: 0, rorMissing: [], rorRejected: [], rorMismatched: [], rorConflicts: [], domainConflicts: [], invalid: [] };
 
-const { institutions } = await readRawData();
+const { institutions, snapshots } = await readRawData();
 const misp = await fetchJson(MISP_URL);
 const { records, created, merged } = assembleSeedRecords({ mispValues: misp.values, nroOrgs: nroData.organizations, existing: institutions, today });
-const collisions = resolveNameCollisions(records);
+// Names the official lists give list-only bodies stay theirs: MISP would hand
+// CASC's listed institutes back to CASC as aliases.
+const listed = listOnlyNames(snapshots, new Set(records.keys()));
+const collisions = resolveNameCollisions(records, { listed });
 
 // ROR enrichment: only a ROR "chosen" match, in the same country, whose names
 // agree with the record.
@@ -54,7 +58,7 @@ for (const [id, e] of enrichment) {
   records.set(id, mergeEnrichment(records.get(id), e));
   report.rorMatched++;
 }
-collisions.push(...resolveNameCollisions(records));
+collisions.push(...resolveNameCollisions(records, { listed }));
 
 // A domain claimed by two records is dropped from both and reported.
 const domainOwners = new Map();

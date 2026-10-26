@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import {
   assembleSeedRecords,
   findNroMatch,
+  listOnlyNames,
   mergeEnrichment,
   resolveNameCollisions,
   resolveRorConflicts,
@@ -184,6 +185,46 @@ test("an alias that is another record's own name is removed", () => {
   assert.deepEqual(records.get('chinese-academy-of-engineering-physics').zhAliases, []);
   assert.equal(records.get('beijing-computational-science-research-centre').zh, '北京计算科学研究中心');
   assert.equal(removed.length, 3);
+});
+
+// MISP lists CASC's academies and institutes as CASC's aliases. Once an
+// official list gives one of them a record of its own, a re-import must not
+// hand its names back to CASC.
+test('a seed alias that an official list gives a list-only body is removed from the seed', () => {
+  const rec = (id, name, aliases = []) => ({ id, name, aliases, zh: null, zhAliases: [] });
+  const records = new Map([
+    ['casc', rec('casc', 'China Aerospace Science and Technology Corporation', ['China Academy of Space Technology (CAST)', 'Beijing Institute of Space System Engineering', 'Beijing Aerospace Automatic Control Institute'])],
+    ['caep', rec('caep', 'Chinese Academy of Engineering Physics', ['Ninth Academy'])],
+    ['caep-902', rec('caep-902', 'Southwest Institute of Nuclear Physics and Chemistry', ["China Academy of Engineering Physics (CAEP)'s 902 Institute"])],
+  ]);
+  const snapshots = {
+    'jp-meti-eul': {
+      entries: [
+        { key: 'eul:1', name: 'China Academy of Space Technology (CAST)', altNames: ['5th Academy of China Aerospace Science and Technology Corporation'], institution: 'cast' },
+        // The sync also compares names without their brackets.
+        { key: 'eul:2', name: 'Beijing Aerospace Automatic Control Institute (BICD)', altNames: [], institution: 'casc-12th-institute' },
+      ],
+    },
+    // An entry for a body that has a file keeps its names where they are.
+    'us-csl': { entries: [{ key: 'csl:1', name: 'Chinese Academy of Engineering Physics', altNames: ['Ninth Academy', "China Academy of Engineering Physics (CAEP)'s 902 Institute"], institution: 'caep' }] },
+  };
+  const removed = resolveNameCollisions(records, { listed: listOnlyNames(snapshots, new Set(records.keys())) });
+  assert.deepEqual(records.get('casc').aliases, ['Beijing Institute of Space System Engineering']);
+  assert.deepEqual(records.get('caep').aliases, ['Ninth Academy']);
+  assert.deepEqual(records.get('caep-902').aliases, ["China Academy of Engineering Physics (CAEP)'s 902 Institute"]);
+  assert.deepEqual(removed, [
+    '"china academy space technology cast" removed from casc (it is cast\'s name)',
+    '"beijing aerospace automatic control institute" removed from casc (it is casc-12th-institute\'s name)',
+  ]);
+});
+
+// The match index reads names without bracketed notes, so this alias is
+// BAMTRI's own name to the list sync and the matcher.
+test("a seed alias that is a listed body's name plus a bracketed note is removed", () => {
+  const records = new Map([['avic', { id: 'avic', name: 'Aviation Industry Corporation of China', aliases: ['Beijing Aeronautical Manufacturing Technology Research Institute (a.k.a. AVIC Institute 625)'], zh: null, zhAliases: [] }]]);
+  const snapshots = { 'us-csl': { entries: [{ key: 'csl:1', name: 'Beijing Aeronautical Manufacturing Technology Research Institute', altNames: ['BAMTRI'], institution: 'bamtri' }] } };
+  resolveNameCollisions(records, { listed: listOnlyNames(snapshots, new Set(records.keys())) });
+  assert.deepEqual(records.get('avic').aliases, []);
 });
 
 test('a ROR match is accepted only when its names agree with the record', () => {

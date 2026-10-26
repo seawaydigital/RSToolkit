@@ -46,7 +46,7 @@ export const GENERIC_WORDS = new Set([
   'institute', 'university', 'college', 'school', 'academy', 'center', 'research', 'science',
   'technology', 'engineering', 'applied', 'physics', 'chemistry', 'mathematics', 'biology',
   'medicine', 'medical', 'laboratory', 'national', 'state', 'key', 'department', 'faculty',
-  'studies', 'development', 'design', 'scientific', 'technical', 'technological', 'aerospace',
+  'studies', 'development', 'design', 'production', 'scientific', 'technical', 'technological', 'aerospace',
   'aviation', 'space', 'electronics', 'electronic', 'information', 'energy', 'nuclear',
   'materials', 'optics', 'mechanics', 'mechanical', 'industrial', 'industry', 'advanced',
   'high', 'new', 'central', 'general', 'main', 'complex', 'organization', 'systems', 'system',

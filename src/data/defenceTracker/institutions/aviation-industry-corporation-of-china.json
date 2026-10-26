@@ -5,9 +5,7 @@
   "zhAliases": [
     "航空工业"
   ],
-  "aliases": [
-    "Beijing Aeronautical Manufacturing Technology Research Institute (a.k.a. AVIC Institute 625)"
-  ],
+  "aliases": [],
   "acronyms": [
     "AVIC"
   ],
@@ -39,6 +37,10 @@
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
     }
   ],
   "seedNotes": {

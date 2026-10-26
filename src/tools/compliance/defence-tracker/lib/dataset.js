@@ -2,7 +2,7 @@
 // module into one rated record set. Institutions known only from an official
 // list get a minimal "listing-only" record here, so they need no file and a
 // batch check never misses them.
-import { hasCjk, normalizePhrase, splitSegments } from './normalize.js';
+import { STOPWORDS, hasCjk, isGenericPhrase, normalizePhrase, segmentTokens, splitSegments } from './normalize.js';
 import { withoutCodes } from './places.js';
 import { LISTS, SNAPSHOT_NAMES } from './constants.js';
 import { rateInstitution } from './rubric.js';
@@ -63,27 +63,48 @@ function preferMixedCase(record, name) {
   addNames(record, [old]);
 }
 
-// A list-only unit named after another record ("Sharif University of
-// Technology, Department of Engineering") is linked to it, and every parent
-// lists its units that are listed in their own right. The unit's listings
-// stay the unit's: the parent still reads "Not listed" for them.
+// A list-only unit named after another record is linked to it, and every
+// parent lists its units that are listed in their own right. The name may set
+// the parent off ("Sharif University of Technology, Department of
+// Engineering") or just start with it ("Aviation Industry Corporation of
+// China 612 Institute"), but not carry it on: "Shahid Beheshti University of
+// Medical Sciences" is another university. The most specific parent wins, so
+// an academy's institute is the academy's unit. The unit's listings stay the
+// unit's: the parent still reads "Not listed" for them.
 function linkListedUnits(records, byId) {
   const byName = new Map();
+  const byFirstWord = new Map();
   for (const r of records) {
     for (const n of [r.name, withoutCodes(r.name)].filter(Boolean)) {
       const key = normalizePhrase(n);
       if (key && !byName.has(key)) byName.set(key, r.id);
+      const words = key.split(' ');
+      if (words.length < 2 || isGenericPhrase(key)) continue;
+      if (!byFirstWord.has(words[0])) byFirstWord.set(words[0], []);
+      byFirstWord.get(words[0]).push({ id: r.id, words });
     }
   }
   const core = (name) => normalizePhrase(withoutCodes(name) ?? name);
+  const sameCountry = (a, b) => !a || !b || a === b;
   for (const r of records) {
     r.units = [];
     if (!r.virtual || r.parent) continue;
+    const candidates = [];
     const parts = splitSegments(r.name);
-    if (parts.length < 2) continue;
-    const parentId = parts.map((p) => byName.get(normalizePhrase(p))).find((id) => id && id !== r.id);
+    if (parts.length > 1) {
+      const key = parts.map(normalizePhrase).find((p) => byName.has(p) && byName.get(p) !== r.id);
+      if (key) candidates.push({ id: byName.get(key), size: key.split(' ').length });
+    }
+    const { kept, rawAfter } = segmentTokens(r.name);
+    for (const { id, words } of byFirstWord.get(kept[0]) ?? []) {
+      const startsWith = words.length < kept.length && words.every((w, i) => w === kept[i]);
+      if (startsWith && id !== r.id && !STOPWORDS.has(rawAfter[words.length - 1]) && sameCountry(r.country, byId.get(id).country)) {
+        candidates.push({ id, size: words.length });
+      }
+    }
+    const best = candidates.reduce((a, b) => (b.size > a.size ? b : a), candidates[0]);
     // "X (CODE)" is X itself under another list's spelling, not a unit of X.
-    r.parent = parentId && core(r.name) !== core(byId.get(parentId).name) ? parentId : null;
+    r.parent = best && core(r.name) !== core(byId.get(best.id).name) ? best.id : null;
   }
   for (const r of records) {
     const parent = r.parent ? byId.get(r.parent) : null;
