@@ -16,30 +16,69 @@
   "type": "military",
   "location": {
     "city": "Nanjing",
-    "province": null,
-    "lat": 32.0748,
-    "lng": 118.8231
+    "province": "Jiangsu",
+    "lat": 32.0478,
+    "lng": 118.8222
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "274e7bd5-0955-427a-b898-c2f16e20445d",
     "nro": "naval-command-college"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Naval Command College in Nanjing as the PLA Navy’s professional education college for mid- and senior-level commanders, which began in 1952 as the naval department of the PLA Military College and took its present name in 1986. Its departments have included campaign and tactics command, information warfare research and training for foreign officers, and it awards master’s and doctoral degrees in military science.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college reports to PLA Navy headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 111–113",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
