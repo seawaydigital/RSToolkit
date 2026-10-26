@@ -3,39 +3,103 @@
   "name": "Institute of NBC Defense",
   "zh": "陆军防化学院",
   "zhAliases": [
-    "中国人民解放军陆军防化学院"
+    "中国人民解放军陆军防化学院",
+    "中国人民解放军防化学院",
+    "中国人民解放军防化指挥工程学院"
   ],
-  "aliases": [],
+  "aliases": [
+    "Army Institute of NBC Defence",
+    "Army Institute of NBC Defense",
+    "PLA Chemical Defense College",
+    "Chemical Defense Command and Engineering College"
+  ],
   "acronyms": [],
   "domains": [],
   "country": "CN",
   "type": "military",
   "location": {
     "city": "Beijing",
-    "province": null,
+    "province": "Beijing",
     "lat": 40.1289,
     "lng": 116.1158
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "92a4bfea-dc48-45f3-9a72-b67ddff89b10",
     "nro": "institute-of-nbc-defense"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Institute of NBC Defence (陆军防化学院) in Beijing’s Changping District as the PLA Army’s school for nuclear, biological and chemical defence. Founded in 1950 as the PLA’s first chemical defence school, it trains NBC command and engineering officers and NCOs, supports chemical weapons compliance work and nuclear emergency response, and its laboratories include one recorded with the Organisation for the Prohibition of Chemical Weapons for synthesising Schedule 1 chemicals and others for nuclear radiation and nuclear explosion monitoring.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The institute reports to PLA Army headquarters; it was under the General Staff Department from 1986 until the 2015 reforms.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "cbrn-countermeasures"
+  ],
+  "subunits": [
+    {
+      "name": "Schedule 1 chemicals synthesis laboratory (10 kg, recorded with the OPCW)",
+      "zh": "国际禁化武组织认可备案的10Kg附表－1化学品合成实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Nuclear Radiation Monitoring Laboratory",
+      "zh": "核辐射监测实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Nuclear emergency response operational and technical support center",
+      "zh": "核应急行动技术支持中心",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 88–91",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
