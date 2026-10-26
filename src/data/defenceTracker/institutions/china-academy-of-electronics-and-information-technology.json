@@ -13,34 +13,85 @@
   ],
   "domains": [],
   "country": "CN",
-  "type": "research-institute",
+  "type": "defence-industry",
   "location": {
     "city": "Beijing",
     "province": "Beijing",
     "lat": 39.9351,
     "lng": 116.1867
   },
-  "supervisors": [],
+  "supervisors": [
+    "China Electronics Technology Group Corporation (CETC)"
+  ],
   "parent": null,
   "ids": {
     "nro": "china-academy-of-electronics-and-information-technology",
     "ror": "03n1t1z47",
     "wikidata": "Q47522487"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "CETC, a state-owned defence-industry group, lists the academy (中国电子科技集团公司电子科学研究院) among its member units, and the US Entity List entry gives it the alias “CETC CAEIT”.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "The US Commerce Department listed it in 2021, finding it implicated in human rights violations and abuses in China’s campaign of repression, mass detention and high-technology surveillance against Uyghurs, Kazakhs and other Muslim minority groups in Xinjiang.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "成员单位网站 (CETC member units)",
+      "publisher": "China Electronics Technology Group Corporation (CETC)",
+      "url": "http://www.cetc.com.cn/zgdk/1593105/1593109/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261003035235/https://www.cetc.com.cn/zgdk/1593105/1593109/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Certain Entities to the Entity List; Revision of Existing Entry on the Entity List; Removal of Entity From the Unverified List; and Addition of Entity to the Military End-User List (86 FR 36496, 12 July 2021)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2021-07-12/html/2021-14656.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130856/https://www.govinfo.gov/content/pkg/FR-2021-07-12/html/2021-14656.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
