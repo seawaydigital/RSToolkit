@@ -24,31 +24,104 @@
   "type": "military",
   "location": {
     "city": "Beijing",
-    "province": "Shanghai",
-    "lat": 39.968,
-    "lng": 116.345
+    "province": "Beijing",
+    "lat": 39.8875,
+    "lng": 116.2972
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Navy"
+  ],
   "parent": null,
   "ids": {
     "misp": "ad8cac73-9be9-4cf2-96c0-ef918d010c95",
     "nro": "naval-research-academy",
     "ror": "02t42bb94"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "Canada’s Named Research Organizations list gives PLA Navy Research Academy and PLA Navy Equipment Academy among the academy’s known aliases. Under its earlier name, the PLA Navy Equipment Research Academy, it described itself on China’s graduate admissions site as the navy’s research unit for the overall development of its weapons and equipment, with sites in Beijing and Shanghai and research on ships, aircraft, missiles, guns, radar, sonar, electronic countermeasures, command and control and underwater weapons.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "The same profile names a national defence science and technology key laboratory for navy weapons and equipment system research, alongside more than 20 military key laboratories for ships, aircraft, weapons and electronic systems.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ],
+      "items": [
+        "Navy Weapons and Equipment System Research National Defence Science and Technology Key Laboratory (海军武器装备体系研究国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Its admissions profile gives its full name as the Chinese People’s Liberation Army Navy Equipment Research Academy and says it works to the Central Military Commission’s five functions for military research institutions: requirements analysis, project oversight, test and evaluation, application of results and specialised research.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons",
+    "advanced-radar"
+  ],
+  "subunits": [
+    {
+      "name": "Navy Weapons and Equipment System Research National Defence Science and Technology Key Laboratory",
+      "zh": "海军武器装备体系研究国防科技重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Naval Research Academy and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "海军装备研究院简介 (Naval Equipment Research Academy: profile, captured September 2017)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education; profile maintained by the academy)",
+      "url": "http://yz.chsi.com.cn/sch/schoolInfo--schId-367831.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20170904211347/http://yz.chsi.com.cn/sch/schoolInfo--schId-367831.dhtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high. Province corrected from Shanghai to Beijing and the map point moved to its Liuliqiao address in Fengtai District."
     }
   ],
   "seedNotes": {
