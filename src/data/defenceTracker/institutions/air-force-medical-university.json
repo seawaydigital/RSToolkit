@@ -28,7 +28,9 @@
     "lat": 34.2668,
     "lng": 108.9919
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Air Force headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "6793d9a5-e423-41d1-a3d6-f28a7757964d",
@@ -36,20 +38,96 @@
     "ror": "00ms48f15",
     "wikidata": "Q5476138"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "Air Force Medical University, the former Fourth Military Medical University, was transferred to the PLA Air Force in 2017 and reports to PLA Air Force headquarters (CASI); it says it works under the leadership of the Central Military Commission and the Air Force Party Committee and puts military medicine for the battlefield first.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university reports to PLA Air Force headquarters and says it works under the leadership of the Central Military Commission and the Air Force Party Committee.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Xijing Hospital (First Affiliated Hospital)",
+      "zh": "西京医院",
+      "kind": "institute"
+    },
+    {
+      "name": "Tangdu Hospital",
+      "zh": "唐都医院",
+      "kind": "institute"
+    },
+    {
+      "name": "Stomatological Hospital",
+      "zh": "口腔医院",
+      "kind": "institute"
+    },
+    {
+      "name": "Air Force 986th Hospital",
+      "zh": "空军第九八六医院",
+      "kind": "institute"
+    },
+    {
+      "name": "Air Force Characteristic Medical Center (Beijing)",
+      "zh": "空军特色医学中心",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About AFMU)",
+      "publisher": "Air Force Medical University",
+      "url": "https://www.fmmu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-25",
+      "archive": {
+        "url": "https://web.archive.org/web/20260929211604/https://www.fmmu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 184–185",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-25"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-25",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-25",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
