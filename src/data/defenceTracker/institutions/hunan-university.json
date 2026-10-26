@@ -20,7 +20,9 @@
     "lat": 28.1797,
     "lng": 112.9413
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education"
+  ],
   "parent": null,
   "ids": {
     "misp": "9e35cf4b-8cf4-481c-b2dc-b800c3e59945",
@@ -28,20 +30,162 @@
     "ror": "05htk5m33",
     "wikidata": "Q649868"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "Hunan University reports one national defence key discipline laboratory, for electric power drive and servo technology, in its College of Electrical and Information Engineering. Founded in 2011, the laboratory says its permanent-magnet drive systems for special vehicles have been applied by the China North Vehicle Research Institute, among others.",
+      "items": [
+        "National Defence Key Discipline Laboratory of Electric Power Drive and Servo Technology (电力驱动与伺服技术国防重点学科实验室)"
+      ],
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "The College of Electrical and Information Engineering reports one defence-specialty discipline (国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "The university runs the National Supercomputing Center in Changsha, which it says operates a new-generation Tianhe supercomputer. In 2015 the US Commerce Department put the centre on the Entity List, finding that the PLA’s National University of Defense Technology had used US-origin processors to build the Tianhe-1A and Tianhe-2 supercomputers at the Changsha, Guangzhou and Tianjin centres, and that these were believed to be used in nuclear explosive activities.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "Its Hunan key laboratory of embedded and network computing says it serves national defence and the defence industry, including aerospace and shipborne systems, and has project partnerships with state groups including China Aerospace, China State Shipbuilding and China Electronics.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s5"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "The university reports an innovation team recognised by the defence-industry regulator SASTIND, and its defence key discipline laboratory lists military supporting-product and defence pre-research projects among its more than 60 projects.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Hunan University is a national key university run directly by the Ministry of Education.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-computing"
+  ],
+  "subunits": [
+    {
+      "name": "National Supercomputing Center in Changsha",
+      "zh": "国家超级计算长沙中心",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "National Defence Key Discipline Laboratory of Electric Power Drive and Servo Technology",
+      "zh": "电力驱动与伺服技术国防重点学科实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Hunan University",
+      "url": "https://www.hnu.edu.cn/hdgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026170055/https://www.hnu.edu.cn/hdgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "学院简介 (About the College of Electrical and Information Engineering)",
+      "publisher": "Hunan University, College of Electrical and Information Engineering",
+      "url": "https://eeit.hnu.edu.cn/xygk/xyjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026170116/https://eeit.hnu.edu.cn/xygk/xyjj.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "电力驱动与伺服技术国防重点学科实验室 (National Defence Key Discipline Laboratory of Electric Power Drive and Servo Technology; page removed in 2023, cited from the August 2022 archived copy)",
+      "publisher": "Hunan University, College of Electrical and Information Engineering",
+      "url": "http://eeit.hnu.edu.cn/info/1170/5577.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20220817082420/http://eeit.hnu.edu.cn/info/1170/5577.htm"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "Addition of Certain Persons to the Entity List; and Removal of Person From the Entity List Based on a Removal Request (80 FR 8524, 18 February 2015)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2015-02-18/html/2015-03321.htm",
+      "lang": "en",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026170227/https://www.govinfo.gov/content/pkg/FR-2015-02-18/html/2015-03321.htm"
+      }
+    },
+    {
+      "id": "s5",
+      "title": "重点实验室简介 (About the laboratory)",
+      "publisher": "Hunan University, Embedded and Network Computing Key Laboratory of Hunan Province",
+      "url": "https://esnl.hnu.edu.cn/info/1032/2484.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026170253/https://esnl.hnu.edu.cn/info/1032/2484.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
