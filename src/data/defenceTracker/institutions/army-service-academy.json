@@ -6,7 +6,8 @@
     "陆军勤务学院"
   ],
   "aliases": [
-    "PLA Army Service Academy"
+    "PLA Army Service Academy",
+    "Army Logistic University"
   ],
   "acronyms": [],
   "domains": [],
@@ -18,26 +19,65 @@
     "lat": 30.5104,
     "lng": 114.4079
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Army headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "e9e239f5-94c2-46ec-841b-21a0f64082b7",
     "nro": "army-service-academy"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Army Service Academy (陆军勤务学院, which the PLA translates as Army Logistic University), formed in August 2017 from the Logistic Engineering University and the Military Economics College, as a PLA Army academy that trains logistics specialists in fuel, quartermaster, military infrastructure and procurement services, with its main campus in Chongqing.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The academy has reported to PLA Army headquarters since August 2017.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 100–101",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      },
+      "accessed": "2026-10-26"
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-26",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-26",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
