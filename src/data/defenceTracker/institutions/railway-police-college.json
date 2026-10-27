@@ -9,7 +9,8 @@
   "aliases": [
     "Ministry of Public Security Railway Police College",
     "MPS Railway Police College",
-    "Zhengzhou Police University"
+    "Zhengzhou Police University",
+    "Zhengzhou Police College"
   ],
   "acronyms": [],
   "domains": [
@@ -23,7 +24,9 @@
     "lat": 34.7901,
     "lng": 113.6454
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Public Security"
+  ],
   "parent": null,
   "ids": {
     "misp": "d6149587-7946-41c9-9d1e-6bb8cb575cd7",
@@ -31,20 +34,59 @@
     "ror": "03pnb3530",
     "wikidata": "Q15914809"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "The college, renamed Zhengzhou Police College (郑州警察学院) in 2023, describes itself as a police university run directly by China’s Ministry of Public Security that trains police for the railway and urban rail transit systems. Founded in Beijing in 1950, it moved to Zhengzhou in 1980 and passed from the Ministry of Railways to the Ministry of Public Security in 2000; it has a co-construction agreement with the ministry’s railway public security bureau, teaches majors including cyber security and law enforcement and police command and tactics, and hosts a national railway security and counter-terrorism forum.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Nongye Road campus (Jinshui District)",
+      "zh": "农业路校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Longhu campus",
+      "zh": "龙湖校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "概况 (About the college)",
+      "publisher": "Zhengzhou Police College (formerly Railway Police College)",
+      "url": "http://www.rpc.edu.cn/xxgk/gk.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251006201759/http://www.rpc.edu.cn/xxgk/gk.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Its 2023 name, Zhengzhou Police College, added as an alias."
     }
   ],
   "seedNotes": {
