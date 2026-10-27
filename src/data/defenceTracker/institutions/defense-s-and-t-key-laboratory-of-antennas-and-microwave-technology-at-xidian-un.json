@@ -1,0 +1,96 @@
+{
+  "id": "defense-s-and-t-key-laboratory-of-antennas-and-microwave-technology-at-xidian-un",
+  "name": "Defense S&T Key Laboratory of Antennas and Microwave Technology at Xidian University",
+  "zh": "天线与微波技术国防科技重点实验室",
+  "zhAliases": [],
+  "aliases": [
+    "Defense S&T Key Laboratory of Antennas and Microwave Technology",
+    "National Key Laboratory of Antenna and Microwave Technology",
+    "National Key Laboratory of Science and Technology on Antennas and Microwaves",
+    "Science and Technology on Antenna and Microwave Laboratory"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Xidian University (host, with CETC’s 14th and 38th Research Institutes)"
+  ],
+  "parent": "xidian-university",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies it as the national defence science and technology key laboratory for antennas and microwave technology, founded in 1992 and run by Xidian University with CETC’s 14th Research Institute in Nanjing, which works on antennas and microwave technology mainly for radars; it was reorganised in 2024 as the National Key Laboratory of Radar Detection and Perception (雷达探测感知全国重点实验室), with CETC’s 38th Research Institute as a third partner.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Antennas and Microwave Technology (天线与微波技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that the laboratory is run jointly with CETC’s 14th Research Institute (the Nanjing Research Institute of Electronic Technology, which is on the US Entity List) and, since 2024, CETC’s 38th Research Institute, with branches in Nanjing, Xi’an and Hefei.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "CASI reports that 230 of the 251 projects it completed in 2011–2015, 84 percent of their funding, were related to national defence.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-radar"
+  ],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 79–86 (Defense S&T Key Laboratory of Antennas and Microwave Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
