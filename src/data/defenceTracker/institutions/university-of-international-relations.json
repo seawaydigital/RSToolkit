@@ -10,7 +10,10 @@
   "acronyms": [
     "UIR"
   ],
-  "domains": [],
+  "domains": [
+    "uir.edu.cn",
+    "uir.cn"
+  ],
   "country": "CN",
   "type": "security",
   "location": {
@@ -19,7 +22,10 @@
     "lat": 40.0025,
     "lng": 116.2799
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of State Security (per a 1997 Zhejiang provincial notice)",
+    "Ministry of Education (its listed supervising department)"
+  ],
   "parent": null,
   "ids": {
     "misp": "c097fa30-2777-4fbc-91e8-b8dd2255c702",
@@ -27,20 +33,84 @@
     "ror": "04r72en83",
     "wikidata": "Q2492836"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "A 1997 notice from Zhejiang’s provincial personnel, public security and state security departments names the University of International Relations, with Jiangnan Social University, as a school belonging to the Ministry of State Security (MSS), and sets out how its graduates are recruited as police officers into the province’s public security and state security organs.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "China’s official graduate admissions website lists the Ministry of Education as the university’s supervising department, and the university’s own website describes it as a school under that ministry, while the 1997 Zhejiang notice names it as belonging to the MSS.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "topics": [
+    "cyber-security"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "浙江省人事厅、公安厅、国家安全厅关于从公安、安全系统院校应届毕业生中录用人民警察有关问题的通知 (浙人干〔1997〕122号; Zhejiang notice on recruiting police officers from graduates of public security and state security schools)",
+      "publisher": "Zhejiang Provincial Departments of Personnel, Public Security and State Security (published by the Ningbo Human Resources and Social Security Bureau)",
+      "url": "http://www.nbhrss.gov.cn/rsgl/klytp/zcfg/200806/t20080611_54448.html",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20170705021922/http://www.nbhrss.gov.cn/rsgl/klytp/zcfg/200806/t20080611_54448.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "国际关系学院：院校简介 (University of International Relations: unit page giving its supervising department and graduate programmes)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education)",
+      "url": "https://yz.chsi.com.cn/sch/schoolInfo--schId-367871,categoryId-440486.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027172855/https://yz.chsi.com.cn/sch/schoolInfo--schId-367871,categoryId-440486.dhtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "学校历史 (History of the university)",
+      "publisher": "University of International Relations",
+      "url": "https://www.uir.edu.cn/xxgk/xxls.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027172927/https://www.uir.edu.cn/xxgk/xxls.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
