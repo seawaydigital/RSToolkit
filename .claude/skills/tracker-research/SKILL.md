@@ -69,6 +69,10 @@ Also check and correct, with sources: `type`, `supervisors`, `zh`, aliases (a gr
 
 `{ "id": "s1", "title", "publisher", "url", "accessed": "YYYY-MM-DD", "lang": "en" | "zh", "archive" }`. `archive` is `{ "url": "https://web.archive.org/web/…" }` or `{ "unavailable": "<reason>" }`.
 
+## Helpers
+
+`scripts/tracker/research/` has small tools for these steps; its README lists them. `patch-record.mjs` applies each edit as a JSON patch (fields replace; `+sources` and `+history` append) and refuses a record that fails the schema. `new-record.mjs` creates the file for a list-only record; keep the snapshot's id, and set `parent` to the host when the list names the body "at" another institution. `rating.mjs` prints the rating, rule and reasons with the review-note counts. `try-match.mjs` tries a name and its lookalikes in the batch check (`--search` for the search box). `html-text.py` prints the visible text of a page or capture piped to it, to check the cited passage; `pdf-text.py` reads a PDF piped on stdin without saving it; `casi-entry.py` reads one entry of CASI's key-lab directory with its printed pages, or finds every page naming an institution. Run the Node helpers with `node` directly: in PowerShell 5.1, `npm run … -- --flag` drops the flags.
+
 ## Finishing a profile
 
 The schema rejects evidence on an unverified record, so work in this order:
