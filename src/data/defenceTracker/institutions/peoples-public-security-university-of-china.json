@@ -5,7 +5,8 @@
   "zhAliases": [],
   "aliases": [
     "Chinese People Public Security University",
-    "China People's Public Security University"
+    "China People's Public Security University",
+    "Chinese People's Public Security University"
   ],
   "acronyms": [
     "PPSUC",
@@ -22,7 +23,9 @@
     "lat": 39.8991,
     "lng": 116.3315
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Public Security"
+  ],
   "parent": null,
   "ids": {
     "misp": "9a21e65c-b18f-46ac-85c1-faf0535fa451",
@@ -30,20 +33,77 @@
     "ror": "05twya590",
     "wikidata": "Q5100590"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "PPSUC, in Beijing, describes itself as a university run directly by China’s Ministry of Public Security and the ministry’s senior police officers’ college. Founded in 1948 as a Communist Party security cadre training class, it trains police at every degree level in subjects including political security protection, counter-terrorism policing and data policing, runs a national security college and a military security college that trains military security cadres, and hosts national engineering laboratories for computer virus prevention and for big-data social risk monitoring.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "cyber-security",
+    "data-science-big-data"
+  ],
+  "subunits": [
+    {
+      "name": "Muxidi campus (Xicheng District)",
+      "zh": "木樨地校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Tuanhe campus",
+      "zh": "团河校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Military Security College (training for military security cadres)",
+      "zh": "军队保卫学院",
+      "kind": "institute"
+    },
+    {
+      "name": "National Engineering Laboratory for Social Security Risk Perception and Prevention Big Data Application",
+      "zh": "社会安全风险感知与防控大数据应用国家工程实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "National Engineering Laboratory for Computer Virus Prevention and Control Technology",
+      "zh": "计算机病毒防治技术国家工程实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "People’s Public Security University of China",
+      "url": "https://www.ppsuc.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251123041213/https://www.ppsuc.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
