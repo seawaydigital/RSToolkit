@@ -1,0 +1,123 @@
+{
+  "id": "atr-defense-s-and-t-key-laboratory-of-intelligent-information-processing-at-shen",
+  "name": "ATR Defense S&T Key Laboratory of Intelligent Information Processing at Shenzhen University",
+  "zh": "ATR国防科技重点实验室智能信息处理分室",
+  "zhAliases": [
+    "深圳大学ATR国防科技重点实验室",
+    "ATR国防科技重点实验室智能信息处理实验室",
+    "深圳大学智能信息研究所"
+  ],
+  "aliases": [
+    "ATR Key Laboratory",
+    "National Key Laboratory of Automatic Target Recognition",
+    "Defense S&T Key Laboratory of Automatic Target Recognition"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Shenzhen",
+    "province": "Guangdong",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Shenzhen University (host)"
+  ],
+  "parent": "shenzhen-university",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "The laboratory’s website presents it as Shenzhen University’s ATR national defence science and technology key laboratory, founded in April 2001, with nine specialist labs working on sensor networks, sensor information fusion and security, infrared, optical and remote-sensing image processing, and terahertz imaging. CASI describes it as the co-equal Shenzhen branch of the national defence key laboratory for precision guidance and automatic target recognition, which develops target recognition for radar and missile guidance.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Precision Guidance and Automatic Target Recognition, Shenzhen branch (精确制导自动目标识别国防科技重点实验室; ATR国防科技重点实验室智能信息处理分室)"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "CASI reports that the branch was set up as a joint project of the PLA General Armament Department and the Shenzhen government, overseen by that department (now the Central Military Commission’s Equipment Development Department) and the defence-industry regulator (now SASTIND), and that the laboratory’s headquarters is at the PLA’s National University of Defense Technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "Its website reports nearly 100 projects, national defence science and technology projects among them, with more than 120 million yuan in funding, and two first-class All-Army science and technology progress awards; by 2026 the site presented the laboratory as Shenzhen University’s Institute of Intelligent Information (深圳大学智能信息研究所).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-radar",
+    "imaging-optical-sensors"
+  ],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 371–376 (Defense S&T Key Laboratory of Precision Guidance and Automatic Target Recognition)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "首页简介 (Laboratory introduction on the laboratory’s website, captured April 2021)",
+      "publisher": "ATR National Defence Science and Technology Key Laboratory, Shenzhen University",
+      "url": "https://it.szu.edu.cn/gfkjzdsys/syjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20210415164952/https://it.szu.edu.cn/gfkjzdsys/syjj.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "实验室概况 (Laboratory overview on the laboratory’s website, captured March 2026)",
+      "publisher": "ATR National Defence Science and Technology Key Laboratory, Shenzhen University",
+      "url": "https://it.szu.edu.cn/gfkjzdsys/sysgk/sysgk.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260317161302/https://it.szu.edu.cn/gfkjzdsys/sysgk/sysgk.htm"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
