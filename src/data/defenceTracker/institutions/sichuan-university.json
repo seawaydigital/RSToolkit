@@ -20,7 +20,9 @@
     "lat": 30.6335,
     "lng": 104.0816
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education"
+  ],
   "parent": null,
   "ids": {
     "misp": "3b3314c1-e6a7-4467-94f2-a91b8216010f",
@@ -28,20 +30,125 @@
     "ror": "011ashp19",
     "wikidata": "Q2281517"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "SCU’s visual synthesis graphics and image technology key discipline laboratory says it was approved in July 2007 by the national defence science and technology commission (which its page writes as “GF科工委”) and works under the guidance of the defence science, technology and industry bureau (SASTIND) and the Ministry of Education.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ],
+      "items": [
+        "Visual Synthesis Graphics and Image Technology Key Discipline Laboratory (视觉合成图形图像技术重点学科实验室)"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "SCU’s physics school says it cooperates comprehensively with the China Academy of Engineering Physics (CAEP) and the nuclear industry’s Southwestern Institute of Physics, set up two institutes jointly with CAEP (high-temperature and high-pressure physics in 1984, atomic and molecular engineering in 1985), and uses its high energy density physics and radiation physics key laboratories to support key defence problems. The US Commerce Department had listed the university as an alias of CAEP on the Entity List until 2012, when it gave it an entry of its own.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "SCU describes itself as a national key university directly under the Ministry of Education.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Visual Synthesis Graphics and Image Technology Key Discipline Laboratory",
+      "zh": "视觉合成图形图像技术重点学科实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Institute of High Temperature and High Pressure Physics (set up with CAEP in 1984)",
+      "zh": "高温高压物理研究所",
+      "kind": "institute"
+    },
+    {
+      "name": "Institute of Atomic and Molecular Engineering (set up with CAEP in 1985)",
+      "zh": "原子与分子工程研究所",
+      "kind": "institute"
+    },
+    {
+      "name": "Key Laboratory of High Energy Density Physics and Technology (Ministry of Education)",
+      "zh": "高能量密度物理及技术教育部重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Sichuan University",
+      "url": "https://www.scu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260920084333/https://www.scu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "实验室简介 (About the laboratory)",
+      "publisher": "Sichuan University, Visual Synthesis Graphics and Image Technology Key Discipline Laboratory",
+      "url": "https://vs.scu.edu.cn/sysjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027154905/https://vs.scu.edu.cn/sysjj.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "四川大学学位授权点建设2024年年度报告：物理学 (Sichuan University degree programme report for 2024: physics), p. 2",
+      "publisher": "Sichuan University, School of Physics",
+      "url": "https://physics.scu.edu.cn/__local/C/C4/65/6BE9BE03DF8D0380A3EE655760A_72C9F095_622A9.pdf?e=.pdf",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027155030/https://physics.scu.edu.cn/__local/C/C4/65/6BE9BE03DF8D0380A3EE655760A_72C9F095_622A9.pdf?e=.pdf"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "Addition of Certain Persons to the Entity List; Removal of Person From the Entity List Based on Removal Request; and Implementation of Entity List Annual Review Changes (77 FR 58006, 19 September 2012)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2012-09-19/html/2012-22952.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027155140/https://www.govinfo.gov/content/pkg/FR-2012-09-19/html/2012-22952.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
