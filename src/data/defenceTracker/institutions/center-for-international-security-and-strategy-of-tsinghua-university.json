@@ -1,0 +1,70 @@
+{
+  "id": "center-for-international-security-and-strategy-of-tsinghua-university",
+  "name": "Center for International Security and Strategy of Tsinghua University",
+  "zh": "清华大学战略与安全研究中心",
+  "zhAliases": [],
+  "aliases": [
+    "Center for International Security and Strategy"
+  ],
+  "acronyms": [
+    "CISS"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Tsinghua University (host)"
+  ],
+  "parent": "tsinghua-university",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "The centre (清华大学战略与安全研究中心) is a Tsinghua University think tank on international strategy and security, and describes its work as serving China’s diplomacy and security through policy advice, research, international communication and training.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "清华大学战略与安全研究中心简介 (About the Center)",
+      "publisher": "Center for International Security and Strategy, Tsinghua University",
+      "url": "https://ciss.tsinghua.edu.cn/column/zxjj",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027182312/https://ciss.tsinghua.edu.cn/column/zxjj"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
