@@ -12,7 +12,9 @@
     "Chinese People's Armed Police Force Non commissioned Officer School",
     "Noncommissioned Officer Academy of PAP",
     "PAP Non-commissioned Officer School",
-    "People's Armed Police - Non-commissioned Officer School"
+    "People's Armed Police - Non-commissioned Officer School",
+    "PAP NCO School",
+    "PAP Hangzhou NCO School"
   ],
   "acronyms": [],
   "domains": [],
@@ -21,10 +23,12 @@
   "location": {
     "city": "Hangzhou",
     "province": "Zhejiang",
-    "lat": 30.305,
-    "lng": 120.218
+    "lat": 30.088,
+    "lng": 119.888
   },
-  "supervisors": [],
+  "supervisors": [
+    "People’s Armed Police"
+  ],
   "parent": null,
   "ids": {
     "misp": "c276fe26-7059-48e5-abc4-9c2c26a1323a",
@@ -32,20 +36,86 @@
     "ror": "054mp6682",
     "wikidata": "Q10872907"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "Zhejiang University of Science and Technology, announcing a cooperation agreement with the PAP NCO School (武警士官学校) in May 2017, described it as Zhejiang’s only military academy and a People’s Armed Police institution of higher education that trains PAP command cadres; the agreement covers resource sharing and co-operation in teaching, research and training.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "A 2014 Zhejiang tender notice for a new campus in Fuyang for the PAP Hangzhou NCO School shows the project approved and supervised by the PAP’s logistics department; NDU notes that the PAP has answered to the Central Military Commission alone since the 2017–2018 reforms.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Fuyang campus (Fuyang higher-education park, Hangzhou)",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校与中国人民武装警察部队士官学校签订全面共建合作协议 (ZUST signs a comprehensive co-operation agreement with the PAP NCO School; May 2017)",
+      "publisher": "Zhejiang University of Science and Technology (university news site)",
+      "url": "http://news.zust.edu.cn/html/yaowenjujiao/ttxw/18512.html",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20170719100930/http://news.zust.edu.cn/html/yaowenjujiao/ttxw/18512.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), p. 4",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "武警杭州士官学校新校区建设项目 (PAP Hangzhou NCO School new-campus construction project: tender notice, April 2014)",
+      "publisher": "Zhejiang Provincial Development and Reform Commission",
+      "url": "http://www.zjdpc.gov.cn/art/2014/4/28/art_659_647135.html",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20150323041935/http://www.zjdpc.gov.cn/art/2014/4/28/art_659_647135.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Map point moved to its Fuyang campus area."
     }
   ],
   "seedNotes": {
