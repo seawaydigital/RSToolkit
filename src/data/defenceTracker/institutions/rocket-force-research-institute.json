@@ -25,30 +25,104 @@
   "location": {
     "city": "Beijing",
     "province": "Beijing",
-    "lat": 39.985,
-    "lng": 116.356
+    "lat": 40.0691,
+    "lng": 116.2214
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Rocket Force Equipment Department"
+  ],
   "parent": null,
   "ids": {
     "misp": "f0cdd426-c1df-4487-9440-6999837994f0",
     "nro": "rocket-force-research-institute",
     "ror": "03ahaae75"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the PLA Rocket Force Research Academy in Beijing, formed in 2003 as the force’s Equipment Research Academy from missile research institutes and key laboratories, as the Rocket Force’s principal weapons and equipment research institution, overseeing at least six research institutes and seven key laboratories, an institute that designs Rocket Force facilities including underground tunnels and launch sites, and a strategic research centre. Canada’s Named Research Organizations list gives Second Artillery Equipment Academy and Rocket Force Equipment Academy among its known aliases.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that as of 2018 the academy had civil-military fusion agreements with more than ten academic and fifty industrial institutions, including Tsinghua University, Peking University, NUDT and the state aerospace groups CASC and CASIC.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASI places the academy under the Rocket Force’s Equipment Department.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "Institute of Engineering Design (Rocket Force facilities)",
+      "zh": "火箭军研究院工程设计研究所",
+      "kind": "institute"
+    },
+    {
+      "name": "PLA Rocket Force Strategic Research Center",
+      "zh": "火箭军战略研究中心",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "PLA Rocket Force Organization (October 2022), pp. 39–40",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/PLARF/2022-10-24%20PLARF%20Organization_1.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261017100722/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/PLARF/2022-10-24%20PLARF%20Organization_1.pdf?ver=1L6s2SipIsssJ1pjNlyPQQ%3D%3D"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Named Research Organizations (entry for the Rocket Force Research Institute and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Map point moved to its Beiqing Road address given by CASI."
     }
   ],
   "seedNotes": {
