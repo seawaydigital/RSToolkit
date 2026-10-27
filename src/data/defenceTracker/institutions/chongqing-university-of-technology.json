@@ -20,27 +20,66 @@
     "lat": 29.458007994699376,
     "lng": 106.52897993005945
   },
-  "supervisors": [],
+  "supervisors": [
+    "Chongqing Municipal Government"
+  ],
   "parent": null,
   "ids": {
     "misp": "4bbfe343-3c85-4c34-a9b2-204e30ffe09d",
     "ror": "04vgbd477",
     "wikidata": "Q15913567"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "Chongqing University of Technology reports strategic partnerships with the China Academy of Ordnance Science (中国兵器科学研究院) and with Beijing Institute of Technology, Harbin Institute of Technology and Northwestern Polytechnical University, and close cooperation, including 24 joint laboratories and research centres, with companies such as the state ordnance groups China South Industries Group and NORINCO.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1940 as the 11th Technical School of the Nationalist government’s Ordnance Department, it describes itself as one of the ordnance industry’s former “seven sons” (兵工七子) universities; it is now a key university of Chongqing municipality.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (University profile, updated November 2022; the site now blocks automated access, so it was read from the 2023 archived copy)",
+      "publisher": "Chongqing University of Technology",
+      "url": "http://www.cqut.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20230422083352/http://www.cqut.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
