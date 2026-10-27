@@ -1,0 +1,71 @@
+{
+  "id": "army-service-arms-university",
+  "name": "Army Service Arms University",
+  "zh": "中国人民解放军陆军兵种大学",
+  "zhAliases": [
+    "陆军兵种大学"
+  ],
+  "aliases": [
+    "Army Branches University",
+    "Army Combat Arms University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Hefei",
+    "province": "Anhui",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "PLA Army"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "China’s Ministry of National Defense announced in May 2025 that the Central Military Commission had formed the PLA Army Service Arms University from two PLA Army academies, the Army Academy of Armored Forces and the Army Academy of Artillery and Air Defense, with its headquarters in Hefei, Anhui, as a higher-education institution that admits high-school graduates.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "中央军委决定调整组建3所军队院校 (The Central Military Commission decides to form three military academies; Ministry of National Defense spokesperson’s statement, 15 May 2025)",
+      "publisher": "Xinhua News Agency (from the Ministry of National Defense website)",
+      "url": "https://www.news.cn/20250515/5ae2d98a526e4ba2a1880e8fab77fc24/c.html",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027174123/https://www.news.cn/20250515/5ae2d98a526e4ba2a1880e8fab77fc24/c.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
