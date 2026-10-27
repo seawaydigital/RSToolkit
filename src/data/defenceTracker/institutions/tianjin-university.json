@@ -28,20 +28,74 @@
     "ror": "012tb2g32",
     "wikidata": "Q2031560"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "misconduct",
+      "summary": "The US Commerce Department added Tianjin University to the Entity List in December 2020, finding reasonable cause to believe that researchers, working with the university through its College of Precision Instruments and Optoelectronic Engineering and with two companies, systematically committed more than a dozen thefts of trade secrets from US corporations. Five of them had been indicted in 2015 on charges including conspiracy to commit economic espionage, and the indictment said the technology was to be used in China for civilian and military products.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI’s directory of China’s defence key laboratories reports that NORINCO’s 70th Research Institute, which hosts the national defence key laboratory for diesel engine booster technology, signed an agreement with Tianjin University in 2020 to cooperate in research, training and resource sharing, after jointly developing diesel engine technologies with it since 2012.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "College of Precision Instruments and Optoelectronic Engineering",
+      "zh": "精密仪器与光电子工程学院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Entities to the Entity List, Revision of Entry on the Entity List, and Removal of Entities From the Entity List (85 FR 83416, 22 December 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027171558/https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 144–148 (Defense S&T Key Laboratory of Diesel Engine Booster Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
