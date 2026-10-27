@@ -3,7 +3,8 @@
   "name": "Chinese Academy of Engineering Physics",
   "zh": "中国工程物理研究院",
   "zhAliases": [
-    "九院"
+    "九院",
+    "中物院"
   ],
   "aliases": [
     "China Academy of Engineering Physics",
@@ -124,6 +125,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated Very high. HPSTAR’s Chinese name and acronym moved to its own record."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added its short Chinese name 中物院, which its own website uses."
     }
   ],
   "seedNotes": {

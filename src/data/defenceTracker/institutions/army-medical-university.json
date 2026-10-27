@@ -4,7 +4,8 @@
   "zh": "中国人民解放军陆军军医大学",
   "zhAliases": [
     "中国人民解放军第三军医大学",
-    "陆军军医大学"
+    "陆军军医大学",
+    "第三军医大学"
   ],
   "aliases": [
     "Third Military Medical University"
@@ -96,7 +97,7 @@
   "sources": [
     {
       "id": "s1",
-      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 93–95",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 93–95, 135",
       "publisher": "China Aerospace Studies Institute, US Air Force Air University",
       "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
       "lang": "en",
@@ -131,6 +132,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added its former name 第三军医大学 (Third Military Medical University) for batch-check matching."
     }
   ],
   "seedNotes": {

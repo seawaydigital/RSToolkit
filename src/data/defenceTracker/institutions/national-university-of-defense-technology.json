@@ -6,7 +6,8 @@
     "并行与分布处理国家重点实验室",
     "中国人民解放军国防科学技术大学",
     "国防科学技术大学",
-    "国防科大"
+    "国防科大",
+    "国防科技大学"
   ],
   "aliases": [
     "Changsha Institute of Technology",
@@ -140,6 +141,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added its short Chinese name 国防科技大学 for batch-check matching."
     }
   ],
   "seedNotes": {

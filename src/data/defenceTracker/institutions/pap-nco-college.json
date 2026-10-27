@@ -4,7 +4,8 @@
   "zh": "中国人民武装警察部队士官学校",
   "zhAliases": [
     "武警士官学校",
-    "中国人民武装警察部队杭州士官学校"
+    "中国人民武装警察部队杭州士官学校",
+    "武警杭州士官学校"
   ],
   "aliases": [
     "People's Armed Police NCO College",
@@ -116,6 +117,10 @@
     {
       "date": "2026-10-27",
       "change": "Verified; rated Very high. Map point moved to its Fuyang campus area."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added its short Chinese name 武警杭州士官学校 for batch-check matching."
     }
   ],
   "seedNotes": {

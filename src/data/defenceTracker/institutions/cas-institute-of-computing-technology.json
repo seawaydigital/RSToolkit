@@ -2,7 +2,11 @@
   "id": "cas-institute-of-computing-technology",
   "name": "Chinese Academy of Sciences Institute of Computing Technology",
   "zh": "中国科学院计算技术研究所",
-  "zhAliases": [],
+  "zhAliases": [
+    "中科院计算技术研究所",
+    "中科院计算所",
+    "中国科学院计算所"
+  ],
   "aliases": [
     "Institute of Computing Technology Chinese Academy of Sciences",
     "Institute of Computing Technology",
@@ -88,6 +92,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added the short Chinese names it goes by (计算所, with 中科院 or 中国科学院) for batch-check matching."
     }
   ],
   "seedNotes": null

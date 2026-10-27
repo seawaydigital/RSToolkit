@@ -3,7 +3,8 @@
   "name": "Dalian Naval Academy",
   "zh": "中国人民解放军海军大连舰艇学院",
   "zhAliases": [
-    "海军大连舰艇学院"
+    "海军大连舰艇学院",
+    "大连舰艇学院"
   ],
   "aliases": [
     "PLA Dalian Naval Academy",
@@ -105,6 +106,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Added its short Chinese name 大连舰艇学院 for batch-check matching."
     }
   ],
   "seedNotes": {
