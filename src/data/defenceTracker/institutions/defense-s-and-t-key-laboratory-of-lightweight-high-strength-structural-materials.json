@@ -1,0 +1,86 @@
+{
+  "id": "defense-s-and-t-key-laboratory-of-lightweight-high-strength-structural-materials",
+  "name": "Defense S&T Key Laboratory of Lightweight, High-strength Structural Materials at Central South University",
+  "zh": "轻质高强结构材料国防科技重点实验室",
+  "zhAliases": [
+    "轻质高强结构材料国家级重点实验室"
+  ],
+  "aliases": [
+    "State Key Laboratory for Light Weight and High Strength Structural Materials",
+    "National Key Laboratory of Science and Technology for National Defence on High-strength Lightweight Structural Materials"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Changsha",
+    "province": "Hunan",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Central South University (host; its Powder Metallurgy Research Institute)"
+  ],
+  "parent": "central-south-university",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies it as the national defence science and technology key laboratory for lightweight, high-strength structural materials, set up in 2005 under Central South University’s Powder Metallurgy Research Institute, which researches lightweight structural materials for aviation and aerospace; the institute’s lightweight alloys are used in aviation, aerospace, weapons, shipbuilding and the nuclear industry.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Lightweight, High-strength Structural Materials (轻质高强结构材料国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that from 2013 to 2019 the laboratory co-hosted a high-level forum on aerospace engineering and high-performance materials, often with CASC’s China Academy of Space Technology and its 703rd Research Institute among the co-hosts.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-materials-manufacturing"
+  ],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 286–288 (Defense S&T Key Laboratory of Lightweight, High-strength Structural Materials)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
