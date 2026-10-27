@@ -10,7 +10,8 @@
     "The People’s Armed Police College China",
     "The Chinese People’s Armed Police Forces Academy",
     "The People's Armed Police College China",
-    "The Chinese People's Armed Police Forces Academy"
+    "The Chinese People's Armed Police Forces Academy",
+    "PAP Command Academy"
   ],
   "acronyms": [],
   "domains": [],
@@ -18,30 +19,94 @@
   "type": "military",
   "location": {
     "city": "Tianjin",
-    "province": null,
+    "province": "Tianjin",
     "lat": 39.1459,
     "lng": 117.2518
   },
-  "supervisors": [],
+  "supervisors": [
+    "People’s Armed Police"
+  ],
   "parent": null,
   "ids": {
     "misp": "24db4c02-d7c8-4361-86b6-1276ac82ea34",
     "nro": "peoples-armed-police-command-college"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The PAP Command College in Tianjin describes itself as the People’s Armed Police’s college for mid-level command cadres, training regiment-level commanders, political and staff officers and instructors and awarding master’s degrees in military command, political work, management and training; it traces its history to a 1951 cadre school of the Central Military Commission’s public security forces and says more than 65% of its graduates have commanded exercises, emergency response, counter-terrorism or disaster-relief operations. NDU’s study of the PAP lists it among the force’s academies.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college gives its grade as corps leader, and China’s graduate admissions site names the PLA as its supervising department; NDU notes that the PAP has answered to the Central Military Commission alone since the 2017–2018 reforms.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "武警指挥学院：学校简介 (PAP Command College: profile, captured August 2017)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education; profile maintained by the college)",
+      "url": "http://yz.chsi.com.cn/sch/schoolInfo--schId-688912256.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20170831002056/http://yz.chsi.com.cn/sch/schoolInfo--schId-688912256.dhtml"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "武警指挥学院 (unit page giving its location and supervising department, captured October 2025)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education)",
+      "url": "https://yz.chsi.com.cn/sch/schoolInfo--schId-688912256.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251009002829/https://yz.chsi.com.cn/sch/schoolInfo--schId-688912256.dhtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), pp. 4, 32",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
