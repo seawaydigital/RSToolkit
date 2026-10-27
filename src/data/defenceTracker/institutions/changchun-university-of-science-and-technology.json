@@ -2,7 +2,9 @@
   "id": "changchun-university-of-science-and-technology",
   "name": "Changchun University of Science and Technology",
   "zh": "长春理工大学",
-  "zhAliases": [],
+  "zhAliases": [
+    "长春光学精密机械学院"
+  ],
   "aliases": [
     "Changchun Institute of Optics and Fine Mechanics"
   ],
@@ -17,30 +19,121 @@
   "location": {
     "city": "Changchun",
     "province": "Jilin",
-    "lat": 43.817071,
-    "lng": 125.32354399999997
+    "lat": 43.8341,
+    "lng": 125.3068
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jilin Provincial Government (co-built with SASTIND and Changchun city)"
+  ],
   "parent": null,
   "ids": {
     "misp": "feaf828e-6fc9-4a49-8642-1f30b2516bf9",
     "ror": "007mntk44",
     "wikidata": "Q1009991"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Changchun University of Science and Technology describes itself as co-built by Jilin Province, the defence-industry regulator SASTIND and Changchun city, and as a university with distinctive optoelectronic and national defence characteristics.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "Its list of research institutions names a national defence key discipline laboratory for space-ground laser communication technology and its national-level key laboratory for high-power semiconductor lasers, which CASI identifies as a national defence S&T key laboratory whose lasers have been used in guidance systems and smart munitions, including a guidance transmitter for a PLA main battle tank system.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of High-Power Semiconductor Lasers (高功率半导体激光国防科技重点实验室)",
+        "Space-Ground Laser Communication Technology Defence Key Discipline Laboratory (空地激光通信技术国防重点学科实验室)"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "Its profile reports five defence-specialty disciplines (国防特色学科) and two national defence science and technology innovation teams, and it runs a national defence science and technology research institute and college directly under the university.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1958 by the Chinese Academy of Sciences as the Changchun Institute of Optics and Fine Mechanics (长春光学精密机械学院), it was later run by the National Defence Science and Technology Commission, the ordnance ministry (五机部) and its successors up to the China Ordnance Industry Corporation, then passed to Jilin’s management in 1999 under co-construction with the defence-industry commission; it took its current name in 2002.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-communications",
+    "advanced-weapons"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (University profile)",
+      "publisher": "Changchun University of Science and Technology",
+      "url": "https://www.cust.edu.cn/xxgk2026/xxjj2026/index.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027182630/https://www.cust.edu.cn/xxgk2026/xxjj2026/index.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "科研机构 (Research institutions)",
+      "publisher": "Changchun University of Science and Technology",
+      "url": "https://www.cust.edu.cn/xxgk2026/jgsz2026/kyjg2026/index.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027182803/https://www.cust.edu.cn/xxgk2026/jgsz2026/kyjg2026/index.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 230–233 (Defense S&T Key Laboratory of High-Power Semiconductor Lasers)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Map point moved from the city centre to its East Campus on Weixing Road."
     }
   ],
   "seedNotes": {
