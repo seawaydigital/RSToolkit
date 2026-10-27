@@ -21,7 +21,9 @@
     "lat": 34.3303,
     "lng": 109.1371
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA (supervising department named on China’s graduate admissions site)"
+  ],
   "parent": null,
   "ids": {
     "misp": "8c7bc46f-6ed9-4170-a0ed-ec25a7c50dbf",
@@ -29,20 +31,92 @@
     "ror": "04svrh266",
     "wikidata": "Q30274080"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "China’s graduate admissions site lists the Northwest Institute of Nuclear Technology, in Xi’an’s eastern suburbs, with the PLA as its supervising department. Its profile there describes a multidisciplinary nuclear science institute, set up in 1963, that researches nuclear radiation effects, pulsed radiation detection, electromagnetic pulse, high-power microwave, laser and pulsed-power technology, explosion physics and radiation hydrodynamics, with a pulsed reactor and large pulsed-radiation and electromagnetic-pulse simulators.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "nuclear-weapons",
+      "summary": "The Federation of American Scientists reports that the institute provided diagnostic support for China’s nuclear weapons test programme.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Its profile says it has carried out many research tasks assigned by the state since its founding.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "西北核技术研究所：学校简介 (Northwest Institute of Nuclear Technology: profile, captured January 2017)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education; profile maintained by the institute)",
+      "url": "http://yz.chsi.com.cn/sch/schoolInfo--schId-368549.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20170130114535/http://yz.chsi.com.cn/sch/schoolInfo--schId-368549.dhtml"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "西北核技术研究所 (unit page giving its location and supervising department, captured November 2025)",
+      "publisher": "China Graduate Admissions Information Network (yz.chsi.com.cn, Ministry of Education)",
+      "url": "https://yz.chsi.com.cn/sch/schoolInfo--schId-368549.dhtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251113233712/https://yz.chsi.com.cn/sch/schoolInfo--schId-368549.dhtml"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Northwest Institute of Nuclear Technology (NINT) (Chinese Nuclear Forces guide, updated March 2000)",
+      "publisher": "Federation of American Scientists",
+      "url": "https://nuke.fas.org/guide/china/facility/nint.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027150515/https://nuke.fas.org/guide/china/facility/nint.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
