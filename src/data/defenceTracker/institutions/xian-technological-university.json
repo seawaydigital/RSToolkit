@@ -2,7 +2,9 @@
   "id": "xian-technological-university",
   "name": "Xi'an Technological University",
   "zh": "西安工业大学",
-  "zhAliases": [],
+  "zhAliases": [
+    "西安工业学院"
+  ],
   "aliases": [],
   "acronyms": [
     "XATU"
@@ -18,27 +20,135 @@
     "lat": 34.3809,
     "lng": 108.9813
   },
-  "supervisors": [],
+  "supervisors": [
+    "Shaanxi Provincial Government (co-built with SASTIND, NORINCO and China South Industries Group)"
+  ],
   "parent": null,
   "ids": {
     "misp": "f56463a0-1062-440d-a375-d56599874a23",
     "nro": "xian-technological-university",
     "ror": "01t8prc81"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Xi’an Technological University describes itself as co-built by the Shaanxi provincial government with the defence-industry regulator SASTIND and the state ordnance groups NORINCO and China South Industries Group, and says SASTIND’s Northwest Nuclear Safety Centre is based at the university.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "Its profile reports five disciplines selected as national defence-specialty disciplines (国家国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "It describes itself as one of seven universities with deep roots in China’s ordnance industry (兵工七子) and a founder of the China Ordnance Collaborative Innovation Alliance (B8). CASI reports that in 2020 NORINCO’s national defence key laboratory for detonator safety and reliability, at the group’s 213th Research Institute, set up a joint optoelectronic testing lab with the university as a military-civil integration project.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "It reports more than 3,000 research projects commissioned by bodies including the Central Military Commission’s Science and Technology Commission and Equipment Development Department, SASTIND, the armed services and the theatre commands; its 2022 profile said it held a weapons and equipment contractor qualification and military-standard quality certification.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "Its profile says the rapid-response centre of the Central Military Commission’s Science and Technology Commission (军委科技委快响中心) has set up a branch at the university.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1955 as a defence-industry project of China’s first five-year plan and renamed Xi’an Institute of Technology (西安工业学院) in 1965, it was run for decades by the ordnance-industry ministries and moved from the former China Ordnance Industry Corporation to Shaanxi’s management in 1999; it took its current name in 2006.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-materials-manufacturing",
+    "imaging-optical-sensors",
+    "uncrewed-vehicles"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (University profile, updated June 2026)",
+      "publisher": "Xi’an Technological University",
+      "url": "https://www.xatu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027173714/https://www.xatu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "学校简介 (University profile, 2022 version)",
+      "publisher": "Xi’an Technological University",
+      "url": "https://www.xatu.edu.cn/xygk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20220619195216/https://www.xatu.edu.cn/xygk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 150–151 (Defense S&T Key Laboratory of Detonator Safety and Reliability)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
