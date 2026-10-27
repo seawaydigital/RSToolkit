@@ -2,12 +2,19 @@
   "id": "space-engineering-university",
   "name": "Space Engineering University",
   "zh": "中国人民解放军战略支援部队航天工程大学",
-  "zhAliases": [],
+  "zhAliases": [
+    "航天工程大学",
+    "中国人民解放军装备学院",
+    "中国人民解放军装备指挥技术学院"
+  ],
   "aliases": [
     "PLA Equipment Academy",
     "Aerospace Engineering University",
     "A/SEU",
-    "PLA Equipment Command and Technology Academy"
+    "PLA Equipment Command and Technology Academy",
+    "Strategic Support Force Space Engineering University",
+    "PLA Equipment College",
+    "Academy of Equipment Command and Technology"
   ],
   "acronyms": [],
   "domains": [],
@@ -19,7 +26,9 @@
     "lat": 40.3556,
     "lng": 116.6583
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Aerospace Force (from 2024; before that the Strategic Support Force’s Space Systems Department)"
+  ],
   "parent": null,
   "ids": {
     "misp": "a34b4b01-24b9-4fac-830a-0358567f7e89",
@@ -27,20 +36,92 @@
     "ror": "04rj1td02",
     "wikidata": "Q10873109"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Space Engineering University in Huairou, Beijing, as the PLA’s university for its space forces: founded in 1978 as a cadre school of the National Defence Science and Technology Commission and later the General Armament Department’s Equipment College, it became the Strategic Support Force Space Engineering University in 2017. It runs a space simulation training centre, a space test and training centre and a space monitoring and control station, and its specialties include space mission planning, early warning detection, weapon launch engineering, space target surveillance and space information security.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASI places the university under the Strategic Support Force’s Space Systems Department; after that force was dissolved in April 2024, the PLA’s 2024 recruitment plan assigned it to the new Aerospace Force without changing its name.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "aerospace-space-satellite"
+  ],
+  "subunits": [
+    {
+      "name": "Space NCO School (Changping)",
+      "zh": "航天士官学校",
+      "kind": "campus"
+    },
+    {
+      "name": "Space Command College",
+      "zh": "航天指挥学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Aerospace Technology College",
+      "zh": "宇航技术学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Space Information College",
+      "zh": "航天信息学院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 217–219",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2024 Military Academic Institution Recruitment Plan (February 2025), p. 4",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20250406072411/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
