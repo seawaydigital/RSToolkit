@@ -1,0 +1,100 @@
+{
+  "id": "defense-s-and-t-key-laboratory-of-multi-spectral-information-processing-technolo",
+  "name": "Defense S&T Key Laboratory of Multi-spectral Information Processing Technology at Huazhong University of S&T",
+  "zh": "多谱图像信息处理技术国防科技重点实验室",
+  "zhAliases": [
+    "多谱信息处理技术国家级重点实验室",
+    "多谱信息处理技术国防科技重点实验室",
+    "多谱信息智能处理技术全国重点实验室"
+  ],
+  "aliases": [
+    "National Key Laboratory of Science and Technology on Multi-spectral Information Processing",
+    "National Key Laboratory of Multi-spectral Information Processing Technology"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Huazhong University of Science and Technology (host; School of Artificial Intelligence and Automation)"
+  ],
+  "parent": "huazhong-university-of-science-and-technology",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "Huazhong University of Science and Technology’s School of Automation describes the laboratory, set up in 2005 at the university with 46.4 million yuan, as supporting the development of equipment the country urgently needs, with key technologies applied in several key weapon-system models; CASI identifies it as a national defence key laboratory for multispectral image processing for guidance, navigation, target recognition and route planning, renamed in 2022 the National Key Laboratory of Multispectral Information Intelligent Processing Technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Multi-spectral Information Processing Technology (多谱图像信息处理技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that the laboratory worked on several laser and lidar projects with the Tianjin Jinhang Institute of Technical Physics, CASIC Third Academy’s 8358th Research Institute.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "imaging-optical-sensors"
+  ],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "多谱信息处理技术国家级重点实验室 (National key laboratory of multi-spectral information processing technology; School of Automation page, captured February 2019)",
+      "publisher": "School of Automation, Huazhong University of Science and Technology",
+      "url": "http://auto.hust.edu.cn/yxgk/xkjd/dpxxcljsgjjz.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20190215015421/http://auto.hust.edu.cn/yxgk/xkjd/dpxxcljsgjjz.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 332–335 (Defense S&T Key Laboratory of Multi-Spectral Information Processing Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
