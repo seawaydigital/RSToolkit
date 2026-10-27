@@ -9,30 +9,71 @@
   "country": "CN",
   "type": "nuclear",
   "location": {
-    "city": "Mianyang",
-    "province": null,
-    "lat": 31.5433,
-    "lng": 104.7395
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": null,
+    "lng": null
   },
-  "supervisors": [],
+  "supervisors": [
+    "China Academy of Engineering Physics (per the Canadian and US lists)"
+  ],
   "parent": "chinese-academy-of-engineering-physics",
   "ids": {
     "nro": "caep-high-power-laser-laboratory"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "Canada’s Named Research Organizations list and the US Entity List both name the High Power Laser Laboratory among the known aliases of the China Academy of Engineering Physics (CAEP), which the US Commerce Department describes as the technology complex responsible for the research, development and testing of China’s nuclear weapons; unlike CAEP’s Mianyang institutes, the Entity List places it in Shanghai.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Chinese Academy of Engineering Physics and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Entities to the Entity List, Revision of Certain Entries on the Entity List (85 FR 34495, 5 June 2020), including the revised entry for the Chinese Academy of Engineering Physics",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130307/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Location changed from Mianyang to Shanghai, as the Entity List gives it; no map point until a source gives its site."
     }
   ],
   "seedNotes": null
