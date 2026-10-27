@@ -3,13 +3,17 @@
   "name": "Officers College of the PAP",
   "zh": "中国人民武装警察部队警官学院",
   "zhAliases": [
-    "武警警官学院"
+    "武警警官学院",
+    "武警成都指挥学院"
   ],
   "aliases": [
     "PAP Officers’ College",
     "People's Armed Police Officers’ College",
     "PAP Officers' College",
-    "People's Armed Police Officers' College"
+    "People's Armed Police Officers' College",
+    "People's Armed Police Officers College",
+    "PAP Officers Academy",
+    "PAP Chengdu Command College"
   ],
   "acronyms": [],
   "domains": [],
@@ -17,30 +21,100 @@
   "type": "military",
   "location": {
     "city": "Chengdu",
-    "province": null,
-    "lat": 30.746,
-    "lng": 103.956
+    "province": "Sichuan",
+    "lat": 30.5119,
+    "lng": 104.0327
   },
-  "supervisors": [],
+  "supervisors": [
+    "People’s Armed Police headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "163ad3ea-a0c6-4fae-afca-f78626cd82d6",
     "nro": "officers-college-of-the-pap"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The PAP Officers College in Shuangliu, south of Chengdu, is a People’s Armed Police academy: NDU’s study of the PAP and CASI’s translation of the PLA’s 2024 recruitment plan both list it among the force’s academies. Its own 2015 profile says it trains junior commanders for the PAP’s internal security, mobile and specialised forces, and that its cadets took part in security duties in Tibetan areas after the March 2008 unrest and in earthquake relief.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college says it took its present name in 2011 and was placed directly under PAP headquarters; NDU notes that reforms in 2017–2018 put the PAP under the sole authority of the Central Military Commission.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Training base (Renshou County)",
+      "zh": null,
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), pp. 4, 32",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2024 Military Academic Institution Recruitment Plan (February 2025), p. 3",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20250406072411/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "武警警官学院简介 (About the PAP Officers College; May 2015)",
+      "publisher": "PAP Officers College, published by China Military Online (81.cn)",
+      "url": "http://www.81.cn/rdzt/2014/0421bkjx/2015-05/07/content_6478327.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20250912221319/http://www.81.cn/rdzt/2014/0421bkjx/2015-05/07/content_6478327.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Map point moved to its campus in Huayang, Shuangliu."
     }
   ],
   "seedNotes": {
