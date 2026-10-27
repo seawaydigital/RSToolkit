@@ -27,10 +27,12 @@
   "location": {
     "city": "Xi'an",
     "province": "Shaanxi",
-    "lat": 34.312,
-    "lng": 109.1244
+    "lat": 34.313,
+    "lng": 109.1225
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Rocket Force headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "7e7d3cb1-7d7e-471a-8d67-3eed66a22699",
@@ -38,20 +40,100 @@
     "ror": "00gg5zj35",
     "wikidata": "Q10873092"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Rocket Force University of Engineering in Xi’an, which has trained strategic missile personnel since 1959 and took its present name in 2016, as the PLA Rocket Force’s engineering university: its colleges include missile engineering and nuclear engineering, its facilities include a field missile training ground, the force’s missile weapons and equipment and five military key laboratories, and most of the force’s brigade commanders, chiefs of staff and chief engineers are its graduates. Canada’s Named Research Organizations list gives Xi’an Research Institute of High Technology among its known aliases.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The university reports to PLA Rocket Force headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "Missile Engineering College",
+      "zh": "导弹工程学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Nuclear Engineering College",
+      "zh": "核工程学院",
+      "kind": "institute"
+    },
+    {
+      "name": "Basic Command College",
+      "zh": "初级指挥学院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 207–209",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "PLA Rocket Force Organization (October 2022), pp. 233–234",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/PLARF/2022-10-24%20PLARF%20Organization_1.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261017100722/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/PLARF/2022-10-24%20PLARF%20Organization_1.pdf?ver=1L6s2SipIsssJ1pjNlyPQQ%3D%3D"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Named Research Organizations (entry for the Rocket Force University of Engineering and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
