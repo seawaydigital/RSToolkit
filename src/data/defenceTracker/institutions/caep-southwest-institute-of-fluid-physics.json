@@ -1,7 +1,7 @@
 {
   "id": "caep-southwest-institute-of-fluid-physics",
   "name": "Southwest Institute of Fluid Physics",
-  "zh": null,
+  "zh": "中国工程物理研究院流体物理研究所",
   "zhAliases": [],
   "aliases": [],
   "acronyms": [],
@@ -14,25 +14,93 @@
     "lat": 31.4955,
     "lng": 104.7545
   },
-  "supervisors": [],
+  "supervisors": [
+    "China Academy of Engineering Physics (per the Canadian and US lists)"
+  ],
   "parent": "chinese-academy-of-engineering-physics",
   "ids": {
     "nro": "caep-southwest-institute-of-fluid-physics"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "Canada’s Named Research Organizations list and the US Entity List both name the Southwest Institute of Fluid Physics among the known aliases of the China Academy of Engineering Physics (CAEP), which the US Commerce Department describes as the technology complex responsible for the research, development and testing of China’s nuclear weapons; the Entity List places CAEP’s named institutes in or near Mianyang. CAEP’s page on the shock wave and detonation physics key laboratory that its Institute of Fluid Physics hosts says the laboratory does basic research for nuclear-weapon and conventional-warhead design and weapons effects, and has led experiments that supply key data for China’s nuclear-weapon physics design.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "The institute hosts CAEP’s national defence science and technology key laboratory of shock wave and detonation physics, accepted in 1993 as China’s first such laboratory to enter operation, which reports 396 defence research projects.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ],
+      "items": [
+        "National Key Laboratory of Shock Wave and Detonation Physics (冲击波物理与爆轰物理国防科技重点实验室)"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Chinese Academy of Engineering Physics and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Entities to the Entity List, Revision of Certain Entries on the Entity List (85 FR 34495, 5 June 2020), including the revised entry for the Chinese Academy of Engineering Physics",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130307/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "冲击波物理与爆轰物理国防科技重点实验室 (National Defence Science and Technology Key Laboratory of Shock Wave and Detonation Physics; published by CAEP’s Institute of Fluid Physics, read from the 2019 archived copy)",
+      "publisher": "China Academy of Engineering Physics",
+      "url": "http://www.caep.ac.cn/kxyj/gjzdsyshz/10827.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20190916090504/http://www.caep.ac.cn/kxyj/gjzdsyshz/10827.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
