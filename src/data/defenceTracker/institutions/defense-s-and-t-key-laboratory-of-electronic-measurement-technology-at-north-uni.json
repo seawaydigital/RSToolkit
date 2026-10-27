@@ -1,0 +1,107 @@
+{
+  "id": "defense-s-and-t-key-laboratory-of-electronic-measurement-technology-at-north-uni",
+  "name": "Defense S&T Key Laboratory of Electronic Measurement Technology at North University of China",
+  "zh": "电子测试技术国防科技重点实验室",
+  "zhAliases": [],
+  "aliases": [
+    "National Key Laboratory for Electronic Measurement Technology",
+    "National Defense Key Laboratory for Electronic Measurement Technology",
+    "North University of China Key Laboratory for Electronic Measurement Technology"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Taiyuan",
+    "province": "Shanxi",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "North University of China (host of the Taiyuan branch, with CETC’s 41st Research Institute)"
+  ],
+  "parent": "north-university-of-china",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "North University of China’s School of Instrument and Electronics describes the electronic measurement technology laboratory as a national defence science and technology key laboratory approved by the PLA General Armament Department in 2002 and built jointly by CETC’s 41st Research Institute and the university; CASI places its main campus in Qingdao with the 41st Research Institute and its dynamic-testing branch in Taiyuan with the university.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Electronic Measurement Technology (电子测试技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "The laboratory is built jointly with CETC’s 41st Research Institute, and the school reports that its results are widely used by the ordnance and shipbuilding groups and in aerospace.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "The school reports more than 300 research projects in five years from the General Armament Department, SASTIND and the Ministry of Science and Technology, supporting major national projects and key national defence weapon models; CASI reports more than 1,300 sets of test equipment and systems supplied for more than 30 key weapon models of the PLA Army, Navy and Air Force.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "国防科技重点实验室 (National defence science and technology key laboratory; School of Instrument and Electronics page, captured April 2019)",
+      "publisher": "School of Instrument and Electronics, North University of China",
+      "url": "http://6y.nuc.edu.cn/xsyyj/pthjd/gfkjzdsys.htm",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20190402225600/http://6y.nuc.edu.cn/xsyyj/pthjd/gfkjzdsys.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 180–184 (Defense S&T Key Laboratory of Electronic Measurement Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
+  "history": [
+    {
+      "date": "2026-10-27",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
