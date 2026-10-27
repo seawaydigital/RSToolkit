@@ -20,27 +20,116 @@
     "lat": 39.9727,
     "lng": 116.3603
   },
-  "supervisors": [],
+  "supervisors": [
+    "China Academy of Engineering Physics (per the Canadian and US lists)"
+  ],
   "parent": "chinese-academy-of-engineering-physics",
   "ids": {
     "nro": "caep-institute-of-applied-physics-and-computational-mathematics",
     "ror": "03sxpbt26",
     "wikidata": "Q6039862"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "Canada’s Named Research Organizations list and the US Entity List both name the Institute of Applied Physics and Computational Mathematics, in Beijing, among the known aliases of the China Academy of Engineering Physics (CAEP), which the US Commerce Department describes as the technology complex responsible for the research, development and testing of China’s nuclear weapons. The institute describes itself as a multidisciplinary research institution whose main work is major national research tasks, alongside basic and applied theoretical research, and lists military science and technology progress awards among its more than 500 awards. CASI reports that the institute, founded in 1958, carries out nuclear-warhead design computations for CAEP.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI’s directory of China’s defence key laboratories lists the institute as host of the national defence science and technology key laboratory of computational physics, set up in 1992, whose first research direction is numerical simulation of nuclear-weapon physics.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s4"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Computational Physics (计算物理国防科技重点实验室)"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Xibeiwang site (Haidian District)",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Defense S&T Key Laboratory of Computational Physics",
+      "zh": "计算物理国防科技重点实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Chinese Academy of Engineering Physics and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Entities to the Entity List, Revision of Certain Entries on the Entity List (85 FR 34495, 5 June 2020), including the revised entry for the Chinese Academy of Engineering Physics",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130307/https://www.govinfo.gov/content/pkg/FR-2020-06-05/html/2020-10869.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "研究所简介 (About the institute)",
+      "publisher": "Institute of Applied Physics and Computational Mathematics, Beijing",
+      "url": "http://www.iapcm.ac.cn/about.html",
+      "lang": "zh",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027170714/http://www.iapcm.ac.cn/about.html"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 140–143 (Defense S&T Key Laboratory of Computational Physics)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
