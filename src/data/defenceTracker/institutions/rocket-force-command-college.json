@@ -1,14 +1,18 @@
 {
   "id": "rocket-force-command-college",
   "name": "Rocket Force Command College",
-  "zh": "中国人民解放军火箭指挥学院",
+  "zh": "中国人民解放军火箭军指挥学院",
   "zhAliases": [
-    "火箭指挥学院"
+    "火箭军指挥学院",
+    "第二炮兵指挥学院"
   ],
   "aliases": [
     "SMF (Strategic Missile Force) Command College",
     "SMF Command College",
-    "Strategic Missile Force Command College"
+    "Strategic Missile Force Command College",
+    "PLA Rocket Force Command College",
+    "Second Artillery Command College",
+    "Second Artillery Commanding College"
   ],
   "acronyms": [],
   "domains": [],
@@ -16,30 +20,75 @@
   "type": "military",
   "location": {
     "city": "Wuhan",
-    "province": null,
+    "province": "Hubei",
     "lat": 30.6288,
     "lng": 114.2985
   },
-  "supervisors": [],
+  "supervisors": [
+    "PLA Rocket Force headquarters"
+  ],
   "parent": null,
   "ids": {
     "misp": "66efa510-f06d-452b-927e-39bbffd1496b",
     "nro": "rocket-force-command-college"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "CASI describes the Rocket Force Command College in Wuhan, founded in 1977 as the Second Artillery School and given its present name in 2015, as the PLA Rocket Force’s professional education college for commanders, awarding master’s and doctoral degrees in military science. Its facilities include combat-training simulation and missile test buildings, and its departments have included command, communications, engineering and combat support.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The college reports to PLA Rocket Force headquarters.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Combat Command Laboratory",
+      "zh": "作战指挥实验室",
+      "kind": "lab"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "The People’s Liberation Army’s 37 Academic Institutions (2020), pp. 203–205",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf",
+      "lang": "en",
+      "accessed": "2026-10-27",
+      "archive": {
+        "url": "https://web.archive.org/web/20240823115220/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2020-06-11%20PLA%20Academic_Institutions.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high. Chinese name corrected to 中国人民解放军火箭军指挥学院."
     }
   ],
   "seedNotes": {
