@@ -2,10 +2,14 @@
   "id": "north-university-of-china",
   "name": "North University of China",
   "zh": "中北大学",
-  "zhAliases": [],
+  "zhAliases": [
+    "华北工学院",
+    "太原机械学院"
+  ],
   "aliases": [
     "Taihang Industrial School, North China Vocational School of Ordnance",
-    "Taiyuan Institute of Machinery"
+    "Taiyuan Institute of Machinery",
+    "North China Institute of Technology"
   ],
   "acronyms": [
     "NUC"
@@ -21,7 +25,9 @@
     "lat": 38.0149,
     "lng": 112.4423
   },
-  "supervisors": [],
+  "supervisors": [
+    "Shanxi Provincial Government (co-built with MIIT and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "b8b1fe73-8435-4186-a068-ac63c88ca804",
@@ -29,20 +35,139 @@
     "ror": "047bp1713",
     "wikidata": "Q1041978"
   },
-  "evidence": [],
-  "topics": [],
-  "subunits": [],
-  "sources": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "NUC describes itself as co-built by the Shanxi provincial government with the industry ministry (MIIT) and the defence-industry regulator SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "Its list of key laboratories names a national defence key discipline laboratory for underground target damage technology, and its 2021 profile says its national-level defence research platforms include a national defence science and technology key laboratory as well as key discipline laboratories.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ],
+      "items": [
+        "Underground Target Damage Technology National Defence Key Discipline Laboratory (地下目标毁伤技术国防重点学科实验室)"
+      ],
+      "count": 2
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "Its 2021 profile reports five defence-specialty disciplines (国防特色学科) designated by SASTIND for 2016–2020.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "It hosts a national defence science and technology innovation centre and a national defence research and application centre for precision plastic forming technology, and says its research results are used in major weapon programmes as well as crewed spaceflight and lunar exploration.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1941 by the Eighth Route Army headquarters as the Communist forces’ first ordnance school, it came under the National Defence Science and Technology Commission in 1963 and the state ordnance group China North Industries Corporation in 1993, and has been run jointly by the central government and Shanxi since 1999.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-weapons"
+  ],
+  "subunits": [
+    {
+      "name": "Underground Target Damage Technology National Defence Key Discipline Laboratory",
+      "zh": "地下目标毁伤技术国防重点学科实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "National Defence Research and Application Centre for Precision Plastic Forming Technology",
+      "zh": "精密塑性成形技术国防研究应用中心",
+      "kind": "lab"
+    },
+    {
+      "name": "National Key Laboratory of Extreme-Environment Optoelectronic Dynamic Testing Technology and Instruments",
+      "zh": "极限环境光电动态测试技术与仪器全国重点实验室",
+      "kind": "lab"
+    },
+    {
+      "name": "Intelligent Weapons Research Institute",
+      "zh": "智能武器研究院",
+      "kind": "institute"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university; figures to September 2026)",
+      "publisher": "North University of China",
+      "url": "https://www.nuc.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261006080207/http://www.nuc.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "重点实验室/中心/基地 (Key laboratories, centres and bases)",
+      "publisher": "North University of China",
+      "url": "https://www.nuc.edu.cn/xxjg/zdsys_zx_jd.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20261007155045/http://www.nuc.edu.cn/xxjg/zdsys_zx_jd.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "中北大学简介 (About the university; figures to April 2021, as archived in December 2021)",
+      "publisher": "North University of China",
+      "url": "http://www.nuc.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-26",
+      "archive": {
+        "url": "https://web.archive.org/web/20211230224242/http://www.nuc.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-27",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-27",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
