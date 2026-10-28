@@ -1,0 +1,64 @@
+{
+  "id": "navy-submarine-academy",
+  "name": "Navy Submarine Academy",
+  "zh": "中国人民解放军海军潜艇学院",
+  "zhAliases": [
+    "海军潜艇学院"
+  ],
+  "aliases": [
+    "PLA Navy Submarine Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Qingdao",
+    "province": null,
+    "lat": 36.095,
+    "lng": 120.441
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "b65eca7d-56db-4fc5-90ba-355693275285",
+    "nro": "navy-submarine-academy"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Electrical engineering",
+      "Information and communication engineering",
+      "Naval architecture and ocean engineering",
+      "Surveying and mapping"
+    ],
+    "address": "中国山东省青岛市李沧区金水路1号"
+  }
+}

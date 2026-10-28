@@ -1,0 +1,63 @@
+{
+  "id": "xiamen-university",
+  "name": "Xiamen University",
+  "zh": "厦门大学",
+  "zhAliases": [],
+  "aliases": [
+    "Xiàmén Dàxué"
+  ],
+  "acronyms": [
+    "XMU"
+  ],
+  "domains": [
+    "xmu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xiamen",
+    "province": "Fujian",
+    "lat": 24.47979,
+    "lng": 118.08187
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "f4879731-d300-40a9-a712-491b2560f941",
+    "ror": "00mcjh785",
+    "wikidata": "Q1153539"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Fujian Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology"
+    ],
+    "address": null
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "air-force-xian-flight-academy",
+  "name": "Air Force Xi'an Flight Academy",
+  "zh": "中国人民解放军空军西安飞行学院",
+  "zhAliases": [
+    "空军西安飞行学院",
+    "中国人民解放军空军第二飞行学院",
+    "空军第二飞行学院"
+  ],
+  "aliases": [
+    "PLA Air Force Xi’an Flight Academy",
+    "Air Force Xi’an Flight Academy",
+    "Xi’an Flying College of PLA Air Force",
+    "PLA Air Force Xi'an Flight Academy",
+    "Xi'an Flying College of PLA Air Force",
+    "PLA Air Force Xi'an Flying College",
+    "People's Liberation Army Air Force Xi'an Flying College",
+    "Xi’an Flying College of the People's Liberation Army Air Force"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.438,
+    "lng": 108.7504
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a9eaf2ff-6ccc-488a-be70-8e4ed4b60ac9",
+    "nro": "air-force-xian-flight-academy",
+    "ror": "05gzn8n94"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology"
+    ],
+    "address": null
+  }
+}

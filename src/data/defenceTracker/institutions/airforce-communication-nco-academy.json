@@ -1,0 +1,65 @@
+{
+  "id": "airforce-communication-nco-academy",
+  "name": "Air Force Communication NCO Academy",
+  "zh": "中国人民解放军空军通信士官学校",
+  "zhAliases": [
+    "空军通信士官学校",
+    "大连通信士官学校"
+  ],
+  "aliases": [
+    "Air Force Communications NCO Academy",
+    "Dalian Communications NCO Academy",
+    "Airforce Communication NCO Academy",
+    "Chinese People's Liberation Army Air Force Communication Non commissioned Officer School",
+    "PLA Air Force Communication Non commissioned Officer School"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Dalian",
+    "province": "Liaoning",
+    "lat": 38.9682,
+    "lng": 121.5937
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "41912441-ffc4-40c1-a715-d6f3ad9be54e",
+    "nro": "airforce-communication-nco-academy",
+    "ror": "02n6w8087"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Information and communication engineering"
+    ],
+    "address": "Shuang Feng Lu, Jinzhou Qu, Dalian Shi, Liaoning Sheng, China"
+  }
+}

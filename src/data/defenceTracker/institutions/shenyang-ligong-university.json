@@ -1,0 +1,78 @@
+{
+  "id": "shenyang-ligong-university",
+  "name": "Shenyang Ligong University",
+  "zh": "沈阳理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Shěnyáng Lǐgōng Dàxué"
+  ],
+  "acronyms": [
+    "SYLU",
+    "SLU"
+  ],
+  "domains": [
+    "sylu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shenyang",
+    "province": "Liaoning",
+    "lat": 41.72685501421337,
+    "lng": 123.49119901657104
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "931eb5d2-1f20-42a1-a94f-6e226fc7a5d1",
+    "ror": "03m20nr07",
+    "wikidata": "Q302940"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Liaoning Provincial Government",
+      "China North Industries Group (Norinco Group)",
+      "China South Industries Group (CSGC)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National 863 Plan Key Laboratory for Spatial Information Security Basic Technology (国家863空间信息安全基础技术重点实验室)",
+      "Established by the PLA General Armaments Department in 2005",
+      "Numerically-controlled Machining Technology Laboratory (数控加工技术实验室)",
+      "Armament Industry Lubrication Technology Research Center (兵器工业润滑技术研究中心)",
+      "Modern Armament Technology and Equipment Engineering Research Centre (现代兵器技术与装备工程研究中心)",
+      "Liaoning Province Modern Damage Control Technology and Armaments Engineering Laboratory (辽宁省现代毁伤控制技术与装备工程实验室)",
+      "Liaoning Provincial Armament Science and Technology Key Laboratory (辽宁省兵器科学与技术重点实验室)",
+      "Sino-Russian Microwave Weapons Laboratory (中俄微波武器实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "China, Liaoning, Shenyang, Hunnan, 南屏中路6号"
+  }
+}

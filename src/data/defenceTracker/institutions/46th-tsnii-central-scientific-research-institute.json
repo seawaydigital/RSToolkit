@@ -1,0 +1,48 @@
+{
+  "id": "46th-tsnii-central-scientific-research-institute",
+  "name": "46th TSNII Central Scientific Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "48 TsNII",
+    "46 TsNII MO RF",
+    "46 TsNII",
+    "46th TSNII MO RF",
+    "46 Центральный научно-исследовательский институт Министерства обороны Российской Федерации",
+    "46th Central Research Institute of the Ministry of Defense of the Russian Federation",
+    "ФГБУ \"46 Центральный научно-исследовательский институт\" Министерства обороны Российской Федерации"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "research-institute",
+  "location": {
+    "city": "Moscow",
+    "province": "Moscow",
+    "lat": 55.872,
+    "lng": 37.664
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "46th-tsnii-central-scientific-research-institute",
+    "ror": "05t8w9f79"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

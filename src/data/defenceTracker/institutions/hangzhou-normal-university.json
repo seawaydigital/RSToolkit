@@ -1,0 +1,57 @@
+{
+  "id": "hangzhou-normal-university",
+  "name": "Hangzhou Normal University",
+  "zh": "杭州师范大学",
+  "zhAliases": [
+    "杭师大"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "HZNU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": null,
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e4c5ffbe-3f87-4e32-83ad-6bef3deb8b32"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Zhejiang Provincial Government"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "Xiasha Campus (下沙校区)",
+      "Cangqian Campus (仓前校区)",
+      "Yuxing Campus (玉皇山校区)"
+    ],
+    "topics": [
+      "Artificial intelligence",
+      "Cyber"
+    ],
+    "address": null
+  }
+}

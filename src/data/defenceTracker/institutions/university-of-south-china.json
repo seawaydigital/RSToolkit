@@ -1,0 +1,67 @@
+{
+  "id": "university-of-south-china",
+  "name": "University of South China",
+  "zh": "南华大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "USC"
+  ],
+  "domains": [
+    "usc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Hengyang",
+    "province": "Hunan",
+    "lat": 26.898859255920506,
+    "lng": 112.59098028836058
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "c31015ea-1576-4ddf-91e6-b12a17d8cfff",
+    "ror": "03mqfn238",
+    "wikidata": "Q7896327"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hunan Provincial Government",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China National Nuclear Corporation (CNNC)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Discipline Laboratory for National Defence for Biotechnology in Uranium Mining and Hydrometallurgy (铀矿冶生物技术国防重点学科实验室)",
+      "6th Research Institute of Nuclear Industry (核工业第六研究所)",
+      "Previously part of defence conglomerate China National Nuclear Corporation"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Mining engineering",
+      "Nuclear science and technology"
+    ],
+    "address": "28 Chang Sheng Xi Lu, Zhengxiang Qu, Hengyang Shi, Hunan Sheng, China, 421217"
+  }
+}

@@ -1,0 +1,54 @@
+name: Tracker watch
+
+# Monthly check for the Defence Institution Tracker: the official lists (US
+# Consolidated Screening List, Canadian sanctions XML, the NRO page, the 1286
+# and Japanese list pages) and the sources cited on verified profiles. It opens
+# one "Tracker watch — YYYY-MM" issue listing what needs attention, or updates
+# that month's issue on a re-run.
+#
+# It never writes to the repository: the maintainer runs `npm run tracker:sync`
+# locally, reviews the diff and commits (HANDOFF.md, monthly routine). The
+# token can read the code and write issues, nothing else.
+on:
+  schedule:
+    - cron: '0 13 1 * *' # 13:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: tracker-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+      # No install scripts: the watch only runs plain Node modules, and this
+      # job holds a token that can write issues.
+      - run: npm ci --ignore-scripts
+      - id: watch
+        run: node scripts/tracker/watch.mjs
+      - name: Open or update this month's issue
+        if: steps.watch.outputs.has_findings == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ steps.watch.outputs.title }}
+        run: |
+          number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "\"$TITLE\" in:title" --json number,title \
+            --jq '.[] | select(.title == env.TITLE) | .number' | head -n 1)
+          if [ -n "$number" ]; then
+            gh issue edit "$number" --repo "$GITHUB_REPOSITORY" --body-file watch-report.md
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file watch-report.md
+          fi

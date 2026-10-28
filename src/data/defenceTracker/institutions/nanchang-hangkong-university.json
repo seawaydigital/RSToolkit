@@ -1,0 +1,71 @@
+{
+  "id": "nanchang-hangkong-university",
+  "name": "Nanchang Hangkong University",
+  "zh": "南昌航空大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nanchang Aviation University",
+    "Nanchang Aeronautical University"
+  ],
+  "acronyms": [
+    "NCHU"
+  ],
+  "domains": [
+    "nchu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanchang",
+    "province": "Jiangxi",
+    "lat": 28.65191764948939,
+    "lng": 115.82748413085938
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ca336d87-3a9a-47e5-a25e-678733af44ad",
+    "ror": "0369pvp92",
+    "wikidata": "Q6962480"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangxi Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Defense Key Disciplines Laboratory of Light Alloy Processing Science and Technology (南昌航空大学轻合金加工国防学科重点实验室)",
+      "Aeronautical Science and Technology Key Laboratory of Aeronautical Testing and Evaluation Technology (中航工业航空检测与评价技术航空科技重点实验室)",
+      "Jointly run with AVIC",
+      "Aeronautical Science and Technology Key Lab. of Aeronautical Materials Processing (中航工业航空材料热加工技术航空科技重点实验室)",
+      "Jointly run with AVIC"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Instrument science and technology",
+      "Materials science and technology",
+      "Optical engineering"
+    ],
+    "address": "Hang Tian Lu, Donghu Qu, Nanchang Shi, Jiangxi Sheng, China"
+  }
+}

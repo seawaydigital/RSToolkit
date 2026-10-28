@@ -1,0 +1,70 @@
+{
+  "id": "hangzhou-dianzi-university",
+  "name": "Hangzhou Dianzi University",
+  "zh": "杭州电子科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Hangzhou Institute of Electrical Engineering",
+    "Hángzhōu diànzǐ kējì dàxué"
+  ],
+  "acronyms": [
+    "HDU"
+  ],
+  "domains": [
+    "hdu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Hangzhou",
+    "province": "Zhejiang",
+    "lat": 30.309740023222794,
+    "lng": 120.34310329292612
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5c7e2e2f-759a-4184-9efc-90508f139e76",
+    "ror": "0576gt767",
+    "wikidata": "Q11102606"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Zhejiang Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Fundamental Science on Communication Information Transmission and Fusion Technology Laboratory (通信信息传输与融合技术国防重点学科实验室)",
+      "Key Laboratory of Complex Systems Modeling and Simulation, Ministry of Education (复杂系统建模与仿真教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "1139 No.2 St, Xia Sha, Jianggan Qu, Hangzhou Shi, Zhejiang Sheng, China, 310018"
+  }
+}

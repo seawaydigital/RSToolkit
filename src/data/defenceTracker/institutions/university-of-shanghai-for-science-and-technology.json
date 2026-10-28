@@ -1,0 +1,63 @@
+{
+  "id": "university-of-shanghai-for-science-and-technology",
+  "name": "University of Shanghai for Science and Technology",
+  "zh": "上海理工大学",
+  "zhAliases": [
+    "上海理工大學"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "USST"
+  ],
+  "domains": [
+    "usst.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": 31.290366968056915,
+    "lng": 121.55174242327882
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "c640f54d-63ad-45b9-b8f5-17fb920a01bb",
+    "ror": "00ay9v204",
+    "wikidata": "Q864879"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shanghai Municipal Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Optical engineering"
+    ],
+    "address": "516 Jungong Rd, Yangpu Qu, Shanghai Shi, China"
+  }
+}

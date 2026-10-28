@@ -1,0 +1,66 @@
+{
+  "id": "university-of-science-and-technology-of-china",
+  "name": "University of Science and Technology of China",
+  "zh": "中国科学技术大学",
+  "zhAliases": [
+    "中国科技大学"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "USTC"
+  ],
+  "domains": [
+    "ustc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Hefei",
+    "province": "Anhui",
+    "lat": 31.822002092965203,
+    "lng": 117.28058695793152
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "c636135e-d644-45aa-afe5-ec05ffdc173a",
+    "ror": "04c4dkn09",
+    "wikidata": "Q1074103"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Chinese Academy of Sciences"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Electromagnetic Space Information (中科院电磁空间信息重点实验室)",
+      "Established in 2012 by the Chinese Academy of Sciences as its first university-based defence laboratory, working on topics including cryptography and electromagnetic fields and microwave technology."
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Cryptography",
+      "Electronics science and technology",
+      "Quantum"
+    ],
+    "address": "Zhong Guo Ke Xue Ji Shu Da Xue Nan Xiao Qu Yu Shi, Baohe Qu, Hefei Shi, Anhui Sheng, China"
+  }
+}

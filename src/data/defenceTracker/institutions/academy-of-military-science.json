@@ -1,0 +1,88 @@
+{
+  "id": "academy-of-military-science",
+  "name": "Academy of Military Science",
+  "zh": "中国人民解放军军事科学院",
+  "zhAliases": [],
+  "aliases": [
+    "Academy of Military Sciences"
+  ],
+  "acronyms": [
+    "AMS"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 39.9906,
+    "lng": 116.2035
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "6ba88ae5-8be1-44cb-bfba-0a01a1309dad",
+    "nro": "academy-of-military-science"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "Central Military Commission (CMC)"
+    ],
+    "majorDefenceLaboratories": [
+      "Academy of Military Medical Sciences (军事医学研究院)",
+      "Institute of Chemical Defense (防化研究院)",
+      "National Key Laboratory of Nuclear and Biochemical Disaster Protection (国民核生化灾害防护国家重点实验室)",
+      "Beijing Key Laboratory of Advanced Chemical Storage Technology and Materials (先进化学蓄电技术与材料北京市重点实验室 )",
+      "Beijing Nuclear Safety Engineering Technology Research Center (北京市核化安全工程技术研究中心)",
+      "Chemical Defense Equipment Evaluation and Testing Center (防化装备评价试验中心)",
+      "All-Military Environmental Science Research Center (全军环境科学研究中心)",
+      "National Civil Defense Engineering Anti-chemical Research and Testing Center (全国人防工程防化研究试验中心)",
+      "Military-Use Battery Testing and Evaluation Center (军用电池试验检测中心)",
+      "National Innovation Institute for Defense Technology (国防科技创新研究院)",
+      "Artificial Intelligence Research Center (人工智能研究中心",
+      "Unmanned Systems Research Center (无人系统研究中心)",
+      "Frontier Interdisciplinary Technologies Research Center (前沿交叉研究中心)",
+      "National Defense Engineering Research Institute (国防工程研究院)"
+    ],
+    "subsidiaries": [
+      "Academy of Military Medical Sciences (军事医学研究院)",
+      "National Defense Science and Technology Innovation Institute (国防科技创新研究院)",
+      "Institute of Systems Engineering (系统工程研究院)",
+      "Institute of Chemical Defense (防化研究院)",
+      "National Defense Engineering Research Institute (国防工程研究院)",
+      "Warfare Research Institute (战争研究院)",
+      "Military Political Work Institute (军队政治工作研究院)",
+      "China Aerodynamics Research and Development Center"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Artificial intelligence",
+      "Biomedical engineering",
+      "Chemistry",
+      "Control science and engineering",
+      "Nuclear science and technology",
+      "Quantum"
+    ],
+    "address": "China, Beijing, Haidian, 香山路73号"
+  }
+}

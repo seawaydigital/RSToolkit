@@ -1,0 +1,72 @@
+{
+  "id": "yanshan-university",
+  "name": "Yanshan University",
+  "zh": "燕山大学",
+  "zhAliases": [],
+  "aliases": [
+    "Yānshān dàxué"
+  ],
+  "acronyms": [
+    "YSU"
+  ],
+  "domains": [
+    "ysu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Qinhuangdao",
+    "province": "Hebei",
+    "lat": 39.90450800000001,
+    "lng": 119.53971899999999
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "3d1519f1-fde2-435c-8476-cb25c0c90a1d",
+    "ror": "02txfnf15",
+    "wikidata": "Q832792"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Fundamental Science of Mechanical Structure and Materials Science Under Extreme Conditions for National Defense (极端条件下机械结构和材料科学国防重点学科实验室)",
+      "National Defence Research and Application Center of Precision Plastic Forming Technology (国防科技工业精密塑性成形技术研究应用中心)",
+      "Jointly run with No.59 Institute of China Ordnance Industry (中国兵器工业第五九研究所)",
+      "Aerospace High Technology Research Institute(航天高技术研究中心)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Electrical engineering",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "Yanshan University, Hebei Street West Section, Haigang, Qinhuangdao, Hebei, China"
+  }
+}

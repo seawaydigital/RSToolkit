@@ -1,0 +1,57 @@
+{
+  "id": "sun-yat-sen-university",
+  "name": "Sun Yat-sen University",
+  "zh": "中山大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "SYSU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": null,
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ca7b5223-04e6-441d-8604-8a203eb2384b"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Information Science, Ministry of Education (信息领域教育部重点实验室（B类）)",
+      "National Supercomputing Center in Guangzhou (国家超级计算广州中心)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Nuclear weapons"
+    ],
+    "address": null
+  }
+}

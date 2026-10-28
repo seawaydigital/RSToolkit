@@ -1,0 +1,63 @@
+{
+  "id": "shenzhen-university",
+  "name": "Shenzhen University",
+  "zh": "深圳大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "SZU"
+  ],
+  "domains": [
+    "szu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shenzhen",
+    "province": "Guangdong",
+    "lat": 22.53298985731107,
+    "lng": 113.9328653030758
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "657882a9-6e85-42d3-a0ab-ab7e8773939f",
+    "ror": "01vy4gh70",
+    "wikidata": "Q1945756"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shenzhen Municipal Government"
+    ],
+    "majorDefenceLaboratories": [
+      "National Laboratory of Automatic Target Recognition (ATR国防科技重点实验室智能信息处理研究室)",
+      "Also known as the Guangdong Provincial Key Laboratory of Science and Technology on Intelligent Information Processing (智能信息处理广东省高校重点实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Control science and engineering"
+    ],
+    "address": "China, Guangdong, Shenzhen, Nanshan, 南海大道2336号"
+  }
+}

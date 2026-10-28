@@ -1,0 +1,42 @@
+{
+  "id": "chengdu-fine-optical-engineering-research-center",
+  "name": "Chengdu Fine Optical Engineering Research Center",
+  "zh": "成都精密光学工程研究中心",
+  "zhAliases": [],
+  "aliases": [
+    "Chengdu Fine Optics"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "nuclear",
+  "location": {
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "lat": 30.6271,
+    "lng": 104.0383
+  },
+  "supervisors": [],
+  "parent": "chinese-academy-of-engineering-physics",
+  "ids": {
+    "nro": "chengdu-fine-optical-engineering-research-center",
+    "ror": "05r2q4835"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

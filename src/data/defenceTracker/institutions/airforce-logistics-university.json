@@ -1,0 +1,58 @@
+{
+  "id": "airforce-logistics-university",
+  "name": "Air Force Logistics University",
+  "zh": "中国人民解放军空军后勤学院",
+  "zhAliases": [
+    "空军后勤学院"
+  ],
+  "aliases": [
+    "Airforce Logistics University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xuzhou",
+    "province": null,
+    "lat": 34.2693,
+    "lng": 117.1846
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7ab12867-8b58-420b-a1b5-c37028a0a2b7",
+    "nro": "airforce-logistics-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology"
+    ],
+    "address": "85 Xige St, Gulou Qu, Xuzhou Shi, Jiangsu Sheng, China, 221004"
+  }
+}

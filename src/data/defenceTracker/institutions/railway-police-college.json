@@ -1,0 +1,66 @@
+{
+  "id": "railway-police-college",
+  "name": "Railway Police College",
+  "zh": "铁道警察学院",
+  "zhAliases": [
+    "铁道警院",
+    "郑州警察学院"
+  ],
+  "aliases": [
+    "Ministry of Public Security Railway Police College",
+    "MPS Railway Police College",
+    "Zhengzhou Police University"
+  ],
+  "acronyms": [],
+  "domains": [
+    "rpc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Zhengzhou",
+    "province": "Henan",
+    "lat": 34.7901,
+    "lng": 113.6454
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d6149587-7946-41c9-9d1e-6bb8cb575cd7",
+    "nro": "railway-police-college",
+    "ror": "03pnb3530",
+    "wikidata": "Q15914809"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Public Security (MPS)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Information and communication engineering",
+      "Traffic and transportation engineering"
+    ],
+    "address": "China, Henan, Zhengzhou, Jinshui, 铁道警察学院"
+  }
+}

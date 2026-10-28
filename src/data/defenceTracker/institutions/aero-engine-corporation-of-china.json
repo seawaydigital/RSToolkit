@@ -1,0 +1,65 @@
+{
+  "id": "aero-engine-corporation-of-china",
+  "name": "Aero Engine Corporation of China",
+  "zh": "中国航空发动机集团有限公司",
+  "zhAliases": [
+    "中国航发"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "AECC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.955664,
+    "lng": 116.29421300000001
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d8484f98-157f-4a68-bde2-3dbfe27b30e4"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)",
+      "Aviation Industry Corporation of China (AVIC)",
+      "Commercial Aircraft Corporation of China (COMAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "Beijing Institute for Aeronautical Materials (中国航发北京航空材料研究院)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Electrical engineering",
+      "Materials science and technology",
+      "Power engineering and engineering thermophysics"
+    ],
+    "address": "5 Landianchang South Road Haidian District Beijing, 100097 China"
+  }
+}

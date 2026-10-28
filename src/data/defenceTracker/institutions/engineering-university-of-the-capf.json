@@ -1,0 +1,62 @@
+{
+  "id": "engineering-university-of-the-capf",
+  "name": "Engineering University of the CAPF",
+  "zh": "中国人民武装警察部队工程大学",
+  "zhAliases": [
+    "武警工程大学"
+  ],
+  "aliases": [
+    "PAP Engineering University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": null,
+    "lat": 34.2828,
+    "lng": 108.8473
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ba5fbd7a-8668-4b86-a7ec-f3a160ca08c2",
+    "nro": "engineering-university-of-the-capf"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Artificial intelligence",
+      "Computer science and technology",
+      "Information and communication engineering",
+      "Mechanical engineering"
+    ],
+    "address": "Shuang Yong Lu, Weiyang Qu, Xian Shi, Shaanxi Sheng, China"
+  }
+}

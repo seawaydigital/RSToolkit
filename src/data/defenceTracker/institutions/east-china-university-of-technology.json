@@ -1,0 +1,70 @@
+{
+  "id": "east-china-university-of-technology",
+  "name": "East China University of Technology",
+  "zh": "东华理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "East China Institute of Technology"
+  ],
+  "acronyms": [
+    "ECUT"
+  ],
+  "domains": [
+    "ecut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanchang",
+    "province": "Jiangxi",
+    "lat": 28.72201329243731,
+    "lng": 115.82753244907371
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7205e1e7-d110-4683-bd26-3cc8d052443e",
+    "ror": "027385r44",
+    "wikidata": "Q10869680"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangxi Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China National Nuclear Corporation (CNNC)",
+      "Ministry of Natural Resources"
+    ],
+    "majorDefenceLaboratories": [
+      "Fundamental Science on Radioactive Geology and Exploration Technology Laboratory (放射性地质与勘探技术国防重点学科实验室)",
+      "Located within the Fundamental Science and Radioactive Geology and Exploration Technology Laboratory (ECIT)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Chemistry",
+      "Materials science and technology",
+      "Nuclear science and technology",
+      "Surveying and mapping"
+    ],
+    "address": "418 Guanglan Ave, Qingshanhu Qu, Nanchang Shi, Jiangxi Sheng, China, 330100"
+  }
+}

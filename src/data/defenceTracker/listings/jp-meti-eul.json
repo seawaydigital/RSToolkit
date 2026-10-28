@@ -1,0 +1,1056 @@
+{
+  "snapshot": "jp-meti-eul",
+  "coverage": "complete",
+  "checkedOn": "2026-10-26",
+  "sourceUrl": "https://www.meti.go.jp/policy/anpo/law09-2.html",
+  "file": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+  "published": "2025-09-29",
+  "effective": "2025-10-09",
+  "entries": [
+    {
+      "key": "eul:CN:10th-research-institute-of-china-electronic-technology-group-corporation-cetc",
+      "list": "jp-eul",
+      "name": "10th Research Institute of China Electronic Technology Group Corporation (CETC)",
+      "altNames": [
+        "CETC 10th Research Institute",
+        "Southwest Institute of Electronic Technology (SWIET)",
+        "Southwest Research Institute of Electronic Technology (SWIET)",
+        "Southwest Research Institute of Electronics Technology"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 475; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "southwest-research-institute-of-electronics-technology"
+    },
+    {
+      "key": "eul:CN:13th-research-institute-9th-academy-china-aerospace-science-and-technology-corpo",
+      "list": "jp-eul",
+      "name": "13th Research Institute, 9th Academy, China Aerospace Science and Technology Corporation (CASC)",
+      "altNames": [
+        "13th Institute",
+        "Beijing Institute of Aerospace Control Devices (BIACD)",
+        "230 Factory",
+        "Beijing Aerospace Times Optical-Electronic Technology Co., Ltd."
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 476; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "13th-research-institute-9th-academy-china-aerospace-science-and-technology-corpo"
+    },
+    {
+      "key": "eul:CN:20th-research-institute-of-china-electronic-technology-group-corporation-cetc",
+      "list": "jp-eul",
+      "name": "20th Research Institute of China Electronic Technology Group Corporation (CETC)",
+      "altNames": [
+        "CETC 20th Research Institute",
+        "Xian Research Institute of Navigation Technology"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 477; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "xi-an-research-institute-of-navigation-technology"
+    },
+    {
+      "key": "eul:CN:23rd-research-institute",
+      "list": "jp-eul",
+      "name": "23rd Research Institute",
+      "altNames": [
+        "Beijing Institute of Radio Measurement",
+        "BIRM",
+        "China Aerospace Science and Industry Corporation (CASIC) Second Academy 23rd Research Institute 中国航天科学技術工業集団有限公司第二研究院第二十 三研究所"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 478; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-second-academy-subordinate-inst-8"
+    },
+    {
+      "key": "eul:CN:academy-of-aerospace-solid-propulsion-technology",
+      "list": "jp-eul",
+      "name": "Academy of Aerospace Solid Propulsion Technology",
+      "altNames": [
+        "AASPT",
+        "中国航天科技集団有限公司第四研究院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 480; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "academy-of-aerospace-solid-propulsion-technology-aaspt"
+    },
+    {
+      "key": "eul:CN:aecc-beijing-institute-of-aeronautical-materials",
+      "list": "jp-eul",
+      "name": "AECC Beijing Institute of Aeronautical Materials",
+      "altNames": [
+        "AECC BIAM"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 481; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "aecc-beijing-institute-of-aeronautical-materials"
+    },
+    {
+      "key": "eul:CN:avic-leihua-electronic-technology-research-institute",
+      "list": "jp-eul",
+      "name": "AVIC Leihua Electronic Technology Research Institute",
+      "altNames": [
+        "LETRI"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 483; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "avic-leihua-electronic-technology-research-institute-letri"
+    },
+    {
+      "key": "eul:CN:avic-research-institute-for-special-structures-of-aeronautical-composites",
+      "list": "jp-eul",
+      "name": "AVIC Research Institute for Special Structures of Aeronautical Composites",
+      "altNames": [
+        "AVIC RISAC",
+        "AVIC 637th Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 484; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "avic-research-institute-for-special-structures-of-aeronautical-composites"
+    },
+    {
+      "key": "eul:CN:beijing-aeronautical-manufacturing-technology-research-institute-bamtri",
+      "list": "jp-eul",
+      "name": "Beijing Aeronautical Manufacturing Technology Research Institute (BAMTRI)",
+      "altNames": [
+        "Aviation Industry Corporation of China's (AVIC) Institute 625",
+        "AVIC Beijing Aeronautical Manufacturing Technology Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 487; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "beijing-aeronautical-manufacturing-technology-research-institute"
+    },
+    {
+      "key": "eul:CN:beijing-aerospace-automatic-control-institute-bicd",
+      "list": "jp-eul",
+      "name": "Beijing Aerospace Automatic Control Institute (BICD)",
+      "altNames": [
+        "12th Research Institute China Academy of Launch Vehicle Technology (CALT)",
+        "Beijing Institute of Space Automatic Control",
+        "Beijing Spaceflight Autocontrol Research Institute",
+        "China Aerospace Science and Technology Corporation First Academy 12th Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 488; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-12-research"
+    },
+    {
+      "key": "eul:CN:beijing-automation-control-equipment-institute-bacei",
+      "list": "jp-eul",
+      "name": "Beijing Automation Control Equipment Institute (BACEI)",
+      "altNames": [
+        "33 Institute",
+        "Beijing Institute of Automatic Control Equipment, China Haiying Electromechanical Technology Academy",
+        "No. 33 Research Institute of the Third Academy of China Aerospace Science and Industry Corporation (CASIC)"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 490; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-33-research-i"
+    },
+    {
+      "key": "eul:CN:beijing-institute-of-structure-and-environmental-engineering-bise",
+      "list": "jp-eul",
+      "name": "Beijing Institute of Structure and Environmental Engineering (BISE)",
+      "altNames": [
+        "702nd Research Institute, China Academy of Launch Vehicle Technology (CALT)",
+        "Beijing Institute of Strength and Environmental Engineering"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 493; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-702-research"
+    },
+    {
+      "key": "eul:CN:beijing-institute-of-technology",
+      "list": "jp-eul",
+      "name": "Beijing Institute of Technology",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 494; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "beijing-institute-of-technology"
+    },
+    {
+      "key": "eul:CN:beijing-power-machinery-institute",
+      "list": "jp-eul",
+      "name": "Beijing Power Machinery Institute",
+      "altNames": [
+        "31st Research Institute of China Aerospace Science and Industry Corporation (CASIC)",
+        "Beijing Power Generating Machinery Institute",
+        "Beijing Power Machinery Research Laboratory",
+        "China Haiying Electromechanical Technology Academy",
+        "China Haiying Science & Technology Corporation",
+        "China Aerospace Science and Industry Corporation (CASIC) 3rd Academy, 31 Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 499; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-31-research-i"
+    },
+    {
+      "key": "eul:CN:beijing-university-of-aeronautics-and-astronautics-buaa",
+      "list": "jp-eul",
+      "name": "Beijing University of Aeronautics and Astronautics (BUAA)",
+      "altNames": [
+        "Beihang University"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 501; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "beihang-university"
+    },
+    {
+      "key": "eul:CN:china-academy-of-launch-vehicle-technology-calt",
+      "list": "jp-eul",
+      "name": "China Academy of Launch Vehicle Technology (CALT)",
+      "altNames": [
+        "China Carrier Rocket Technology Research Institute",
+        "First Academy of the China Aerospace Science Technology Corporation",
+        "Wanyuan Company"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 508; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-academy-of-launch-vehicle-technology-calt"
+    },
+    {
+      "key": "eul:CN:china-academy-of-space-technology-cast",
+      "list": "jp-eul",
+      "name": "China Academy of Space Technology (CAST)",
+      "altNames": [
+        "5th Academy of China Aerospace Science and Technology Corporation"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 509; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-academy-of-space-technology-cast"
+    },
+    {
+      "key": "eul:CN:china-aerodynamics-research-and-development-center-cardc",
+      "list": "jp-eul",
+      "name": "China Aerodynamics Research and Development Center (CARDC)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 510; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerodynamics-research-and-development-center"
+    },
+    {
+      "key": "eul:CN:china-aerospace-science-and-industry-corporation-second-academy",
+      "list": "jp-eul",
+      "name": "China Aerospace Science and Industry Corporation Second Academy",
+      "altNames": [
+        "China Changfeng Mechanics and Electronics Technology Academy",
+        "China Chang Feng Mechano-Electronic Engineering Academy",
+        "CASIC Second Academy",
+        "China Chang Feng Mechano-Electronic Engineering Company",
+        "CASIC Academy of Defense Technology",
+        "Second Research Academy of CASIC",
+        "Changfeng Electromechanical Technology Design Institute",
+        "China Chang Feng Mechanics and Electronics Technology Academy"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 511; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-second-academy"
+    },
+    {
+      "key": "eul:CN:china-aerospace-science-and-technology-corporation-casc-9th-academy-771-research",
+      "list": "jp-eul",
+      "name": "China Aerospace Science and Technology Corporation (CASC) 9th Academy 771 Research Institute",
+      "altNames": [
+        "771 Research Institute",
+        "China Aerospace Science and Technology Corporation (CASC)Ninth Academy 771 Institute",
+        "Lishan Microelectronics Company",
+        "Xi'an Institute of Microelectronics",
+        "Xi'an Microelectronics Technology Institute",
+        "XMTI"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 512; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-technology-corporation-casc-9th-academy-771-research"
+    },
+    {
+      "key": "eul:CN:china-electronics-technology-group-corporation-14th-research-institute-cetc-14",
+      "list": "jp-eul",
+      "name": "China Electronics Technology Group Corporation 14th Research Institute (CETC 14)",
+      "altNames": [
+        "Nanjing Research Institute of Electronics Technology",
+        "NRIET",
+        "Nanjing Electronics Technology Institute",
+        "Ministry of Information Industry Electronics",
+        "No 14 Research Institute",
+        "Research Institute 14",
+        "CETC Research Institute 14",
+        "南京電子技術研究所"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 513; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-electronics-technology-group-corporation-14th-research-institute-cetc-14"
+    },
+    {
+      "key": "eul:CN:china-electronics-technology-group-corporation-28th-research-institute-cetc-28",
+      "list": "jp-eul",
+      "name": "China Electronics Technology Group Corporation 28th Research Institute (CETC 28)",
+      "altNames": [
+        "The 28th Research Institute of China Electronics Technology Group Corporation",
+        "China Electronics Technology Group Corporation No. 28 Institute",
+        "CETC 28",
+        "The 28th Institute",
+        "Nanjing Institute of Electronic Engineering",
+        "NRIEE",
+        "NIEE"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 514; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-electronics-technology-group-corporation-28th-research-institute-cetc-28"
+    },
+    {
+      "key": "eul:CN:china-electronics-technology-group-corporation-cetc-54th-research-institute",
+      "list": "jp-eul",
+      "name": "China Electronics Technology Group Corporation (CETC) 54th Research Institute",
+      "altNames": [
+        "54th Research Institute of China Electronics Technology Group Corporation (CETC54)",
+        "Communication, Telemetry and Telecontrol Research Institute (CTI)",
+        "Shijiazhuang Communication Observation and Control Technology Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 515; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-electronics-technology-group-corporation-cetc-54th-research-institute"
+    },
+    {
+      "key": "eul:CN:chinese-academy-of-engineering-physics",
+      "list": "jp-eul",
+      "name": "Chinese Academy of Engineering Physics",
+      "altNames": [
+        "Ninth Academy",
+        "Southwest Computing Center",
+        "Southwest Institute of Applied Electronics",
+        "Southwest Institute of Chemical Materials",
+        "Southwest Institute of Electronic Engineering",
+        "Southwest Institute of Environmental Testing",
+        "Southwest Institute of Explosives and Chemical Engineering",
+        "Southwest Institute of Fluid Physics",
+        "Southwest Institute of General Designing and Assembly",
+        "Southwest Institute of Machining Technology",
+        "Southwest Institute of Materials",
+        "Southwest Institute of Nuclear Physics and Chemistry",
+        "China Academy of Engineering Physics (CAEP)'s 902 Institute",
+        "Southwest Institute of Research and Applications of Special Materials Factory",
+        "Southwest Institute of Structural Mechanics",
+        "The High Power Laser Laboratory, Shanghai",
+        "The Institute of Applied Physics and Computational Mathematics, Beijing"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 519; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "chinese-academy-of-engineering-physics"
+    },
+    {
+      "key": "eul:CN:chinese-academy-of-sciences-changchun-institute-of-optics-fine-mechanics-and-phy",
+      "list": "jp-eul",
+      "name": "Chinese Academy of Sciences Changchun Institute of Optics, Fine Mechanics, and Physics",
+      "altNames": [
+        "Changchun Institute of Optics, Fine Mechanics, and Physics, CAS",
+        "CAS Institute of Optics, Fine Mechanics, and Physics",
+        "CIOMP"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 520; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "chinese-academy-of-sciences-changchun-institute-of-optics-fine-mechanics-and-phy"
+    },
+    {
+      "key": "eul:CN:harbin-engineering-university",
+      "list": "jp-eul",
+      "name": "Harbin Engineering University",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 540; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "harbin-engineering-university"
+    },
+    {
+      "key": "eul:CN:harbin-institute-of-technology-hit",
+      "list": "jp-eul",
+      "name": "Harbin Institute of Technology (HIT)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 541; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "harbin-institute-of-technology"
+    },
+    {
+      "key": "eul:CN:nanjing-fiberglass-research-and-design-institute",
+      "list": "jp-eul",
+      "name": "Nanjing Fiberglass Research and Design Institute",
+      "altNames": [
+        "NRDI",
+        "Nanjing Fiberglass Research"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 554; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "nanjing-fiberglass-research-and-design-institute"
+    },
+    {
+      "key": "eul:CN:nanjing-university-of-aeronautics-and-astronautics-nuaa",
+      "list": "jp-eul",
+      "name": "Nanjing University of Aeronautics and Astronautics (NUAA)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 555; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "nanjing-university-of-aeronautics-and-astronautics"
+    },
+    {
+      "key": "eul:CN:nanjing-university-of-science-and-technology-nust",
+      "list": "jp-eul",
+      "name": "Nanjing University of Science and Technology (NUST)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 556; concerns: conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "nanjing-university-of-science-and-technology"
+    },
+    {
+      "key": "eul:CN:national-university-of-defense-technology-nudt",
+      "list": "jp-eul",
+      "name": "National University of Defense Technology (NUDT)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 553; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "national-university-of-defense-technology"
+    },
+    {
+      "key": "eul:CN:no-35-research-institute-of-the-third-academy-of-china-aerospace-science-and-ind",
+      "list": "jp-eul",
+      "name": "No. 35 Research Institute of the Third Academy of China Aerospace Science and Industry Corporation (CASIC)",
+      "altNames": [
+        "35 Institute",
+        "Huahang Institute of Radio Measurement"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 558; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-industry-corporation-casic-3rd-academy-35-research-i"
+    },
+    {
+      "key": "eul:CN:northwestern-polytechnical-university-npu",
+      "list": "jp-eul",
+      "name": "Northwestern Polytechnical University (NPU)",
+      "altNames": [
+        "Northwest Polytechnic University",
+        "Northwest Polytechnical University",
+        "Northwestern Polytechnic University"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 559; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "northwestern-polytechnical-university"
+    },
+    {
+      "key": "eul:CN:nuclear-power-institute-of-china-npic",
+      "list": "jp-eul",
+      "name": "Nuclear Power Institute of China (NPIC)",
+      "altNames": [
+        "China Nuclear Power Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 560; concerns: nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "nuclear-power-institute-of-china-npic"
+    },
+    {
+      "key": "eul:CN:shanghai-academy-of-spaceflight-technology-sast",
+      "list": "jp-eul",
+      "name": "Shanghai Academy of Spaceflight Technology (SAST)",
+      "altNames": [
+        "8th Research Academy of China Aerospace Science and Technology Corporation",
+        "Shanghai Astronautics Industry Bureau",
+        "Shanghai Bureau of Astronautics (SHBOA)",
+        "Shanghai Bureau of Space",
+        "上海新躍儀表厰"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 569; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "shanghai-academy-of-spaceflight-technology-sast"
+    },
+    {
+      "key": "eul:CN:shanghai-institute-of-space-power-sources",
+      "list": "jp-eul",
+      "name": "Shanghai Institute of Space Power Sources",
+      "altNames": [
+        "811th Research Institute, 8th Academy, China Aerospace Science and Technology Corporation (CASC)",
+        "Shanghai Space Energy Research Institute",
+        "Shanghai Space Power Supply Research Institute"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 572; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "china-aerospace-science-and-technology-corporation-casc-8th-academy-811-research"
+    },
+    {
+      "key": "eul:CN:university-of-electronic-science-and-technology-of-china-uestc",
+      "list": "jp-eul",
+      "name": "University of Electronic Science and Technology of China (UESTC)",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 595; concerns: chemical, missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "university-of-electronic-science-and-technology-of-china"
+    },
+    {
+      "key": "eul:IR:amir-kabir-university-of-technology",
+      "list": "jp-eul",
+      "name": "Amir Kabir University of Technology",
+      "altNames": [
+        "Amirkabir University of Technology"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 45; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "amirkabir-university-of-technology"
+    },
+    {
+      "key": "eul:IR:baghyatollah-medical-sciences-university-bmsu",
+      "list": "jp-eul",
+      "name": "Baghyatollah Medical Sciences University (BMSU)",
+      "altNames": [
+        "Baghiatollah Medical Sciences University",
+        "Bagiatollah Medical Sciences University",
+        "Baqiatollah Medical Sciences University",
+        "Baqiyatallah Medical Sciences University",
+        "Baqiyatallah University of Medical Sciences",
+        "Baqyatollah Medical Sciences University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 63; concerns: missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "baghyatollah-medical-sciences-university"
+    },
+    {
+      "key": "eul:IR:defense-technology-and-science-research-center-dtsrc",
+      "list": "jp-eul",
+      "name": "Defense Technology and Science Research Center (DTSRC)",
+      "altNames": [
+        "Educational Research Institute (ERI)",
+        "MAVT Co.",
+        "Moassese Amozeh Va Tahgiaghati"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 78; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "defense-technology-and-science-research-center"
+    },
+    {
+      "key": "eul:IR:fater-institute",
+      "list": "jp-eul",
+      "name": "Fater Institute",
+      "altNames": [
+        "Faater Institute",
+        "Fater Engineering Company",
+        "Fater Engineering Institute",
+        "Gharargah Ghaem Faater Institute"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 103; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "fater-institute"
+    },
+    {
+      "key": "eul:IR:imam-hossein-university-ihu",
+      "list": "jp-eul",
+      "name": "Imam Hossein University (IHU)",
+      "altNames": [
+        "Emam Hoseyn Comprehensive University",
+        "Imaam Hossein University",
+        "Imam Hoseyn University",
+        "Imam Hossein University Complex",
+        "Imam Hussein University",
+        "University of Imam Hoseyn"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 116; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "imam-hossein-university"
+    },
+    {
+      "key": "eul:IR:imensazan-consultant-engineers-institute-icei",
+      "list": "jp-eul",
+      "name": "Imensazan Consultant Engineers Institute (ICEI)",
+      "altNames": [
+        "Imen Sazan Consultant Engineers",
+        "Imensazen Consultant Engineers Institute"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 117; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "imensazan-consultant-engineers-institute"
+    },
+    {
+      "key": "eul:IR:iran-composites-institute",
+      "list": "jp-eul",
+      "name": "Iran Composites Institute",
+      "altNames": [
+        "Composite Institute of Iran",
+        "Iranian Composites Institute (ICI)"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 125; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "iran-composites-institute"
+    },
+    {
+      "key": "eul:IR:iran-university-of-science-and-technology-iust",
+      "list": "jp-eul",
+      "name": "Iran University of Science and Technology (IUST)",
+      "altNames": [
+        "Iran University of Science & Technology (IUST)",
+        "University of Elm-o-Sanat"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 132; concerns: missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "iran-university-of-science-and-technology-iust"
+    },
+    {
+      "key": "eul:IR:islamic-azad-university-iau",
+      "list": "jp-eul",
+      "name": "Islamic Azad University (IAU)",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 137; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "islamic-azad-university-iau"
+    },
+    {
+      "key": "eul:IR:islamic-revolutionary-guard-corps-research-and-self-sufficiency-jehad-organizati",
+      "list": "jp-eul",
+      "name": "ISLAMIC REVOLUTIONARY GUARD CORPS RESEARCH AND SELF-SUFFICIENCY JEHAD ORGANIZATION",
+      "altNames": [
+        "ISLAMIC REVOLUTIONARY GUARD CORPS RESEARCH AND SELF-SUFFICIENCY JIHAD ORGANIZATION",
+        "ISLAMIC REVOLUTIONARY GUARD CORPS SELF-SUFFICIENCY JEHAD ORGANIZATION"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 141; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "islamic-revolutionary-guard-corps-research-and-self-sufficiency-jihad-organizati"
+    },
+    {
+      "key": "eul:IR:khajeh-nassir-al-deen-toosi-k-n-toosi-university-of-technology",
+      "list": "jp-eul",
+      "name": "Khajeh Nassir-Al-Deen Toosi (K. N. Toosi) University of Technology",
+      "altNames": [
+        "K N Toosi (Khaje Nassir-Al-Deen Toosi) University",
+        "Khaje Nassir-Al-Deen Toosi (K N Toosi) University",
+        "Khaje Nassir-Al-DeenToosi University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 151; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "khajeh-nassir-al-deen-toosi-k-n-toosi-university-of-technology"
+    },
+    {
+      "key": "eul:IR:malek-ashtar-university",
+      "list": "jp-eul",
+      "name": "Malek Ashtar University",
+      "altNames": [
+        "Daneshgah-E Sana'Ti-Ye Malek-E Ashtar",
+        "Malek Ashtar Aviation Universtiy Complex",
+        "Malek Ashtar Industrial University",
+        "Malek Ashtar University of Defense Technology",
+        "Malek ashtar University of Technology",
+        "Malek-E Ashtar Technical University",
+        "Malek-E Ashtar University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 160; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "malek-ashtar-university-of-technology"
+    },
+    {
+      "key": "eul:IR:organisation-of-defensive-innovation-and-research",
+      "list": "jp-eul",
+      "name": "Organisation of Defensive Innovation and Research",
+      "altNames": [
+        "SPND"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 184; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "the-organization-of-defensive-innovation-and-research"
+    },
+    {
+      "key": "eul:IR:rahab-engineering-institute",
+      "list": "jp-eul",
+      "name": "Rahab Engineering Institute",
+      "altNames": [
+        "Rahab Institute",
+        "Rahsaz Institute"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 208; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "rahab-engineering-institute"
+    },
+    {
+      "key": "eul:IR:research-centre-for-explosion-and-impact",
+      "list": "jp-eul",
+      "name": "Research Centre for Explosion and Impact",
+      "altNames": [
+        "METFAZ"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 214; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "explosion-and-impact-technology-research-centre"
+    },
+    {
+      "key": "eul:IR:shahed-aviation-research-industries-center",
+      "list": "jp-eul",
+      "name": "SHAHED AVIATION RESEARCH INDUSTRIES CENTER",
+      "altNames": [
+        "SAIRC",
+        "Shahed Aviation",
+        "Shahed Aviation Industries",
+        "Shahed Aviation Industries Research",
+        "Shahed Aviation Industries Research Center",
+        "Shahed Aviation Industries Research Centre"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 233; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "shahed-aviation-industries-research-center"
+    },
+    {
+      "key": "eul:IR:shahid-beheshti-university",
+      "list": "jp-eul",
+      "name": "Shahid Beheshti University",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 237; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "shahid-beheshti-university"
+    },
+    {
+      "key": "eul:IR:shahid-eslami-research-center",
+      "list": "jp-eul",
+      "name": "Shahid Eslami Research Center",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 239; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "shahid-eslami-research-center"
+    },
+    {
+      "key": "eul:IR:sharif-university-of-technology-shft",
+      "list": "jp-eul",
+      "name": "Sharif University of Technology (SHFT)",
+      "altNames": [
+        "Sharif Technical University",
+        "SUT"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 259; concerns: missile, nuclear, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "sharif-university-of-technology"
+    },
+    {
+      "key": "eul:IR:tarbiat-modares-university",
+      "list": "jp-eul",
+      "name": "Tarbiat Modares University",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 271; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "tarbiat-modares-university"
+    },
+    {
+      "key": "eul:IR:university-of-tehran",
+      "list": "jp-eul",
+      "name": "University of Tehran",
+      "altNames": [
+        "Tehran University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 282; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "university-of-tehran"
+    },
+    {
+      "key": "eul:IR:value-added-services-laboratory-vasl",
+      "list": "jp-eul",
+      "name": "Value-Added Services Laboratory (VASL)",
+      "altNames": [
+        "MOBILE Value-Added Services Laboratory"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 283; concerns: missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "mobile-value-added-services-laboratory"
+    },
+    {
+      "key": "eul:RU:27th-scientific-center-of-the-russian-ministry-of-defense",
+      "list": "jp-eul",
+      "name": "27th Scientific Center of the Russian Ministry of Defense",
+      "altNames": [
+        "27th NTs",
+        "FEDERAL STATE BUDGETARY ESTABLISHMENT 27 SCIENTIFIC CENTER OF THE MINISTRY OF DEFENSE OF THE RUSSIAN FEDERATION"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 736; concerns: chemical",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "27th-scientific-center-russian-mod"
+    },
+    {
+      "key": "eul:RU:33rd-scientific-research-and-testing-institute",
+      "list": "jp-eul",
+      "name": "33rd Scientific Research and Testing Institute",
+      "altNames": [
+        "33rd TsNIII",
+        "FEDERAL STATE BUDGETARY ESTABLISHMENT 33 CENTRAL SCIENTIFIC RESEARCH TEST INSTITUTE OF THE MINISTRY OF DEFENSE OF THE RUSSIAN"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 737; concerns: chemical",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "33rd-scientific-research-and-testing-institute"
+    },
+    {
+      "key": "eul:RU:federal-state-unitary-enterprise-dukhov-automatics-research-institute-vniia",
+      "list": "jp-eul",
+      "name": "Federal State Unitary Enterprise Dukhov Automatics Research Institute (VNIIA)",
+      "altNames": [],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 747; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "federal-state-unitary-enterprise-dukhov-automatics-research-institute-vniia"
+    },
+    {
+      "key": "eul:RU:joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv",
+      "list": "jp-eul",
+      "name": "Joint Stock Company Scientific Research Institute of Computer Engineering NII SVT",
+      "altNames": [
+        "AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT SREDSTV VYCHISLITELNOI TEKHNIKI",
+        "AO Nauchno Issledovatelskii Institut Sredstv Vychislitelnoi Tekhniki",
+        "AO NII SVT",
+        "NII SVT PAO"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 771; concerns: biological",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv"
+    },
+    {
+      "key": "eul:RU:laboratory-systems-and-technologies-ltd",
+      "list": "jp-eul",
+      "name": "Laboratory Systems and Technologies LTD",
+      "altNames": [
+        "LST LTD"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 783; concerns: biological, chemical, missile, nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "laboratory-systems-and-technologies-ltd"
+    },
+    {
+      "key": "eul:RU:n-a-dollezhal-research-and-design-institute-of-power-engineering",
+      "list": "jp-eul",
+      "name": "N.A. Dollezhal Research and Design Institute of Power Engineering",
+      "altNames": [
+        "JSC NIKIET",
+        "JSC Order of Lenin Research and Design Institute of Energy Engineering named after N. A. Dollezhal",
+        "N.A. Dollezhal Order of Lenin Research and Design Institute of Power Engineering"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 789; concerns: nuclear",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "n-a-dollezhal-order-of-lenin-research-and-design-institute-of-power-engineering"
+    },
+    {
+      "key": "eul:RU:npo-of-electromechanics",
+      "list": "jp-eul",
+      "name": "NPO of Electromechanics",
+      "altNames": [
+        "Tactical Missile Corporation, NPO Electromechanics"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 793; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "jsc-scientific-and-production-association-of-electro-mechanic"
+    },
+    {
+      "key": "eul:RU:polyus-research-institute-of-m-f-stelmakh-joint-stock-company",
+      "list": "jp-eul",
+      "name": "POLYUS Research Institute of M.F. Stelmakh Joint Stock Company",
+      "altNames": [],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 800; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "polyus-research-institute-of-m-f-stelmakh-jsc"
+    },
+    {
+      "key": "eul:RU:scientific-research-institute-for-mechanical-engineering-jsc",
+      "list": "jp-eul",
+      "name": "\"Scientific Research Institute for Mechanical Engineering\" JSC",
+      "altNames": [
+        "GosNIImash",
+        "JSC Scientific Research Institute for Mechanical Engineering",
+        "Pervichnaya Profsoyuznaya Organizatsiya Rossiskogo Profsoyuza Rabotnikov Promyshlennosti V “GOSNIIMASH”",
+        "PPO Rosprofprom V “GOSNIIMASH”",
+        "SKB DNIKhTI",
+        "State Research Institute of Mechanical Engineering named after V.V. Bakhireva",
+        "State Scientific Research Institute of Machine Building Bakhirev",
+        "Tactical Missile Corporation, Joint Stock Company GosNIIMash"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 812; concerns: missile, conventional weapons",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
+    },
+    {
+      "key": "eul:RU:scientific-research-institute-of-applied-acoustics",
+      "list": "jp-eul",
+      "name": "Scientific Research Institute of Applied Acoustics",
+      "altNames": [
+        "Applied Acoustics Research Institute",
+        "NIIPA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 811; concerns: biological, chemical, missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "scientific-research-institute-of-applied-acoustics"
+    },
+    {
+      "key": "eul:RU:state-scientific-research-institute-of-organic-chemistry-and-technology",
+      "list": "jp-eul",
+      "name": "State Scientific Research Institute of Organic Chemistry and Technology",
+      "altNames": [
+        "GosNIIOKhT"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 817; concerns: chemical",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "state-scientific-research-institute-of-organic-chemistry-and-technology"
+    },
+    {
+      "key": "eul:RU:temp-avia-arzamas-research-and-production-association-jsc",
+      "list": "jp-eul",
+      "name": "\"Temp-Avia\" Arzamas Research and Production Association JSC",
+      "altNames": [
+        "ANPP TEMP AIR",
+        "ANPP “Temp-Avia”",
+        "Arzamasskoe Scientific Production Enterprise Temp Avia",
+        "Joint Stock Company “Arzamas Research And Production Enterprise“TEMP-AVIA”",
+        "OKB “Temp”",
+        "Public Joint Stock Company “Arzamas Research and Production Enterprise”",
+        "Publichnoe Aktsionernoe Obshchestvo “Arzamasskoe Nauchno-Proizvodstvennoe Predpriyatie “TEMP-AVIA”",
+        "PJSC ANPP Temp Avia",
+        "TEMP-AVIA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 822; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "arzam-scientific-production-enterprise-temp-avia"
+    },
+    {
+      "key": "eul:RU:ural-research-institute-of-composite-materials",
+      "list": "jp-eul",
+      "name": "Ural Research Institute of Composite Materials",
+      "altNames": [
+        "Ural Scientific Research Institute for Composite Materials"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "29 September 2025 revision, No. 832; concerns: missile",
+      "url": "https://www.meti.go.jp/policy/anpo/20250929_3.pdf",
+      "institution": "ural-research-institute-of-composite-materials"
+    }
+  ]
+}

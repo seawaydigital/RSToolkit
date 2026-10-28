@@ -1,0 +1,74 @@
+{
+  "id": "north-university-of-china",
+  "name": "North University of China",
+  "zh": "中北大学",
+  "zhAliases": [],
+  "aliases": [
+    "Taihang Industrial School, North China Vocational School of Ordnance",
+    "Taiyuan Institute of Machinery"
+  ],
+  "acronyms": [
+    "NUC"
+  ],
+  "domains": [
+    "nuc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Taiyuan",
+    "province": "Shanxi",
+    "lat": 38.0149,
+    "lng": 112.4423
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "b8b1fe73-8435-4186-a068-ac63c88ca804",
+    "nro": "north-university-of-china",
+    "ror": "047bp1713",
+    "wikidata": "Q1041978"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shanxi Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory for Electronic Measurement Technology (电子测试技术国防科技重点实验室/电子测试技术国家重点实验室)\n",
+      "Jointly established with China Electronics Technology Group Corporation’s 41",
+      "Underground Target Damage Technology National Defense Key Subject Laboratory (地下目标毁伤技术国防重点学科实验室)",
+      "National Defence Research and Application Center of Precision Plastic Forming Technology (国防科技工业精密塑性成形技术研究应用中心)",
+      "Possibly run with Norinco’s 59"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Mechanics"
+    ],
+    "address": null
+  }
+}

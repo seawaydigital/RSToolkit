@@ -1,0 +1,61 @@
+{
+  "id": "tianjin-polytechnic-university",
+  "name": "Tianjin Polytechnic University",
+  "zh": "天津工业大学",
+  "zhAliases": [],
+  "aliases": [
+    "Tiangong University"
+  ],
+  "acronyms": [
+    "TJPU"
+  ],
+  "domains": [
+    "tiangong.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Tianjin",
+    "province": "Tianjin",
+    "lat": 39.06460000000001,
+    "lng": 117.11299400000007
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "4dd79776-9cb3-4366-a80d-9519e3468509",
+    "ror": "00xsr9m91",
+    "wikidata": "Q7800203"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Tianjin Municipal Government",
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "399 Binshui West Road Extended Line, Xiqing, Tianjin, China"
+  }
+}

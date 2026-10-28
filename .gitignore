@@ -36,3 +36,6 @@ dist-ssr
 
 # Release tarballs from scripts/build-release.sh
 release/
+
+# Monthly tracker watch output (scripts/tracker/watch.mjs)
+watch-report.md

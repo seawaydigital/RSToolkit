@@ -1,0 +1,60 @@
+{
+  "id": "china-university-of-geosciences-wuhan",
+  "name": "China University of Geosciences (Wuhan)",
+  "zh": "中国地质大学",
+  "zhAliases": [
+    "中国地质大学(武汉)"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "CUG"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 30.52074799999999,
+    "lng": 114.40470700000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "b077a484-ba2b-42dd-bf66-e64de94bf2a3"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Ministry of Land and Resources"
+    ],
+    "majorDefenceLaboratories": [
+      "Ministry of Education Key Laboratory on Geological Exploration and Evaluation (地质探测与评估教育部B类重点实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Geological resources and engineering"
+    ],
+    "address": "388 Lumo Road, Hongshan, Wuhan, Hubei, China"
+  }
+}

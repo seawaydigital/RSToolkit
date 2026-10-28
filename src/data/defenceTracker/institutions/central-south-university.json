@@ -1,0 +1,70 @@
+{
+  "id": "central-south-university",
+  "name": "Central South University",
+  "zh": "中南大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "CSU"
+  ],
+  "domains": [
+    "csu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Changsha",
+    "province": "Hunan",
+    "lat": 28.16437,
+    "lng": 112.93250999999998
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "fdc793ee-4c8f-44f2-a102-d7260c66bb2a",
+    "ror": "00f1zfq44",
+    "wikidata": "Q5061828"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Hunan Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Science and Technology for National Defence on High-strength Structural Materials (轻质高强结构材料国防科技重点实验室)",
+      "State Key Laboratory for Powder Metallurgy (粉末冶金国防重点实验室/粉末冶金国家重点实验室)",
+      "National Defense Discipline Laboratory for Astronautical and Aeronautical Materials (航空航天材料国防特色重点专业实验室)",
+      "National Defense Discipline Laboratory for Detection, Guidance and Control Technology (探测制导与控制技术国防特色重点专业实验室)"
+    ],
+    "subsidiaries": [
+      "Central South University Asset Management Company Limited (中南大学资产经营有限公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Control science and engineering",
+      "Materials science and technology"
+    ],
+    "address": "Central South University, Lushan South Road, Yuelu, Changsha, Hunan, China"
+  }
+}

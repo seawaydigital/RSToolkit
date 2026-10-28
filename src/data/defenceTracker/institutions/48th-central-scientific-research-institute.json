@@ -1,0 +1,50 @@
+{
+  "id": "48th-central-scientific-research-institute",
+  "name": "48th Central Scientific Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "48th TsNII Sergiev Posad",
+    "Zargorsk Institute",
+    "Scientific Research Institute of Medicine",
+    "the Virology Center",
+    "48th TsNII Yekaterinburg",
+    "Military Technical Scientific Research Institute",
+    "Center for Military Technical Problems of Biological Defense",
+    "48th TsNII Kirov",
+    "Scientific Research Institute of Microbiology",
+    "Scientific Research Institute of Epidemiology and Hygiene"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "research-institute",
+  "location": {
+    "city": "Sergiev Posad",
+    "province": null,
+    "lat": 56.2575,
+    "lng": 38.115
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "48th-central-scientific-research-institute"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

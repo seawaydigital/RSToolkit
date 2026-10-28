@@ -1,0 +1,25 @@
+Defence Institution Tracker dataset
+Copyright (c) 2026 Andrew Austin
+
+The data files in this folder (src/data/defenceTracker/, including
+institutions/, listings/, meta.json and changelog.json) are licensed under
+the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+
+  Summary:     https://creativecommons.org/licenses/by/4.0/
+  Legal code:  https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may share and adapt the data for any purpose, including commercially,
+as long as you give appropriate credit, link to the licence, and say if you
+made changes. Suggested credit:
+
+  "Defence Institution Tracker, dataset <version>, by Andrew Austin,
+   licensed under CC BY 4.0."
+
+This licence covers the dataset only. The source code in the rest of this
+repository is licensed separately under the MIT licence (see the LICENSE file
+at the repository root).
+
+Third-party material keeps its own terms. Official list entries reproduce
+government publications, and identifiers and names drawn from the Research
+Organization Registry, Wikidata and the MISP galaxy project are CC0. See
+meta.json for the full attribution list.

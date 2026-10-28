@@ -1,0 +1,71 @@
+{
+  "id": "naval-research-academy",
+  "name": "Naval Research Academy",
+  "zh": "中国人民解放军海军研究院",
+  "zhAliases": [
+    "海军研究院",
+    "中国人民解放军海军装备论证研究中心",
+    "海军装备论证研究中心",
+    "中国人民解放军海军装备研究院",
+    "海军装备研究院"
+  ],
+  "aliases": [
+    "PLA Navy Research Academy",
+    "PLA Navy Equipment Academy",
+    "Naval Equipment Academy",
+    "Naval Academy",
+    "Naval Research Institute of PLA",
+    "People's Liberation Army Navy Equipment Academy",
+    "People's Liberation Army Navy Research Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Shanghai",
+    "lat": 39.968,
+    "lng": 116.345
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ad8cac73-9be9-4cf2-96c0-ef918d010c95",
+    "nro": "naval-research-academy",
+    "ror": "02t42bb94"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Information and communication engineering",
+      "Naval architecture and ocean engineering",
+      "Surveying and mapping"
+    ],
+    "address": "China, Beijing, Fengtai, 六里桥北里甲1号"
+  }
+}

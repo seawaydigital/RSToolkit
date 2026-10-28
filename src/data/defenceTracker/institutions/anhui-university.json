@@ -1,0 +1,61 @@
+{
+  "id": "anhui-university",
+  "name": "Anhui University",
+  "zh": "安徽大学",
+  "zhAliases": [],
+  "aliases": [
+    "ānhuī dàxué"
+  ],
+  "acronyms": [
+    "AHU"
+  ],
+  "domains": [
+    "ahu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Hefei",
+    "province": "Anhui",
+    "lat": 31.841541838821644,
+    "lng": 117.25424306994057
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "fac436c9-9e63-4f17-ada5-ef76af7023e6",
+    "ror": "05th6yx34",
+    "wikidata": "Q545540"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Anhui Provincial Government"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "3 Feixi Rd, Shushan Qu, Hefei Shi, Anhui Sheng, China, 230032"
+  }
+}

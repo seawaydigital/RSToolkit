@@ -1,0 +1,59 @@
+{
+  "id": "harbin-university-of-science-and-technology",
+  "name": "Harbin University of Science and Technology",
+  "zh": "哈尔滨理工大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "HRBUST"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 45.712764410855776,
+    "lng": 126.61280044047544
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e9dd0b2f-7ab1-4ffd-8a2c-ef107c388f44"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Heilongjiang Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Cyber",
+      "Electrical engineering",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "52 Xuefu Rd, Nangang Qu, Haerbin Shi, Heilongjiang Sheng, China, 150046"
+  }
+}

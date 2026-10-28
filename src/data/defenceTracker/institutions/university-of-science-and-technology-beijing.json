@@ -1,0 +1,73 @@
+{
+  "id": "university-of-science-and-technology-beijing",
+  "name": "University of Science and Technology Beijing",
+  "zh": "北京科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Beijing Steel and Iron Institute"
+  ],
+  "acronyms": [
+    "USTB"
+  ],
+  "domains": [
+    "ustb.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.98945800000001,
+    "lng": 116.356945
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a8978f64-d593-4073-8fa7-01f4f1b5048e",
+    "ror": "02egmk993",
+    "wikidata": "Q1510516"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Corrosion and Protection (MOE) (腐蚀与防护教育部重点实验室（B类）)",
+      "Norinco 59",
+      "Norinco’s 59",
+      "CETC 13th Research Institute–USTB Joint Research and Development Center (中国电子科技集团公司第13所–北京科技大学联合研发中心)",
+      "This may be known as the Critical Applied Technologies and Materials Technology Development Research Base (关键专用技术材料技术建设研究基地)",
+      "China Electronics Technology Group Corporation’s 13"
+    ],
+    "subsidiaries": [
+      "USTB Foshan Research Institute (北京科技大学佛山研究院)",
+      "USTB Guangdong Research Institute (北京科技大学广东研究院)"
+    ],
+    "topics": [
+      "Materials science and technology",
+      "Metallurgical engineering"
+    ],
+    "address": "University of Science and Technology Beijing, Xueyuan Road, Haidian, Beijing, China"
+  }
+}

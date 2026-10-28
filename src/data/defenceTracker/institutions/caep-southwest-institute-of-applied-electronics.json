@@ -1,0 +1,39 @@
+{
+  "id": "caep-southwest-institute-of-applied-electronics",
+  "name": "Southwest Institute of Applied Electronics",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "nuclear",
+  "location": {
+    "city": "Mianyang",
+    "province": null,
+    "lat": 31.496,
+    "lng": 104.7605
+  },
+  "supervisors": [],
+  "parent": "chinese-academy-of-engineering-physics",
+  "ids": {
+    "nro": "caep-southwest-institute-of-applied-electronics"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

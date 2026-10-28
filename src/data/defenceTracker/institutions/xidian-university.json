@@ -1,0 +1,82 @@
+{
+  "id": "xidian-university",
+  "name": "Xidian University",
+  "zh": "西安电子科技大学",
+  "zhAliases": [
+    "西电大学"
+  ],
+  "aliases": [
+    "Xi'an University of Electronic Science and Technology",
+    "University of Electronic Science and Technology at Xi'an",
+    "Xīān Diànzǐ Kējì Dàxué"
+  ],
+  "acronyms": [],
+  "domains": [
+    "xidian.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.229571,
+    "lng": 108.91721380000001
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "da7b7ceb-1c7a-4892-a0c5-07e815882f70",
+    "ror": "05s92vm98",
+    "wikidata": "Q649906"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Shaanxi Provincial Government",
+      "Xi'an Municipal Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China Electronics Technology Group Corporation (CETC)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Lab of Radar Signal Processing (雷达信号处理国家重点实验室/雷达信号处理国防科技重点实验室)",
+      "National Key Laboratory of Antennas and Microwave Technology (天线与微波技术国防科技重点实验室/天线与微波技术重点实验室)",
+      "Jointly established with CETC’s 14",
+      "National Key Discipline Laboratory of Wide Band-gap Semiconductor (宽带隙半导体技术国防重点学科实验室)",
+      "Key Laboratory of Electronic Information Countermeasure and Simulation Technology, Ministry of Education (电子信息攻防对抗与仿真技术教育部重点实验室/电子信息攻防对抗与仿真技术”教育部重点实验室（B类）)",
+      "Key Laboratory of High-Speed Circuit Design and EMC [Electro-magnetic Compatability], Ministry of Education (超高速电路设计与电磁兼容教育部重点实验/超高速电路设计与电磁兼容教育部国防科技重点实验室)"
+    ],
+    "subsidiaries": [
+      "西安电子科大金讯科技有限责任公司",
+      "西安中电科西电科大雷达技术协同创新研究院有限公司"
+    ],
+    "topics": [
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Mechanical engineering"
+    ],
+    "address": "Xidian University, Hi-tech Shangquan, Yanta, Xi'an, Shaanxi, China"
+  }
+}
