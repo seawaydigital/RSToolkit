@@ -132,19 +132,33 @@ The site currently runs on GitHub Pages at `rs.rdmtoolkit.ca`. Move it in this o
 
 **Retiring GitHub Pages** (only after step 5 checks out)
 
-6. **Keep the old address as a redirect for about three months**, so bookmarks and printed links keep working. GitHub Pages cannot send HTTP redirects. Replace what the `build` job publishes with a single `index.html` that sends visitors to the new address:
+6. **Keep the old address as a redirect for as long as anything may cite it**: at least three months for bookmarks and printed links, and longer once Defence Institution Tracker records copied into research security files cite their permalinks. The redirect must keep the `#…` part of old links (see "Moving to a new address" in §2). A meta refresh drops it and sends every deep link to the home page, so don't use one.
+
+   GitHub Pages cannot send HTTP redirects. Replace what the `build` job publishes with three files: `index.html`, a copy of it named `404.html` (Pages serves that for any other old path), and `redirect.js`.
+
+   `index.html` and `404.html`:
 
    ```html
    <!doctype html>
    <meta charset="utf-8">
+   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'">
    <title>Research Security Toolkit has moved</title>
    <link rel="canonical" href="https://rs.example.lakeheadu.ca/">
-   <meta http-equiv="refresh" content="0; url=https://rs.example.lakeheadu.ca/">
+   <script src="/redirect.js"></script>
    <p>The Research Security Toolkit has moved to <a href="https://rs.example.lakeheadu.ca/">rs.example.lakeheadu.ca</a>.</p>
    ```
 
-   A meta refresh drops the `#tool` part of old links, so they land on the home page. That is acceptable for a temporary redirect.
-7. **Then shut Pages down completely:**
+   `redirect.js`:
+
+   ```js
+   // Sends an old link to the same page at the new address, keeping its path and its #… part.
+   location.replace('https://rs.example.lakeheadu.ca' + location.pathname + location.search + location.hash);
+   ```
+
+   So `rs.rdmtoolkit.ca/#defence-tracker/<institution>` opens the same profile at the new address. The script is its own file, so the page needs no `'unsafe-inline'`, and `location.replace` leaves the old address out of the browser's history. The link on the page is for visitors with JavaScript turned off, and takes them to the new home page.
+
+   If `rs.rdmtoolkit.ca` can instead point at something that sends HTTP 301 or 308 redirects (the new server, or a redirect rule at a DNS or CDN provider), that keeps the `#…` part too and lets Pages close sooner. Keep that redirect just as long.
+7. **Only when the redirect is no longer needed, shut Pages down completely:**
    - In `.github/workflows/deploy.yml`, delete the `build` and `deploy` jobs, which includes the "Write CNAME" step. **Keep `verify`**: branch protection on master requires a check named exactly `verify`.
    - Unpublish the site in the repo's Settings → Pages.
    - Delete the `rs` CNAME record for `rdmtoolkit.ca` at the DNS provider (CanSpace).
