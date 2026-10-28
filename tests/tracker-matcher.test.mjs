@@ -151,6 +151,45 @@ test('a traditional-script or Taiwan line never confirms a mainland institution 
   assert.deepEqual(norm(matchLine('东华大学', idx)), [{ id: 'donghua', confidence: 'confirmed' }]);
 });
 
+// 国际关系学院 is the University of International Relations, and also what
+// many universities call their school of international relations.
+const schools = () =>
+  buildMatchIndex([
+    rec('uir', { name: 'University of International Relations', zh: '国际关系学院', location: at('Beijing') }),
+    rec('pku', { name: 'Peking University', zh: '北京大学', location: at('Beijing') }),
+    rec('hit', { name: 'Harbin Institute of Technology', zh: '哈尔滨工业大学', location: at('Harbin') }),
+    rec('hit-astronautics', { name: 'School of Astronautics', zh: '航天学院', parent: 'hit', location: at('Harbin') }),
+  ]);
+
+test('a school’s name straight after a university’s is that university’s school', () => {
+  assert.deepEqual(norm(matchLine('北京大学国际关系学院', schools())), [{ id: 'pku', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('北京大学 国际关系学院', schools())), [{ id: 'pku', confidence: 'confirmed' }]);
+  assert.deepEqual(matchLine('暨南大学国际关系学院', schools()), []);
+});
+
+test('a school-like name still confirms on its own, after a place, after its own name, or in a list', () => {
+  assert.deepEqual(norm(matchLine('国际关系学院', schools())), [{ id: 'uir', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('北京市海淀区国际关系学院', schools())), [{ id: 'uir', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('国际关系学院国家安全学院', schools())), [{ id: 'uir', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('北京大学、国际关系学院', schools())), [
+    { id: 'pku', confidence: 'confirmed' },
+    { id: 'uir', confidence: 'confirmed' },
+  ]);
+  // Only a school's name reads as another university's unit, not a university's.
+  assert.deepEqual(norm(matchLine('北京大学哈尔滨工业大学', schools())), [
+    { id: 'hit', confidence: 'confirmed' },
+    { id: 'pku', confidence: 'confirmed' },
+  ]);
+});
+
+test('a listed school matches after its own university’s name, not another’s', () => {
+  assert.deepEqual(norm(matchLine('哈尔滨工业大学航天学院', schools())), [
+    { id: 'hit', confidence: 'confirmed' },
+    { id: 'hit-astronautics', confidence: 'confirmed' },
+  ]);
+  assert.deepEqual(norm(matchLine('北京大学航天学院', schools())), [{ id: 'pku', confidence: 'confirmed' }]);
+});
+
 test('a bracketed code is not part of the name, but a bracketed place is', () => {
   const idx = buildMatchIndex([
     rec('cetc-14', { name: 'China Electronics Technology Group Corporation 14th Research Institute (CETC 14)' }),

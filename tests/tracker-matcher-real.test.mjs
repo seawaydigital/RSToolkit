@@ -95,7 +95,23 @@ const CONFIRMED = [
   ['Ioffe Institute, St. Petersburg, Russia', 'federal-state-financed-institution-of-science-physics-and-technology-institute-n'],
   ['zhang@hit.edu.cn', 'harbin-institute-of-technology'],
   ['哈尔滨工业大学', 'harbin-institute-of-technology'],
+  ['国际关系学院', 'university-of-international-relations'],
 ];
+
+// Many universities call their school of international relations 国际关系学院,
+// the University of International Relations' own name.
+const NEVER_MATCHED_TO = [
+  ['北京大学国际关系学院', 'university-of-international-relations'],
+  ['中国人民大学国际关系学院', 'university-of-international-relations'],
+  ['南京大学国际关系学院', 'university-of-international-relations'],
+];
+
+for (const [line, id] of NEVER_MATCHED_TO) {
+  test(`not matched to ${id}: ${line}`, () => {
+    const ms = matchLine(line, index);
+    assert.ok(!ms.some((m) => m.id === id), show(ms));
+  });
+}
 
 // The lists name these institutes on their own. They used to match their
 // groups, which MISP gave the institutes' names as aliases.

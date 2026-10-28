@@ -38,6 +38,11 @@ const ACRONYM_STOPLIST = new Set(['CAS', 'RAS', 'PLA', 'PRC', 'MOD', 'MOE', 'USA
 // A Chinese name that ends like an institution's full name; anything else
 // ("中国电子", "中国航天") is a short form that starts many other names.
 const CJK_SUFFIXES = ['大学', '大學', '学院', '學院', '研究院', '研究所', '公司', '学校', '學校', '中心', '集团', '集團', '实验室', '實驗室', '基地', '部队', '医院', '醫院'];
+// A school's name straight after a university's is that university's school:
+// 北京大学国际关系学院 is Peking University's school of international
+// relations, not the University of International Relations (国际关系学院).
+const SCHOOL = /(学院|學院)$/;
+const UNIVERSITY = /(大学|大學)$/;
 // Separates the affiliations in one line; commas separate the parts of one.
 const AFFILIATIONS = /[;|]/;
 
@@ -70,7 +75,12 @@ export function buildMatchIndex(records) {
   let maxPhraseLen = 0;
 
   for (const r of records) {
-    info.set(r.id, { country: r.country ?? null, city: r.location?.city ? normalizePhrase(r.location.city) : null });
+    info.set(r.id, {
+      country: r.country ?? null,
+      city: r.location?.city ? normalizePhrase(r.location.city) : null,
+      parent: r.parent ?? null,
+      chinese: cjkNames(r).map(compactCjk),
+    });
     const names = latinNames(r).flatMap((name) => [name, withoutCodes(name)].filter(Boolean).map((form) => ({ form, isPrimary: name === r.name })));
     for (const { form: name, isPrimary } of names) {
       // A listed name like "Chinese Academy of Sciences, National Time Service
@@ -211,6 +221,15 @@ function domainMatches(line, index) {
   return out;
 }
 
+// A school's name right after a university's names that university's school,
+// unless the university is the record's own parent.
+function schoolOfAnother(hit, compact, index) {
+  const before = compact.slice(0, hit.start);
+  if (!SCHOOL.test(hit.text) || !UNIVERSITY.test(before)) return false;
+  const parent = index.info.get(index.info.get(hit.id)?.parent);
+  return !(parent?.chinese ?? []).some((name) => before.endsWith(name));
+}
+
 // A Chinese name confirms when it is a full name (it ends like one) in
 // simplified script. Short forms and traditional-script or Taiwan lines,
 // where mainland and Taiwanese names collide, are left to a human.
@@ -224,7 +243,7 @@ function cjkMatches(line, index) {
       hits.push({ id, start: at, end: at + text.length, text, unit });
     }
   }
-  return longestFirst(hits).map(({ id, text, shared, unit }) => ({
+  return longestFirst(hits).filter((hit) => !schoolOfAnother(hit, compact, index)).map(({ id, text, shared, unit }) => ({
     id,
     matchedBy: unit ? 'unit' : 'chinese-name',
     confidence: !shared && !doubtful && CJK_SUFFIXES.some((s) => text.endsWith(s)) ? 'confirmed' : 'check',
