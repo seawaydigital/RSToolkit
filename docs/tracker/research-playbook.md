@@ -39,6 +39,8 @@ Verified profiles follow, longest since verification first, for re-checking.
 3. **Write the evidence**, one item per signal, one or two sentences in your own words, each citing its sources and tagged with the NSGRP Annex B questions it supports (2.1 state influence or control, 2.2 misconduct or lack of transparency, 2.3 military or government ties). The signals and what counts for each are listed on the methodology page.
 4. **Check the identifying details** with sources: names and Chinese names, aliases, email domains, type, supervising agency, campuses and labs, STRA topics, and main-campus coordinates (4 decimals, never the city centre).
 
+Small helpers for these steps are in `scripts/tracker/research/` (its README lists them): applying each edit as a JSON patch, creating the file for a list-only record, reading the rating and review-note counts, trying names and their lookalikes in the batch check, and reading web pages, PDFs (without saving them) and CASI's key-lab directory.
+
 ## Archiving sources
 
 Every source on a verified profile needs an archived copy or a reason.
