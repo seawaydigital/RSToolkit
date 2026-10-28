@@ -1,0 +1,64 @@
+{
+  "id": "henan-university-of-science-and-technology",
+  "name": "Henan University of Science and Technology",
+  "zh": "河南科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Hénán Kējì Dàxué"
+  ],
+  "acronyms": [
+    "HAUST"
+  ],
+  "domains": [
+    "haust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Luoyang",
+    "province": "Henan",
+    "lat": 34.6033169,
+    "lng": 112.429573
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a3f5d9e9-a25c-4930-9d74-e903d84dfb86",
+    "ror": "05d80kz58",
+    "wikidata": "Q5712994"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Henan Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "263 Kaiyuan Ave, Luolong, Luoyang, Henan, China"
+  }
+}

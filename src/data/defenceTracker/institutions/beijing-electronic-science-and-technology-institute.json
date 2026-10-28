@@ -1,0 +1,61 @@
+{
+  "id": "beijing-electronic-science-and-technology-institute",
+  "name": "Beijing Electronic Science and Technology Institute",
+  "zh": "北京电子科技学院",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "BESTI"
+  ],
+  "domains": [
+    "besti.edu.cn"
+  ],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.814,
+    "lng": 116.2925
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5f0b5faa-07c1-432e-a6e8-4260ab05a300",
+    "nro": "beijing-electronic-science-and-technology-institute",
+    "ror": "01xdzh226",
+    "wikidata": "Q4881127"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "CCP General Office"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Cryptography",
+      "Cyber"
+    ],
+    "address": null
+  }
+}

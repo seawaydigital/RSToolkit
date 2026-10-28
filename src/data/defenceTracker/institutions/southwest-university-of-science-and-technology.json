@@ -1,0 +1,71 @@
+{
+  "id": "southwest-university-of-science-and-technology",
+  "name": "Southwest University of Science and Technology",
+  "zh": "西南科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Xīnán Kējìdàxué"
+  ],
+  "acronyms": [
+    "SWUST"
+  ],
+  "domains": [
+    "swust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Mianyang",
+    "province": "Sichuan",
+    "lat": 31.534749320900204,
+    "lng": 104.70574119962725
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7b4422cf-08e0-4e35-be1c-d0d1a025812e",
+    "ror": "04d996474",
+    "wikidata": "Q15919938"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Sichuan Provincial Government",
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Fundamental Science on Nuclear Wastes and Environmental Safety Laboratory (核废物与环境安全国防重点学科实验室)",
+      "Joint Laboratory for Extreme Conditions Matter Properties (极端条件下物质特性实验室)",
+      "Jointly run with the Chinese Academy of Engineering Physics, China’s nuclear weapons program"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Information and communication engineering",
+      "Nuclear science and technology",
+      "Nuclear weapons"
+    ],
+    "address": "59 Qinglong Ave Middle Section, Fucheng Qu, Mianyang Shi, Sichuan Sheng, China, 621002"
+  }
+}

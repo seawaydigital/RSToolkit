@@ -1,0 +1,72 @@
+{
+  "id": "nanjing-normal-university",
+  "name": "Nanjing Normal University",
+  "zh": "南京师范大学",
+  "zhAliases": [
+    "南京师大",
+    "南师大",
+    "南师"
+  ],
+  "aliases": [
+    "Nánjīng Shīfàn Dàxu",
+    "Teacher's College, Nanjing University"
+  ],
+  "acronyms": [
+    "NNU",
+    "NJNU"
+  ],
+  "domains": [
+    "njnu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "lat": 32.06167,
+    "lng": 118.77778
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "13b878c4-fb35-4936-a29c-1482eb8b100f",
+    "ror": "036trcv74",
+    "wikidata": "Q1477812"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangsu Provincial Government",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "Xianlin Campus (仙林校区)",
+      "Suiyuan Campus (随园校区)",
+      "Zijin Campus (紫金校区)"
+    ],
+    "topics": [
+      "Surveying and mapping"
+    ],
+    "address": null
+  }
+}

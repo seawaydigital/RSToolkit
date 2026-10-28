@@ -1,0 +1,83 @@
+{
+  "id": "tsinghua-university",
+  "name": "Tsinghua University",
+  "zh": "清华大学",
+  "zhAliases": [],
+  "aliases": [
+    "Qinghua University"
+  ],
+  "acronyms": [
+    "THU"
+  ],
+  "domains": [
+    "tsinghua.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 40.00864259999999,
+    "lng": 116.34209910000004
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ccf1c87f-ad7e-4480-81c5-87f7be066a78",
+    "ror": "03cve4549",
+    "wikidata": "Q16955"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of High Energy Radiation Imaging Fundamental Science for National Defense (高能辐射成像国防重点学科实验室)",
+      "This laboratory has substantial overlap in personnel with the university’s Key Laboratory of Particle & Radiation Imaging, Ministry of Education (粒子技术与辐射成像教育部重点实验室)",
+      "Located in the Department of Engineering Physics.",
+      "Key Laboratory for High-precision Navigation Technology of Ministry of Education( 教育部“高精度导航技术”国防重点实验室/高精度导航技术教育部重点实验室)",
+      "Precision Instrument Systems and Intelligent Micro Systems Ministry of Education Key Laboratory (B-category) (精密仪器系的智能微系统教育部重点实验室 (B类))",
+      "High-End Laboratory for Military [Artificial] Intelligence (军事智能高端实验室)",
+      "Military-Civil Fusion Laboratory for Peak Technologies (清华大学军民融合国防尖端技术实验室)",
+      "Tsinghua University–AVIC Air-to-air Guided Missile Research Institute Measurement and Control Joint Laboratory (清华大学-中国空空导弹研究院测控联合实验室)",
+      "Tsinghua University–China East Red Satellite Co. Ltd. Micro Satellite Technology Joint Laboratory (清华大学-航天东方红卫星有限公司微小卫星技术联合实验室)",
+      "Tsinghua University–AVIC Shaanxi Baocheng Aviation Instrument Co. Ltd. Micro-inertial technology and components joint laboratory (清华大学-中航工业陕西宝成微惯性技术及器件联合实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Cyber",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Instrument science and technology",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Nuclear weapons",
+      "Physics"
+    ],
+    "address": "30 Shuangqing Rd, Haidian, Beijing, China"
+  }
+}

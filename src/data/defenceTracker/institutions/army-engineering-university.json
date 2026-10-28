@@ -1,0 +1,63 @@
+{
+  "id": "army-engineering-university",
+  "name": "Army Engineering University",
+  "zh": "中国人民解放军陆军工程大学",
+  "zhAliases": [
+    "陆军工程大学"
+  ],
+  "aliases": [
+    "Army Engineering University of the PLA",
+    "PLA University of Science and Technology"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Nanjing",
+    "province": null,
+    "lat": 32.0439,
+    "lng": 118.812
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "fc67e991-b1f9-4d74-afe3-0dbcef332f6b",
+    "nro": "army-engineering-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Ground Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Mechanical engineering"
+    ],
+    "address": "Unnamed Road, Qinhuai Qu, Nanjing Shi, Jiangsu Sheng, China"
+  }
+}

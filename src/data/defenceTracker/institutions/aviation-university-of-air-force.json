@@ -1,0 +1,65 @@
+{
+  "id": "aviation-university-of-air-force",
+  "name": "Aviation University of Air Force",
+  "zh": "中国人民解放军空军航空大学",
+  "zhAliases": [
+    "空军航空大学"
+  ],
+  "aliases": [
+    "PLA Air Force Aviation University",
+    "Aviation University Air Force",
+    "Air Force Aviation University",
+    "Aviation University of PLA Air Force"
+  ],
+  "acronyms": [
+    "AUAF"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Changchun",
+    "province": null,
+    "lat": 43.8429,
+    "lng": 125.3234
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5a8cda07-ad1b-4dbc-a0f9-967cfbef492f",
+    "nro": "aviation-university-of-air-force"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "China, 吉林省长春市朝阳区繁荣路162号"
+  }
+}

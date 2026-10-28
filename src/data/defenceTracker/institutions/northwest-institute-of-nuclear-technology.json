@@ -1,0 +1,74 @@
+{
+  "id": "northwest-institute-of-nuclear-technology",
+  "name": "Northwest Institute of Nuclear Technology",
+  "zh": "西北核技术研究所",
+  "zhAliases": [],
+  "aliases": [
+    "Institute of Northwest Nuclear Technology",
+    "Northwest Nuclear Technology Institute",
+    "Northwest Nuclear Technology",
+    "Northwest Nuclear Technology Research Institute"
+  ],
+  "acronyms": [
+    "NINT"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.3303,
+    "lng": 109.1371
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "8c7bc46f-6ed9-4170-a0ed-ec25a7c50dbf",
+    "nro": "northwest-institute-of-nuclear-technology",
+    "ror": "04svrh266",
+    "wikidata": "Q30274080"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "Central Military Commission (CMC)"
+    ],
+    "majorDefenceLaboratories": [
+      "State Key Laboratory of Laser Interaction with Matter (激光与物质相互作用国家重点实验室)",
+      "Jointly run with the Chinese Academy of Sciences’ Changchun Institute of Optics, Fine Mechanics and Physics (中科院长春光学精密机械与物理研究所)",
+      "State KeyLab of Intense Pulsed Radiation Simulation and Effect (强脉冲辐射环境模拟与效应国家重点实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Chemistry",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Nuclear science and technology",
+      "Optical engineering",
+      "Physics"
+    ],
+    "address": "28 Pingyu Rd, Lintong Qu, Xian Shi, Shaanxi Sheng, China, 710025"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "beijing-university-of-posts-and-telecommunications",
+  "name": "Beijing University of Posts and Telecommunications",
+  "zh": "北京邮电大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "BUPT"
+  ],
+  "domains": [
+    "bupt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9602,
+    "lng": 116.3519
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "2bfa3a51-c4ab-43c0-b5e4-20cb43520487",
+    "nro": "beijing-university-of-posts-and-telecommunications",
+    "ror": "04w9fbh59",
+    "wikidata": "Q4881210"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of the Ministry of Education Space Robotics (空间机器人技术教育部重点实验室 (B类)/ 空间机器人技术教育部国防重点实验室)",
+      "Ministry of Education Key Laboratory on Network and Information Attack and Defense Technology (网络与信息攻防技术教育部重点实验室 (B类))"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Information and communication engineering",
+      "Robotics"
+    ],
+    "address": "Bei Jing You Dian Da Xue Tu Shu Guan, Bei Tai Ping Zhuang, Haidian Qu, Beijing Shi, China"
+  }
+}

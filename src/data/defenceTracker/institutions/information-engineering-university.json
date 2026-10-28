@@ -1,0 +1,96 @@
+{
+  "id": "information-engineering-university",
+  "name": "Information Engineering University",
+  "zh": "中国人民解放军信息工程大学",
+  "zhAliases": [
+    "中国人民解放军外国语学院",
+    "洛阳外语学院",
+    "郑州测绘学院",
+    "国家数字交换系统工程技术研究中心",
+    "数学工程与先进计算国家重点实验室"
+  ],
+  "aliases": [
+    "Luoyang Foreign Languages University",
+    "PLA Foreign Languages University",
+    "Luoyang Foreign Language Institute",
+    "Luoyang University",
+    "Zhengzhou Institute of Surveying and Mapping",
+    "Zhengzhou Information Science and Technology Institute",
+    "National Digital Switching System Engineering and Technology Research Center",
+    "State Key Laboratory of Mathematical Engineering and Advanced Computing"
+  ],
+  "acronyms": [
+    "PLAIEU",
+    "IEU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Zhengzhou",
+    "province": null,
+    "lat": 34.8154,
+    "lng": 113.5679
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "95675d9b-cc29-4343-8b9d-e8a0442b7a51",
+    "nro": "information-engineering-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Strategic Support Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "Political Department (政治部)",
+      "S&T Research Department (科研部)",
+      "Training Department (训练部)",
+      "Command Information Systems Academy (指挥信息系统学院)",
+      "Electronic Technology Academy (电子技术学院)",
+      "Encryption Engineering Academy (密码工程学院)",
+      "Luoyang Foreign Language Academy (洛阳外国语学院)",
+      "Geospatial Information Academy (地理空间信息学院)",
+      "Cyberspace Security Academy (网络空间安全学院)",
+      "Navigation and Aerospace Target Engineering Academy (导航与空天目标工程学院)",
+      "Command Officer Basic Education Academy (指挥军官基础教育学院)",
+      "Blockchain Academy (区块链研究院; located in Shenzhen)",
+      "China National Digital Switching System Engineering & Technological R&D Center (国家数字交换系统工程研究中心 / 国家数字交换系统工程技术研究中心)",
+      "State Key Laboratory of Mathematical Engineering and Advanced Computing (数学工程与先进计算国家重点实验室)",
+      "Information Technology Research Institute (信息技术研究所)",
+      "Fuzhou Sub-Academy (福州分院)",
+      "Changshu Sub-Academy (常熟分院)",
+      "Songshan Training Base (嵩山训练基地)"
+    ],
+    "topics": [
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cryptography",
+      "Cyber",
+      "Information and communication engineering",
+      "Surveying and mapping"
+    ],
+    "address": null
+  }
+}

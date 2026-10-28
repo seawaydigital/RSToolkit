@@ -1,0 +1,79 @@
+{
+  "id": "harbin-engineering-university",
+  "name": "Harbin Engineering University",
+  "zh": "哈尔滨工程大学",
+  "zhAliases": [],
+  "aliases": [
+    "Hāěrbīn Gōngchéng Dàxué"
+  ],
+  "acronyms": [
+    "HEU"
+  ],
+  "domains": [
+    "hrbeu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "lat": 45.7749,
+    "lng": 126.6765
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d691c2a3-4eaa-4ce4-8495-3821168ec8ce",
+    "nro": "harbin-engineering-university",
+    "ror": "03x80pn82",
+    "wikidata": "Q23102"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Heilongjiang Provincial Government",
+      "Ministry of Education (MOE)",
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Underwater Acoustic Technology (水声技术国防科技重点实验室/水声技术国家重点实验室)",
+      "National Defense Key Laboratory of Underwater Vehicles Technology (水下机器人技术国防科技重点实验室/水下机器人技术国家级重点实验室)",
+      "May also be known as the Science and Technology on Underwater Vehicle Laboratory (军用水下智能机器人技术国防科技重点实验室), literally the ‘Military-use Underwater Intelligent Robot Technology National Defence Science and Technology Key Laboratory’",
+      "National Defense Key Subject Laboratory for Nuclear Safety and Simulation Technology (核安全与仿真技术国防重点学科实验室)",
+      "Multi-hull Ship Technology Key Laboratory of Fundamental Science for National Defence (多体船技术国防重点学科实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Mechanics",
+      "Naval architecture and ocean engineering",
+      "Nuclear science and technology",
+      "Nuclear weapons",
+      "Robotics",
+      "Stealth technology"
+    ],
+    "address": null
+  }
+}

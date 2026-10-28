@@ -1,0 +1,100 @@
+{
+  "id": "northwestern-polytechnical-university",
+  "name": "Northwestern Polytechnical University",
+  "zh": "西北工业大学",
+  "zhAliases": [],
+  "aliases": [
+    "Northwest Polytechnic University",
+    "Northwest Polytechnical University",
+    "Northwestern Polytechnic University",
+    "State Northwest Institute of Engineering",
+    "Xīběi Gōngyè Dàxué",
+    "Северо-западный политехнический университет"
+  ],
+  "acronyms": [
+    "NWPU",
+    "NPU"
+  ],
+  "domains": [
+    "nwpu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.2426,
+    "lng": 108.9061
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9a5a347c-e0a8-4ae5-88fa-d8c4b462b1ca",
+    "nro": "northwestern-polytechnical-university",
+    "ror": "01y0j0j86",
+    "wikidata": "Q832550"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "Fundamental Science on Aircraft Structural Mechanics and Strength Laboratory (飞行器结构力学与强度技术国防重点学科实验室)",
+      "New Concept of Jet Propulsion Technology Key Laboratory (新概念喷气推进技术国防重点学科实验)",
+      "Key Laboratory for Space Biosciences and Biotechnology（空间生物实验模拟技术国防重点学科实验室)",
+      "National Defence Science, Technology and Industry for Precision Forging and Ring Rolling Technology Innovation Center(国防科技工业精密锻造与环轧技术创新中心)",
+      "State Key Laboratory for Solidification Processing (凝固技术国家重点实验室)",
+      "State Key Laboratory of UAV Special Technology (无人机特种技术国家重点实验室/无人机特种技术国防科技重点实验室)",
+      "State Key Laboratory for Underwater Information and Control (水下信息与控制重点实验室/水下信息处理与控制国防科技重点实验室)",
+      "Jointly established by NWPU and China Shipbuilding Industry Corporation’s 705 Institute",
+      "May be another name for the National Defense Key Laboratory of Torpedo Guidance Technology",
+      "Science and Technology on Thermostructural Composite Materials Laboratory (超高温结构复合材料重点实验室/超高温结构复合材料国防科技重点实验室)",
+      "Science and Technology on Combustion, Internal Flow and Thermo-structure Laboratory (燃烧、热结构与内流场重点实验室/固体火箭发动机燃烧、热结构与内流场国防科技重点实验室)",
+      "Jointly established by NWPU and China Aerospace Science and Technology Group’s 4",
+      "State Key Laboratory of Aerodynamic Design and Research (翼型、叶栅空气动力学国家级重点实验室 / 翼型、叶栅空气动力学国防科技重点实验室)",
+      "National Defense Key Laboratory of Torpedo Guidance Technology (鱼雷制导技术国防科技重点实验室)",
+      "It is unclear whether this lab still exists. The lab was jointly established by NWPU and China Shipbuilding Industry Corporation’s 705 Institute and was headed by the director of the 705 Institute.",
+      "May be another name for the State Key Laboratory for Underwater Information and Control",
+      "National Key Laboratory of Aerospace Flight Dynamics (航天飞行动力学技术重点实验室)",
+      "Jointly established by NWPU and Beijing Aerospace Control Center, a key organization in the PLA’s manned space program.",
+      "Key Laboratory of Information Fusion, Ministry of Education (信息融合技术教育部重点实验室(B类))"
+    ],
+    "subsidiaries": [
+      "Xi'an Aisheng Technology Group (西安爱生技术集团公司), aka Northwestern Polytechnical University 365th Research Institute or Xi’an ASN Technology Group",
+      "Bright Laser Technology (西安铂力特增材技术股份有限公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Biology",
+      "Control science and engineering",
+      "Cyber",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Mechanics",
+      "Seven Sons of National Defence"
+    ],
+    "address": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "cas-shenyang-institute-of-automation",
+  "name": "China Academy of Science - Shenyang Institute of Automation",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Shenyang",
+    "province": null,
+    "lat": 41.7615,
+    "lng": 123.4411
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "cas-shenyang-institute-of-automation"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

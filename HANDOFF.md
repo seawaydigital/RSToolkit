@@ -2,7 +2,7 @@
 
 Everything needed to build, host, configure, and maintain the Research Security Toolkit.
 
-**Last updated: 2026-10-03**
+**Last updated: 2026-10-25**
 
 ---
 
@@ -37,6 +37,16 @@ BASE_PATH=/research-security/ npm run build
 
 Both slashes matter. This rewrites every asset URL in the output; it has been verified working.
 
+### Moving to a new address
+
+Every link into the site is a `#…` address (`/#nro-lookup`, `/#defence-tracker/<institution>`), and the part after `#` never reaches the server. When the site moves, the old address must redirect in a way that keeps it:
+
+- An HTTP **301 or 308** redirect keeps it: browsers carry the `#…` part across a redirect whose target has none.
+- Where the old host can only serve files (GitHub Pages), use a small redirect page whose script sends the browser to the new origin plus `location.pathname + location.hash`. Keep the script in its own file, so the page needs no `'unsafe-inline'`.
+- A `<meta http-equiv="refresh">` redirect to a fixed address **drops it**, so every deep link lands on the home page. Don't use one.
+
+Keep the redirect for as long as anything may cite the old links. Records copied from the Defence Institution Tracker into research security files include their permalinks.
+
 ### Build requirements
 
 Node 20 or newer — `package.json`'s `engines` field states that floor. The GitHub Actions workflow and `.nvmrc` both use **Node 24**, which is what the deployed site is actually built with; treat that as the tested configuration and `>=20` as the supported range. The workflow is a working reference even if you deploy differently.
@@ -45,7 +55,7 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 
 ## 3. Configure before going live
 
-### 3a. `src/siteConfig.js` — six values
+### 3a. `src/siteConfig.js` — seven values
 
 | Value | Change it to | Why it matters |
 |---|---|---|
@@ -55,6 +65,7 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 | `WEB_HOST` | **Who serves the files**, e.g. `'Lakehead University web servers'` | Named on the How This Site Works page, which promises a *complete* list of every party that sees a request from the site. If a proxy or CDN sits in front, name it too (e.g. `'Cloudflare, which forwards them to Lakehead University web servers'`). Leaving it as `GitHub Pages` after moving makes the privacy page false. |
 | `ENABLE_PROXIMITY_SEARCH` | `false` if no user input may leave the browser | The NRO map's proximity panel is the **only** feature that sends what a user types off the device (to OpenStreetMap and Wikipedia). `false` removes the panel and every mention of it on How This Site Works and in the FAQ. If you turn it off, also delete the two geocoder hosts from `connect-src` (in `index.html` and in your header CSP). |
 | `SHOW_SISTER_SITE_CARD` | `false` if you don't want an off-site link | Controls the "RDM Toolkit" card at the bottom of the sidebar, which links to rdmtoolkit.ca — a separate project by the original author |
+| `ENABLE_DEFENCE_TRACKER` | Leave `false` until the tracker's launch gates are met (§7a) | Shows the Defence Institution Tracker, its links from other tools, and its open-data files. While `false`, none of it is in the build. |
 
 ### 3b. `index.html` — nothing to edit for the domain
 
@@ -73,6 +84,8 @@ The MIT `LICENSE` retains the original copyright line. That is normal and correc
 ### 3d. Ownership and branding
 
 The site uses a Cobalt + Blaze palette aligned with Lakehead University branding, but **it makes no ownership claim anywhere in the UI** — no logo, no "published by", no institutional footer. That was deliberate: it is your decision, not ours. If you want attribution, `src/components/layout/SiteFooter.jsx` is the place, and it is a deliberately slim persistent bar (35px desktop / 61px mobile), so keep additions short.
+
+One deliberate, limited exception: the Defence Institution Tracker's dataset is licensed CC BY 4.0, which requires naming the licensor, so its methodology page and data downloads say "Dataset © 2026 Andrew Austin, CC BY 4.0". That names who licenses the data, not who owns the site, and appears nowhere else.
 
 ---
 
@@ -371,7 +384,7 @@ This is **Vite's dev-server HMR client** (`node_modules/vite/dist/client/client.
 
 ## 5. Third-party services the site calls at runtime
 
-Three external dependencies, and none of them is contacted on an ordinary page load. The map tiles load only on the NRO map, and the geocoders are called only when a user presses *Find*. The fonts (Archivo, Inter, JetBrains Mono) are **self-hosted**: they come from npm (`@fontsource-variable/inter`, `@fontsource-variable/archivo`, `@fontsource/jetbrains-mono`) and are bundled into `dist/assets/`, so no font service sees a visitor. `vite.config.js` stops Vite from inlining small font files as `data:` URIs, because the CSP's `font-src 'self'` would block them. Keep that setting.
+Three external dependencies, and none of them is contacted on an ordinary page load. The map tiles load only on the NRO map (and on the Defence Institution Tracker's map view, when the tracker is switched on), and the geocoders are called only when a user presses *Find*. The fonts (Archivo, Inter, JetBrains Mono) are **self-hosted**: they come from npm (`@fontsource-variable/inter`, `@fontsource-variable/archivo`, `@fontsource/jetbrains-mono`) and are bundled into `dist/assets/`, so no font service sees a visitor. `vite.config.js` stops Vite from inlining small font files as `data:` URIs, because the CSP's `font-src 'self'` would block them. Keep that setting.
 
 | Service | Used for | If you must remove it |
 |---|---|---|
@@ -438,19 +451,37 @@ The three files still marked ⚠️ Review are guidance and definitional content
 
 Sanctions and the NRO list move fastest. Cross-check against the [Global Affairs Canada sanctions index](https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/current-actuelles.aspx).
 
+### 7a. The Defence Institution Tracker
+
+A free, open reference on Chinese, Russian and Iranian research institutions' military and security ties, with sourced ratings and the official lists each appears on. It is **switched off** (`ENABLE_DEFENCE_TRACKER = false`) until the launch gates below are met. Preview it with `npm run dev:tracker`. The full process is in [docs/tracker/research-playbook.md](docs/tracker/research-playbook.md); the data rules are in [src/data/defenceTracker/README.md](src/data/defenceTracker/README.md).
+
+**What the maintainer does (about a day a month):**
+
+1. On the 1st, the `Tracker watch` workflow opens an issue, "Tracker watch — YYYY-MM": changes on the official lists (US Consolidated Screening List, Canadian sanctions list, the NRO page), lists it couldn't check, and cited sources that no longer answer or have no archived copy. It never changes the repository. It runs with a token that can read the code and write issues, nothing else.
+2. Run `npm run tracker:sync` on a branch, review the diff, run `npm test`, and merge. Official-list data is public, so it can merge before launch.
+3. Check Japan's End User List by hand (METI's pages refuse scripts), and the US Section 1286 list when the issue flags a new file on its page, and copy any new edition into `src/data/defenceTracker/listings/` (the playbook's hand-check step says how).
+4. Fix or archive the sources the issue lists (`npm run tracker:archive`).
+5. Verify or re-check 15 to 25 profiles (`npm run tracker:next` lists what's next).
+6. Bump the dataset version (`meta.json`, `YYYY.MM`), add a `changelog.json` entry, publish, and close the issue.
+
+**Before launch**, verified and rated profiles live on the `tracker/content` branch, not `master`. The tracker is switched on only when all four gates are met: a Lakehead review of the method and a sample of profiles; hosting on the final address, or a redirect that keeps the `#…` part of links (§2); an accessibility pass with the ACCESSIBILITY.md checklist; and a security review of the watch workflow and scripts, with `npm audit`.
+
+**Licence:** the dataset is CC BY 4.0, © 2026 Andrew Austin (see §3d). The code stays MIT.
+
 ---
 
 ## 8. Known gaps and deliberate omissions
 
 Honest inventory of what is not finished.
 
-- **Automated tests cover the flowchart graphs only.** `npm test` (Node's built-in runner, no dependencies) checks every flowchart for broken links, unreachable nodes and dead ends. There are no component or end-to-end tests. The other quality gates are `npm audit`, `npm run lint` (including the a11y rules), a clean production build, and the manual accessibility checklist. All of them run in CI on every pull request.
+- **Automated tests cover the flowchart graphs and the Defence Institution Tracker's logic and data.** `npm test` (Node's built-in runner, no dependencies) checks every flowchart for broken links, unreachable nodes and dead ends, and checks the tracker's rubric, name matcher, record schema, list sync, routing and upkeep scripts. There are no component or end-to-end tests. The other quality gates are `npm audit`, `npm run lint` (including the a11y rules), a clean production build, and the manual accessibility checklist. All of them run in CI on every pull request.
 - **NRO map pin highlight is not wired.** Clicking a row in the NRO table highlights the row but not the corresponding map pin. Implementing it means holding refs to individual markers inside the cluster group and opening the popup programmatically. The dead prop that half-suggested this was removed; the idea is recorded here instead.
 - **Three NRO city labels are known to be imprecise** (coordinates are correct in all three cases):
   - `33rd-tsnii` — labelled Moscow; actually in Shikhany-2, Saratov Oblast.
   - `peac-institute-of-multiscale-sciences` — labelled Mianyang; headquartered at Sichuan University, Chengdu.
   - `48th-central-scientific-research-institute` — has three branches (Sergiev Posad-6, Yekaterinburg, Kirov); the federal list carries one entry.
 - **22 CAEP sub-institutes have approximate coordinates.** They sit inside the ~5 km² Mianyang Science City compound at deterministic offsets from `31.4974, 104.7589`. They render correctly but could be tightened with better public address data.
+- **Defence Institution Tracker, before launch:** no profile is verified yet, so every rating comes from the official lists; the US Section 1286 list and Japan's End User List are entered by hand from their PDFs, so each new edition has to be copied in; there is no main Chinese Academy of Sciences record; the archive script's Wayback saves and the watch workflow's issue step have not run live yet. The map shows only the institutions with known coordinates (205 of 734 today) and says so; the list view shows all of them.
 - **Flowchart Full View nodes are not keyboard-focusable.** This is the conforming-alternate-version route, not an oversight — Guided Mode is the accessible equivalent. See ACCESSIBILITY.md §4.
 
 ---
@@ -463,5 +494,6 @@ Honest inventory of what is not finished.
 | [CLAUDE.md](CLAUDE.md) | Full architecture reference — conventions, design tokens, per-tool decisions, data shapes. The most detailed document here. |
 | [ACCESSIBILITY.md](ACCESSIBILITY.md) | WCAG/AODA remediation record and the manual test checklist |
 | [`src/data/toolRegistry.js`](src/data/toolRegistry.js) | Single source of truth for navigation and the home page |
-| [`src/siteConfig.js`](src/siteConfig.js) | The six values you need to review |
+| [`src/siteConfig.js`](src/siteConfig.js) | The seven values you need to review |
+| [docs/tracker/research-playbook.md](docs/tracker/research-playbook.md) | How Defence Institution Tracker profiles are researched and kept current, and its launch gates |
 | [SECURITY.md](SECURITY.md) | Security audit record, threat model, supply-chain controls, and how to report a vulnerability |

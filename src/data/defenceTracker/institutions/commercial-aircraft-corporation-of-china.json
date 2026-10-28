@@ -1,0 +1,58 @@
+{
+  "id": "commercial-aircraft-corporation-of-china",
+  "name": "Commercial Aircraft Corporation of China",
+  "zh": "中国商用飞机有限责任公司",
+  "zhAliases": [
+    "中国商飞"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "COMAC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 31.1864164,
+    "lng": 121.49135760000001
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "2bc5b9ee-cb57-42e6-8fc9-1f8f96f90187"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Materials science and technology"
+    ],
+    "address": "China, 上海市浦东新区世博大道1919号"
+  }
+}

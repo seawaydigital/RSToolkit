@@ -6,7 +6,9 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // .superpowers/ holds git-ignored working files (plan ledgers, test renders);
+  // .worktrees/ holds other branches' checkouts, which lint their own files.
+  globalIgnores(['dist', '.superpowers', '.worktrees']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -17,7 +19,8 @@ export default defineConfig([
     ],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      // __TRACKER_ENABLED__ is the tracker launch flag, compiled in by vite.config.js.
+      globals: { ...globals.browser, __TRACKER_ENABLED__: 'readonly' },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
@@ -39,10 +42,10 @@ export default defineConfig([
     },
   },
   {
-    // node:test files run in Node, not the browser, and use the .mjs extension,
-    // so they fall outside the **/*.{js,jsx} block above and would otherwise get
-    // zero lint coverage.
-    files: ['tests/**/*.mjs'],
+    // node:test files and the tracker maintenance scripts run in Node, not the
+    // browser, and use the .mjs extension, so they fall outside the
+    // **/*.{js,jsx} block above and would otherwise get zero lint coverage.
+    files: ['tests/**/*.mjs', 'scripts/**/*.mjs'],
     extends: [js.configs.recommended],
     languageOptions: {
       globals: globals.node,

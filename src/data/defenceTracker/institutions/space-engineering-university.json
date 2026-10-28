@@ -1,0 +1,79 @@
+{
+  "id": "space-engineering-university",
+  "name": "Space Engineering University",
+  "zh": "中国人民解放军战略支援部队航天工程大学",
+  "zhAliases": [],
+  "aliases": [
+    "PLA Equipment Academy",
+    "Aerospace Engineering University",
+    "A/SEU",
+    "PLA Equipment Command and Technology Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 40.3556,
+    "lng": 116.6583
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a34b4b01-24b9-4fac-830a-0358567f7e89",
+    "nro": "space-engineering-university",
+    "ror": "04rj1td02",
+    "wikidata": "Q10873109"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Strategic Support Force"
+    ],
+    "majorDefenceLaboratories": [
+      "Space Simulations Training Center (航天模拟训练中心)",
+      "Aerospace Experimental Training Center (航天试验训练中心)",
+      "Aerospace Monitoring and Control Station (航天测控站)",
+      "National Key Laboratory of Laser Propulsion and Applications (激光推进及其应用国家重点实验室)",
+      "National Laboratory of Electronic Information Equipment System (电子信息装备体系研究国防科技重点实验室)"
+    ],
+    "subsidiaries": [
+      "Graduate Academy",
+      "Space Command Academy",
+      "Space Technology Academy",
+      "Space Information Academy",
+      "Space Service Academy",
+      "Space Non-Commissioned Officer School",
+      "Basic Teaching Department"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": null
+  }
+}

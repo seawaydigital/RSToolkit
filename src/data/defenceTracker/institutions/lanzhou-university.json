@@ -1,0 +1,70 @@
+{
+  "id": "lanzhou-university",
+  "name": "Lanzhou University",
+  "zh": "兰州大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "LZU"
+  ],
+  "domains": [
+    "lzu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Lanzhou",
+    "province": "Gansu",
+    "lat": 36.04775743033353,
+    "lng": 103.85859458650816
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7d4524fc-9808-4df0-9d01-9278beb91e86",
+    "ror": "01mkqqe32",
+    "wikidata": "Q4475799"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Ministry of Education Key Laboratory of Special Function Materials and Structure Design ( 特殊功能材料与结构设计教育部重点实验室（B类）)",
+      "Also referred to as the ‘Ministry of Education Key Laboratory of Special Function XX’ (特殊功能XX教育部重点实验室（B类）)",
+      "Gansu Provincial Nuclear Energy and Nuclear Technology Military-Civil Fusion Cooperative Innovation Center (甘肃省核能核技术军民融合协同创新中心)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Chemistry",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanics",
+      "Nuclear science and technology",
+      "Stealth technology"
+    ],
+    "address": "222 Tianshui S Rd, Chengguan Qu, Lanzhou Shi, Gansu Sheng, China"
+  }
+}

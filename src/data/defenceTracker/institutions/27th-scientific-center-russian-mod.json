@@ -1,0 +1,41 @@
+{
+  "id": "27th-scientific-center-russian-mod",
+  "name": "27th Scientific Center of the Russian Ministry of Defense",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "27th NTs"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "research-institute",
+  "location": {
+    "city": "Moscow",
+    "province": null,
+    "lat": 55.7657,
+    "lng": 37.6795
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "27th-scientific-center-russian-mod"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

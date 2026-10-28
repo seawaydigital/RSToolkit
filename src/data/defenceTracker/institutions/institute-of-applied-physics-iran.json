@@ -1,0 +1,44 @@
+{
+  "id": "institute-of-applied-physics-iran",
+  "name": "Institute of Applied Physics",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Applied Physics Institute",
+    "Institute for Applied Physics"
+  ],
+  "acronyms": [
+    "IAP"
+  ],
+  "domains": [],
+  "country": "IR",
+  "type": "research-institute",
+  "location": {
+    "city": "Tehran",
+    "province": null,
+    "lat": 35.742,
+    "lng": 51.445
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "institute-of-applied-physics-iran"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

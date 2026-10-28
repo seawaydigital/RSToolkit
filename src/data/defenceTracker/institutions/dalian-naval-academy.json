@@ -1,0 +1,64 @@
+{
+  "id": "dalian-naval-academy",
+  "name": "Dalian Naval Academy",
+  "zh": "中国人民解放军海军大连舰艇学院",
+  "zhAliases": [
+    "海军大连舰艇学院"
+  ],
+  "aliases": [
+    "PLA Dalian Naval Academy",
+    "Dalian Naval Academy of the PLA"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Dalian",
+    "province": "Liaoning",
+    "lat": 38.8766,
+    "lng": 121.6505
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "68924fff-1847-4a39-9819-a2344820165a",
+    "nro": "dalian-naval-academy",
+    "ror": "014c1mf08",
+    "wikidata": "Q1018771"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Information and communication engineering",
+      "Surveying and mapping"
+    ],
+    "address": "China, Liaoning, Dalian, Zhongshan, Jiefang Road, 大连舰艇学院"
+  }
+}

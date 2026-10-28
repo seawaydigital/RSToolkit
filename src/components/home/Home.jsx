@@ -1,12 +1,15 @@
 import { CATEGORIES } from '../../data/toolRegistry';
+import { TRACKER_ENABLED } from '../../data/defenceTracker/enabled';
 
 const SCENARIOS = [
   {
     id: 'new-partner',
-    label: 'Checking a new research partner?',
+    label: TRACKER_ENABLED ? 'Checking a new research partner or co-author?' : 'Checking a new research partner?',
     icon: '🔍',
-    desc: 'Verify whether a potential collaborator or funder is on the Named Research Organizations list and understand the compliance implications.',
-    tools: ['nro-lookup', 'strac-flowchart', 'risk-mitigation'],
+    desc: TRACKER_ENABLED
+      ? 'Check whether a collaborator’s institution is on the Named Research Organizations list or other official lists, see its documented defence ties, and understand the compliance implications.'
+      : 'Verify whether a potential collaborator or funder is on the Named Research Organizations list and understand the compliance implications.',
+    tools: ['nro-lookup', 'defence-tracker', 'strac-flowchart', 'risk-mitigation'],
   },
   {
     id: 'partnership-grant',
