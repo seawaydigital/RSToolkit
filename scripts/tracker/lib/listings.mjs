@@ -21,7 +21,9 @@ const CSL_LISTS = {
 const COUNTRIES = new Set(['CN', 'RU', 'IR']);
 const CA_COUNTRIES = { China: 'CN', Russia: 'RU', Iran: 'IR' };
 
-const RESEARCH = /universit|institute|academy|college|laborator|research|polytechnic|scientific|school of|science and technology|design department/i;
+// National supercomputing centres are research facilities whose names carry
+// no research word ("National Supercomputing Center Wuxi").
+const RESEARCH = /universit|institute|academy|college|laborator|research|polytechnic|scientific|school of|science and technology|design department|supercomput/i;
 const COMMERCIAL = /\b(co\.?,?\s*ltd|company|limited|llc|trading|import|export|bank|group|corporation|holding|plant|factory|zavod)\b/i;
 const STRONG_RESEARCH = /universit|research institute|academy of|institute of/i;
 // A group's unit named after the group ("Aviation Industry Corporation of

@@ -108,10 +108,46 @@ function linkListedUnits(records, byId) {
   }
   for (const r of records) {
     const parent = r.parent ? byId.get(r.parent) : null;
-    const lists = r.listings.filter((l) => l.status === 'listed').map((l) => l.label);
+    // A listing through the parent's own entry (see addAliasEntries) is the parent's.
+    const lists = r.listings.filter((l) => l.status === 'listed' && l.entries.some((e) => !e.alias)).map((l) => l.label);
     if (parent && parent !== r && lists.length) parent.units.push({ id: r.id, name: r.name, lists });
   }
   for (const r of records) r.units.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// The forms of an alias that can name a unit: as written, before a bracketed
+// note ("… Chemistry (a.k.a., China Academy of Engineering Physics (CAEP)'s
+// 902 Institute)") and before a comma ("The High Power Laser Laboratory,
+// Shanghai").
+const aliasForms = (alias) => [alias, alias.split('(')[0], alias.split(',')[0]].map(normalizePhrase).filter((p) => p.includes(' '));
+
+// A list can name a unit among its parent's aliases: the Entity List's entry
+// for CAEP gives its institutes ("a.k.a. … Southwest Institute of Fluid
+// Physics"). That entry covers the unit, so the unit is listed through it,
+// with the alias that names it, unless the list gives the unit an entry of
+// its own. Only units the data already links to the parent count, since the
+// lists' aliases are loose.
+function addAliasEntries(records, byId, entriesByList) {
+  const unitsOf = new Map();
+  for (const r of records) {
+    const parentId = r.parent ? (byId.get(r.parent)?.id ?? r.parent) : null;
+    if (!parentId || parentId === r.id) continue;
+    if (!unitsOf.has(parentId)) unitsOf.set(parentId, []);
+    unitsOf.get(parentId).push({ id: r.id, names: new Set([r.name, ...(r.aliases ?? [])].map(normalizePhrase)) });
+  }
+  for (const forList of entriesByList.values()) {
+    const found = [];
+    for (const [parentId, entries] of forList) {
+      for (const unit of unitsOf.get(parentId) ?? []) {
+        if (forList.has(unit.id)) continue;
+        for (const e of entries) {
+          const alias = (e.altNames ?? []).find((a) => aliasForms(a).some((form) => unit.names.has(form)));
+          if (alias) found.push([unit.id, { ...e, alias }]);
+        }
+      }
+    }
+    for (const [id, e] of found) forList.set(id, [...(forList.get(id) ?? []), e]);
+  }
 }
 
 export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
@@ -160,6 +196,7 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
   for (const record of records) {
     for (const alias of record.ids?.nroAlso ?? []) if (!byId.has(alias)) byId.set(alias, record);
   }
+  addAliasEntries(records, byId, entriesByList);
 
   const coverage = (snapshotName) => snapshots[snapshotName]?.coverage ?? 'pending';
   for (const record of records) {

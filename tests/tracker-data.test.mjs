@@ -185,6 +185,52 @@ test('a group is not listed for its units, and its profile names them', () => {
   assert.deepEqual(listedOn(named('China Academy of Space Technology (CAST)')?.id), ['jp-eul']);
 });
 
+// The Entity List and Japan's End User List give CAEP's institutes as aliases
+// in CAEP's own entry, so each institute is listed through that entry.
+test('CAEP’s institutes are listed through the entries that give them as CAEP’s aliases', () => {
+  const institutes = [
+    'caep-southwest-computing-center',
+    'caep-southwest-institute-of-applied-electronics',
+    'caep-southwest-institute-of-chemical-materials',
+    'caep-southwest-institute-of-electronic-engineering',
+    'caep-southwest-institute-of-environmental-testing',
+    'caep-southwest-institute-of-explosives-and-chemical-engineering',
+    'caep-southwest-institute-of-fluid-physics',
+    'caep-southwest-institute-of-general-designing-and-assembly',
+    'caep-southwest-institute-of-machining-technology',
+    'caep-southwest-institute-of-materials',
+    'caep-southwest-institute-of-nuclear-physics-and-chemistry',
+    'caep-southwest-institute-of-research-and-applications-of-special-materials',
+    'caep-southwest-institute-of-structural-mechanics',
+    'caep-high-power-laser-laboratory',
+    'caep-institute-of-applied-physics-and-computational-mathematics',
+  ];
+  for (const id of institutes) {
+    for (const listId of ['us-entity-list', 'jp-eul']) {
+      const listing = ds.byId.get(id).listings.find((l) => l.listId === listId);
+      assert.equal(listing.status, 'listed', `${id} on ${listId}`);
+      assert.ok(listing.entries.every((e) => e.institution === 'chinese-academy-of-engineering-physics' && e.alias), `${id} on ${listId}`);
+    }
+  }
+});
+
+// The research-body test used to drop them: "Supercomputing Center" carries no research word.
+test('the national supercomputing centres the Entity List names have records', () => {
+  for (const name of [
+    'National Supercomputing Center Changsha (NSCC-CS)',
+    'National Supercomputing Center Guangzhou (NSCC-GZ)',
+    'National Supercomputing Center Tianjin (NSCC-TJ)',
+    'National Supercomputing Center Jinan',
+    'National Supercomputing Center Shenzhen',
+    'National Supercomputing Center Wuxi',
+    'National Supercomputer Center Zhengzhou',
+  ]) {
+    const record = ds.records.find((r) => r.name === name);
+    assert.ok(record, name);
+    assert.deepEqual(listedOn(record.id), ['us-entity-list'], name);
+  }
+});
+
 test('a sanctioned department shows on its university', () => {
   const units = (id) => ds.byId.get(id).units.map((u) => u.id);
   assert.ok(units('sharif-university-of-technology').includes('sharif-university-of-technology-department-of-engineering'));

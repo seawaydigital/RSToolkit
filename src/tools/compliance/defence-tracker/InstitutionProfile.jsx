@@ -19,11 +19,18 @@ const today = () => new Date().toLocaleDateString('en-CA');
 
 function ListingDetails({ listing, recordName }) {
   if (listing.status !== 'listed') return null;
+  const otherName = (name) => name && name.toLowerCase() !== recordName.toLowerCase();
   return (
     <ul className="dit-listing-entries">
       {displayEntries(listing.listId, listing.entries).map((e, i) => (
         <li key={e.key ?? i}>
-          {e.name && e.name.toLowerCase() !== recordName.toLowerCase() && <span>Listed as “{e.name}”. </span>}
+          {e.alias ? (
+            <span>
+              Listed as {otherName(e.alias) ? <>“{e.alias}”, an alias</> : 'an alias'} in the entry for “{e.name}”.{' '}
+            </span>
+          ) : (
+            otherName(e.name) && <span>Listed as “{e.name}”. </span>
+          )}
           {[e.date && `Since ${e.date}`, e.citation].filter(Boolean).join(' · ')}
           {e.url && (
             <>

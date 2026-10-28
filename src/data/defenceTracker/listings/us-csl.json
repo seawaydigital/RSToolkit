@@ -1,7 +1,7 @@
 {
   "snapshot": "us-csl",
   "coverage": "complete",
-  "checkedOn": "2026-10-26",
+  "checkedOn": "2026-10-28",
   "sourceUrl": "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.json",
   "entries": [
     {
@@ -873,6 +873,19 @@
       "institution": "china-aerospace-science-and-technology-corporation-casc-1st-academy-702-research"
     },
     {
+      "key": "csl:21bd34b78beb653230a437742c68ef3a8bdd37bd06766d561e360e36",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Wuxi",
+      "altNames": [
+        "NSCC-WX"
+      ],
+      "country": "CN",
+      "date": "2021-04-09",
+      "citation": "86 FR 18437; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-wuxi"
+    },
+    {
       "key": "csl:225249995beb11a472f8444bbe00bf8c178be62b1efb2500a1a93e66",
       "list": "us-entity-list",
       "name": "Tactical Missile Corporation, NPO Electromechanics",
@@ -1204,6 +1217,17 @@
       "citation": "83 FR 37423; 85 FR 34497",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "china-electronics-technology-group-corporation-55th-research-institute-cetc-55"
+    },
+    {
+      "key": "csl:26dbce668d96d9f54444f62d0ba99f3af0eb0ac71665e3227b6c827d",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Changsha (NSCC-CS)",
+      "altNames": [],
+      "country": "CN",
+      "date": "2015-02-18",
+      "citation": "80 FR 8524; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-changsha-nscc-cs"
     },
     {
       "key": "csl:26ebf961a7f2b5c752371be9666617ee6614d20b5c9de5364b42e477",
@@ -4031,6 +4055,21 @@
       "institution": "scientific-production-enterprise-radiosviaz"
     },
     {
+      "key": "csl:4d4ab23c4e5ad603882e01dcdf7be82ba2109f302e3e32a475bad6ed",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Shenzhen",
+      "altNames": [
+        "The National Supercomputing Shenzhen Center",
+        "Shenzhen Cloud Computing Center",
+        "NSCC-SZ"
+      ],
+      "country": "CN",
+      "date": "2021-04-09",
+      "citation": "86 FR 18437; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-shenzhen"
+    },
+    {
       "key": "csl:4d557cfe9dda8e6be76d1b6715768ae65b79982eb92ecb0e306185e0",
       "list": "us-entity-list",
       "name": "Moscow Communications Research Institute JSC",
@@ -5943,6 +5982,17 @@
       "institution": "joint-stock-company-scientific-research-institute-of-modern-telecommunication-te"
     },
     {
+      "key": "csl:94f447a3ad38ebd9f832f23d08bb56e0200551c35ed23f1a0554dd0a",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Guangzhou (NSCC-GZ)",
+      "altNames": [],
+      "country": "CN",
+      "date": "2015-02-18",
+      "citation": "80 FR 8524; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-guangzhou-nscc-gz"
+    },
+    {
       "key": "csl:956709e7a079227bcc156febaecec4437f2f16795cc4fcf5938ba46c",
       "list": "us-entity-list",
       "name": "Concern Radio-Electronic Technologies, Joint Stock Company Taganrog Communications Scientific Research Institute",
@@ -7458,6 +7508,20 @@
       "institution": "china-aerospace-science-and-technology-corporation-casc-8th-academy-811-research"
     },
     {
+      "key": "csl:df5117aeee312bf75794905bc4161a679ddf7121b34efb165207c413",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Jinan",
+      "altNames": [
+        "Shandong Computing Center",
+        "NSCC-JN"
+      ],
+      "country": "CN",
+      "date": "2021-04-09",
+      "citation": "86 FR 18437; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-jinan"
+    },
+    {
       "key": "csl:dffd65f62007b94b429bf091d56b682e75bcd94a90c6416ad675a687",
       "list": "us-entity-list",
       "name": "Federal State Unitary Enterprise Central Scientific Research Institute of Chemistry and Mechanics",
@@ -7481,6 +7545,17 @@
       "institution": "federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis"
     },
     {
+      "key": "csl:e03b49d8ed42d4c773fa667bdae3652df8d4f539af68570da133b60e",
+      "list": "us-entity-list",
+      "name": "National Supercomputing Center Tianjin (NSCC-TJ)",
+      "altNames": [],
+      "country": "CN",
+      "date": "2015-02-18",
+      "citation": "80 FR 8524; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputing-center-tianjin-nscc-tj"
+    },
+    {
       "key": "csl:e088c63656f6e66e00b3af6b1ece909508abbb7df84962bf59cdafd8",
       "list": "us-entity-list",
       "name": "Integrated Scientific Microwave Technology",
@@ -7492,6 +7567,19 @@
       "citation": "86 FR 71557",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "integrated-scientific-microwave-technology"
+    },
+    {
+      "key": "csl:e0a682de21bafd70312110542cefeec57a8c36496a7abe3631ca9909",
+      "list": "us-entity-list",
+      "name": "National Supercomputer Center Zhengzhou",
+      "altNames": [
+        "NSCC-ZZ"
+      ],
+      "country": "CN",
+      "date": "2021-04-09",
+      "citation": "86 FR 18437; 87 FR 62202",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "national-supercomputer-center-zhengzhou"
     },
     {
       "key": "csl:e1f16b2f12fd43f59abcca92fd802c5e",
