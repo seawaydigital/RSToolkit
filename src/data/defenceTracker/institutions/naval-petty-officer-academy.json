@@ -1,0 +1,59 @@
+{
+  "id": "naval-petty-officer-academy",
+  "name": "Naval Petty Officer Academy",
+  "zh": "中国人民解放军海军士官学校",
+  "zhAliases": [
+    "海军士官学校",
+    "中国人民解放军海军蚌埠士官学校"
+  ],
+  "aliases": [
+    "PLA Navy Bengbu Petty Officer Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Bengbu",
+    "province": null,
+    "lat": 32.9079,
+    "lng": 117.3162
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "bb71e5fd-94e5-419f-ac43-957f706c084f",
+    "nro": "naval-petty-officer-academy"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Information and communication engineering"
+    ],
+    "address": "中国安徽省蚌埠市禹会区燕山路1454号"
+  }
+}

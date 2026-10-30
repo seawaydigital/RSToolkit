@@ -1,0 +1,73 @@
+{
+  "id": "army-medical-university",
+  "name": "Army Medical University",
+  "zh": "中国人民解放军陆军军医大学",
+  "zhAliases": [
+    "中国人民解放军第三军医大学",
+    "陆军军医大学"
+  ],
+  "aliases": [
+    "Third Military Medical University"
+  ],
+  "acronyms": [],
+  "domains": [
+    "tmmu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Chongqing",
+    "province": "Chongqing",
+    "lat": 29.5384,
+    "lng": 106.4382
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "dcbc4788-de6a-4c85-a3d9-ab094f4005d0",
+    "nro": "army-medical-university",
+    "ror": "05w21nn13",
+    "wikidata": "Q7784898"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Ground Force"
+    ],
+    "majorDefenceLaboratories": [
+      "State Key Laboratory of Trauma, Burns and Combined Injury(创伤、烧伤与复合伤国家重点实验室)",
+      "Firepower Combat Weaponry Fatality and Injury Biological Effects Assessment Center (火力作战武器杀伤生物效应评估中心)"
+    ],
+    "subsidiaries": [
+      "First Affiliated Hospital/Southwest Hospital (第一附属医院/西南医院)",
+      "Second Affiliated Hospital/Xinqiao Hospital (第二附属医院/新桥医院)",
+      "Third Affiliated Hospital/Daping Hospital (第三附属医院/大坪医院), now known as the Army Characteristic Medical Center (陆军特色医学中心)",
+      "Army Medical Training Base (陆军卫勤训练基地)",
+      "Frontier Defense Training Brigade (边防卫勤训练大队)"
+    ],
+    "topics": [
+      "Biology",
+      "Medicine"
+    ],
+    "address": "中国重庆市沙坪坝区高滩岩正街30号"
+  }
+}

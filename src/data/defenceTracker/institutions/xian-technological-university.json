@@ -1,0 +1,74 @@
+{
+  "id": "xian-technological-university",
+  "name": "Xi'an Technological University",
+  "zh": "西安工业大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "XATU"
+  ],
+  "domains": [
+    "xatu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.3809,
+    "lng": 108.9813
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "f56463a0-1062-440d-a375-d56599874a23",
+    "nro": "xian-technological-university",
+    "ror": "01t8prc81"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shaanxi Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China South Industries Group (CSGC)",
+      "China North Industries Group (Norinco Group)"
+    ],
+    "majorDefenceLaboratories": [
+      "Ordnance Industry Import Testing Instruments and Control Systems Repair Center (兵器工业进口测试仪器控制系统维修中心)",
+      "Established by China National Ordnance Industry Corporation in 1994",
+      "Shaanxi Provincial Membrane Technology and Micro-Photoelectric Components Military-Civilian Dual-Use Technology Engineering Center and Key Laboratory (陕西省薄膜技术与微光电器件军民两用技术工程中心（重点实验室）)\n",
+      "Established by the Shaanxi Provincial COSTIND in 2005",
+      "China North Industries Group Optical Component Ultra-Precise Machining and Manufacturing Technology Research Applications Center (中国兵器工业光学器件超精密加工先进制造技术研究应用中心)",
+      "Established by China North Industries Group in 2015"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Optical engineering"
+    ],
+    "address": null
+  }
+}

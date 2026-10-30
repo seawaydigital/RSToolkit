@@ -1,0 +1,52 @@
+{
+  "id": "sharif-university-of-technology",
+  "name": "Sharif University of Technology",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Arya-Mehr University of Technology",
+    "Sharif Technical University",
+    "Aryamehr University of Industry",
+    "Dāneshgāh-e San'ati-ye Sharif",
+    "دانشگاه صنعتی شریف"
+  ],
+  "acronyms": [
+    "SHFT",
+    "SUT"
+  ],
+  "domains": [
+    "sharif.edu"
+  ],
+  "country": "IR",
+  "type": "university",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": 35.7018,
+    "lng": 51.3514
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "sharif-university-of-technology",
+    "ror": "024c2fq17",
+    "wikidata": "Q2096604"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

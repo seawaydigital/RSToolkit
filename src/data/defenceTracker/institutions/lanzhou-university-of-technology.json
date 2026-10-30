@@ -1,0 +1,68 @@
+{
+  "id": "lanzhou-university-of-technology",
+  "name": "Lanzhou University of Technology",
+  "zh": "兰州理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Gansu University of Technology",
+    "Gansu provincial Technical School",
+    "Lanzhou Polytechnic Institute",
+    "Lánzhōu Lǐgōng Dàxué"
+  ],
+  "acronyms": [
+    "LUT"
+  ],
+  "domains": [
+    "lut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Lanzhou",
+    "province": "Gansu",
+    "lat": 36.0586087760592,
+    "lng": 103.73054017116397
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "de089cc5-517a-466a-b498-874b8b010053",
+    "ror": "03panb555",
+    "wikidata": "Q6487721"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Gansu Provincial Government",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Materials science and technology",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": "36 Pengjiaping Rd, Qilihe Qu, Lanzhou Shi, Gansu Sheng, China, 730050"
+  }
+}

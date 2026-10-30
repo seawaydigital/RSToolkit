@@ -1,0 +1,65 @@
+{
+  "id": "north-china-university-of-science-and-technology",
+  "name": "North China University of Science and Technology",
+  "zh": "华北理工大学",
+  "zhAliases": [
+    "河北联合大学"
+  ],
+  "aliases": [
+    "Hebei United University"
+  ],
+  "acronyms": [
+    "NCST"
+  ],
+  "domains": [
+    "ncst.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Tangshan",
+    "province": "Hebei",
+    "lat": 39.1973337,
+    "lng": 118.60239690000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "82bc0644-6e98-4e8e-8d6c-09868ec11bfa",
+    "ror": "04z4wmb81",
+    "wikidata": "Q7054811"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "State Administration of Work Safety"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology"
+    ],
+    "address": "21 Bohai Avenue, Caofeidian, Tangshan, Hebei, China"
+  }
+}

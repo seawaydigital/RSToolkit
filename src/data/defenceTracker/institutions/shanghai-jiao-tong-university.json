@@ -1,0 +1,76 @@
+{
+  "id": "shanghai-jiao-tong-university",
+  "name": "Shanghai Jiao Tong University",
+  "zh": "上海交通大学",
+  "zhAliases": [
+    "上海交通大學"
+  ],
+  "aliases": [
+    "Shanghai Communications University",
+    "Shanghai Jiaotong University"
+  ],
+  "acronyms": [
+    "SJTU"
+  ],
+  "domains": [
+    "sjtu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": 31.023856,
+    "lng": 121.44163100000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "01c42029-abb9-49b0-8707-c382c8b14422",
+    "ror": "0220qvk04",
+    "wikidata": "Q525169"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Science and Technology on Micro/Nano Fabrication （微米／纳米加工技术国防科技重点实验室）",
+      "Jointly run with Peking University",
+      "MOE Key Laboratory of Hydrodynamics (水动力学教育部重点实验室（B类）)",
+      "Defense Key Disciplines Laboratory of Ship Equipment Noise and Vibration Control Technology (船舰设备噪声与振动控制技术国防重点学科实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Materials science and technology",
+      "Mechanics",
+      "Naval architecture and ocean engineering",
+      "Nuclear science and technology"
+    ],
+    "address": "800 Dongchuan Road, Minhang, Shanghai, China"
+  }
+}

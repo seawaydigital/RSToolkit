@@ -1,0 +1,63 @@
+{
+  "id": "navy-aviation-university",
+  "name": "Navy Aviation University",
+  "zh": "中国人民解放军海军航空大学",
+  "zhAliases": [
+    "海军航空大学",
+    "海军航大"
+  ],
+  "aliases": [
+    "Naval Aviation University",
+    "Naval Aeronautics and Astronautics University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Yantai",
+    "province": null,
+    "lat": 37.5309,
+    "lng": 121.4248
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "3f390fae-5e8c-4479-a7a2-a1fd2da279e3",
+    "nro": "navy-aviation-university"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electrical engineering"
+    ],
+    "address": "中国山东省烟台市芝罘区二马路188号"
+  }
+}

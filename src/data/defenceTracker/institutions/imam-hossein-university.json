@@ -1,0 +1,48 @@
+{
+  "id": "imam-hossein-university",
+  "name": "Imam Hossein University",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Imam Hussein University",
+    "Imam Hossein University of the Revolutionary Guards",
+    "Imam Hossein Comprehensive University",
+    "دانشگاه امام حسین"
+  ],
+  "acronyms": [
+    "IHU"
+  ],
+  "domains": [],
+  "country": "IR",
+  "type": "university",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": 35.7506,
+    "lng": 51.5875
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "imam-hossein-university",
+    "ror": "04esb6v42",
+    "wikidata": "Q1165865"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

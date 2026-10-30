@@ -1,0 +1,43 @@
+{
+  "id": "academy-of-military-medical-sciences",
+  "name": "Academy of Military Medical Sciences",
+  "zh": "中国人民解放军军事医学科学院",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "AMMS"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9006,
+    "lng": 116.2643
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "academy-of-military-medical-sciences",
+    "ror": "02bv3c993",
+    "wikidata": "Q10872936"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

@@ -1,0 +1,65 @@
+{
+  "id": "dalian-minzu-university",
+  "name": "Dalian Minzu University",
+  "zh": "大连民族大学",
+  "zhAliases": [
+    "大连民大"
+  ],
+  "aliases": [
+    "Dalian Nationalities University",
+    "Dàlián Mínzú Dàxué"
+  ],
+  "acronyms": [
+    "DLMU",
+    "DLNU"
+  ],
+  "domains": [
+    "dlnu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Dalian",
+    "province": "Liaoning",
+    "lat": 39.04219399999999,
+    "lng": 121.77500140000006
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "027ab5f5-ce3d-4e44-b276-923719d628e4",
+    "ror": "02hxfx521",
+    "wikidata": "Q1074308"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "State Ethnic Affairs Commission"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence"
+    ],
+    "address": "大连经济技术开发区辽河西路18号"
+  }
+}

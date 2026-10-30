@@ -1,0 +1,68 @@
+{
+  "id": "hebei-university",
+  "name": "Hebei University",
+  "zh": "河北大学",
+  "zhAliases": [],
+  "aliases": [
+    "Tianjin Business Institute",
+    "Tianjin Normal College",
+    "Tianjin Normal University",
+    "Tsin Ku University"
+  ],
+  "acronyms": [
+    "HBU"
+  ],
+  "domains": [
+    "hbu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Baoding",
+    "province": "Hebei",
+    "lat": 38.86774253850528,
+    "lng": 115.51494136441806
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "547fcf00-56e4-4ef5-b55e-e1a346c32928",
+    "ror": "01p884a79",
+    "wikidata": "Q835731"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Hebei Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Defence Ley Discipline Laboratory for Highly-trusted Information System and Applied Technology (“高可信信息系统及其应用技术”国防重点学科实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Mechanical engineering"
+    ],
+    "address": "180 Wusi E Rd, Lianchi Qu, Baoding Shi, Hebei Sheng, China, 071064"
+  }
+}

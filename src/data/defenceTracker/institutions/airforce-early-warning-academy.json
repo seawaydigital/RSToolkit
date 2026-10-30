@@ -1,0 +1,65 @@
+{
+  "id": "airforce-early-warning-academy",
+  "name": "Air Force Early Warning Academy",
+  "zh": "中国人民解放军空军预警学院",
+  "zhAliases": [
+    "空军预警学院",
+    "空军雷达学院"
+  ],
+  "aliases": [
+    "Wuhan Radar Institute",
+    "Airforce Early Warning Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Wuhan",
+    "province": null,
+    "lat": 30.8822,
+    "lng": 114.3726
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "ccae69a7-83f2-48e2-8dcc-678322c6865d",
+    "nro": "airforce-early-warning-academy"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [
+      "Military Key Laboratory of Radar Armament and Utilization (雷达兵器运用军队重点实验室)\n",
+      "Aka Wuhan Radar Institute Key Research Lab"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "中国湖北省武汉市 Jiang'an, 黄浦大街288号"
+  }
+}

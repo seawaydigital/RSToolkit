@@ -77,3 +77,14 @@ export const ENABLE_PROXIMITY_SEARCH = true;
  * to remove the card entirely; no other change is needed.
  */
 export const SHOW_SISTER_SITE_CARD = true;
+
+/**
+ * Whether the Defence Institution Tracker is shown.
+ *
+ * The tracker publishes ratings of research institutions' military and
+ * security ties, so it stays off until its profiles have been verified and
+ * reviewed. While false, the tool, every link to it and its data downloads
+ * are left out of the site. To preview it locally without changing this
+ * file, run `npm run dev:tracker`.
+ */
+export const ENABLE_DEFENCE_TRACKER = false;

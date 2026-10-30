@@ -1,0 +1,66 @@
+{
+  "name": "Defence Institution Tracker",
+  "version": "2026.10",
+  "released": "2026-10-24",
+  "rubricVersion": "1.1",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "holder": "Andrew Austin",
+    "year": 2026
+  },
+  "listsCheckedOn": {
+    "ca-nro": "2026-10-26"
+  },
+  "acknowledgement": "The original China Defence Universities Tracker (2019) by ASPI's International Cyber Policy Centre showed how useful a resource like this is. None of its text, ratings or paid content are used here.",
+  "attributions": [
+    {
+      "name": "MISP galaxy, China Defence Universities Tracker cluster",
+      "url": "https://github.com/MISP/misp-galaxy/blob/main/clusters/china-defence-universities.json",
+      "license": "CC0 1.0",
+      "note": "Starting list of institutions and structured fields (names, aliases, categories, oversight bodies, laboratories). The cluster reproduces data ASPI published in 2019; its descriptions are not used."
+    },
+    {
+      "name": "Research Organization Registry (ROR)",
+      "url": "https://ror.org",
+      "license": "CC0 1.0",
+      "note": "Institution identifiers, Chinese names, acronyms and email domains."
+    },
+    {
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org",
+      "license": "CC0 1.0",
+      "note": "Identifiers linked through ROR."
+    },
+    {
+      "name": "US Consolidated Screening List",
+      "url": "https://www.trade.gov/consolidated-screening-list",
+      "license": "Public domain (US government work)",
+      "note": "Entity List, Military End-User List and Specially Designated Nationals entries."
+    },
+    {
+      "name": "Named Research Organizations list, Government of Canada",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "license": "Government of Canada",
+      "note": "Canadian NRO listings, through this toolkit's NRO data."
+    },
+    {
+      "name": "Consolidated Canadian Autonomous Sanctions List, Global Affairs Canada",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "license": "Government of Canada",
+      "note": "Canadian sanctions listings."
+    },
+    {
+      "name": "Section 1286 list, US Department of Defense",
+      "url": "https://www.cto.mil/fy25-ndaa-section-1286-list/",
+      "license": "Public domain (US government work)",
+      "note": "Foreign institutions the US Department of Defense names for problematic activity."
+    },
+    {
+      "name": "End User List, Japan Ministry of Economy, Trade and Industry",
+      "url": "https://www.meti.go.jp/policy/anpo/law09-2.html",
+      "license": "Government of Japan Standard Terms of Use",
+      "note": "Japanese export-control end-user listings for research bodies and other tracked institutions in China, Russia and Iran."
+    }
+  ]
+}

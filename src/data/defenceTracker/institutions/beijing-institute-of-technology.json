@@ -1,0 +1,78 @@
+{
+  "id": "beijing-institute-of-technology",
+  "name": "Beijing Institute of Technology",
+  "zh": "北京理工大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "BIT"
+  ],
+  "domains": [
+    "bit.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9578,
+    "lng": 116.3098
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "cfd7a229-e4d9-442c-beb8-ecbbdb3556d3",
+    "nro": "beijing-institute-of-technology",
+    "ror": "01skt4w74",
+    "wikidata": "Q23101"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "State Key Laboratory of Vehicle Transmission (车辆传动国防科技重点实验室/车辆传动国家级重点实验室)",
+      "State Key Laboratory of Science and Technology on Materials under Shock and Impact (冲击环境材料技术国家级重点实验室/冲击环境材料技术国防重点实验室)",
+      "State Key Laboratory of Mechatronical Engineering and Control (机电工程与控制国家级重点实验室/机电工程与控制国防科技重点实验室)",
+      "Jointly established with Norinco Group’s 212 Research Institute, also known as the Xi’an Mechanical & Electric Institute (中国兵器工业集团第212研究所（西安机电信息技术研究所))",
+      "State Key Laboratory of Explosion Science and Technology (爆炸科学与技术国家重点实验室)",
+      "Science and Technology on Electromechanical Dynamic Control Laboratory (机电动态控制国防科技重点实验室/机电动态控制重点实验室)",
+      "Fundamental Science on Vehicular Power System Laboratory (军用车辆动力系统技术国防重点学科实验室/车辆动力系统技术国防重点学科实验室)",
+      "Key Laboratory of Fundamental Science for Advanced Machining(先进加工技术国防重点学科实验室)",
+      "Fundamental Science on Multiple Information Systems Laboratory (多元信息系统国防重点学科实验室)",
+      "Micro-structure Fabrication Technology Research and Application Center for Science Technology and Industry for National Defense (国防科技工业微细结构加工技术研究应用中心)",
+      "Key Laboratory of Electronic Information Technology in Satellite Navigation, Ministry of Education (卫星导航电子信息技术”教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Optical engineering",
+      "Seven Sons of National Defence"
+    ],
+    "address": "Beijing Institute of Technology, Haidian, Beijing, China"
+  }
+}

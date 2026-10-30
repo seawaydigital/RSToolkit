@@ -1,0 +1,78 @@
+{
+  "id": "rocket-force-university-of-engineering",
+  "name": "Rocket Force University of Engineering",
+  "zh": "中国人民解放军火箭军工程大学",
+  "zhAliases": [
+    "火箭军工程大学",
+    "第二炮兵工程大学",
+    "西安高技术研究所"
+  ],
+  "aliases": [
+    "Rocket Force Engineering University",
+    "Xi’an Research Institute of High Technology",
+    "Xi’an Research Institute of High-Tech",
+    "Xi'an Research Institute of High Technology",
+    "Xi'an Research Institute of High-Tech",
+    "PLA Rocket Force University of Engineering",
+    "PLA Second Artillery Engineering University",
+    "Zhōngguó Rénmín Jiěfàngjūn Dìèrpàobīng Gōngchéng Dàxué"
+  ],
+  "acronyms": [
+    "RFUE",
+    "RFEU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.312,
+    "lng": 109.1244
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7e7d3cb1-7d7e-471a-8d67-3eed66a22699",
+    "nro": "rocket-force-university-of-engineering",
+    "ror": "00gg5zj35",
+    "wikidata": "Q10873092"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Rocket Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Electrical engineering",
+      "Information and communication engineering",
+      "Mechanical engineering"
+    ],
+    "address": "中国陕西省西安市灞桥区同心路2号"
+  }
+}

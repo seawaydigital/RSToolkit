@@ -1,0 +1,64 @@
+{
+  "id": "fudan-university",
+  "name": "Fudan University",
+  "zh": "复旦大学",
+  "zhAliases": [
+    "復旦大學"
+  ],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [
+    "fudan.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": 31.296625553328834,
+    "lng": 121.50392893624576
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a5097c3c-559f-402f-b746-bb32289cf44e",
+    "ror": "013q1eq08",
+    "wikidata": "Q495015"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [
+      "Special Materials and Technology National Defence Key Laboratory (专用材料与技术国防重点实验室)",
+      "Probably a Ministry of Education b-category laboratory (教育部重点实验室(b类))"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Stealth technology"
+    ],
+    "address": "Fu Dan Xiao Yuan Jie Dai Zhong Xin, Wu Jiao Chang, Yangpu Qu, Shanghai Shi, China"
+  }
+}

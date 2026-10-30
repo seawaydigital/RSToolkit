@@ -1,0 +1,64 @@
+{
+  "id": "airforce-harbin-flight-academy",
+  "name": "Air Force Harbin Flight Academy",
+  "zh": "空军哈尔滨飞行学院",
+  "zhAliases": [
+    "中国人民解放军空军哈尔滨飞行学院"
+  ],
+  "aliases": [
+    "Harbin Flight College of Air Force",
+    "Airforce Harbin Flight Academy",
+    "Air Force Harbin Flying College",
+    "PLA Air Force Harbin Flight Academy",
+    "PLA Harbin Flight College of Air Force"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "lat": 45.5989,
+    "lng": 126.6581
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "390d2720-3bf1-4f54-97ac-c2ff01ac0ac1",
+    "nro": "airforce-harbin-flight-academy",
+    "ror": "01g3jts20",
+    "wikidata": "Q10873028"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology"
+    ],
+    "address": "Kai Yue Shen Hai Yu, Nangang Qu, Haerbin Shi, Heilongjiang Sheng, China"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "nanjing-institute-of-information-technology",
+  "name": "Nanjing Institute of Information Technology",
+  "zh": "南京信息技术研究院",
+  "zhAliases": [
+    "南京841研究所"
+  ],
+  "aliases": [
+    "Nanjing 841 Institute",
+    "Nanjing Research Institute of Information Technology",
+    "Nanjing Information Technology Institute",
+    "Nanjing Information Technology Academe",
+    "Nanjing Information Technology Research Institute"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Nanjing",
+    "province": null,
+    "lat": 32.0752,
+    "lng": 118.7834
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "34c303ac-c477-4b15-95cc-4e5dbf785608",
+    "nro": "nanjing-institute-of-information-technology"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "Ministry of State Security (MSS)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Cyber"
+    ],
+    "address": "66 Jinjiang Rd, Gulou Qu, Nanjing Shi, Jiangsu Sheng, China, 210010"
+  }
+}

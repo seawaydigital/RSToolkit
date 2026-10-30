@@ -33,3 +33,6 @@ dist-ssr
 .env
 .env.local
 .env.*.local
+
+# Monthly tracker watch output (scripts/tracker/watch.mjs)
+watch-report.md

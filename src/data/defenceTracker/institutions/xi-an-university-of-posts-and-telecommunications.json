@@ -1,0 +1,67 @@
+{
+  "id": "xi-an-university-of-posts-and-telecommunications",
+  "name": "Xi'an University of Posts and Telecommunications",
+  "zh": "西安邮电大学",
+  "zhAliases": [],
+  "aliases": [
+    "Xi’an University of Posts and Telecommunications"
+  ],
+  "acronyms": [
+    "XUPT"
+  ],
+  "domains": [
+    "xupt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.25833,
+    "lng": 108.92861
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "92a851bf-df39-4ad9-b118-458da085dde7",
+    "ror": "04jn0td46"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shaanxi Provincial Government",
+      "Ministry of Industry and Information Technology (MIIT)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Engineering Laboratory for Wireless Security (无线网络安全技术国家工程实验室)"
+    ],
+    "subsidiaries": [
+      "Chang'an Campus",
+      "Yanta Campus"
+    ],
+    "topics": [
+      "Artificial intelligence",
+      "Information and communication engineering"
+    ],
+    "address": null
+  }
+}

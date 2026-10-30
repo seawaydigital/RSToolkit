@@ -1,0 +1,80 @@
+{
+  "id": "hunan-university",
+  "name": "Hunan University",
+  "zh": "湖南大学",
+  "zhAliases": [],
+  "aliases": [
+    "Húnán Dàxué"
+  ],
+  "acronyms": [
+    "HNU"
+  ],
+  "domains": [
+    "hnu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Changsha",
+    "province": "Hunan",
+    "lat": 28.1797,
+    "lng": 112.9413
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9e35cf4b-8cf4-481c-b2dc-b800c3e59945",
+    "nro": "hunan-university",
+    "ror": "05htk5m33",
+    "wikidata": "Q649868"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Hunan Provincial Government"
+    ],
+    "majorDefenceLaboratories": [
+      "National Defense Key Discipline Laboratory of Electric Power Drive and Servo Technology (电力驱动与伺服技术国防重点学科实验室/电力驱动与伺服技术重点实验室)",
+      "Hunan Provincial Advanced Electrical Power, Electronic and Electrical Machinery Technology and Applications National Defense Technology Key Laboratory (湖南省先进电力电子与电机技术及应用国防技术重点实验室)",
+      "Hunan Provincial Advanced Materials Technology National Defense Technology Key Laboratory (湖南省先进材料制备技术国防科技重点实验室)",
+      "National Supercomputing Center in Changsha (国家超级计算长沙中心)\n",
+      "Jointly run with the PLA National University of Defense Technology",
+      "Hosts the PLA’s Tianhe-1A supercomputer",
+      "In 2015, the centre was added to the US BIS Entity List because Tianhe-1A is used in research on nuclear explosions."
+    ],
+    "subsidiaries": [
+      "Changsha ROBOX Institute (长沙智能机器人研究院有限公司)",
+      "National Supercomputing Center in Changsha (国家超级计算长沙中心)"
+    ],
+    "topics": [
+      "Computer science and technology",
+      "Control science and engineering",
+      "Electrical engineering",
+      "Materials science and technology",
+      "Mechanics",
+      "Nuclear weapons"
+    ],
+    "address": null
+  }
+}

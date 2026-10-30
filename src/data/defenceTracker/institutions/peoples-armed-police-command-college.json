@@ -1,0 +1,62 @@
+{
+  "id": "peoples-armed-police-command-college",
+  "name": "People's Armed Police Command College",
+  "zh": "中国人民武装警察指挥学院",
+  "zhAliases": [
+    "武警指挥学院"
+  ],
+  "aliases": [
+    "PAP Command College",
+    "The People’s Armed Police College China",
+    "The Chinese People’s Armed Police Forces Academy",
+    "The People's Armed Police College China",
+    "The Chinese People's Armed Police Forces Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Tianjin",
+    "province": null,
+    "lat": 39.1459,
+    "lng": 117.2518
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "24db4c02-d7c8-4361-86b6-1276ac82ea34",
+    "nro": "peoples-armed-police-command-college"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence"
+    ],
+    "address": "中国天津市河东区卫国道187号"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "chongqing-university",
+  "name": "Chongqing University",
+  "zh": "重庆大学",
+  "zhAliases": [],
+  "aliases": [
+    "Chóngqìng Dàxué"
+  ],
+  "acronyms": [
+    "CQU"
+  ],
+  "domains": [
+    "cqu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Chongqing",
+    "province": "Chongqing",
+    "lat": 29.564637,
+    "lng": 106.46608000000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d57b3f13-0d47-4679-b1d9-9ae0c7ccf21d",
+    "ror": "023rhb549",
+    "wikidata": "Q834857"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Chongqing Municipal Government"
+    ],
+    "majorDefenceLaboratories": [
+      "Defense Key Disciplines Lab of Novel Micro-nano Devices and System Technology (新型微纳器件与系统技术国防重点学科实验室)",
+      "Ministry of Education Key Laboratory for Complex Systems Safety and Autonomous Control (复杂系统安全与自主控制教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Electronics science and technology"
+    ],
+    "address": "Chongqing University, Shapingba, Chongqing, China"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "naval-command-college",
+  "name": "Naval Command College",
+  "zh": "中国人民解放军海军指挥学院",
+  "zhAliases": [
+    "海军指挥学院"
+  ],
+  "aliases": [
+    "PLA Navy Command College",
+    "Navy Command College",
+    "Naval Command Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Nanjing",
+    "province": null,
+    "lat": 32.0748,
+    "lng": 118.8231
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "274e7bd5-0955-427a-b898-c2f16e20445d",
+    "nro": "naval-command-college"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology"
+    ],
+    "address": "21 Qianbanshanyuan, Xuanwu Qu, Nanjing Shi, Jiangsu Sheng, China, 210021"
+  }
+}

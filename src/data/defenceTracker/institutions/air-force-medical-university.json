@@ -1,0 +1,72 @@
+{
+  "id": "air-force-medical-university",
+  "name": "Air Force Medical University",
+  "zh": "中国人民解放军空军军医大学",
+  "zhAliases": [
+    "空军军医大学",
+    "第四军医大学",
+    "四医大"
+  ],
+  "aliases": [
+    "Air Force Military Medical University",
+    "Fourth Military Medical University",
+    "Fourth Medical University",
+    "First Military Medical College of PLA",
+    "People's Medical College of Northwestern Military Region"
+  ],
+  "acronyms": [
+    "FMMU"
+  ],
+  "domains": [
+    "fmmu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.2668,
+    "lng": 108.9919
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "6793d9a5-e423-41d1-a3d6-f28a7757964d",
+    "nro": "air-force-medical-university",
+    "ror": "00ms48f15",
+    "wikidata": "Q5476138"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Biology",
+      "Biomedical engineering",
+      "Psychological sciences"
+    ],
+    "address": "西安市碑林区建设西路6号"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "dalian-university-of-technology",
+  "name": "Dalian University of Technology",
+  "zh": "大连理工大学",
+  "zhAliases": [],
+  "aliases": [
+    "Dàlián Lǐgōng Dàxué"
+  ],
+  "acronyms": [
+    "DLUT",
+    "DUT"
+  ],
+  "domains": [
+    "dlut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Dalian",
+    "province": "Liaoning",
+    "lat": 38.8794157329084,
+    "lng": 121.5257608220902
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "2fc3f9f5-6ad5-4a28-911e-ac576c087135",
+    "ror": "023hj5876",
+    "wikidata": "Q1477368"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory for Precision and Non-Traditional Machine Technology"
+    ],
+    "subsidiaries": [
+      "DUT LEASCI Technologies Co., Ltd."
+    ],
+    "topics": [
+      "Mechanical engineering"
+    ],
+    "address": "2 Ling Gong Lu, Ganjingzi Qu, Dalian Shi, Liaoning Sheng, China, 116081"
+  }
+}

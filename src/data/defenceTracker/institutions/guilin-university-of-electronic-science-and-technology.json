@@ -1,0 +1,62 @@
+{
+  "id": "guilin-university-of-electronic-science-and-technology",
+  "name": "Guilin University of Electronic Science and Technology",
+  "zh": "桂林电子科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Guilin Institute of Electronic Technology"
+  ],
+  "acronyms": [
+    "GUET"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 25.28086064406601,
+    "lng": 110.33527962698372
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "2865085a-bb90-4afc-91f2-8eee214a27b1"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Guangxi Provincial Government",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology"
+    ],
+    "address": "1 Jinji Rd, Qixing Qu, Guilin Shi, Guangxi Zhuangzuzizhiqu, China, 541002"
+  }
+}

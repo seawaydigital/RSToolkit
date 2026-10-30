@@ -1,0 +1,39 @@
+{
+  "id": "caep-southwest-institute-of-machining-technology",
+  "name": "Southwest Institute of Machining Technology",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "nuclear",
+  "location": {
+    "city": "Mianyang",
+    "province": null,
+    "lat": 31.4925,
+    "lng": 104.7615
+  },
+  "supervisors": [],
+  "parent": "chinese-academy-of-engineering-physics",
+  "ids": {
+    "nro": "caep-southwest-institute-of-machining-technology"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

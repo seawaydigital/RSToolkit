@@ -1,0 +1,66 @@
+{
+  "id": "donghua-university",
+  "name": "Donghua University",
+  "zh": "东华大学",
+  "zhAliases": [
+    "東華大學"
+  ],
+  "aliases": [
+    "Dōnghuá Dàxué"
+  ],
+  "acronyms": [
+    "DHU"
+  ],
+  "domains": [
+    "dhu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": 31.205811,
+    "lng": 121.41307699999993
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "6c763993-152d-47d8-85dc-3ff99028153b",
+    "ror": "035psfh38",
+    "wikidata": "Q837544"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of High Performance Fibers & Products, Ministry of Education (高性能纤维及制品教育部重点实验室(B类))"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology",
+      "Textile Science and Engineering"
+    ],
+    "address": "1882 Yan An Xi Lu, Changning, Shanghai, China"
+  }
+}

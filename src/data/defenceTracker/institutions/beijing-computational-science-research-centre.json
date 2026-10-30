@@ -1,0 +1,51 @@
+{
+  "id": "beijing-computational-science-research-centre",
+  "name": "Beijing Computational Science Research Centre",
+  "zh": "北京计算科学研究中心",
+  "zhAliases": [],
+  "aliases": [
+    "Beijing Computing Science Research Centre",
+    "Beijing Computational Science Research Center"
+  ],
+  "acronyms": [
+    "BCSRC",
+    "CSRC"
+  ],
+  "domains": [
+    "csrc.ac.cn"
+  ],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 40.0353,
+    "lng": 116.2945
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "beijing-computational-science-research-centre",
+    "nroAlso": [
+      "caep-beijing-computational-science-research-center"
+    ],
+    "ror": "04tavf782"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

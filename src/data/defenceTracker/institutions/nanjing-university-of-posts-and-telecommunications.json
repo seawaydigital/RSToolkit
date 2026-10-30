@@ -1,0 +1,63 @@
+{
+  "id": "nanjing-university-of-posts-and-telecommunications",
+  "name": "Nanjing University of Posts and Telecommunications",
+  "zh": "南京邮电大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nanjing Institute of Posts and Telecommunications"
+  ],
+  "acronyms": [
+    "NJUPT",
+    "NUPT"
+  ],
+  "domains": [
+    "njupt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "lat": 32.08076200572154,
+    "lng": 118.77081065889547
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "00729c61-06a1-4a9b-b6bf-f8e9d70c7188",
+    "ror": "043bpky34",
+    "wikidata": "Q6963688"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangsu Provincial Government",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Ministry of Education (MOE)",
+      "State Post Bureau"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "66 New Mofan Rd, Gulou Qu, Nanjing Shi, Jiangsu Sheng, China, 210809"
+  }
+}
