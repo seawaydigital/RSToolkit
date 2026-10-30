@@ -34,5 +34,8 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Release tarballs from scripts/build-release.sh
+release/
+
 # Monthly tracker watch output (scripts/tracker/watch.mjs)
 watch-report.md

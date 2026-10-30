@@ -2,7 +2,17 @@
 
 Security record for the Research Security Toolkit, prepared for handoff to Lakehead University IT.
 
-**Last audit: 2026-10-03.** It was a full source review plus verification of the production build. Re-run the checks in [§6](#6-re-checking-after-a-change) after any change to code, dependencies or hosting.
+## Assessment record
+
+| | |
+|---|---|
+| **What this is** | A self-assessment by the developer. It is **not** an independent or third-party security assessment, and it has not been reviewed by Lakehead IT or TSC. |
+| **Performed by** | Andrew Austin (Research Security and Data Management Specialist, Lakehead University), the site's developer, using Claude Code (Anthropic's AI coding assistant) to carry out the source review and the checks. Andrew Austin reviewed every finding and approved every change. |
+| **Dates** | Main review **2026-10-03** (commit `16490c9`). Follow-up review of the deploy workflow and dependencies **2026-10-22** (commits `c45fb4d`, `aded64a`). |
+| **In scope** | All application source in `src/`, `index.html` and its Content Security Policy, `vite.config.js`, the GitHub Actions workflow, the npm dependency tree (`npm audit`), and the production build loaded in a browser. Details in §3–§4. |
+| **Not in scope** | Penetration testing or dynamic scanning of a live host; any server, VM or network configuration (no Lakehead host exists yet); the third-party tile and geocoder services; formal threat modelling against an institutional standard. |
+
+An institutional host should run its own assessment against its own requirements before going live. Re-run the checks in [§6](#6-re-checking-after-a-change) after any change to code, dependencies or hosting.
 
 ---
 

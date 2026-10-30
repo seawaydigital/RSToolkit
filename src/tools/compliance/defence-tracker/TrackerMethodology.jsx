@@ -145,7 +145,9 @@ export default function TrackerMethodology({ dataset, changelog }) {
           edition in use. The 1286 list is entered in full. From Japan&apos;s list, as from the US screening lists and Canada&apos;s
           sanctions list, the tracker takes research bodies in China, Russia and Iran, and any other body already in the tracker,
           such as a trading company the NRO list names. When a list names one of a group&apos;s academies or institutes, that unit
-          has its own record and the group&apos;s profile lists it; the group itself is not shown as listed. A list marked
+          has its own record and the group&apos;s profile lists it; the group itself is not shown as listed. When a list instead
+          gives a unit&apos;s name as an alias in its parent&apos;s entry, as the Entity List and Japan&apos;s list do for CAEP&apos;s
+          institutes, the unit is shown as listed through that entry. A list marked
           &quot;Not checked yet&quot; has not been entered, so every institution shows that status for it rather than &quot;Not
           listed&quot;.
         </p>

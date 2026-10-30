@@ -120,6 +120,8 @@ export function displayEntries(listId, entries = []) {
 function entryEvidence(listId, e) {
   const cite = e.citation ? ` (${String(e.citation).replace(/\s+/g, ' ')})` : '';
   const on = e.date ? ` on ${formatDate(e.date)}` : '';
+  // Listed through a parent's entry that gives the unit's name as an alias.
+  const asAlias = e.alias ? ` as an alias in the entry for “${e.name}”` : '';
   switch (listId) {
     case 'ca-nro':
       return { text: 'Canada names it on its list of Named Research Organizations, which the STRAC policy uses.', url: e.url, source: 'NRO list' };
@@ -127,7 +129,7 @@ function entryEvidence(listId, e) {
       const country = String(e.key ?? '').split(':')[1];
       const regulation = country ? `the Special Economic Measures (${country}) Regulations` : "Canada's autonomous sanctions regulations";
       return {
-        text: `Canada lists it under ${regulation}${cite}${e.date ? ` since ${formatDate(e.date)}` : ''}.`,
+        text: `Canada lists it under ${regulation}${asAlias}${cite}${e.date ? ` since ${formatDate(e.date)}` : ''}.`,
         url: e.url,
         source: 'Canadian sanctions list',
       };
@@ -137,7 +139,9 @@ function entryEvidence(listId, e) {
       const list = listId === 'us-meu' ? 'Military End-User List' : 'Entity List';
       const notice = federalRegisterUrl(e.citation);
       return {
-        text: `The US Commerce Department added it to the ${list}${on}${cite}.`,
+        text: e.alias
+          ? `The US Commerce Department's ${list} names it${asAlias}${on ? `, added${on}` : ''}${cite}.`
+          : `The US Commerce Department added it to the ${list}${on}${cite}.`,
         url: notice ?? e.url,
         source: notice ? 'Federal Register notice' : `${list} guidance`,
       };
@@ -145,12 +149,12 @@ function entryEvidence(listId, e) {
     case 'us-sdn': {
       const programs = String(e.citation ?? '').split(/;\s*/).filter(Boolean).map((c) => (SDN_PROGRAMS[c] ? `${SDN_PROGRAMS[c]} (${c})` : c));
       const under = programs.length ? ` under its ${joinWords(programs)} sanctions program${programs.length > 1 ? 's' : ''}` : '';
-      return { text: `The US Treasury lists it as a Specially Designated National${under}.`, url: e.url, source: 'SDN list' };
+      return { text: `The US Treasury lists it as a Specially Designated National${under}${asAlias && `,${asAlias}`}.`, url: e.url, source: 'SDN list' };
     }
     case 'us-1286':
-      return { text: `The US Defense Department names it on its Section 1286 list${cite}.`, url: e.url, source: 'Section 1286 list' };
+      return { text: `The US Defense Department names it on its Section 1286 list${asAlias}${cite}.`, url: e.url, source: 'Section 1286 list' };
     default:
-      return { text: `Japan's Ministry of Economy, Trade and Industry names it on its End User List${cite}.`, url: e.url, source: 'End User List' };
+      return { text: `Japan's Ministry of Economy, Trade and Industry names it on its End User List${asAlias}${cite}.`, url: e.url, source: 'End User List' };
   }
 }
 
