@@ -1,0 +1,60 @@
+{
+  "id": "special-police-academy",
+  "name": "Special Police Academy",
+  "zh": "中国武装警察部队特种警察学院",
+  "zhAliases": [],
+  "aliases": [
+    "Special Police of China",
+    "PAP Special Police Academy",
+    "People's Armed Police Special Police Academy"
+  ],
+  "acronyms": [
+    "SPA",
+    "SPC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 40.1861324,
+    "lng": 116.48402929999997
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5d7584d0-02bc-4658-ae46-0822d5d5fa8c"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology"
+    ],
+    "address": "中国北京市昌平区小汤山镇白马路甲1号"
+  }
+}

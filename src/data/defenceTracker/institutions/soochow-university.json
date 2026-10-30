@@ -1,0 +1,63 @@
+{
+  "id": "soochow-university",
+  "name": "Soochow University",
+  "zh": "苏州大学",
+  "zhAliases": [],
+  "aliases": [
+    "Suzhou University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 31.30110141104536,
+    "lng": 120.64185159755323
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e6babe4d-22db-4658-8084-a6033fccfbf0"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangsu Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Jiangsu Provincial Key Laboratory of Radiation Medicine and Protection (放射医学与辐射防护国家重点实验室)",
+      "Key Lab of Modern Optical Technologies of Education Ministry of China (教育部现代光学技术重点实验室 )",
+      "Jiangsu Provincial Key Laboratory for Advanced Carbon Materials and Wearable Energy Technologies (苏州市先进碳材料与可穿戴能源技术重点实验室 )"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Electrical engineering",
+      "Medicine",
+      "Nuclear science and technology",
+      "Optical engineering"
+    ],
+    "address": "333 Ganjiang E Rd, Gusu Qu, Suzhou Shi, Jiangsu Sheng, China, 215004"
+  }
+}

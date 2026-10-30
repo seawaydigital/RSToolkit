@@ -1,0 +1,75 @@
+{
+  "id": "wuhan-university",
+  "name": "Wuhan University",
+  "zh": "武汉大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "WHU"
+  ],
+  "domains": [
+    "whu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": 30.5360485,
+    "lng": 114.36432190000005
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "6005441f-ccfd-42a4-8761-247d52e17b2d",
+    "ror": "033vjfk17",
+    "wikidata": "Q1108197"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "MOE Key Laboratory of Aerospace Information Security and Trusted Computing (空天信息安全与可信计算教育部重点实验室（B类）/空天信息安全与可信计算教育部国防重点实验室)",
+      "This laboratory allegedly carries out cyberattacks for the Chinese military and does not appear among Ministry of Education laboratories listed on WHU’s website",
+      "People’s Liberation Army Cryptography Administration Bureau Cryptography Research Collaborative Innovation Centre (解放军密码管理局密码研究协同创新中心)",
+      "Key Laboratory of Satellite Navigation and Positioning, Ministry of Education (卫星导航与定位教育部重点实验室(B类))",
+      "Does not appear among Ministry of Education laboratories listed on WHU’s website",
+      "Network Attack and Defense Center (网络攻防中心)\n",
+      "Jointly run with the PLA’s Hubei Military District"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanics",
+      "Surveying and mapping"
+    ],
+    "address": "Wuhan University, Wuchang, Wuhan, Hubei, China"
+  }
+}

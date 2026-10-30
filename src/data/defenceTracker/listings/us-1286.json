@@ -1,0 +1,2215 @@
+{
+  "snapshot": "us-1286",
+  "coverage": "complete",
+  "checkedOn": "2026-10-26",
+  "sourceUrl": "https://www.cto.mil/fy25-ndaa-section-1286-list/",
+  "file": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+  "alternateFiles": [
+    "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List.pdf"
+  ],
+  "fiscalYear": 2025,
+  "published": "2026-07-23",
+  "entries": [
+    {
+      "key": "1286:academy-of-military-medical-sciences",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences",
+      "altNames": [
+        "中国人民解放军军事医学科学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-field-blood-transfusion-institution",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Field Blood Transfusion Institution",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-field-blood-transfusion-institution"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-basic-medicine",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Basic Medicine",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-basic-medicine"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-bioengineering",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Bioengineering",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-bioengineering"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-disease-control-and-prevention",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Disease Control and Prevention",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-disease-control-and-prevention"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-health-service-and-medical-inf",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Health Service and Medical Information",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-health-service-and-medical-inf"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-hygiene-and-environmental-medi",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Hygiene and Environmental Medicine",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-hygiene-and-environmental-medi"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-medical-equipment",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Medical Equipment",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-medical-equipment"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-microbiology-and-epidemiology",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Microbiology and Epidemiology",
+      "altNames": [
+        "Academy of Military Medical Sciences, Institute of Microbial Epidemiology"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-microbiology-and-epidemiology"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-radiation-and-radiation-medici",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Radiation and Radiation Medicine",
+      "altNames": [
+        "Academy of Military Medical Sciences, Institute of Electromagnetic and Particle Radiation Medicine"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-radiation-and-radiation-medici"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-institute-of-toxicology-and-pharmacology",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Institute of Toxicology and Pharmacology",
+      "altNames": [
+        "Academy of Military Medical Sciences, Institute of Toxicology and Drugs"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-institute-of-toxicology-and-pharmacology"
+    },
+    {
+      "key": "1286:academy-of-military-medical-sciences-military-veterinary-research-institute",
+      "list": "us-1286",
+      "name": "Academy of Military Medical Sciences, Military Veterinary Research Institute",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "academy-of-military-medical-sciences-military-veterinary-research-institute"
+    },
+    {
+      "key": "1286:air-force-aviation-institute",
+      "list": "us-1286",
+      "name": "Air Force Aviation Institute",
+      "altNames": [
+        "中国人民解放军空军航空大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "aviation-university-of-air-force"
+    },
+    {
+      "key": "1286:air-force-command-college",
+      "list": "us-1286",
+      "name": "Air Force Command College",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-command-college"
+    },
+    {
+      "key": "1286:air-force-communication-nco-academy",
+      "list": "us-1286",
+      "name": "Air Force Communication NCO Academy",
+      "altNames": [
+        "空军通信士官学校"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-communication-nco-academy"
+    },
+    {
+      "key": "1286:air-force-early-warning-academy",
+      "list": "us-1286",
+      "name": "Air Force Early Warning Academy",
+      "altNames": [
+        "空军预警学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-early-warning-academy"
+    },
+    {
+      "key": "1286:air-force-engineering-university",
+      "list": "us-1286",
+      "name": "Air Force Engineering University",
+      "altNames": [
+        "空军工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-engineering-university"
+    },
+    {
+      "key": "1286:air-force-harbin-flight-academy",
+      "list": "us-1286",
+      "name": "Air Force Harbin Flight Academy",
+      "altNames": [
+        "空军哈尔滨飞行学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-harbin-flight-academy"
+    },
+    {
+      "key": "1286:air-force-logistics-academy",
+      "list": "us-1286",
+      "name": "Air Force Logistics Academy",
+      "altNames": [
+        "空军勤务学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-logistics-university"
+    },
+    {
+      "key": "1286:air-force-medical-university",
+      "list": "us-1286",
+      "name": "Air Force Medical University",
+      "altNames": [
+        "空军军医大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "air-force-medical-university"
+    },
+    {
+      "key": "1286:air-force-shinjianzhuang-flight-academy",
+      "list": "us-1286",
+      "name": "Air Force Shinjianzhuang Flight Academy",
+      "altNames": [
+        "空军石家庄飞行学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "airforce-flight-academy-shijiazhuang"
+    },
+    {
+      "key": "1286:air-force-xi-an-flight-academy",
+      "list": "us-1286",
+      "name": "Air Force Xi’an Flight Academy",
+      "altNames": [
+        "中国人民解放军空军西安飞行学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "air-force-xian-flight-academy"
+    },
+    {
+      "key": "1286:amirkabir-university-of-technology",
+      "list": "us-1286",
+      "name": "Amirkabir University of Technology",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "amirkabir-university-of-technology"
+    },
+    {
+      "key": "1286:army-academy-of-armored-forces",
+      "list": "us-1286",
+      "name": "Army Academy of Armored Forces",
+      "altNames": [
+        "陆军装甲兵学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-academy-of-armored-forces"
+    },
+    {
+      "key": "1286:army-academy-of-artillery-and-air-defense",
+      "list": "us-1286",
+      "name": "Army Academy of Artillery and Air Defense",
+      "altNames": [
+        "陆军炮兵防空兵学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-academy-of-artillery-and-air-defense"
+    },
+    {
+      "key": "1286:army-academy-of-border-and-coastal-defense",
+      "list": "us-1286",
+      "name": "Army Academy of Border and Coastal Defense",
+      "altNames": [
+        "陆军边海防学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-academy-of-border-and-coastal-defense"
+    },
+    {
+      "key": "1286:army-aviation-academy",
+      "list": "us-1286",
+      "name": "Army Aviation Academy",
+      "altNames": [
+        "陆军航空兵学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-aviation-college"
+    },
+    {
+      "key": "1286:army-engineering-university",
+      "list": "us-1286",
+      "name": "Army Engineering University",
+      "altNames": [
+        "陆军工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-engineering-university"
+    },
+    {
+      "key": "1286:army-infantry-college",
+      "list": "us-1286",
+      "name": "Army Infantry College",
+      "altNames": [
+        "陆军步兵学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-infantry-academy"
+    },
+    {
+      "key": "1286:army-institute-of-nbc-defense",
+      "list": "us-1286",
+      "name": "Army Institute of NBC Defense",
+      "altNames": [
+        "陆军防化学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "institute-of-nbc-defense"
+    },
+    {
+      "key": "1286:army-logistics-academy",
+      "list": "us-1286",
+      "name": "Army Logistics Academy",
+      "altNames": [
+        "陆军勤务学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-service-academy"
+    },
+    {
+      "key": "1286:army-medical-university",
+      "list": "us-1286",
+      "name": "Army Medical University",
+      "altNames": [
+        "陆军军医大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-medical-university"
+    },
+    {
+      "key": "1286:army-military-transportation-university",
+      "list": "us-1286",
+      "name": "Army Military Transportation University",
+      "altNames": [
+        "陆军军事交通学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-military-transportation-academy"
+    },
+    {
+      "key": "1286:army-service-arms-university",
+      "list": "us-1286",
+      "name": "Army Service Arms University",
+      "altNames": [
+        "Army University",
+        "Army Combat Arms University",
+        "Army Branches University",
+        "陆军兵种大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-service-arms-university"
+    },
+    {
+      "key": "1286:army-special-operations-academy",
+      "list": "us-1286",
+      "name": "Army Special Operations Academy",
+      "altNames": [
+        "陆军特种作战学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "army-special-operations-academy"
+    },
+    {
+      "key": "1286:astrakhan-state-university",
+      "list": "us-1286",
+      "name": "Astrakhan State University",
+      "altNames": [
+        "Астраханский государственный университет"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "astrakhan-state-university"
+    },
+    {
+      "key": "1286:atr-defense-s-and-t-key-laboratory-of-intelligent-information-processing-at-shen",
+      "list": "us-1286",
+      "name": "ATR Defense S&T Key Laboratory of Intelligent Information Processing at Shenzhen University",
+      "altNames": [
+        "ATR国防科技重点实验室智能信息处理分室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "atr-defense-s-and-t-key-laboratory-of-intelligent-information-processing-at-shen"
+    },
+    {
+      "key": "1286:baqiyatallah-university-of-medical-sciences",
+      "list": "us-1286",
+      "name": "Baqiyatallah University of Medical Sciences",
+      "altNames": [
+        "Baghyatollah Medical Sciences University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "baghyatollah-medical-sciences-university"
+    },
+    {
+      "key": "1286:bauman-moscow-state-technical-university",
+      "list": "us-1286",
+      "name": "Bauman Moscow State Technical University",
+      "altNames": [
+        "Московский государственный технический университет им. Н. Э. Баумана, МГТУ им. Н. Э. Баумана"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "moscow-state-technical-university-named-after-ne-bauman"
+    },
+    {
+      "key": "1286:beihang-university",
+      "list": "us-1286",
+      "name": "Beihang University",
+      "altNames": [
+        "Beijing University of Aeronautics and Astronautics",
+        "北航大學"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beihang-university"
+    },
+    {
+      "key": "1286:beijing-academy-of-quantum-information-sciences",
+      "list": "us-1286",
+      "name": "Beijing Academy of Quantum Information Sciences",
+      "altNames": [
+        "北京量子信息科学研究院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beijing-academy-of-quantum-information-sciences"
+    },
+    {
+      "key": "1286:beijing-aeronautical-manufacturing-technology-research-institute",
+      "list": "us-1286",
+      "name": "Beijing Aeronautical Manufacturing Technology Research Institute",
+      "altNames": [
+        "Aviation Industry Corporation of China's (AVIC) Institute 625",
+        "AVIC Beijing Aeronautical Manufacturing Technology Research Institute",
+        "北京航空製造工程研究所"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beijing-aeronautical-manufacturing-technology-research-institute"
+    },
+    {
+      "key": "1286:beijing-computational-science-research-center",
+      "list": "us-1286",
+      "name": "Beijing Computational Science Research Center",
+      "altNames": [
+        "Beijing Computing Science Research Center",
+        "北京计算科学研究中心"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beijing-computational-science-research-centre"
+    },
+    {
+      "key": "1286:beijing-institute-of-technology",
+      "list": "us-1286",
+      "name": "Beijing Institute of Technology",
+      "altNames": [
+        "北京理工大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beijing-institute-of-technology"
+    },
+    {
+      "key": "1286:beijing-university-of-posts-and-telecommunications",
+      "list": "us-1286",
+      "name": "Beijing University of Posts and Telecommunications",
+      "altNames": [
+        "北京邮电大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "beijing-university-of-posts-and-telecommunications"
+    },
+    {
+      "key": "1286:center-for-high-pressure-science-and-technology-advanced-research",
+      "list": "us-1286",
+      "name": "Center for High Pressure Science and Technology Advanced Research",
+      "altNames": [
+        "Beijing High Voltage Research Center",
+        "北京高压科学研究中心"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "center-for-high-pressure-science-and-technology"
+    },
+    {
+      "key": "1286:center-for-international-security-and-strategy-of-tsinghua-university",
+      "list": "us-1286",
+      "name": "Center for International Security and Strategy of Tsinghua University",
+      "altNames": [
+        "CISS Tsinghua",
+        "清华大学战略与安全研究中心"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "center-for-international-security-and-strategy-of-tsinghua-university"
+    },
+    {
+      "key": "1286:changchung-university-of-science-and-technology",
+      "list": "us-1286",
+      "name": "Changchung University of Science and Technology",
+      "altNames": [
+        "Changchun Institute of Optics and Fine Mechanics",
+        "长春光学精密机械学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "changchun-university-of-science-and-technology"
+    },
+    {
+      "key": "1286:china-academy-of-engineering-physics",
+      "list": "us-1286",
+      "name": "China Academy of Engineering Physics",
+      "altNames": [
+        "Ninth Academy",
+        "Ninth Institute",
+        "中国工程物理研究院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-engineering-physics"
+    },
+    {
+      "key": "1286:china-coast-guard-academy",
+      "list": "us-1286",
+      "name": "China Coast Guard Academy",
+      "altNames": [
+        "People’s Armed Police China Coast Guard Academy",
+        "中国人民武装警察部队海警学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "china-coast-guard-academy"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-aerospace-information-research-institute",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Aerospace Information Research Institute",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "aerospace-information-research-institute-chinese-academy-of-sciences"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-center-for-excellence-in-quantum-information-and-qua",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Center for Excellence in Quantum Information and Quantum Physics",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-science-center-for-excellence-in-quantum-information-and-quan"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-institute-of-computing-technology",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Institute of Computing Technology",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "cas-institute-of-computing-technology"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-institute-of-microelectronics",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Institute of Microelectronics",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-institute-of-microelectronics"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-institute-of-physics",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Institute of Physics",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-institute-of-physics"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-key-laboratory-for-quantum-information",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Key Laboratory for Quantum Information",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-key-laboratory-for-quantum-information"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-national-time-service-center",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, National Time Service Center",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-national-time-service-center"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-shanghai-institute-of-microsystem-and-information-te",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Shanghai Institute of Microsystem and Information Technology",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-shanghai-institute-of-microsystem-and-information-te"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-shenyang-institute-of-automation",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Shenyang Institute of Automation",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "cas-shenyang-institute-of-automation"
+    },
+    {
+      "key": "1286:chinese-academy-of-sciences-technology-and-engineering-center-for-space-utilizat",
+      "list": "us-1286",
+      "name": "Chinese Academy of Sciences, Technology and Engineering Center for Space Utilization",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chinese-academy-of-sciences-technology-and-engineering-center-for-space-utilizat"
+    },
+    {
+      "key": "1286:chongqing-university",
+      "list": "us-1286",
+      "name": "Chongqing University",
+      "altNames": [
+        "重庆大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chongqing-university"
+    },
+    {
+      "key": "1286:chongqing-university-of-technology",
+      "list": "us-1286",
+      "name": "Chongqing University of Technology",
+      "altNames": [
+        "重庆理工大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "chongqing-university-of-technology"
+    },
+    {
+      "key": "1286:dalian-naval-academy",
+      "list": "us-1286",
+      "name": "Dalian Naval Academy",
+      "altNames": [
+        "海军大连舰艇学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "dalian-naval-academy"
+    },
+    {
+      "key": "1286:dalian-university-of-technology",
+      "list": "us-1286",
+      "name": "Dalian University of Technology",
+      "altNames": [
+        "大连理工大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "dalian-university-of-technology"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-antennas-and-microwave-technology-at-xidian-un",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Antennas and Microwave Technology at Xidian University",
+      "altNames": [
+        "Antenna Institute",
+        "Key Laboratory of Antenna and Microwave Technology",
+        "National Key Laboratory of Antenna and Microwave Technology",
+        "Antennas and Microwave Technology Key Laboratory of National Defense",
+        "Defense S&T Key Laboratory of Antennas and Microwave Technology",
+        "Science and Technology on Antenna and Microwave Laboratory",
+        "State Key Laboratory of Antennas and Microwave Technology",
+        "National Laboratory of Antennas and Microwave Technology",
+        "天线与微波技术国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-antennas-and-microwave-technology-at-xidian-un"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-electronic-measurement-technology-at-north-uni",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Electronic Measurement Technology at North University of China",
+      "altNames": [
+        "National Key Laboratory for Electronic Measurement Technology",
+        "Key Laboratory for Electronic Measurement Technology",
+        "National Defense Key Laboratory for Electronic Measurement Technology",
+        "China Electronics Technology Instruments Co., Ltd (CETI) Key Laboratory for Electronic Measurement Technology",
+        "CETC 41st RI Key Laboratory for Electronic Measurement Technology",
+        "North University of China Key Laboratory for Electronic Measurement Technology",
+        "North University of China School of Instrument and Electronics Key Laboratory for Electronic Measurement Technology",
+        "Key Laboratory of Signal Detection",
+        "电子测试技术国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-electronic-measurement-technology-at-north-uni"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-high-power-semiconductor-lasers-at-changchun-u",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of High-Power Semiconductor Lasers at Changchun University of Science and Technology",
+      "altNames": [
+        "State Key Laboratory of High Power Semiconductor Laser of Changchun University of Science and Technology",
+        "State Key Laboratory on High-Power Semiconductor Lasers",
+        "National Key Laboratory on High Power Semiconductor Laser",
+        "高功率半导体激光国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-high-power-semiconductor-lasers-at-changchun-u"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-information-systems-engineering",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Information Systems Engineering",
+      "altNames": [
+        "信息系统工程国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "key-laboratory-of-information-systems-engineering"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-lightweight-high-strength-structural-materials",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Lightweight, High-strength Structural Materials at Central South University",
+      "altNames": [
+        "National Key Laboratory for High-strength Structural Materials",
+        "National Key Laboratory of Science and Technology for National Defence on High-strength Structural Materials",
+        "National Key Laboratory of Science and Technology for National Defence on High-strength Lightweight Structural Materials",
+        "轻质高强结构材料国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-lightweight-high-strength-structural-materials"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-multi-spectral-information-processing-technolo",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Multi-spectral Information Processing Technology at Huazhong University of S&T",
+      "altNames": [
+        "National Key Laboratory of Science and Technology on Multi-spectral Information Processing",
+        "National Key Laboratory of Multi-spectral Information Processing Technology",
+        "多谱图像信息处理技术国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-multi-spectral-information-processing-technolo"
+    },
+    {
+      "key": "1286:defense-s-and-t-key-laboratory-of-radar-signal-processing-at-xidian-university",
+      "list": "us-1286",
+      "name": "Defense S&T Key Laboratory of Radar Signal Processing at Xidian University",
+      "altNames": [
+        "National Key Laboratory of Radar Signal Processing",
+        "Xidian Electronic Research Institute",
+        "Key Lab for Radar Signal Processing",
+        "State Lab of Radar Signal Processing",
+        "雷达信号处理国防科技重点实验室"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "defense-s-and-t-key-laboratory-of-radar-signal-processing-at-xidian-university"
+    },
+    {
+      "key": "1286:federal-research-center-boreskov-institute-of-catalysis",
+      "list": "us-1286",
+      "name": "Federal Research Center Boreskov Institute of Catalysis",
+      "altNames": [
+        "Институт катализа имени Г. К. Борескова Сибирского отделения Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-research-center-boreskov-institute-of-catalysis"
+    },
+    {
+      "key": "1286:federal-state-budgetary-institute-a-v-zhirmunskiy-national-scientific-research-c",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Institute A.V. Zhirmunskiy National Scientific Research Center of Marine Biology, Far East Branch, Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Национальный научный центр морской биологии имени А.В. Жирмунского Дальневосточного отделения Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-budgetary-institute-a-v-zhirmunskiy-national-scientific-research-c"
+    },
+    {
+      "key": "1286:federal-state-budgetary-institution-of-science-federal-research-center-pushchino",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Institution of Science Federal Research Center Pushchino Scientific Center for Biology, Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Федеральный исследовательский центр Пущинский научный центр биологических исследований Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-budgetary-institution-of-science-federal-research-center-pushchino"
+    },
+    {
+      "key": "1286:federal-state-budgetary-institution-of-science-institute-of-bioorganic-chemistry",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Institution of Science Institute of Bioorganic Chemistry named after Academicians M.M. Shemyakin and Yu.A. Ovchinnikov, Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Институт биоорганической химии им. академиков М.М. Шемякина и Ю.А. Овчинникова Российской академии наук."
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-budgetary-institution-of-science-institute-of-bioorganic-chemistry"
+    },
+    {
+      "key": "1286:federal-state-budgetary-institution-of-science-institute-of-molecular-and-cell-b",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Institution of Science Institute of Molecular and Cell Biology, Siberian Branch of the Russian Academy of Sciences",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Институт молекулярной и клеточной биологии Сибирского отделения Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-budgetary-institution-of-science-institute-of-molecular-and-cell-b"
+    },
+    {
+      "key": "1286:federal-state-budgetary-institution-of-science-p-i-k-a-valiev-ras-of-the-ministr",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Institution of Science P.I.K.A. Valiev RAS of the Ministry of Science and Higher Education of Russia",
+      "altNames": [
+        "Федеральное государственное бюджетное учреждение науки Физико-технологический институт имени К.А. Валиева Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n-2"
+    },
+    {
+      "key": "1286:federal-state-budgetary-scientific-institution-research-and-production-complex-t",
+      "list": "us-1286",
+      "name": "Federal State Budgetary Scientific Institution Research and Production Complex Technology Center",
+      "altNames": [
+        "SMC Technological Centre",
+        "Scientific Manufacturing Complex Technological Center",
+        "NPK Technological Center",
+        "Федеральное государственное бюджетное научное учреждение Научно-производственный комплекс Технологический центр"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-budgetary-scientific-institution-research-and-production-complex-t"
+    },
+    {
+      "key": "1286:federal-state-institution-federal-scientific-center-scientific-research-institut",
+      "list": "us-1286",
+      "name": "Federal State Institution Federal Scientific Center Scientific Research Institute for System Analysis of the Russian Academy of Sciences",
+      "altNames": [
+        "Federalnoe Gosudarstvennoe Uchrezhdenie Federalnyy Nauchnyy Tsentr NauchnoIssledovatelskiy Institut Sistemnykh Issledovaniy Rossiyskoy Akademii Nauk",
+        "FGU FNTS NIISI RAN",
+        "FSI FSC SRISA RAS",
+        "Scientific Research Institute of System Analysis, Russian Academy of Sciences",
+        "Федеральное государственное учреждение Федеральный научный центр Научно-исследовательский институт системных исследований Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-institution-federal-scientific-center-scientific-research-institut"
+    },
+    {
+      "key": "1286:federal-state-unitary-enterprise-all-russian-research-institute-of-physical-tech",
+      "list": "us-1286",
+      "name": "Federal State Unitary Enterprise All-Russian Research Institute of Physical, Technical and Radio Engineering Measurements",
+      "altNames": [
+        "FGUP VNIIFTRI",
+        "Федеральное государственное унитарное предприятие «Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-unitary-enterprise-all-russian-research-institute-of-physical-tech"
+    },
+    {
+      "key": "1286:federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis",
+      "list": "us-1286",
+      "name": "Federal State Unitary Enterprise Central Scientific Research Institute of Chemistry and Mechanics",
+      "altNames": [
+        "CNIIHM",
+        "Federalnoe Gosudarstvennoe Unitarnoe Predpriyatie Tsentralny NauchnoIssledovatelski Institut Khimii I Mekhaniki",
+        "FGUP CNIIXM",
+        "FGUP TSNIIKHM",
+        "FSUE CNIIHM",
+        "FSUE TSNIIKHM",
+        "GNTS RF FGUP TSNIIKHM",
+        "State Research Center of the Russian Federation FGUP Central Scientific Research Institute of Chemistry and Mechanics",
+        "Tsentralny Naucho-Issledovatelsky Institut Khimii I Mekhaniki, FGUP",
+        "TSNIIKHM",
+        "Центральный научно-исследовательский институт химии и механики"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis"
+    },
+    {
+      "key": "1286:fudan-university",
+      "list": "us-1286",
+      "name": "Fudan University",
+      "altNames": [
+        "复旦大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "fudan-university"
+    },
+    {
+      "key": "1286:ground-force-command-college",
+      "list": "us-1286",
+      "name": "Ground Force Command College",
+      "altNames": [
+        "陆军指挥学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "nanjing-army-command-college"
+    },
+    {
+      "key": "1286:guilin-university-of-electronic-technology",
+      "list": "us-1286",
+      "name": "Guilin University of Electronic Technology",
+      "altNames": [
+        "桂林电子科技大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "guilin-university-of-electronic-science-and-technology"
+    },
+    {
+      "key": "1286:hangzhao-dianzi-university",
+      "list": "us-1286",
+      "name": "Hangzhao Dianzi University",
+      "altNames": [
+        "Hangzhou Electronic Science and Technology University",
+        "杭州电子科技大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "hangzhou-dianzi-university"
+    },
+    {
+      "key": "1286:harbin-engineering-university",
+      "list": "us-1286",
+      "name": "Harbin Engineering University",
+      "altNames": [
+        "哈尔滨工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "harbin-engineering-university"
+    },
+    {
+      "key": "1286:harbin-institute-of-technology",
+      "list": "us-1286",
+      "name": "Harbin Institute of Technology",
+      "altNames": [
+        "哈爾濱工業大學"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "harbin-institute-of-technology"
+    },
+    {
+      "key": "1286:hefei-national-laboratory-for-physical-sciences-at-the-microscale",
+      "list": "us-1286",
+      "name": "Hefei National Laboratory for Physical Sciences at the Microscale",
+      "altNames": [
+        "合肥微尺度物质科学国家研究中心"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "hefei-national-laboratory-for-physical-sciences-at-microscale"
+    },
+    {
+      "key": "1286:high-power-laser-laboratory-shanghai",
+      "list": "us-1286",
+      "name": "High Power Laser Laboratory, Shanghai",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-high-power-laser-laboratory"
+    },
+    {
+      "key": "1286:imam-baqir-university",
+      "list": "us-1286",
+      "name": "Imam Baqir University",
+      "altNames": [],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "imam-baqir-university"
+    },
+    {
+      "key": "1286:imam-hussein-university",
+      "list": "us-1286",
+      "name": "Imam Hussein University",
+      "altNames": [
+        "Imam Hossein University",
+        "Imam Hossein Comprehensive University",
+        "Imam Hussein Military University",
+        "Imam Hussein University of the Revolutionary Guards"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "imam-hossein-university"
+    },
+    {
+      "key": "1286:institute-of-applied-physics-and-computational-mathematics-beijing",
+      "list": "us-1286",
+      "name": "Institute of Applied Physics and Computational Mathematics, Beijing",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-institute-of-applied-physics-and-computational-mathematics"
+    },
+    {
+      "key": "1286:institute-of-radio-engineering-and-electronics",
+      "list": "us-1286",
+      "name": "Institute of Radio-Engineering and Electronics",
+      "altNames": [
+        "Институт радиотехники и электроники"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "institute-of-radio-engineering-and-electronics"
+    },
+    {
+      "key": "1286:institute-of-solid-state-physics-of-the-russian-academy-of-sciences",
+      "list": "us-1286",
+      "name": "Institute of Solid State Physics of the Russian Academy of Sciences",
+      "altNames": [
+        "Institute of Solid State Physics",
+        "Osipyan Institute of Solid State Physics",
+        "Институт физики твердого тела им. Ю.А. Осипьяна РАН"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "institute-of-solid-state-physics-of-the-russian-academy-of-sciences"
+    },
+    {
+      "key": "1286:joint-logistics-support-force-engineering-university",
+      "list": "us-1286",
+      "name": "Joint Logistics Support Force Engineering University",
+      "altNames": [
+        "中国人民解放军联勤保障部队工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "joint-logistics-support-force-engineering-university"
+    },
+    {
+      "key": "1286:kazan-national-research-technical-university-named-after-a-n-tupolev-kai",
+      "list": "us-1286",
+      "name": "Kazan National Research Technical University named after A.N. Tupolev-KAI",
+      "altNames": [
+        "Kazan National Technical Research University",
+        "Kazan Aviation Institute",
+        "Казанский национальный исследовательский технический университет имени А. Н. Туполева-КАИ"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "kazan-national-research-technical-university-named-after-a-n-tupolev-kai"
+    },
+    {
+      "key": "1286:keldysh-institute-of-applied-mathematics",
+      "list": "us-1286",
+      "name": "Keldysh Institute of Applied Mathematics",
+      "altNames": [
+        "Institute of Applied Mathematics, M.V. Keldysha",
+        "Институт прикладной математики им. М.В.Келдыша, ИПМ"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "keldysh-institute-of-applied-mathematics-of-the-russian-academy-of-sciences"
+    },
+    {
+      "key": "1286:kuznetsov-naval-academy",
+      "list": "us-1286",
+      "name": "Kuznetsov Naval Academy",
+      "altNames": [
+        "Военно-морская академия имени Н. Г. Кузнецова"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "kuznetsov-naval-academy"
+    },
+    {
+      "key": "1286:lobachevsky-state-university-of-nizhny-novgorod",
+      "list": "us-1286",
+      "name": "Lobachevsky State University of Nizhny Novgorod",
+      "altNames": [
+        "National Research State University of Nizhny Novgorod Named after N.I. Lobachevsky",
+        "Nizhny Novgorod National Research State University Named after N.I. Lobachevsky",
+        "Нижегородский национа́льный иссле́довательский госуда́рственный университе́т имени Н.И. Лобачевского"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "lobachevsky-state-university-of-nizhny-novgorod"
+    },
+    {
+      "key": "1286:luoyang-institute-of-science-and-technology",
+      "list": "us-1286",
+      "name": "Luoyang Institute of Science and Technology",
+      "altNames": [
+        "Luoyang Institute of Technology",
+        "洛阳理工学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "luoyang-institute-of-science-and-technology"
+    },
+    {
+      "key": "1286:malek-ashtar-university",
+      "list": "us-1286",
+      "name": "Malek Ashtar University",
+      "altNames": [
+        "Malek Ashtar University of Technology",
+        "Malik Ashtar University of Technology",
+        "Malek Ashtar Technical University",
+        "Malek Ashtar Aviation University Complex",
+        "Malek Ashtar University of Defense Technology"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "malek-ashtar-university-of-technology"
+    },
+    {
+      "key": "1286:mirea-russian-technological-university",
+      "list": "us-1286",
+      "name": "MIREA - Russian Technological University",
+      "altNames": [
+        "Russian Technological University",
+        "MIREA-Russian Technological University",
+        "RTU-MIREA",
+        "Федеральное государственное бюджетное образовательное учреждение высшего образования «МИРЭА — Российский технологический университет"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "mirea-russian-technological-university"
+    },
+    {
+      "key": "1286:moscow-aviation-institute",
+      "list": "us-1286",
+      "name": "Moscow Aviation Institute",
+      "altNames": [
+        "Московский авиационный институт"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "moscow-aviation-institute"
+    },
+    {
+      "key": "1286:moscow-institute-of-physics-and-technology",
+      "list": "us-1286",
+      "name": "Moscow Institute of Physics and Technology",
+      "altNames": [
+        "MFTI",
+        "Phys Tech",
+        "Московский физико-технический институт"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "moscow-institute-of-physics-and-technology"
+    },
+    {
+      "key": "1286:moscow-s-higher-school-of-economics",
+      "list": "us-1286",
+      "name": "Moscow’s Higher School of Economics",
+      "altNames": [
+        "National Research University Higher School of Economics",
+        "Высшая школа экономики"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "higher-school-of-economics-university"
+    },
+    {
+      "key": "1286:moscow-state-university",
+      "list": "us-1286",
+      "name": "Moscow State University",
+      "altNames": [
+        "M.V. Lomonosov Moscow State University",
+        "Lomonosov Moscow State University",
+        "Московский государственный университет имени М. В. Ломоносова"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "moscow-state-university"
+    },
+    {
+      "key": "1286:nanjing-institute-of-astronomical-optics-and-technology",
+      "list": "us-1286",
+      "name": "Nanjing Institute of Astronomical Optics and Technology",
+      "altNames": [
+        "中国科学院南京天文光学技术研究所"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "nanjing-institute-of-astronomical-optics-and-technology"
+    },
+    {
+      "key": "1286:nanjing-university-of-aeronautics-and-astronautics",
+      "list": "us-1286",
+      "name": "Nanjing University of Aeronautics and Astronautics",
+      "altNames": [
+        "南京航空航天大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "nanjing-university-of-aeronautics-and-astronautics"
+    },
+    {
+      "key": "1286:nanjing-university-of-science-and-technology",
+      "list": "us-1286",
+      "name": "Nanjing University of Science and Technology",
+      "altNames": [
+        "南京理工大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "nanjing-university-of-science-and-technology"
+    },
+    {
+      "key": "1286:national-defense-university",
+      "list": "us-1286",
+      "name": "National Defense University",
+      "altNames": [
+        "國防大學"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "national-defense-university"
+    },
+    {
+      "key": "1286:national-research-centre-kurchatov-institute",
+      "list": "us-1286",
+      "name": "National Research Centre “Kurchatov Institute”",
+      "altNames": [
+        "Kurchatov Institute",
+        "Национальный исследовательский центр Курчатовский Институт"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "national-research-center-kurchatov-institute"
+    },
+    {
+      "key": "1286:national-university-of-defense-technology",
+      "list": "us-1286",
+      "name": "National University of Defense Technology",
+      "altNames": [
+        "Central South CAD Center",
+        "CSCC",
+        "Hunan Guofang Keji University",
+        "中国人民解放军国防科技大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "national-university-of-defense-technology"
+    },
+    {
+      "key": "1286:naval-aviation-university",
+      "list": "us-1286",
+      "name": "Naval Aviation University",
+      "altNames": [
+        "海军航空大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "navy-aviation-university"
+    },
+    {
+      "key": "1286:naval-command-college",
+      "list": "us-1286",
+      "name": "Naval Command College",
+      "altNames": [
+        "中国人民解放军海军指挥学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "naval-command-college"
+    },
+    {
+      "key": "1286:naval-medical-university",
+      "list": "us-1286",
+      "name": "Naval Medical University",
+      "altNames": [
+        "中国人民解放军海军军医大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "navy-medical-university"
+    },
+    {
+      "key": "1286:naval-non-commissioned-officer-school",
+      "list": "us-1286",
+      "name": "Naval Non-Commissioned Officer School",
+      "altNames": [
+        "海军士官学校"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "naval-petty-officer-academy"
+    },
+    {
+      "key": "1286:naval-submarine-academy",
+      "list": "us-1286",
+      "name": "Naval Submarine Academy",
+      "altNames": [
+        "海军潜艇学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "navy-submarine-academy"
+    },
+    {
+      "key": "1286:naval-university-of-engineering",
+      "list": "us-1286",
+      "name": "Naval University of Engineering",
+      "altNames": [
+        "中国人民解放军海军工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "naval-university-of-engineering"
+    },
+    {
+      "key": "1286:naval-university-of-imam-khomeini",
+      "list": "us-1286",
+      "name": "Naval University of Imam Khomeini",
+      "altNames": [
+        "Imam Khomeini Maritime University",
+        "Imam Khomeini Naval Academy",
+        "Imam Khomeini Naval University of Noshahr",
+        "Imam Khomeini University of Marine Sciences and Technologies"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "naval-university-of-imam-khomeini"
+    },
+    {
+      "key": "1286:north-university-of-china",
+      "list": "us-1286",
+      "name": "North University of China",
+      "altNames": [
+        "Zhongbei University",
+        "中北大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "north-university-of-china"
+    },
+    {
+      "key": "1286:northwestern-polytechnical-university",
+      "list": "us-1286",
+      "name": "Northwestern Polytechnical University",
+      "altNames": [
+        "Northwestern Polytechnic University",
+        "Northwest Polytechnic University",
+        "Northwest Polytechnical University",
+        "西北工业大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "northwestern-polytechnical-university"
+    },
+    {
+      "key": "1286:ocean-university-of-china",
+      "list": "us-1286",
+      "name": "Ocean University of China",
+      "altNames": [
+        "中国海洋大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "ocean-university-of-china"
+    },
+    {
+      "key": "1286:p-i-baranov-central-institute-of-aviation-motor-development",
+      "list": "us-1286",
+      "name": "P. I. Baranov Central Institute of Aviation Motor Development",
+      "altNames": [
+        "Central Institute for Aviation Motor Development named after P. I. Baranov",
+        "Central Institute of Aviation Motors",
+        "Центральный институт авиационного моторостроения"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "federal-autonomous-institution-central-institute-of-engine-building-n-a-p-i-bara"
+    },
+    {
+      "key": "1286:p-n-lebedev-physical-institute-of-the-russian-academy-of-sciences",
+      "list": "us-1286",
+      "name": "P.N. Lebedev Physical Institute of the Russian Academy of Sciences",
+      "altNames": [
+        "Lebedev Physical Institute",
+        "P.N. Lebedev Institute of Physics",
+        "Lebedev Institute",
+        "Физи́ческий институ́т имени П. Н. Ле́бедева Российской академии наук"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences"
+    },
+    {
+      "key": "1286:rocket-force-command-college",
+      "list": "us-1286",
+      "name": "Rocket Force Command College",
+      "altNames": [
+        "火箭军指挥学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "rocket-force-command-college"
+    },
+    {
+      "key": "1286:rocket-force-engineering-university",
+      "list": "us-1286",
+      "name": "Rocket Force Engineering University",
+      "altNames": [
+        "火箭军工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "rocket-force-university-of-engineering"
+    },
+    {
+      "key": "1286:rocket-force-non-commissioned-officer-school",
+      "list": "us-1286",
+      "name": "Rocket Force Non-Commissioned Officer School",
+      "altNames": [
+        "火箭军士官学校"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "rocket-force-sergeant-school"
+    },
+    {
+      "key": "1286:rzhanov-institute-of-semiconductor-physics-of-the-siberian-branch-of-the-ras",
+      "list": "us-1286",
+      "name": "Rzhanov Institute of Semiconductor Physics of the Siberian Branch of the RAS",
+      "altNames": [
+        "ISP SB RAS",
+        "Institute of Semiconductor Physics IM A.V. Rzhanov",
+        "Институт физики полупроводников имени А. В. Ржанова СО РАН"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "rzhanov-institute-of-semiconductor-physics-siberian-branch-of-russian-academy-of"
+    },
+    {
+      "key": "1286:shahid-sattari-air-force-university",
+      "list": "us-1286",
+      "name": "Shahid Sattari Air Force University",
+      "altNames": [
+        "Shahid Sattari University of Aeronautical Engineering",
+        "Shahid Sattari Air Academy",
+        "Shahid Sattari University of Aeronautical Sciences and Technologies"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "shahid-sattari-air-force-university"
+    },
+    {
+      "key": "1286:shandong-university",
+      "list": "us-1286",
+      "name": "Shandong University",
+      "altNames": [
+        "山东大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "shandong-university"
+    },
+    {
+      "key": "1286:shanghai-jiao-tong-university",
+      "list": "us-1286",
+      "name": "Shanghai Jiao Tong University",
+      "altNames": [
+        "上海交通大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "shanghai-jiao-tong-university"
+    },
+    {
+      "key": "1286:sharif-university-of-technology",
+      "list": "us-1286",
+      "name": "Sharif University of Technology",
+      "altNames": [
+        "SHFT",
+        "SUT",
+        "Sharif Technical University"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "sharif-university-of-technology"
+    },
+    {
+      "key": "1286:shenyang-aerospace-university",
+      "list": "us-1286",
+      "name": "Shenyang Aerospace University",
+      "altNames": [
+        "Shenyang Institute of Aeronautical Engineering",
+        "沈阳航空航天大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "shenyang-aerospace-university"
+    },
+    {
+      "key": "1286:shenyang-ligong-university",
+      "list": "us-1286",
+      "name": "Shenyang Ligong University",
+      "altNames": [
+        "Shenyang Institute of Technology",
+        "沈阳理工大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "shenyang-ligong-university"
+    },
+    {
+      "key": "1286:siberian-scientific-research-institute-of-aviation",
+      "list": "us-1286",
+      "name": "Siberian Scientific-Research Institute of Aviation",
+      "altNames": [
+        "Chaplygin Siberian Scientific Research Institute Of Aviation",
+        "SibNIA",
+        "Сибирский научно-исследовательский институт авиации им. С. А. Чаплыгина"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "siberian-scientific-research-institute-of-aviation-n-a-s-a-chaplygin"
+    },
+    {
+      "key": "1286:sichuan-university",
+      "list": "us-1286",
+      "name": "Sichuan University",
+      "altNames": [
+        "四川大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "sichuan-university"
+    },
+    {
+      "key": "1286:skolkovo-institute-of-science-and-technology",
+      "list": "us-1286",
+      "name": "Skolkovo Institute of Science and Technology",
+      "altNames": [
+        "Skoltech",
+        "Сколковский институт науки и технологий"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "skolkovo-institute-of-science-and-technology"
+    },
+    {
+      "key": "1286:southwest-computing-center",
+      "list": "us-1286",
+      "name": "Southwest Computing Center",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-computing-center"
+    },
+    {
+      "key": "1286:southwest-institute-general-designing-and-assembly",
+      "list": "us-1286",
+      "name": "Southwest Institute General Designing and Assembly",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-general-designing-and-assembly"
+    },
+    {
+      "key": "1286:southwest-institute-of-applied-electronics",
+      "list": "us-1286",
+      "name": "Southwest Institute of Applied Electronics",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-applied-electronics"
+    },
+    {
+      "key": "1286:southwest-institute-of-chemical-materials",
+      "list": "us-1286",
+      "name": "Southwest Institute of Chemical Materials",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-chemical-materials"
+    },
+    {
+      "key": "1286:southwest-institute-of-electronic-engineering",
+      "list": "us-1286",
+      "name": "Southwest Institute of Electronic Engineering",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-electronic-engineering"
+    },
+    {
+      "key": "1286:southwest-institute-of-environmental-testing",
+      "list": "us-1286",
+      "name": "Southwest Institute of Environmental Testing",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-environmental-testing"
+    },
+    {
+      "key": "1286:southwest-institute-of-explosives-and-chemical-engineering",
+      "list": "us-1286",
+      "name": "Southwest Institute of Explosives and Chemical Engineering",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-explosives-and-chemical-engineering"
+    },
+    {
+      "key": "1286:southwest-institute-of-fluid-physics",
+      "list": "us-1286",
+      "name": "Southwest Institute of Fluid Physics",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-fluid-physics"
+    },
+    {
+      "key": "1286:southwest-institute-of-machining-technology",
+      "list": "us-1286",
+      "name": "Southwest Institute of Machining Technology",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-machining-technology"
+    },
+    {
+      "key": "1286:southwest-institute-of-materials",
+      "list": "us-1286",
+      "name": "Southwest Institute of Materials",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-materials"
+    },
+    {
+      "key": "1286:southwest-institute-of-nuclear-physics-and-chemistry",
+      "list": "us-1286",
+      "name": "Southwest Institute of Nuclear Physics and Chemistry",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-nuclear-physics-and-chemistry"
+    },
+    {
+      "key": "1286:southwest-institute-of-research-and-applications-of-special-materials-factory",
+      "list": "us-1286",
+      "name": "Southwest Institute of Research and Applications of Special Materials Factory",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-research-and-applications-of-special-materials"
+    },
+    {
+      "key": "1286:southwest-institute-of-structural-materials",
+      "list": "us-1286",
+      "name": "Southwest Institute of Structural Materials",
+      "altNames": [],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "caep-southwest-institute-of-structural-mechanics"
+    },
+    {
+      "key": "1286:space-engineering-university",
+      "list": "us-1286",
+      "name": "Space Engineering University",
+      "altNames": [
+        "Aerospace Engineering University of the People’s Liberation Army Strategic Support Force",
+        "Strategic Support Force Space Engineering University",
+        "中国人民解放军战略支援部队航天工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "space-engineering-university"
+    },
+    {
+      "key": "1286:strategic-support-force-information-engineering-university",
+      "list": "us-1286",
+      "name": "Strategic Support Force Information Engineering University",
+      "altNames": [
+        "Zhengzhou Information Science and Technology Institute",
+        "战略支援部队信息工程大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "information-engineering-university"
+    },
+    {
+      "key": "1286:sun-yat-sen-university",
+      "list": "us-1286",
+      "name": "Sun Yat-sen University",
+      "altNames": [
+        "Zhongshan University",
+        "中山大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "sun-yat-sen-university"
+    },
+    {
+      "key": "1286:supreme-national-defense-university",
+      "list": "us-1286",
+      "name": "Supreme National Defense University",
+      "altNames": [
+        "National Defense University and Institute for Strategic Research",
+        "University and Higher Research Institute for National Defense and Strategic Research"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "supreme-national-defense-university"
+    },
+    {
+      "key": "1286:tactical-missile-corporation-concern-mpo-gidropribor",
+      "list": "us-1286",
+      "name": "Tactical Missile Corporation, Concern “MPO—Gidropribor”",
+      "altNames": [
+        "Joint Stock Company Concern Sea Underwater Weapons Gidropribor",
+        "Research Institute “Gidpropridor”",
+        "Концерн «Морское подводное оружие — Гидроприбор"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "tactical-missile-corporation-concern-mpo-gidropribor"
+    },
+    {
+      "key": "1286:tactical-missile-corporation-joint-stock-company-gosniimash",
+      "list": "us-1286",
+      "name": "Tactical Missile Corporation, Joint Stock Company GosNIIMash",
+      "altNames": [
+        "PPORosprofprom V “GOSNIIMASH”",
+        "State Research Institute of Mechanical Engineering",
+        "Pervichnaya Profsoyuznaya Organizatsiya Rossiskogo Profsoyuza Rabotnikov Promyshlennosti V",
+        "“GOSNIIMASH”",
+        "Joint Stock Company “State Research Institute of Mechanical Engineering” named after V.V.Bakhirev”",
+        "Акционерное Общество “Государственный Научно-Исследовательский Институт Машиностроения Имени В.В. Бахирева"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
+    },
+    {
+      "key": "1286:tianjin-university",
+      "list": "us-1286",
+      "name": "Tianjin University",
+      "altNames": [
+        "天津大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "tianjin-university"
+    },
+    {
+      "key": "1286:tomsk-polytechnic-university",
+      "list": "us-1286",
+      "name": "Tomsk Polytechnic University",
+      "altNames": [
+        "National Research Tomsk Polytechnic University",
+        "Национальный исследовательский Томский политехнический университет"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "tomsk-polytechnic-university"
+    },
+    {
+      "key": "1286:university-of-electronic-science-and-technology-of-china",
+      "list": "us-1286",
+      "name": "University of Electronic Science and Technology of China",
+      "altNames": [
+        "电子科技大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "university-of-electronic-science-and-technology-of-china"
+    },
+    {
+      "key": "1286:university-of-international-relations",
+      "list": "us-1286",
+      "name": "University of International Relations",
+      "altNames": [
+        "School of International Relations",
+        "Institute of International Relations",
+        "国际关系学院"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "university-of-international-relations"
+    },
+    {
+      "key": "1286:university-of-science-and-technology-of-china",
+      "list": "us-1286",
+      "name": "University of Science and Technology of China",
+      "altNames": [
+        "中国科学技术大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "university-of-science-and-technology-of-china"
+    },
+    {
+      "key": "1286:ural-federal-university-named-after-b-n-yeltsin-the-first-president-of-russia",
+      "list": "us-1286",
+      "name": "Ural Federal University named after B.N. Yeltsin, the First President of Russia",
+      "altNames": [
+        "UrFU",
+        "Уральский федеральный университет имени первого Президента России Б.Н. Ельцина"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "ural-federal-university-named-after-b-n-yeltsin-the-first-president-of-russia"
+    },
+    {
+      "key": "1286:xi-an-jiatong-university",
+      "list": "us-1286",
+      "name": "Xi’an Jiatong University",
+      "altNames": [
+        "西安交通大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "xi-an-jiaotong-university"
+    },
+    {
+      "key": "1286:xi-an-technological-university",
+      "list": "us-1286",
+      "name": "Xi’an Technological University",
+      "altNames": [
+        "Xi’an University of Technology",
+        "西安工业大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "xian-technological-university"
+    },
+    {
+      "key": "1286:xidian-university",
+      "list": "us-1286",
+      "name": "Xidian University",
+      "altNames": [
+        "Xi’an Electronic Science and Technology University",
+        "西安电子科技大学"
+      ],
+      "country": "CN",
+      "date": null,
+      "citation": "FY2025 list, published 23 July 2026",
+      "url": "https://www.cto.mil/wp-content/uploads/2026/07/FY25-Section-1286-List_402307.pdf",
+      "institution": "xidian-university"
+    }
+  ]
+}

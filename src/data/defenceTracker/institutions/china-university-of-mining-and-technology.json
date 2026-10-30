@@ -1,0 +1,66 @@
+{
+  "id": "china-university-of-mining-and-technology",
+  "name": "China University of Mining and Technology",
+  "zh": "中国矿业大学",
+  "zhAliases": [],
+  "aliases": [
+    "Zhōngguó Kuàngyè Dàxué"
+  ],
+  "acronyms": [
+    "CUMT"
+  ],
+  "domains": [
+    "cumt.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xuzhou",
+    "province": "Jiangsu",
+    "lat": 34.20442,
+    "lng": 117.28386
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "8029519b-299f-4c71-a6fd-6c0fcceb64da",
+    "ror": "01xt2dr21",
+    "wikidata": "Q1074084"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Jiangsu Provincial Government",
+      "State Administration of Work Safety"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Mechanics"
+    ],
+    "address": null
+  }
+}

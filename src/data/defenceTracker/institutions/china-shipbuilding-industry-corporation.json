@@ -1,0 +1,60 @@
+{
+  "id": "china-shipbuilding-industry-corporation",
+  "name": "China Shipbuilding Industry Corporation",
+  "zh": "中国船舶重工集团有限公司",
+  "zhAliases": [
+    "中船重工"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "CSIC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": null,
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "48a12b7e-ff93-4f0d-a398-eefebc71c1c1"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "Dalian Shipbuilding Industry",
+      "Bohai Shipbuilding Heavy Industry",
+      "Wuchang Shipbuilding Industry Group",
+      "Shanhaiguan Shipbuilding Industry",
+      "Qingdao Beihai Shipbuilding Heavy Industry"
+    ],
+    "topics": [
+      "Armament science and technology",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": null
+  }
+}

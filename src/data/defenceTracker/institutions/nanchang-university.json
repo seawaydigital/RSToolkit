@@ -1,0 +1,62 @@
+{
+  "id": "nanchang-university",
+  "name": "Nanchang University",
+  "zh": "南昌大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nánchāng Dàxué"
+  ],
+  "acronyms": [
+    "NCU"
+  ],
+  "domains": [
+    "ncu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanchang",
+    "province": "Jiangxi",
+    "lat": 28.683529,
+    "lng": 115.93734700000005
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5fd4ec84-6f0b-4f08-9507-f39bccb8f8c8",
+    "ror": "042v6xz23",
+    "wikidata": "Q3497259"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Jiangxi Provincial Government",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Mechanical engineering"
+    ],
+    "address": "no. 999 Xuefu Avenue, Honggutan New District, Nanchang"
+  }
+}

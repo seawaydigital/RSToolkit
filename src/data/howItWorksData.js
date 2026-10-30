@@ -17,6 +17,7 @@
 // geocoders when the proximity panel is switched off.
 
 import { WEB_HOST, ENABLE_PROXIMITY_SEARCH as GEO } from '../siteConfig';
+import { TRACKER_ENABLED } from './defenceTracker/enabled';
 
 export const STORAGE_KEYS = ['rs-toolkit-checklist-v1', 'rs-toolkit-travel-v1'];
 
@@ -70,10 +71,10 @@ export const howItWorksData = {
         when: 'Every page load',
         what: 'A request for the site files',
         to: `The web host (${WEB_HOST})`,
-        learn: 'That your IP address opened the site. Not which tool you used or what you typed — the URL after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
+        learn: 'That your IP address opened the site, and which tools you opened: each tool’s code is a separate file your browser downloads the first time you open that tool. Not what you typed or chose — the part of the address after the # is never sent to a server. The fonts are served from the same host, so no font service sees your visit.',
       },
       {
-        when: 'Only on the NRO map',
+        when: TRACKER_ENABLED ? 'Only on the NRO map and the Defence Institution Tracker’s map view' : 'Only on the NRO map',
         what: 'Requests for map image tiles',
         to: 'The basemap provider (Esri by default)',
         learn: 'Which areas of the world map you looked at and how far you zoomed in. Not your search text, and not which pins you clicked.',
@@ -87,7 +88,9 @@ export const howItWorksData = {
       },
     ].filter(Boolean),
     outro:
-      'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
+      'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, ' +
+      (TRACKER_ENABLED ? 'the Defence Institution Tracker’s search or batch check, ' : '') +
+      'the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
   },
 
   storage: {
@@ -184,7 +187,7 @@ export const howItWorksData = {
     items: [
       {
         title: 'Watch the network',
-        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
+        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${TRACKER_ENABLED ? ' or the tracker’s map view' : ''}${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
       },
       {
         title: 'Read the policy',

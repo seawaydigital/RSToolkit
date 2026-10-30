@@ -1,0 +1,47 @@
+{
+  "id": "caep-institute-of-applied-physics-and-computational-mathematics",
+  "name": "The Institute of Applied Physics and Computational Mathematics",
+  "zh": "北京应用物理与计算数学研究所",
+  "zhAliases": [],
+  "aliases": [
+    "Institute of Applied Physics and Computational Mathematics"
+  ],
+  "acronyms": [
+    "IAPCM"
+  ],
+  "domains": [
+    "iapcm.ac.cn"
+  ],
+  "country": "CN",
+  "type": "nuclear",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9727,
+    "lng": 116.3603
+  },
+  "supervisors": [],
+  "parent": "chinese-academy-of-engineering-physics",
+  "ids": {
+    "nro": "caep-institute-of-applied-physics-and-computational-mathematics",
+    "ror": "03sxpbt26",
+    "wikidata": "Q6039862"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

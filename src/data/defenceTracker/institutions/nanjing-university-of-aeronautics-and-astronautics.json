@@ -1,0 +1,78 @@
+{
+  "id": "nanjing-university-of-aeronautics-and-astronautics",
+  "name": "Nanjing University of Aeronautics and Astronautics",
+  "zh": "南京航空航天大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nanhang University",
+    "Nanjing Aeronautical Institute",
+    "Nanjing College of Aviation Industry"
+  ],
+  "acronyms": [
+    "NUAA"
+  ],
+  "domains": [
+    "nuaa.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "lat": 32.0374,
+    "lng": 118.8154
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e2a8d157-9366-4ea6-a65f-e902c0b4f944",
+    "nro": "nanjing-university-of-aeronautics-and-astronautics",
+    "ror": "01scyh794",
+    "wikidata": "Q23110"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Seven sons of national defence"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "Ministry of Education (MOE)",
+      "Jiangsu Provincial Government"
+    ],
+    "majorDefenceLaboratories": [
+      "State Key Laboratory of Rotorcraft Aeromechanics (直升机旋翼动力学国家级重点实验室/直升机旋翼动力学国防科技重点实验室)",
+      "State Key Laboratory of Helicopter Drive Technology (直升机传动技术国防科技重点实验室/直升机传动技术国家级重点实验室)",
+      "Jointly established in 2018 with Aero Engine Corporation of China’s Hunan Aviation Power Plant Research Institute (中国航发湖南动力机械研究所)",
+      "Technological Innovation Center for Difficult-to-Machine Materials and Machining Technology in National Defense Science and Technology Industry (国防科技工业难加工材料加工技术研究应用中心)",
+      "Ministerial Key Discipline Laboratory of Precision Driving Technology (精密驱动技术国防重点学科实验室)",
+      "Ministerial Key Discipline Laboratory of Advanced Design Technology of Aircraft (飞行器先进设计技术国防重点学科实验室)",
+      "Ministry of Education Key Laboratory of Radar Imaging and Microwave Photonics (雷达成像与微波光子技术教育部重点实验室(B类))"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Control science and engineering",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Nuclear science and technology"
+    ],
+    "address": null
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "university-of-electronic-science-and-technology-of-china",
+  "name": "University of Electronic Science and Technology of China",
+  "zh": "电子科技大学",
+  "zhAliases": [
+    "成都电子科技大学"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "UESTC"
+  ],
+  "domains": [
+    "uestc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "lat": 30.7534,
+    "lng": 103.9294
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a6a76a99-8eb1-40aa-ba40-a060bb211573",
+    "nro": "university-of-electronic-science-and-technology-of-china",
+    "ror": "04qr3zq92",
+    "wikidata": "Q5971900"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "China Electronics Technology Group Corporation (CETC)"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Science and Technology on Vacuum Electronics (微波电真空器件国家级重点实验室/大功率微波电真空器件技术国防科技重点实验室)",
+      "Jointly established with China Electronics Technology Group Corporation’s 12",
+      "National Key Laboratory of Science and Technology on Communication / National Anti-interference Communication Technology Lab (战术通信抗干扰技术国防科技重点实验室/通信抗干扰技术国家级重点实验室)",
+      "One of the lab’s Chinese names literally translates as the National Defense Technology Key Laboratory on Anti-Interference for Tactical Communications",
+      "Fundamental Science on EHF [Extremely High Frequencies] Laboratory (极高频复杂系统国防重点学科实验室)",
+      "High Power Radiation Key Laboratory / National 863 Plan Strong Radiation Laboratory (国家863计划强辐射重点实验室)",
+      "Jointly established with the Chinese Academy of Engineering Physics, the PRC’s primary nuclear warhead research complex",
+      "Key Laboratory of Integrated Electronic System, Ministry of Education (综合电子系统技术教育部重点实验室 (B类))",
+      "Ministry of Education Key Laboratory on Optoelectric Probe and Sensor Integration Technology (光电探测与传感集成技术教育部重点实验室(B类))",
+      "The Key Laboratory for Multi-Spectrum Absorbing Materials & Structures, Ministry of Education (多频谱吸波材料与结构教育部重点实验室 (B类))"
+    ],
+    "subsidiaries": [
+      "Sichuan Dongsheng Electronic Technology Co., Ltd. (四川东盛电子科技有限公司)",
+      "Institute of Electronic and Information Engineering in Dongguan (电子科技大学广东电子信息工程研究院)"
+    ],
+    "topics": [
+      "Cyber",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Nuclear weapons",
+      "Optical engineering",
+      "Stealth technology"
+    ],
+    "address": null
+  }
+}

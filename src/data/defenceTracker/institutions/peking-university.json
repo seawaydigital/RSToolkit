@@ -1,0 +1,90 @@
+{
+  "id": "peking-university",
+  "name": "Peking University",
+  "zh": "北京大学",
+  "zhAliases": [
+    "北大"
+  ],
+  "aliases": [
+    "Beijing University",
+    "Beida",
+    "Imperial University of Peking"
+  ],
+  "acronyms": [
+    "PKU"
+  ],
+  "domains": [
+    "pku.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.986913,
+    "lng": 116.30587390000005
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "67135b43-bc3c-4343-abc1-a6ff2a5e0c13",
+    "ror": "02v51f717",
+    "wikidata": "Q16952"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Beijing Municipal Government"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory of Science and Technology on Micro/Nano Fabrication (微米/纳米加工技术国家级重点实验室 or 微米纳米加工技术国防科技重点实验室)",
+      "(Jointly run with Shanghai Jiao Tong University)",
+      "Fundamental ScienceonRadiochemistryandRadiation Chemistry Laboratory (放射化学与辐射化学国防重点学科实验室 or 放射化学与辐射化学重点学科实验室)",
+      "May be the same as the Nuclear Fuel Cycle and Nuclear Chemical Engineering National Defense Key Laboratory (核燃料循环及核化工国防重点实验室) ",
+      "Also known as the ‘Radiochemistry and Radiation Chemistry GF Key Discipline Laboratory'(放射化学与辐射化学GF重点学科实验室)",
+      "Key Laboratory of High Energy Density Physics Simulation, Ministry of Education (高能量密度物理数值模拟教育部重点实验室)",
+      "Key Laboratory of Microelectronic Devices and Circuits, Ministry of Education (微电子器件与电路教育部重点实验室(B类))"
+    ],
+    "subsidiaries": [
+      "Advanced Technology Institute",
+      "Founder Group",
+      "WBL Corporation",
+      "Pioneer-PKU and Pulead Technology Industry Co."
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Chemistry",
+      "Electronics science and technology",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Mechanics",
+      "Nuclear science and technology",
+      "Nuclear weapons",
+      "Optical engineering",
+      "Physics",
+      "Quantum"
+    ],
+    "address": "Peking University, Yiheyuan Road, Haidian, China"
+  }
+}

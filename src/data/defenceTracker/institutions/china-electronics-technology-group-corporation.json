@@ -1,0 +1,70 @@
+{
+  "id": "china-electronics-technology-group-corporation",
+  "name": "China Electronics Technology Group Corporation",
+  "zh": "中国电子科技集团公司",
+  "zhAliases": [
+    "中国电科"
+  ],
+  "aliases": [
+    "China Electric Division"
+  ],
+  "acronyms": [
+    "CETC",
+    "CETGC"
+  ],
+  "domains": [
+    "cetc.com.cn"
+  ],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9075,
+    "lng": 116.39723
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d1276f79-45cf-48cc-b2f7-0ebfd9c911fe",
+    "ror": "0098hst83",
+    "wikidata": "Q10873927"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology",
+      "Cyber",
+      "Electrical engineering",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Surveying and mapping"
+    ],
+    "address": null
+  }
+}

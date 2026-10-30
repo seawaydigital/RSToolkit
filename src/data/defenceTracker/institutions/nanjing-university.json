@@ -1,0 +1,70 @@
+{
+  "id": "nanjing-university",
+  "name": "Nanjing University",
+  "zh": "南京大学",
+  "zhAliases": [],
+  "aliases": [
+    "Nanking University"
+  ],
+  "acronyms": [
+    "NJU",
+    "NU"
+  ],
+  "domains": [
+    "nju.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Nanjing",
+    "province": "Jiangsu",
+    "lat": 32.0568391,
+    "lng": 118.77896020000003
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "0f1f6348-3e23-42cb-926b-e28782d388b7",
+    "ror": "01rxvg760",
+    "wikidata": "Q683580"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "MOE Key Laboratory of High Performance Polymer Materials and Technology (高性能高分子材料与技术教育部重点实验室（B类）)",
+      "State Administration of Science, Technology and Industry for National Defense Key Laboratory of Electromagnetic Wave Characteristic Information Control Technology (国防科工局电磁波特征信息调控技术重点学科实验室)",
+      "May also be known as the Electromagnetic Wave Characteristic Information Control and Applied Technology Defense Key Laboratory (电磁波特征信息调控与应用技术国防重点学科实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Cyber",
+      "Electronics science and technology",
+      "Materials science and technology"
+    ],
+    "address": "Nanjing University, Hankou Road, Gulou, Nanjing, Jiangsu, China"
+  }
+}

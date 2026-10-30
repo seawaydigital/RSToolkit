@@ -1,0 +1,63 @@
+{
+  "id": "yunnan-normal-university",
+  "name": "Yunnan Normal University",
+  "zh": "云南师范大学",
+  "zhAliases": [
+    "云南师大",
+    "云师大"
+  ],
+  "aliases": [],
+  "acronyms": [
+    "YNNU"
+  ],
+  "domains": [
+    "ynnu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Kunming",
+    "province": "Yunnan",
+    "lat": 24.837435,
+    "lng": 102.88006300000006
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "c970688f-b194-405c-aad3-7b701d0a5505",
+    "ror": "00sc9n023",
+    "wikidata": "Q2120272"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Yunnan Provincial Government",
+      "Ministry of Education (MOE)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Computer science and technology"
+    ],
+    "address": "云南省昆明市呈贡区雨花片区1号"
+  }
+}

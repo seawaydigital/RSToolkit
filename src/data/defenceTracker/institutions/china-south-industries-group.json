@@ -1,0 +1,76 @@
+{
+  "id": "china-south-industries-group",
+  "name": "China South Industries Group",
+  "zh": "中国兵器装备集团有限公司",
+  "zhAliases": [
+    "中国南方工业集团公司",
+    "兵装集团",
+    "中国兵装"
+  ],
+  "aliases": [
+    "China South Industries Group Corporation",
+    "China Ordnance Equipment Group Corporation",
+    "China Ordnance Group Corporation"
+  ],
+  "acronyms": [
+    "CSGC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.9476845,
+    "lng": 116.29415799999992
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "5f29efae-abfd-4071-86a0-5c6988ffe0cf"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "China South Industries Group Institute (中国兵器装备研究所)",
+      "Shanghai Electronic Control Institute (上海电控研究所)",
+      "Southwest Automation Institute (西南自动化研究所)",
+      "Southwest Technology and Engineering Institute (西南技术工程研究所)",
+      "Arms and Equipment Institute (兵器装备研究所)",
+      "Motorcycle Test Technology Institute (摩托车检测技术研究所)"
+    ],
+    "topics": [
+      "Armament science and technology",
+      "Electrical engineering",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Optical engineering"
+    ],
+    "address": "10 Chedaogou Street Beijing, 100089 China"
+  }
+}

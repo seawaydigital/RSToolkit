@@ -1,0 +1,77 @@
+{
+  "id": "china-north-industries-group",
+  "name": "China North Industries Group",
+  "zh": "中国兵器工业集团公司",
+  "zhAliases": [
+    "中国北方工业集团公司"
+  ],
+  "aliases": [
+    "China Ordnance Industries Group Corporation Limited",
+    "Norinco",
+    "Norinco Group"
+  ],
+  "acronyms": [
+    "CNGC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.91272299999999,
+    "lng": 116.33556699999997
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e759cb49-508c-4f5f-a279-583311e86d58"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [
+      "FMS Technology Key Laboratory of science & Technology for National Defence (柔性制造系统技术国防科技重点实验室)",
+      "Based in NORINCO Group No. 55 Institute (中国兵工集团第55研究所) aka Changchun Equipment Technology Institute (长春设备工艺研究所)",
+      "National Defense Technology Key Laboratory on Security and Reliability for Initiating Devices (火工品安全性可靠性国防科技重点实验室)\n",
+      "Based in NORINCO Group No. 213 Institute (Xi’an) (中国兵工集团第213研究所（西安）) aka Shaanxi Applied Physics and Chemistry Institute (陕西应用物理化学研究所)",
+      "National Key Lab of Science and Technology on Combustion and Explosion (火炸药燃烧国防科技重点实验室)\n",
+      "NORINCO Group No. 204 Institute (中国兵工集团第204研究所) aka Xi’an Modern Chemistry Institute (西安近代化学研究所)",
+      "National Defense Science and Technology Key Laboratory for Mechatronical Engineering and Control (机电工程与控制国防科技重点实验室)\n",
+      "Xi’an 212th Institute (西安212所) aka Xi’an Electromechanical Information Institute (西安机电信息研究所)",
+      "Jointly run with Beijing Institute of Technology"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "中国北京市西城区三里河路46号"
+  }
+}

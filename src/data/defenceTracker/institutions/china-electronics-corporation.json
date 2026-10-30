@@ -1,0 +1,64 @@
+{
+  "id": "china-electronics-corporation",
+  "name": "China Electronics Corporation",
+  "zh": "中国电子信息产业集团有限公司",
+  "zhAliases": [
+    "中国电子产业集团",
+    "中国电子"
+  ],
+  "aliases": [
+    "China Electronics"
+  ],
+  "acronyms": [
+    "CEC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 39.9845289,
+    "lng": 116.33375000000001
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "0faecc41-3820-4057-8ab2-628dd6d8fb69"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Defence industry conglomerate"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Industry and Information Technology (MIIT)",
+      "State-owned Assets Supervision and Administration Commission (SASAC)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Control science and engineering",
+      "Cyber",
+      "Information and communication engineering"
+    ],
+    "address": "中国北京市海淀区中关村东路66号甲1号"
+  }
+}

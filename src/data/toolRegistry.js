@@ -1,3 +1,5 @@
+import { TRACKER_ENABLED } from './defenceTracker/enabled';
+
 export const CATEGORIES = [
   {
     id: 'policy-guides',
@@ -63,6 +65,18 @@ export const CATEGORIES = [
         tags: ['nro', 'organizations', 'map', 'search'],
         related: ['strac-flowchart', 'stra-lookup'],
       },
+      ...(TRACKER_ENABLED
+        ? [
+            {
+              id: 'defence-tracker',
+              name: 'Defence Institution Tracker',
+              slug: 'defence-tracker',
+              description: 'Look up Chinese, Russian and Iranian research institutions with military or security ties: sourced ratings, official listings, and a batch check for partner and co-author lists',
+              tags: ['defence', 'defense', 'military', 'universities', 'institutions', 'aspi', 'tracker', 'background check', 'due diligence', 'entity list', 'sanctions', 'nro', 'partners', 'co-authors', 'china'],
+              related: ['nro-lookup', 'stra-lookup', 'dual-use'],
+            },
+          ]
+        : []),
       {
         id: 'risk-checklist',
         name: 'Risk Assessment Checklist',

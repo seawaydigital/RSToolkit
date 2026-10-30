@@ -1,0 +1,56 @@
+{
+  "id": "army-service-academy",
+  "name": "Army Service Academy",
+  "zh": "中国人民解放军陆军勤务学院",
+  "zhAliases": [
+    "陆军勤务学院"
+  ],
+  "aliases": [
+    "PLA Army Service Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Wuhan",
+    "province": null,
+    "lat": 30.5104,
+    "lng": 114.4079
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "e9e239f5-94c2-46ec-841b-21a0f64082b7",
+    "nro": "army-service-academy"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Ground Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "20 Daxuecheng North 1st Road, Shapingba, Chongqing, China"
+  }
+}

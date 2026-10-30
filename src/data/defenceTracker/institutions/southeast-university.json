@@ -1,0 +1,63 @@
+{
+  "id": "southeast-university",
+  "name": "Southeast University",
+  "zh": "东南大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "SEU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": null,
+    "province": null,
+    "lat": 32.0469906,
+    "lng": 118.79932329999997
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "fa462eae-96ca-447d-9372-6a85cf1f7c5b"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "MOE Key Laboratory of Micro-Inertial Instrument and Advanced Navigation Technology (微惯性仪表与先进导航技术教育部重点实验室（B类）)",
+      "Key Laboratory of Underwater Acoustic Signal Processing of Ministry of Education (水声信号处理教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Cyber",
+      "Information and communication engineering",
+      "Mechanical engineering",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": "Southeast University, Xuanwu, Nanjing, Jiangsu, China"
+  }
+}

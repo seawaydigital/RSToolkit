@@ -1,0 +1,73 @@
+{
+  "id": "wuhan-university-of-technology",
+  "name": "Wuhan University of Technology",
+  "zh": "武汉理工大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "WHUT",
+    "WUT"
+  ],
+  "domains": [
+    "whut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": 30.58333,
+    "lng": 114.26667
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "2346c484-9d4a-4b8a-bfda-66b5c2a79a78",
+    "ror": "03fe7t173",
+    "wikidata": "Q832355"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Transport"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Ministry of Education of Special Functional Materials Technology (特种功能材料技术教育部重点实验室（B类）)",
+      "Key Laboratory of High Performance Ship Technology, Ministry of Education (高性能舰船技术教育部重点实验室（B类）)",
+      "PLA Air Force–WHUT Air Defence Engineering and Protective Technology Research Institute (空军武汉理工大学空防工程防护技术研究院)"
+    ],
+    "subsidiaries": [
+      "Wuhan University of Technology Ship Co., Ltd (武汉理工船舶股份有限公司)",
+      "Qingdao Research Institute (武汉理工大学青岛研究院)"
+    ],
+    "topics": [
+      "Computer science and technology",
+      "Materials science and technology",
+      "Mechanical engineering",
+      "Mechanics",
+      "Naval architecture and ocean engineering"
+    ],
+    "address": null
+  }
+}

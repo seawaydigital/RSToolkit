@@ -1,0 +1,79 @@
+{
+  "id": "naval-university-of-engineering",
+  "name": "Naval University of Engineering",
+  "zh": "中国人民解放军海军工程大学",
+  "zhAliases": [
+    "海军工程大学",
+    "海工大"
+  ],
+  "aliases": [
+    "Naval Engineering University",
+    "Zhōngguó Rénmín Jiěfàngjūn Haǐjūn Gōngchéng Dàxué"
+  ],
+  "acronyms": [
+    "NUE",
+    "NUEPLA"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": 30.5837,
+    "lng": 114.2378
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a194f987-9670-4021-b8a1-ce0778a47abf",
+    "nro": "naval-university-of-engineering",
+    "ror": "056vyez31",
+    "wikidata": "Q10872997"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Navy"
+    ],
+    "majorDefenceLaboratories": [
+      "National Key Laboratory for Vessel Integrated Power System Technology (舰船综合电力技术国防科技重点实验室)",
+      "National Defense Technology Key Laboratory of Marine Vibration and Noise (jointly run with CSIC 701"
+    ],
+    "subsidiaries": [
+      "Logistics Academy (Tianjin)",
+      "Naval training base - Lake Mulan, Wuhan (木兰湖水上训练基地)",
+      "Naval training base - Shanwei, Guangdong (广东汕尾海上训练基地)",
+      "Nuclear propulsion training site - Sichuan (四川核動力運行實習所)",
+      "Hongan Revolutionary Traditions Educational Base in Hubei (紅安革命傳統教育基地)",
+      "PLA Navy Qingdao Equipment Technology Safeguard Talent Work Station (海军青岛装备技术保障人才工作站)"
+    ],
+    "topics": [
+      "Armament science and technology",
+      "Information and communication engineering",
+      "Naval architecture and ocean engineering",
+      "Nuclear science and technology",
+      "Power engineering and engineering thermophysics"
+    ],
+    "address": "China, Hubei, Wuhan, Qiaokou, Jiefang Avenue, 海军工程大学"
+  }
+}

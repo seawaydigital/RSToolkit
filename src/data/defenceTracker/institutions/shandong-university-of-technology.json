@@ -1,0 +1,62 @@
+{
+  "id": "shandong-university-of-technology",
+  "name": "Shandong University of Technology",
+  "zh": "山东理工大学",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "SDUT",
+    "SDTU"
+  ],
+  "domains": [
+    "sdut.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Zibo",
+    "province": "Shandong",
+    "lat": 36.80505861120979,
+    "lng": 118.00528013988117
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "53766e8a-fb5e-41ff-93e8-4bad2f810452",
+    "ror": "02mr3ar13",
+    "wikidata": "Q7487937"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Shandong Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "266 Xincun W Rd, Zhangdian Qu, Zibo Shi, Shandong Sheng, China, 255023"
+  }
+}

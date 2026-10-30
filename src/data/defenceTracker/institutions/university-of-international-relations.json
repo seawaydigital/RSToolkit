@@ -1,0 +1,61 @@
+{
+  "id": "university-of-international-relations",
+  "name": "University of International Relations",
+  "zh": "国际关系学院",
+  "zhAliases": [],
+  "aliases": [
+    "Institute of International Politics",
+    "Institute of International Relations"
+  ],
+  "acronyms": [
+    "UIR"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 40.0025,
+    "lng": 116.2799
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "c097fa30-2777-4fbc-91e8-b8dd2255c702",
+    "nro": "university-of-international-relations",
+    "ror": "04r72en83",
+    "wikidata": "Q2492836"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "Ministry of State Security (MSS)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [
+      "University of International Relations Hangzhou Campus, also known as the Zhejiang Second People’s Police School (浙江第二人民警察学校)"
+    ],
+    "topics": [],
+    "address": null
+  }
+}

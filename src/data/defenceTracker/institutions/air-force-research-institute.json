@@ -1,0 +1,64 @@
+{
+  "id": "air-force-research-institute",
+  "name": "Air Force Research Institute",
+  "zh": "中国人民解放军空军研究院",
+  "zhAliases": [
+    "空军研究院"
+  ],
+  "aliases": [
+    "Air Force Equipment Academy",
+    "Key Laboratory of Complex Aviation System Simulation"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 39.7956,
+    "lng": 116.3879
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9960a426-8acf-4f3a-99b1-6c5e3f048a39",
+    "nro": "air-force-research-institute"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory of Complex Aviation System Simulation"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Information and communication engineering"
+    ],
+    "address": "China, 北京市海淀区安宁庄路11号"
+  }
+}

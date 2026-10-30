@@ -1,0 +1,50 @@
+{
+  "id": "cas-institute-of-computing-technology",
+  "name": "Chinese Academy of Sciences Institute of Computing Technology",
+  "zh": "中国科学院计算技术研究所",
+  "zhAliases": [],
+  "aliases": [
+    "Institute of Computing Technology Chinese Academy of Sciences",
+    "Institute of Computing Technology",
+    "CAS ICT",
+    "ICT CAS"
+  ],
+  "acronyms": [
+    "ICT"
+  ],
+  "domains": [
+    "ict.ac.cn"
+  ],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9806,
+    "lng": 116.3205
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "nro": "cas-institute-of-computing-technology",
+    "ror": "0090r4d87",
+    "wikidata": "Q2118986"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "listing-only",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Record created from the Named Research Organizations list; not yet verified."
+    }
+  ],
+  "seedNotes": null
+}

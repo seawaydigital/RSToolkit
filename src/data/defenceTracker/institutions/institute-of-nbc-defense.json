@@ -1,0 +1,58 @@
+{
+  "id": "institute-of-nbc-defense",
+  "name": "Institute of NBC Defense",
+  "zh": "陆军防化学院",
+  "zhAliases": [
+    "中国人民解放军陆军防化学院"
+  ],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 40.1289,
+    "lng": 116.1158
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "92a4bfea-dc48-45f3-9a72-b67ddff89b10",
+    "nro": "institute-of-nbc-defense"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Ground Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Biology",
+      "Chemistry",
+      "Nuclear science and technology"
+    ],
+    "address": "中国北京市昌平区阳坊镇中心北街1号"
+  }
+}

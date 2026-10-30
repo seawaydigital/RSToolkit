@@ -6,6 +6,7 @@ import SiteFooter from './components/layout/SiteFooter';
 import Home from './components/home/Home';
 import { ALL_TOOLS } from './data/toolRegistry';
 import GlobalSearchModal from './components/ui/SearchBar';
+import { parseHashRoute } from './routing';
 import './styles/global.css';
 
 const TOOL_COMPONENTS = {
@@ -25,14 +26,12 @@ const TOOL_COMPONENTS = {
   'cybersecurity-guide': lazy(() => import('./tools/operational-security/CybersecurityGuide')),
   'travel-security': lazy(() => import('./tools/operational-security/TravelSecurity')),
   'report-concern': lazy(() => import('./tools/operational-security/ReportConcern')),
+  // __TRACKER_ENABLED__ is a build-time literal (vite.config.js), so with the
+  // launch flag off this import is dropped and the tracker is not shipped.
+  ...(__TRACKER_ENABLED__ ? { 'defence-tracker': lazy(() => import('./tools/compliance/defence-tracker/DefenceTracker')) } : {}),
 };
 
 const SITE_TITLE = 'Research Security Toolkit';
-
-function getHashRoute() {
-  const hash = window.location.hash.replace('#', '').replace('/', '');
-  return hash || null;
-}
 
 function ErrorFallback({ error, onReset }) {
   return (
@@ -69,7 +68,10 @@ class ErrorBoundary extends React.Component {
 }
 
 export default function App() {
-  const [currentRoute, setCurrentRoute] = useState(getHashRoute);
+  const [{ route: currentRoute, subRoute }, setLocation] = useState(() => parseHashRoute(window.location.hash));
+  // A tool can name the page within it (the tracker names the institution);
+  // App composes the document title so its own effect does not overwrite it.
+  const [pageTitle, setPageTitle] = useState(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -78,7 +80,7 @@ export default function App() {
 
   useEffect(() => {
     function onHashChange() {
-      setCurrentRoute(getHashRoute());
+      setLocation(parseHashRoute(window.location.hash));
       setSidebarOpen(false);
     }
     window.addEventListener('hashchange', onHashChange);
@@ -99,8 +101,10 @@ export default function App() {
   // announced instead of leaving focus on the link that was just activated.
   useEffect(() => {
     const tool = ALL_TOOLS.find(t => t.slug === currentRoute);
-    document.title = tool ? `${tool.name} — ${SITE_TITLE}` : SITE_TITLE;
+    document.title = [tool && pageTitle, tool?.name, SITE_TITLE].filter(Boolean).join(' — ');
+  }, [currentRoute, pageTitle]);
 
+  useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
@@ -110,7 +114,7 @@ export default function App() {
       main.focus();
       main.scrollTop = 0;
     }
-  }, [currentRoute]);
+  }, [currentRoute, subRoute]);
 
   function navigate(slug) {
     window.location.hash = slug;
@@ -118,7 +122,7 @@ export default function App() {
 
   function goHome() {
     window.location.hash = '';
-    setCurrentRoute(null);
+    setLocation({ route: null, subRoute: '' });
   }
 
   const currentTool = ALL_TOOLS.find(t => t.slug === currentRoute);
@@ -159,7 +163,7 @@ export default function App() {
           <ErrorBoundary onReset={goHome} key={currentRoute}>
             {ToolComponent ? (
               <Suspense fallback={<div className="loading">Loading tool...</div>}>
-                <ToolComponent onNavigate={navigate} />
+                <ToolComponent onNavigate={navigate} subRoute={subRoute} onPageTitle={setPageTitle} />
               </Suspense>
             ) : (
               <Home onNavigate={navigate} />

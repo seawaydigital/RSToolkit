@@ -1,0 +1,72 @@
+{
+  "id": "zhejiang-university",
+  "name": "Zhejiang University",
+  "zh": "浙江大学",
+  "zhAliases": [],
+  "aliases": [
+    "Chekiang University",
+    "Zheda"
+  ],
+  "acronyms": [
+    "ZJU"
+  ],
+  "domains": [
+    "zju.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Hangzhou",
+    "province": "Zhejiang",
+    "lat": 30.30868439999999,
+    "lng": 120.08649949999995
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "88a41ab2-cac3-44e6-9906-dfb614d2c584",
+    "ror": "00a2xv884",
+    "wikidata": "Q197543"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "MOE Key Laboratory of High-Performance Embedded Computing (教育部高性能嵌入式计算重点实验室（B类）)",
+      "Also referred to as the Key Laboratory of High-Performance Embedded Computing (教育部国防高性能嵌入式计算重点实验室)",
+      "MOE Key Laboratory of Aerospace Numerical Simulation and Verification",
+      "Unspecified MOE Key Laboratory that is likely in the College of Control Science and Engineering (浙江大学控制科学与工程学院)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology",
+      "Control science and engineering",
+      "Cyber",
+      "Mechanical engineering"
+    ],
+    "address": "Zhejiang University, Yuhangtang Road, Xihu, Hangzhou, Zhejiang, China"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "china-aerodynamics-research-and-development-center",
+  "name": "China Aerodynamics Research and Development Center",
+  "zh": "中国空气动力研究与发展中心",
+  "zhAliases": [
+    "63820部队",
+    "第29试验训练基地",
+    "中国人民解放军军事科学院空气动力试验基地"
+  ],
+  "aliases": [
+    "Unit 63820",
+    "29th Testing and Training Base",
+    "Academy of Military Science Aerodynamics Testing Base",
+    "Zhōngguó Kōngqì Dònglì Yánjiū yǔ Fāzhǎn Zhōngxīn"
+  ],
+  "acronyms": [
+    "CARDC"
+  ],
+  "domains": [
+    "cardc.cn"
+  ],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Mianyang",
+    "province": "Sichuan",
+    "lat": 31.4307,
+    "lng": 104.6722
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "3db5f3b5-9200-4d73-b444-27e482318018",
+    "nro": "china-aerodynamics-research-and-development-center",
+    "ror": "00jma8s40",
+    "wikidata": "Q5099558"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "Academy of Military Science"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology"
+    ],
+    "address": "Er Huan Lu Fu Lu, Fucheng Qu, Mianyang Shi, Sichuan Sheng, China"
+  }
+}

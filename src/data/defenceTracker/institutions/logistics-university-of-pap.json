@@ -1,0 +1,59 @@
+{
+  "id": "logistics-university-of-pap",
+  "name": "Logistics University of the People’s Armed Police Force",
+  "zh": "中国人民武装警察部队后勤学院",
+  "zhAliases": [
+    "武警后勤学院"
+  ],
+  "aliases": [
+    "PAP Logistics University",
+    "Logistics University of the People's Armed Police Force"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Tianjin",
+    "province": null,
+    "lat": 39.0915,
+    "lng": 117.4258
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "eb166b26-eee9-40d3-b738-ddd328149114",
+    "nro": "logistics-university-of-pap"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "People's Armed Police (PAP)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Traffic and transportation engineering"
+    ],
+    "address": "China, Tianjin Shi, Dongli Qu, 武警后勤学院"
+  }
+}

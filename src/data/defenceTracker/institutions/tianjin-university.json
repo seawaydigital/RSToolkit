@@ -1,0 +1,70 @@
+{
+  "id": "tianjin-university",
+  "name": "Tianjin University",
+  "zh": "天津大学",
+  "zhAliases": [],
+  "aliases": [
+    "Peiyang University"
+  ],
+  "acronyms": [
+    "TJU"
+  ],
+  "domains": [
+    "tju.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Tianjin",
+    "province": "Tianjin",
+    "lat": 39.1088,
+    "lng": 117.1647
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "57c9c716-ecbc-42e5-9632-91f9250d7b4f",
+    "nro": "tianjin-university",
+    "ror": "012tb2g32",
+    "wikidata": "Q2031560"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Key Laboratory for Advanced Fuel and Chemical Propellant of Ministry of Education (先进燃料教育部重点实验室（B类） or 先进燃料与化学推进剂教育部重点实验室) ",
+      "Key Laboratory of Micro-Optical-Electro-Mechanical System Technology (微光机电系统技术教育部重点实验室（B类）)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Chemistry",
+      "Electronics science and technology",
+      "Information and communication engineering",
+      "Materials science and technology",
+      "Optical engineering"
+    ],
+    "address": "92 Weijin Rd, Nankai Qu, Tianjin Shi, China, 300010"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "airforce-engineering-university",
+  "name": "Air Force Engineering University",
+  "zh": "中国人民解放军空军工程大学",
+  "zhAliases": [
+    "空军工程大学"
+  ],
+  "aliases": [
+    "Airforce Engineering University"
+  ],
+  "acronyms": [
+    "AFEU"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.2738,
+    "lng": 109.0228
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "8b3f1b7a-e04f-4a0d-93b3-a5341ee5b86f",
+    "nro": "airforce-engineering-university",
+    "ror": "00seraz22",
+    "wikidata": "Q10873032"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Armament science and technology",
+      "Control science and engineering",
+      "Physics"
+    ],
+    "address": "7 Changle E Rd, Baqiao Qu, Xian Shi, Shaanxi Sheng, China, 710015"
+  }
+}

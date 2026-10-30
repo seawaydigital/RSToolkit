@@ -1,4 +1,5 @@
 import { ENABLE_PROXIMITY_SEARCH } from '../siteConfig';
+import { TRACKER_ENABLED } from './defenceTracker/enabled';
 
 export const faqData = {
   lastUpdated: '2026-09-18',
@@ -222,6 +223,18 @@ export const faqData = {
           tags: ['privacy', 'safety', 'data', 'about'],
           relatedTools: ['how-it-works', 'cybersecurity-guide'],
         },
+        ...(TRACKER_ENABLED
+          ? [
+              {
+                id: 'help-tracker',
+                question: "Is there a free tool for checking an institution's defence ties, like ASPI's China Defence Universities Tracker?",
+                answer:
+                  "Yes. The toolkit's Defence Institution Tracker covers Chinese, Russian and Iranian research institutions with military or security ties. For each one it shows which official lists name it (Canada's Named Research Organizations and autonomous sanctions lists, the US export-control, sanctions and Section 1286 lists, and Japan's End User List), and says plainly when a list has not been checked yet. Ratings follow a published checklist: an institution on any of those lists is rated High from the lists themselves, with each listing shown as evidence and linked to its official source, and a researched profile is rated on its documented defence ties, with the sources behind it. A batch check matches a whole co-author or partner list at once, by name, Chinese name, acronym or email domain. Searches and batch checks run in your browser and are never sent or saved. A rating describes an institution, never the people who work or study there, and it is not legal advice: the official lists prevail, and an institution that is not listed is not thereby low risk.",
+                tags: ['aspi', 'tracker', 'due diligence', 'partners', 'defence', 'universities', 'background check'],
+                relatedTool: 'defence-tracker',
+              },
+            ]
+          : []),
         {
           id: 'help-stra-lookup',
           question: 'What tools in this toolkit should I use before submitting a grant?',

@@ -1,0 +1,70 @@
+{
+  "id": "hunan-university-of-science-and-technology",
+  "name": "Hunan University of Science and Technology",
+  "zh": "湖南科技大学",
+  "zhAliases": [],
+  "aliases": [
+    "Húnán Kējì Dàxué"
+  ],
+  "acronyms": [
+    "HNUST"
+  ],
+  "domains": [
+    "hnust.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xiangtan",
+    "province": "Hunan",
+    "lat": 27.89294460020551,
+    "lng": 112.92268106590927
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "d3a7f49b-01ff-4f40-b2e4-1f852d4f3d6f",
+    "ror": "02m9vrb24",
+    "wikidata": "Q5942041"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Hunan Provincial Government",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "Ministry of Emergency Management"
+    ],
+    "majorDefenceLaboratories": [
+      "Hunan Provincial Key Laboratory of National Defence Technology for High Temperature-Resistant Material and Preparation Technology (高温耐磨材料及制备技术湖南省国防科技重点实验室)",
+      "National Defense Science and Technology Key Laboratory of Protective Materials and Equipment Manufacturing Technology (防护材料与装备制造技术国防科技重点实验室)"
+    ],
+    "subsidiaries": [],
+    "topics": [
+      "Armament science and technology",
+      "Control science and engineering",
+      "Electronics science and technology",
+      "Materials science and technology",
+      "Mechanical engineering"
+    ],
+    "address": "Bei Er Huan, Xiangtan Xian, Xiangtan Shi, Hunan Sheng, China"
+  }
+}

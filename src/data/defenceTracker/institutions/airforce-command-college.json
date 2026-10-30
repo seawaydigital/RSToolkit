@@ -1,0 +1,64 @@
+{
+  "id": "airforce-command-college",
+  "name": "Air Force Command College",
+  "zh": "中国人民解放军空军指挥学院",
+  "zhAliases": [
+    "空军指挥学院",
+    "空指"
+  ],
+  "aliases": [
+    "PLA Air Force Command College",
+    "PLA Air Force Command Academy",
+    "Airforce Command College"
+  ],
+  "acronyms": [
+    "AFCC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": null,
+    "lat": 39.9935,
+    "lng": 116.254
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "7d74a641-a2bc-45c0-9fd8-409e592648e6",
+    "nro": "airforce-command-college"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Air Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Control science and engineering"
+    ],
+    "address": "China, Beijing, 海淀区北四环西路88号"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "peoples-public-security-university-of-china",
+  "name": "People's Public Security University of China",
+  "zh": "中国人民公安大学",
+  "zhAliases": [],
+  "aliases": [
+    "Chinese People Public Security University",
+    "China People's Public Security University"
+  ],
+  "acronyms": [
+    "PPSUC",
+    "PPUSC"
+  ],
+  "domains": [
+    "ppsuc.edu.cn"
+  ],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.8991,
+    "lng": 116.3315
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "9a21e65c-b18f-46ac-85c1-faf0535fa451",
+    "nro": "peoples-public-security-university-of-china",
+    "ror": "05twya590",
+    "wikidata": "Q5100590"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Public Security (MPS)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Artificial intelligence",
+      "Cyber"
+    ],
+    "address": "No. 1 Muxidi Nanli, Xicheng District, Beijing"
+  }
+}

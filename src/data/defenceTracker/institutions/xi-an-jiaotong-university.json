@@ -1,0 +1,78 @@
+{
+  "id": "xi-an-jiaotong-university",
+  "name": "Xi'an Jiaotong University",
+  "zh": "西安交通大学",
+  "zhAliases": [],
+  "aliases": [
+    "Xi'an Jiao Tong University",
+    "Xian Jiaotong University"
+  ],
+  "acronyms": [
+    "XJTU"
+  ],
+  "domains": [
+    "xjtu.edu.cn"
+  ],
+  "country": "CN",
+  "type": "university",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": 34.250803,
+    "lng": 108.98369300000002
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "4548a320-847a-4327-8a83-ca1f1cf39b9b",
+    "ror": "017zhmm22",
+    "wikidata": "Q981237"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Civilian"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Education (MOE)",
+      "State Administration for Science, Technology and Industry for National Defense (SASTIND)"
+    ],
+    "majorDefenceLaboratories": [
+      "Ministry of Education Key Laboratory for Aircraft Engine XXXX (航空发动机XXXX教育部重点实验室（B类))",
+      "May be the Ministry of Education Key Laboratory for Aircraft Engine Health Management (航空发动机健康管理教育部重点实验室)",
+      "Ministry of Education Key Laboratory for Multifunctional Materials and Structures (多功能材料与结构教育部重点实验室（B类))",
+      "Ministry of Education Key Laboratory for Special Electrical Technology (特种电气技术教育部重点实验室（B类))\n",
+      "The lab is hosted by the School of Electrical Engineering, which is specifically included on the US Government Unverified List",
+      "May be part of the Electronic Materials Research Laboratory, Ministry of Education (电子陶瓷与器件教育部重点实验室)"
+    ],
+    "subsidiaries": [
+      "Xi’an Jiaotong-Liverpool University  (XJTLU, 西交利物浦大学)",
+      "Xi’an Jiaotong University Holding Co., Ltd. (西安交通大学资产经营有限公司)"
+    ],
+    "topics": [
+      "Aeronautical and astronautical science and technology",
+      "Computer science and technology",
+      "Cyber",
+      "Electrical engineering",
+      "Information and communication engineering",
+      "Materials science and technology"
+    ],
+    "address": "Xi'an Jiaotong University, Xianning West Road, Jiaoda Commerce Block, Beilin, Xi'an, Shaanxi, China"
+  }
+}

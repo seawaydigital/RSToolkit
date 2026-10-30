@@ -2,9 +2,9 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet.markercluster';
-import 'leaflet.markercluster/dist/MarkerCluster.css';
-import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
+import MarkerCluster from '../../components/ui/map/MarkerCluster';
+import FlyToHandler from '../../components/ui/map/FlyToHandler';
+import { escapeHtml } from '../../components/ui/map/escapeHtml';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -12,6 +12,7 @@ import Fuse from 'fuse.js';
 import nroData from '../../data/nroData';
 import { activeTileProvider } from '../../data/mapTiles';
 import { ENABLE_PROXIMITY_SEARCH } from '../../siteConfig';
+import { TRACKER_ENABLED } from '../../data/defenceTracker/enabled';
 
 // Fix Leaflet default icon paths for Vite
 delete L.Icon.Default.prototype._getIconUrl;
@@ -48,13 +49,6 @@ async function geocodeNominatim(query) {
 
 // Normalize a title/query for exact-match comparison
 const normalizeName = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-
-// Leaflet's bindPopup(string) sets innerHTML, so every value interpolated into
-// a popup must be escaped. The institution label comes straight from a
-// Nominatim display_name or a Wikipedia title — third-party data that anyone
-// can edit upstream — and the NRO popups are escaped too so both follow one rule.
-const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => HTML_ESCAPES[c]);
 
 async function geocodeWikipedia(query) {
   const params = new URLSearchParams({
@@ -111,18 +105,19 @@ function haversineKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// Prepare marker data from organizations
+// Prepare marker data from organizations. Popup values are escaped because
+// Leaflet sets popups as innerHTML.
 function buildMarkers(orgs) {
-  return orgs.map((org) => ({
-    id: org.id,
-    name: org.name,
-    aliases: org.aliases || [],
-    city: org.city,
-    country: org.country,
-    lat: org.lat,
-    lng: org.lng,
-    color: COUNTRY_COLORS[org.country] || '#94a3b8',
-  }));
+  return orgs.map((org) => {
+    const aliases = org.aliases || [];
+    return {
+      id: org.id,
+      lat: org.lat,
+      lng: org.lng,
+      fillColor: COUNTRY_COLORS[org.country] || '#94a3b8',
+      popupHtml: `<b>${escapeHtml(org.name)}</b><br/>${aliases.length > 0 ? escapeHtml(aliases.join(', ')) + '<br/>' : ''}${escapeHtml(org.city)}, ${escapeHtml(org.country)}`,
+    };
+  });
 }
 
 // Fuse.js search index
@@ -132,103 +127,6 @@ function buildFuse(orgs) {
     threshold: 0.35,
     ignoreLocation: true,
   });
-}
-
-// Custom MarkerCluster component for react-leaflet v4
-function MarkerCluster({ markers, onMarkerClick }) {
-  const map = useMap();
-  const clusterRef = useRef(null);
-
-  useEffect(() => {
-    const cluster = L.markerClusterGroup({
-      showCoverageOnHover: false,
-      spiderfyOnMaxZoom: true,
-      maxClusterRadius: 50,
-      iconCreateFunction: (cluster) => {
-        const childMarkers = cluster.getAllChildMarkers();
-        const count = childMarkers.length;
-
-        // Tally by country color to determine dominant country in cluster
-        const colorCounts = {};
-        childMarkers.forEach((cm) => {
-          const c = cm.options.fillColor || '#94a3b8';
-          colorCounts[c] = (colorCounts[c] || 0) + 1;
-        });
-        let dominantColor = '#94a3b8';
-        let max = 0;
-        Object.entries(colorCounts).forEach(([col, n]) => {
-          if (n > max) {
-            max = n;
-            dominantColor = col;
-          }
-        });
-        const mixed = Object.keys(colorCounts).length > 1;
-
-        // Size scales with count, capped
-        const size = count < 10 ? 32 : count < 50 ? 38 : count < 150 ? 44 : 50;
-
-        // Count text is dark on the country fill: white measured 2.28:1 on Iran green
-        // and 3.68:1 on China blue, below the 4.5:1 WCAG 1.4.3 floor.
-        return L.divIcon({
-          html: `
-            <div style="
-              width:${size}px;
-              height:${size}px;
-              border-radius:50%;
-              background:${dominantColor};
-              border:3px solid ${mixed ? '#fff' : 'rgba(255,255,255,0.85)'};
-              box-shadow:0 0 0 2px ${dominantColor}55, 0 2px 6px rgba(0,0,0,0.4);
-              display:flex;
-              align-items:center;
-              justify-content:center;
-              color:#061727;
-              font-weight:700;
-              font-size:${size >= 44 ? '14px' : '13px'};
-              font-family:system-ui,-apple-system,sans-serif;
-              text-shadow:0 1px 1px rgba(255,255,255,0.35);
-            ">${count}</div>
-          `,
-          className: 'nro-cluster-icon',
-          iconSize: [size, size],
-          iconAnchor: [size / 2, size / 2],
-        });
-      },
-    });
-    markers.forEach((m) => {
-      const marker = L.circleMarker([m.lat, m.lng], {
-        radius: 8,
-        fillColor: m.color,
-        color: '#fff',
-        weight: 2,
-        fillOpacity: 0.8,
-      });
-      marker.bindPopup(
-        `<b>${escapeHtml(m.name)}</b><br/>${m.aliases.length > 0 ? escapeHtml(m.aliases.join(', ')) + '<br/>' : ''}${escapeHtml(m.city)}, ${escapeHtml(m.country)}`
-      );
-      marker.on('click', () => onMarkerClick(m.id));
-      cluster.addLayer(marker);
-    });
-    map.addLayer(cluster);
-    clusterRef.current = cluster;
-    return () => {
-      map.removeLayer(cluster);
-    };
-  }, [map, markers, onMarkerClick]);
-
-  return null;
-}
-
-// Component to imperatively fly the map to a location
-function FlyToHandler({ target }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (target) {
-      map.flyTo([target.lat, target.lng], target.zoom ?? 10);
-    }
-  }, [map, target]);
-
-  return null;
 }
 
 // Renders a gold star marker for the user's searched institution
@@ -526,6 +424,7 @@ export default function NroLookup() {
           <MarkerCluster
             markers={markers}
             onMarkerClick={handleMarkerClick}
+            iconClassName="nro-cluster-icon"
           />
           <MyInstitutionLayer institution={myInstitution} />
           <FlyToHandler target={flyTarget} />
@@ -720,12 +619,13 @@ export default function NroLookup() {
               <th>Aliases</th>
               <th>City</th>
               <th>Country</th>
+              {TRACKER_ENABLED && <th>Profile</th>}
             </tr>
           </thead>
           <tbody>
             {filteredOrgs.length === 0 ? (
               <tr>
-                <td colSpan={4} style={{ textAlign: 'center', padding: '24px', color: 'var(--text-muted)' }}>
+                <td colSpan={TRACKER_ENABLED ? 5 : 4} style={{ textAlign: 'center', padding: '24px', color: 'var(--text-muted)' }}>
                   No organizations match your search criteria.
                 </td>
               </tr>
@@ -756,6 +656,15 @@ export default function NroLookup() {
                       {org.country}
                     </span>
                   </td>
+                  {TRACKER_ENABLED && (
+                    <td>
+                      {/* Every NRO has a tracker record at the same id. stopPropagation
+                          keeps the row's fly-to-map click from firing as well. */}
+                      <a className="nro-profile-link" href={`#defence-tracker/${org.id}`} onClick={(e) => e.stopPropagation()}>
+                        Tracker profile
+                      </a>
+                    </td>
+                  )}
                 </tr>
               ))
             )}

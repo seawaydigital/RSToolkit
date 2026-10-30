@@ -1,0 +1,54 @@
+{
+  "id": "criminal-investigation-police-university-of-china",
+  "name": "Criminal Investigation Police University of China",
+  "zh": "中国刑事警察学院",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [
+    "CIPUC"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Shenyang",
+    "province": null,
+    "lat": 41.8422,
+    "lng": 123.3789
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "a77e1cc6-d76c-46a4-a6f6-268918dc0439",
+    "nro": "criminal-investigation-police-university-of-china"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Security"
+    ],
+    "supervisingAgencies": [
+      "Ministry of Public Security (MPS)"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [],
+    "address": "83 Tawan St, Huanggu District, Shenyang, Liaoning, China"
+  }
+}

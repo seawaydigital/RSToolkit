@@ -1,0 +1,61 @@
+{
+  "id": "rocket-force-command-college",
+  "name": "Rocket Force Command College",
+  "zh": "中国人民解放军火箭指挥学院",
+  "zhAliases": [
+    "火箭指挥学院"
+  ],
+  "aliases": [
+    "SMF (Strategic Missile Force) Command College",
+    "SMF Command College",
+    "Strategic Missile Force Command College"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Wuhan",
+    "province": null,
+    "lat": 30.6288,
+    "lng": 114.2985
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {
+    "misp": "66efa510-f06d-452b-927e-39bbffd1496b",
+    "nro": "rocket-force-command-college"
+  },
+  "evidence": [],
+  "topics": [],
+  "subunits": [],
+  "sources": [],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "seed",
+  "verifiedOn": null,
+  "history": [
+    {
+      "date": "2026-10-25",
+      "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    }
+  ],
+  "seedNotes": {
+    "source": "MISP galaxy china-defence-universities cluster (CC0)",
+    "categories": [
+      "Military"
+    ],
+    "supervisingAgencies": [
+      "PLA Rocket Force"
+    ],
+    "majorDefenceLaboratories": [],
+    "subsidiaries": [],
+    "topics": [
+      "Control science and engineering",
+      "Nuclear weapons"
+    ],
+    "address": "924 Jianshe Ave, Jiangan Qu, Wuhan Shi, Hubei Sheng, China, 430000"
+  }
+}
