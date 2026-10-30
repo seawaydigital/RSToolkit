@@ -1,5 +1,6 @@
 import { ENABLE_PROXIMITY_SEARCH } from '../siteConfig';
 import { TRACKER_ENABLED } from './defenceTracker/enabled';
+import { SCREENING_ENABLED } from '../tools/compliance/screening/enabled';
 
 export const faqData = {
   lastUpdated: '2026-09-18',
@@ -218,6 +219,9 @@ export const faqData = {
             'Yes, because nothing you type is sent anywhere. The toolkit has no server behind it: the whole site is downloaded to your browser once, and every search, wizard, and checklist then runs locally on your own device. There is no account, no database, no analytics, and no form that submits — the browser-enforced security policy on the page forbids it. Two checklists save your ticks in your browser\'s local storage so they survive a refresh; that stays on your device and can be cleared with one click.' +
             (ENABLE_PROXIMITY_SEARCH
               ? ' The single exception is the "Check proximity to NROs" panel on the NRO map, which sends the institution name you type to OpenStreetMap (and Wikipedia as a fallback) to find its coordinates — use it for institution names only.'
+              : '') +
+            (SCREENING_ENABLED
+              ? ` Sanctions Screening is ${ENABLE_PROXIMITY_SEARCH ? 'the other' : 'the one'} exception: when you press Screen, it sends the names on your list, with your own API key, to OpenSanctions to check them.`
               : '') +
             ' Compare that with asking a consumer AI chatbot, where your prompt is stored on the vendor\'s servers and may be used for training. The "How This Site Works" page lists every outbound request the site makes and shows you how to verify it yourself.',
           tags: ['privacy', 'safety', 'data', 'about'],

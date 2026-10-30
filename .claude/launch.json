@@ -18,6 +18,12 @@
       "port": 5174
     },
     {
+      "name": "rs-toolkit-dev-screening",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev:screening", "--", "--port", "5175", "--strictPort"],
+      "port": 5175
+    },
+    {
       "name": "rs-toolkit-preview",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "preview", "--", "--port", "4173", "--strictPort"],

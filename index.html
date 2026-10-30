@@ -46,14 +46,16 @@
          img-src must list every basemap host in src/data/mapTiles.js; adding
          a tile provider without adding its host here silently breaks the map.
          Fonts are self-hosted (see src/main.jsx), so style-src and font-src
-         are 'self' only — no Google Fonts. Keep this policy identical to the
+         are 'self' only — no Google Fonts. %SCREENING_CONNECT_SRC% becomes
+         the OpenSanctions API host when the screening tools are built in
+         (ENABLE_SANCTIONS_SCREENING; vite.config.js), and nothing otherwise. Keep this policy identical to the
          header version in HANDOFF.md §4. -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       script-src 'self';
       style-src 'self' 'unsafe-inline';
       img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://tiles.stadiamaps.com;
-      connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org;
+      connect-src 'self' https://nominatim.openstreetmap.org https://en.wikipedia.org%SCREENING_CONNECT_SRC%;
       font-src 'self';
       object-src 'none';
       base-uri 'self';
