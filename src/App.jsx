@@ -29,6 +29,8 @@ const TOOL_COMPONENTS = {
   // __TRACKER_ENABLED__ is a build-time literal (vite.config.js), so with the
   // launch flag off this import is dropped and the tracker is not shipped.
   ...(__TRACKER_ENABLED__ ? { 'defence-tracker': lazy(() => import('./tools/compliance/defence-tracker/DefenceTracker')) } : {}),
+  // Same pattern for OpenSanctions screening (ENABLE_SANCTIONS_SCREENING).
+  ...(__SCREENING_ENABLED__ ? { 'sanctions-screening': lazy(() => import('./tools/compliance/screening/SanctionsScreening')) } : {}),
 };
 
 const SITE_TITLE = 'Research Security Toolkit';

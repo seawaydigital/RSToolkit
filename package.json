@@ -15,6 +15,7 @@
   "scripts": {
     "dev": "vite",
     "dev:tracker": "vite --mode tracker",
+    "dev:screening": "vite --mode screening",
     "build": "vite build",
     "lint": "eslint .",
     "test": "node --test \"tests/**/*.test.mjs\"",

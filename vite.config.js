@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { SITE_URL, ENABLE_DEFENCE_TRACKER } from './src/siteConfig.js'
+import { SITE_URL, ENABLE_DEFENCE_TRACKER, ENABLE_SANCTIONS_SCREENING } from './src/siteConfig.js'
 
 // The Defence Institution Tracker's launch flag, compiled in as a literal so
 // that with the flag off the bundler drops the tracker's code and data
@@ -9,6 +9,25 @@ import { SITE_URL, ENABLE_DEFENCE_TRACKER } from './src/siteConfig.js'
 // VITE_ENABLE_DEFENCE_TRACKER=true is set for one build.
 const trackerEnabled = (mode) =>
   ENABLE_DEFENCE_TRACKER || mode === 'tracker' || process.env.VITE_ENABLE_DEFENCE_TRACKER === 'true'
+
+// The OpenSanctions screening tools' flag, compiled in the same way as the
+// tracker's. On in the "screening" mode (npm run dev:screening) or when
+// VITE_ENABLE_SANCTIONS_SCREENING=true is set for one build.
+const screeningEnabled = (mode) =>
+  ENABLE_SANCTIONS_SCREENING || mode === 'screening' || process.env.VITE_ENABLE_SANCTIONS_SCREENING === 'true'
+
+// connect-src in index.html lists the OpenSanctions API only in builds that
+// have the screening tools, so the policy never allows a host the site does
+// not use. index.html writes it as %SCREENING_CONNECT_SRC%.
+function screeningCspPlugin(enabled) {
+  return {
+    name: 'screening-csp',
+    transformIndexHtml: {
+      order: 'pre',
+      handler: (html) => html.replaceAll('%SCREENING_CONNECT_SRC%', enabled ? ' https://api.opensanctions.org' : ''),
+    },
+  }
+}
 
 // The canonical and Open Graph URLs in index.html are written as %SITE_URL%
 // and filled in here, so the hosting domain is set in exactly one place:
@@ -58,10 +77,11 @@ function trackerDataPlugin(enabled) {
 // load cleanly at http://localhost:5173/. See HANDOFF.md for deployment.
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [react(), siteUrlPlugin(), trackerDataPlugin(trackerEnabled(mode))],
+  plugins: [react(), siteUrlPlugin(), screeningCspPlugin(screeningEnabled(mode)), trackerDataPlugin(trackerEnabled(mode))],
   base: process.env.BASE_PATH || '/',
   define: {
     __TRACKER_ENABLED__: JSON.stringify(trackerEnabled(mode)),
+    __SCREENING_ENABLED__: JSON.stringify(screeningEnabled(mode)),
   },
   build: {
     // Never inline font files as data: URIs. Vite inlines any asset under

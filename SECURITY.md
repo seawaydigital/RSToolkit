@@ -28,13 +28,14 @@ The audit found **no vulnerabilities in the application code**. It made seven ha
 | Institution name typed into the proximity search | Sent to `nominatim.openstreetmap.org`, then `en.wikipedia.org` if there is no match | Disclosed at the input and on How This Site Works. Can be switched off with `ENABLE_PROXIMITY_SEARCH` |
 | Map area being viewed (NRO map; the tracker's map view when it is switched on) | Tile requests to the basemap provider (Esri by default) | Reveals map area and zoom level only. Disclosed. The tracker's map never moves to fit search results, so its tiles reveal nothing about a search |
 | Tracker searches and batch-check text | Memory of the open tab | Never transmitted, never stored, never put in the address |
+| Screening list and OpenSanctions API key | Memory of the open tab | Sent to `api.opensanctions.org` only when the user presses *Screen*, the key in the request's query string (the only form the API accepts from a browser). Never stored, never put in the address. Not in the build while `ENABLE_SANCTIONS_SCREENING` is false |
 | Tracker dataset (ratings, listings, sources) | Compiled into the tracker's own chunk, and published at `data/defence-tracker.json` and `.csv` | Public by design (CC BY 4.0). None of it is in the build while `ENABLE_DEFENCE_TRACKER` is false |
 
 **Threats considered:**
 - **Script injection (XSS):** no HTML sink receives untrusted data unescaped, and the CSP's `script-src 'self'` with no `'unsafe-inline'` would block it anyway.
 - **Tampered third-party data:** geocoder results are escaped before going into Leaflet popups.
 - **Clickjacking:** prevented by `frame-ancestors` and `X-Frame-Options`, which the host must set (§5).
-- **Data exfiltration by compromised code:** `connect-src` allows only the two geocoders, and `form-action 'none'` blocks form submissions.
+- **Data exfiltration by compromised code:** `connect-src` allows only the two geocoders (plus the OpenSanctions API in builds with `ENABLE_SANCTIONS_SCREENING`), and `form-action 'none'` blocks form submissions.
 - **Supply-chain compromise:** controls are in §4.
 - **Hosting misconfiguration:** covered in §5.
 
@@ -107,6 +108,7 @@ Also removed: `blob:` from `img-src`, which nothing in the build uses.
    - `SITE_URL`: the new `https://` URL.
    - `WEB_HOST`: who serves the files, plus any CDN or proxy.
    - `ENABLE_PROXIMITY_SEARCH`: your policy call. If `false`, also trim `connect-src` in both the meta tag and the header.
+   - `ENABLE_SANCTIONS_SCREENING`: your policy call (off by default). If `true`, add `https://api.opensanctions.org` to the header's `connect-src`; the meta tag gets it at build time.
 4. **Designate a vulnerability-report contact.** Until you do, reports go to the address in §7. Consider publishing `/.well-known/security.txt` (RFC 9116) by adding it under `public/.well-known/`.
 5. **If you set a map key (`VITE_CARTO_API_KEY` / `VITE_STADIA_API_KEY`), restrict it to your domain** in the provider's dashboard. Keys in a static bundle are public by design; a domain lock is what stops reuse.
 6. **Keep the build pipeline gates.** If you build outside GitHub Actions, run the same gates before every deploy: `npm ci`, `npm audit --audit-level=high`, `npm run lint`, `npm test`, `npm run build`. Use `npm ci` (lockfile-exact), never `npm install`.

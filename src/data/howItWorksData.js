@@ -14,10 +14,20 @@
 //
 // Host-specific facts come from src/siteConfig.js: WEB_HOST names who serves
 // the files, and ENABLE_PROXIMITY_SEARCH removes every mention of the
-// geocoders when the proximity panel is switched off.
+// geocoders when the proximity panel is switched off. SCREENING_ENABLED does
+// the same for the OpenSanctions screening tools.
 
 import { WEB_HOST, ENABLE_PROXIMITY_SEARCH as GEO } from '../siteConfig';
 import { TRACKER_ENABLED } from './defenceTracker/enabled';
+import { SCREENING_ENABLED as SCR } from '../tools/compliance/screening/enabled';
+
+// The outside services the site may connect to, as connect-src lists them.
+// "a", "a and b", "a, b, and c".
+const listInWords = (items) => {
+  const xs = items.filter(Boolean);
+  return xs.length < 3 ? xs.join(' and ') : `${xs.slice(0, -1).join(', ')}, and ${xs[xs.length - 1]}`;
+};
+const CONNECT_TARGETS = [GEO && 'the two geocoders', SCR && 'the OpenSanctions API'].filter(Boolean);
 
 export const STORAGE_KEYS = ['rs-toolkit-checklist-v1', 'rs-toolkit-travel-v1'];
 
@@ -86,10 +96,18 @@ export const howItWorksData = {
         learn: 'That someone at your IP address looked up that institution name. This is the one feature that sends what you type, and it is designed for an institution name, not project details.',
         highlight: true,
       },
+      SCR && {
+        when: 'Only when you press "Screen" in Sanctions Screening',
+        what: 'Each name on your list, whether it is a person or an organization, its country and birth date if you gave them, and your own OpenSanctions API key',
+        to: 'OpenSanctions (api.opensanctions.org)',
+        learn: 'Every name you screened, from your IP address, under your key. OpenSanctions’ own terms and privacy policy govern what they keep. Building or editing the list sends nothing; only pressing Screen does.',
+        highlight: true,
+      },
     ].filter(Boolean),
     outro:
       'That is the whole list. Nothing you enter in the STRA Lookup, the NRO organization search, ' +
       (TRACKER_ENABLED ? 'the Defence Institution Tracker’s search or batch check, ' : '') +
+      (SCR ? 'Sanctions Screening’s list builder, ' : '') +
       'the Export Control reference, the Glossary, the FAQ, any flowchart, either wizard, or either checklist is ever transmitted.',
   },
 
@@ -154,7 +172,7 @@ export const howItWorksData = {
       },
       {
         title: 'A strict Content Security Policy',
-        body: `The page carries a browser-enforced policy that permits scripts only from the site itself (no inline scripts, no third-party scripts), permits network connections only to ${GEO ? 'the two geocoders listed above' : 'the site itself'}, and forbids form submissions entirely. If the code tried to send data anywhere else, the browser would block it.`,
+        body: `The page carries a browser-enforced policy that permits scripts only from the site itself (no inline scripts, no third-party scripts), permits network connections only to ${CONNECT_TARGETS.length ? `${CONNECT_TARGETS.join(' and ')} listed above` : 'the site itself'}, and forbids form submissions entirely. If the code tried to send data anywhere else, the browser would block it.`,
       },
       {
         title: 'No cookies, no analytics, no trackers',
@@ -162,9 +180,10 @@ export const howItWorksData = {
       },
       {
         title: 'Third-party responses are treated as untrusted',
-        body: GEO
-          ? 'The only outside data the site renders at runtime is the geocoder result on the NRO map. It is escaped before display so that a tampered map name could not inject code into the page.'
-          : 'The site renders no outside data at runtime other than map image tiles, which are displayed as images and cannot run code.',
+        body:
+          GEO || SCR
+            ? `The only outside data the site renders at runtime is ${[GEO && 'the geocoder result on the NRO map', SCR && 'the OpenSanctions results in Sanctions Screening'].filter(Boolean).join(' and ')}. It is escaped or rendered as plain text, never as markup, so a tampered response could not inject code into the page.`
+            : 'The site renders no outside data at runtime other than map image tiles, which are displayed as images and cannot run code.',
       },
       {
         title: 'Open source and auditable',
@@ -187,7 +206,11 @@ export const howItWorksData = {
     items: [
       {
         title: 'Watch the network',
-        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are map tiles when you open the NRO map${TRACKER_ENABLED ? ' or the tracker’s map view' : ''}${GEO ? ', and the geocoder call when you press "Find" in the proximity panel' : ''}.`,
+        body: `Open your browser's developer tools (F12, or right-click → Inspect) and choose the Network tab. Then use any tool on this site: search the STRA list, run the dual-use wizard, tick a checklist. You will see no requests appear. The only exceptions are ${listInWords([
+          `map tiles when you open the NRO map${TRACKER_ENABLED ? ' or the tracker’s map view' : ''}`,
+          GEO && 'the geocoder call when you press "Find" in the proximity panel',
+          SCR && 'the OpenSanctions calls when you press "Screen" in Sanctions Screening',
+        ])}.`,
       },
       {
         title: 'Read the policy',
@@ -206,6 +229,7 @@ export const howItWorksData = {
       'It does not make the site "100% safe" — no website is. It means the site\'s own design gives it nothing of yours to lose. Your device, your browser, and your network are still yours to secure; the Cybersecurity guide covers that.',
       'It does not make the content legal advice. The toolkit explains policy; your institution\'s research security office makes determinations.',
       GEO && 'It does not make the proximity search private. That one feature sends the institution name you type to OpenStreetMap and, if needed, Wikipedia, along with your IP address. Use it for institution names only — and if the fact that you are looking at a particular partner is itself sensitive, do not type it there; filter the NRO table by city instead, which never leaves your browser.',
+      SCR && 'It does not make sanctions screening private. Screening sends every name on your list to OpenSanctions under your own key, along with your IP address. Screen only what you need to, and leave project details out of the list.',
       'It does not protect a shared computer. The two saved checklists sit in that browser\'s local storage until cleared — use the button above before you walk away.',
     ].filter(Boolean),
   },

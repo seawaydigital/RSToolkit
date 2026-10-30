@@ -1,4 +1,5 @@
 import { TRACKER_ENABLED } from './defenceTracker/enabled';
+import { SCREENING_ENABLED } from '../tools/compliance/screening/enabled';
 
 export const CATEGORIES = [
   {
@@ -74,6 +75,18 @@ export const CATEGORIES = [
               description: 'Look up Chinese, Russian and Iranian research institutions with military or security ties: sourced ratings, official listings, and a batch check for partner and co-author lists',
               tags: ['defence', 'defense', 'military', 'universities', 'institutions', 'aspi', 'tracker', 'background check', 'due diligence', 'entity list', 'sanctions', 'nro', 'partners', 'co-authors', 'china'],
               related: ['nro-lookup', 'stra-lookup', 'dual-use'],
+            },
+          ]
+        : []),
+      ...(SCREENING_ENABLED
+        ? [
+            {
+              id: 'sanctions-screening',
+              name: 'Sanctions Screening',
+              slug: 'sanctions-screening',
+              description: 'Screen a list of people and organizations against OpenSanctions in one go, with your own free API key. Paste a list in any format and it is tidied into entries first. Matches, possible matches, and a dated line for your search log',
+              tags: ['sanctions', 'opensanctions', 'screening', 'bulk', 'batch', 'watch list', 'due diligence', 'background check', 'partners', 'co-authors', 'visitors', 'pep', 'export control', 'list', 'csv'],
+              related: ['nro-lookup', 'report-concern'],
             },
           ]
         : []),

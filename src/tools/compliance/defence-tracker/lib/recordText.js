@@ -4,6 +4,7 @@
 // open-data export.
 import { LISTS, LIST_SHORT_LABELS, NOT_RATED_LABEL, RATING_LABELS, SIGNALS } from './constants.js';
 import { RUBRIC_VERSION } from './rubric.js';
+import { csvCell, neutralise } from '../../../../utils/csv.js';
 
 export const BATCH_COLUMNS = ['Your text', 'Match', 'Matched by', 'Confidence', 'Rating', 'NRO', 'Other lists', 'Profile'];
 
@@ -273,18 +274,7 @@ export function searchLogLine({ date, meta, counts }) {
   );
 }
 
-// Spreadsheet apps run cells that start with these characters as formulas,
-// and batch input is pasted text, so such cells get a leading apostrophe:
-// in the CSV and in the copied table, which is pasted into spreadsheets too.
-const neutralise = (value) => {
-  const s = value == null ? '' : String(value);
-  return /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
-};
-
-export function csvCell(value) {
-  const s = neutralise(value);
-  return /[",\r\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-}
+export { csvCell };
 
 function batchRows(lines, byId, baseUrl) {
   const rows = [];
