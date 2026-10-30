@@ -96,6 +96,10 @@ const CONFIRMED = [
   ['zhang@hit.edu.cn', 'harbin-institute-of-technology'],
   ['哈尔滨工业大学', 'harbin-institute-of-technology'],
   ['国际关系学院', 'university-of-international-relations'],
+  // The Entity List writes one centre "Supercomputer" and the others "Supercomputing"; affiliations use both.
+  ['National Supercomputing Center in Zhengzhou, Zhengzhou, China', 'national-supercomputer-center-zhengzhou'],
+  ['National Supercomputer Center in Tianjin, Tianjin 300457, China', 'national-supercomputing-center-tianjin-nscc-tj'],
+  ['National Supercomputing Centre in Shenzhen, Shenzhen, China', 'national-supercomputing-center-shenzhen'],
 ];
 
 // Many universities call their school of international relations 国际关系学院,

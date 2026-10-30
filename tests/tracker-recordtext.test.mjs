@@ -92,6 +92,29 @@ test('citation fragments and stray dates are left out of US citations; other lis
   assert.deepEqual(displayEntries('ca-sanctions', ca), ca);
 });
 
+test('a listing through a parent’s entry says the list names it as an alias in that entry', () => {
+  const caep = 'Chinese Academy of Engineering Physics';
+  const via = (listId, name, e) => ({ listId, status: 'listed', entries: [{ name, alias: 'Southwest Institute of Fluid Physics', date: null, url: 'https://list.example', ...e }] });
+  const record = {
+    listings: [
+      via('ca-sanctions', 'Example Institute', { key: 'ca:Russia:1:5', date: '2022-02-24', citation: 'Schedule 1, item 5' }),
+      via('us-entity-list', caep, { key: 'csl:1', date: '1997-06-30', citation: '62 FR 35334; 85 FR 34497' }),
+      via('us-sdn', 'Example Institute', { key: 'csl:2', citation: 'IRAN' }),
+      via('us-1286', 'Example Institute', { key: '1286:x', citation: 'FY2025 list, published 23 July 2026' }),
+      via('jp-eul', caep, { key: 'eul:CN:x', citation: '29 September 2025 revision, No. 519; concerns: nuclear' }),
+    ],
+  };
+  const evidence = listEvidence(record);
+  assert.deepEqual(evidence.map((e) => e.text), [
+    'Canada lists it under the Special Economic Measures (Russia) Regulations as an alias in the entry for “Example Institute” (Schedule 1, item 5) since 24 February 2022.',
+    "The US Commerce Department's Entity List names it as an alias in the entry for “Chinese Academy of Engineering Physics”, added on 30 June 1997 (62 FR 35334; 85 FR 34497).",
+    'The US Treasury lists it as a Specially Designated National under its Iran (IRAN) sanctions program, as an alias in the entry for “Example Institute”.',
+    'The US Defense Department names it on its Section 1286 list as an alias in the entry for “Example Institute” (FY2025 list, published 23 July 2026).',
+    "Japan's Ministry of Economy, Trade and Industry names it on its End User List as an alias in the entry for “Chinese Academy of Engineering Physics” (29 September 2025 revision, No. 519; concerns: nuclear).",
+  ]);
+  assert.equal(evidence[1].url, 'https://www.govinfo.gov/link/fr/62/35334');
+});
+
 test('the copied record gives each listing’s details once, as evidence', () => {
   const text = formatRecordForFile(hit, { meta, permalink: 'p', retrievedOn: '2026-10-24' });
   assert.equal(text.split('\n').filter((line) => line.includes('85 FR 34497')).length, 1, text);

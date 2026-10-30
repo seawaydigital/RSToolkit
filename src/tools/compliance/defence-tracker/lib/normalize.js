@@ -37,6 +37,8 @@ export const ABBREVIATIONS = {
   airforce: 'air force',
   centre: 'center',
   peoples: 'people',
+  // The Entity List names one national supercomputing centre "Supercomputer Center".
+  supercomputer: 'supercomputing',
 };
 
 // Words that describe what an institution does rather than which one it is.

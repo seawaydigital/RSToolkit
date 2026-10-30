@@ -20,6 +20,8 @@ The rules here are enforced by `tests/tracker-data.test.mjs` and `validateRecord
 
 Canadian NRO listings come from `src/data/nroData.js`, the same data NRO Lookup uses. Institutions known only from a list snapshot get a minimal "listing-only" record at load time, so they need no file.
 
+A list can give a unit's name as an alias in its parent's entry: the Entity List's and Japan's entries for CAEP name its institutes. A record whose `parent` is that entry's institution, and whose name is one of those aliases, is listed through the parent's entry, unless the list gives it an entry of its own. In the dataset and the export, such an entry carries `alias`, the name the list gives the unit.
+
 ## Record statuses
 
 - **`seed`**: created from the MISP galaxy list. Its MISP fields live in `seedNotes`, which is never displayed. Not researched.

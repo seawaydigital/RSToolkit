@@ -206,3 +206,46 @@ test('a list-only record named by several entries takes a mixed-case name over a
   assert.ok(!record.aliases.includes('Moscow Institute of Physics and Technology'));
   assert.deepEqual(record.listings.filter((l) => l.status === 'listed').map((l) => l.listId).sort(), ['us-entity-list', 'us-sdn']);
 });
+
+// The Entity List gives CAEP's institutes as aliases in CAEP's own entry
+// ("a.k.a. … Southwest Institute of Fluid Physics"), so that entry covers them.
+test('a unit that a list names among its parent’s aliases is listed through the parent’s entry', () => {
+  const unit = (id, name) => ({ ...seedRecord(id, name), parent: 'example-academy' });
+  const institutions = [
+    seedRecord('example-academy', 'Example Academy of Physics'),
+    unit('fluid-institute', 'Southwest Institute of Fluid Physics'),
+    unit('laser-lab', 'The High Power Laser Laboratory'),
+    unit('chemistry-institute', 'Southwest Institute of Nuclear Physics and Chemistry'),
+    unit('materials-institute', 'Southwest Institute of Materials'),
+    // Shares a name with an alias, but is not the academy's unit.
+    seedRecord('namesake', 'Southwest Institute of Structural Mechanics'),
+  ];
+  const entry = (key, name, institution, altNames = []) => ({ key, list: 'us-entity-list', name, altNames, country: 'CN', date: '1997-06-30', citation: '62 FR 35334', url: 'https://example.org', institution });
+  const aliases = [
+    'Ninth Academy',
+    'Southwest Institute of Fluid Physics',
+    'The High Power Laser Laboratory, Shanghai',
+    "Southwest Institute of Nuclear Physics and Chemistry (a.k.a., Example Academy of Physics (EAP)'s 902 Institute)",
+    'Southwest Institute of Materials',
+    'Southwest Institute of Structural Mechanics',
+  ];
+  const snapshots = {
+    ...SNAPSHOTS,
+    'us-csl': {
+      ...SNAPSHOTS['us-csl'],
+      entries: [entry('csl:a', 'Example Academy of Physics', 'example-academy', aliases), entry('csl:b', 'Southwest Institute of Materials', 'materials-institute')],
+    },
+  };
+  const d = makeDataset({ institutions, snapshots });
+  const el = (id) => d.byId.get(id).listings.find((l) => l.listId === 'us-entity-list');
+  for (const [id, alias] of [['fluid-institute', aliases[1]], ['laser-lab', aliases[2]], ['chemistry-institute', aliases[3]]]) {
+    assert.equal(el(id).status, 'listed', id);
+    assert.deepEqual(el(id).entries.map((e) => [e.key, e.alias]), [['csl:a', alias]], id);
+    assert.deepEqual([d.byId.get(id).assessment.rating, d.byId.get(id).assessment.rule], ['high', 'listed'], id);
+  }
+  // A unit the list names in an entry of its own keeps just that entry.
+  assert.deepEqual(el('materials-institute').entries.map((e) => e.key), ['csl:b']);
+  assert.equal(el('namesake').status, 'not-listed');
+  // The academy's listed units are those listed in their own right.
+  assert.deepEqual(d.byId.get('example-academy').units.map((u) => u.id), ['materials-institute']);
+});
