@@ -1,0 +1,111 @@
+{
+  "id": "defense-s-and-t-key-laboratory-of-radar-signal-processing-at-xidian-university",
+  "name": "Defense S&T Key Laboratory of Radar Signal Processing at Xidian University",
+  "zh": "雷达信号处理国防科技重点实验室",
+  "zhAliases": [
+    "雷达信号处理全国重点实验室"
+  ],
+  "aliases": [
+    "Defense S&T Key Laboratory of Radar Signal Processing",
+    "National Key Laboratory of Radar Signal Processing",
+    "National Key Laboratory of Science and Technology on Radar Signal Processing",
+    "National Laboratory of Radar Signal Processing",
+    "Key Lab for Radar Signal Processing",
+    "State Lab of Radar Signal Processing",
+    "Xidian Electronic Research Institute"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Xi'an",
+    "province": "Shaanxi",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Xidian University (School of Electronic Engineering)"
+  ],
+  "parent": "xidian-university",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies it as the national defence science and technology key laboratory for radar signal processing at Xidian University’s School of Electronic Engineering, one of the first such laboratories, set up in 1991 from the university’s Electronic Engineering Research Institute; it was reorganised in 2023 as the National Key Laboratory of Radar Signal Processing (雷达信号处理全国重点实验室).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Radar Signal Processing (雷达信号处理国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "CASI reports that the laboratory has worked on target information processing for air and missile defence since 1991–1995, that its target-recognition research has become standard on PLA radars, and that it has developed guidance and target-recognition technology for missile systems, contributing equipment to China’s first land-based mid-course missile defence test in 2010.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "CASI reports that it researched electromagnetic jamming with a PLA unit (Unit 63610), and that in 2018 its academic committee included members from the PLA Air Force and Navy equipment research academies and the National University of Defense Technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports a fuze modelling and simulation project with NORINCO’s 212th Research Institute, and that the laboratory joined CETC in a collaborative innovation centre for information perception technology under the national 2011 Plan.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [
+    "advanced-radar"
+  ],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 381–389 (Defense S&T Key Laboratory of Radar Signal Processing)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
