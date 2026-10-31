@@ -1,0 +1,129 @@
+{
+  "id": "beijing-aeronautical-manufacturing-technology-research-institute",
+  "name": "Beijing Aeronautical Manufacturing Technology Research Institute",
+  "zh": null,
+  "zhAliases": [
+    "北京航空製造工程研究所"
+  ],
+  "aliases": [
+    "Aviation Industry Corporation of China's (AVIC) Institute 625",
+    "AVIC Beijing Aeronautical Manufacturing Technology Research Institute",
+    "Beijing Aeronautical Manufacturing Technology Research Institute (BAMTRI)"
+  ],
+  "acronyms": [
+    "BAMTRI"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Aviation Industry Corporation of China (AVIC)"
+  ],
+  "parent": "aviation-industry-corporation-of-china",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it with the alias “Aviation Industry Corporation of China’s (AVIC) Institute 625”, added in a January 2018 revision. AVIC is one of the state-owned defence-industry groups that SASTIND lists, and says its businesses include aviation weapons and equipment and military transport aircraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "The US Commerce Department listed it in May 2014, finding reasonable cause to believe that it had supplied Iran’s ballistic missile programme through a Chinese proliferator whom the US government had sanctioned.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to AVIC, which describes itself as a very large state-owned enterprise managed by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s4"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of Certain Persons to the Entity List (79 FR 24563, 1 May 2014)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2014-05-01/html/2014-10035.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031205712/https://www.govinfo.gov/content/pkg/FR-2014-05-01/html/2014-10035.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    },
+    {
+      "title": "Addition of Certain Entities; Removal of Certain Entities; and Revisions of Entries on the Entity List (83 FR 3577, 26 January 2018)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2018-01-26/html/2018-01332.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031205831/https://www.govinfo.gov/content/pkg/FR-2018-01-26/html/2018-01332.htm"
+      },
+      "id": "s2",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "s3",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "集团简介 (About AVIC)",
+      "publisher": "Aviation Industry Corporation of China",
+      "url": "https://www.avic.com.cn/c/2021-03-26/511215.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183425/https://www.avic.com.cn/c/2021-03-26/511215.shtml?PC=PC"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
