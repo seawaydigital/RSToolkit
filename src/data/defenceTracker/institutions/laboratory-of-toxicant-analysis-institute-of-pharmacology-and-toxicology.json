@@ -1,0 +1,101 @@
+{
+  "id": "laboratory-of-toxicant-analysis-institute-of-pharmacology-and-toxicology",
+  "name": "Laboratory of Toxicant Analysis, Institute of Pharmacology and Toxicology",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Academy of Military Medical Sciences (PLA Academy of Military Science)"
+  ],
+  "parent": "academy-of-military-medical-sciences-institute-of-toxicology-and-pharmacology",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The OPCW lists the Laboratory of Toxicant Analysis as part of the Institute of Pharmacology and Toxicology of the Academy of Military Medical Sciences, which belongs to the PLA’s Academy of Military Science, an important PLA research institution in Xinhua’s description. The laboratory is one of the OPCW’s designated laboratories for analysing chemical-weapons samples. The US Commerce Department added it to the Military End-User List in December 2020, having determined that it is a military end user.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to the PLA’s Academy of Military Science through the Academy of Military Medical Sciences.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of ‘Military End User’ (MEU) List to the Export Administration Regulations and Addition of Entities to the MEU List (85 FR 83793, 23 December 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-12-23/html/2020-28052.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031204902/https://www.govinfo.gov/content/pkg/FR-2020-12-23/html/2020-28052.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    },
+    {
+      "title": "Status of laboratories designated for the analysis of authentic environmental samples (S/1866/2020, 31 March 2020)",
+      "publisher": "Organisation for the Prohibition of Chemical Weapons (OPCW), Technical Secretariat",
+      "lang": "en",
+      "url": "https://www.opcw.org/sites/default/files/documents/2020/03/s-1866-2020%28e%29.pdf",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031210507/https://www.opcw.org/sites/default/files/documents/2020/03/s-1866-2020(e).pdf"
+      },
+      "id": "s2",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "s3",
+      "title": "Xinhua report on the inspection of the Academy of Military Science, 16 May 2018 (军事科学院)",
+      "publisher": "Xinhua News Agency, on the Chinese government website (gov.cn)",
+      "url": "https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032215/https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Military End-User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
