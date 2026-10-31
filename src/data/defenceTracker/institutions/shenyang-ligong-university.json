@@ -18,30 +18,113 @@
   "location": {
     "city": "Shenyang",
     "province": "Liaoning",
-    "lat": 41.72685501421337,
-    "lng": 123.49119901657104
+    "lat": 41.7252,
+    "lng": 123.485
   },
-  "supervisors": [],
+  "supervisors": [
+    "Liaoning Provincial Government (co-built with SASTIND, and with NORINCO and China South Industries Group)"
+  ],
   "parent": null,
   "ids": {
     "misp": "931eb5d2-1f20-42a1-a94f-6e226fc7a5d1",
     "ror": "03m20nr07",
     "wikidata": "Q302940"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Shenyang Ligong University describes itself as co-built by Liaoning Province and the defence-industry regulator SASTIND, a status it says it gained in 2016 as a defence-specialty institution.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "Its 2020 profile reports five defence-specialty disciplines designated by SASTIND.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "Liaoning signed an agreement in 2010 with the two state ordnance groups, China North Industries Group (NORINCO) and China South Industries Group, to co-build the university, which says its graduates work throughout defence-industry companies, ordnance research institutes and the armed forces.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "Its 2020 profile reports 31 weapons-model and pre-research projects from SASTIND, the Central Military Commission’s Equipment Development Department and others during 2016–2020.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded by the PLA in 1948 as the first undergraduate military-industry school in the northeast, to train ordnance specialists, it was run by the PLA’s Northeast Military Industry Department, the central ordnance bureau, the ordnance ministries and the China North Industries Corporation before passing to Liaoning in 1999; it calls itself one of the ‘seven sons of ordnance’ (兵工七子).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university; figures to January 2025, as archived in February 2025)",
+      "publisher": "Shenyang Ligong University",
+      "url": "https://www.sylu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20250206123826/https://www.sylu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "学校简介 (About the university; figures to May 2020, as archived in October 2020)",
+      "publisher": "Shenyang Ligong University",
+      "url": "http://www.sylu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20201021093806/http://www.sylu.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Map point moved to its campus at 6 Nanping Middle Road."
     }
   ],
   "seedNotes": {
