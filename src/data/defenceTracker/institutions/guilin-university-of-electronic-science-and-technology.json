@@ -1,42 +1,85 @@
 {
   "id": "guilin-university-of-electronic-science-and-technology",
-  "name": "Guilin University of Electronic Science and Technology",
+  "name": "Guilin University of Electronic Technology",
   "zh": "桂林电子科技大学",
   "zhAliases": [],
   "aliases": [
+    "Guilin University of Electronic Science and Technology",
     "Guilin Institute of Electronic Technology"
   ],
   "acronyms": [
     "GUET"
   ],
-  "domains": [],
+  "domains": [
+    "guet.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 25.28086064406601,
-    "lng": 110.33527962698372
+    "city": "Guilin",
+    "province": "Guangxi",
+    "lat": 25.287,
+    "lng": 110.3312
   },
-  "supervisors": [],
+  "supervisors": [
+    "Guangxi Zhuang Autonomous Region Government (co-built with MIIT and with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "2865085a-bb90-4afc-91f2-8eee214a27b1"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "GUET describes itself as co-built by the Guangxi regional government with the industry ministry (MIIT) and, separately, with the defence-industry regulator SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1960, it was run in turn by the Fourth Ministry of Machine-Building and China’s electronics industry ministries before passing in 2000 to joint central and regional oversight under mainly Guangxi management.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校概况 (About the university; figures updated 13 May 2026)",
+      "publisher": "Guilin University of Electronic Technology",
+      "url": "https://www.guet.edu.cn/xxgk/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260922133900/https://www.guet.edu.cn/xxgk/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Name changed to the university’s own English name, which the US Section 1286 list uses, with the old one kept as an alias; map point moved to its Jinjiling campus at 1 Jinji Road, the address it gives."
     }
   ],
   "seedNotes": {
