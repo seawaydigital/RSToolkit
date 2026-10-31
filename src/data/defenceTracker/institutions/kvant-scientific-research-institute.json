@@ -1,0 +1,94 @@
+{
+  "id": "kvant-scientific-research-institute",
+  "name": "Kvant Scientific Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "KVANT SCIENTIFIC RESEARCH INSTITUTE",
+    "NAUCHNO-ISSLEDOVATELSKIY INSTITUT KVANT",
+    "NII KVANT",
+    "RUSSIAN FEDERAL STATE UNITARY ENTERPRISE SCIENTIFIC RESEARCH INSTITUTE KVANT"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "security",
+  "location": {
+    "city": "Moscow",
+    "province": "Moscow",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Federal Security Service of the Russian Federation (FSB)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "The US Treasury designated the Kvant Scientific Research Institute in June 2018 as owned or controlled by Russia’s Federal Security Service (FSB), noting a 2010 government decree that made it a federal state unitary enterprise supervised by the FSB. OFAC lists it as linked to the FSB.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Russia’s Federal Security Service (FSB), which supervises it.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Treasury Sanctions Russian Federal Security Service Enablers (11 June 2018)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/sm0410",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230432/https://home.treasury.gov/news/press-releases/sm0410"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: Kvant Scientific Research Institute (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=24646",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230505/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=24646"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
