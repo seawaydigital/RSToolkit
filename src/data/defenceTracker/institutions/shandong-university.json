@@ -17,30 +17,80 @@
   "location": {
     "city": "Jinan",
     "province": "Shandong",
-    "lat": 36.66833,
-    "lng": 116.99722
+    "lat": 36.6763,
+    "lng": 117.0539
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education"
+  ],
   "parent": null,
   "ids": {
     "misp": "67466849-332c-4d33-99dc-490ec5162cb2",
     "ror": "0207yh398",
     "wikidata": "Q604470"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "Shandong University’s history of its State Key Laboratory of Crystal Materials says that its growth of large KDP crystals has been funded mainly through the national 863 high-technology programme and supporting funds from COSTIND, the predecessor of the defence-industry regulator SASTIND, since 1986–1990; that it was the first in China to supply large KDP crystals for the national Shenguang laser facilities; and that it is one of the main suppliers of crystals for China’s inertial confinement fusion programme. It also says the university was the first in China to work on ADP crystals, used in naval sonar.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Shandong University describes itself as a key comprehensive university run directly by the Ministry of Education.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "山大简介 (About Shandong University)",
+      "publisher": "Shandong University",
+      "url": "https://www.sdu.edu.cn/sdgk/sdjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031052555/https://www.sdu.edu.cn/sdgk/sdjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "晶体材料国家重点实验室 (State Key Laboratory of Crystal Materials)",
+      "publisher": "Shandong University News",
+      "url": "https://www.view.sdu.edu.cn/info/1018/39369.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031052724/https://www.view.sdu.edu.cn/info/1018/39369.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Map point moved to its Central Campus in Jinan."
     }
   ],
   "seedNotes": {
