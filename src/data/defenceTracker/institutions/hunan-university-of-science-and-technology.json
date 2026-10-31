@@ -20,27 +20,67 @@
     "lat": 27.89294460020551,
     "lng": 112.92268106590927
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hunan Provincial Government (co-built with SASTIND, the Ministry of Natural Resources and the former State Administration of Work Safety)"
+  ],
   "parent": null,
   "ids": {
     "misp": "d3a7f49b-01ff-4f40-b2e4-1f852d4f3d6f",
     "ror": "02m9vrb24",
     "wikidata": "Q5942041"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "HNUST describes itself as co-built by the Hunan government with SASTIND, as well as with the Ministry of Natural Resources and the former State Administration of Work Safety.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports three defence-specialty disciplines (国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Hunan University of Science and Technology",
+      "url": "https://www.hnust.edu.cn/xxgk/xxjj/index.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200132/https://www.hnust.edu.cn/xxgk/xxjj/index.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
