@@ -1,0 +1,89 @@
+{
+  "id": "academy-of-military-medical-sciences-institute-of-disease-control-and-prevention",
+  "name": "Academy of Military Medical Sciences, Institute of Disease Control and Prevention",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Academy of Military Medical Sciences (PLA Academy of Military Science)"
+  ],
+  "parent": "academy-of-military-medical-sciences",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The Institute of Disease Control and Prevention is one of the eleven research institutes of the Academy of Military Medical Sciences, part of the PLA’s Academy of Military Science, which Xinhua describes as an important PLA research institution. The US Commerce Department listed the academy and its eleven institutes in December 2021, finding that they use biotechnology to support Chinese military end uses and end users, including purported brain-control weaponry; the listing gives its address as 20 East Street, Fengtai District, Beijing.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to the PLA’s Academy of Military Science through the Academy of Military Medical Sciences.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Xinhua report on the inspection of the Academy of Military Science, 16 May 2018 (军事科学院)",
+      "publisher": "Xinhua News Agency, on the Chinese government website (gov.cn)",
+      "url": "https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032215/https://www.gov.cn/xinwen/2018-05/16/content_5291425.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Addition of Certain Entities to the Entity List and Revision of an Entry on the Entity List (86 FR 71557, 17 December 2021)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2021-12-17/html/2021-27406.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026032307/https://www.govinfo.gov/content/pkg/FR-2021-12-17/html/2021-27406.htm"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listings on the US Entity List and the Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
