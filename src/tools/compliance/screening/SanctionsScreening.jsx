@@ -433,7 +433,8 @@ export default function SanctionsScreening() {
             </dl>
             <p>
               Not sure what to do with a result? <a href="#report-concern">Report a Concern</a> says who to contact, starting with
-              your own institution.
+              your own institution. To look further, <a href="#due-diligence-sources">Due Diligence Sources</a> explains the other
+              open sources and how to read them.
             </p>
           </details>
           {counts?.nameOnly > 0 && (
