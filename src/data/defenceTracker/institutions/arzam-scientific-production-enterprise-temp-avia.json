@@ -1,0 +1,104 @@
+{
+  "id": "arzam-scientific-production-enterprise-temp-avia",
+  "name": "Arzam Scientific Production Enterprise Temp Avia",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "OKB Temp",
+    "Temp-Avia Arzamas Research and Production Association JSC",
+    "ANPP Temp-Avia",
+    "Публичное Акционерное Общество \"Арзамасское Научно-Производственное Предприятие \"Темп-Авиа\"",
+    "\"Temp-Avia\" Arzamas Research and Production Association JSC",
+    "ANPP TEMP AIR",
+    "ANPP “Temp-Avia”",
+    "Arzamasskoe Scientific Production Enterprise Temp Avia",
+    "Joint Stock Company “Arzamas Research And Production Enterprise“TEMP-AVIA”",
+    "OKB “Temp”",
+    "Public Joint Stock Company “Arzamas Research and Production Enterprise”",
+    "Publichnoe Aktsionernoe Obshchestvo “Arzamasskoe Nauchno-Proizvodstvennoe Predpriyatie “TEMP-AVIA”",
+    "PJSC ANPP Temp Avia",
+    "TEMP-AVIA"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": {
+    "city": "Arzamas",
+    "province": "Nizhny Novgorod Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Tactical Missiles Corporation (KTRV)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Treasury lists Temp-Avia Arzamas Research and Production Association JSC among the 28 entities that are part of the structure of the Tactical Missiles Corporation (KTRV), which it calls a large, state-owned Russian defence conglomerate making airborne and naval weapons; OFAC designated them in March 2022. OFAC lists it as linked to KTRV, in Arzamas.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to the Tactical Missiles Corporation (KTRV), a Russian state-owned defence conglomerate.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "U.S. Treasury Sanctions Russia’s Defense-Industrial Base, the Russian Duma and Its Members, and Sberbank CEO (24 March 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0677",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230401/https://home.treasury.gov/news/press-releases/jy0677"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: PUBLIC JOINT STOCK COMPANY ARZAMASSKOE NAUCHNO PROIZVODSTVENNOE PREDPRIYATIE TEMP-AVIA (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=35859",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230608/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=35859"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and Japan’s End User List and Canada’s sanctions list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
