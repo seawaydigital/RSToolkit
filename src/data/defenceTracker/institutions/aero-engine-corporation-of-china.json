@@ -18,25 +18,120 @@
     "lat": 39.955664,
     "lng": 116.29421300000001
   },
-  "supervisors": [],
+  "supervisors": [
+    "State-owned Assets Supervision and Administration Commission (SASAC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "d8484f98-157f-4a68-bde2-3dbfe27b30e4"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists AECC among China’s defence-industry group companies (军工集团). AECC says it develops and builds military and civil aero-engines and gas turbines for aircraft, helicopters and large warships, and that it has contributed to building China’s defence weapons and equipment.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "AECC says it was founded with capital from the State-owned Assets Supervision and Administration Commission (SASAC), the Beijing state capital management centre, AVIC and COMAC, and has 27 directly held units, including seven research academies and institutes.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Aero Engine Academy of China",
+      "zh": "中国航空发动机研究院",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Shenyang Engine Research Institute",
+      "zh": "中国航发沈阳发动机研究所",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Hunan Aviation Powerplant Research Institute",
+      "zh": "中国航发湖南动力机械研究所",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Sichuan Gas Turbine Establishment",
+      "zh": "中国航发四川燃气涡轮研究院",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Beijing Institute of Aeronautical Materials",
+      "zh": "中国航发北京航空材料研究院",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Aero Engine Control System Institute",
+      "zh": "中国航发控制系统研究所",
+      "kind": "institute",
+      "match": true
+    },
+    {
+      "name": "AECC Guiyang Engine Design Research Institute",
+      "zh": "中国航发贵阳发动机设计研究所",
+      "kind": "institute",
+      "match": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About AECC)",
+      "publisher": "Aero Engine Corporation of China",
+      "url": "https://www.aecc.cn/aecc/jtgk/jtjj/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026184031/https://www.aecc.cn/aecc/jtgk/jtjj/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Its seven research academies and institutes added as units and marked for batch-check matching."
     }
   ],
   "seedNotes": {
