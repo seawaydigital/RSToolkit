@@ -17,32 +17,71 @@
   ],
   "domains": [],
   "country": "IR",
-  "type": "research-institute",
+  "type": "military",
   "location": {
     "city": "Tehran",
     "province": null,
     "lat": 35.759,
     "lng": 51.478
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Defense and Armed Forces Logistics (MODAFL)"
+  ],
   "parent": null,
   "ids": {
     "nro": "defence-industries-organization-training-and-research-institute"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "Canada’s Named Research Organizations list names it the Defence Industries Organization Training and Research Institute, also known as the Defence Ministry’s Institute for Defence Education and Research, in Tehran.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Iran’s defence ministry, as its name on Canada’s list says.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Named Research Organizations (entry for the Chinese Academy of Engineering Physics and its known aliases; page modified 2024-04-18)",
+      "publisher": "Government of Canada (science.gc.ca)",
+      "url": "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026113649/https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
