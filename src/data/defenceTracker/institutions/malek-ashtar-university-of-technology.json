@@ -1,0 +1,109 @@
+{
+  "id": "malek-ashtar-university-of-technology",
+  "name": "Malek Ashtar University of Technology",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "DANESHGAH-E SANA'TI-YE MALEK-E ASHTAR",
+    "MALEK ASHTAR UNIVERSITY",
+    "MALEK-E ASHTAR UNIVERSITY",
+    "MALEK ASHTAR INDUSTRIAL UNIVERSITY",
+    "MALEK-E ASHTAR TECHNICAL UNIVERSITY",
+    "MALEK ASHTAR AVIATION UNIVERSTIY COMPLEX",
+    "MALEK ASHTAR UNIVERSITY OF DEFENSE TECHNOLOGY",
+    "MALEK ASHTAR UNIVERSITY OF TECHNOLOGY",
+    "Malik Ashtar University of Technology",
+    "Malek Ashtar Technical University",
+    "Malek Ashtar Aviation University Complex",
+    "Malek Ashtar University of Defense Technology",
+    "Daneshgah-E Sana'Ti-Ye Malek-E Ashtar",
+    "Malek Ashtar Aviation Universtiy Complex",
+    "Malek Ashtar Industrial University",
+    "Malek ashtar University of Technology",
+    "Malek-E Ashtar Technical University",
+    "Malek-E Ashtar University",
+    "Malek Ashtar University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "IR",
+  "type": "university",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Ministry of Defense and Armed Forces Logistics (MODAFL)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "The UN Security Council listed Malek Ashtar University in resolution 1929 (2010) as a subordinate of the Defense Technology and Science Research Center within Iran’s Ministry of Defense and Armed Forces Logistics (MODAFL), including research groups that had belonged to the Physics Research Center. OFAC lists it as Malek Ashtar University of Technology, in Tehran, under its weapons-of-mass-destruction proliferators programme.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Iran’s Ministry of Defense and Armed Forces Logistics (MODAFL), through the Defense Technology and Science Research Center.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Resolution 1929 (2010), adopted by the Security Council on 9 June 2010 (S/RES/1929 (2010)), Annex I",
+      "publisher": "United Nations Security Council",
+      "url": "https://documents.un.org/doc/undoc/gen/n10/396/79/pdf/n1039679.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031225103/https://documents.un.org/doc/undoc/gen/n10/396/79/pdf/n1039679.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: Malek Ashtar University of Technology (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=13152",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031225332/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=13152"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list and Japan’s End User List and the Section 1286 list and Canada’s sanctions list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
