@@ -3,6 +3,7 @@
   "name": "China Shipbuilding Industry Corporation",
   "zh": "中国船舶重工集团有限公司",
   "zhAliases": [
+    "中国船舶重工集团公司",
     "中船重工"
   ],
   "aliases": [],
@@ -18,20 +19,60 @@
   "ids": {
     "misp": "48a12b7e-ff93-4f0d-a398-eefebc71c1c1"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "CSIC was one of China’s two state-owned shipbuilding groups until late 2019, when, with the approval of the Party Central Committee and the State Council, it merged with the former China State Shipbuilding Corporation into China State Shipbuilding Corporation Limited, which SASTIND lists among China’s defence-industry group companies and which builds all of the PLA Navy’s main combat equipment.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "全球最大造船集团——中国船舶集团有限公司揭牌 (The world’s largest shipbuilding group, China State Shipbuilding Corporation Limited, is unveiled; 26 November 2019, from CCTV)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260723165202/https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. It has been part of China State Shipbuilding Corporation Limited since 2019."
     }
   ],
   "seedNotes": {
