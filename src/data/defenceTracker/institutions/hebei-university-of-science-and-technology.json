@@ -18,27 +18,67 @@
     "lat": 37.97639169345314,
     "lng": 114.52176751498462
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "3ebd8d59-7efa-47a6-9dcf-8e3bc3e70189",
     "ror": "05h3pkk68",
     "wikidata": "Q15938742"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "secrecy-qualification",
+      "summary": "HEBUST says it obtained a Grade 2 secrecy qualification for weapons and equipment research and production units in May 2014, and military-standard (GJB) quality management certification in September 2015.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "It has been co-built by the Hebei government and SASTIND since September 2013, renewed for 2016–2020, with SASTIND supporting three of its defence-specialty disciplines and six defence-related majors.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校国防科技工作迈出新步伐 (The university’s defence science and technology work takes new steps)",
+      "publisher": "Hebei University of Science and Technology News",
+      "url": "https://news.hebust.edu.cn/yw/75078.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195729/https://news.hebust.edu.cn/yw/75078.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
