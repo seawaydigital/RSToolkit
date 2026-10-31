@@ -7,29 +7,111 @@
   "acronyms": [
     "SYSU"
   ],
-  "domains": [],
+  "domains": [
+    "sysu.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
-  "location": null,
-  "supervisors": [],
+  "location": {
+    "city": "Guangzhou",
+    "province": "Guangdong",
+    "lat": 23.0996,
+    "lng": 113.2924
+  },
+  "supervisors": [
+    "Ministry of Education (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "ca7b5223-04e6-441d-8604-8a203eb2384b"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2018 SASTIND and the Ministry of Education added SYSU, with seven other universities, to the universities they co-build in 2016–2020, to support defence-specialty disciplines, defence research bases and teams, and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "SYSU co-built the National Supercomputing Center in Guangzhou, on its East Campus, with the PLA’s National University of Defense Technology and the Guangdong and Guangzhou governments; the centre’s first main system, the Tianhe-2 supercomputer, was developed by NUDT.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Sun Yat-sen Memorial Hospital",
+      "zh": "孙逸仙纪念医院",
+      "kind": "hospital",
+      "match": true
+    },
+    {
+      "name": "Zhongshan Ophthalmic Center",
+      "zh": "中山眼科中心",
+      "kind": "hospital",
+      "match": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "中大简介 (About SYSU)",
+      "publisher": "Sun Yat-sen University",
+      "url": "https://www.sysu.edu.cn/xxg/zdjj1.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261022212518/https://www.sysu.edu.cn/xxg/zdjj1.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "工科发展的新机遇：我校等8所高校获批国防科工局与教育部共建高校 (SYSU and seven other universities approved as co-built by SASTIND and the Ministry of Education; 1 August 2018)",
+      "publisher": "Sun Yat-sen University Shenzhen Campus",
+      "url": "http://shenzhen.sysu.edu.cn/content/510",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20190310060058/http://shenzhen.sysu.edu.cn/content/510"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "中心介绍 - 基本情况 (About the centre)",
+      "publisher": "National Supercomputing Center in Guangzhou",
+      "url": "http://www.nscc-gz.cn/Introduction/Generalprofile/Basicsituation.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183150/http://www.nscc-gz.cn/Introduction/Generalprofile/Basicsituation.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Two of its named hospitals marked for batch-check matching; map point set to its South Campus in Guangzhou."
     }
   ],
   "seedNotes": {
