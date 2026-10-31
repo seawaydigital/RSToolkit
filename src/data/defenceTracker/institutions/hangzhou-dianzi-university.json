@@ -18,30 +18,70 @@
   "location": {
     "city": "Hangzhou",
     "province": "Zhejiang",
-    "lat": 30.309740023222794,
-    "lng": 120.34310329292612
+    "lat": 30.3097,
+    "lng": 120.3431
   },
-  "supervisors": [],
+  "supervisors": [
+    "Zhejiang Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "5c7e2e2f-759a-4184-9efc-90508f139e76",
     "ror": "0576gt767",
     "wikidata": "Q11102606"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "HDU says it has been co-built by Zhejiang Province and COSTIND, the predecessor of the defence-industry regulator SASTIND, since 2007; it lists supporting national defence among its aims and reports two defence-specialty key majors (国防特色重点专业).",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1956 as the Hangzhou Aviation Industry Finance and Economics School, it was run by the Second and Fourth Ministries of Machine-Building and then China’s electronics and information industry ministries before passing mainly to Zhejiang in 2000.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university; figures to September 2026)",
+      "publisher": "Hangzhou Dianzi University",
+      "url": "https://www.hdu.edu.cn/659/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031052409/https://www.hdu.edu.cn/659/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
