@@ -1,0 +1,95 @@
+{
+  "id": "all-russian-scientific-research-institute-of-technical-physics-vniitf",
+  "name": "All-Russian Scientific Research Institute of Technical Physics (VNIITF)",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "ZABABAKHIN ALL-RUSSIA RESEARCH INSTITUTE OF TECHNICAL PHYSICS",
+    "CHELYABINSK-70",
+    "VSEROSSIYSKY NAUCHNO-ISSLEDOVATELSKIY INSTITUT TEKHNICHESKOY FIZIKI",
+    "RFNC-VNIITF",
+    "KASLI NUCLEAR WEAPONS DEVELOPMENT CENTER",
+    "ZABABAKHIN INSTITUTE",
+    "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN FEDERAL NUCLEAR CENTER-ACADEMICIAN E.I. ZABABKHIN ALL-RUSSIAN SCIENTIFIC RESEARCH INSTITUTE OF TECHNICAL PHYSICS",
+    "RUSSIAN FEDERAL NUCLEAR CENTER - ZABABAKHIN ALL-RUSSIA RESEARCH INSTITUTE OF TECHNICAL PHYSICS",
+    "Vserossiyskiy Nauchno-Issledovatelskiy Institut Tekhnicheskoy Fiziki",
+    "Russian Federal Nuclear Center-VNIITF (RFNC-VNIITF)",
+    "Kasli Nuclear Weapons Development Center",
+    "Institute of Technical Physics",
+    "Zababakhin Institute",
+    "ARITP (All Russian Institute for Technical Physics)",
+    "Federal State Unitary Enterprise Russian Federal Nuclear Center - Academician E.I. Zababkhin All-Russian Scientific Research Institute of Technical Physics (FGUPRFYaTs-VNIITF)",
+    "Chelyabinsk-70",
+    "Federal State Unitary Enterprise “Russian Federal Nuclear Center – Zababakhin All-Russia Research Institute of Technical Physics”",
+    "Федеральное государственное унитарное предприятие «Российский Федеральный Ядерный Центр – Всероссийский научно-исследовательский институт технической физики имени академика Е.И. Забабахина ФГУП «РФЯЦ – ВНИИТФ им. академ. Е.И. Забабахина»"
+  ],
+  "acronyms": [
+    "VNIITF"
+  ],
+  "domains": [],
+  "country": "RU",
+  "type": "nuclear",
+  "location": {
+    "city": "Snezhinsk",
+    "province": "Chelyabinsk Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "OFAC lists it as the Russian Federal Nuclear Center – Zababakhin All-Russia Research Institute of Technical Physics (VNIITF), in Snezhinsk, Chelyabinsk Region, also known as Chelyabinsk-70 and the Kasli Nuclear Weapons Development Center.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It is a Russian federal state unitary enterprise, as its full name on OFAC’s list says.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sanctions List Search: Russian Federal Nuclear Center - Zababakhin All-Russia Research Institute of Technical Physics (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=41014",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231351/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=41014"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list and the US Entity List and Canada’s sanctions list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
