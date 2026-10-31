@@ -51,6 +51,17 @@
       "sources": [
         "s1"
       ]
+    },
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2018 SASTIND and the Ministry of Education added Dalian University of Technology, with seven other universities, to the universities they co-build in 2016–2020, to support defence-specialty disciplines, defence research bases and teams, and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s4"
+      ]
     }
   ],
   "topics": [],
@@ -88,6 +99,17 @@
       "archive": {
         "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
       }
+    },
+    {
+      "id": "s4",
+      "title": "工科发展的新机遇：我校等8所高校获批国防科工局与教育部共建高校 (Eight more universities approved as co-built by SASTIND and the Ministry of Education; 1 August 2018)",
+      "publisher": "Sun Yat-sen University Shenzhen Campus",
+      "url": "http://shenzhen.sysu.edu.cn/content/510",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20190310060058/http://shenzhen.sysu.edu.cn/content/510"
+      }
     }
   ],
   "rating": {
@@ -104,6 +126,10 @@
     {
       "date": "2026-10-27",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Evidence added: co-built by SASTIND and the Ministry of Education since 2018."
     }
   ],
   "seedNotes": {
