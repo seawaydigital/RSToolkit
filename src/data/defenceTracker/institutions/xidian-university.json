@@ -22,27 +22,105 @@
     "lat": 34.229571,
     "lng": 108.91721380000001
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with SASTIND and the Shaanxi government)"
+  ],
   "parent": null,
   "ids": {
     "misp": "da7b7ceb-1c7a-4892-a0c5-07e815882f70",
     "ror": "05s92vm98",
     "wikidata": "Q649906"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies two national defence science and technology key laboratories at Xidian University: antennas and microwave technology, run with CETC’s 14th and 38th Research Institutes, and radar signal processing, at its School of Electronic Engineering.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Antennas and Microwave Technology (天线与微波技术国防科技重点实验室)",
+        "Defense S&T Key Laboratory of Radar Signal Processing (雷达信号处理国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In January 2008 the Ministry of Education, COSTIND (the predecessor of the defence-industry regulator SASTIND) and the Shaanxi government signed an agreement to co-build Xidian University, one of the first three Ministry of Education universities co-built with the defence-industry commission.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that its antenna and microwave laboratory is run with CETC’s 14th Research Institute and, since 2024, its 38th, and that its radar signal processing laboratory has worked with NORINCO’s 212th Research Institute and with CETC under the national 2011 Plan.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "教育部、国防科工委共建教育部直属高校工作正式启动 (The Ministry of Education and COSTIND begin co-building Ministry of Education universities; 15 January 2008)",
+      "publisher": "Ministry of Education",
+      "url": "http://www.moe.gov.cn/jyb_zzjg/moe_187/moe_410/moe_532/201410/t20141021_177683.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031182731/http://www.moe.gov.cn/jyb_zzjg/moe_187/moe_410/moe_532/201410/t20141021_177683.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 79–86 (Defense S&T Key Laboratory of Antennas and Microwave Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 381–389 (Defense S&T Key Laboratory of Radar Signal Processing)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
