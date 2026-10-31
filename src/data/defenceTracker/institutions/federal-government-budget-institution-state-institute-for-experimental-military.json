@@ -1,0 +1,89 @@
+{
+  "id": "federal-government-budget-institution-state-institute-for-experimental-military",
+  "name": "Federal Government Budget Institution State Institute for Experimental Military Medicine",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Federalnoe Gosudarstvennoe Byudzhetnoe Uchrezhdenie Gosudarstvenny Nauchno-Issledovatelski Ispytatelny Institut Voennoi Meditsiny Ministerstva Oborony Rossiskoi Federatsii",
+    "Gosudarstvenny Nauchno-Issledovatelski Ispytatelny Institut Voennoi Meditsiny",
+    "State Scientific Research and Testing Institute of Military Medicine",
+    "FGBU GNIII VM MO RF",
+    "GNII VM",
+    "State Institute for Experimental Military Medicine",
+    "State Research Experimental Institute of Military Medicine",
+    "STATE INSTITUTE FOR EXPERIMENTAL MILITARY MEDICINE OF THE MINISTRY OF DEFENSE",
+    "GOSUDARSTVENNY NAUCHNO-ISSLEDOVATELSKIY ISPYTATELNY INSTITUT VOYENNOY MEDITSINY",
+    "STATE INSTITUTE FOR EXPERIMENTAL MILITARY MEDICINE",
+    "GNIII VM MOD RF",
+    "STATE RESEARCH EXPERIMENTAL INSTITUTE OF MILITARY MEDICINE"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "military",
+  "location": {
+    "city": "Saint Petersburg",
+    "province": "Saint Petersburg",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Ministry of Defence of the Russian Federation"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "OFAC lists it as the State Institute for Experimental Military Medicine of the Ministry of Defense (GNII VM), in Saint Petersburg.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Ministry of Defence of the Russian Federation.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sanctions List Search: State Institute for Experimental Military Medicine of the Ministry of Defense (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=32743",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031222824/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=32743"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and the US SDN list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
