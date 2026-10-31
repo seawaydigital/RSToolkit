@@ -6,18 +6,7 @@
     "航天科工"
   ],
   "aliases": [
-    "China Aerospace Science & Industry Corp",
-    "No. 33 Research Institute, Third Academy of CASIC",
-    "No. 31 Research Institute, Third Academy of CASIC",
-    "Second Academy of CASIC",
-    "33 Institute of CASIC’s Third Academy",
-    "Beijing Institute of Automatic Control Equipment",
-    "35 Institute of CASIC’s Third Academy",
-    "Beijing Hangxing Machine Building Corporation",
-    "Beijing Huahang Radio Measurements Research Institute",
-    "China Haiying Electronic Mechanical Technical Research Academy",
-    "Beijing Power Machinery Institute of CASIC’s 31 Institute",
-    "China Haiying Electromechanical Technology Academy (a.k.a., China Haiying Science & Technology Corporation)"
+    "China Aerospace Science & Industry Corp"
   ],
   "acronyms": [
     "CASIC"
@@ -31,21 +20,69 @@
     "lat": 39.922966,
     "lng": 116.31649900000002
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (directly administered state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "8246084a-5c70-4971-9c96-182d59f6e111"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists CASIC among China’s defence-industry group companies (军工集团). CASIC describes itself as the main force in building China’s defence weapons and equipment and as the developer and producer of the full range of China’s missile weapon systems, with complete systems for air and space defence, cruise and ballistic missiles.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASIC describes itself as a key state-owned enterprise administered directly by the central government; it traces its origins to the Ministry of National Defense’s Fifth Academy, founded in 1956, and has 23 second-tier units.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "企业简介 (About CASIC)",
+      "publisher": "China Aerospace Science and Industry Corporation",
+      "url": "http://www.casic.com.cn/n12377374/n12378092/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183652/http://www.casic.com.cn/n12377374/n12378092/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
@@ -54,6 +91,10 @@
     {
       "date": "2026-10-26",
       "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Names of its academies and institutes, which MISP had given it as aliases, removed: those the lists name have records of their own."
     }
   ],
   "seedNotes": {
