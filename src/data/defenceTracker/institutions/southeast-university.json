@@ -7,7 +7,9 @@
   "acronyms": [
     "SEU"
   ],
-  "domains": [],
+  "domains": [
+    "seu.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
@@ -16,25 +18,85 @@
     "lat": 32.0469906,
     "lng": 118.79932329999997
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "fa462eae-96ca-447d-9372-6a85cf1f7c5b"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SASTIND and the Ministry of Education named Southeast University in 2016 as a university they co-build for 2016–2020.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "secrecy-qualification",
+      "summary": "SEU says it has obtained the complete set of defence research qualifications: secrecy, quality, production licence and contractor qualification.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "weapons-production-licence",
+      "summary": "The same set of qualifications includes a production licence (生产许可) for its defence research.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "It reports that its defence research funding passed 100 million yuan during 2011–2015 and reached 180 million yuan in 2015, among the highest of the Ministry of Education’s universities.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "东南大学获批入选“国防科工局—教育部共建高校” (Southeast University named a university co-built by SASTIND and the Ministry of Education; 16 June 2016)",
+      "publisher": "Southeast University News",
+      "url": "https://news.seu.edu.cn/2016/0616/c5541a161823/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200537/https://news.seu.edu.cn/2016/0616/c5541a161823/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
