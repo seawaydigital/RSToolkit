@@ -3,6 +3,7 @@
   "name": "China Electronics Corporation",
   "zh": "中国电子信息产业集团有限公司",
   "zhAliases": [
+    "中国电子信息产业集团公司",
     "中国电子产业集团",
     "中国电子"
   ],
@@ -93,6 +94,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high. Map point removed: it marked an earlier Beijing office, and the headquarters are now in Shenzhen."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Former Chinese company name (中国电子信息产业集团公司) added so that older co-author lines match."
     }
   ],
   "seedNotes": {

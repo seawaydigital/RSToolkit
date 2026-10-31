@@ -3,6 +3,7 @@
   "name": "Aviation Industry Corporation of China",
   "zh": "中国航空工业集团有限公司",
   "zhAliases": [
+    "中国航空工业集团公司",
     "航空工业"
   ],
   "aliases": [],
@@ -93,6 +94,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high. Map point removed: it marked an earlier head-office address."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Former Chinese company name (中国航空工业集团公司) added so that older co-author lines match."
     }
   ],
   "seedNotes": {

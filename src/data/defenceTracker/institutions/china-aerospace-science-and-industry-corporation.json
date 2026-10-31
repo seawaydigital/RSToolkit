@@ -3,6 +3,7 @@
   "name": "China Aerospace Science and Industry Corporation",
   "zh": "中国航天科工集团有限公司",
   "zhAliases": [
+    "中国航天科工集团公司",
     "航天科工"
   ],
   "aliases": [
@@ -95,6 +96,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high. Names of its academies and institutes, which MISP had given it as aliases, removed: those the lists name have records of their own."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Former Chinese company name (中国航天科工集团公司) added so that older co-author lines match."
     }
   ],
   "seedNotes": {
