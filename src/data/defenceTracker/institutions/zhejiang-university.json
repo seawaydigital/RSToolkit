@@ -28,20 +28,60 @@
     "ror": "00a2xv884",
     "wikidata": "Q197543"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SASTIND and the Ministry of Education named Zhejiang University in 2016 as one of 16 universities they co-build for 2016–2020, to support defence-specialty disciplines and majors, defence key discipline laboratories and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校被列为国家国防科技工业局和教育部共建高校 (Sixteen universities, including Wuhan University of Technology, named as co-built by SASTIND and the Ministry of Education for 2016–2020)",
+      "publisher": "Wuhan University of Technology Alumni Association",
+      "url": "https://alumni.whut.edu.cn/article/9590",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200607/https://alumni.whut.edu.cn/article/9590"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "东南大学获批入选“国防科工局—教育部共建高校” (Southeast University named a university co-built by SASTIND and the Ministry of Education; 16 June 2016)",
+      "publisher": "Southeast University News",
+      "url": "https://news.seu.edu.cn/2016/0616/c5541a161823/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200537/https://news.seu.edu.cn/2016/0616/c5541a161823/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
