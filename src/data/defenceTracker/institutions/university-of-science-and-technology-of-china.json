@@ -20,27 +20,77 @@
     "lat": 31.822002092965203,
     "lng": 117.28058695793152
   },
-  "supervisors": [],
+  "supervisors": [
+    "Chinese Academy of Sciences"
+  ],
   "parent": null,
   "ids": {
     "misp": "c636135e-d644-45aa-afe5-ec05ffdc173a",
     "ror": "04c4dkn09",
     "wikidata": "Q1074103"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports that in 2023 the Beijing Institute of Remote Sensing Equipment (the 25th Research Institute of CASIC’s Second Academy), which runs a national defence key laboratory for millimetre-wave remote sensing, set up a joint laboratory for advanced detection and guidance with USTC’s School of Integrated Circuit Science and Engineering.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "USTC describes itself as a university that belongs to the Chinese Academy of Sciences.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About USTC)",
+      "publisher": "University of Science and Technology of China",
+      "url": "https://www.ustc.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183217/https://www.ustc.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), p. 330 (Defense S&T Key Laboratory of Millimeter-Wave Remote Sensing Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
