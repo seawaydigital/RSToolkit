@@ -7,7 +7,9 @@
     "Suzhou University"
   ],
   "acronyms": [],
-  "domains": [],
+  "domains": [
+    "suda.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
@@ -16,25 +18,55 @@
     "lat": 31.30110141104536,
     "lng": 120.64185159755323
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangsu Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "e6babe4d-22db-4658-8084-a6033fccfbf0"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2016 SASTIND named Soochow University among the first universities it co-builds with provincial governments for 2016–2020, to support defence-specialty disciplines and majors, defence key discipline laboratories and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "国防科工局与江苏省人民政府共建苏州大学 (SASTIND and the Jiangsu government co-build Soochow University; July 2016)",
+      "publisher": "Soochow University News",
+      "url": "https://www.suda.edu.cn/suda_news/sdyw/201607/BCC5984C-96A2-490B-AA8E-2F85B693C897.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201311/https://www.suda.edu.cn/suda_news/sdyw/201607/BCC5984C-96A2-490B-AA8E-2F85B693C897.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
