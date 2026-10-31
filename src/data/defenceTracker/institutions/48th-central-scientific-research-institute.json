@@ -18,32 +18,84 @@
   "acronyms": [],
   "domains": [],
   "country": "RU",
-  "type": "research-institute",
+  "type": "military",
   "location": {
     "city": "Sergiev Posad",
     "province": null,
     "lat": 56.2575,
     "lng": 38.115
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Defence of the Russian Federation"
+  ],
   "parent": null,
   "ids": {
     "nro": "48th-central-scientific-research-institute"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "The US Commerce Department found reasonable cause to believe that the 48th Central Scientific Research Institute’s sites in Kirov, Sergiev Posad and Yekaterinburg are Ministry of Defense facilities associated with the Russian biological weapons program, and listed them in August 2020; OFAC lists the institute as the Federal State Budgetary Institution 48th Central Scientific and Research Institute of the Ministry of Defense of the Russian Federation.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Ministry of Defence of the Russian Federation.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Entities to the Entity List, and Revision of Entries on the Entity List (85 FR 52898, 27 August 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-08-27/html/2020-18909.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031203002/https://www.govinfo.gov/content/pkg/FR-2020-08-27/html/2020-18909.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: Federal State Budgetary Institution 48th Central Scientific and Research Institute of the Ministry of Defense of the Russian Federation (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48849",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031222619/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48849"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "listing-only",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": null
