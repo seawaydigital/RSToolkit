@@ -15,8 +15,8 @@
   "location": {
     "city": "Shanghai",
     "province": "Shanghai",
-    "lat": 31.296625553328834,
-    "lng": 121.50392893624576
+    "lat": 31.2966,
+    "lng": 121.5039
   },
   "supervisors": [],
   "parent": null,
@@ -25,20 +25,47 @@
     "ror": "013q1eq08",
     "wikidata": "Q495015"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "Fudan’s Academy of Science and Technology lists organising, applying for and managing defence-industry research projects (国防军工项目) among its duties, and has a military–civil fusion research office.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "科学技术研究院 (Academy of Science and Technology)",
+      "publisher": "Fudan University",
+      "url": "https://www.fudan.edu.cn/2019/0506/c836a96369/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031052140/https://www.fudan.edu.cn/2019/0506/c836a96369/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
