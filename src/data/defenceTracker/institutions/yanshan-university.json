@@ -20,27 +20,67 @@
     "lat": 39.90450800000001,
     "lng": 119.53971899999999
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with the Ministry of Education, MIIT and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "3d1519f1-fde2-435c-8476-cb25c0c90a1d",
     "ror": "02txfnf15",
     "wikidata": "Q832792"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Yanshan University describes itself as co-built by four parties: the Hebei government, the Ministry of Education, MIIT and SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports five defence-specialty disciplines (国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Yanshan University",
+      "url": "https://www.ysu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201608/https://www.ysu.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
