@@ -27,20 +27,81 @@
     "ror": "04d996474",
     "wikidata": "Q15919938"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SWUST’s School of National Defence Science and Technology, formed in 2006 to serve the defence industry around Mianyang, is co-built by the Sichuan government and SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "The school hosts a national defence key discipline laboratory for nuclear waste and environmental safety (“核废物与环境安全”国防重点学科实验室).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Nuclear Waste and Environmental Safety Defence Key Discipline Laboratory (核废物与环境安全国防重点学科实验室)"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "SASTIND approved its radiation protection and environmental protection discipline as one of the first defence-specialty core disciplines for 2016–2020.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "The school reports comprehensive strategic cooperation with CAEP, the nuclear groups CNNC and CGN, NORINCO and CETC, and draws senior experts from CAEP, one of its co-founding board members.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学院简介 (About the School of National Defence Science and Technology; as archived in August 2018)",
+      "publisher": "Southwest University of Science and Technology",
+      "url": "http://www.nd.swust.edu.cn/1788/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20180816113712/http://www.nd.swust.edu.cn/1788/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
