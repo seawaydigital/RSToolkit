@@ -21,27 +21,89 @@
     "lat": 32.0568391,
     "lng": 118.77896020000003
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education"
+  ],
   "parent": null,
   "ids": {
     "misp": "0f1f6348-3e23-42cb-926b-e28782d388b7",
     "ror": "01rxvg760",
     "wikidata": "Q683580"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "secrecy-qualification",
+      "summary": "Nanjing University holds a secrecy qualification: in 2012 its secrecy office reported the on-site review for renewing the qualification certificate, and in 2017 the university began its third round of secrecy-qualification certification.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "secrecy-qualification",
+      "summary": "Its rules on the secrecy of science and technology put its Institute of Advanced Technology in charge of the secrecy of the university’s defence research projects, including security and secrecy in weapons and equipment research and production.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校召开保密工作会议 (The university holds a secrecy work meeting; 7 November 2012)",
+      "publisher": "Nanjing University",
+      "url": "https://www.nju.edu.cn/info/3181/23101.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201741/https://www.nju.edu.cn/info/3181/23101.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "南京大学召开保密工作会议 (Nanjing University holds a secrecy work meeting; 23 October 2017)",
+      "publisher": "Nanjing University",
+      "url": "https://www.nju.edu.cn/info/3181/57581.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201857/https://www.nju.edu.cn/info/3181/57581.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "南京大学科学技术保密协定 (Nanjing University rules on the secrecy of science and technology; 6 March 2015)",
+      "publisher": "Nanjing University General Office",
+      "url": "https://dwbgs.nju.edu.cn/2c/a9/c857a11433/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20221227184131/https://dwbgs.nju.edu.cn/2c/a9/c857a11433/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
