@@ -1,0 +1,103 @@
+{
+  "id": "china-aerospace-science-and-industry-corporation-second-academy-subordinate-inst-4",
+  "name": "China Aerospace Science and Industry Corporation Second Academy. Subordinate Institution - 206th Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Beijing Institute of Mechanical Equipment",
+    "Beijing Institute of Machinery and Equipment"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China Aerospace Science and Industry Corporation (CASIC)"
+  ],
+  "parent": "china-aerospace-science-and-industry-corporation-second-academy",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it, the 206th Research Institute, as one of the thirteen subordinate institutions of the Second Academy of China Aerospace Science and Industry Corporation (CASIC). CASIC is one of the state-owned defence-industry groups that SASTIND lists, and describes itself as the main force in building China’s defence weapons and equipment, making China’s full range of missile weapon systems. The US Commerce Department listed the academy and its subordinate institutions in August 2018, finding an unacceptable risk that they would use US-origin items in, or divert them to, military end-use activities in China.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CASIC, which describes itself as a key state-owned enterprise administered directly by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Certain Entities; and Modification of Entry on the Entity List (83 FR 37423, 1 August 2018)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2018-08-01/html/2018-16474.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031202932/https://www.govinfo.gov/content/pkg/FR-2018-08-01/html/2018-16474.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "企业简介 (About CASIC)",
+      "publisher": "China Aerospace Science and Industry Corporation",
+      "url": "http://www.casic.com.cn/n12377374/n12378092/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183652/http://www.casic.com.cn/n12377374/n12378092/index.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
