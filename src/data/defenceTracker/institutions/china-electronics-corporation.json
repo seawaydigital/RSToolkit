@@ -7,7 +7,8 @@
     "中国电子"
   ],
   "aliases": [
-    "China Electronics"
+    "China Electronics",
+    "China Electronics Information Industry Group"
   ],
   "acronyms": [
     "CEC"
@@ -16,30 +17,82 @@
   "country": "CN",
   "type": "defence-industry",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 39.9845289,
-    "lng": 116.33375000000001
+    "city": "Shenzhen",
+    "province": "Guangdong",
+    "lat": null,
+    "lng": null
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (directly administered state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "0faecc41-3820-4057-8ab2-628dd6d8fb69"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists CEC among China’s defence-industry group companies (军工集团). CEC calls itself the pioneer of China’s military electronics industry under the Party, lists military electronics among its five business segments, and names strengthening the military as its first responsibility.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CEC describes itself as a key state-owned enterprise administered directly by the central government, with cyberspace and information technology as its core business; its headquarters are in Shenzhen.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About CEC)",
+      "publisher": "China Electronics Corporation",
+      "url": "https://www.cec.com.cn/%E9%9B%86%E5%9B%A2%E7%AE%80%E4%BB%8B",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183533/https://www.cec.com.cn/%E9%9B%86%E5%9B%A2%E7%AE%80%E4%BB%8B"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Map point removed: it marked an earlier Beijing office, and the headquarters are now in Shenzhen."
     }
   ],
   "seedNotes": {
