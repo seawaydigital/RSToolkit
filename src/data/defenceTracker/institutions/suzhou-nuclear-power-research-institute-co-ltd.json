@@ -1,0 +1,64 @@
+{
+  "id": "suzhou-nuclear-power-research-institute-co-ltd",
+  "name": "Suzhou Nuclear Power Research Institute Co. Ltd.",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Suzhou",
+    "province": "Jiangsu",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "misconduct",
+      "summary": "The US Commerce Department listed it in August 2019, together with China General Nuclear Power Group and China General Nuclear Power Corporation (CGNPC), finding that each of the four had engaged in or enabled efforts to acquire advanced US nuclear technology and material for diversion to military uses in China.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of Certain Entities to the Entity List, Revision of Entries on the Entity List, and Removal of Entities From the Entity List (84 FR 40237, 14 August 2019)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2019-08-14/html/2019-17409.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031204830/https://www.govinfo.gov/content/pkg/FR-2019-08-14/html/2019-17409.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
