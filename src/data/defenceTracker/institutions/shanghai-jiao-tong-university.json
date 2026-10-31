@@ -30,20 +30,116 @@
     "ror": "0220qvk04",
     "wikidata": "Q525169"
   },
-  "evidence": [],
-  "topics": [],
+  "evidence": [
+    {
+      "signal": "weapons-production-licence",
+      "summary": "A 2022 notice from SJTU’s School of Electronic Information and Electrical Engineering tells staff how to obtain copies of the university’s equipment research and production licence (装备科研生产许可证书), its equipment contractor qualification certificate and its military-standard (GJB) quality management certificate from the university’s quality office.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies SJTU’s School of Electronic Information and Electrical Engineering as one of the two hosts, with Peking University, of the national defence science and technology key laboratory for nano- and microfabrication technology, set up in 1996 to meet the defence establishment’s micro- and nano-processing needs and now called the National Key Laboratory of Advanced Micro and Nano Manufacture Technology; it reports that the SJTU branch undertook more than 200 projects worth over 500 million yuan in 2016–2020.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Nano- and Microfabrication Technology (微米纳米加工技术国防科技重点实验室), with Peking University"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "CASI reports a long-term partnership with the diesel engine booster defence key laboratory of NORINCO’s China North Engine Research Institute on military diesel boosting technology, including a 2014 agreement on jointly supervised master’s students. In 2018 SJTU signed a deeper strategic cooperation agreement with the state nuclear group CNNC and agreed to co-build a research institute for nuclear-powered ships and marine equipment.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "CASI reports that SJTU and the NORINCO laboratory have jointly carried out many national defence projects, including defence 973, defence basic research and General Armament Department pre-research projects.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
+  "topics": [
+    "nano-manufacturing"
+  ],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 336–343 (Defense S&T Key Laboratory of Nano- and Microfabrication Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 147–148 (Defense S&T Key Laboratory of Diesel Engine Booster Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "科研生产资质证书申请表 (Applying for copies of research and production qualification certificates; 21 February 2022)",
+      "publisher": "School of Electronic Information and Electrical Engineering, Shanghai Jiao Tong University",
+      "url": "https://www.seiee.sjtu.edu.cn/xzzx_xzzq_kycx_cat6/1015.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031052926/https://www.seiee.sjtu.edu.cn/xzzx_xzzq_kycx_cat6/1015.html"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "上海交通大学与中国核工业集团有限公司签署深化战略合作协议 (SJTU and China National Nuclear Corporation sign a deeper strategic cooperation agreement; 13 August 2018)",
+      "publisher": "Shanghai Jiao Tong University News",
+      "url": "https://news.sjtu.edu.cn/jdyw/20180815/81549.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031053109/https://news.sjtu.edu.cn/jdyw/20180815/81549.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
