@@ -1,0 +1,70 @@
+{
+  "id": "joint-logistics-support-force-engineering-university",
+  "name": "Joint Logistics Support Force Engineering University",
+  "zh": "中国人民解放军联勤保障部队工程大学",
+  "zhAliases": [
+    "联勤保障部队工程大学"
+  ],
+  "aliases": [
+    "PLA Joint Logistics Support Force Engineering University"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Chongqing",
+    "province": "Chongqing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "PLA Joint Logistics Support Force"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "China’s Ministry of National Defense announced in May 2025 that the Central Military Commission had formed the PLA Joint Logistics Support Force Engineering University from the Army Service Academy and the headquarters of the Army Military Transportation Academy with its automobile NCO school, with its headquarters in Chongqing, as a higher-education institution that admits high-school graduates.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "中央军委决定调整组建3所军队院校 (The Central Military Commission decides to form three military academies; Ministry of National Defense spokesperson’s statement, 15 May 2025)",
+      "publisher": "Xinhua News Agency (from the Ministry of National Defense website)",
+      "url": "https://www.news.cn/20250515/5ae2d98a526e4ba2a1880e8fab77fc24/c.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027174123/https://www.news.cn/20250515/5ae2d98a526e4ba2a1880e8fab77fc24/c.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from the US Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
