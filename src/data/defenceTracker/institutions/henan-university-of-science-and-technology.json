@@ -20,27 +20,67 @@
     "lat": 34.6033169,
     "lng": 112.429573
   },
-  "supervisors": [],
+  "supervisors": [
+    "Henan Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "a3f5d9e9-a25c-4930-9d74-e903d84dfb86",
     "ror": "05d80kz58",
     "wikidata": "Q5712994"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "HAUST describes itself as a university co-built by SASTIND and the Henan government.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It says three of its disciplines have been designated national defence-specialty disciplines.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "2022年河南科技大学诚聘优秀人才 (Henan University of Science and Technology recruitment notice, 24 January 2022)",
+      "publisher": "Henan University of Science and Technology, Human Resources Office",
+      "url": "https://rsc.haust.edu.cn/info/1027/2452.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20241008233807/https://rsc.haust.edu.cn/info/1027/2452.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
