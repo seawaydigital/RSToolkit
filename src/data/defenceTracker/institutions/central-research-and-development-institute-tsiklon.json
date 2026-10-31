@@ -1,0 +1,99 @@
+{
+  "id": "central-research-and-development-institute-tsiklon",
+  "name": "Central Research and Development Institute Tsiklon",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "AO TSNII TSIKLON",
+    "JOINT STOCK COMPANY CENTRAL RESEARCH INSTITUTE CYCLONE",
+    "Cyclone TsNII",
+    "CRI Cyclone",
+    "Central Research Institute Cyclone JSC",
+    "Intercyclone LLC",
+    "Центральный научно-исследовательский институт \"Циклон\"",
+    "Central Research Institute “Cyclone” JSC (also known as Joint Stock Company Central Research Institute Cyclone)",
+    "Акционерное общество «Центральный научноисследовательский институт «Циклон»"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": {
+    "city": "Moscow",
+    "province": "Moscow",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Ruselectronics (Rostec)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Treasury names Joint Stock Company Central Research Institute Cyclone among the Russia-based subsidiaries of Ruselectronics that OFAC designated in June 2022. It describes Ruselectronics as a holding company owned by Rostec, which it calls the cornerstone of Russia’s defence and industrial sectors, that unites Russia’s radio-electronic industry. OFAC lists it as linked to Ruselectronics, in Moscow.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Ruselectronics, a holding company of the Russian state corporation Rostec.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "U.S. Treasury Sanctions Nearly 100 Targets in Putin’s War Machine, Prohibits Russian Gold Imports (28 June 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0838",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230331/https://home.treasury.gov/news/press-releases/jy0838"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: JOINT STOCK COMPANY CENTRAL RESEARCH INSTITUTE CYCLONE (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37778",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231005/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37778"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list and the US Entity List and Canada’s sanctions list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
