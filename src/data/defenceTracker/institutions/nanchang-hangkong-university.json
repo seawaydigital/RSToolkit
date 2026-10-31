@@ -21,27 +21,67 @@
     "lat": 28.65191764948939,
     "lng": 115.82748413085938
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangxi Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "ca336d87-3a9a-47e5-a25e-678733af44ad",
     "ror": "0369pvp92",
     "wikidata": "Q6962480"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Founded in 1952 and run in turn by the aviation industry ministries and the Aviation Industries of China until 1999, Nanchang Hangkong University describes itself as now co-built by the Jiangxi government and SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "It reports more than 400 national research projects, including military-industry (国防军工) projects, and says over 35% of its graduates go to work in aviation, aerospace and defence.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Nanchang Hangkong University",
+      "url": "https://www.nchu.edu.cn/xxgk/xxjj",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200457/https://www.nchu.edu.cn/xxgk/xxjj"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
