@@ -18,27 +18,77 @@
     "lat": 32.1972840858429,
     "lng": 119.46563800859826
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangsu Provincial Government (co-built with SASTIND and with CSSC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "95a1c2a8-2029-4c3a-bbdc-ef076bbb4f47",
     "ror": "00tyjp878",
     "wikidata": "Q11135052"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "JUST describes itself as co-built by the Jiangsu government separately with SASTIND and with the shipbuilding group CSSC.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports five national defence-specialty disciplines (国家国防特色学科).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "JUST says it has taken a deep part in developing major national equipment for defence and naval modernisation, including aircraft carriers, large destroyers and nuclear submarines.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Jiangsu University of Science and Technology",
+      "url": "https://www.just.edu.cn/11982/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261023011848/https://www.just.edu.cn/11982/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
