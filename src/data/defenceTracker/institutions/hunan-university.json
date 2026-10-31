@@ -106,8 +106,7 @@
     {
       "name": "National Supercomputing Center in Changsha",
       "zh": "国家超级计算长沙中心",
-      "kind": "institute",
-      "match": true
+      "kind": "institute"
     },
     {
       "name": "National Defence Key Discipline Laboratory of Electric Power Drive and Servo Technology",
@@ -186,6 +185,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "The National Supercomputing Center in Changsha now has its own listed record, linked to the university, so its unit entry here no longer matches on its own."
     }
   ],
   "seedNotes": {
