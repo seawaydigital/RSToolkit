@@ -19,27 +19,57 @@
     "lat": 25.03889,
     "lng": 102.71833
   },
-  "supervisors": [],
+  "supervisors": [
+    "Yunnan Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "8bb6b079-4db1-4896-96e7-ee96933fc9f0",
     "ror": "00xyeez13",
     "wikidata": "Q6444900"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "KUST describes itself as a university co-built by SASTIND and the Yunnan government.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "博士后 (Postdoctoral posts, Faculty of Life Science and Technology)",
+      "publisher": "Kunming University of Science and Technology",
+      "url": "https://life.kust.edu.cn/rczp1/bsh.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200311/https://life.kust.edu.cn/rczp1/bsh.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
