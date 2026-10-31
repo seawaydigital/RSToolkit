@@ -18,27 +18,78 @@
     "lat": 31.86389,
     "lng": 117.28083
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with MIIT, the Anhui government and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "a71624a9-90a6-40a2-874b-ac5d54ceca99",
     "ror": "02czkny70",
     "wikidata": "Q5698213"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2018 SASTIND and the Ministry of Education added Hefei University of Technology, with seven other universities, to the universities they co-build in 2016–2020, to support defence-specialty disciplines, defence research bases and teams, and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "HFUT describes itself as a key university run directly by the Ministry of Education and co-built by the ministry with MIIT and the Anhui government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "工大简介 (About the university)",
+      "publisher": "Hefei University of Technology",
+      "url": "https://www.hfut.edu.cn/xxgk.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261017094753/https://www.hfut.edu.cn/xxgk.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "工科发展的新机遇：我校等8所高校获批国防科工局与教育部共建高校 (Eight universities, including Hefei University of Technology, approved as co-built by SASTIND and the Ministry of Education; 1 August 2018)",
+      "publisher": "Sun Yat-sen University Shenzhen Campus",
+      "url": "http://shenzhen.sysu.edu.cn/content/510",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20190310060058/http://shenzhen.sysu.edu.cn/content/510"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
