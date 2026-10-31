@@ -13,26 +13,74 @@
   "country": "CN",
   "type": "defence-industry",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 39.906523,
-    "lng": 116.4640379
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "9644a95a-a1f7-40b5-93ba-c34989ef0492"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists AVIC among China’s defence-industry group companies (军工集团). AVIC says its businesses include aviation weapons and equipment, military transport aircraft, helicopters, airborne systems and military trade, and lists military aviation and defence, including fighter aircraft and military helicopters, among its business areas.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "AVIC describes itself as a very large state-owned enterprise managed by the central government and a state-authorised investment institution, formed in 2008 by merging the First and Second China Aviation Industry Corporations, with more than 100 member units.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About AVIC)",
+      "publisher": "Aviation Industry Corporation of China",
+      "url": "https://www.avic.com.cn/c/2021-03-26/511215.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183425/https://www.avic.com.cn/c/2021-03-26/511215.shtml?PC=PC"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
@@ -41,6 +89,10 @@
     {
       "date": "2026-10-26",
       "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Map point removed: it marked an earlier head-office address."
     }
   ],
   "seedNotes": {
