@@ -3,7 +3,10 @@
   "name": "Academy of Military Medical Sciences, Institute of Toxicology and Pharmacology",
   "zh": null,
   "zhAliases": [],
-  "aliases": [],
+  "aliases": [
+    "Institute of Toxicology and Drugs",
+    "Academy of Military Medical Sciences, Institute of Toxicology and Drugs"
+  ],
   "acronyms": [],
   "domains": [],
   "country": "CN",
@@ -83,6 +86,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "The names the official lists give it kept as aliases, so that co-author lines using them still match."
     }
   ],
   "seedNotes": null

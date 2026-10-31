@@ -4,7 +4,9 @@
   "zh": "北京微生物流行病研究所",
   "zhAliases": [],
   "aliases": [
-    "Beijing Institute of Microbiology and Epidemiology"
+    "Beijing Institute of Microbiology and Epidemiology",
+    "Institute of Microbial Epidemiology",
+    "Academy of Military Medical Sciences, Institute of Microbial Epidemiology"
   ],
   "acronyms": [],
   "domains": [],
@@ -87,6 +89,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "The names the official lists give it kept as aliases, so that co-author lines using them still match."
     }
   ],
   "seedNotes": null

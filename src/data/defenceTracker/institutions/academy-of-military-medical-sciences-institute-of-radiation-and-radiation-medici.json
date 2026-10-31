@@ -4,7 +4,8 @@
   "zh": null,
   "zhAliases": [],
   "aliases": [
-    "Institute of Electromagnetic and Particle Radiation Medicine"
+    "Institute of Electromagnetic and Particle Radiation Medicine",
+    "Academy of Military Medical Sciences, Institute of Electromagnetic and Particle Radiation Medicine"
   ],
   "acronyms": [],
   "domains": [],
@@ -85,6 +86,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "The names the official lists give it kept as aliases, so that co-author lines using them still match."
     }
   ],
   "seedNotes": null

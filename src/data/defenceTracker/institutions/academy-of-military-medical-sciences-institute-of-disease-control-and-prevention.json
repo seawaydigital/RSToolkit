@@ -3,7 +3,9 @@
   "name": "Academy of Military Medical Sciences, Institute of Disease Control and Prevention",
   "zh": null,
   "zhAliases": [],
-  "aliases": [],
+  "aliases": [
+    "Disease Control and Prevention Institute"
+  ],
   "acronyms": [],
   "domains": [],
   "country": "CN",
@@ -83,6 +85,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "The names the official lists give it kept as aliases, so that co-author lines using them still match."
     }
   ],
   "seedNotes": null
