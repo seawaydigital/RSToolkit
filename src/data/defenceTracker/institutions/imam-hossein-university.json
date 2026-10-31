@@ -7,7 +7,24 @@
     "Imam Hussein University",
     "Imam Hossein University of the Revolutionary Guards",
     "Imam Hossein Comprehensive University",
-    "دانشگاه امام حسین"
+    "دانشگاه امام حسین",
+    "IMAM HUSSEIN UNIVERSITY",
+    "IMAAM HOSSEIN UNIVERSITY",
+    "IMAM HOSEYN UNIVERSITY",
+    "IMAM HOSSEIN UNIVERSITY COMPLEX",
+    "EMAM HOSEYN COMPREHENSIVE UNIVERSITY",
+    "UNIVERSITY OF IMAM HOSEYN",
+    "IMAM HOSSEIN UNIVERSITY",
+    "Université Iman Hossein",
+    "Imam Hussein Military University",
+    "Imam Hussein University of the Revolutionary Guards",
+    "Imam Hossein University (IHU)",
+    "Emam Hoseyn Comprehensive University",
+    "Imaam Hossein University",
+    "Imam Hoseyn University",
+    "Imam Hossein University Complex",
+    "University of Imam Hoseyn",
+    "Iman Hossein University"
   ],
   "acronyms": [
     "IHU"
@@ -42,6 +59,10 @@
     {
       "date": "2026-10-25",
       "change": "Record created from the Named Research Organizations list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Canada’s sanctions entry for “Iman Hossein University”, a misspelling of this university’s name, now maps here; the names its official listings give were added for matching."
     }
   ],
   "seedNotes": null
