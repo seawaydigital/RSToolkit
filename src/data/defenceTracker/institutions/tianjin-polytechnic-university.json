@@ -10,7 +10,8 @@
     "TJPU"
   ],
   "domains": [
-    "tiangong.edu.cn"
+    "tiangong.edu.cn",
+    "tjpu.edu.cn"
   ],
   "country": "CN",
   "type": "university",
@@ -20,27 +21,57 @@
     "lat": 39.06460000000001,
     "lng": 117.11299400000007
   },
-  "supervisors": [],
+  "supervisors": [
+    "Tianjin Municipal Government (co-built with the Ministry of Education and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "4dd79776-9cb3-4366-a80d-9519e3468509",
     "ror": "00xsr9m91",
     "wikidata": "Q7800203"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Tiangong University (until 2019 Tianjin Polytechnic University) says it was approved in 2018 as a university co-built by SASTIND and the Tianjin government, and describes textiles and the defence industry as its specialities.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Tiangong University",
+      "url": "https://www.tiangong.edu.cn/xxgk/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201337/https://www.tiangong.edu.cn/xxgk/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Its current name, Tiangong University, added as an alias."
     }
   ],
   "seedNotes": {
