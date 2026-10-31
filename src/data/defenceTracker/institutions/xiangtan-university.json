@@ -20,27 +20,57 @@
     "lat": 27.87749445317346,
     "lng": 112.86436633996163
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hunan Provincial Government (co-built with the Ministry of Education and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "9e70004d-b20b-4a57-85f5-a12214eed40a",
     "ror": "00xsfaz62",
     "wikidata": "Q8044183"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Xiangtan University describes itself as co-built by Hunan with the Ministry of Education and with SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校概况 (About the university)",
+      "publisher": "Xiangtan University",
+      "url": "https://www.xtu.edu.cn/xdgk.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201531/https://www.xtu.edu.cn/xdgk.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
