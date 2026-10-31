@@ -22,27 +22,57 @@
     "lat": 39.1973337,
     "lng": 118.60239690000003
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with SASTIND and the former State Administration of Work Safety)"
+  ],
   "parent": null,
   "ids": {
     "misp": "82bc0644-6e98-4e8e-8d6c-09868ec11bfa",
     "ror": "04z4wmb81",
     "wikidata": "Q7054811"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Its 2019 admissions charter describes the university as co-built by the Hebei government with SASTIND, as well as with the former State Administration of Work Safety.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "华北理工大学2019年招生章程 (Admissions charter, 2019)",
+      "publisher": "North China University of Science and Technology",
+      "url": "https://zsjyc.ncst.edu.cn/col/1401954356327/2019/05/07/1557216151478.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20191229200255/http://zsjyc.ncst.edu.cn:80/col/1401954356327/2019/05/07/1557216151478.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
