@@ -1,0 +1,77 @@
+{
+  "id": "xinjiang-police-college",
+  "name": "Xinjiang Police College",
+  "zh": "新疆警察学院",
+  "zhAliases": [],
+  "aliases": [],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "security",
+  "location": {
+    "city": "Urumqi",
+    "province": "Xinjiang",
+    "lat": 43.8915,
+    "lng": 87.5656
+  },
+  "supervisors": [
+    "Xinjiang Uighur Autonomous Region Public Security Bureau"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "security-agency",
+      "summary": "The US Commerce Department describes the college as an institute subordinate to the Public Security Bureau of the Xinjiang Uighur Autonomous Region’s government.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "In October 2019 the US Commerce Department added the college to the Entity List with the Xinjiang Public Security Bureau and eighteen of its subordinate bureaus, finding that they had been implicated in human rights violations and abuses in China’s campaign of repression, mass arbitrary detention and high-technology surveillance against Uighurs, Kazakhs and other Muslim minorities in Xinjiang.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Certain Entities to the Entity List (84 FR 54002, 9 October 2019)",
+      "publisher": "Bureau of Industry and Security, US Department of Commerce (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2019-10-09/html/2019-22210.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031182706/https://www.govinfo.gov/content/pkg/FR-2019-10-09/html/2019-22210.htm"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
