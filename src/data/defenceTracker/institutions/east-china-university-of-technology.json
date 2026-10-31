@@ -20,27 +20,67 @@
     "lat": 28.72201329243731,
     "lng": 115.82753244907371
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangxi Provincial Government (co-built with SASTIND, the Ministry of Natural Resources and CNNC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "7205e1e7-d110-4683-bd26-3cc8d052443e",
     "ror": "027385r44",
     "wikidata": "Q10869680"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "ECUT, founded in 1956 as the first higher-education institution of China’s nuclear industry, is co-built by the Jiangxi government with SASTIND, the Ministry of Natural Resources and the state nuclear group CNNC.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports five national defence-specialty disciplines (国家国防特色学科) and a defence innovation research centre for radioactive geology and exploration technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "East China University of Technology",
+      "url": "https://www.ecut.edu.cn/7560/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195306/https://www.ecut.edu.cn/7560/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
