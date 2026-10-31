@@ -1,0 +1,107 @@
+{
+  "id": "jsc-scientific-and-production-association-of-electro-mechanic",
+  "name": "Tactical Missile Corporation, NPO Electromechanics",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "JSC SCIENTIFIC AND PRODUCTION ASSOCIATION OF ELECTRO MECHANIC",
+    "JOINT STOCK COMPANY RESEARCH AND PRODUCTION ASSOCIATION ELEKTROMEKHANIKI",
+    "NPO OF ELECTROMECHANICS",
+    "NPO of Electromechanics"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": {
+    "city": "Miass",
+    "province": "Chelyabinsk Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Tactical Missiles Corporation (KTRV)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Commerce Department added it to the Entity List in April 2022 as “Tactical Missile Corporation, NPO Electromechanics”, a unit of the Tactical Missiles Corporation (KTRV), which the US Treasury calls a large, state-owned Russian defence conglomerate. OFAC lists it in Miass.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to the Tactical Missiles Corporation (KTRV), a Russian state-owned defence conglomerate.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Additions of Entities to the Entity List (87 FR 20295, 7 April 2022)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2022-04-07/html/2022-07284.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231625/https://www.govinfo.gov/content/pkg/FR-2022-04-07/html/2022-07284.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "U.S. Treasury Sanctions Russia’s Defense-Industrial Base, the Russian Duma and Its Members, and Sberbank CEO (24 March 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0677",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230401/https://home.treasury.gov/news/press-releases/jy0677"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "Sanctions List Search: JSC Scientific and Production Association of Electro Mechanic (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37525",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231714/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37525"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and the US SDN list and Japan’s End User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
