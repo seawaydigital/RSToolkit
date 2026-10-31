@@ -1,0 +1,96 @@
+{
+  "id": "joint-stock-company-flight-research-institute-n-a-m-m-gromov",
+  "name": "Joint Stock Company Flight Research Institute N.A. M.M. Gromov",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "AKTSIONERNOE OBSHCHESTVO LETNO-ISSLEDOVATELSKI INSTITUT IMENI M.M. GROMOVA",
+    "JSC FLIGHT RESEARCH INSTITUTE N.A. M.M. GROMOV",
+    "JSC FRI N.A. M.M. GROMOV",
+    "STATE FEDERAL UNITARY ENTERPRISE GROMOV FLIGHT RESEARCH INSTITUTE",
+    "JOINT STOCK COMPANY FLIGHT RESEARCH INSTITUTE N.A. M.M. GROMOV",
+    "FRI Gromov"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": {
+    "city": "Zhukovsky",
+    "province": "Moscow Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "United Aircraft Corporation (UAC), Rostec"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Treasury describes the Gromov Flight Research Institute, a research and development centre with ground and flight test complexes, as a subsidiary of United Aircraft Corporation (UAC), which it calls a Rostec subsidiary and the holding company for Russia’s aircraft builders, Sukhoi and MiG among them. OFAC lists it in Zhukovsky.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to United Aircraft Corporation (UAC), a subsidiary of the Russian state corporation Rostec.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "U.S. Treasury Sanctions Nearly 100 Targets in Putin’s War Machine, Prohibits Russian Gold Imports (28 June 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0838",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230331/https://home.treasury.gov/news/press-releases/jy0838"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: Joint Stock Company Flight Research Institute N.A. M.M. Gromov (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=36433",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230712/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=36433"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list and the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
