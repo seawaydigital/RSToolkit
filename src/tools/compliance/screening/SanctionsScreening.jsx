@@ -4,7 +4,7 @@ import { screeningData } from '../../../data/screeningData';
 import { downloadFile, localDate } from '../../../utils/download';
 import { countryName } from './lib/countries';
 import { SCHEMA_LABELS, parseList } from './lib/parseList';
-import { DATASETS, DEFAULT_THRESHOLD, KeyRejectedError, resultLabel, screenRows, topicLabel } from './lib/client';
+import { DATASETS, DEFAULT_THRESHOLD, KeyRejectedError, QuotaError, resultLabel, screenRows, topicLabel } from './lib/client';
 import { DISCLAIMER, countResults, resultsToCsv, resultsToHtml, resultsToText, screeningLogLine } from './lib/resultsText';
 import { EMPTY_LIST, getList, setList } from './handoff';
 import ListBuilder from './ListBuilder';
@@ -162,7 +162,12 @@ export default function SanctionsScreening() {
         },
       });
     } catch (e) {
-      stopped = e instanceof KeyRejectedError ? `${e.message} Check the key and try again.` : 'Screening cancelled. Entries already checked are shown below.';
+      stopped =
+        e instanceof KeyRejectedError
+          ? `${e.message} Check the key and try again.`
+          : e instanceof QuotaError
+            ? `${e.message} Entries already checked are shown below; the rest can be screened once the quota resets, or after OpenSanctions raises it.`
+            : 'Screening cancelled. Entries already checked are shown below.';
     }
     controller.current = null;
     setRunning(false);
@@ -260,10 +265,14 @@ export default function SanctionsScreening() {
       <h2 className="scr-heading">2. Your OpenSanctions key</h2>
       <p id="scr-privacy" className="scr-privacy">
         <strong>Privacy:</strong> unlike most of this site, screening sends your list off your device. Each entry&apos;s name, type,
-        country and birth date go, with your key and your IP address, to OpenSanctions (api.opensanctions.org), and their terms and
-        privacy policy apply to what they keep. Nothing goes to this site, and nothing is saved here: your key and list stay in this
-        tab&apos;s memory and are gone when you close it. Screen only what you need to, and leave out project details.{' '}
-        <a href="#how-it-works">How this site handles your data</a>
+        country and birth date go, with your key and your IP address, to OpenSanctions (api.opensanctions.org) in Germany.{' '}
+        <a href={screeningData.apiFaqUrl} target="_blank" rel="noopener noreferrer">
+          OpenSanctions says
+        </a>{' '}
+        it holds the names only in memory while answering and never logs or stores them; its request logs, which include your IP
+        address, are kept for 90 days, and a billing record for each entry, without the names, for three years. Nothing goes to this
+        site, and nothing is saved here: your key and list stay in this tab&apos;s memory and are gone when you close it. Screen only
+        what you need to, and leave out project details. <a href="#how-it-works">How this site handles your data</a>
       </p>
       <div className="scr-key-row scr-no-print">
         <label className="scr-label" htmlFor="scr-key">
@@ -286,11 +295,17 @@ export default function SanctionsScreening() {
         )}
       </div>
       <p id="scr-key-help" className="scr-help">
-        Each entry uses one API request on your key. OpenSanctions offers free keys to academic and non-profit users:{' '}
+        Each entry uses one request on your key. OpenSanctions{' '}
+        <a href={screeningData.useUrl} target="_blank" rel="noopener noreferrer">
+          counts compliance screening as commercial use
+        </a>{' '}
+        even when it earns nothing, so checking partners, co-authors or visitors needs a key that comes with a data licence. Its free
+        keys are for journalists, public-interest groups and researchers studying sanctions. Your institution may already have a
+        licence;{' '}
         <a href={screeningData.keyUrl} target="_blank" rel="noopener noreferrer">
-          get a key from OpenSanctions
-        </a>
-        .
+          ask OpenSanctions
+        </a>{' '}
+        which applies to you.
       </p>
 
       <h2 className="scr-heading">3. Settings</h2>
@@ -404,7 +419,11 @@ export default function SanctionsScreening() {
             <a href={screeningData.siteUrl} target="_blank" rel="noopener noreferrer">
               OpenSanctions
             </a>
-            .
+            , licensed{' '}
+            <a href={screeningData.licenceUrl} target="_blank" rel="noopener noreferrer">
+              CC BY-NC 4.0
+            </a>
+            ; screening for compliance needs a data licence from OpenSanctions.
           </p>
         </>
       )}

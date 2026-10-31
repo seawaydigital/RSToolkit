@@ -100,7 +100,7 @@ export const howItWorksData = {
         when: 'Only when you press "Screen" in Sanctions Screening',
         what: 'Each name on your list, whether it is a person or an organization, its country and birth date if you gave them, and your own OpenSanctions API key',
         to: 'OpenSanctions (api.opensanctions.org)',
-        learn: 'Every name you screened, from your IP address, under your key. OpenSanctions’ own terms and privacy policy govern what they keep. Building or editing the list sends nothing; only pressing Screen does.',
+        learn: 'Every name you screened, from your IP address, under your key. OpenSanctions says it holds the names only in memory while answering and never logs or stores them; its request logs, with your IP address, are kept for 90 days, and a billing record per entry, without the names, for three years. Building or editing the list sends nothing; only pressing Screen does.',
         highlight: true,
       },
     ].filter(Boolean),

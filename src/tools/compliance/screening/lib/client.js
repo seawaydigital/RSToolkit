@@ -117,6 +117,11 @@ export function summarize(response, row) {
 }
 
 export class KeyRejectedError extends Error {}
+// The key's request quota is used up. OpenSanctions answers 429 until the
+// quota window resets, which can be the start of next month, so the run stops
+// instead of marking every remaining entry "Not checked".
+export class QuotaError extends Error {}
+const MAX_WAIT_SECONDS = 60;
 
 const defaultSleep = (ms, signal) =>
   new Promise((resolve, reject) => {
@@ -129,10 +134,16 @@ async function screenOne(row, { fetchImpl, url, signal, sleep }) {
   for (let attempt = 0; ; attempt++) {
     const res = await fetchImpl(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body, signal });
     if (res.status === 401 || res.status === 403) throw new KeyRejectedError(`OpenSanctions rejected the key (HTTP ${res.status}).`);
-    if ((res.status === 429 || res.status === 503) && attempt < MAX_RETRIES) {
+    if (res.status === 429 || res.status === 503) {
       const wait = Number(res.headers?.get?.('Retry-After'));
-      await sleep(Number.isFinite(wait) && wait > 0 ? wait * 1000 : 1000 * 2 ** attempt, signal);
-      continue;
+      const ms = Number.isFinite(wait) && wait > 0 ? wait * 1000 : 1000 * 2 ** attempt;
+      if (res.status === 429 && (attempt >= MAX_RETRIES || ms > MAX_WAIT_SECONDS * 1000)) {
+        throw new QuotaError('OpenSanctions says this key has reached its request quota.');
+      }
+      if (attempt < MAX_RETRIES) {
+        await sleep(ms, signal);
+        continue;
+      }
     }
     if (!res.ok) return { status: 'error', candidates: [], error: `HTTP ${res.status}` };
     const json = await res.json();
@@ -142,7 +153,8 @@ async function screenOne(row, { fetchImpl, url, signal, sleep }) {
 
 // Screens every row, CONCURRENCY at a time, calling onResult(index, result)
 // as each finishes. A row that fails is marked "Not checked" and the run
-// carries on; a rejected key, or the user cancelling, stops the whole run.
+// carries on; a rejected key, a used-up quota, or the user cancelling stops
+// the whole run.
 export async function screenRows(rows, { key, dataset = 'sanctions', threshold = DEFAULT_THRESHOLD, fetchImpl, signal, onResult, sleep = defaultSleep, concurrency = CONCURRENCY }) {
   const url = matchUrl({ dataset, key, threshold });
   let next = 0;
@@ -155,7 +167,7 @@ export async function screenRows(rows, { key, dataset = 'sanctions', threshold =
       try {
         result = await screenOne(rows[i], { fetchImpl, url, signal, sleep });
       } catch (e) {
-        if (e instanceof KeyRejectedError || e?.name === 'AbortError' || signal?.aborted) {
+        if (e instanceof KeyRejectedError || e instanceof QuotaError || e?.name === 'AbortError' || signal?.aborted) {
           stopped = true;
           throw e;
         }
