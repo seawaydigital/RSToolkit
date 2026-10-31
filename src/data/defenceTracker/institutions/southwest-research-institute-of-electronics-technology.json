@@ -1,0 +1,105 @@
+{
+  "id": "southwest-research-institute-of-electronics-technology",
+  "name": "Southwest Research Institute of Electronics Technology",
+  "zh": "中国电子科技集团公司第十研究所",
+  "zhAliases": [],
+  "aliases": [
+    "10th Research Institute of China Electronic Technology Group Corp (CETC)",
+    "CETC 10th Research Institute",
+    "Southwest Institute of Electronic Technology (SWIET)",
+    "10th Research Institute of China Electronic Technology Group Corporation (CETC)",
+    "Southwest Research Institute of Electronic Technology (SWIET)"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China Electronics Technology Group Corporation (CETC)"
+  ],
+  "parent": "china-electronics-technology-group-corporation",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it with the alias “10th Research Institute of China Electronic Technology Group Corp (CETC)”. CETC is one of the state-owned defence-industry groups that SASTIND lists.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CETC, which describes itself as a key state-owned enterprise administered directly by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Certain Persons to the Entity List; Removal of Person From the Entity List Based on Removal Request; and Implementation of Entity List Annual Review Changes (77 FR 58006, 19 September 2012)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2012-09-19/html/2012-22952.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031210123/https://www.govinfo.gov/content/pkg/FR-2012-09-19/html/2012-22952.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "集团简介 (About CETC)",
+      "publisher": "China Electronics Technology Group Corporation",
+      "url": "https://www.cetc.com.cn/zgdk/1592544/1592491/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031190223/https://www.cetc.com.cn/zgdk/1592544/1592491/index.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
