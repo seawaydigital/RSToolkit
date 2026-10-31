@@ -24,20 +24,47 @@
     "misp": "a1d71a46-6e06-4a4a-9ff8-9b507b917c11",
     "ror": "05x0m9n95"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-disciplines",
+      "summary": "Heilongjiang Institute of Technology reports three defence-specialty disciplines (国防特色学科): power, optics and computing.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the institute)",
+      "publisher": "Heilongjiang Institute of Technology",
+      "url": "https://www.hljit.edu.cn/xxgk1/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260415015133/https://www.hljit.edu.cn/xxgk1/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
