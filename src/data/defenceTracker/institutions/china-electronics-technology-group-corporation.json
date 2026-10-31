@@ -1,13 +1,12 @@
 {
   "id": "china-electronics-technology-group-corporation",
   "name": "China Electronics Technology Group Corporation",
-  "zh": "中国电子科技集团公司",
+  "zh": "中国电子科技集团有限公司",
   "zhAliases": [
+    "中国电子科技集团公司",
     "中国电科"
   ],
-  "aliases": [
-    "China Electric Division"
-  ],
+  "aliases": [],
   "acronyms": [
     "CETC",
     "CETGC"
@@ -23,27 +22,79 @@
     "lat": 39.9075,
     "lng": 116.39723
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (directly administered state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "d1276f79-45cf-48cc-b2f7-0ebfd9c911fe",
     "ror": "0098hst83",
     "wikidata": "Q10873927"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists CETC among China’s defence-industry group companies (军工集团). CETC says it holds the leading technical position in China’s military electronics and cyber and information fields, and that its mission includes national defence modernisation.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CETC describes itself as a key state-owned enterprise administered directly by the central government, descended from ministries including the Fourth Ministry of Machine-Building and the defence science commission’s Tenth Research Academy.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About CETC)",
+      "publisher": "China Electronics Technology Group Corporation",
+      "url": "https://www.cetc.com.cn/zgdk/1592544/1592491/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031190223/https://www.cetc.com.cn/zgdk/1592544/1592491/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Chinese name updated to the current company name, with the former one kept; an unexplained English alias (“China Electric Division”) removed."
     }
   ],
   "seedNotes": {
