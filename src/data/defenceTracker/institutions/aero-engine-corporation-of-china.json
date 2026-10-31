@@ -76,12 +76,6 @@
       "match": true
     },
     {
-      "name": "AECC Beijing Institute of Aeronautical Materials",
-      "zh": "中国航发北京航空材料研究院",
-      "kind": "institute",
-      "match": true
-    },
-    {
       "name": "AECC Aero Engine Control System Institute",
       "zh": "中国航发控制系统研究所",
       "kind": "institute",
@@ -131,7 +125,7 @@
     },
     {
       "date": "2026-10-31",
-      "change": "Verified; rated Very high. Its seven research academies and institutes added as units and marked for batch-check matching."
+      "change": "Verified; rated Very high. Six of its research academies and institutes added as units and marked for batch-check matching; the seventh, the Beijing Institute of Aeronautical Materials, is named by the lists and has a record of its own."
     }
   ],
   "seedNotes": {
