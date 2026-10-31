@@ -20,27 +20,79 @@
     "lat": 39.97086780770906,
     "lng": 116.42090375330349
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "daed2dde-aa32-40fe-a15b-9bff52d0e87b",
     "ror": "00df5yc52",
     "wikidata": "Q2496210"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "BUCT has been co-built by SASTIND and the Ministry of Education since 2016, and the ministry reported in 2023 that it had been kept among the universities they co-build for 2021–2025.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1958 under the chemical industry ministry, BUCT has been run directly by the Ministry of Education since 1998.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "在新时代化工强国建设中绽放青春——北京化工大学深入学习贯彻党的二十大精神 (BUCT studies the 20th Party Congress; 9 February 2023)",
+      "publisher": "Ministry of Education",
+      "url": "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jjyzt_2022/2022_zt17/xxgc/xxgc_gx/202302/t20230209_1043090.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031190448/http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/jjyzt_2022/2022_zt17/xxgc/xxgc_gx/202302/t20230209_1043090.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "历史沿革 (History)",
+      "publisher": "Beijing University of Chemical Technology",
+      "url": "https://xsg.buct.edu.cn/lsygxgxxxybqbhzszxzlVRxsz/list.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031190542/https://xsg.buct.edu.cn/lsygxgxxxybqbhzszxzlVRxsz/list.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
