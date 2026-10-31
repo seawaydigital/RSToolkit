@@ -21,27 +21,100 @@
     "lat": 34.250803,
     "lng": 108.98369300000002
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "4548a320-847a-4327-8a83-ca1f1cf39b9b",
     "ror": "017zhmm22",
     "wikidata": "Q981237"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2018 SASTIND and the Ministry of Education named XJTU a newly co-built university for 2016–2020, to support its defence-specialty disciplines, defence research bases and teams, and training for the defence industry, and to encourage it to take on military-industry research tasks.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "XJTU says it has strategic cooperation with the defence-industry groups CASC, CASIC and AECC. In June 2025 it signed a strategic cooperation agreement with CASIC’s Sixth Academy, which said it hoped to work with the university on advanced materials, intelligent manufacturing and energy and power, build research platforms and train staff jointly.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "XJTU describes itself as a key university run directly by the Ministry of Education.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "交大简介 (About XJTU)",
+      "publisher": "Xi’an Jiaotong University",
+      "url": "https://www.xjtu.edu.cn/jdgk/jdjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031182843/https://www.xjtu.edu.cn/jdgk/jdjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "西安交通大学获批国防科工局与教育部共建高校 (XJTU approved as a university co-built by SASTIND and the Ministry of Education; 31 July 2018)",
+      "publisher": "Xi’an Jiaotong University Party Organization Department (from XJTU News)",
+      "url": "https://dwzzb.xjtu.edu.cn/info/1074/6114.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20231024045136/https://dwzzb.xjtu.edu.cn/info/1074/6114.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "西安交大与中国航天科工集团第六研究院签署战略合作协议 (XJTU signs a strategic cooperation agreement with CASIC’s Sixth Academy; 14 June 2025)",
+      "publisher": "Xi’an Jiaotong University News",
+      "url": "https://news.xjtu.edu.cn/info/1033/222834.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031182927/https://news.xjtu.edu.cn/info/1033/222834.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
