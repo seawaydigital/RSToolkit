@@ -20,27 +20,67 @@
     "lat": 31.290366968056915,
     "lng": 121.55174242327882
   },
-  "supervisors": [],
+  "supervisors": [
+    "Shanghai Municipal Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "c640f54d-63ad-45b9-b8f5-17fb920a01bb",
     "ror": "00ay9v204",
     "wikidata": "Q864879"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "USST says it became a defence-specialty university co-built by SASTIND and the Shanghai government in July 2016, and that it has built a system of military-industry research qualifications centred on the ‘three military-industry certificates’ (军工三证).",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It says SASTIND approved three of its fields, optics, energy and control, as defence-specialty disciplines.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "关于我们 (About us, on the university’s historic buildings site)",
+      "publisher": "University of Shanghai for Science and Technology",
+      "url": "http://buildings.usst.edu.cn/2019/0424/c900a32865/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260608043121/http://buildings.usst.edu.cn/2019/0424/c900a32865/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
