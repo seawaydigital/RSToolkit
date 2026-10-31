@@ -27,20 +27,60 @@
     "ror": "02egmk993",
     "wikidata": "Q1510516"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In 2018 SASTIND and the Ministry of Education added the University of Science and Technology Beijing, with seven other universities, to the universities they co-build in 2016–2020, to support defence-specialty disciplines, defence research bases and teams, and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "University of Science and Technology Beijing",
+      "url": "https://www.ustb.edu.cn/xxgk/xxjj/index.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201403/https://www.ustb.edu.cn/xxgk/xxjj/index.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "工科发展的新机遇：我校等8所高校获批国防科工局与教育部共建高校 (Eight more universities approved as co-built by SASTIND and the Ministry of Education; 1 August 2018)",
+      "publisher": "Sun Yat-sen University Shenzhen Campus",
+      "url": "http://shenzhen.sysu.edu.cn/content/510",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20190310060058/http://shenzhen.sysu.edu.cn/content/510"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
