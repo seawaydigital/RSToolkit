@@ -20,26 +20,75 @@
     "lat": 34.25833,
     "lng": 108.92861
   },
-  "supervisors": [],
+  "supervisors": [
+    "Shaanxi Provincial Government"
+  ],
   "parent": null,
   "ids": {
     "misp": "92a851bf-df39-4ad9-b118-458da085dde7",
     "ror": "04jn0td46"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "XUPT’s computer science and technology degree programme reports that in 2024 it won military-industry collaborative research projects (军工类合作课题) worth more than 10 million yuan in total, including projects with the Xi’an Institute of Space Radio Technology and with the Chemical Defense Research Institute of the PLA Academy of Military Sciences.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "One of those projects is a collaboration with the PLA Academy of Military Sciences’ Chemical Defense Research Institute.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "The same report says the programme has undertaken national defence innovation projects of the Central Military Commission’s Science and Technology Commission.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Annual report on the computer science and technology degree programme for 2024 (PDF)",
+      "publisher": "Xi’an University of Posts and Telecommunications, Graduate School",
+      "url": "https://gr.xupt.edu.cn/__local/7/4A/6C/6FB5ED0DBEC6429676D2D81C576_CA43D91F_62F67.pdf",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201952/https://gr.xupt.edu.cn/__local/7/4A/6C/6FB5ED0DBEC6429676D2D81C576_CA43D91F_62F67.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
