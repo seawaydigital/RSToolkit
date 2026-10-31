@@ -1,0 +1,106 @@
+{
+  "id": "china-state-shipbuilding-corporation-limited-cssc-702nd-research-institute",
+  "name": "China State Shipbuilding Corporation, Limited (CSSC) 702nd Research Institute",
+  "zh": "中国船舶集团有限公司第七〇二研究所",
+  "zhAliases": [
+    "中国船舶重工集团公司第七〇二研究所",
+    "中国船舶重工集团有限公司第七〇二研究所"
+  ],
+  "aliases": [
+    "China Shipbuilding Industry Group Co., Ltd. (CSIC) 702nd Research Institute",
+    "China Ship Scientific Research Center (CSSRC)"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Wuxi",
+    "province": "Jiangsu",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China State Shipbuilding Corporation (CSSC)"
+  ],
+  "parent": "china-state-shipbuilding-corporation",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it as “China State Shipbuilding Corporation, Limited (CSSC) 702nd Research Institute”, a research body of China State Shipbuilding Corporation (CSSC), formerly of China Shipbuilding Industry Corporation (CSIC). CSSC is one of the state-owned defence-industry groups that SASTIND lists; SASTIND reported at its founding in 2019 that it would carry out the research and production of all the navy’s main combat equipment, including aircraft carriers and nuclear submarines. The US Commerce Department listed it in December 2020 for acquiring and attempting to acquire US-origin items in support of programmes for the People’s Liberation Army.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CSSC, formed in 2019, with the approval of the Party Central Committee and the State Council, by merging the former China State Shipbuilding Corporation and China Shipbuilding Industry Corporation.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Entities to the Entity List, Revision of Entry on the Entity List, and Removal of Entities From the Entity List (85 FR 83416, 22 December 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261026130532/https://www.govinfo.gov/content/pkg/FR-2020-12-22/html/2020-28031.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "全球最大造船集团——中国船舶集团有限公司揭牌 (The world’s largest shipbuilding group, China State Shipbuilding Corporation Limited, is unveiled; 26 November 2019, from CCTV)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260723165202/https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
