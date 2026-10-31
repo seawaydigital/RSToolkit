@@ -27,20 +27,93 @@
     "ror": "00p991c53",
     "wikidata": "Q1711196"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SASTIND and the Ministry of Education named HUST in 2016 as one of 16 universities they co-build for 2016–2020, to support defence-specialty disciplines and majors, defence key discipline laboratories and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies the national defence science and technology key laboratory for multi-spectral information processing technology at HUST’s School of Artificial Intelligence and Automation, which researches multispectral image processing for guidance, navigation and target recognition.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Multi-Spectral Information Processing Technology (多谱图像信息处理技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "HUST runs a joint doctoral programme with the PLA Naval University of Engineering.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校被列为国家国防科技工业局和教育部共建高校 (Sixteen universities, including Wuhan University of Technology, named as co-built by SASTIND and the Ministry of Education for 2016–2020)",
+      "publisher": "Wuhan University of Technology Alumni Association",
+      "url": "https://alumni.whut.edu.cn/article/9590",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200607/https://alumni.whut.edu.cn/article/9590"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 332–335 (Defense S&T Key Laboratory of Multi-Spectral Information Processing Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "华中科技大学-海军工程大学2025年联合培养博士生专项计划招生说明 (HUST–Naval University of Engineering joint doctoral programme, 2025 admissions)",
+      "publisher": "Graduate Admissions, Huazhong University of Science and Technology",
+      "url": "http://gszs.hust.edu.cn/info/1106/3893.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20250710060056/https://gszs.hust.edu.cn/info/1106/3893.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
