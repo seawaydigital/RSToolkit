@@ -1,0 +1,115 @@
+{
+  "id": "all-russian-scientific-research-institute-of-experimental-physics-vniief",
+  "name": "Russian Federal Nuclear Center – All-Russian Research Institute of Experimental Physics",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "VSEROSSIYSKIY NAUCHNO-ISSLEDOVATELSKIY INSTITUT EKSPERIMENTALNOY",
+    "RFNC-VNIIEF",
+    "KHARITON INSTITUTE",
+    "SAROV NUCLEAR WEAPONS PLANT",
+    "AVANGARD ELECTROMECHANICAL PLANT",
+    "FEDERAL STATE UNITARY ENTERPRISE RUSSIAN FEDERAL NUCLEAR CENTER-ALL RUSSIAN SCIENTIFIC RESEARCH INSTITUTE OF EXPERIMENTAL PHYSICS",
+    "ARZAMAS-16",
+    "ALL-RUSSIAN SCIENTIFIC RESEARCH INSTITUTE OF EXPERIMENTAL PHYSICS",
+    "Sedakova Research Institute of Measuring Systems",
+    "NIIIS Named After Yu.E. Sedakov",
+    "All-Russian Scientific Research Institute of Experimental Physics (VNIIEF)",
+    "Vserossiyskiy Nauchno-Issledovatelskiy Institut Eksperimentalnoy Fiziki",
+    "Russian Federal Nuclear Center-VNIIEF (RFNC-VNIIEF)",
+    "Institute of Experimental Physics",
+    "ARIEP (All Russian Institute for Experimental Physics)",
+    "Khariton Institute",
+    "Sarov Nuclear Weapons Plant",
+    "Avangard Electromechanical Plant",
+    "Federal State Unitary Enterprise Russian Federal Nuclear Center - All Russian Scientific Research Institute of Experimental Physics (FGUPRFNCs VNIIEF)",
+    "Arzamas-16",
+    "Federal State Unitary Enterprise All-Russian Research Institute of Experimental Physics",
+    "RFNC - Vniief, FSUE",
+    "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"РОССИЙСКИЙ ФЕДЕРАЛЬНЫЙ ЯДЕРНЫЙ ЦЕНТР - ВСЕРОССИЙСКИЙ НАУЧНО-ИССЛЕДОВАТЕЛЬСКИЙ ИНСТИТУТ ЭКСПЕРИМЕНТАЛЬНОЙ ФИЗИКИ\"",
+    "РФЯЦ - Внииэф, ФГУП"
+  ],
+  "acronyms": [
+    "VNIIEF",
+    "NIIIS"
+  ],
+  "domains": [],
+  "country": "RU",
+  "type": "nuclear",
+  "location": {
+    "city": "Sarov",
+    "province": "Nizhny Novgorod Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "nuclear-weapons",
+      "summary": "OFAC lists it as the All-Russian Scientific Research Institute of Experimental Physics (VNIIEF), the Russian Federal Nuclear Center in Sarov, Nizhny Novgorod Region, also known as the Khariton Institute and the Sarov Nuclear Weapons Plant. The US Treasury says VNIIEF performs experimental testing of Russia’s nuclear weapons.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It is a Russian federal state unitary enterprise, as its full name on OFAC’s list says.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sanctions List Search: All-Russian Scientific Research Institute of Experimental Physics (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=41019",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231422/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=41019"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "As Russia Completes Transition to a Full War Economy, Treasury Takes Sweeping Aim at Foundational Financial Infrastructure and Access to Third Country Suppliers (12 June 2024)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy2404",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231455/https://home.treasury.gov/news/press-releases/jy2404"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list and the US Entity List and Canada’s sanctions list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
