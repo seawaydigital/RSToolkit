@@ -25,20 +25,81 @@
     "ror": "033vjfk17",
     "wikidata": "Q1108197"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SASTIND and the Ministry of Education named Wuhan University in 2016 as one of 16 universities they co-build for 2016–2020, to support defence-specialty disciplines and majors, defence key discipline laboratories and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "pla-collaboration",
+      "summary": "In 2015 Wuhan University signed a military–civil fusion framework agreement and ten specific cooperation agreements with the PLA Information Engineering University, and in 2023 a talent cooperation agreement with the PLA’s National University of Defense Technology.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校被列为国家国防科技工业局和教育部共建高校 (Sixteen universities, including Wuhan University of Technology, named as co-built by SASTIND and the Ministry of Education for 2016–2020)",
+      "publisher": "Wuhan University of Technology Alumni Association",
+      "url": "https://alumni.whut.edu.cn/article/9590",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200607/https://alumni.whut.edu.cn/article/9590"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "解放军信息工程大学来校签署合作协议 (The PLA Information Engineering University signs a cooperation agreement with Wuhan University; 27 November 2015)",
+      "publisher": "Wuhan University News",
+      "url": "https://news.whu.edu.cn/info/1002/44779.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200705/https://news.whu.edu.cn/info/1002/44779.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "武汉大学与国防科技大学签署人才引育合作协议 (Wuhan University and the National University of Defense Technology sign a talent cooperation agreement; 6 November 2023)",
+      "publisher": "Wuhan University Office of Domestic Cooperation",
+      "url": "https://gnhzb.whu.edu.cn/info/1451/2371.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200735/https://gnhzb.whu.edu.cn/info/1451/2371.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
