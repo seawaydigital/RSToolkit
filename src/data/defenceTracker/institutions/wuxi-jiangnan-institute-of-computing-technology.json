@@ -1,0 +1,80 @@
+{
+  "id": "wuxi-jiangnan-institute-of-computing-technology",
+  "name": "Wuxi Jiangnan Institute of Computing Technology",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Jiangnan Institute of Computing Technology"
+  ],
+  "acronyms": [
+    "JICT"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "military",
+  "location": {
+    "city": "Wuxi",
+    "province": "Jiangsu",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "People’s Liberation Army (56th Research Institute of the former General Staff, per the US Commerce Department)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The US Commerce Department states that the Wuxi Jiangnan Institute of Computing Technology is owned by the 56th Research Institute of the General Staff of China’s People’s Liberation Army and that its mission is to support China’s military modernization; it named the institute, Sugon and the PLA’s National University of Defense Technology as the three bodies leading China’s exascale supercomputing, and listed it in June 2019.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "The US Commerce Department states that it is owned by the 56th Research Institute of the PLA’s former General Staff.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of Entities to the Entity List and Revision of an Entry on the Entity List (84 FR 29371, 24 June 2019)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "lang": "en",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2019-06-24/html/2019-13245.htm",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031210531/https://www.govinfo.gov/content/pkg/FR-2019-06-24/html/2019-13245.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
