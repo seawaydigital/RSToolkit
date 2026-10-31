@@ -1,0 +1,98 @@
+{
+  "id": "aviation-industry-corporation-of-china-612-institute",
+  "name": "Aviation Industry Corporation of China 612 Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Base 014",
+    "China Air-to-Air Missile Research Institute",
+    "China Airborne Missile Academy"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": null,
+  "supervisors": [
+    "Aviation Industry Corporation of China (AVIC)"
+  ],
+  "parent": "aviation-industry-corporation-of-china",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it as AVIC’s 612 Institute, also known as the China Airborne Missile Academy. AVIC is one of the state-owned defence-industry groups that SASTIND lists, and says its businesses include aviation weapons and equipment and military transport aircraft. The US Commerce Department listed it in June 2023 for acquiring and attempting to acquire US-origin items in support of China’s military modernization, citing ties to activities including the design and manufacture of air-to-air missiles and hypersonic weapons development.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to AVIC, which describes itself as a very large state-owned enterprise managed by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Additions of Entities to the Entity List and Removal of Entity From the Entity List (88 FR 38739, 14 June 2023)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2023-06-14/html/2023-12726.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031205644/https://www.govinfo.gov/content/pkg/FR-2023-06-14/html/2023-12726.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "集团简介 (About AVIC)",
+      "publisher": "Aviation Industry Corporation of China",
+      "url": "https://www.avic.com.cn/c/2021-03-26/511215.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183425/https://www.avic.com.cn/c/2021-03-26/511215.shtml?PC=PC"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
