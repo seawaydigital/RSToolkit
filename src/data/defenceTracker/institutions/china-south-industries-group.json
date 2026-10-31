@@ -3,6 +3,7 @@
   "name": "China South Industries Group",
   "zh": "中国兵器装备集团有限公司",
   "zhAliases": [
+    "中国兵器装备集团公司",
     "中国南方工业集团公司",
     "兵装集团",
     "中国兵装"
@@ -24,25 +25,65 @@
     "lat": 39.9476845,
     "lng": 116.29415799999992
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (directly administered state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "5f29efae-abfd-4071-86a0-5c6988ffe0cf"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "China South Industries Group describes itself as a core force of China’s defence science, technology and industry and a centrally run military-industry enterprise whose mission is to strengthen the armed forces, and traces its history to the Fifth Ministry of Machine-Building and the ordnance industry ministry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It describes itself as a key state-owned enterprise administered directly by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "集团简介 (About CSGC)",
+      "publisher": "China South Industries Group",
+      "url": "https://www.csgc.com.cn/csgc/gywm/jtjj/A003002001Gone1.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260521005317/https://www.csgc.com.cn/csgc/gywm/jtjj/A003002001Gone1.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
