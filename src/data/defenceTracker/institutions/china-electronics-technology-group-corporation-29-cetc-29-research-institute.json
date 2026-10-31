@@ -1,0 +1,132 @@
+{
+  "id": "china-electronics-technology-group-corporation-29-cetc-29-research-institute",
+  "name": "China Electronics Technology Group Corporation 29 (CETC 29) Research Institute",
+  "zh": "中国电子科技集团公司第二十九研究所",
+  "zhAliases": [],
+  "aliases": [
+    "CETC 29th Research Institute",
+    "China Southwest Electronic Equipment Research Institute (SWIEE)",
+    "29 (SIWEI Co) Institute",
+    "SIWI Electronics Corporation",
+    "Chengdu SIWI Electronics Inc.",
+    "Chengdu SIWEI Electronics Company",
+    "Chengdu 29 Institute",
+    "Si Wei Company 29th Institute",
+    "SIWI Group",
+    "Southwest China Institute of Electronics"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Chengdu",
+    "province": "Sichuan",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China Electronics Technology Group Corporation (CETC)"
+  ],
+  "parent": "china-electronics-technology-group-corporation",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it as “China Electronics Technology Group Corporation 29 (CETC 29) Research Institute”, one of the research institutes of China Electronics Technology Group Corporation (CETC). CETC is one of the state-owned defence-industry groups that SASTIND lists, and CETC lists the institute among its member units.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s4"
+      ]
+    },
+    {
+      "signal": "misconduct",
+      "summary": "The US Commerce Department listed it in August 2014, finding reasonable cause to believe that it was involved in the illicit procurement of commodities and technologies for unauthorized military end use in China.",
+      "annexB": [
+        "2.2"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CETC, which describes itself as a key state-owned enterprise administered directly by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Addition of Certain Persons to the Entity List (79 FR 44680, 1 August 2014)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2014-08-01/html/2014-17960.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031202722/https://www.govinfo.gov/content/pkg/FR-2014-08-01/html/2014-17960.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "集团简介 (About CETC)",
+      "publisher": "China Electronics Technology Group Corporation",
+      "url": "https://www.cetc.com.cn/zgdk/1592544/1592491/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031190223/https://www.cetc.com.cn/zgdk/1592544/1592491/index.html"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "成员单位网站 (CETC member units)",
+      "publisher": "China Electronics Technology Group Corporation (CETC)",
+      "url": "http://www.cetc.com.cn/zgdk/1593105/1593109/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261003035235/https://www.cetc.com.cn/zgdk/1593105/1593109/index.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
