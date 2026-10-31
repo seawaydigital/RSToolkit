@@ -25,17 +25,17 @@ Create it once with `git switch -c tracker/content master`, and push it so it is
 
 1. Chinese institutions on Canada's Named Research Organizations list
 2. US-listed Chinese universities
-3. Structural institutions: PLA, security agencies, defence conglomerates, nuclear, the Seven Sons. These need only one or two sources each.
+3. Structural institutions: armed forces (the PLA and PAP), security agencies, defence conglomerates, nuclear, the Seven Sons. These need only one or two sources each.
 4. The rest of the MISP seed list
 5. Other Chinese bodies: CAS institutes, joint-venture universities, newly listed bodies
-6. Russia and Iran
+6. Russia and Iran. The armed-forces, security-agency, defence-group and nuclear-weapons signals cover them (rubric 1.2): Russia's Ministry of Defence and National Guard, the FSB, Rostec and the other state defence groups, and the federal nuclear centres; Iran's Army, IRGC and MODAFL with its defence industries. The laboratory, qualification, SASTIND and discipline signals describe China's system only, so a Russian or Iranian university with no structural tie is rated on the lists, partnerships, funding and collaboration.
 
 Verified profiles follow, longest since verification first, for re-checking.
 
 ## Researching a profile
 
 1. **Read the record.** `seedNotes` holds MISP's structured fields. Treat them as a list of claims to check, never as a source.
-2. **Find sources**, best first: official lists and government documents; the institution's own websites (Chinese and English); Chinese government notices (SASTIND, MIIT, MOE); court records and indictments; reputable research; news only to corroborate.
+2. **Find sources**, best first: official lists and government documents; the institution's own websites (Chinese and English, or Russian and Persian); Chinese government notices (SASTIND, MIIT, MOE); court records and indictments; reputable research; news only to corroborate. For Russian and Iranian bodies the designation notices of the US Treasury, State and Commerce departments, Global Affairs Canada, the EU and the UK often say which ministry, force or group a body belongs to.
 3. **Write the evidence**, one item per signal, one or two sentences in your own words, each citing its sources and tagged with the NSGRP Annex B questions it supports (2.1 state influence or control, 2.2 misconduct or lack of transparency, 2.3 military or government ties). The signals and what counts for each are listed on the methodology page.
 4. **Check the identifying details** with sources: names and Chinese names, aliases, email domains, type, supervising agency, campuses and labs, STRA topics, and main-campus coordinates (4 decimals, never the city centre).
 

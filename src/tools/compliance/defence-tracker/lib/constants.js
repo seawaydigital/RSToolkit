@@ -16,27 +16,30 @@ export const NOT_RATED_LABEL = 'Not yet rated';
 
 // Every evidence item names one signal. The group decides how the rubric uses
 // it; 'misconduct' and 'info' items are shown as evidence but never set the
-// rating on their own.
+// rating on their own. The structural signals and the armed-forces
+// collaboration signal cover China, Russia and Iran (rubric 1.2); the
+// laboratory, qualification, SASTIND and discipline signals describe China's
+// system.
 export const SIGNALS = {
-  pla: {
+  'armed-forces': {
     group: 'structural',
-    label: 'Part of the PLA, PAP or Central Military Commission system',
-    description: "Run by China's armed forces: a PLA or People's Armed Police university, academy or research institute, or a body under the Central Military Commission.",
+    label: 'Part of the armed forces',
+    description: "Run by the armed forces of China, Russia or Iran: in China, a PLA or People's Armed Police university, academy or research institute, or a body under the Central Military Commission; in Russia, a university, academy or research institute of the Ministry of Defence or the National Guard (Rosgvardia); in Iran, one of the Army (Artesh), the Islamic Revolutionary Guard Corps (IRGC) or the Ministry of Defence and Armed Forces Logistics (MODAFL).",
   },
   'security-agency': {
     group: 'structural',
     label: 'Run by a security or intelligence agency',
-    description: 'Belongs to the Ministry of State Security, the Ministry of Public Security or another state security body.',
+    description: "Belongs to a state security or intelligence agency, such as China's Ministry of State Security or Ministry of Public Security, Russia's Federal Security Service (FSB) or Iran's Ministry of Intelligence.",
   },
   'defence-conglomerate': {
     group: 'structural',
     label: 'Defence conglomerate or one of its institutes',
-    description: 'A state-owned defence-industry group (for example CASC, CASIC, AVIC, CETC, NORINCO or CSSC), or a research institute or academy that belongs to one.',
+    description: 'A state-owned defence-industry group, or a research institute, academy or design bureau that belongs to one: in China, for example CASC, CASIC, AVIC, CETC, NORINCO or CSSC; in Russia, for example Rostec and its holdings, Almaz-Antey, the Tactical Missiles Corporation, United Shipbuilding Corporation or Roscosmos; in Iran, the defence industries of the Ministry of Defence and Armed Forces Logistics (MODAFL), such as the Aerospace Industries Organization and the Defense Industries Organization.',
   },
   'nuclear-weapons': {
     group: 'structural',
     label: 'Part of the nuclear-weapons complex',
-    description: 'Designs, builds or tests nuclear weapons, like the China Academy of Engineering Physics and its institutes.',
+    description: "Designs, builds or tests nuclear weapons, like the China Academy of Engineering Physics and its institutes, or Russia's federal nuclear centres in Sarov (VNIIEF) and Snezhinsk (VNIITF).",
   },
   'seven-sons': {
     group: 'structural',
@@ -78,10 +81,10 @@ export const SIGNALS = {
     label: 'Defence-funded research',
     description: 'Documented research projects funded by military or defence-industry bodies.',
   },
-  'pla-collaboration': {
+  'armed-forces-collaboration': {
     group: 'limited',
-    label: 'Research collaboration with PLA institutions',
-    description: 'Documented joint research, joint laboratories or co-supervision with PLA institutions.',
+    label: 'Research collaboration with armed-forces institutions',
+    description: 'Documented joint research, joint laboratories or co-supervision with armed-forces institutions: in China, the PLA; in Russia, the Ministry of Defence; in Iran, the Army, the IRGC or MODAFL.',
   },
   misconduct: {
     group: 'misconduct',

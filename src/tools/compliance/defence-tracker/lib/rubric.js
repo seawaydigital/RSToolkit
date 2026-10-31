@@ -7,16 +7,17 @@
 // official lists alone ("basis: lists"). Not listed and not researched is
 // not rated, never Low. RUBRIC_RULES is rendered on the methodology page, so
 // the page and the code cannot drift apart; bump RUBRIC_VERSION whenever a
-// rule or who it applies to changes (1.1: list-based ratings).
+// rule or who it applies to changes (1.1: list-based ratings; 1.2: the
+// armed-forces and defence-group signals cover Russia and Iran as well).
 import { RATING_ORDER, LIST_BY_ID, SIGNALS } from './constants.js';
 
-export const RUBRIC_VERSION = '1.1';
+export const RUBRIC_VERSION = '1.2';
 
 export const RUBRIC_RULES = [
   {
     id: 'structural',
     rating: 'very-high',
-    text: 'Part of the PLA, PAP or Central Military Commission system, a security agency, a defence conglomerate or one of its institutes, the nuclear-weapons complex, or one of the Seven Sons of National Defence.',
+    text: 'Part of the armed forces of China, Russia or Iran (in China, the PLA, PAP or Central Military Commission system), a security or intelligence agency, a state defence-industry group or one of its institutes, a nuclear-weapons complex, or one of the Seven Sons of National Defence.',
   },
   { id: 'listed-major', rating: 'very-high', text: 'Formally listed, and doing major defence research.' },
   { id: 'listed', rating: 'high', text: 'Formally listed by Canada, the United States or Japan.' },
@@ -33,7 +34,7 @@ export const RUBRIC_RULES = [
   {
     id: 'limited-links',
     rating: 'medium',
-    text: 'Limited defence links: documented defence-industry partnerships, defence-funded research, or research collaboration with PLA institutions.',
+    text: 'Limited defence links: documented defence-industry partnerships, defence-funded research, or research collaboration with armed-forces institutions.',
   },
   { id: 'none', rating: 'low', text: 'Verified, and none of the above was found.' },
 ];
