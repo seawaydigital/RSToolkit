@@ -29,20 +29,59 @@
     "ror": "035psfh38",
     "wikidata": "Q837544"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "Donghua’s research office recruited staff in 2011 to manage secrecy for the university’s military-industry projects, and the university says it has developed special-mission clothing and equipment for national needs including crewed spaceflight, defence and the military industry.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "东华大学科研处校内外招聘启事 (The research office recruits staff for military-industry project secrecy; 5 December 2011)",
+      "publisher": "Donghua University",
+      "url": "https://www.dhu.edu.cn/2011/1205/c5974a106473/page.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195144/https://www.dhu.edu.cn/2011/1205/c5974a106473/page.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "东华大学以高水平学科建设统领高质量发展 (Donghua University on discipline building; 24 November 2023)",
+      "publisher": "Donghua University News",
+      "url": "https://news.dhu.edu.cn/2023/1124/c523a419962/pagem.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195231/https://news.dhu.edu.cn/2023/1124/c523a419962/pagem.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
