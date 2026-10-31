@@ -27,20 +27,84 @@
     "ror": "03cve4549",
     "wikidata": "Q16955"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SASTIND and the Ministry of Education named Tsinghua University in 2016 as one of 16 universities they co-build for 2016–2020, to support defence-specialty disciplines and majors, defence key discipline laboratories and training for the defence industry.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI identifies Tsinghua University, with the nuclear group CNNC’s Research Institute of Physical and Chemical Engineering, as host of the national defence science and technology key laboratory for particle transport and enrichment technology, which it links to nuclear weapons and power; it also names Tsinghua as a possible partner in the human factors engineering laboratory of the PLA’s astronaut research and training centre.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3"
+      ],
+      "items": [
+        "Defense S&T Key Laboratory of Particle Transport and Enrichment Technology (粒子输运与富集技术国防科技重点实验室), with CNNC"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "我校被列为国家国防科技工业局和教育部共建高校 (Sixteen universities, including Wuhan University of Technology, named as co-built by SASTIND and the Ministry of Education for 2016–2020)",
+      "publisher": "Wuhan University of Technology Alumni Association",
+      "url": "https://alumni.whut.edu.cn/article/9590",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031200607/https://alumni.whut.edu.cn/article/9590"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 363–365 (Defense S&T Key Laboratory of Particle Transport and Enrichment Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 234–238 (Defense S&T Key Laboratory of Human Factors Engineering)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
