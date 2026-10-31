@@ -11,7 +11,7 @@ export const API_BASE = 'https://api.opensanctions.org';
 export const ENTITY_BASE = 'https://www.opensanctions.org/entities/';
 
 export const DATASETS = {
-  sanctions: { label: 'Sanctions lists only', short: 'sanctions lists' },
+  sanctions: { label: 'Sanctions lists only (start here)', short: 'sanctions lists' },
   default: { label: 'All OpenSanctions data (adds politically exposed persons, debarment, crime and more)', short: 'all OpenSanctions data' },
 };
 
