@@ -23,27 +23,78 @@
     "lat": 38.86774253850528,
     "lng": 115.51494136441806
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with the Ministry of Education and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "547fcf00-56e4-4ef5-b55e-e1a346c32928",
     "ror": "01p884a79",
     "wikidata": "Q835731"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Hebei University’s 2016–2020 plan says the Hebei government signed an agreement with SASTIND in 2013 to co-build it, which the plan calls a new platform for its defence-specialty disciplines.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "Its Hebei key laboratory of optoelectronic information materials says the university won approval in 2017 for a national defence-specialty discipline in military energy technology (军用能源技术) based on the laboratory.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "河北大学“十三五”发展规划纲要 (Hebei University development plan for 2016–2020)",
+      "publisher": "Hebei University",
+      "url": "https://fzghc.hbu.cn/fzgh/view.asp?id=4",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "unavailable": "The Wayback Machine could not capture this page: Save Page Now returned HTTP 520 for it on 2026-10-31 in two attempts, and no earlier capture shows the cited text. The cited text was checked on the live page that day."
+      }
+    },
+    {
+      "id": "s2",
+      "title": "河北省光电信息材料重点实验室 (Hebei key laboratory of optoelectronic information materials)",
+      "publisher": "College of Physics Science and Technology, Hebei University",
+      "url": "https://wlxy.hbu.edu.cn/info/1038/1637.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "unavailable": "The Wayback Machine could not capture this page: Save Page Now returned HTTP 520 for it on 2026-10-31 in two attempts, and no earlier capture shows the cited text. The cited text was checked on the live page that day."
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
