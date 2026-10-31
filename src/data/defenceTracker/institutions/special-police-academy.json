@@ -6,7 +6,8 @@
   "aliases": [
     "Special Police of China",
     "PAP Special Police Academy",
-    "People's Armed Police Special Police Academy"
+    "People's Armed Police Special Police Academy",
+    "People's Armed Police Special Police College"
   ],
   "acronyms": [
     "SPA",
@@ -21,25 +22,66 @@
     "lat": 40.1861324,
     "lng": 116.48402929999997
   },
-  "supervisors": [],
+  "supervisors": [
+    "People’s Armed Police"
+  ],
   "parent": null,
   "ids": {
     "misp": "5d7584d0-02bc-4658-ae46-0822d5d5fa8c"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "pla",
+      "summary": "The US National Defense University’s study of the People’s Armed Police lists the PAP Special Police Academy among the PAP’s universities and academies, and CASI lists the People’s Armed Police Special Police College among the military academic institutions that planned to recruit high-school graduates in 2024.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Other Army: The People’s Armed Police in an Era of Reform (China Strategic Perspectives 14, April 2019), p. 32",
+      "publisher": "Institute for National Strategic Studies, US National Defense University",
+      "url": "https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20251207062743/https://ndupress.ndu.edu/Portals/82/China%20SP%2014%20Final%20for%20Web.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "2024 Military Academic Institution Recruitment Plan (February 2025), p. 3",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20250406072411/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Other-Topics/2025-02-27%20PLA%202024%20Military%20Academic%20Institution%20Recruitment%20Plan.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
