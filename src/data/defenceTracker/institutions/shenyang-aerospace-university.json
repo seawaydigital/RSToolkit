@@ -17,30 +17,80 @@
   "location": {
     "city": "Shenyang",
     "province": "Liaoning",
-    "lat": 41.9224691279455,
-    "lng": 123.39907472209018
+    "lat": 41.924,
+    "lng": 123.3987
   },
-  "supervisors": [],
+  "supervisors": [
+    "Liaoning Provincial Government (co-built with SASTIND, and with the Ministry of Education and AVIC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "55e6f67b-e596-4f08-aedf-ccef8c2ac835",
     "ror": "02423gm04",
     "wikidata": "Q7494336"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SAU describes itself as co-built by the Liaoning provincial government with the defence-industry regulator SASTIND.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "It reports five defence-specialty disciplines (国防特色学科), two defence key and shortage majors and one national defence science and technology innovation team.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "SAU says it is also co-built by Liaoning, the Ministry of Education and the state-owned aviation group AVIC, and describes serving national defence and the aviation and space industries as part of its mission.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university; figures to 14 May 2026)",
+      "publisher": "Shenyang Aerospace University",
+      "url": "https://www.sau.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031053242/https://www.sau.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High. Map point moved to its campus at 37 Daoyi South Street."
     }
   ],
   "seedNotes": {
