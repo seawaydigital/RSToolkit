@@ -1,0 +1,105 @@
+{
+  "id": "china-aerospace-science-and-technology-corporation-casc-1st-academy-702-research",
+  "name": "China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "702nd Institute",
+    "Beijing Institute of Structure and Environmental Engineering (BISE)",
+    "702nd Research Institute, China Academy of Launch Vehicle Technology (CALT)",
+    "Beijing Institute of Strength and Environmental Engineering"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China Aerospace Science and Technology Corporation (CASC)"
+  ],
+  "parent": "china-academy-of-launch-vehicle-technology-calt",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Entity List names it as “China Aerospace Science and Technology Corporation (CASC) 1st Academy 702 Research Institute”, a unit of China Aerospace Science and Technology Corporation (CASC); the list has named it since May 1999, under its current name since a 2019 revision. CASC is one of the state-owned defence-industry groups that SASTIND lists, and says it researches, designs, builds and tests strategic and tactical missiles as well as launch vehicles and spacecraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CASC, which describes itself as a very large state-owned enterprise and a cornerstone of China’s national security strategy.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of Certain Entities to the Entity List, Revision of Entries on the Entity List, and Removal of Entities From the Entity List (84 FR 40237, 14 August 2019)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2019-08-14/html/2019-17409.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031204830/https://www.govinfo.gov/content/pkg/FR-2019-08-14/html/2019-17409.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "集团简介 (About CASC)",
+      "publisher": "China Aerospace Science and Technology Corporation",
+      "url": "http://www.spacechina.com/n25/n142/n152/n164/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260828005958/https://www.spacechina.com/n25/n142/n152/n164/index.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and Japan’s End User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
