@@ -1,42 +1,94 @@
 {
   "id": "china-university-of-geosciences-wuhan",
   "name": "China University of Geosciences (Wuhan)",
-  "zh": "中国地质大学",
+  "zh": "中国地质大学（武汉）",
   "zhAliases": [
-    "中国地质大学(武汉)"
+    "中国地质大学"
   ],
   "aliases": [],
   "acronyms": [
     "CUG"
   ],
-  "domains": [],
+  "domains": [
+    "cug.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 30.52074799999999,
-    "lng": 114.40470700000003
+    "city": "Wuhan",
+    "province": "Hubei",
+    "lat": 30.5207,
+    "lng": 114.4047
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with the Ministry of Land and Resources)"
+  ],
   "parent": null,
   "ids": {
     "misp": "b077a484-ba2b-42dd-bf66-e64de94bf2a3"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "CUG (Wuhan) has rules for managing the defence science and technology projects it undertakes, under which a project starts only once its unit and leader have signed a secrecy responsibility agreement with the university.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Run by the Ministry of Education since 2000, when it passed from the Ministry of Land and Resources; the two ministries signed an agreement to co-build it in 2006.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校概况 (About the university)",
+      "publisher": "China University of Geosciences (Wuhan)",
+      "url": "https://www.cug.edu.cn/xxgk.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031194805/https://www.cug.edu.cn/xxgk.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "中国地质大学（武汉）国防科技项目管理办法 (Rules for managing defence science and technology projects; updated 18 May 2015)",
+      "publisher": "China University of Geosciences (Wuhan)",
+      "url": "https://xxgk.cug.edu.cn/info/1036/1819.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031194854/https://xxgk.cug.edu.cn/info/1036/1819.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Medium. Chinese name set to the Wuhan university’s own (中国地质大学（武汉）), with the shared short name kept."
     }
   ],
   "seedNotes": {
