@@ -1,0 +1,81 @@
+{
+  "id": "central-research-institute-of-the-russian-air-and-space-forces",
+  "name": "Central Research Institute of the Russian Air and Space Forces",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "TSNII VVKO",
+    "FEDERALNOE GOSUDARSTVENNOE BJUDZHETNOE UCHREZHDENIE TSENTRALNYJ NAUCHNO-ISSLEDOVATELSKIJ INSTITUT VOJSK VOSDUSHNO-KOSMICHESKOJ OBORONY MINOBORONY ROSSII",
+    "FGBU TSNII VVKO MINOBORONY ROSSII",
+    "CENTRAL RESEARCH INSTITUTE OF THE RUSSIAN AIR AND SPACE FORCES"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "military",
+  "location": {
+    "city": "Tver",
+    "province": "Tver Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Ministry of Defence of the Russian Federation"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "OFAC lists it as the Central Research Institute of the Russian Air and Space Forces (TsNII VVKO), in Tver, with the alias Federal State Budgetary Institution Central Scientific Research Institute of the Aerospace Defence Forces of the Ministry of Defence of Russia (… VOJSK VOSDUSHNO-KOSMICHESKOJ OBORONY MINOBORONY ROSSII).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Ministry of Defence of the Russian Federation.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sanctions List Search: Central Research Institute of the Russian Air and Space Forces (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=44296",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031222753/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=44296"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US SDN list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
