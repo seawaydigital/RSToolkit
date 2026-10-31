@@ -23,27 +23,79 @@
     "lat": 39.9129693,
     "lng": 116.33987330000002
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (directly administered state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "da7eed6e-33dd-4a15-84fc-b51a9a5afa33",
     "ror": "01d5ymp84",
     "wikidata": "Q1073337"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists CNNC among China’s defence-industry group companies (军工集团). CNNC describes itself as the main body of China’s nuclear science and technology industry, with a dual mission of advancing national defence and economic and social development.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CNNC describes itself as a very large, key state-owned enterprise administered directly by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团介绍 (About CNNC; as archived in August 2025)",
+      "publisher": "China National Nuclear Corporation",
+      "url": "https://www.cnnc.com.cn/cnnc/jtgk/jtjs/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20250805160538/https://www.cnnc.com.cn/cnnc/jtgk/jtjs/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
     }
   ],
   "seedNotes": {
