@@ -1,0 +1,92 @@
+{
+  "id": "joint-stock-company-scientific-research-institute-of-industrial-television-rastr",
+  "name": "Joint Stock Company Scientific Research Institute of Industrial Television Rastr",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "AO Nauchno Issledovatelskii Institut Promyshlennogo Televideniya Rastr",
+    "AO NIIPT Rastr"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": {
+    "city": "Veliky Novgorod",
+    "province": "Novgorod Oblast",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Ruselectronics (Rostec)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Treasury names Aktsionernoe Obshchestvo Nauchno Issledovatelskii Institut Promyshlennogo Televideniya Rastr among the Russia-based subsidiaries of Ruselectronics that OFAC designated in June 2022. It describes Ruselectronics as a holding company owned by Rostec, which it calls the cornerstone of Russia’s defence and industrial sectors, that unites Russia’s radio-electronic industry. OFAC lists it as linked to Ruselectronics, in Veliky Novgorod.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Ruselectronics, a holding company of the Russian state corporation Rostec.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "U.S. Treasury Sanctions Nearly 100 Targets in Putin’s War Machine, Prohibits Russian Gold Imports (28 June 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0838",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230331/https://home.treasury.gov/news/press-releases/jy0838"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT PROMYSHLENNOGO TELEVIDENIYA RASTR (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37797",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231108/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=37797"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
