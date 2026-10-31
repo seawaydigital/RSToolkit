@@ -20,27 +20,78 @@
     "lat": 26.064480152428146,
     "lng": 119.19726850476684
   },
-  "supervisors": [],
+  "supervisors": [
+    "Fujian Provincial Government (co-built with the Ministry of Education and SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "16a191cb-f61d-46f6-9b45-147efc2a51de",
     "ror": "011xvna82",
     "wikidata": "Q470963"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "A Fuzhou University recruitment notice describes it as co-built by the Fujian government with SASTIND as well as with the Ministry of Education.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Fuzhou University describes itself as a key university co-built by the Fujian government and the Ministry of Education.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "福州大学厦门工艺美术学院 (Fuzhou University Xiamen Academy of Arts and Design: recruitment notice on its home page)",
+      "publisher": "Fuzhou University",
+      "url": "https://art.fzu.edu.cn/",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195414/https://art.fzu.edu.cn/"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "学校简介 (About the university)",
+      "publisher": "Fuzhou University",
+      "url": "https://www.fzu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195547/https://www.fzu.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
