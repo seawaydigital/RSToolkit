@@ -54,7 +54,7 @@
       "lang": "zh",
       "accessed": "2026-10-26",
       "archive": {
-        "url": "https://web.archive.org/web/20261026165359/https://zgkdb.ustc.edu.cn/download/751"
+        "url": "https://web.archive.org/web/20261031212155/https://zgkdb.ustc.edu.cn/download/751"
       }
     },
     {
@@ -65,7 +65,7 @@
       "lang": "en",
       "accessed": "2026-10-26",
       "archive": {
-        "url": "https://web.archive.org/web/20261026165414/https://www.govinfo.gov/content/pkg/FR-2021-11-26/html/2021-25808.htm"
+        "url": "https://web.archive.org/web/20261031212217/https://www.govinfo.gov/content/pkg/FR-2021-11-26/html/2021-25808.htm"
       }
     }
   ],
@@ -83,6 +83,14 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Archived copy of source s1 replaced: the earlier capture no longer plays back."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Archived copy of source s2 replaced: the earlier capture no longer plays back."
     }
   ],
   "seedNotes": null
