@@ -19,27 +19,57 @@
     "lat": 36.80505861120979,
     "lng": 118.00528013988117
   },
-  "supervisors": [],
+  "supervisors": [
+    "Shandong Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
     "misp": "53766e8a-fb5e-41ff-93e8-4bad2f810452",
     "ror": "02mr3ar13",
     "wikidata": "Q7487937"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "SDUT describes itself as a university co-built by SASTIND and the Shandong government.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Shandong University of Technology",
+      "url": "https://www.sdut.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201140/https://www.sdut.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
