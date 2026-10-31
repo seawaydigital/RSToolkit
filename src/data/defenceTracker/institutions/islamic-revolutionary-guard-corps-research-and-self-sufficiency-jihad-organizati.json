@@ -1,0 +1,88 @@
+{
+  "id": "islamic-revolutionary-guard-corps-research-and-self-sufficiency-jihad-organizati",
+  "name": "Islamic Revolutionary Guard Corps Research and Self-Sufficiency Jihad Organization",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "IRGC SSJO",
+    "Islamic Revolutionary Guard Corps Self-Sufficiency Jehad Organization",
+    "IRGC Research and Self Sufficiency Jehad Organization",
+    "Self-Sufficiency Jihad Organization",
+    "IRGC’s Arms and Military Equipment Self-Sufficiency Program",
+    "IRGC Jihad Self-Sufficiency Organization",
+    "Jihad Self-Sufficiency Organization of Islamic Revolution Iranian Revolutionary Guards",
+    "Self Sufficiency Jihad Organization",
+    "IRGC’s Self-Sufficiency and Industrial Research Center",
+    "IRGC’s Self-Sufficiency and Industrial Research Centre",
+    "IRGC Missile Research Center",
+    "IRGC Self-Sufficiency Organization",
+    "IRGC's Research and Self-Sufficiency Organization",
+    "ISLAMIC REVOLUTIONARY GUARD CORPS RESEARCH AND SELF-SUFFICIENCY JEHAD ORGANIZATION",
+    "ISLAMIC REVOLUTIONARY GUARD CORPS RESEARCH AND SELF-SUFFICIENCY JIHAD ORGANIZATION",
+    "ISLAMIC REVOLUTIONARY GUARD CORPS SELF-SUFFICIENCY JEHAD ORGANIZATION"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "IR",
+  "type": "military",
+  "location": null,
+  "supervisors": [
+    "Islamic Revolutionary Guard Corps (IRGC)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "OFAC lists it as the Islamic Revolutionary Guard Corps Research and Self-Sufficiency Jehad Organization, the research and self-sufficiency organization of Iran’s Islamic Revolutionary Guard Corps (IRGC), under its IRGC and weapons-of-mass-destruction proliferators programmes.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to Iran’s Islamic Revolutionary Guard Corps (IRGC).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sanctions List Search: Islamic Revolutionary Guard Corps Research and Self-Sufficiency Jehad Organization (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=22693",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031225229/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=22693"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and the US SDN list and Japan’s End User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
