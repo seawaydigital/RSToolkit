@@ -25,20 +25,47 @@
     "ror": "03dgaqz26",
     "wikidata": "Q5104676"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "secrecy-qualification",
+      "summary": "CQUPT’s profile lists a Grade 2 secrecy qualification for weapons and equipment research and production units (国防武器装备科研生产单位二级保密资格).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校概况 (About the university; as archived in April 2019)",
+      "publisher": "Chongqing University of Posts and Telecommunications",
+      "url": "http://www.cqupt.edu.cn/cqupt/h_school_info.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20190410162849/http://www.cqupt.edu.cn:80/cqupt/h_school_info.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
