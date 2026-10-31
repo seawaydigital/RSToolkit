@@ -20,6 +20,7 @@ const TOOL_COMPONENTS = {
   'risk-mitigation': lazy(() => import('./tools/compliance/RiskMitigation')),
   'dual-use': lazy(() => import('./tools/compliance/DualUseGuide')),
   'export-control': lazy(() => import('./tools/reference/ExportControl')),
+  'due-diligence-sources': lazy(() => import('./tools/reference/DueDiligenceSources')),
   'glossary': lazy(() => import('./tools/reference/Glossary')),
   'faq': lazy(() => import('./tools/reference/Faq')),
   'how-it-works': lazy(() => import('./tools/reference/HowItWorks')),

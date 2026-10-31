@@ -6380,3 +6380,314 @@ a:hover {
 }
 
 .scr-guide a:hover { color: var(--link-hover); }
+
+/* ---------------------------------------------------------------------------
+   Due Diligence Sources (Reference), prefix dds-. Badges are neutral or sky
+   tints, never Blaze (reserved for interactive elements) and never green.
+   --------------------------------------------------------------------------- */
+.dds-intro {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cobalt);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin: 0 0 8px;
+}
+
+.dds-heading {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 28px 0 10px;
+}
+
+.dds-help {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 6px 0 10px;
+}
+
+.dds-note {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.dds-muted { color: var(--text-muted); }
+
+.dds-table-wrap { overflow-x: auto; }
+
+.dds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.dds-table th,
+.dds-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dds-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dds-table tbody th {
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 220px;
+}
+
+.dds-inline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dds-inline-list li { margin: 0 0 4px; }
+
+.dds-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.dds-link-button:hover { color: var(--link-hover); }
+
+.dds-intro a,
+.dds-help a,
+.dds-table a,
+.dds-card-body a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dds-intro a:hover,
+.dds-help a:hover,
+.dds-table a:hover,
+.dds-card-body a:hover { color: var(--link-hover); }
+
+.dds-sources-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dds-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.dds-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dds-button:hover {
+  border-color: var(--accent);
+  background: var(--bg-tertiary);
+}
+
+.dds-status {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.dds-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0 0 8px;
+}
+
+.dds-card-heading {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dds-card-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dds-card-name { flex: 1; }
+
+.dds-badge {
+  flex-shrink: 0;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+}
+
+.dds-badge--official {
+  color: var(--link);
+  background: rgba(111, 178, 232, 0.12);
+  border-color: rgba(111, 178, 232, 0.4);
+}
+
+.dds-card-body {
+  padding: 0 18px 14px 42px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.dds-card-body p { margin: 0 0 10px; }
+
+.dds-card-body h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 12px 0 4px;
+}
+
+.dds-card-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.dds-card-body li { margin-bottom: 4px; }
+
+.dds-runby {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.dds-caution {
+  padding: 8px 10px;
+  font-size: 12.5px;
+  background: var(--amber-subtle);
+  border-left: 3px solid var(--amber);
+  border-radius: 4px;
+}
+
+.dds-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 4px 24px;
+}
+
+.dds-example {
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.dds-example-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dds-facts {
+  display: grid;
+  grid-template-columns: minmax(150px, max-content) 1fr;
+  gap: 4px 16px;
+  margin: 12px 0;
+}
+
+.dds-facts dt {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dds-facts dd { margin: 0; }
+
+.dds-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+}
+
+.dds-checked {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dds-paid { margin: 10px 0 0; }
+
+.dds-rules {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.dds-rules li { margin-bottom: 8px; }
+.dds-rules strong { color: var(--text-primary); font-weight: 500; }
+
+.dds-template {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .dds-card-body { padding-left: 16px; }
+  .dds-facts { grid-template-columns: 1fr; }
+  .dds-table tbody th { min-width: 160px; }
+}
+
+@media print {
+  .dds-no-print { display: none !important; }
+  .tool-page .dds-card-body[hidden] { display: block !important; }
+  .tool-page [class*="dds-"] {
+    color: #000 !important;
+    background: transparent !important;
+    border-color: #9ca3af !important;
+  }
+  .tool-page .dds-card { break-inside: avoid; }
+  .tool-page [class*="dds-"] a { color: #00427a !important; }
+}

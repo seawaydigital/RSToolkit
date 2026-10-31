@@ -18,6 +18,7 @@ export const riskMitigationData = {
           why: 'Foreign state actors have used academic positions — including graduate students and visiting scholars — to access sensitive research. Unverifiable backgrounds are a warning sign.',
           how: 'Review CVs, check publication records on Google Scholar or Scopus, verify prior institutional affiliations, and conduct an open-source web search for each person. For high-risk projects, consult your institution\'s research security office.',
           tags: ['always'],
+          relatedTool: 'due-diligence-sources',
         },
         {
           id: 'pers-2',
@@ -76,6 +77,7 @@ export const riskMitigationData = {
           why: 'State-linked entities may not present themselves as such. Foreign government ownership or control — even indirect — is a key partner risk factor under the NSGRP (Annex B), and it matters for sanctions screening where the owner is a listed person.',
           how: 'Use commercial databases (Pitchbook, Crunchbase, OpenCorporates) and corporate registry searches to map ownership chains. Look for sovereign wealth fund investment, state-owned enterprise connections, or board members with state affiliations. Check financial news for recent ownership changes.',
           tags: ['partnership', 'international'],
+          relatedTool: 'due-diligence-sources',
         },
         {
           id: 'dd-4',
@@ -84,6 +86,7 @@ export const riskMitigationData = {
           why: 'A partner\'s publication and patent record reveals their true research focus. Discrepancies between stated civilian purposes and a record of military-themed outputs are a significant red flag.',
           how: 'Search Google Scholar, Scopus, Web of Science, Google Patents, and Espacenet using the organization\'s name and key personnel names. Look for co-publications with military institutions, patents assigned to state entities, or topics inconsistent with stated civilian purposes.',
           tags: ['partnership', 'stra'],
+          relatedTool: 'due-diligence-sources',
         },
         {
           id: 'dd-5',
