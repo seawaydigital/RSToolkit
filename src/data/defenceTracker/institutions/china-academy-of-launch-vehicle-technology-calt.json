@@ -1,0 +1,92 @@
+{
+  "id": "china-academy-of-launch-vehicle-technology-calt",
+  "name": "China Academy of Launch Vehicle Technology (CALT)",
+  "zh": "中国运载火箭技术研究院",
+  "zhAliases": [],
+  "aliases": [
+    "China Carrier Rocket Technology Research Institute",
+    "First Academy of the China Aerospace Science Technology Corporation",
+    "Wanyuan Company"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": {
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "China Aerospace Science and Technology Corporation (CASC)"
+  ],
+  "parent": "china-aerospace-science-and-technology-corporation",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "CASC lists the China Academy of Launch Vehicle Technology (中国运载火箭技术研究院) among its eight research academies. CASC is one of the state-owned defence-industry groups that SASTIND lists, and says it researches, designs, builds and tests strategic and tactical missiles as well as launch vehicles and spacecraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to CASC, which describes itself as a very large state-owned enterprise and a cornerstone of China’s national security strategy.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About CASC)",
+      "publisher": "China Aerospace Science and Technology Corporation",
+      "url": "http://www.spacechina.com/n25/n142/n152/n164/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260828005958/https://www.spacechina.com/n25/n142/n152/n164/index.html"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on Japan’s End User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
