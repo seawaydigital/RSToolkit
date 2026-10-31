@@ -1,0 +1,90 @@
+{
+  "id": "tactical-missile-corporation-concern-mpo-gidropribor",
+  "name": "Tactical Missile Corporation, Concern “MPO – Gidropribor”",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Joint Stock Company Concern Sea Underwater Weapons Gidropribor",
+    "Research Institute “Gidpropridor”",
+    "Central Research Institute “Gidropribor”",
+    "Tactical Missile Corporation, Concern “MPO—Gidropribor”",
+    "Концерн «Морское подводное оружие — Гидроприбор"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "RU",
+  "type": "defence-industry",
+  "location": null,
+  "supervisors": [
+    "Tactical Missiles Corporation (KTRV)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Commerce Department added it to the Entity List in April 2022 as “Tactical Missile Corporation, Concern “MPO – Gidropribor””, a unit of the Tactical Missiles Corporation (KTRV), which the US Treasury calls a large, state-owned Russian defence conglomerate. The Treasury lists Joint Stock Company Concern Sea Underwater Weapon Gidropribor, a maker of naval underwater weapons, among the 28 entities that are part of KTRV’s structure.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to the Tactical Missiles Corporation (KTRV), a Russian state-owned defence conglomerate.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Additions of Entities to the Entity List (87 FR 20295, 7 April 2022)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2022-04-07/html/2022-07284.htm",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031231625/https://www.govinfo.gov/content/pkg/FR-2022-04-07/html/2022-07284.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "U.S. Treasury Sanctions Russia’s Defense-Industrial Base, the Russian Duma and Its Members, and Sberbank CEO (24 March 2022)",
+      "publisher": "US Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/jy0677",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031230401/https://home.treasury.gov/news/press-releases/jy0677"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Entity List and the Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
