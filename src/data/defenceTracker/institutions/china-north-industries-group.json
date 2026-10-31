@@ -1,8 +1,9 @@
 {
   "id": "china-north-industries-group",
   "name": "China North Industries Group",
-  "zh": "中国兵器工业集团公司",
+  "zh": "中国兵器工业集团有限公司",
   "zhAliases": [
+    "中国兵器工业集团公司",
     "中国北方工业集团公司"
   ],
   "aliases": [
@@ -27,20 +28,48 @@
   "ids": {
     "misp": "e759cb49-508c-4f5f-a279-583311e86d58"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists China North Industries Group (中国兵器工业集团有限公司, NORINCO) among China’s defence-industry group companies (军工集团).",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Chinese name updated to the current company name, with the former one kept."
     }
   ],
   "seedNotes": {
