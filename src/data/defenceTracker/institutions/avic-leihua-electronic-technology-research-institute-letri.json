@@ -1,0 +1,98 @@
+{
+  "id": "avic-leihua-electronic-technology-research-institute-letri",
+  "name": "AVIC Leihua Electronic Technology Research Institute (LETRI)",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "AVIC Leihua Electronic Technology Research Institute"
+  ],
+  "acronyms": [
+    "LETRI"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "defence-industry",
+  "location": null,
+  "supervisors": [
+    "Aviation Industry Corporation of China (AVIC)"
+  ],
+  "parent": "aviation-industry-corporation-of-china",
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "The US Military End-User List names it among seven subordinate institutions of AVIC that the US government determined to be military end users, in December 2020. AVIC is one of the state-owned defence-industry groups that SASTIND lists, and says its businesses include aviation weapons and equipment and military transport aircraft.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It belongs to AVIC, which describes itself as a very large state-owned enterprise managed by the central government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s3"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "title": "Addition of ‘Military End User’ (MEU) List to the Export Administration Regulations and Addition of Entities to the MEU List (85 FR 83793, 23 December 2020)",
+      "publisher": "US Department of Commerce, Bureau of Industry and Security (Federal Register)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2020-12-23/html/2020-28052.htm",
+      "lang": "en",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031204902/https://www.govinfo.gov/content/pkg/FR-2020-12-23/html/2020-28052.htm"
+      },
+      "id": "s1",
+      "accessed": "2026-10-31"
+    },
+    {
+      "id": "s2",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "集团简介 (About AVIC)",
+      "publisher": "Aviation Industry Corporation of China",
+      "url": "https://www.avic.com.cn/c/2021-03-26/511215.shtml",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031183425/https://www.avic.com.cn/c/2021-03-26/511215.shtml?PC=PC"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listing on the US Military End-User List; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
