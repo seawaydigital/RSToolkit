@@ -1,8 +1,10 @@
 {
   "id": "china-state-shipbuilding-corporation",
   "name": "China State Shipbuilding Corporation",
-  "zh": "中国船舶工业集团有限公司",
+  "zh": "中国船舶集团有限公司",
   "zhAliases": [
+    "中国船舶工业集团有限公司",
+    "中国船舶工业集团公司",
     "中船集团"
   ],
   "aliases": [
@@ -23,20 +25,70 @@
   "ids": {
     "misp": "9b207b07-7b8f-4611-aabf-1eb889f3a169"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists China State Shipbuilding Corporation Limited (中国船舶集团有限公司) among China’s defence-industry group companies (军工集团). SASTIND reported at its founding in November 2019 that it would be the main force in researching, designing, building, testing and supporting the PLA Navy’s weapons and equipment, including all of the navy’s main combat equipment, such as aircraft carriers and nuclear submarines.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It was formed in late 2019, with the approval of the Party Central Committee and the State Council, by merging the former China State Shipbuilding Corporation (中国船舶工业集团有限公司) with China Shipbuilding Industry Corporation (CSIC).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "全球最大造船集团——中国船舶集团有限公司揭牌 (The world’s largest shipbuilding group, China State Shipbuilding Corporation Limited, is unveiled; 26 November 2019, from CCTV)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260723165202/https://www.sastind.gov.cn/n10086200/n10086344/c10157305/content.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Chinese name updated to the group formed in 2019, with the former group’s name kept."
     }
   ],
   "seedNotes": {
