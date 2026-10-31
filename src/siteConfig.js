@@ -88,3 +88,19 @@ export const SHOW_SISTER_SITE_CARD = true;
  * file, run `npm run dev:tracker`.
  */
 export const ENABLE_DEFENCE_TRACKER = false;
+
+/**
+ * Whether Sanctions Screening (OpenSanctions bulk screening, with its built-in
+ * list builder) is shown.
+ *
+ * Sanctions Screening sends the names, types, countries and birth dates on a
+ * user's list, with the user's own OpenSanctions API key, to
+ * api.opensanctions.org. Like the proximity panel, that is user input leaving
+ * the browser, so it is a policy call for the host. While false, the tool,
+ * every mention of it on How This Site Works and in the FAQ, and the
+ * OpenSanctions host in the page's connect-src are left out of the build. To
+ * preview the tool locally without changing this file, run
+ * `npm run dev:screening`. If you switch it on, add api.opensanctions.org to
+ * connect-src in your header CSP too (HANDOFF.md §4).
+ */
+export const ENABLE_SANCTIONS_SCREENING = false;

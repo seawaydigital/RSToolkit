@@ -2,7 +2,7 @@
 
 Everything needed to build, host, configure, and maintain the Research Security Toolkit.
 
-**Last updated: 2026-10-25**
+**Last updated: 2026-10-28**
 
 ---
 
@@ -51,6 +51,125 @@ Keep the redirect for as long as anything may cite the old links. Records copied
 
 Node 20 or newer — `package.json`'s `engines` field states that floor. The GitHub Actions workflow and `.nvmrc` both use **Node 24**, which is what the deployed site is actually built with; treat that as the tested configuration and `>=20` as the supported range. The workflow is a working reference even if you deploy differently.
 
+### 2a. Deploying to a server without GitHub
+
+Nothing here needs GitHub Actions, a webhook, or the server reaching GitHub. A release is a tarball built on a workstation, copied to the server, and switched live by one script.
+
+Two scripts do the work:
+
+| Script | Runs on | Does |
+|---|---|---|
+| [`scripts/build-release.sh`](scripts/build-release.sh) | A workstation with Node and git (Linux, macOS, or Git Bash on Windows) | Refuses uncommitted changes, then runs the same gates as CI: `npm ci`, `npm audit --audit-level=high`, `npm run lint`, `npm test`, `npm run build`. Packages `dist/` as `release/rs-toolkit-<UTC time>-<commit>.tar.gz` with a `.sha256` file. Prints the canonical URL baked into the build. |
+| [`scripts/install-release.sh`](scripts/install-release.sh) | The web server (Linux, bash, GNU tar) | Checks the checksum. Refuses a tarball containing absolute paths, `..`, symlinks or special files. Unpacks it into a new directory under `releases/`, then switches the live symlink to it in a single rename. Keeps the 5 newest releases, logs every action to `releases/deploy.log`, and supports `--rollback`, `--switch <id>` and `--list`. |
+
+**Server layout.** The web server's document root is a symlink:
+
+```
+/var/www/rs-toolkit/            owned by the deploy account
+  current -> releases/<id>      the document root in §4a's configs
+  releases/
+    20261023T161522Z-8a9a2c212379/
+    ...
+    deploy.log
+```
+
+Switching releases replaces `current` in one atomic rename, so no visitor ever gets a half-copied site. Rollback is the same single step. With default settings, neither nginx nor Apache needs a reload. If nginx has `open_file_cache` turned on, reload it after each switch.
+
+**One-time server setup** (as an administrator):
+
+```bash
+sudo useradd --system --create-home rs-deploy                       # or use an existing deploy account
+sudo install -d -o rs-deploy -g rs-deploy -m 755 /var/www/rs-toolkit
+sudo install -o root -g root -m 755 install-release.sh /usr/local/bin/rs-toolkit-install
+```
+
+Copy `scripts/install-release.sh` to the server first. The web server's user needs only read access, and the script sets release files to `u=rwX,go=rX`. If `/var/www/rs-toolkit` already exists as a plain folder of site files, move it aside first. The script refuses to replace a real directory.
+
+**Each release:**
+
+```bash
+# 1. On a workstation, from a clean checkout of the commit to ship
+git switch master && git pull
+SITE_URL=https://rs.example.lakeheadu.ca scripts/build-release.sh
+
+# 2. Copy both files to the server
+scp release/rs-toolkit-<id>.tar.gz release/rs-toolkit-<id>.tar.gz.sha256 rs-deploy@server:/tmp/
+
+# 3. On the server, as the deploy account
+rs-toolkit-install /tmp/rs-toolkit-<id>.tar.gz
+
+# 4. Check it (the §4a curl checks, and the site in a browser)
+# 5. If anything is wrong
+rs-toolkit-install --rollback
+```
+
+The tarball has no `.git` folder, source maps or build tooling, only what is served.
+
+Things to know:
+- **The checksum catches a damaged or truncated copy. It does not prove who built the file.** Both files travel over the same channel. What protects the release is the build running on a trusted workstation from a reviewed commit, and only the deploy account being able to write to `/var/www/rs-toolkit`.
+- **`SITE_URL` and the map-tile keys are fixed at build time**, so build for the address the release will be served from. `SITE_URL` can be passed as an environment variable. `WEB_HOST` cannot: set it in `src/siteConfig.js` and commit before building (§3a).
+- **Apache:** the configs in §4a set `-FollowSymLinks` on the document root. That governs links *inside* the site, and a release contains none. The `current` link itself is checked against the options of its parent folder. Stock Apache allows that, but if a hardened server returns 403 with "Symbolic link not allowed" in the error log, add `Options SymLinksIfOwnerMatch` to a `<Directory /var/www/rs-toolkit>` block. Do not add it to the document root.
+- **IIS** is not covered by `install-release.sh`, which is a Linux script. Unpack the tarball into a new folder, add the `web.config` from §4a, and point the site's physical path at it. To roll back, point it back.
+- **Tested:** `install-release.sh` was exercised on Ubuntu (WSL) on 2026-10-23. Install, prune, rollback, switch, and refusal of a corrupt file, missing checksum, symlink member, `..` member, a reinstalled id and a real-directory document root all passed. The real build was served through the `current` link by a test HTTP server. `build-release.sh` was run in Git Bash on Windows. **Not yet tested:** serving a switched release through a real nginx or Apache. Do that on the staging hostname before going live (§2b, step 3).
+
+### 2b. Moving from rs.rdmtoolkit.ca to a Lakehead subdomain
+
+The site currently runs on GitHub Pages at `rs.rdmtoolkit.ca`. Move it in this order, so the old address keeps working until the new one is proven.
+
+**Before the switch**
+1. **Get the new hostname, server and certificate** from TSC (or whoever hosts it), with HTTPS working.
+2. **Apply the §4a server config** with the document-root layout from §2a.
+3. **Deploy to a staging hostname first.** Build with `SITE_URL` set to the staging URL. Then run the §4a `curl` checks and the browser checks (no CSP errors on the home page and `#nro-lookup`, and the map tiles load). This is the first test of the symlink layout behind a real web server.
+
+**The switch**
+
+4. **Change `src/siteConfig.js`, in a PR:**
+   - `SITE_URL`: the new `https://` address
+   - `WEB_HOST`: who now serves the files, for example "Lakehead University (TSC)"
+
+   The How This Site Works page takes the host name from `WEB_HOST`. Merge it.
+5. **Build from master and deploy to production** with §2a. Run the §4a checks against the real hostname.
+
+**Retiring GitHub Pages** (only after step 5 checks out)
+
+6. **Keep the old address as a redirect for as long as anything may cite it**: at least three months for bookmarks and printed links, and longer once Defence Institution Tracker records copied into research security files cite their permalinks. The redirect must keep the `#…` part of old links (see "Moving to a new address" in §2). A meta refresh drops it and sends every deep link to the home page, so don't use one.
+
+   GitHub Pages cannot send HTTP redirects. Replace what the `build` job publishes with three files: `index.html`, a copy of it named `404.html` (Pages serves that for any other old path), and `redirect.js`.
+
+   `index.html` and `404.html`:
+
+   ```html
+   <!doctype html>
+   <meta charset="utf-8">
+   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'">
+   <title>Research Security Toolkit has moved</title>
+   <link rel="canonical" href="https://rs.example.lakeheadu.ca/">
+   <script src="/redirect.js"></script>
+   <p>The Research Security Toolkit has moved to <a href="https://rs.example.lakeheadu.ca/">rs.example.lakeheadu.ca</a>.</p>
+   ```
+
+   `redirect.js`:
+
+   ```js
+   // Sends an old link to the same page at the new address, keeping its path and its #… part.
+   location.replace('https://rs.example.lakeheadu.ca' + location.pathname + location.search + location.hash);
+   ```
+
+   So `rs.rdmtoolkit.ca/#defence-tracker/<institution>` opens the same profile at the new address. The script is its own file, so the page needs no `'unsafe-inline'`, and `location.replace` leaves the old address out of the browser's history. The link on the page is for visitors with JavaScript turned off, and takes them to the new home page.
+
+   If `rs.rdmtoolkit.ca` can instead point at something that sends HTTP 301 or 308 redirects (the new server, or a redirect rule at a DNS or CDN provider), that keeps the `#…` part too and lets Pages close sooner. Keep that redirect just as long.
+7. **Only when the redirect is no longer needed, shut Pages down completely:**
+   - In `.github/workflows/deploy.yml`, delete the `build` and `deploy` jobs, which includes the "Write CNAME" step. **Keep `verify`**: branch protection on master requires a check named exactly `verify`.
+   - Unpublish the site in the repo's Settings → Pages.
+   - Delete the `rs` CNAME record for `rdmtoolkit.ca` at the DNS provider (CanSpace).
+8. **Close off subdomain takeover.** A DNS record still pointing at GitHub Pages after the site is unpublished lets anyone claim `rs.rdmtoolkit.ca` from their own repo. Before step 7, confirm `rdmtoolkit.ca` is a **verified domain** in the GitHub organization's settings (Settings → Pages → verified domains). Verification blocks other accounts from using it even if a record lingers.
+9. **Update links elsewhere:**
+   - The RDM Toolkit (rdmtoolkit.ca) links to this site and needs the new address.
+   - Lakehead web pages, email signatures and slide decks.
+   - `README.md` and CLAUDE.md in this repo, which name `rs.rdmtoolkit.ca` as the live site.
+
+**Rollback during the switch:** until step 6, GitHub Pages still has the old site. Reverting the step 4 PR and pushing to master republishes it at `rs.rdmtoolkit.ca` within minutes.
+
 ---
 
 ## 3. Configure before going live
@@ -65,6 +184,7 @@ Node 20 or newer — `package.json`'s `engines` field states that floor. The Git
 | `WEB_HOST` | **Who serves the files**, e.g. `'Lakehead University web servers'` | Named on the How This Site Works page, which promises a *complete* list of every party that sees a request from the site. If a proxy or CDN sits in front, name it too (e.g. `'Cloudflare, which forwards them to Lakehead University web servers'`). Leaving it as `GitHub Pages` after moving makes the privacy page false. |
 | `ENABLE_PROXIMITY_SEARCH` | `false` if no user input may leave the browser | The NRO map's proximity panel is the **only** feature that sends what a user types off the device (to OpenStreetMap and Wikipedia). `false` removes the panel and every mention of it on How This Site Works and in the FAQ. If you turn it off, also delete the two geocoder hosts from `connect-src` (in `index.html` and in your header CSP). |
 | `SHOW_SISTER_SITE_CARD` | `false` if you don't want an off-site link | Controls the "RDM Toolkit" card at the bottom of the sidebar, which links to rdmtoolkit.ca — a separate project by the original author |
+| `ENABLE_SANCTIONS_SCREENING` | `true` only if users may send names to OpenSanctions, and only once the licensing question is settled | Shows Sanctions Screening (with its built-in list builder). OpenSanctions counts compliance screening as commercial use even when it earns nothing, so its users need keys that come with a data licence, not the free journalist or researcher keys (checked 2026-10-30); confirm with OpenSanctions before switching this on. Screening sends the names on a user's list, with that user's own OpenSanctions API key, to `api.opensanctions.org`. While `false`, the tool, their mentions on How This Site Works and in the FAQ, and the OpenSanctions host in `index.html`'s `connect-src` are left out of the build. If you set it to `true`, add `https://api.opensanctions.org` to `connect-src` in your header CSP as well (§4). |
 | `ENABLE_DEFENCE_TRACKER` | Leave `false` until the tracker's launch gates are met (§7a) | Shows the Defence Institution Tracker, its links from other tools, and its open-data files. While `false`, none of it is in the build. |
 
 ### 3b. `index.html` — nothing to edit for the domain
@@ -125,7 +245,7 @@ form-action 'none';
 frame-ancestors 'none';
 ```
 
-Every allowance is in use and nothing else is: fonts are self-hosted (no Google Fonts), `img-src` is the three basemap providers plus `data:` for the inlined Leaflet marker icons, and `connect-src` is the two geocoders behind the NRO proximity panel. If `ENABLE_PROXIMITY_SEARCH` is `false`, reduce `connect-src` to `'self'`. If you use only one basemap provider, you may trim the other two from `img-src`.
+Every allowance is in use and nothing else is: fonts are self-hosted (no Google Fonts), `img-src` is the three basemap providers plus `data:` for the inlined Leaflet marker icons, and `connect-src` is the two geocoders behind the NRO proximity panel. If `ENABLE_PROXIMITY_SEARCH` is `false`, reduce `connect-src` to `'self'`. If `ENABLE_SANCTIONS_SCREENING` is `true`, add `https://api.opensanctions.org` to `connect-src`: the meta tag gets it automatically at build time, the header does not, and a request must pass both. If you use only one basemap provider, you may trim the other two from `img-src`.
 
 `script-src` deliberately has **no** `'unsafe-inline'`. The production build emits one external module script and no inline scripts or handlers, so the allowance was never needed — and it is precisely what an injected `onerror=` attribute would need in order to execute. Do not add it back to silence a warning; find the source of the inline script instead. (`style-src` does still need `'unsafe-inline'`: React and Leaflet both set inline `style` attributes.)
 
@@ -142,7 +262,7 @@ Every config below does the same five things:
 4. It turns off directory listings and server version banners.
 5. It redirects HTTP to HTTPS.
 
-Replace `rs.example.lakeheadu.ca` and the document root with your own values.
+Replace `rs.example.lakeheadu.ca` and the document root with your own values. The document root `/var/www/rs-toolkit/current` is the symlink that the deploy procedure in [§2a](#2a-deploying-to-a-server-without-github) switches between releases.
 
 <details>
 <summary><strong>nginx</strong></summary>
@@ -179,7 +299,7 @@ server {
     server_name rs.example.lakeheadu.ca;
     # ssl_certificate / ssl_certificate_key: your institutional certificate
 
-    root /var/www/rs-toolkit;      # the contents of dist/
+    root /var/www/rs-toolkit/current;   # symlink to the live release (§2a)
     index index.html;
     server_tokens off;
     autoindex off;
@@ -223,10 +343,10 @@ TraceEnable Off
 
 <VirtualHost *:443>
     ServerName rs.example.lakeheadu.ca
-    DocumentRoot /var/www/rs-toolkit
+    DocumentRoot /var/www/rs-toolkit/current
     # SSLEngine on / SSLCertificateFile / SSLCertificateKeyFile: your certificate
 
-    <Directory /var/www/rs-toolkit>
+    <Directory /var/www/rs-toolkit/current>
         Options -Indexes -Includes -ExecCGI -FollowSymLinks
         AllowOverride None
         <LimitExcept GET HEAD>
@@ -391,6 +511,7 @@ Three external dependencies, and none of them is contacted on an ordinary page l
 | **Basemap tiles** — Esri (`server.arcgisonline.com`) by default, or CARTO (`*.basemaps.cartocdn.com`) / Stadia (`tiles.stadiamaps.com`) with a key | The NRO map background | The map needs a tile source. Providers are configured in `src/data/mapTiles.js`; add a new one there **and add its host to `img-src` in `index.html`**, or the tiles silently fail to load. See the note below. |
 | **Nominatim** (`nominatim.openstreetmap.org`) | Primary geocoder for the NRO "Check proximity to NROs" panel | Set `ENABLE_PROXIMITY_SEARCH = false` in `src/siteConfig.js` and drop the host from `connect-src`. See the note below. |
 | **Wikipedia** (`en.wikipedia.org`) | Fallback geocoder for the same panel, used only when Nominatim finds nothing | Same switch as Nominatim. |
+| **OpenSanctions API** (`api.opensanctions.org`) | Sanctions Screening, only when a user presses *Screen*, with the user's own API key (one request per entry) | Off unless `ENABLE_SANCTIONS_SCREENING` is `true`; the build adds or drops the host in the meta CSP by itself. |
 
 **About the basemap — worth two minutes of your time.** The map plots Chinese, Russian and Iranian institutions, so **English place labels are a functional requirement**, not a preference. CARTO began enforcing API keys in August 2026, which is why the default is now keyless Esri. Esri renders Latin labels through zoom 10 — correct everywhere the UI actually navigates — but switches to local script (Hanzi / Cyrillic / Perso-Arabic) past that if a user zooms in manually.
 

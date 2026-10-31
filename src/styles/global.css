@@ -5898,3 +5898,796 @@ a:hover {
   .tool-page .dit-banner--sanctions { border-width: 2px !important; }
   .tool-page .dit-badge { border: 1px solid #000 !important; }
 }
+
+/* ---------------------------------------------------------------------------
+   Sanctions Screening (OpenSanctions) and its built-in list builder,
+   prefix scr-. Status colours are semantic (red/amber), never
+   Blaze, which is reserved for interactive elements.
+   --------------------------------------------------------------------------- */
+.scr-banner {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin: 0 0 20px;
+}
+
+.scr-banner p { margin: 0 0 6px; }
+.scr-banner ul { margin: 0; padding-left: 20px; font-family: var(--font-mono); font-size: 12px; }
+
+.scr-banner a,
+.scr-help a,
+.scr-privacy a,
+.scr-footnote a,
+.scr-table a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.scr-banner a:hover,
+.scr-help a:hover,
+.scr-privacy a:hover,
+.scr-footnote a:hover,
+.scr-table a:hover {
+  color: var(--link-hover);
+}
+
+.scr-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.scr-input {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.scr-input:focus,
+.scr-key-input:focus,
+.scr-cell-input:focus,
+.scr-select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.scr-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.scr-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.scr-button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--bg-tertiary);
+}
+
+.scr-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Text on Blaze must be dark (white measures ~1.6:1). */
+.scr-button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #061727;
+  font-weight: 500;
+}
+
+.scr-button--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* The file input sits inside its label: it stays focusable, and the label
+   shows the focus ring. */
+.scr-file {
+  position: relative;
+}
+
+.scr-file input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.scr-file:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.scr-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.scr-link-button:hover {
+  color: var(--link-hover);
+}
+
+.scr-table .scr-link-button {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.scr-status {
+  min-height: 1.2em;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+
+.scr-progress {
+  width: 100%;
+  max-width: 420px;
+  accent-color: var(--accent);
+}
+
+.scr-heading {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 28px 0 10px;
+}
+
+/* The list builder opens inside section 1, set off from the rest of the page. */
+.scr-builder {
+  margin: 4px 0 8px;
+  padding: 16px 18px 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cobalt);
+  border-radius: var(--radius);
+}
+
+.scr-builder .scr-input,
+.scr-builder .scr-cell-input {
+  background: var(--bg-primary);
+}
+
+.scr-subheading {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 18px 0 8px;
+}
+
+.scr-heading:focus {
+  outline: none;
+}
+
+.scr-heading:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.scr-heading-note {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.scr-help,
+.scr-footnote {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 6px 0 12px;
+}
+
+.scr-privacy {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: var(--amber-subtle);
+  border-left: 3px solid var(--amber);
+  border-radius: 4px;
+}
+
+.scr-privacy strong {
+  color: var(--amber);
+}
+
+.scr-key-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.scr-key-row .scr-label {
+  margin: 0;
+}
+
+.scr-key-input,
+.scr-select,
+.scr-cell-input {
+  padding: 8px 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13.5px;
+}
+
+.scr-key-input {
+  width: min(360px, 100%);
+  font-family: var(--font-mono);
+}
+
+.scr-settings {
+  display: grid;
+  gap: 6px;
+  max-width: 560px;
+}
+
+.scr-settings .scr-label {
+  margin: 8px 0 0;
+}
+
+.scr-table-wrap {
+  overflow-x: auto;
+}
+
+.scr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.scr-table th,
+.scr-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.scr-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.scr-edit-table td {
+  padding: 6px 8px;
+}
+
+.scr-cell-input {
+  width: 100%;
+  min-width: 120px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.scr-cell-input--date {
+  min-width: 110px;
+  font-family: var(--font-mono);
+}
+
+.scr-source {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  max-width: 280px;
+  word-break: break-word;
+}
+
+.scr-note {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.scr-muted {
+  color: var(--text-muted);
+}
+
+.scr-flag {
+  display: inline-block;
+  margin: 4px 4px 0 0;
+  padding: 1px 8px;
+  font-size: 11.5px;
+  color: var(--amber);
+  background: var(--amber-subtle);
+  border: 1px solid rgba(240, 168, 54, 0.45);
+  border-radius: 999px;
+}
+
+.scr-row--check td {
+  background: rgba(240, 168, 54, 0.06);
+}
+
+.scr-icon-button {
+  display: inline-flex;
+  padding: 6px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.scr-icon-button:hover {
+  color: var(--red);
+  border-color: var(--border-light);
+}
+
+.scr-result-cell {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.scr-result--match td {
+  background: var(--red-subtle);
+}
+
+.scr-result--match .scr-result-cell {
+  color: var(--red);
+}
+
+.scr-result--possible td {
+  background: rgba(240, 168, 54, 0.06);
+}
+
+.scr-result--possible .scr-result-cell {
+  color: var(--amber);
+}
+
+.scr-result--none .scr-result-cell {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.scr-result--error .scr-result-cell {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.scr-candidates {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.scr-candidates li {
+  margin-bottom: 6px;
+}
+
+.scr-logline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 14px 0 10px;
+}
+
+@media print {
+  .scr-no-print { display: none !important; }
+  .tool-page [class*="scr-"] {
+    color: #000 !important;
+    background: transparent !important;
+    border-color: #9ca3af !important;
+    box-shadow: none !important;
+  }
+  .tool-page .scr-table th, .tool-page .scr-table td { color: #000 !important; }
+  .tool-page .scr-note, .tool-page .scr-muted, .tool-page .scr-footnote { color: #374151 !important; }
+  .tool-page [class*="scr-"] a { color: #00427a !important; text-decoration: underline !important; }
+  .tool-page .scr-result--match .scr-result-cell { font-weight: 700 !important; }
+}
+
+/* Sanctions Screening: the how-to box at the top and the results guide. */
+.scr-howto {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cobalt);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 0 0 8px;
+}
+
+.scr-howto-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.scr-howto p { margin: 0 0 8px; }
+.scr-howto ol { margin: 0; padding-left: 22px; }
+.scr-howto li { margin-bottom: 6px; }
+.scr-howto strong { color: var(--text-primary); font-weight: 500; }
+
+.scr-guide {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.scr-guide summary {
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.scr-guide[open] summary { margin-bottom: 8px; }
+.scr-guide dl { margin: 0 0 8px; }
+.scr-guide dt { color: var(--text-primary); font-weight: 500; margin-top: 8px; }
+.scr-guide dd { margin: 2px 0 0; }
+.scr-guide p { margin: 8px 0 0; }
+
+.scr-guide a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.scr-guide a:hover { color: var(--link-hover); }
+
+/* ---------------------------------------------------------------------------
+   Due Diligence Sources (Reference), prefix dds-. Badges are neutral or sky
+   tints, never Blaze (reserved for interactive elements) and never green.
+   --------------------------------------------------------------------------- */
+.dds-intro {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cobalt);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin: 0 0 8px;
+}
+
+.dds-heading {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 28px 0 10px;
+}
+
+.dds-help {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 6px 0 10px;
+}
+
+.dds-note {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.dds-muted { color: var(--text-muted); }
+
+.dds-table-wrap { overflow-x: auto; }
+
+.dds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.dds-table th,
+.dds-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dds-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dds-table tbody th {
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 220px;
+}
+
+.dds-inline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dds-inline-list li { margin: 0 0 4px; }
+
+.dds-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.dds-link-button:hover { color: var(--link-hover); }
+
+.dds-intro a,
+.dds-help a,
+.dds-table a,
+.dds-card-body a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dds-intro a:hover,
+.dds-help a:hover,
+.dds-table a:hover,
+.dds-card-body a:hover { color: var(--link-hover); }
+
+.dds-sources-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dds-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.dds-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dds-button:hover {
+  border-color: var(--accent);
+  background: var(--bg-tertiary);
+}
+
+.dds-status {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.dds-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 0 0 8px;
+}
+
+.dds-card-heading {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dds-card-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dds-card-name { flex: 1; }
+
+.dds-badge {
+  flex-shrink: 0;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+}
+
+.dds-badge--official {
+  color: var(--link);
+  background: rgba(111, 178, 232, 0.12);
+  border-color: rgba(111, 178, 232, 0.4);
+}
+
+.dds-card-body {
+  padding: 0 18px 14px 42px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.dds-card-body p { margin: 0 0 10px; }
+
+.dds-card-body h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 12px 0 4px;
+}
+
+.dds-card-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.dds-card-body li { margin-bottom: 4px; }
+
+.dds-runby {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.dds-caution {
+  padding: 8px 10px;
+  font-size: 12.5px;
+  background: var(--amber-subtle);
+  border-left: 3px solid var(--amber);
+  border-radius: 4px;
+}
+
+.dds-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 4px 24px;
+}
+
+.dds-example {
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.dds-example-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dds-facts {
+  display: grid;
+  grid-template-columns: minmax(150px, max-content) 1fr;
+  gap: 4px 16px;
+  margin: 12px 0;
+}
+
+.dds-facts dt {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dds-facts dd { margin: 0; }
+
+.dds-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 16px;
+}
+
+.dds-checked {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dds-paid { margin: 10px 0 0; }
+
+.dds-rules {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.dds-rules li { margin-bottom: 8px; }
+.dds-rules strong { color: var(--text-primary); font-weight: 500; }
+
+.dds-template {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .dds-card-body { padding-left: 16px; }
+  .dds-facts { grid-template-columns: 1fr; }
+  .dds-table tbody th { min-width: 160px; }
+}
+
+@media print {
+  .dds-no-print { display: none !important; }
+  .tool-page .dds-card-body[hidden] { display: block !important; }
+  .tool-page [class*="dds-"] {
+    color: #000 !important;
+    background: transparent !important;
+    border-color: #9ca3af !important;
+  }
+  .tool-page .dds-card { break-inside: avoid; }
+  .tool-page [class*="dds-"] a { color: #00427a !important; }
+}

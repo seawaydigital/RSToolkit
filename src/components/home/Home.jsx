@@ -9,7 +9,7 @@ const SCENARIOS = [
     desc: TRACKER_ENABLED
       ? 'Check whether a collaborator’s institution is on the Named Research Organizations list or other official lists, see its documented defence ties, and understand the compliance implications.'
       : 'Verify whether a potential collaborator or funder is on the Named Research Organizations list and understand the compliance implications.',
-    tools: ['nro-lookup', 'defence-tracker', 'strac-flowchart', 'risk-mitigation'],
+    tools: ['nro-lookup', 'defence-tracker', 'sanctions-screening', 'due-diligence-sources', 'strac-flowchart', 'risk-mitigation'],
   },
   {
     id: 'partnership-grant',

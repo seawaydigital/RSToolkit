@@ -19,8 +19,8 @@ export default defineConfig([
     ],
     languageOptions: {
       ecmaVersion: 2020,
-      // __TRACKER_ENABLED__ is the tracker launch flag, compiled in by vite.config.js.
-      globals: { ...globals.browser, __TRACKER_ENABLED__: 'readonly' },
+      // __TRACKER_ENABLED__ and __SCREENING_ENABLED__ are launch flags, compiled in by vite.config.js.
+      globals: { ...globals.browser, __TRACKER_ENABLED__: 'readonly', __SCREENING_ENABLED__: 'readonly' },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },

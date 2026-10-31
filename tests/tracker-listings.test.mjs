@@ -46,6 +46,14 @@ test('a numbered unit named after its group is a research body; its factories ar
   assert.equal(isResearchBody('Limited Liability Company Eluent Laboratories'), false);
 });
 
+// The Entity List names seven national supercomputing centres, research
+// facilities whose names carry no research word.
+test('a national supercomputing centre is a research body; a supercomputing company is not', () => {
+  assert.equal(isResearchBody('National Supercomputing Center Changsha (NSCC-CS)'), true);
+  assert.equal(isResearchBody('National Supercomputer Center Zhengzhou'), true);
+  assert.equal(isResearchBody('Shanghai Supercomputing Technology Co., Ltd.'), false);
+});
+
 const EL = 'Entity List (EL) - Bureau of Industry and Security';
 const known = (records) => {
   const index = buildMatchIndex(records.map((r) => ({ aliases: [], zh: null, zhAliases: [], acronyms: [], domains: [], ...r })));

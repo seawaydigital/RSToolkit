@@ -1,5 +1,6 @@
 import { ENABLE_PROXIMITY_SEARCH } from '../siteConfig';
 import { TRACKER_ENABLED } from './defenceTracker/enabled';
+import { SCREENING_ENABLED } from '../tools/compliance/screening/enabled';
 
 export const faqData = {
   lastUpdated: '2026-09-18',
@@ -219,6 +220,9 @@ export const faqData = {
             (ENABLE_PROXIMITY_SEARCH
               ? ' The single exception is the "Check proximity to NROs" panel on the NRO map, which sends the institution name you type to OpenStreetMap (and Wikipedia as a fallback) to find its coordinates — use it for institution names only.'
               : '') +
+            (SCREENING_ENABLED
+              ? ` Sanctions Screening is ${ENABLE_PROXIMITY_SEARCH ? 'the other' : 'the one'} exception: when you press Screen, it sends the names on your list, with your own API key, to OpenSanctions to check them.`
+              : '') +
             ' Compare that with asking a consumer AI chatbot, where your prompt is stored on the vendor\'s servers and may be used for training. The "How This Site Works" page lists every outbound request the site makes and shows you how to verify it yourself.',
           tags: ['privacy', 'safety', 'data', 'about'],
           relatedTools: ['how-it-works', 'cybersecurity-guide'],
@@ -235,6 +239,14 @@ export const faqData = {
               },
             ]
           : []),
+        {
+          id: 'help-sources',
+          question: 'Where else can I check a research partner, and how do I read what I find?',
+          answer:
+            'Start with the official lists: Canada\'s Named Research Organizations list and sanctions lists, and the UN Security Council\'s list. Open sources can add more, such as company registries for ownership, research registries for telling similar institutions apart, and publication and patent searches for what an organization works on. The Due Diligence Sources guide explains each one in plain language: what it is, what it can and cannot tell you, and how to read a result. Whatever you find, a matching name is not proof, finding nothing does not clear anyone, and your institution\'s research security office should be your first call when something turns up.',
+          tags: ['help', 'due diligence', 'osint', 'sources', 'partners', 'background check'],
+          relatedTool: 'due-diligence-sources',
+        },
         {
           id: 'help-stra-lookup',
           question: 'What tools in this toolkit should I use before submitting a grant?',
