@@ -1,23 +1,12 @@
 {
   "id": "china-aerospace-science-and-technology-corporation",
   "name": "China Aerospace Science and Technology Corporation",
-  "zh": "中国航天科技集团",
+  "zh": "中国航天科技集团有限公司",
   "zhAliases": [
+    "中国航天科技集团",
     "中国航天"
   ],
-  "aliases": [
-    "1st General Design Department of the China Aerospace Science and Technology Corporation’s First Academy (CALT)",
-    "Planning Department No 1 of the China Aerospace Science and Technology Corporation’s First Academy (CALT)",
-    "Beijing Institute of Astronautic Systems Engineering",
-    "Beijing Institute of Space System Engineering",
-    "13th Research Institute, 9th Academy of CASC",
-    "13th Institute, China Aerospace Science and Technology Corporation (CALT)",
-    "13th Institute China Aerospace Times Electronics Corporation (CATEC)",
-    "Beijing Aerospace Control Instruments Institute",
-    "Design and Manufacture Center of Navigation and Control Device",
-    "12th Research Institute, China Aerospace Science and Technology Corporation (CALT)",
-    "5th Academy of CASC"
-  ],
+  "aliases": [],
   "acronyms": [
     "CASC"
   ],
@@ -32,23 +21,71 @@
     "lat": 39.9240356,
     "lng": 116.30279789999997
   },
-  "supervisors": [],
+  "supervisors": [
+    "Central government (state-owned enterprise)"
+  ],
   "parent": null,
   "ids": {
     "misp": "793918db-723d-4e06-bcc9-0f4e62a8266e",
     "ror": "01z8tr155",
     "wikidata": "Q2777589"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-conglomerate",
+      "summary": "SASTIND lists CASC among China’s defence-industry group companies (军工集团). CASC says it researches, designs, builds, tests and launches strategic missiles, tactical missiles and unmanned systems as well as launch vehicles, satellites and crewed spacecraft; its research academies include the China Academy of Launch Vehicle Technology and the China Academy of Space Technology.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "CASC describes itself as a very large state-owned enterprise and a cornerstone of China’s national security strategy, founded in 1999 and descended from the Ministry of National Defense’s Fifth Academy, founded in 1956.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "军工集团 (Defence-industry group companies)",
+      "publisher": "State Administration for Science, Technology and Industry for National Defense (SASTIND)",
+      "url": "https://www.sastind.gov.cn/n10115275/n10119040/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260908070614/https://www.sastind.gov.cn/n10115275/n10119040/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "集团简介 (About CASC)",
+      "publisher": "China Aerospace Science and Technology Corporation",
+      "url": "http://www.spacechina.com/n25/n142/n152/n164/index.html",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260828005958/https://www.spacechina.com/n25/n142/n152/n164/index.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
@@ -57,6 +94,10 @@
     {
       "date": "2026-10-26",
       "change": "Names the official lists give its listed institutes removed from its aliases; each institute has its own record."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Very high. Names of its academies and institutes, which MISP had given it as aliases, removed: those the lists name have records of their own. Chinese name corrected to the full company name."
     }
   ],
   "seedNotes": {
