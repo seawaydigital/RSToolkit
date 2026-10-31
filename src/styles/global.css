@@ -6323,3 +6323,60 @@ a:hover {
   .tool-page [class*="scr-"] a { color: #00427a !important; text-decoration: underline !important; }
   .tool-page .scr-result--match .scr-result-cell { font-weight: 700 !important; }
 }
+
+/* Sanctions Screening: the how-to box at the top and the results guide. */
+.scr-howto {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cobalt);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 0 0 8px;
+}
+
+.scr-howto-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.scr-howto p { margin: 0 0 8px; }
+.scr-howto ol { margin: 0; padding-left: 22px; }
+.scr-howto li { margin-bottom: 6px; }
+.scr-howto strong { color: var(--text-primary); font-weight: 500; }
+
+.scr-guide {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.scr-guide summary {
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.scr-guide[open] summary { margin-bottom: 8px; }
+.scr-guide dl { margin: 0 0 8px; }
+.scr-guide dt { color: var(--text-primary); font-weight: 500; margin-top: 8px; }
+.scr-guide dd { margin: 2px 0 0; }
+.scr-guide p { margin: 8px 0 0; }
+
+.scr-guide a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.scr-guide a:hover { color: var(--link-hover); }
