@@ -18,27 +18,67 @@
     "lat": 26.898859255920506,
     "lng": 112.59098028836058
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hunan Provincial Government (co-built with MIIT, the Ministry of Ecology and Environment, the National Health Commission, SASTIND and CNNC)"
+  ],
   "parent": null,
   "ids": {
     "misp": "c31015ea-1576-4ddf-91e6-b12a17d8cfff",
     "ror": "03mqfn238",
     "wikidata": "Q7896327"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "The University of South China describes itself as co-built by the Hunan government with MIIT, the Ministry of Ecology and Environment, the National Health Commission, SASTIND and the state nuclear group CNNC.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "It reports national defence basic research projects among its more than 3,900 research projects, a national defence science and technology innovation team, and defence key and shortage majors, and says its graduates work in the defence and nuclear industries.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "University of South China",
+      "url": "https://www.usc.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031201459/https://www.usc.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
