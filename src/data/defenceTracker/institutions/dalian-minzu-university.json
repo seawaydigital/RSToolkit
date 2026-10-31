@@ -24,27 +24,56 @@
     "lat": 39.04219399999999,
     "lng": 121.77500140000006
   },
-  "supervisors": [],
+  "supervisors": [
+    "State Ethnic Affairs Commission (co-built with the Ministry of Education and the Liaoning and Dalian governments)"
+  ],
   "parent": null,
   "ids": {
     "misp": "027ab5f5-ce3d-4e44-b276-923719d628e4",
     "ror": "02hxfx521",
     "wikidata": "Q1074308"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "Dalian Minzu University, planned from 1984 and teaching since 1993, is co-built by the State Ethnic Affairs Commission, the Ministry of Education, the Liaoning government and Dalian city.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Dalian Minzu University",
+      "url": "https://www.dlnu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261022230551/https://www.dlnu.edu.cn/xxgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Low."
     }
   ],
   "seedNotes": {
