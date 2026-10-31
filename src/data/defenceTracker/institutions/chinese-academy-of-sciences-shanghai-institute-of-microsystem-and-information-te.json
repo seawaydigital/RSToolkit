@@ -1,0 +1,86 @@
+{
+  "id": "chinese-academy-of-sciences-shanghai-institute-of-microsystem-and-information-te",
+  "name": "Chinese Academy of Sciences’ Shanghai Institute of Microsystem and Information Technology",
+  "zh": "中国科学院上海微系统与信息技术研究所",
+  "zhAliases": [],
+  "aliases": [
+    "Shanghai Institute of Metallurgy",
+    "SIMIT-CAS",
+    "Chinese Academy of Sciences, Shanghai Institute of Microsystem and Information Technology",
+    "Shanghai Institute of Microsystem and Information Technology"
+  ],
+  "acronyms": [
+    "SIMIT"
+  ],
+  "domains": [],
+  "country": "CN",
+  "type": "research-institute",
+  "location": {
+    "city": "Shanghai",
+    "province": "Shanghai",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Chinese Academy of Sciences"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "defence-key-labs",
+      "summary": "CASI lists the microsystem technology laboratory (微系统技术国防科技重点实验室), set up at SIMIT in 2004, among China’s national defence science and technology key laboratories, while calling its status ambiguous: SIMIT itself called it a defence key laboratory when it was being established, and the laboratory’s research fund used that name in 2023. Its research includes target detection, identification and tracking, and UAV communications.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ],
+      "items": [
+        "Microsystem Technology Defense S&T Key Laboratory (微系统技术国防科技重点实验室)"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "SIMIT is an institute of the Chinese Academy of Sciences, founded in 1928; CASI notes that it was historically involved in developing key uranium-enrichment components for China’s nuclear programme.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "China’s Defense S&T Key Lab System: 2025 Update (October 2025), pp. 311–312 (Defense S&T Key Laboratory of Microsystem Technology)",
+      "publisher": "China Aerospace Studies Institute, US Air Force Air University (prepared by BluePath Labs)",
+      "url": "https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf",
+      "lang": "en",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
+  "history": [
+    {
+      "date": "2026-10-31",
+      "change": "Record created from its listings on the US Entity List and the Section 1286 list; not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated High."
+    }
+  ],
+  "seedNotes": null
+}
