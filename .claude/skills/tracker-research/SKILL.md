@@ -30,7 +30,7 @@ Verified, rated profiles live on the content branch `tracker/content` until the 
 
 Use the highest-quality source that supports each claim:
 
-1. Official lists and government documents (Canada, US, Japan, EU, UK, Australia).
+1. Official lists and government documents (Canada, US, Japan, EU, UK, Australia). For Russian and Iranian bodies, designation notices and press releases (US Treasury, State and Commerce, Global Affairs Canada, the EU, the UK) often say which ministry, force or group a body belongs to.
 2. The institution's own websites, Chinese and English (about pages, lab pages, discipline lists).
 3. Chinese government notices: SASTIND, MIIT, MOE, ministry and provincial announcements.
 4. Court records and indictments.
@@ -45,10 +45,10 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 
 | Signal | Counts when |
 |---|---|
-| `pla` | A PLA or People's Armed Police university, academy or institute, or a body under the Central Military Commission |
-| `security-agency` | Belongs to the MSS, MPS or another state security body |
-| `defence-conglomerate` | A state-owned defence-industry group (CASC, CASIC, AVIC, CETC, NORINCO, CSSC…) or one of its institutes |
-| `nuclear-weapons` | Designs, builds or tests nuclear weapons (e.g. CAEP and its institutes) |
+| `armed-forces` | Run by the armed forces: in China a PLA or PAP university, academy or institute, or a body under the Central Military Commission; in Russia a Ministry of Defence or National Guard (Rosgvardia) institution; in Iran an Army (Artesh), IRGC or MODAFL institution |
+| `security-agency` | Belongs to a state security or intelligence agency (MSS, MPS, Russia's FSB, Iran's Ministry of Intelligence…) |
+| `defence-conglomerate` | A state-owned defence-industry group or one of its institutes, academies or design bureaus (CASC, CASIC, AVIC, CETC, NORINCO, CSSC…; Rostec and its holdings, Almaz-Antey, Tactical Missiles Corporation, United Shipbuilding Corporation, Roscosmos; MODAFL's defence industries such as the Aerospace and Defense Industries Organizations) |
+| `nuclear-weapons` | Designs, builds or tests nuclear weapons (e.g. CAEP and its institutes; Russia's federal nuclear centres VNIIEF and VNIITF) |
 | `seven-sons` | One of the seven MIIT universities that are core defence-industry bases |
 | `defence-key-labs` | Hosts national defence key laboratories; list them in `items` (English name and Chinese). Two or more = major, one = substantial |
 | `secrecy-qualification` | Holds a weapons and equipment research secrecy qualification |
@@ -57,7 +57,7 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 | `defence-disciplines` | Has officially designated defence-specialty disciplines |
 | `defence-industry-partnership` | Documented partnerships, joint centres or programs with defence-industry groups |
 | `defence-funded-research` | Documented projects funded by military or defence-industry bodies |
-| `pla-collaboration` | Documented joint research, joint labs or co-supervision with PLA institutions |
+| `armed-forces-collaboration` | Documented joint research, joint labs or co-supervision with armed-forces institutions (the PLA; Russia's Ministry of Defence; Iran's Army, IRGC or MODAFL) |
 | `misconduct` | Officially documented cyber operations, espionage, export-control or sanctions violations, or human-rights abuses (e.g. a government finding that it supported surveillance or repression) |
 | `state-control` | How the state owns, funds or directs it (context; never changes the rating alone) |
 

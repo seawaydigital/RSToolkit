@@ -15,7 +15,7 @@ const NONE = [{ listId: 'ca-nro', status: 'not-listed', entries: [] }];
 
 test('an unresearched institution on an official list is rated High from the lists alone', () => {
   for (const status of ['seed', 'listing-only']) {
-    const a = rateInstitution(rec({ status, evidence: [ev('pla')] }), LISTED);
+    const a = rateInstitution(rec({ status, evidence: [ev('armed-forces')] }), LISTED);
     assert.equal(a.rating, 'high', status);
     assert.equal(a.rule, 'listed');
     assert.equal(a.basis, 'lists');
@@ -44,7 +44,7 @@ test('a researched profile’s rating comes from the profile', () => {
 });
 
 test('any structural signal rates very high', () => {
-  for (const s of ['pla', 'security-agency', 'defence-conglomerate', 'nuclear-weapons', 'seven-sons']) {
+  for (const s of ['armed-forces', 'security-agency', 'defence-conglomerate', 'nuclear-weapons', 'seven-sons']) {
     const a = rateInstitution(rec({ evidence: [ev(s)] }), NONE);
     assert.equal(a.rating, 'very-high', s);
     assert.equal(a.rule, 'structural', s);
@@ -73,7 +73,7 @@ test('substantial research rates high', () => {
 });
 
 test('limited links rate medium; nothing rates low', () => {
-  assert.equal(rateInstitution(rec({ evidence: [ev('pla-collaboration')] }), NONE).rating, 'medium');
+  assert.equal(rateInstitution(rec({ evidence: [ev('armed-forces-collaboration')] }), NONE).rating, 'medium');
   const low = rateInstitution(rec(), NONE);
   assert.equal(low.rating, 'low');
   assert.equal(low.rule, 'none');
@@ -84,8 +84,8 @@ test('misconduct and state-control evidence never drive the rating', () => {
 });
 
 test('evidence without a valid source does not count', () => {
-  assert.equal(rateInstitution(rec({ evidence: [ev('pla', { sources: [] })] }), NONE).rating, 'low');
-  assert.equal(rateInstitution(rec({ evidence: [ev('pla', { sources: ['missing'] })] }), NONE).rating, 'low');
+  assert.equal(rateInstitution(rec({ evidence: [ev('armed-forces', { sources: [] })] }), NONE).rating, 'low');
+  assert.equal(rateInstitution(rec({ evidence: [ev('armed-forces', { sources: ['missing'] })] }), NONE).rating, 'low');
 });
 
 test('lists that were not checked do not count as listed', () => {
@@ -93,7 +93,7 @@ test('lists that were not checked do not count as listed', () => {
 });
 
 test('a one-level override with a reason is applied', () => {
-  const a = rateInstitution(rec({ evidence: [ev('pla-collaboration')], rating: { override: 'high', overrideReason: 'Reported cyber operations (s1).' } }), NONE);
+  const a = rateInstitution(rec({ evidence: [ev('armed-forces-collaboration')], rating: { override: 'high', overrideReason: 'Reported cyber operations (s1).' } }), NONE);
   assert.equal(a.rating, 'high');
   assert.equal(a.baseRating, 'medium');
   assert.equal(a.overridden, true);
@@ -101,10 +101,10 @@ test('a one-level override with a reason is applied', () => {
 });
 
 test('overrides of two levels or without a reason are rejected', () => {
-  const two = rateInstitution(rec({ evidence: [ev('pla-collaboration')], rating: { override: 'very-high', overrideReason: 'x' } }), NONE);
+  const two = rateInstitution(rec({ evidence: [ev('armed-forces-collaboration')], rating: { override: 'very-high', overrideReason: 'x' } }), NONE);
   assert.equal(two.rating, 'medium');
   assert.ok(two.overrideError);
-  const noReason = rateInstitution(rec({ evidence: [ev('pla-collaboration')], rating: { override: 'high', overrideReason: '' } }), NONE);
+  const noReason = rateInstitution(rec({ evidence: [ev('armed-forces-collaboration')], rating: { override: 'high', overrideReason: '' } }), NONE);
   assert.equal(noReason.rating, 'medium');
   assert.ok(noReason.overrideError);
 });
@@ -114,10 +114,32 @@ test('reasons name the signals or listings behind the rule', () => {
   assert.ok(rateInstitution(rec(), LISTED).reasons.some((r) => r.listId === 'ca-nro'));
 });
 
-test('every rule id has rendered text, and the version is 1.1 (list-based ratings)', () => {
+test('every rule id has rendered text, and the version is 1.2 (armed forces and defence groups of China, Russia and Iran)', () => {
   const ids = new Set(RUBRIC_RULES.map((r) => r.id));
   for (const id of ['structural', 'listed-major', 'listed', 'major-research', 'substantial-research', 'limited-links', 'none']) assert.ok(ids.has(id), id);
-  assert.equal(RUBRIC_VERSION, '1.1');
+  assert.equal(RUBRIC_VERSION, '1.2');
+});
+
+test('the armed-forces signals cover China, Russia and Iran under country-neutral ids', () => {
+  assert.equal(SIGNALS.pla, undefined);
+  assert.equal(SIGNALS['pla-collaboration'], undefined);
+  assert.equal(SIGNALS['armed-forces'].group, 'structural');
+  assert.equal(SIGNALS['armed-forces-collaboration'].group, 'limited');
+  for (const key of ['armed-forces', 'armed-forces-collaboration']) {
+    for (const force of ['PLA', 'Ministry of Defence', 'IRGC']) assert.ok(SIGNALS[key].description.includes(force), `${key}: ${force}`);
+  }
+});
+
+test('the defence-group signal names Chinese, Russian and Iranian groups', () => {
+  const { description } = SIGNALS['defence-conglomerate'];
+  for (const group of ['CASC', 'Rostec', 'Almaz-Antey', 'Aerospace Industries Organization']) assert.ok(description.includes(group), group);
+});
+
+test('the structural rule covers all three countries and the limited rule no longer says PLA', () => {
+  const text = (id) => RUBRIC_RULES.find((r) => r.id === id).text;
+  for (const country of ['China', 'Russia', 'Iran']) assert.ok(text('structural').includes(country), country);
+  assert.ok(!text('limited-links').includes('PLA'));
+  assert.ok(text('limited-links').includes('armed-forces institutions'));
 });
 
 test('every signal has a group and a label', () => {
