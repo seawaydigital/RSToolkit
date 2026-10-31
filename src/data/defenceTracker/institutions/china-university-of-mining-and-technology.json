@@ -20,27 +20,77 @@
     "lat": 34.20442,
     "lng": 117.28386
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with the Ministry of Emergency Management and the Jiangsu government)"
+  ],
   "parent": null,
   "ids": {
     "misp": "8029519b-299f-4c71-a6fd-6c0fcceb64da",
     "ror": "01xt2dr21",
     "wikidata": "Q1074084"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-funded-research",
+      "summary": "CUMT’s Science and Technology Research Institute sets out how the university recognises and manages defence science and technology projects, including contracts from military-industry or defence departments and classified military research it carries out for other units.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Since 2022 CUMT has been co-built by the Ministry of Education, the Ministry of Emergency Management and the Jiangsu government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "China University of Mining and Technology",
+      "url": "https://www.cumt.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031194925/https://www.cumt.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "关于我校国防科技类项目认定及管理的有关说明 (How the university recognises and manages defence science and technology projects)",
+      "publisher": "Science and Technology Research Institute, China University of Mining and Technology",
+      "url": "http://dsi.cumt.edu.cn/info/1064/3637.htm",
+      "lang": "zh",
+      "accessed": "2026-10-31",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031195016/https://dsi.cumt.edu.cn/info/1064/3637.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-10-31",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-10-31",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
