@@ -1,7 +1,7 @@
 {
   "snapshot": "ca-sanctions",
   "coverage": "complete",
-  "checkedOn": "2026-10-28",
+  "checkedOn": "2026-11-20",
   "sourceUrl": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
   "entries": [
     {
@@ -1811,6 +1811,104 @@
       "citation": "Schedule 1, Part 2, item 789",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
       "institution": "scientific-research-institute-of-applied-chemistry"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:876",
+      "list": "ca-sanctions",
+      "name": "Federal Research and Production Centre Altai JSC",
+      "altNames": [
+        "AO FNPZ Altai",
+        "JSC FNPC Altai"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 876",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-research-and-production-centre-altai-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:878",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Association ‘Erkon’ JSC",
+      "altNames": [
+        "NPO Erkon JSC"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 878",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-association-erkon-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:881",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Enterprise Pulsar OJSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 881",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-enterprise-pulsar-ojsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:884",
+      "list": "ca-sanctions",
+      "name": "Elpa Research Institute and Pilot Line JSC",
+      "altNames": [
+        "NII ELPA AO"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 884",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "elpa-research-institute-and-pilot-line-joint-stock-company"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:891",
+      "list": "ca-sanctions",
+      "name": "Research Institute of Space Instrumentation JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 891",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-institute-of-space-instrumentation-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:892",
+      "list": "ca-sanctions",
+      "name": "Khrunichev State Research and Production Space Center",
+      "altNames": [
+        "Khrunichev GKNPTS JSC",
+        "Khrunichev Space Center"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 892",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "khrunichev-state-research-and-production-space-center"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:893",
+      "list": "ca-sanctions",
+      "name": "Research Institute of Graphite-Based Materials NIIGRAFIT JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 893",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "joint-stock-company-research-institute-of-graphite-based-materials-niigrafit"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:898",
+      "list": "ca-sanctions",
+      "name": "Research Institute Submicron JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 898",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "jsc-scientific-research-institute-submicron"
     }
   ]
 }
