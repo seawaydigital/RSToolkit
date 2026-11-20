@@ -12,6 +12,11 @@
 // So does a unit a researcher marked as naming its parent on its own (a
 // subunit with "match": true, such as a university's hospital); unmarked
 // units, which include generic names and campuses, are never matched.
+//
+// The official lists write many bodies with their legal form ("Joint Stock
+// Company …", "… JSC", "… Co., Ltd."). Affiliations leave it out or write it
+// another way, so every name is also matched apart from the form at its start
+// or end, under the same rules as the name it comes from.
 import Fuse from 'fuse.js';
 import {
   PERSONAL_EMAIL_DOMAINS,
@@ -24,6 +29,7 @@ import {
   osaDistance,
   segmentTokens,
   splitSegments,
+  stripLegalForm,
 } from './normalize.js';
 import { inTokens, placeContext, placesIn, traditionalOrTaiwan, withoutCodes } from './places.js';
 
@@ -45,6 +51,8 @@ const SCHOOL = /(学院|學院)$/;
 const UNIVERSITY = /(大学|大學)$/;
 // Separates the affiliations in one line; commas separate the parts of one.
 const AFFILIATIONS = /[;|]/;
+// The rest of "Co., Ltd." or "Co., Limited" after its comma.
+const LTD_TAIL = /^(ltd|limited)( |$)/;
 
 const latinNames = (r) => [r.name, ...(r.aliases ?? [])].filter((n) => n && !hasCjk(n));
 const cjkNames = (r) => [r.zh, ...(r.zhAliases ?? []), ...(r.aliases ?? []).filter(hasCjk)].filter((n) => n && hasCjk(n));
@@ -56,6 +64,18 @@ const markedUnits = (r) =>
     .filter((u) => u?.match === true && u.name)
     .map((u) => ({ label: u.name.replace(/\s*\([^)]*\)/g, '').trim(), zh: u.zh ?? null }));
 
+// A name apart from the legal form at its start or end ("Joint Stock Company
+// …", "… JSC", "… Co., Ltd."), which affiliations leave out or write another
+// way. Null when the name carries none, or when what is left could be many
+// bodies: one word, or two or three words that only say what a body does
+// ("Institute of Applied Physics"). A longer generic name is kept and judged
+// like any generic name: it confirms only with the institution's city.
+function withoutLegalForm(phrase) {
+  const bare = stripLegalForm(phrase);
+  const len = bare.split(' ').length;
+  return bare === phrase || len < 2 || (len < 4 && isGenericPhrase(bare)) ? null : bare;
+}
+
 function addTo(map, key, id) {
   if (!map.has(key)) map.set(key, new Set());
   map.get(key).add(id);
@@ -63,6 +83,7 @@ function addTo(map, key, id) {
 
 export function buildMatchIndex(records) {
   const phrases = new Map();
+  const barePhrases = new Map();
   const primary = new Set();
   const info = new Map();
   const unitPhrases = new Map();
@@ -81,6 +102,15 @@ export function buildMatchIndex(records) {
       parent: r.parent ?? null,
       chinese: cjkNames(r).map(compactCjk),
     });
+    const addName = (map, phrase, isPrimary) => {
+      addTo(map, phrase, r.id);
+      if (isPrimary) primary.add(`${r.id}\t${phrase}`);
+      const tokens = phrase.split(' ');
+      maxPhraseLen = Math.max(maxPhraseLen, tokens.length);
+      const bucket = tokens[0][0];
+      if (!fuzzy.has(bucket)) fuzzy.set(bucket, []);
+      fuzzy.get(bucket).push({ id: r.id, tokens, generic: isGenericPhrase(phrase) });
+    };
     const names = latinNames(r).flatMap((name) => [name, withoutCodes(name)].filter(Boolean).map((form) => ({ form, isPrimary: name === r.name })));
     for (const { form: name, isPrimary } of names) {
       // A listed name like "Chinese Academy of Sciences, National Time Service
@@ -90,25 +120,29 @@ export function buildMatchIndex(records) {
       const whole = normalizePhrase(parts.join(' '));
       const len = whole ? whole.split(' ').length : 0;
       if (len >= 2) {
-        addTo(phrases, whole, r.id);
-        if (isPrimary) primary.add(`${r.id}\t${whole}`);
+        addName(phrases, whole, isPrimary);
         if (isGenericPhrase(whole)) genericPhrases.add(whole);
-        maxPhraseLen = Math.max(maxPhraseLen, len);
-        const tokens = whole.split(' ');
-        const bucket = tokens[0][0];
-        if (!fuzzy.has(bucket)) fuzzy.set(bucket, []);
-        fuzzy.get(bucket).push({ id: r.id, tokens, generic: isGenericPhrase(whole) });
+        // The same name as affiliations write it, without its legal form.
+        const bare = withoutLegalForm(whole);
+        if (bare) addName(barePhrases, bare, isPrimary);
       }
       if (parts.length < 2) continue;
-      for (const part of parts) {
-        const phrase = normalizePhrase(part);
-        const partLen = phrase ? phrase.split(' ').length : 0;
-        // "Research Institute" or "Joint Stock Company" says nothing about
-        // which institution a line names.
-        if (partLen < 2 || (partLen < 4 && isGenericPhrase(phrase))) continue;
-        addTo(unitPhrases, phrase, r.id);
-        maxPhraseLen = Math.max(maxPhraseLen, partLen);
-      }
+      parts.forEach((part, at) => {
+        const listed = normalizePhrase(part);
+        // A unit listed after its parent often carries its legal form ("Concern
+        // …, Joint Stock Company … Research Institute") and is also suggested
+        // without it. The first part is the start of the whole name, and
+        // "Ltd. …" is what a comma leaves of "Co., Ltd. …": neither is a unit.
+        const bare = at > 0 && !LTD_TAIL.test(listed) ? stripLegalForm(listed) : listed;
+        for (const phrase of new Set([listed, bare])) {
+          const partLen = phrase ? phrase.split(' ').length : 0;
+          // "Research Institute" or "Joint Stock Company" says nothing about
+          // which institution a line names.
+          if (partLen < 2 || (partLen < 4 && isGenericPhrase(phrase))) continue;
+          addTo(unitPhrases, phrase, r.id);
+          maxPhraseLen = Math.max(maxPhraseLen, partLen);
+        }
+      });
     }
     for (const name of cjkNames(r)) {
       const text = compactCjk(name);
@@ -133,7 +167,11 @@ export function buildMatchIndex(records) {
   cjk.sort((a, b) => b.text.length - a.text.length);
   // A part shared by several listed names ("Chinese Academy of Sciences"), or
   // one that is a record's own name, names a parent, not the unit.
-  for (const [phrase, ids] of unitPhrases) if (ids.size > 1 || phrases.has(phrase)) unitPhrases.delete(phrase);
+  for (const [phrase, ids] of unitPhrases) if (ids.size > 1 || phrases.has(phrase) || barePhrases.has(phrase)) unitPhrases.delete(phrase);
+  // What a line is looked up in: every name as listed and apart from its legal
+  // form. `phrases` stays the names as listed, which the list sync compares.
+  const lookup = new Map();
+  for (const map of [phrases, barePhrases]) for (const [phrase, ids] of map) for (const id of ids) addTo(lookup, phrase, id);
 
   const fuse = new Fuse(
     records.map((r) => ({
@@ -166,7 +204,7 @@ export function buildMatchIndex(records) {
       .map((t) => nfkc(t).toLowerCase()),
   }));
 
-  return { phrases, primary, info, unitPhrases, subunitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse, searchable };
+  return { phrases, names: lookup, primary, info, unitPhrases, subunitPhrases, genericPhrases, cjk, acronyms, domains, fuzzy, maxPhraseLen, fuse, searchable };
 }
 
 // Keeps the longest of any overlapping spans, so "Nanjing University" inside
@@ -252,6 +290,17 @@ function cjkMatches(line, index) {
   }));
 }
 
+// The institution's own name inside a longer alternative name or unit that
+// was kept ("Russian Federal Nuclear Center - … All-Russian Scientific
+// Research Institute of Technical Physics"): the line is as sure as that name.
+// Not when other institutions share either span: then it settles nothing.
+function ownNameInside(hit, hits) {
+  if (hit.shared) return [];
+  const inside = (h) => h.start >= hit.start && h.end <= hit.end && h.end - h.start < hit.end - hit.start;
+  const sharedSpan = (h) => hits.some((o) => o.id !== h.id && o.start === h.start && o.end === h.end);
+  return hits.filter((h) => h.id === hit.id && h.kind === 'name' && inside(h) && !sharedSpan(h));
+}
+
 function nameMatches(affiliation, index, context) {
   const out = [];
   for (const segment of splitSegments(affiliation)) {
@@ -261,7 +310,7 @@ function nameMatches(affiliation, index, context) {
       for (let len = 2; len <= Math.min(index.maxPhraseLen, kept.length - i); len++) {
         const phrase = kept.slice(i, i + len).join(' ');
         if (CONTINUATIONS.has(rawAfter[i + len - 1])) continue;
-        for (const id of index.phrases.get(phrase) ?? []) {
+        for (const id of index.names.get(phrase) ?? []) {
           hits.push({ id, start: i, end: i + len, text: phrase, kind: index.primary.has(`${id}\t${phrase}`) ? 'name' : 'alias' });
         }
         for (const id of index.unitPhrases.get(phrase) ?? []) hits.push({ id, start: i, end: i + len, text: phrase, kind: 'unit' });
@@ -273,12 +322,15 @@ function nameMatches(affiliation, index, context) {
     }
     for (const hit of longestFirst(hits)) {
       const confidence = placeConfidence(hit, context, index);
-      if (!confidence) continue;
-      out.push(
-        hit.kind === 'subunit'
-          ? { id: hit.id, matchedBy: 'unit', confidence, text: hit.text, unit: hit.unit }
-          : { id: hit.id, matchedBy: 'name', confidence, text: hit.text },
-      );
+      const own = confidence === 'confirmed' ? null : ownNameInside(hit, hits).find((h) => placeConfidence(h, context, index) === 'confirmed');
+      if (own) out.push({ id: hit.id, matchedBy: 'name', confidence: 'confirmed', text: own.text });
+      else if (confidence) {
+        out.push(
+          hit.kind === 'subunit'
+            ? { id: hit.id, matchedBy: 'unit', confidence, text: hit.text, unit: hit.unit }
+            : { id: hit.id, matchedBy: 'name', confidence, text: hit.text },
+        );
+      }
     }
   }
   return out;

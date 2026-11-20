@@ -1,7 +1,7 @@
 // Pure helpers for the official-list sync: turning the US Consolidated
 // Screening List, Canada's sanctions XML and the NRO page into listing
 // entries, and mapping each entry to a tracker record.
-import { isGenericPhrase, normalizePhrase, osaDistance } from '../../../src/tools/compliance/defence-tracker/lib/normalize.js';
+import { isGenericPhrase, normalizePhrase, osaDistance, stripLegalForm } from '../../../src/tools/compliance/defence-tracker/lib/normalize.js';
 import { slugify } from '../../../src/tools/compliance/defence-tracker/lib/schema.js';
 import { RESERVED_SLUGS } from '../../../src/tools/compliance/defence-tracker/lib/constants.js';
 
@@ -86,37 +86,13 @@ export function isResearchBody(name) {
 
 const sameCountry = (a, b) => !a || !b || a === b;
 
-// Legal forms the lists put before or after a body's name, as normalizePhrase
-// leaves them: Canada's "… Altai JSC" is the US Entity List's "Joint Stock
-// Company … Altai", and OFAC writes "Aktsionernoe Obshchestvo …".
-const LEGAL_FORMS = [
-  'open joint stock company', 'closed joint stock company', 'public joint stock company', 'joint stock company',
-  'limited liability company', 'federal state unitary enterprise',
-  'otkrytoe aktsionernoe obshchestvo', 'publichnoe aktsionernoe obshchestvo', 'zakrytoe aktsionernoe obshchestvo', 'aktsionernoe obshchestvo',
-  'obshchestvo s ogranichennoi otvetstvennostyu',
-  'company limited', 'co limited', 'co ltd',
-  'ojsc', 'pjsc', 'cjsc', 'jsc', 'oao', 'pao', 'zao', 'ao', 'ooo', 'llc', 'fsue', 'fgup', 'limited', 'ltd',
-].map((form) => form.split(' '));
-
-// A normalized name without the legal form at its start or its end, or null
-// when what is left could be anyone: one word ("Salyut"), or only words that
-// say what a body does ("Scientific Production Enterprise"). A legal form
-// inside a name ("Design Bureau of the Joint Stock Company …") is part of it.
+// A normalized name without the legal form at its start or its end (the forms
+// are in normalize.js, which the matcher shares), or null when what is left
+// could be anyone: one word ("Salyut"), or only words that say what a body
+// does ("Scientific Production Enterprise").
 function bareKey(phrase) {
-  let tokens = String(phrase ?? '').split(' ');
-  for (let again = true; again; ) {
-    again = false;
-    for (const form of LEGAL_FORMS) {
-      if (tokens.length <= form.length) continue;
-      const tail = tokens.length - form.length;
-      if (form.every((t, i) => tokens[i] === t)) tokens = tokens.slice(form.length);
-      else if (form.every((t, i) => tokens[tail + i] === t)) tokens = tokens.slice(0, tail);
-      else continue;
-      again = true;
-    }
-  }
-  const bare = tokens.join(' ');
-  return tokens.length >= 2 && !isGenericPhrase(bare) ? bare : null;
+  const bare = stripLegalForm(phrase);
+  return bare.split(' ').length >= 2 && !isGenericPhrase(bare) ? bare : null;
 }
 
 // The match index's name phrases by bare key: which records hold a name once
