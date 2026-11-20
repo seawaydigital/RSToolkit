@@ -8,7 +8,8 @@
 // not rated, never Low. RUBRIC_RULES is rendered on the methodology page, so
 // the page and the code cannot drift apart; bump RUBRIC_VERSION whenever a
 // rule or who it applies to changes (1.1: list-based ratings; 1.2: the
-// armed-forces and defence-group signals cover Russia and Iran as well).
+// armed-forces and defence-group signals cover Russia and Iran as well, and a
+// company the IRGC owns or controls counts as part of the armed forces).
 import { RATING_ORDER, LIST_BY_ID, SIGNALS } from './constants.js';
 
 export const RUBRIC_VERSION = '1.2';

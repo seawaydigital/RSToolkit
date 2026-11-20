@@ -130,6 +130,12 @@ test('the armed-forces signals cover China, Russia and Iran under country-neutra
   }
 });
 
+test('a company the IRGC owns or controls counts as part of the armed forces', () => {
+  const { description } = SIGNALS['armed-forces'];
+  assert.match(description, /a company the IRGC owns or controls/);
+  assert.ok(description.includes('Khatam al-Anbiya'));
+});
+
 test('the defence-group signal names Chinese, Russian and Iranian groups', () => {
   const { description } = SIGNALS['defence-conglomerate'];
   for (const group of ['CASC', 'Rostec', 'Almaz-Antey', 'Aerospace Industries Organization']) assert.ok(description.includes(group), group);

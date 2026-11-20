@@ -45,7 +45,7 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 
 | Signal | Counts when |
 |---|---|
-| `armed-forces` | Run by the armed forces: in China a PLA or PAP university, academy or institute, or a body under the Central Military Commission; in Russia a Ministry of Defence or National Guard (Rosgvardia) institution; in Iran an Army (Artesh), IRGC or MODAFL institution |
+| `armed-forces` | Run by the armed forces: in China a PLA or PAP university, academy or institute, or a body under the Central Military Commission; in Russia a Ministry of Defence or National Guard (Rosgvardia) institution; in Iran an Army (Artesh), IRGC or MODAFL institution, or a company the IRGC owns or controls, directly or indirectly (e.g. the engineering firms of its Khatam al-Anbiya Construction Headquarters: keep the source's wording of the tie, and ask before applying this to a company of any other armed force) |
 | `security-agency` | Belongs to a state security or intelligence agency (MSS, MPS, Russia's FSB, Iran's Ministry of Intelligence…) |
 | `defence-conglomerate` | A state-owned defence-industry group or one of its institutes, academies or design bureaus (CASC, CASIC, AVIC, CETC, NORINCO, CSSC…; Rostec and its holdings, Almaz-Antey, Tactical Missiles Corporation, United Shipbuilding Corporation, Roscosmos; MODAFL's defence industries such as the Aerospace and Defense Industries Organizations) |
 | `nuclear-weapons` | Designs, builds or tests nuclear weapons (e.g. CAEP and its institutes; Russia's federal nuclear centres VNIIEF and VNIITF) |

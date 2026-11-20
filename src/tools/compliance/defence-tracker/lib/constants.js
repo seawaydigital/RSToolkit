@@ -24,7 +24,7 @@ export const SIGNALS = {
   'armed-forces': {
     group: 'structural',
     label: 'Part of the armed forces',
-    description: "Run by the armed forces of China, Russia or Iran: in China, a PLA or People's Armed Police university, academy or research institute, or a body under the Central Military Commission; in Russia, a university, academy or research institute of the Ministry of Defence or the National Guard (Rosgvardia); in Iran, one of the Army (Artesh), the Islamic Revolutionary Guard Corps (IRGC) or the Ministry of Defence and Armed Forces Logistics (MODAFL).",
+    description: "Run by the armed forces of China, Russia or Iran: in China, a PLA or People's Armed Police university, academy or research institute, or a body under the Central Military Commission; in Russia, a university, academy or research institute of the Ministry of Defence or the National Guard (Rosgvardia); in Iran, one of the Army (Artesh), the Islamic Revolutionary Guard Corps (IRGC) or the Ministry of Defence and Armed Forces Logistics (MODAFL), or a company the IRGC owns or controls, directly or indirectly, such as the engineering firms of its Khatam al-Anbiya Construction Headquarters.",
   },
   'security-agency': {
     group: 'structural',
