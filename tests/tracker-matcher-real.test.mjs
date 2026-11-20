@@ -41,6 +41,9 @@ const NEVER_CONFIRMED = [
   'NU',
   'National Sun Yat-sen University, Kaohsiung, Taiwan',
   'Power Office, City of Toronto',
+  // Other bodies than the ones the lists name: the Russian Academy of Sciences' institute, and NIIMash in Nizhnyaya Salda.
+  'Institute of Applied Physics, Nizhny Novgorod, Russia',
+  'Scientific Research Institute of Mechanical Engineering, Nizhnyaya Salda, Russia',
 ];
 
 for (const line of NEVER_CONFIRMED) {
@@ -110,7 +113,12 @@ const NEVER_MATCHED_TO = [
   ['南京大学国际关系学院', 'university-of-international-relations'],
 ];
 
-for (const [line, id] of NEVER_MATCHED_TO) {
+// A name that is only generic words once its legal form is gone ("Joint Stock
+// Company Institute of Applied Physics") is not matched without the form: the
+// Institute of Applied Physics in Nizhny Novgorod is another body.
+const NOT_WITHOUT_LEGAL_FORM = [['Institute of Applied Physics, Nizhny Novgorod, Russia', 'joint-stock-company-institute-of-applied-physics']];
+
+for (const [line, id] of [...NEVER_MATCHED_TO, ...NOT_WITHOUT_LEGAL_FORM]) {
   test(`not matched to ${id}: ${line}`, () => {
     const ms = matchLine(line, index);
     assert.ok(!ms.some((m) => m.id === id), show(ms));
@@ -134,7 +142,16 @@ for (const [line, unit] of LISTED_UNITS) {
   });
 }
 
-for (const [line, id] of CONFIRMED) {
+// The lists give these bodies with a legal form ("Joint Stock Company …",
+// "… JSC", "… Co., Ltd."); affiliations leave it out.
+const WITHOUT_LEGAL_FORM = [
+  ['Federal Research and Production Center Altai, Biysk, Russia', 'federal-research-and-production-centre-altai-jsc'],
+  ['Research Institute Submicron, Zelenograd, Russia', 'jsc-scientific-research-institute-submicron'],
+  ['Scientific and Production Enterprise Pulsar, Moscow, Russia', 'scientific-and-production-enterprise-pulsar-ojsc'],
+  ['China Nuclear Power Technology Research Institute, Shenzhen, China', 'china-nuclear-power-technology-research-institute-co-ltd'],
+];
+
+for (const [line, id] of [...CONFIRMED, ...WITHOUT_LEGAL_FORM]) {
   test(`confirmed: ${line}`, () => {
     const ms = matchLine(line, index);
     assert.ok(ms.some((m) => m.id === id && m.confidence === 'confirmed'), show(ms));

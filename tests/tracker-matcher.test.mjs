@@ -284,3 +284,82 @@ test('a line that also names the parent is reported as a name match', () => {
 test('the search box finds an institution by a marked unit', () => {
   assert.deepEqual(searchRecords('Xijing', afmu()), ['afmu']);
 });
+
+// The official lists write many bodies with their legal form ("… JSC", "Joint
+// Stock Company …", "… Co., Ltd."). Affiliations leave it out or write it
+// another way, so a name is also matched apart from the form at its start or
+// end.
+const listed = (id, name, fields = {}) => rec(id, { name, country: 'RU', ...fields });
+
+test('a name matches without the legal form at its start or end', () => {
+  const idx = buildMatchIndex([
+    listed('altai', 'Joint Stock Company Federal Research and Production Center Altai'),
+    listed('submicron', 'Research Institute Submicron JSC'),
+    rec('cnpri', { name: 'China Nuclear Power Technology Research Institute Co., Ltd.' }),
+  ]);
+  const [m] = matchLine('Federal Research and Production Centre Altai, Biysk, Russia', idx);
+  assert.deepEqual([m?.id, m?.matchedBy, m?.confidence], ['altai', 'name', 'confirmed']);
+  assert.deepEqual(norm(matchLine('Research Institute Submicron, Zelenograd, Russia', idx)), [{ id: 'submicron', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('China Nuclear Power Technology Research Institute, Shenzhen', idx)), [{ id: 'cnpri', confidence: 'confirmed' }]);
+});
+
+test('a line may write the legal form another way than the list does', () => {
+  const idx = buildMatchIndex([listed('pulsar', 'Open Joint Stock Company Scientific and Production Enterprise Pulsar')]);
+  assert.deepEqual(norm(matchLine('JSC Scientific and Production Enterprise Pulsar, Moscow, Russia', idx)), [{ id: 'pulsar', confidence: 'confirmed' }]);
+});
+
+test('an alternative name without its legal form is still an alternative name', () => {
+  const idx = buildMatchIndex([
+    listed('rastr', 'Scientific Research Institute of Industrial Television Rastr', { aliases: ['JSC NIIPT Rastr'], location: at('Veliky Novgorod') }),
+  ]);
+  assert.deepEqual(norm(matchLine('NIIPT Rastr, Russia', idx)), [{ id: 'rastr', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('NIIPT Rastr, Veliky Novgorod, Russia', idx)), [{ id: 'rastr', confidence: 'confirmed' }]);
+});
+
+test('what is left without the legal form must still say which body it is', () => {
+  const idx = buildMatchIndex([
+    listed('iap', 'Joint Stock Company Institute of Applied Physics', { location: at('Novosibirsk') }),
+    listed('niiet', 'Scientific-Research Institute of Electronics (NIIET)', { aliases: ['AO Scientific Research'] }),
+  ]);
+  assert.deepEqual(matchLine('Institute of Applied Physics, Nizhny Novgorod, Russia', idx), []);
+  assert.deepEqual(matchLine('Scientific Research Institute of Radio Engineering, Moscow, Russia', idx), []);
+});
+
+test('a long generic name without its legal form confirms only with its city', () => {
+  const idx = buildMatchIndex([
+    listed('gosniias', 'Federal State Unitary Enterprise State Scientific Research Institute of Aviation Systems', { location: at('Moscow') }),
+  ]);
+  assert.deepEqual(norm(matchLine('State Scientific Research Institute of Aviation Systems, Russia', idx)), [{ id: 'gosniias', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('State Scientific Research Institute of Aviation Systems, Moscow, Russia', idx)), [{ id: 'gosniias', confidence: 'confirmed' }]);
+});
+
+test('two bodies that share a name once the legal form is gone are both a check', () => {
+  const idx = buildMatchIndex([listed('kvant-jsc', 'Research and Production Association Kvant JSC'), listed('kvant', 'Research and Production Association Kvant')]);
+  assert.deepEqual(norm(matchLine('Research and Production Association Kvant, Moscow, Russia', idx)), [
+    { id: 'kvant', confidence: 'check' },
+    { id: 'kvant-jsc', confidence: 'check' },
+  ]);
+});
+
+test('a unit listed with its legal form after its parent is suggested without it', () => {
+  const idx = buildMatchIndex([
+    listed('phasotron', 'Concern Radio-Electronic Technologies, Joint Stock Company Phasotron Scientific Research Institute of Radio Engineering'),
+  ]);
+  const [m] = matchLine('Phasotron Scientific Research Institute of Radio Engineering, Moscow, Russia', idx);
+  assert.deepEqual([m?.id, m?.confidence], ['phasotron', 'check']);
+});
+
+test('a misspelt name without its legal form is still suggested', () => {
+  const idx = buildMatchIndex([listed('submicron', 'Research Institute Submicron JSC')]);
+  const [m] = matchLine('Research Institute Submikron, Zelenograd, Russia', idx);
+  assert.deepEqual([m?.id, m?.matchedBy, m?.confidence], ['submicron', 'similar-name', 'check']);
+});
+
+test('a fragment that a comma inside a name leaves is not a unit of its own', () => {
+  const idx = buildMatchIndex([
+    rec('huawei-chengdu', { name: 'Huawei Technologies Co., Ltd. Chengdu Research Institute' }),
+    listed('vniiftri', 'Federal State Unitary Enterprise All-Russian Research Institute of Physical, Technical and Radio Engineering Measurements'),
+  ]);
+  assert.deepEqual(matchLine('ZTE Chengdu Research Institute, Chengdu, China', idx), []);
+  assert.deepEqual(matchLine('All-Russian Research Institute of Physical Culture, Moscow, Russia', idx), []);
+});

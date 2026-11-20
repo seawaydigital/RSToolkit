@@ -172,9 +172,10 @@ export default function BatchCheck({ dataset, index, state, setState }) {
           </div>
           <p className="dit-footnote">
             A match is confirmed by an email domain, a full Chinese name, or a name together with the institution&apos;s country or
-            city (or a name that includes them, like Harbin Institute of Technology). &quot;Check&quot; rows are possible matches: an
-            acronym, a near spelling, an alternative or shared name, a unit named without its parent&apos;s city, or a name with no
-            place. Confirm them before relying on them.
+            city (or a name that includes them, like Harbin Institute of Technology). A name matches with or without its legal
+            form, such as JSC or Co., Ltd. &quot;Check&quot; rows are possible matches: an acronym, a near spelling, an alternative
+            or shared name, a unit named without its parent&apos;s city, or a name with no place. Confirm them before relying on
+            them.
             A line that places itself in another country isn&apos;t matched. Not being in the tracker doesn&apos;t mean low risk.
           </p>
         </>
