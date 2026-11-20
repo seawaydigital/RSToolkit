@@ -363,3 +363,26 @@ test('a fragment that a comma inside a name leaves is not a unit of its own', ()
   assert.deepEqual(matchLine('ZTE Chengdu Research Institute, Chengdu, China', idx), []);
   assert.deepEqual(matchLine('All-Russian Research Institute of Physical Culture, Moscow, Russia', idx), []);
 });
+
+// A long alternative name can contain the institution's own name. The longest
+// span is kept, but the line is as sure as the name inside it.
+test('an alternative name that contains the institution’s own name is as sure as that name', () => {
+  const idx = buildMatchIndex([
+    listed('vniitf', 'All-Russian Scientific Research Institute of Technical Physics (VNIITF)', {
+      aliases: ['Federal State Unitary Enterprise Russian Federal Nuclear Center - Academician E.I. Zababakhin All-Russian Scientific Research Institute of Technical Physics'],
+      location: at('Snezhinsk'),
+    }),
+  ]);
+  const line = 'Russian Federal Nuclear Center - Academician E.I. Zababakhin All-Russian Scientific Research Institute of Technical Physics';
+  assert.deepEqual(norm(matchLine(line, idx)), [{ id: 'vniitf', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine(`Federal State Unitary Enterprise ${line}`, idx)), [{ id: 'vniitf', confidence: 'confirmed' }]);
+  assert.deepEqual(matchLine(`${line}, Boston, USA`, idx).map((m) => m.matchedBy), ['name']);
+});
+
+test('a name inside a longer one that several institutions share stays a check', () => {
+  const idx = buildMatchIndex([
+    listed('a', 'Volga Institute of Radio Systems', { aliases: ['Concern Volga Institute of Radio Systems Works'], location: at('Samara') }),
+    listed('b', 'Volga Institute of Radio Systems'),
+  ]);
+  assert.deepEqual(norm(matchLine('Concern Volga Institute of Radio Systems Works, Russia', idx)), [{ id: 'a', confidence: 'check' }]);
+});

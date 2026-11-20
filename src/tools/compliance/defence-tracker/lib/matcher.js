@@ -290,6 +290,17 @@ function cjkMatches(line, index) {
   }));
 }
 
+// The institution's own name inside a longer alternative name or unit that
+// was kept ("Russian Federal Nuclear Center - … All-Russian Scientific
+// Research Institute of Technical Physics"): the line is as sure as that name.
+// Not when other institutions share either span: then it settles nothing.
+function ownNameInside(hit, hits) {
+  if (hit.shared) return [];
+  const inside = (h) => h.start >= hit.start && h.end <= hit.end && h.end - h.start < hit.end - hit.start;
+  const sharedSpan = (h) => hits.some((o) => o.id !== h.id && o.start === h.start && o.end === h.end);
+  return hits.filter((h) => h.id === hit.id && h.kind === 'name' && inside(h) && !sharedSpan(h));
+}
+
 function nameMatches(affiliation, index, context) {
   const out = [];
   for (const segment of splitSegments(affiliation)) {
@@ -311,12 +322,15 @@ function nameMatches(affiliation, index, context) {
     }
     for (const hit of longestFirst(hits)) {
       const confidence = placeConfidence(hit, context, index);
-      if (!confidence) continue;
-      out.push(
-        hit.kind === 'subunit'
-          ? { id: hit.id, matchedBy: 'unit', confidence, text: hit.text, unit: hit.unit }
-          : { id: hit.id, matchedBy: 'name', confidence, text: hit.text },
-      );
+      const own = confidence === 'confirmed' ? null : ownNameInside(hit, hits).find((h) => placeConfidence(h, context, index) === 'confirmed');
+      if (own) out.push({ id: hit.id, matchedBy: 'name', confidence: 'confirmed', text: own.text });
+      else if (confidence) {
+        out.push(
+          hit.kind === 'subunit'
+            ? { id: hit.id, matchedBy: 'unit', confidence, text: hit.text, unit: hit.unit }
+            : { id: hit.id, matchedBy: 'name', confidence, text: hit.text },
+        );
+      }
     }
   }
   return out;
