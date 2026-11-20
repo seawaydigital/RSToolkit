@@ -1,0 +1,95 @@
+{
+  "id": "fater-institute",
+  "name": "Fater Institute",
+  "zh": null,
+  "zhAliases": [],
+  "aliases": [
+    "Faater Institute",
+    "Fater Engineering Institute",
+    "Fater Engineering Company",
+    "Gharargah Ghaem Faater Institute"
+  ],
+  "acronyms": [],
+  "domains": [],
+  "country": "IR",
+  "type": "company",
+  "location": {
+    "city": "Tehran",
+    "province": "Tehran",
+    "lat": null,
+    "lng": null
+  },
+  "supervisors": [
+    "Khatam al-Anbiya Construction Headquarters (KAA)",
+    "Islamic Revolutionary Guard Corps (IRGC)"
+  ],
+  "parent": null,
+  "ids": {},
+  "evidence": [
+    {
+      "signal": "armed-forces",
+      "summary": "The UN Security Council listed the Fater (or Faater) Institute in resolution 1929 (2010), among the entities owned, controlled or acting on behalf of Iran’s Islamic Revolutionary Guard Corps (IRGC), as a subsidiary of Khatam al-Anbiya Construction Headquarters (KAA). The resolution describes KAA as an IRGC-owned company that carries out large civil and military construction projects. It says Fater has worked with foreign suppliers, likely on behalf of other KAA companies on IRGC projects in Iran. OFAC lists it as Fater Engineering Institute, in Tehran, under its IRGC sanctions programme, among others.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "It is a subsidiary of Khatam al-Anbiya Construction Headquarters, a company owned by Iran’s Islamic Revolutionary Guard Corps (IRGC).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "topics": [],
+  "subunits": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Resolution 1929 (2010), adopted by the Security Council on 9 June 2010 (S/RES/1929 (2010)), Annex II",
+      "publisher": "United Nations Security Council",
+      "url": "https://documents.un.org/doc/undoc/gen/n10/396/79/pdf/n1039679.pdf",
+      "lang": "en",
+      "accessed": "2026-11-20",
+      "archive": {
+        "url": "https://web.archive.org/web/20261031225103/https://documents.un.org/doc/undoc/gen/n10/396/79/pdf/n1039679.pdf"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Sanctions List Search: Fater Engineering Institute (SDN list entry)",
+      "publisher": "US Department of the Treasury, Office of Foreign Assets Control (OFAC)",
+      "url": "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=11792",
+      "lang": "en",
+      "accessed": "2026-11-20",
+      "archive": {
+        "url": "https://web.archive.org/web/20261120154442/https://sanctionssearch.ofac.treas.gov/Details.aspx?id=11792"
+      }
+    }
+  ],
+  "rating": {
+    "override": null,
+    "overrideReason": null
+  },
+  "status": "verified",
+  "verifiedOn": "2026-11-20",
+  "history": [
+    {
+      "date": "2026-11-20",
+      "change": "Record created from its listing on the US SDN list, Canada’s sanctions list and Japan’s End User List; not yet verified."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Verified; rated Very high."
+    }
+  ],
+  "seedNotes": null
+}
