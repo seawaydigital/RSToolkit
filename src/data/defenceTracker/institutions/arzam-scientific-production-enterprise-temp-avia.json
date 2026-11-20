@@ -17,7 +17,11 @@
     "Public Joint Stock Company “Arzamas Research and Production Enterprise”",
     "Publichnoe Aktsionernoe Obshchestvo “Arzamasskoe Nauchno-Proizvodstvennoe Predpriyatie “TEMP-AVIA”",
     "PJSC ANPP Temp Avia",
-    "TEMP-AVIA"
+    "TEMP-AVIA",
+    "Public Joint Stock Company Arzamasskoe Nauchno Proizvodstvennoe Predpriyatie Temp-Avia",
+    "Temp-Avia PAO",
+    "PJSC Arzamas Research and Production Enterprise",
+    "Open Joint Stock Company Arzamasskoye Opytno Konstruktorskoye Byuro Temp"
   ],
   "acronyms": [],
   "domains": [],
@@ -98,6 +102,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Its US SDN entry, under its Russian legal name, is now listed here; the names that entry uses were added."
     }
   ],
   "seedNotes": null

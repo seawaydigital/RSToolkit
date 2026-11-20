@@ -5,7 +5,8 @@
   "zhAliases": [],
   "aliases": [
     "AO Nauchno Issledovatelskii Institut Promyshlennogo Televideniya Rastr",
-    "AO NIIPT Rastr"
+    "AO NIIPT Rastr",
+    "Aktsionernoe Obshchestvo Nauchno Issledovatelskii Institut Promyshlennogo Televideniya Rastr"
   ],
   "acronyms": [],
   "domains": [],
@@ -86,6 +87,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Its US SDN entry, under its Russian legal name, is now listed here; the name that entry uses was added."
     }
   ],
   "seedNotes": null

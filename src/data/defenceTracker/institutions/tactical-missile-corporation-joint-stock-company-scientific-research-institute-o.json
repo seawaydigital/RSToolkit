@@ -4,7 +4,14 @@
   "zh": null,
   "zhAliases": [],
   "aliases": [
-    "Research Institute of Morteplotehniki"
+    "Research Institute of Morteplotehniki",
+    "Research and Design Institute Morteplotekhnika JSC",
+    "Research and Design Institute of Sea Thermal Engineering",
+    "Joint Stock Company Research and Design Institute Sea Thermal Engineering",
+    "AO NII Morteplotekhniki",
+    "JSC Research & Design Institute Morteplotekhnika",
+    "Акционерное общество «Научно-исследовательский институт морской теплотехники»",
+    "НИИ Мортеплотехники, АО"
   ],
   "acronyms": [],
   "domains": [],
@@ -80,6 +87,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "Canada’s two sanctions entries for this institute (as Research and Design Institute Morteplotekhnika and Research and Design Institute of Sea Thermal Engineering), which the tracker had held as a separate record, and its US SDN entry are now listed here: Commerce and Treasury give the same address, 44 Chernikova Street, Lomonosov. The names those entries use were added."
     }
   ],
   "seedNotes": null
