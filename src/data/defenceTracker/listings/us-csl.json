@@ -46,6 +46,17 @@
       "institution": "nanjing-institute-of-astronomical-optics-and-technology"
     },
     {
+      "key": "csl:00807a1a9b79a69a9b92f36cee9c6be6ec83a78278d4ccec03074f7b",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Federal Research and Production Center Altai",
+      "altNames": [],
+      "country": "RU",
+      "date": "2022-06-06",
+      "citation": "87 FR 34157",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "federal-research-and-production-centre-altai-jsc"
+    },
+    {
       "key": "csl:00aff63cfedbd0cf3714df14d898d30cfa1adf68c34a71927dd8bcc0",
       "list": "us-entity-list",
       "name": "China Electronics Technology Group Corporation 13th Research Institute (CETC 13). Subordinate Institution - Hebei Sinopack Electronics",
@@ -754,6 +765,25 @@
       "institution": "central-research-institute-of-automation-and-hydraulics"
     },
     {
+      "key": "csl:1b713b71e9944975f088678347de75f8dd7e9802c6743cb88a86456a",
+      "list": "us-entity-list",
+      "name": "Open Joint Stock Company Scientific and Production Enterprise Pulsar",
+      "altNames": [
+        "AO Nauchno-Proizvodstvennoe Predpriyatie Pulsar",
+        "AO NPP Pulsar",
+        "Enterprise SPE Pulsar JSC",
+        "JSC NPP Pulsar",
+        "JSC SPC Pulsar",
+        "OAO NPP Pulsar",
+        "SPE Pulsar"
+      ],
+      "country": "RU",
+      "date": "2023-02-27",
+      "citation": "88 FR 12158",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "scientific-and-production-enterprise-pulsar-ojsc"
+    },
+    {
       "key": "csl:1c68b5fb59439286333645147e4b10374a8d05c81896ca62a68cc74e",
       "list": "us-entity-list",
       "name": "Federal State Unitary Enterprise Scientific Production Enterprise \"GAMMA\"",
@@ -931,6 +961,27 @@
       "citation": "IFSR; NPWMD",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "shahid-eslami-research-center"
+    },
+    {
+      "key": "csl:23943",
+      "list": "us-sdn",
+      "name": "INTERNET RESEARCH AGENCY LLC",
+      "altNames": [
+        "MEDIASINTEZ LLC",
+        "GLAVSET LLC",
+        "MIXINFO LLC",
+        "AZIMUT LLC",
+        "NOVINFO LLC",
+        "GLAVSET, OOO",
+        "MEDIASINTEZ, OOO",
+        "NOVINFO, OOO",
+        "LAKHTA INTERNET RESEARCH"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "CYBER2; ELECTION-EO13848",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "internet-research-agency-ira"
     },
     {
       "key": "csl:24027",
@@ -1686,6 +1737,23 @@
       "institution": "central-research-institute-of-automation-and-hydraulics"
     },
     {
+      "key": "csl:35859",
+      "list": "us-sdn",
+      "name": "PUBLIC JOINT STOCK COMPANY ARZAMASSKOE NAUCHNO PROIZVODSTVENNOE PREDPRIYATIE TEMP-AVIA",
+      "altNames": [
+        "TEMP-AVIA PAO",
+        "PJSC ARZAMAS RESEARCH AND PRODUCTION ENTERPRISE",
+        "TEMP-AVIA ARZAMAS RESEARCH & PRODUCTION ASSOCIATION JSC",
+        "TEMP-AVIA ARZAMAS RESEARCH AND PRODUCTION ASSOCIATION JSC",
+        "OPEN JOINT STOCK COMPANY ARZAMASSKOYE OPYTNO KONSTRUKTORSKOYE BYURO TEMP"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "arzam-scientific-production-enterprise-temp-avia"
+    },
+    {
       "key": "csl:35880",
       "list": "us-sdn",
       "name": "STATE SCIENTIFIC RESEARCH INSTITUTE OF MECHANICAL ENGINEERING IMENI V.V. BAKHIREVA",
@@ -1698,6 +1766,21 @@
       "citation": "RUSSIA-EO14024; UKRAINE-EO13662",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "state-scientific-research-institute-of-machine-building-bakhirev-gosniimash"
+    },
+    {
+      "key": "csl:35895",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY RESEARCH AND DESIGN INSTITUTE SEA THERMAL ENGINEERING",
+      "altNames": [
+        "AO NII MORTEPLOTEKHNIKI",
+        "JSC RESEARCH & DESIGN INSTITUTE MORTEPLOTEKHNIKA",
+        "JSC RESEARCH AND DESIGN INSTITUTE MORTEPLOTEKHNIKA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "tactical-missile-corporation-joint-stock-company-scientific-research-institute-o"
     },
     {
       "key": "csl:35937",
@@ -1883,6 +1966,21 @@
       "institution": "krylov-state-scientific-center-federal-state-unitary-enterprise"
     },
     {
+      "key": "csl:37667",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY RESEARCH AND PRODUCTION ENTERPRISE RADAR MMS",
+      "altNames": [
+        "JOINT STOCK COMPANY RADAR MMS",
+        "RADAR MMS NPP",
+        "SCIENTIFIC PRODUCTION ASSOCIATION RADAR MMS JSC"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "research-and-production-enterprise-radar-mms-jsc"
+    },
+    {
       "key": "csl:37668",
       "list": "us-sdn",
       "name": "JOINT STOCK COMPANY RESEARCH INSTITUTE POLYUS OF M.F. STELMAKH",
@@ -2042,6 +2140,19 @@
       "institution": "joint-stock-company-russian-research-institute-electronstandart"
     },
     {
+      "key": "csl:37797",
+      "list": "us-sdn",
+      "name": "AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT PROMYSHLENNOGO TELEVIDENIYA RASTR",
+      "altNames": [
+        "AO NIIPT RASTR"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "joint-stock-company-scientific-research-institute-of-industrial-television-rastr"
+    },
+    {
       "key": "csl:37798",
       "list": "us-sdn",
       "name": "AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT SREDSTV VYCHISLITELNOI TEKHNIKI",
@@ -2176,6 +2287,21 @@
       "institution": "mitishinskiy-scientific-research-institute-of-radio-measuring-instruments"
     },
     {
+      "key": "csl:38164",
+      "list": "us-sdn",
+      "name": "ACADEMICIAN A.L. MINTS RADIOTECHNICAL INSTITUTE JOINT STOCK COMPANY",
+      "altNames": [
+        "RTI IMENI ACADEMICIAN A.L. MINTS",
+        "RADIO TECHNICAL AND INFORMATION SYSTEMS IMENI A.L. MINTS",
+        "ACADEMICIAN A.L. MINTS RADIO ENGINEERING INSTITUTE"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "radio-technical-institute-named-after-a-l-mints"
+    },
+    {
       "key": "csl:38165",
       "list": "us-sdn",
       "name": "JOINT STOCK COMPANY INSTITUTE OF ELECTRONIC CONTROL COMPUTERS NAMED AFTER I.S. BRUK",
@@ -2202,6 +2328,22 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "joint-stock-company-scientific-research-institute-of-precision-mechanical-engine"
+    },
+    {
+      "key": "csl:38180",
+      "list": "us-sdn",
+      "name": "OPEN JOINT STOCK COMPANY SCIENTIFIC AND PRODUCTION ENTERPRISE PULSAR",
+      "altNames": [
+        "JSC NPP PULSAR",
+        "JSC SPC PULSAR",
+        "SPE PULSAR",
+        "ENTERPRISE SPE PULSAR JSC"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "scientific-and-production-enterprise-pulsar-ojsc"
     },
     {
       "key": "csl:38181",
@@ -2273,6 +2415,23 @@
       "citation": "88 FR 38741",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "the-test-flying-academy-of-south-africa"
+    },
+    {
+      "key": "csl:39142",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY RESEARCH AND PRODUCTION ASSOCIATION NAMED AFTER S. A. LAVOCHKINA",
+      "altNames": [
+        "S.A. LAVOCHKIN NPO",
+        "S.A. LAVOCHKIN SCIENTIFIC PRODUCTION ASSOCIATION",
+        "NPO IMENI LAVOCHKINA",
+        "LAVOCHKIN SCIENTIFIC RESEARCH ASSOCIATION",
+        "NAUCHNO PROIZVODSTVENNOYE OBYEDINENIYE IMENI LAVOCHKINA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024; UKRAINE-EO13662",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "research-and-production-association-named-after-s-a-lavochkina-jsc"
     },
     {
       "key": "csl:39143",
@@ -2357,6 +2516,23 @@
       "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n-2"
     },
     {
+      "key": "csl:39161",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY RESEARCH AND DEVELOPMENT ENTERPRISE SAPFIR",
+      "altNames": [
+        "RPE SAPFIR JSC",
+        "RPE SAPFIR PJSC",
+        "AO NPP SAPFIR",
+        "AKTSIONERNOYE OBSHCHESTVO NAUCHNO-PROIZVODSTVENNOYE PREDPRIYATIYE SAPFIR",
+        "RESEARCH AND PRODUCTION ENTERPRISE SAPFIR JOINT STOCK COMPANY"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "research-and-development-enterprise-sapfir-jsc"
+    },
+    {
       "key": "csl:39179",
       "list": "us-sdn",
       "name": "ELVEES RESEARCH AND DEVELOPMENT CENTER JSC",
@@ -2373,6 +2549,22 @@
       "institution": "elvees-research-and-development-center-jsc"
     },
     {
+      "key": "csl:39183",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY RESEARCH CENTER ELINS",
+      "altNames": [
+        "JSC SCIENTIFIC AND TECHNICAL CENTER ELINS",
+        "SCIENTIFIC TECHNICAL CENTRE ELINS",
+        "JSC NAUCHNYY CENTER ELINS",
+        "ELINS STC JSC"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "research-center-elins-jsc"
+    },
+    {
       "key": "csl:39184",
       "list": "us-sdn",
       "name": "JSC SCIENTIFIC AND TECHNICAL CENTER ZASLON",
@@ -2384,6 +2576,21 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "scientific-and-technical-center-zaslon-jsc"
+    },
+    {
+      "key": "csl:39185",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY INSTITUTE FOR SCIENTIFIC RESEARCH VYCHISLITELNYKH KOMPLEKSOV NAMED AFTER M. A. KARTSEVA",
+      "altNames": [
+        "JOINT STOCK COMPANY NIIVK NAMED AFTER M. A. KARTSEVA",
+        "JSC NII VYCHISLITELNYKH KOMPLEKSOV IM. M.A. KARTSEVA",
+        "AO NIIVK N.A. M.A. KARTSEV"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "joint-stock-company-scientific-research-institute-of-computing-complexes-named-a"
     },
     {
       "key": "csl:39186",
@@ -2686,6 +2893,35 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "federal-state-unitary-enterprise-scientific-production-enterprise-gamma"
+    },
+    {
+      "key": "csl:40296",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY CONCERN CENTRAL INSTITUTE FOR SCIENTIFIC RESEARCH ELEKTROPRIBOR",
+      "altNames": [
+        "JOINT STOCK COMPANY CENTRAL RESEARCH INSTITUTE CONCERN ELEKTROPRIBOR",
+        "CONCERN CSRI ELEKTROPRIBOR JSC"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "concern-central-institute-for-scientific-research-elektropribor-jsc"
+    },
+    {
+      "key": "csl:40321",
+      "list": "us-sdn",
+      "name": "JOINT STOCK COMPANY CONCERN AVRORA SCIENTIFIC AND PRODUCTION ASSOCIATION",
+      "altNames": [
+        "JOINT STOCK COMPANY CONCERN RESEARCH AND PRODUCTION ASSOCIATION AVRORA",
+        "CONCERN AVRORA SCIENTIFIC AND PRODUCTION ASSOCIATION JSC",
+        "AVRORA JSC"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "concern-avrora-scientific-and-production-association-jsc"
     },
     {
       "key": "csl:40322",
@@ -3120,6 +3356,22 @@
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
       "institution": "all-russian-scientific-research-institute-of-geophysical-prospecting-joint-stock"
+    },
+    {
+      "key": "csl:43069",
+      "list": "us-sdn",
+      "name": "PUBLIC JOINT STOCK COMPANY SCIENTIFIC AND PRODUCTION ASSOCIATION ALMAZ NAMED AFTER ACADEMICIAN A.A. RASPLETIN",
+      "altNames": [
+        "JSC NPO ALMAZ NAMED AFTER A.A. RASPLETIN",
+        "PJSC NPO ALMAZ",
+        "ALMAZ SCIENTIFIC PRODUCTION ASSOCIATION",
+        "PUBLICHNOE AKTCIONERNOE OBSHESTVO NAUCHNO-PROIZVODSTVENNOE OBEDINENIE ALMAZ IMENI AKADEMIKA A.A. RASPLETINA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "pjsc-scientific-and-production-association-almaz-named-after-academician-a-a-ras"
     },
     {
       "key": "csl:43074",
@@ -3974,6 +4226,25 @@
       "institution": "federal-state-autonomous-scientific-institution-central-research-and-experimenta"
     },
     {
+      "key": "csl:49385",
+      "list": "us-sdn",
+      "name": "PUBLIC JOINT STOCK COMPANY SCIENTIFIC PRODUCTION ASSOCIATION STRELA",
+      "altNames": [
+        "NPO STRELA",
+        "PAO NAUCHNO PROIZVODSTVENNOE OBEDINENIE STRELA",
+        "PAO NPO STRELA",
+        "PJSC RESEARCH AND PRODUCTION ASSOCIATION STRELA",
+        "PJSC SPA STRELA",
+        "SPA STRELA",
+        "PUBLICHNOE AKTSIONERNOE OBSHCHESTVO NAUCHNO PROIZVODSTVENNOE OBEDINENIE STRELA"
+      ],
+      "country": "RU",
+      "date": null,
+      "citation": "RUSSIA-EO14024",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "scientific-and-production-association-strela"
+    },
+    {
       "key": "csl:49392",
       "list": "us-sdn",
       "name": "RESEARCH AND DEVELOPMENT INSTITUTE OF SCIENTIFIC INSTRUMENTS JOINT STOCK COMPANY",
@@ -4692,6 +4963,24 @@
       "institution": "keldysh-institute-of-applied-mathematics-of-the-russian-academy-of-sciences"
     },
     {
+      "key": "csl:54efd4baf0d547eddb38f22314b36518d5d125f01f0de56891c908e0",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Scientific-Technical Center for Electronic Warfare",
+      "altNames": [
+        "JSC Scientific-Technical Center for Electronic Warfare",
+        "Aktsionernoe Obschestvo Nauchno-Tekhnicheski Tsentr Radioelektronnoi Borby",
+        "AO Nauchno-Tekhnicheski Tsentr Radioelektronnoi Borby",
+        "Scientific Technical Center of Radioelectronic Warfare",
+        "JSC NTTS REB",
+        "AO NTTS REB"
+      ],
+      "country": "RU",
+      "date": "2024-08-27",
+      "citation": "89 FR 68548",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "scientific-technical-center-for-electronic-warfare"
+    },
+    {
       "key": "csl:550b1627bec93026017728b46378514396e42a21818c3c3b8c0ee111",
       "list": "us-entity-list",
       "name": "Chinese Academy of Sciences’ Shanghai Institute of Microsystem and Information Technology",
@@ -5174,6 +5463,22 @@
       "institution": "scientific-research-institute-of-applied-chemistry"
     },
     {
+      "key": "csl:6dbdcda0469cc85c04500b7541e0e9ec10d7a5984566aea64497a3c0",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Research and Production Enterprise Sapfir",
+      "altNames": [
+        "AO NPP Sapfir",
+        "AO Nauchno-Proizvodstvennoe Predpriyatie Sapfir",
+        "JSC NPP Sapphire",
+        "JSC Research and Production Company Sapfir"
+      ],
+      "country": "RU",
+      "date": "2023-02-27",
+      "citation": "88 FR 12158",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "research-and-development-enterprise-sapfir-jsc"
+    },
+    {
       "key": "csl:6e13a1b173d787f3f9f29227a5e7507951a5c2e6a159587f113c7640",
       "list": "us-entity-list",
       "name": "Scientific Research Institute NII Submikron",
@@ -5535,6 +5840,25 @@
       "citation": "87 FR 60065",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "institute-of-physics-named-after-p-n-lebedev-of-the-russian-academy-of-sciences"
+    },
+    {
+      "key": "csl:83f2f16fbef0a68320af5cab74e77fd9e811a30b188ed5c60c50ae27",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Concern Central Institute for Scientific Research Elektropribor",
+      "altNames": [
+        "AO Kontsern Tsentralny Nauchno-Issledovatelski Institute Elektropribor",
+        "AO Kontsern TsNII Elektropribor",
+        "CNII Elektropribor",
+        "Concern CSRI Elektropribor JSC",
+        "Elektropribor SBP",
+        "JSC Central Research Institute Concern Elektropribor",
+        "SOPSERP CSRI Elektropribor JSC"
+      ],
+      "country": "RU",
+      "date": "2023-05-19",
+      "citation": "88 FR 32642",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "concern-central-institute-for-scientific-research-elektropribor-jsc"
     },
     {
       "key": "csl:840f0a45d9ccfe03e3009354af19d61c0c6efdf51e90ddff387690e5",
@@ -5939,6 +6263,24 @@
       "institution": "nanjing-university-of-science-and-technology"
     },
     {
+      "key": "csl:91c680d3042d6d67507c04ab99270445cb3e17c51192e95f9de8bf51",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Research Center ELINS",
+      "altNames": [
+        "AO Nauchnyy Tsentr ELINS",
+        "ELINS STC JSC",
+        "JSC ELINS",
+        "JSC Scientific and Technical Center ELINS",
+        "NTTS ELINS",
+        "Scientific-Technical Center ELINS."
+      ],
+      "country": "RU",
+      "date": "2023-02-27",
+      "citation": "88 FR 12158",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "research-center-elins-jsc"
+    },
+    {
       "key": "csl:92b9af42e777a7e4223ed34d7f230c49b038d6d80b4f7063d9bf07d8",
       "list": "us-entity-list",
       "name": "Scientific-Research Institute of Electronics (NIIET)",
@@ -5951,6 +6293,22 @@
       "citation": "87 FR 13141",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "scientific-research-institute-of-electronics-niiet"
+    },
+    {
+      "key": "csl:92fe3a634f3c49650aaa2f25a38e7d3ce221308c940621ae2371f61e",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Research and Production Enterprise Radar MMS",
+      "altNames": [
+        "AO Nauchno-Proizvodstvennoe Predpriyatie Radar MMS",
+        "JSC Radar MMS",
+        "NPP Radar MMS",
+        "Scientific Production Association Radar MMS JSC"
+      ],
+      "country": "RU",
+      "date": "2023-02-27",
+      "citation": "88 FR 12158",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "research-and-production-enterprise-radar-mms-jsc"
     },
     {
       "key": "csl:9498222cc1674aef954ba6dfcd5c1140",
@@ -6400,6 +6758,24 @@
       "citation": "87 FR 20299; 87 FR 34136",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "scientific-production-enterprise-almaz-jsc"
+    },
+    {
+      "key": "csl:ac208afc498e7302e4ce04b350ae06eebf3caf0235f578d61e0d2ebc",
+      "list": "us-entity-list",
+      "name": "Public Joint Stock Company Scientific Production Association Strela",
+      "altNames": [
+        "NPO Strela",
+        "PAO Nauchno-Proizvodstvennoe Obedinenie Strela",
+        "PAO NPO Strela",
+        "PJSC Research and Production Association Strela",
+        "PJSC SPA Strela",
+        "SPA Strela"
+      ],
+      "country": "RU",
+      "date": "2023-05-19",
+      "citation": "88 FR 32642",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "scientific-and-production-association-strela"
     },
     {
       "key": "csl:ac93975f62fa7d1c9dea8329a7bca47990ac9d798779c61785e27f5d",
@@ -6993,6 +7369,26 @@
       "institution": "n-a-dollezhal-order-of-lenin-research-and-design-institute-of-power-engineering"
     },
     {
+      "key": "csl:c9d52577cca516e80f619afc2abfae10689cf39c5ceac7c10a81dfa4",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Concern Avrora Scientific and Production Association",
+      "altNames": [
+        "AO Kontsern Nauchno-Proizvodstvennoe Obedinenie Avrora",
+        "AO Kontsern NPO Avrora",
+        "Avrora Systems",
+        "Avrora JSC",
+        "Concern Avrora Scientific Production Association",
+        "Concern Research and Production Association Avrora",
+        "NPO Avrora",
+        "OJSC Concern NPO Avrora"
+      ],
+      "country": "RU",
+      "date": "2023-05-19",
+      "citation": "88 FR 32642",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "concern-avrora-scientific-and-production-association-jsc"
+    },
+    {
       "key": "csl:c9e8936c896b48b428af40096c355b3fd9ea2503247189901dfc8442",
       "list": "us-entity-list",
       "name": "FSUE FNPC Nizhegorodsky Scientific Research Institute of Radiotechnics (NNIIRT)",
@@ -7329,6 +7725,23 @@
       "citation": "87 FR 12240; 87 FR 34136",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
       "institution": "moscow-institute-of-physics-and-technology"
+    },
+    {
+      "key": "csl:d88916d66e5c43f309322f3707cb95c055110d967c7028d874f687e5",
+      "list": "us-entity-list",
+      "name": "Joint Stock Company Research and Production Association Named After S.A. Lavochkina",
+      "altNames": [
+        "AO Nauchno-Proizvodstvennoe Obedinenie IM. S.A. Lavochkina",
+        "JSC Lavochkin Science and Production Association",
+        "NPO Imeni S.A. Lavochkina",
+        "NPO Lavochkin",
+        "S.A. Lavochkin Scientific Production Association"
+      ],
+      "country": "RU",
+      "date": "2023-02-27",
+      "citation": "88 FR 12158",
+      "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
+      "institution": "research-and-production-association-named-after-s-a-lavochkina-jsc"
     },
     {
       "key": "csl:d89e0159340e9dac676045a088ab5660e8a5f5063192517ab1aa8a1d",
