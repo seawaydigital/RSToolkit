@@ -88,6 +88,10 @@
     {
       "date": "2026-11-20",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-20",
+      "change": "OFAC’s SDN entry for Hara Company, which the tracker had not loaded because the name reads as a company, is now listed here."
     }
   ],
   "seedNotes": null

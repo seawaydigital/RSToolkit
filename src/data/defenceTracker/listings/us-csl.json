@@ -346,6 +346,19 @@
       "institution": "china-aerospace-science-and-industry-corporation-second-academy-subordinate-inst-9"
     },
     {
+      "key": "csl:10495",
+      "list": "us-sdn",
+      "name": "HARA COMPANY",
+      "altNames": [
+        "HARA INSTITUTE"
+      ],
+      "country": "IR",
+      "date": null,
+      "citation": "NPWMD; IRGC; IFSR; SDGT",
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
+      "institution": "hara-institute"
+    },
+    {
       "key": "csl:10985db62983826c9e4d455a909271ba41c27e4fe43b7d342d13f38e",
       "list": "us-entity-list",
       "name": "China Jiuyuan Trading Corporation",
