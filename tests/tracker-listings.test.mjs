@@ -142,7 +142,8 @@ test('a body the feed places in another city is not the one the tracker holds', 
   const stored = [{ key: 'csl:e1', name: 'Scientific-Production Enterprise Salyut, JSC', institution: 'salyut-nn' }];
   const salyut = (id, city) => ({ id, source: SDN, name: 'JOINT STOCK COMPANY SCIENTIFIC PRODUCTION ENTERPRISE SALYUT', alt_names: [], addresses: [{ country: 'RU', ...(city ? { city } : {}) }] });
   const rows = [
-    { id: 'e1', source: EL, name: 'Scientific-Production Enterprise Salyut, JSC', alt_names: [], addresses: [{ country: 'RU', city: 'Nizhny Novgorod' }] },
+    // The Entity List rows carry the city in the address line and leave the city field empty.
+    { id: 'e1', source: EL, name: 'Scientific-Production Enterprise Salyut, JSC', alt_names: [], addresses: [{ country: 'RU', address: '7 Larina St., Nizhny Novgorod', city: '', state: '' }] },
     salyut('s1', 'Moscow'),
     salyut('s2', 'Nizhniy Novgorod'),
     salyut('s3', null),
@@ -163,6 +164,22 @@ test('one place under two spellings is one place', () => {
   ];
   const places = cslPlaces(rows, stored);
   assert.deepEqual(cslToEntries(rows, { ...tracker, places }).map((e) => e.key), ['csl:r0', 'csl:r1', 'csl:r2']);
+});
+
+// Commerce gives the Morteplotekhnika institute's city as St. Petersburg with
+// "44 Chernikova Street, Lomonosov" as the address; Treasury gives Lomonosov.
+test('a town in the address line counts beside the city the feed names', () => {
+  const tracker = known([{ id: 'morteplo', name: 'Research and Design Institute of Sea Thermal Engineering', country: 'RU' }]);
+  const stored = [{ key: 'csl:t0', name: 'Scientific Research Institute of Marine Heat Engineering', institution: 'morteplo' }];
+  const treasury = (id, address, city) => ({ id, source: SDN, name: 'JOINT STOCK COMPANY RESEARCH AND DESIGN INSTITUTE SEA THERMAL ENGINEERING', alt_names: [], addresses: [{ country: 'RU', address, city }] });
+  const rows = [
+    { id: 't0', source: EL, name: 'Scientific Research Institute of Marine Heat Engineering', alt_names: [], addresses: [{ country: 'RU', address: '44 Chernikova Street, Lomonosov', city: 'St. Petersburg', state: '' }] },
+    treasury('t1', 'Ul. Chernikova, D. 44', 'Lomonosov'),
+    // Treasury's address line ends in the street, which places nothing: Lomonosov Street is in many cities.
+    treasury('t2', 'd. 44, Lomonosov', 'Omsk'),
+  ];
+  const places = cslPlaces(rows, stored);
+  assert.deepEqual(cslToEntries(rows, { ...tracker, places }).map((e) => e.key), ['csl:t0', 'csl:t1']);
 });
 
 // Otherwise an entry kept once would keep itself: its own record would make

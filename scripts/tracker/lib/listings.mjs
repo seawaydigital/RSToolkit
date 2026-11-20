@@ -140,8 +140,23 @@ function bareIndexOf(index) {
 // Novgorod, the SDN list's in Moscow), so a name apart from its legal form
 // counts only where the US feed's addresses don't say otherwise. A place is a
 // city or region as normalizePhrase leaves it, with "St." read as "Saint".
+// Treasury's rows name the city. Commerce's often leave it empty and carry the
+// place in the address line after the street ("7 Larina St., Nizhny
+// Novgorod"), or name a town there under the city ("44 Chernikova Street,
+// Lomonosov", St. Petersburg), among building and office numbers. Treasury's
+// address line is a street, which places nothing.
 const placeKey = (s) => normalizePhrase(String(s ?? '').replace(/\bst\.?(?=\s)/gi, 'saint'));
-const rowPlaces = (r) => new Set((r.addresses ?? []).flatMap((a) => [a.city, a.state]).map(placeKey).filter(Boolean));
+const ADDRESS_WORDS = new Set(['letter', 'litera', 'floor', 'room', 'office', 'building', 'house', 'structure', 'block', 'suite', 'unit']);
+const rowPlaces = (r) => {
+  const fromLine = /Bureau of Industry and Security/.test(r.source ?? '');
+  const lineParts = (a) => (fromLine ? String(a.address ?? '').split(',').slice(1).filter((part) => !/\d/.test(part)) : []);
+  return new Set(
+    (r.addresses ?? [])
+      .flatMap((a) => [a.city, a.state, ...lineParts(a)])
+      .map(placeKey)
+      .filter((place) => place && !ADDRESS_WORDS.has(place.split(' ')[0])),
+  );
+};
 // Transliterations of one name differ by a letter or two ("Velikiy Novgorod",
 // "Veliky Novgorod"); a short name must match exactly (Omsk is not Tomsk).
 const samePlace = (a, b) => a === b || (Math.min(a.length, b.length) >= 8 && osaDistance(a, b, 2) <= 2);
