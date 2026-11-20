@@ -7,6 +7,7 @@ import {
   assignInstitutions,
   caToEntries,
   compareNroNames,
+  cslPlaces,
   cslToEntries,
   diffEntries,
   isResearchBody,
@@ -81,6 +82,87 @@ test("Canada's list keeps a body the tracker holds, though its name reads like a
   const tracker = known([{ id: 'caep-china-jiuyuan-trading-corporation', name: 'China Jiuyuan Trading Corporation', country: 'CN' }]);
   assert.deepEqual(caToEntries(parseCaSanctionsXml(xml)), []);
   assert.deepEqual(caToEntries(parseCaSanctionsXml(xml), tracker).map((e) => e.key), ['ca:China:1, Part 1:5']);
+});
+
+// The lists write one body's legal form differently: Canada's "… Altai JSC" is
+// the US Entity List's "Joint Stock Company … Altai". The long form reads like
+// a company, so without this the US entry is dropped and the record reads
+// "Not listed" for a list that names it.
+test('an entry is kept when the tracker holds its name under another legal form', () => {
+  const tracker = known([
+    { id: 'altai', name: 'Federal Research and Production Centre Altai JSC', country: 'RU' },
+    { id: 'pulsar', name: 'Scientific and Production Enterprise Pulsar OJSC', country: 'RU' },
+  ]);
+  const results = [
+    { id: 'k1', source: EL, name: 'Joint Stock Company Federal Research and Production Center Altai', alt_names: [], addresses: [{ country: 'RU' }] },
+    { id: 'k2', source: EL, name: 'Open Joint Stock Company Scientific and Production Enterprise Pulsar', alt_names: ['AO NPP Pulsar'], addresses: [{ country: 'RU' }] },
+    // The same words in another country are another body.
+    { id: 'k3', source: EL, name: 'Joint Stock Company Federal Research and Production Center Altai', alt_names: [], addresses: [{ country: 'CN' }] },
+    // Another name is not vouched for, whatever its legal form.
+    { id: 'k4', source: EL, name: 'Joint Stock Company Scientific and Production Enterprise Radar', alt_names: [], addresses: [{ country: 'RU' }] },
+  ];
+  assert.deepEqual(cslToEntries(results), []);
+  assert.deepEqual(cslToEntries(results, tracker).map((e) => e.key), ['csl:k1', 'csl:k2']);
+});
+
+test("Canada's list keeps a body the tracker holds under another legal form", () => {
+  const xml = `<data-set><record><Country-Pays>Russia / Russie</Country-Pays><EntityOrShip-EntiteOuNavire>Joint Stock Company Scientific and Production Enterprise Pulsar</EntityOrShip-EntiteOuNavire><Schedule-Annexe>1, Part 2</Schedule-Annexe><Item-NumeroDarticle>7</Item-NumeroDarticle><DateOfListing-DateDinscription>2024-01-01</DateOfListing-DateDinscription></record></data-set>`;
+  const tracker = known([{ id: 'pulsar', name: 'SCIENTIFIC AND PRODUCTION ENTERPRISE PULSAR LLC', country: 'RU' }]);
+  assert.deepEqual(caToEntries(parseCaSanctionsXml(xml)), []);
+  assert.deepEqual(caToEntries(parseCaSanctionsXml(xml), tracker).map((e) => e.key), ['ca:Russia:1, Part 2:7']);
+});
+
+// "Salyut" or "Scientific Production Enterprise" alone could be anyone.
+test('what is left without the legal form must still name one body', () => {
+  const tracker = known([
+    { id: 'salyut', name: 'Scientific Production Enterprise Salyut JSC', aliases: ['Salyut JSC'], country: 'RU' },
+    { id: 'npp', name: 'Scientific Production Enterprise LLC', country: 'RU' },
+  ]);
+  const results = [
+    { id: 'm1', source: EL, name: 'Limited Liability Company Salyut', alt_names: [], addresses: [{ country: 'RU' }] },
+    { id: 'm2', source: EL, name: 'Joint Stock Company Scientific Production Enterprise', alt_names: [], addresses: [{ country: 'RU' }] },
+  ];
+  assert.deepEqual(cslToEntries(results, tracker), []);
+});
+
+// Only a legal form at the start or the end of a name is set aside.
+test('a legal form inside a name is part of the name', () => {
+  const tracker = known([{ id: 'design-bureau', name: 'Design Bureau of the Joint Stock Company Zvezda', country: 'RU' }]);
+  const results = [{ id: 'p1', source: EL, name: 'Limited Liability Company Design Bureau of the Zvezda', alt_names: [], addresses: [{ country: 'RU' }] }];
+  assert.deepEqual(cslToEntries(results, tracker), []);
+});
+
+// Two companies can share a name: the Entity List's NPP Salyut is in Nizhny
+// Novgorod, the SDN list's "Joint Stock Company … Salyut" in Moscow. The US
+// feed gives addresses, so a name apart from its legal form vouches only for
+// an entry it does not place somewhere else.
+const SDN = 'Specially Designated Nationals (SDN) - Treasury Department';
+test('a body the feed places in another city is not the one the tracker holds', () => {
+  const tracker = known([{ id: 'salyut-nn', name: 'Scientific-Production Enterprise Salyut, JSC', country: 'RU' }]);
+  const stored = [{ key: 'csl:e1', name: 'Scientific-Production Enterprise Salyut, JSC', institution: 'salyut-nn' }];
+  const salyut = (id, city) => ({ id, source: SDN, name: 'JOINT STOCK COMPANY SCIENTIFIC PRODUCTION ENTERPRISE SALYUT', alt_names: [], addresses: [{ country: 'RU', ...(city ? { city } : {}) }] });
+  const rows = [
+    { id: 'e1', source: EL, name: 'Scientific-Production Enterprise Salyut, JSC', alt_names: [], addresses: [{ country: 'RU', city: 'Nizhny Novgorod' }] },
+    salyut('s1', 'Moscow'),
+    salyut('s2', 'Nizhniy Novgorod'),
+    salyut('s3', null),
+  ];
+  const places = cslPlaces(rows, stored);
+  assert.deepEqual(cslToEntries(rows, { ...tracker, places }).map((e) => e.key), ['csl:e1', 'csl:s2', 'csl:s3']);
+});
+
+test('one place under two spellings is one place', () => {
+  const tracker = known([{ id: 'rastr', name: 'Joint Stock Company Scientific Research Institute of Industrial Television Rastr', aliases: ['AO Nauchno Issledovatelskii Institut Promyshlennogo Televideniya Rastr'], country: 'RU' }]);
+  const stored = [{ key: 'csl:r0', name: 'Joint Stock Company Scientific Research Institute of Industrial Television Rastr', institution: 'rastr' }];
+  const rows = [
+    { id: 'r0', source: EL, name: 'Joint Stock Company Scientific Research Institute of Industrial Television Rastr', alt_names: [], addresses: [{ country: 'RU', city: 'Veliky Novgorod', state: 'Novgorod Oblast' }, { country: 'RU', city: 'Saint Petersburg' }] },
+    { id: 'r1', source: SDN, name: 'AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT PROMYSHLENNOGO TELEVIDENIYA RASTR', alt_names: [], addresses: [{ country: 'RU', city: 'Velikiy Novgorod' }] },
+    { id: 'r2', source: SDN, name: 'AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT PROMYSHLENNOGO TELEVIDENIYA RASTR', alt_names: [], addresses: [{ country: 'RU', city: 'St. Petersburg' }] },
+    // Omsk is not Tomsk, though one letter apart.
+    { id: 'r3', source: SDN, name: 'AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT PROMYSHLENNOGO TELEVIDENIYA RASTR', alt_names: [], addresses: [{ country: 'RU', city: 'Tomsk' }] },
+  ];
+  const places = cslPlaces(rows, stored);
+  assert.deepEqual(cslToEntries(rows, { ...tracker, places }).map((e) => e.key), ['csl:r0', 'csl:r1', 'csl:r2']);
 });
 
 // Otherwise an entry kept once would keep itself: its own record would make
@@ -209,6 +291,57 @@ test('a bracketed abbreviation does not split one institution into two', () => {
     { index: buildMatchIndex([]), takenIds: new Set() },
   );
   assert.equal(entries[0].institution, entries[1].institution);
+});
+
+// Canada's "Research Institute Submicron JSC" is the US list's "JSC Research
+// Institute Submicron": without this, each new spelling makes a second record.
+test('an entry joins the record that holds its name under another legal form', () => {
+  const tracker = known([
+    { id: 'federal-research-and-production-centre-altai-jsc', name: 'Federal Research and Production Centre Altai JSC', country: 'RU' },
+    { id: 'jsc-scientific-research-institute-submicron', name: 'JSC SCIENTIFIC RESEARCH INSTITUTE SUBMICRON', aliases: ['JSC RESEARCH INSTITUTE SUBMICRON'], country: 'RU' },
+  ]);
+  const { entries, created } = assignInstitutions(
+    [
+      { key: 'csl:n1', name: 'Joint Stock Company Federal Research and Production Center Altai', country: 'RU' },
+      { key: 'ca:n2', name: 'Research Institute Submicron JSC', country: 'RU' },
+      // The same words in another country are another body.
+      { key: 'csl:n3', name: 'Joint Stock Company Federal Research and Production Center Altai', country: 'CN' },
+    ],
+    { ...tracker, takenIds: new Set(['federal-research-and-production-centre-altai-jsc', 'jsc-scientific-research-institute-submicron']) },
+  );
+  assert.deepEqual(entries.map((e) => e.institution), [
+    'federal-research-and-production-centre-altai-jsc',
+    'jsc-scientific-research-institute-submicron',
+    'joint-stock-company-federal-research-and-production-center-altai',
+  ]);
+  assert.deepEqual(created, ['joint-stock-company-federal-research-and-production-center-altai']);
+});
+
+test('an entry the feed places in another city gets a record of its own', () => {
+  const tracker = known([{ id: 'institute-vektor', name: 'JSC Scientific Research Institute Vektor', country: 'RU' }]);
+  const rows = [
+    { id: 'v0', source: EL, name: 'JSC Scientific Research Institute Vektor', alt_names: [], addresses: [{ country: 'RU', city: 'Saint Petersburg' }] },
+    { id: 'v1', source: EL, name: 'Scientific Research Institute Vektor', alt_names: [], addresses: [{ country: 'RU', city: 'Koltsovo' }] },
+    { id: 'v2', source: SDN, name: 'Scientific Research Institute Vektor', alt_names: [], addresses: [{ country: 'RU', city: 'St. Petersburg' }] },
+  ];
+  const places = cslPlaces(rows, [{ key: 'csl:v0', name: 'JSC Scientific Research Institute Vektor', institution: 'institute-vektor' }]);
+  const assign = (key) =>
+    assignInstitutions([{ key, name: 'Scientific Research Institute Vektor', country: 'RU' }], { ...tracker, places, takenIds: new Set(['institute-vektor']) }).entries[0].institution;
+  assert.equal(assign('csl:v1'), 'scientific-research-institute-vektor');
+  assert.equal(assign('csl:v2'), 'institute-vektor');
+});
+
+test('a name two records share once the legal form is gone joins neither', () => {
+  const tracker = known([
+    { id: 'vektor-jsc', name: 'Scientific Research Institute Vektor JSC', country: 'RU' },
+    { id: 'vektor-llc', name: 'Scientific Research Institute Vektor LLC', country: 'RU' },
+  ]);
+  const { entries, created } = assignInstitutions(
+    [{ key: 'csl:q1', name: 'Open Joint Stock Company Scientific Research Institute Vektor', country: 'RU' }],
+    { ...tracker, takenIds: new Set(['vektor-jsc', 'vektor-llc']) },
+  );
+  assert.equal(entries[0].institution, 'open-joint-stock-company-scientific-research-institute-vektor');
+  assert.deepEqual(created, ['open-joint-stock-company-scientific-research-institute-vektor']);
 });
 
 test('a one-word alias never links two entries', () => {
