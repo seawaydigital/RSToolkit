@@ -371,7 +371,7 @@
       "date": "2022-03-10",
       "citation": "Schedule 1, Part 2, item 115",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "scientific-research-institute-of-computing-machinery-jsc"
+      "institution": "joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv"
     },
     {
       "key": "ca:Russia:1, Part 2:116",
@@ -658,7 +658,7 @@
       "date": "2022-07-29",
       "citation": "Schedule 1, Part 2, item 247",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "scientific-research-institute-and-factory-platan"
+      "institution": "joint-stock-company-scientific-research-institute-platan-with-plant"
     },
     {
       "key": "ca:Russia:1, Part 2:248",
@@ -1044,7 +1044,7 @@
       "date": "2023-08-22",
       "citation": "Schedule 1, Part 2, item 420",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "omsk-scientific-research-institute-of-instrument-making-jsc"
+      "institution": "omsk-scientific-research-institute-of-instrument-engineering-jsc"
     },
     {
       "key": "ca:Russia:1, Part 2:423",
@@ -1255,7 +1255,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 486",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "state-research-institute-of-instrument-engineering-gosniip"
+      "institution": "joint-stock-company-state-scientific-research-institute-of-instrument-making"
     },
     {
       "key": "ca:Russia:1, Part 2:487",
@@ -1283,7 +1283,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 490",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "moscow-research-institute-agat-jsc"
+      "institution": "joint-stock-company-moscow-scientific-research-institute-agat"
     },
     {
       "key": "ca:Russia:1, Part 2:493",
@@ -1374,7 +1374,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 516",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "kaluga-research-institute-of-radio-engineering-jsc"
+      "institution": "joint-stock-company-kaluga-scientific-research-institute-of-radio-engineering-kn"
     },
     {
       "key": "ca:Russia:1, Part 2:520",
@@ -1509,7 +1509,7 @@
     {
       "key": "ca:Russia:1, Part 2:554",
       "list": "ca-sanctions",
-      "name": "The Russian Institute of Radionavigation and Time, JSC (also known as Open Joint Stock Company Russian Institute of Radionavigation and Time and Russian",
+      "name": "The Russian Institute of Radionavigation and Time, JSC",
       "altNames": [
         "АО «Российский институт радионавигации и времени»"
       ],
@@ -1517,7 +1517,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 554",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s"
+      "institution": "russian-institute-of-radio-navigation-and-time"
     },
     {
       "key": "ca:Russia:1, Part 2:557",
@@ -1543,7 +1543,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 559",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-production-association-rusbitech-also-known-as-rusbitech"
+      "institution": "scientific-and-production-association-russian-basic-information-technology-jsc"
     },
     {
       "key": "ca:Russia:1, Part 2:56",
@@ -1593,7 +1593,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 585",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "central-research-institute-of-chemistry-and-mechanics-fsue-also-known-as-federal"
+      "institution": "federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis"
     },
     {
       "key": "ca:Russia:1, Part 2:615",

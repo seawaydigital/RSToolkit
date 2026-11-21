@@ -466,3 +466,15 @@ test('the NRO page yields the organization names', () => {
   const html = '<p><strong>Organization:</strong> x</p><ul><li><strong>Harbin Institute of Technology</strong> (People’s Republic of China)</li><li><strong>Xi&#39;an Technological University</strong> (People’s Republic of China)</li></ul>';
   assert.deepEqual(parseNroPage(html), ['Harbin Institute of Technology', "Xi'an Technological University"]);
 });
+
+// Canada's file cuts one entity field off inside its bracket; a bracket that
+// is complete is part of the name as Canada gives it.
+test('a Canadian name cut off inside a bracket loses the unfinished bracket', () => {
+  const record = (item, entity) =>
+    `<record><Country-Pays>Russia / Russie</Country-Pays><EntityOrShip-EntiteOuNavire>${entity}</EntityOrShip-EntiteOuNavire><Schedule-Annexe>1, Part 2</Schedule-Annexe><Item-NumeroDarticle>${item}</Item-NumeroDarticle><DateOfListing-DateDinscription>2024-02-21</DateOfListing-DateDinscription></record>`;
+  const xml = `<data-set>${record(554, 'The Russian Institute of Radionavigation and Time, JSC (also known as Open Joint Stock Company Russian Institute of Radionavigation and Time and Russian')}${record(520, 'Krylov State Research Centre (also known as Krylov State Scientific Center Federal State Unitary Enterprise)')}</data-set>`;
+  assert.deepEqual(caToEntries(parseCaSanctionsXml(xml)).map((e) => e.name), [
+    'The Russian Institute of Radionavigation and Time, JSC',
+    'Krylov State Research Centre (also known as Krylov State Scientific Center Federal State Unitary Enterprise)',
+  ]);
+});
