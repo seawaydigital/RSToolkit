@@ -82,6 +82,11 @@
       "name": "Space Information College",
       "zh": "航天信息学院",
       "kind": "institute"
+    },
+    {
+      "name": "Shahe campus (Hebei)",
+      "zh": "沙河",
+      "kind": "campus"
     }
   ],
   "sources": [
@@ -122,6 +127,10 @@
     {
       "date": "2026-10-27",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campus outside Beijing added from the CASI report already cited (p. 217): Shahe, Hebei."
     }
   ],
   "seedNotes": {
