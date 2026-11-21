@@ -78,6 +78,16 @@
       "name": "College of Military Culture (Beijing)",
       "zh": "军事文化学院",
       "kind": "institute"
+    },
+    {
+      "name": "Shanghai campus",
+      "zh": null,
+      "kind": "campus"
+    },
+    {
+      "name": "Xi’an campus",
+      "zh": null,
+      "kind": "campus"
     }
   ],
   "sources": [
@@ -107,6 +117,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campuses in other cities added from the CASI report already cited (p. 34), which gives campuses in Beijing, Shanghai, Shijiazhuang, Nanjing and Xi’an."
     }
   ],
   "seedNotes": {
