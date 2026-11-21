@@ -1,7 +1,7 @@
 // Pure helpers for the official-list sync: turning the US Consolidated
 // Screening List, Canada's sanctions XML and the NRO page into listing
 // entries, and mapping each entry to a tracker record.
-import { isGenericPhrase, normalizePhrase } from '../../../src/tools/compliance/defence-tracker/lib/normalize.js';
+import { isGenericPhrase, normalizePhrase, osaDistance } from '../../../src/tools/compliance/defence-tracker/lib/normalize.js';
 import { slugify } from '../../../src/tools/compliance/defence-tracker/lib/schema.js';
 import { RESERVED_SLUGS } from '../../../src/tools/compliance/defence-tracker/lib/constants.js';
 
@@ -86,14 +86,110 @@ export function isResearchBody(name) {
 
 const sameCountry = (a, b) => !a || !b || a === b;
 
+// Legal forms the lists put before or after a body's name, as normalizePhrase
+// leaves them: Canada's "… Altai JSC" is the US Entity List's "Joint Stock
+// Company … Altai", and OFAC writes "Aktsionernoe Obshchestvo …".
+const LEGAL_FORMS = [
+  'open joint stock company', 'closed joint stock company', 'public joint stock company', 'joint stock company',
+  'limited liability company', 'federal state unitary enterprise',
+  'otkrytoe aktsionernoe obshchestvo', 'publichnoe aktsionernoe obshchestvo', 'zakrytoe aktsionernoe obshchestvo', 'aktsionernoe obshchestvo',
+  'obshchestvo s ogranichennoi otvetstvennostyu',
+  'company limited', 'co limited', 'co ltd',
+  'ojsc', 'pjsc', 'cjsc', 'jsc', 'oao', 'pao', 'zao', 'ao', 'ooo', 'llc', 'fsue', 'fgup', 'limited', 'ltd',
+].map((form) => form.split(' '));
+
+// A normalized name without the legal form at its start or its end, or null
+// when what is left could be anyone: one word ("Salyut"), or only words that
+// say what a body does ("Scientific Production Enterprise"). A legal form
+// inside a name ("Design Bureau of the Joint Stock Company …") is part of it.
+function bareKey(phrase) {
+  let tokens = String(phrase ?? '').split(' ');
+  for (let again = true; again; ) {
+    again = false;
+    for (const form of LEGAL_FORMS) {
+      if (tokens.length <= form.length) continue;
+      const tail = tokens.length - form.length;
+      if (form.every((t, i) => tokens[i] === t)) tokens = tokens.slice(form.length);
+      else if (form.every((t, i) => tokens[tail + i] === t)) tokens = tokens.slice(0, tail);
+      else continue;
+      again = true;
+    }
+  }
+  const bare = tokens.join(' ');
+  return tokens.length >= 2 && !isGenericPhrase(bare) ? bare : null;
+}
+
+// The match index's name phrases by bare key: which records hold a name once
+// its legal form is set aside.
+const bareIndexes = new WeakMap();
+function bareIndexOf(index) {
+  if (!bareIndexes.has(index)) {
+    const bare = new Map();
+    for (const [phrase, ids] of index.phrases) {
+      const key = bareKey(phrase);
+      if (!key) continue;
+      if (!bare.has(key)) bare.set(key, new Set());
+      for (const id of ids) bare.get(key).add(id);
+    }
+    bareIndexes.set(index, bare);
+  }
+  return bareIndexes.get(index);
+}
+
+// Two companies can share a name (the Entity List's NPP Salyut is in Nizhny
+// Novgorod, the SDN list's in Moscow), so a name apart from its legal form
+// counts only where the US feed's addresses don't say otherwise. A place is a
+// city or region as normalizePhrase leaves it, with "St." read as "Saint".
+// Treasury's rows name the city. Commerce's often leave it empty and carry the
+// place in the address line after the street ("7 Larina St., Nizhny
+// Novgorod"), or name a town there under the city ("44 Chernikova Street,
+// Lomonosov", St. Petersburg), among building and office numbers. Treasury's
+// address line is a street, which places nothing.
+const placeKey = (s) => normalizePhrase(String(s ?? '').replace(/\bst\.?(?=\s)/gi, 'saint'));
+const ADDRESS_WORDS = new Set(['letter', 'litera', 'floor', 'room', 'office', 'building', 'house', 'structure', 'block', 'suite', 'unit']);
+const rowPlaces = (r) => {
+  const fromLine = /Bureau of Industry and Security/.test(r.source ?? '');
+  const lineParts = (a) => (fromLine ? String(a.address ?? '').split(',').slice(1).filter((part) => !/\d/.test(part)) : []);
+  return new Set(
+    (r.addresses ?? [])
+      .flatMap((a) => [a.city, a.state, ...lineParts(a)])
+      .map(placeKey)
+      .filter((place) => place && !ADDRESS_WORDS.has(place.split(' ')[0])),
+  );
+};
+// Transliterations of one name differ by a letter or two ("Velikiy Novgorod",
+// "Veliky Novgorod"); a short name must match exactly (Omsk is not Tomsk).
+const samePlace = (a, b) => a === b || (Math.min(a.length, b.length) >= 8 && osaDistance(a, b, 2) <= 2);
+// Both sides are placed and no place agrees: another body of the same name.
+const elsewhere = (a, b) => Boolean(a?.size && b?.size) && ![...a].some((x) => [...b].some((y) => samePlace(x, y)));
+
+// Where the US feed places each of its entries (by key) and each record
+// (through the entries the stored snapshot maps to it). Canada's list gives no
+// addresses, so its entries and the records only it names are placed nowhere.
+export function cslPlaces(rows, previous = []) {
+  const byKey = new Map(rows.map((r) => [`csl:${r.id}`, rowPlaces(r)]));
+  const byRecord = new Map();
+  for (const e of previous) {
+    if (!e.institution) continue;
+    if (!byRecord.has(e.institution)) byRecord.set(e.institution, new Set());
+    for (const place of byKey.get(e.key) ?? []) byRecord.get(e.institution).add(place);
+  }
+  return { ofEntry: (e) => byKey.get(e.key), ofRecord: (id) => byRecord.get(id) };
+}
+
 // Whether a list's main name for an entry is the name of a record the tracker
 // already holds in that country, compared the way assignInstitutions compares
-// names. Alternative names don't count: the US list gives CETC 38's
-// subsidiary companies the institute's own aliases.
-function namesRecord(index, countryOf) {
+// names: exactly, or apart from the legal form when the entry (placed `at`)
+// is not somewhere else. Alternative names don't count: the US list gives
+// CETC 38's subsidiary companies the institute's own aliases.
+function namesRecord(index, countryOf, places) {
   if (!index) return () => false;
-  return (name, country) =>
-    entryKeys({ name }, { distinctive: true }).some(({ key }) => [...(index.phrases.get(key) ?? [])].some((id) => sameCountry(countryOf(id), country)));
+  const bare = bareIndexOf(index);
+  const held = (ids, country) => [...(ids ?? [])].filter((id) => sameCountry(countryOf(id), country));
+  return (name, country, at) =>
+    entryKeys({ name }, { distinctive: true }).some(
+      ({ key }) => held(index.phrases.get(key), country).length > 0 || held(bare.get(bareKey(key)), country).some((id) => !elsewhere(at, places?.ofRecord(id))),
+    );
 }
 
 // The records the known-name test may trust: files and NRO organizations,
@@ -112,9 +208,10 @@ export function recordsHeldApart(records, snapshots) {
 // An entry is kept when its main name reads as a research body, or is a body
 // the tracker already holds (CAEP's trading companies are on Canada's NRO
 // list), so no record reads "Not listed" for a list that names it. For the
-// second test, pass `index`, a match index of recordsHeldApart, and `countryOf`.
-export function cslToEntries(results, { index = null, countryOf = () => null } = {}) {
-  const known = namesRecord(index, countryOf);
+// second test, pass `index`, a match index of recordsHeldApart, and `countryOf`;
+// `places` (cslPlaces) keeps a namesake in another city out.
+export function cslToEntries(results, { index = null, countryOf = () => null, places = null } = {}) {
+  const known = namesRecord(index, countryOf, places);
   const rows = results
     .map((r) => ({ r, list: CSL_LISTS[r.source], country: (r.addresses ?? []).map((a) => a.country).find((c) => COUNTRIES.has(c)) }))
     .filter(({ r, list, country }) => list && country && !CSL_FEED_ERRORS.has(r.id));
@@ -122,7 +219,7 @@ export function cslToEntries(results, { index = null, countryOf = () => null } =
   const out = [];
   for (const { r, list, country } of rows) {
     if (cut.has(r.id)) continue;
-    if (!isResearchBody(r.name) && !known(r.name, country)) continue;
+    if (!isResearchBody(r.name) && !known(r.name, country, rowPlaces(r))) continue;
     out.push({
       key: `csl:${r.id}`,
       list,
@@ -252,11 +349,16 @@ export function resolveInstitutionAliases(entries, aliases) {
 // When an entry links two such records, the later is folded into the earlier
 // (`aliases`). Records that existed before the sync are never merged. Pass
 // the same `known`, `aliases` and `createdIds` to every call in a sync.
+// An entry no name places joins the one record in its country that holds its
+// main name under another legal form ("Joint Stock Company X" for "X JSC"),
+// rather than becoming a second record for the same body, unless `places`
+// (cslPlaces) shows the two in different cities.
 export function assignInstitutions(
   entries,
-  { previous = [], index, takenIds = new Set(), countryOf = () => null, known = new Map(), aliases = new Map(), createdIds = new Set() },
+  { previous = [], index, takenIds = new Set(), countryOf = () => null, known = new Map(), aliases = new Map(), createdIds = new Set(), places = null },
 ) {
   const find = finder(aliases);
+  const bare = bareIndexOf(index);
   const byKey = new Map(previous.map((p) => [p.key, p]));
   const byName = new Map();
   for (const p of previous.filter((x) => x.institution)) {
@@ -283,6 +385,16 @@ export function assignInstitutions(
       ),
     ];
     institution = institution ? find(institution) : (hits.find((id) => !createdIds.has(id)) ?? hits[0] ?? null);
+    if (!institution) {
+      const at = places?.ofEntry(e);
+      const same = new Set(
+        keys
+          .filter((k) => k.primary)
+          .flatMap(({ key }) => [...(bare.get(bareKey(key)) ?? [])])
+          .filter((id) => sameCountry(countryOf(id), e.country) && !elsewhere(at, places?.ofRecord(id))),
+      );
+      if (same.size === 1) institution = find([...same][0]);
+    }
     if (institution) {
       for (const h of hits) if (h !== institution && createdIds.has(h)) aliases.set(h, institution);
     } else {

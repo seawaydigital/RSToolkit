@@ -684,7 +684,7 @@
       "date": "2022-07-29",
       "citation": "Schedule 1, Part 2, item 252",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-design-institute-morteplotekhnika-jsc"
+      "institution": "tactical-missile-corporation-joint-stock-company-scientific-research-institute-o"
     },
     {
       "key": "ca:Russia:1, Part 2:254",
@@ -992,6 +992,19 @@
       "citation": "Schedule 1, Part 2, item 386",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
       "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:388",
+      "list": "ca-sanctions",
+      "name": "VNII Signal",
+      "altNames": [
+        "Всероссийский научно-исследовательский Институт радиотехники, ОАО"
+      ],
+      "country": "RU",
+      "date": "2023-05-18",
+      "citation": "Schedule 1, Part 2, item 388",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "joint-stock-company-all-russian-research-institute-signal"
     },
     {
       "key": "ca:Russia:1, Part 2:389",
@@ -1439,7 +1452,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 532",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-design-institute-morteplotekhnika-jsc"
+      "institution": "tactical-missile-corporation-joint-stock-company-scientific-research-institute-o"
     },
     {
       "key": "ca:Russia:1, Part 2:533",
@@ -1505,6 +1518,19 @@
       "citation": "Schedule 1, Part 2, item 554",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
       "institution": "the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:557",
+      "list": "ca-sanctions",
+      "name": "Academician A.L. Mints Radiotechnical Institute Joint Stock Company",
+      "altNames": [
+        "Акционерное общество«Радиотехнический институт имениакадемика А.Л. Минца»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 557",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "radio-technical-institute-named-after-a-l-mints"
     },
     {
       "key": "ca:Russia:1, Part 2:559",
