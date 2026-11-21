@@ -92,6 +92,11 @@
       "name": "Sichuan nuclear power operations training facility",
       "zh": "四川核动力运行实习所",
       "kind": "campus"
+    },
+    {
+      "name": "Service College (Tianjin)",
+      "zh": "勤务学院",
+      "kind": "institute"
     }
   ],
   "sources": [
@@ -121,6 +126,10 @@
     {
       "date": "2026-10-26",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Unit in another city added from the CASI report already cited (p. 115): the Service College in Tianjin."
     }
   ],
   "seedNotes": {
