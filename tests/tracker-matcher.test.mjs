@@ -386,3 +386,46 @@ test('a name inside a longer one that several institutions share stays a check',
   ]);
   assert.deepEqual(norm(matchLine('Concern Volga Institute of Radio Systems Works, Russia', idx)), [{ id: 'a', confidence: 'check' }]);
 });
+
+// Enterprises share names across cities: one NPP Salyut is in Nizhny Novgorod
+// and another in Moscow. A line that names a city or region of the country
+// other than the ones the institution is known at is a check. The places come
+// from the record's location, its names and units, and the lists' addresses.
+const salyut = () => buildMatchIndex([listed('salyut', 'Scientific-Production Enterprise Salyut JSC', { aliases: ['JSC NPP Salyut'], places: ['Nizhny Novgorod'] })]);
+
+test('a line that names another city than the institution’s is a check', () => {
+  assert.deepEqual(norm(matchLine('NPP Salyut, Moscow, Russia', salyut())), [{ id: 'salyut', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Scientific-Production Enterprise Salyut, Moscow, Russia', salyut())), [{ id: 'salyut', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('NPP Salyut, Nizhny Novgorod, Russia', salyut())), [{ id: 'salyut', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('NPP Salyut, Russia', salyut())), [{ id: 'salyut', confidence: 'confirmed' }]);
+});
+
+test('a name that carries its own place is not doubted by another city', () => {
+  const hit = buildMatchIndex([rec('hit', { name: 'Harbin Institute of Technology', location: at('Harbin') })]);
+  assert.deepEqual(norm(matchLine('Harbin Institute of Technology, Shenzhen, China', hit)), [{ id: 'hit', confidence: 'confirmed' }]);
+});
+
+test('the institution’s own city, its region, another spelling of it or a listed unit’s city is not another city', () => {
+  const idx = buildMatchIndex([
+    rec('nwpu', {
+      name: 'Northwestern Polytechnical University',
+      location: { city: "Xi'an", province: 'Shaanxi', lat: null, lng: null },
+      subunits: [{ name: 'Shenzhen Research Institute', zh: null, kind: 'institute' }],
+    }),
+    listed('rnt', 'Institute of Radio Navigation and Time', { places: ['Saint Petersburg'] }),
+    listed('issp', 'Institute of Solid State Physics', { places: ['Chernogolovka', 'Moscow Region'] }),
+  ]);
+  const only = (line, id, confidence) => assert.deepEqual(norm(matchLine(line, idx)), [{ id, confidence }], line);
+  only('Northwestern Polytechnical University, Xi’an 710072, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Shaanxi, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Shenzhen, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Chengdu, China', 'nwpu', 'check');
+  only('Institute of Radio Navigation and Time, St. Petersburg, Russia', 'rnt', 'confirmed');
+  only('Institute of Radio Navigation and Time, Kazan, Russia', 'rnt', 'check');
+  only('Institute of Solid State Physics, Moscow, Russia', 'issp', 'confirmed');
+});
+
+test('an institution with no known place is judged as before', () => {
+  const idx = buildMatchIndex([listed('kurs', 'Central Research Institute Kurs JSC')]);
+  assert.deepEqual(norm(matchLine('Central Research Institute Kurs, Kazan, Russia', idx)), [{ id: 'kurs', confidence: 'confirmed' }]);
+});

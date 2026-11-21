@@ -44,6 +44,11 @@ const NEVER_CONFIRMED = [
   // Other bodies than the ones the lists name: the Russian Academy of Sciences' institute, and NIIMash in Nizhnyaya Salda.
   'Institute of Applied Physics, Nizhny Novgorod, Russia',
   'Scientific Research Institute of Mechanical Engineering, Nizhnyaya Salda, Russia',
+  // The listed NPP Salyut is in Nizhny Novgorod; another one is in Moscow. The lists place Tsinghua in
+  // Beijing and USTC in Hefei, and a line from another city needs a look.
+  'NPP Salyut, Moscow, Russia',
+  'Tsinghua University, Shenzhen, China',
+  'University of Science and Technology of China, Suzhou, China',
 ];
 
 for (const line of NEVER_CONFIRMED) {
@@ -151,7 +156,17 @@ const WITHOUT_LEGAL_FORM = [
   ['China Nuclear Power Technology Research Institute, Shenzhen, China', 'china-nuclear-power-technology-research-institute-co-ltd'],
 ];
 
-for (const [line, id] of [...CONFIRMED, ...WITHOUT_LEGAL_FORM]) {
+// A line that names another city than the institution's is a check, but these
+// name a place the institution is known at: the city the list's address gives,
+// a site among the Entity List's addresses, or the city in the name itself.
+const AT_A_KNOWN_PLACE = [
+  ['NPP Salyut, Nizhny Novgorod, Russia', 'scientific-production-enterprise-salyut-jsc'],
+  ['Beihang University, Hangzhou, China', 'beihang-university'],
+  ['Harbin Institute of Technology, Shenzhen, China', 'harbin-institute-of-technology'],
+  ['Research Institute Submicron, Moscow, Russia', 'jsc-scientific-research-institute-submicron'],
+];
+
+for (const [line, id] of [...CONFIRMED, ...WITHOUT_LEGAL_FORM, ...AT_A_KNOWN_PLACE]) {
   test(`confirmed: ${line}`, () => {
     const ms = matchLine(line, index);
     assert.ok(ms.some((m) => m.id === id && m.confidence === 'confirmed'), show(ms));

@@ -31,7 +31,7 @@ import {
   splitSegments,
   stripLegalForm,
 } from './normalize.js';
-import { inTokens, placeContext, placesIn, traditionalOrTaiwan, withoutCodes } from './places.js';
+import { inTokens, knownPlaces, placeContext, placesIn, placesNamed, samePlace, traditionalOrTaiwan, withoutCodes } from './places.js';
 
 export const MAX_BATCH_LINES = 2000;
 
@@ -101,6 +101,7 @@ export function buildMatchIndex(records) {
       city: r.location?.city ? normalizePhrase(r.location.city) : null,
       parent: r.parent ?? null,
       chinese: cjkNames(r).map(compactCjk),
+      places: knownPlaces(r),
     });
     const addName = (map, phrase, isPrimary) => {
       addTo(map, phrase, r.id);
@@ -220,10 +221,20 @@ function longestFirst(hits) {
   return kept.map((h) => ({ ...h, shared: ids.get(`${h.start}:${h.end}`).size > 1 }));
 }
 
+// The affiliation names a city or region of the institution's country, and
+// none of the places the institution is known at: a namesake in another city
+// (one NPP Salyut is in Nizhny Novgorod, another in Moscow), or a campus the
+// record does not list. An institution with no known place is not doubted.
+function namesAnotherPlace(context, country, known) {
+  if (!country || !known?.length || context.borrowed) return false;
+  const named = placesNamed(context.tokens, country);
+  return named.length > 0 && !named.some((place) => known.some((k) => samePlace(place, k)));
+}
+
 // How sure a name-type match is, given where the affiliation says it is:
 // 'confirmed', 'check', or null when the affiliation places itself elsewhere.
 function placeConfidence(hit, context, index) {
-  const { country = null, city = null } = index.info.get(hit.id) ?? {};
+  const { country = null, city = null, places = [] } = index.info.get(hit.id) ?? {};
   const atCity = Boolean(city) && inTokens(context, city);
   const inCountry = Boolean(country) && context.countries.has(country);
   const selfPlaced = Boolean(country) && placesIn(hit.text).has(country);
@@ -231,10 +242,10 @@ function placeConfidence(hit, context, index) {
   if ((context.foreign || taiwan) && !inCountry && !atCity && !selfPlaced) return null;
   if (hit.kind === 'unit' || hit.kind === 'similar' || hit.shared || (taiwan && !atCity)) return 'check';
   const generic = isGenericPhrase(hit.text);
-  if (hit.kind === 'name') return (generic ? atCity : selfPlaced || inCountry || atCity) ? 'confirmed' : 'check';
   // An alternative name: the institution's own city, or for a record known
   // only from an official list (no city) a specific name in the right country.
-  return atCity || (!city && !generic && (inCountry || selfPlaced)) ? 'confirmed' : 'check';
+  const placed = hit.kind === 'name' ? (generic ? atCity : selfPlaced || inCountry || atCity) : atCity || (!city && !generic && (inCountry || selfPlaced));
+  return placed && !namesAnotherPlace(context, country, places) ? 'confirmed' : 'check';
 }
 
 // "Northwestern" and "Northeastern" are two edits apart but name different
@@ -394,7 +405,9 @@ function affiliationsOf(line) {
     .filter((a) => a.trim())
     .map((text) => {
       const own = placeContext(text);
-      return { text, context: own.placed ? own : whole };
+      // A borrowed context says which country the line is in; the cities in
+      // it are the other affiliations'.
+      return { text, context: own.placed ? own : { ...whole, borrowed: true } };
     });
 }
 
