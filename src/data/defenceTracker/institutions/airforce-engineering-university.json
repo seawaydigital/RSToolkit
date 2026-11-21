@@ -91,9 +91,14 @@
       "kind": "institute"
     },
     {
-      "name": "Aviation Maintenance NCO School",
+      "name": "Aviation Maintenance NCO School (Xinyang, Henan)",
       "zh": "航空机务士官学校",
       "kind": "institute"
+    },
+    {
+      "name": "Sanyuan campus (Sanyuan County, Shaanxi)",
+      "zh": "三原校区",
+      "kind": "campus"
     }
   ],
   "sources": [
@@ -134,6 +139,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Locations outside Xi’an added from the CASI report already cited (pp. 155–156): the Sanyuan campus, and Xinyang, Henan, for the Aviation Maintenance NCO School."
     }
   ],
   "seedNotes": {
