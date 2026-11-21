@@ -61,6 +61,16 @@
       "zh": "中山眼科中心",
       "kind": "hospital",
       "match": true
+    },
+    {
+      "name": "Zhuhai Campus",
+      "zh": "珠海校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Shenzhen Campus",
+      "zh": "深圳校区",
+      "kind": "campus"
     }
   ],
   "sources": [
@@ -112,6 +122,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated High. Two of its named hospitals marked for batch-check matching; map point set to its South Campus in Guangzhou."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campuses in other cities added from the university’s own description (source s1), which gives three campuses in Guangzhou, Zhuhai and Shenzhen."
     }
   ],
   "seedNotes": {
