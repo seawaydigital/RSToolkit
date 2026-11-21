@@ -44,11 +44,11 @@ const NEVER_CONFIRMED = [
   // Other bodies than the ones the lists name: the Russian Academy of Sciences' institute, and NIIMash in Nizhnyaya Salda.
   'Institute of Applied Physics, Nizhny Novgorod, Russia',
   'Scientific Research Institute of Mechanical Engineering, Nizhnyaya Salda, Russia',
-  // The listed NPP Salyut is in Nizhny Novgorod; another one is in Moscow. The lists place Tsinghua in
-  // Beijing and USTC in Hefei, and a line from another city needs a look.
+  // The listed NPP Salyut is in Nizhny Novgorod; another one is in Moscow. Tsinghua is in Beijing and
+  // USTC in Hefei, and a line from a city where neither has a campus needs a look.
   'NPP Salyut, Moscow, Russia',
-  'Tsinghua University, Shenzhen, China',
-  'University of Science and Technology of China, Suzhou, China',
+  'Tsinghua University, Chengdu, China',
+  'University of Science and Technology of China, Chengdu, China',
 ];
 
 for (const line of NEVER_CONFIRMED) {
