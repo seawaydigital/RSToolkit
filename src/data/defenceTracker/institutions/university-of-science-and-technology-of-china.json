@@ -52,7 +52,23 @@
     }
   ],
   "topics": [],
-  "subunits": [],
+  "subunits": [
+    {
+      "name": "Suzhou Institute for Advanced Research",
+      "zh": "苏州高等研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Shanghai Research Institute",
+      "zh": "上海研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Beijing Research Institute",
+      "zh": "北京研究院",
+      "kind": "institute"
+    }
+  ],
   "sources": [
     {
       "id": "s1",
@@ -91,6 +107,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Institutes in other cities added from the university’s own description (source s1): Suzhou, Shanghai and Beijing."
     }
   ],
   "seedNotes": {
