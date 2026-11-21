@@ -66,6 +66,11 @@
       "name": "Yichang Training Group",
       "zh": "宜昌训练大队",
       "kind": "campus"
+    },
+    {
+      "name": "Suizhou Branch Campus",
+      "zh": "随州分校",
+      "kind": "campus"
     }
   ],
   "sources": [
@@ -99,6 +104,10 @@
     {
       "date": "2026-10-25",
       "change": "Marked units that name the institution on their own for batch-check matching."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campus in another city added from the CASI report already cited (p. 173): the Suizhou branch campus."
     }
   ],
   "seedNotes": {
