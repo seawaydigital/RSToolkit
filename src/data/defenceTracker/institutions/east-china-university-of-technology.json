@@ -53,7 +53,18 @@
     }
   ],
   "topics": [],
-  "subunits": [],
+  "subunits": [
+    {
+      "name": "Nanchang campus",
+      "zh": "南昌校区",
+      "kind": "campus"
+    },
+    {
+      "name": "Fuzhou campus (Fuzhou, Jiangxi)",
+      "zh": "抚州校区",
+      "kind": "campus"
+    }
+  ],
   "sources": [
     {
       "id": "s1",
@@ -81,6 +92,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campuses added from the university’s own description (source s1), which gives two campuses, in Nanchang and in Fuzhou, Jiangxi."
     }
   ],
   "seedNotes": {
