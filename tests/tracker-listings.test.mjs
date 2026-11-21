@@ -478,3 +478,23 @@ test('a Canadian name cut off inside a bracket loses the unfinished bracket', ()
     'Krylov State Research Centre (also known as Krylov State Scientific Center Federal State Unitary Enterprise)',
   ]);
 });
+
+// The matcher doubts a line that names another city than the one a body is
+// known at, so each US entry carries the places its address names: the city
+// and state, and for Commerce's rows the towns in the address line. Country
+// names, buildings, streets and anything with a number are not places: a
+// "Nanjing Road" in Shanghai must not vouch for Nanjing.
+test('a US entry carries the places its address names', () => {
+  const rows = [
+    { id: 'p1', source: EL, name: 'Salyut Scientific Research Institute', alt_names: [], addresses: [{ country: 'RU', address: '7 Larina St., Nizhny Novgorod, Russia', city: '', state: '' }] },
+    { id: 'p2', source: SDN, name: 'RUSSIAN INSTITUTE OF RADIONAVIGATION AND TIME', alt_names: [], addresses: [{ country: 'RU', address: 'Pl. Rastrelli D. 2', city: 'Saint Petersburg' }, { country: 'RU', address: '19 Staraya Basmannaya str., building 12', city: 'Moscow' }] },
+    { id: 'p3', source: EL, name: 'Scientific-Research Institute and Factory Platan', alt_names: [], addresses: [{ country: 'RU', address: '2 Zavodskoy Dr., Fryazino', city: 'Moscow', state: '' }, { country: 'RU', address: '2 Zavodskoy Dr., Building 4, Fryazino', city: 'Moscow', state: '' }] },
+    { id: 'p4', source: EL, name: 'Shanghai Research Institute of Microelectronics', alt_names: [], addresses: [{ country: 'CN', address: 'Building 2, Nanjing Road, Yuehai Street, Minhang District, Shanghai', city: '', state: '' }, { country: 'CN', address: 'Room 5, Prospekt (Avenue), Pudong New Area', city: 'Shanghai', state: '' }] },
+  ];
+  assert.deepEqual(cslToEntries(rows).map((e) => e.places), [
+    ['Nizhny Novgorod'],
+    ['Saint Petersburg', 'Moscow'],
+    ['Moscow', 'Fryazino'],
+    ['Minhang District', 'Shanghai', 'Pudong New Area'],
+  ]);
+});
