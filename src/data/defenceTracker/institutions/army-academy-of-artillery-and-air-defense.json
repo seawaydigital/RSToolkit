@@ -57,6 +57,11 @@
       "name": "Zhengzhou campus",
       "zh": null,
       "kind": "campus"
+    },
+    {
+      "name": "NCO School (Shenyang)",
+      "zh": "士官学校",
+      "kind": "institute"
     }
   ],
   "sources": [
@@ -86,6 +91,10 @@
     {
       "date": "2026-10-25",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Unit in another city added from the CASI report already cited (pp. 69–70): the NCO School in Shenyang."
     }
   ],
   "seedNotes": {
