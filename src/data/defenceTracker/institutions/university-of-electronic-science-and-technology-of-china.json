@@ -75,6 +75,41 @@
       "name": "Defense S&T Key Laboratory of Strong Radiation (with CAEP)",
       "zh": "强辐射国防科技重点实验室",
       "kind": "lab"
+    },
+    {
+      "name": "Shenzhen Institute for Advanced Study",
+      "zh": "电子科技大学（深圳）高等研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Yangtze Delta Region Institute (Quzhou)",
+      "zh": "电子科技大学长三角研究院（衢州）",
+      "kind": "institute"
+    },
+    {
+      "name": "Yangtze Delta Region Institute (Huzhou)",
+      "zh": "电子科技大学长三角研究院（湖州）",
+      "kind": "institute"
+    },
+    {
+      "name": "Chongqing Institute of Microelectronics Industry Technology",
+      "zh": "电子科技大学重庆微电子产业技术研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Yibin Institute",
+      "zh": "电子科技大学宜宾研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Guangdong Institute of Electronic and Information Engineering",
+      "zh": "电子科技大学广东电子信息工程研究院",
+      "kind": "institute"
+    },
+    {
+      "name": "Glasgow College Hainan",
+      "zh": "格拉斯哥海南学院",
+      "kind": "institute"
     }
   ],
   "sources": [
@@ -99,6 +134,17 @@
       "archive": {
         "url": "https://web.archive.org/web/20261031210123/https://www.govinfo.gov/content/pkg/FR-2012-09-19/html/2012-22952.htm"
       }
+    },
+    {
+      "id": "s3",
+      "title": "教学科研单位、研究机构 (Teaching and research units and research institutes)",
+      "publisher": "University of Electronic Science and Technology of China",
+      "url": "https://www.uestc.edu.cn/xybm/jxkydw_yjjg.htm",
+      "accessed": "2026-11-21",
+      "lang": "zh",
+      "archive": {
+        "url": "https://web.archive.org/web/20261121201049/https://www.uestc.edu.cn/xybm/jxkydw_yjjg.htm"
+      }
     }
   ],
   "rating": {
@@ -119,6 +165,10 @@
     {
       "date": "2026-10-31",
       "change": "Archived copy of the 2012 Federal Register notice replaced: the earlier capture no longer exists."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Institutes in other cities added from the university’s own list of units (new source): Shenzhen, Quzhou, Huzhou, Chongqing, Yibin, Guangdong and Hainan."
     }
   ],
   "seedNotes": {
