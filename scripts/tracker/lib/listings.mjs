@@ -123,16 +123,29 @@ function bareIndexOf(index) {
 // address line is a street, which places nothing.
 const placeKey = (s) => normalizePhrase(String(s ?? '').replace(/\bst\.?(?=\s)/gi, 'saint'));
 const ADDRESS_WORDS = new Set(['letter', 'litera', 'floor', 'room', 'office', 'building', 'house', 'structure', 'block', 'suite', 'unit']);
-const rowPlaces = (r) => {
+const rowPlaceNames = (r) => {
   const fromLine = /Bureau of Industry and Security/.test(r.source ?? '');
   const lineParts = (a) => (fromLine ? String(a.address ?? '').split(',').slice(1).filter((part) => !/\d/.test(part)) : []);
-  return new Set(
-    (r.addresses ?? [])
-      .flatMap((a) => [a.city, a.state, ...lineParts(a)])
-      .map(placeKey)
-      .filter((place) => place && !ADDRESS_WORDS.has(place.split(' ')[0])),
-  );
+  return unique((r.addresses ?? []).flatMap((a) => [a.city, a.state, ...lineParts(a)]).map(tidy)).filter((name) => {
+    const place = placeKey(name);
+    return place && !ADDRESS_WORDS.has(place.split(' ')[0]);
+  });
 };
+const rowPlaces = (r) => new Set(rowPlaceNames(r).map(placeKey));
+// The same places as the feed writes them, for the entry: the matcher doubts a
+// line that names another city than a body is known at. The country itself
+// places nothing, and neither does a street: a "Nanjing Road" in Shanghai
+// must not vouch for Nanjing.
+const COUNTRY_NAMES = new Set(['russia', 'russian federation', 'china', 'prc', 'people republic china', 'iran', 'islamic republic iran']);
+const STREET_WORDS = new Set([
+  'street', 'st', 'road', 'rd', 'avenue', 'ave', 'lane', 'highway', 'hwy', 'boulevard', 'blvd', 'drive', 'alley', 'embankment', 'square',
+  'prospekt', 'prospect', 'pereulok', 'proezd', 'ulitsa', 'ul', 'shosse', 'naberezhnaya', 'ploshchad',
+]);
+const entryPlaces = (r) =>
+  rowPlaceNames(r).filter((name) => {
+    const place = placeKey(name);
+    return !COUNTRY_NAMES.has(place) && !STREET_WORDS.has(place.split(' ').at(-1));
+  });
 // Transliterations of one name differ by a letter or two ("Velikiy Novgorod",
 // "Veliky Novgorod"); a short name must match exactly (Omsk is not Tomsk).
 const samePlace = (a, b) => a === b || (Math.min(a.length, b.length) >= 8 && osaDistance(a, b, 2) <= 2);
@@ -205,6 +218,7 @@ export function cslToEntries(results, { index = null, countryOf = () => null, pl
       date: r.start_date || null,
       citation: r.federal_register_notice || (r.programs ?? []).join('; ') || null,
       url: r.source_information_url || r.source_list_url || null,
+      places: entryPlaces(r),
       institution: null,
     });
   }

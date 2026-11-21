@@ -249,3 +249,25 @@ test('a unit that a list names among its parent’s aliases is listed through th
   // The academy's listed units are those listed in their own right.
   assert.deepEqual(d.byId.get('example-academy').units.map((u) => u.id), ['materials-institute']);
 });
+
+// Where the lists' addresses place an institution, for the matcher: a record
+// collects the places of all its entries, whether or not it has a file.
+test('a record carries the places its list entries name', () => {
+  const entry = (key, institution, name, places) => ({ key, list: 'us-entity-list', name, altNames: [], country: 'RU', date: null, citation: null, url: 'https://example.org', institution, ...(places ? { places } : {}) });
+  const snapshots = {
+    ...SNAPSHOTS,
+    'us-csl': {
+      ...SNAPSHOTS['us-csl'],
+      entries: [
+        entry('csl:s1', 'salyut', 'Salyut Scientific Research Institute', ['Nizhny Novgorod']),
+        entry('csl:s2', 'salyut', 'NII Salyut', ['Nizhny Novgorod', 'Nizhegorodskaya Oblast']),
+        entry('csl:h1', 'harbin-institute-of-technology', 'Harbin Institute of Technology', ['Harbin']),
+        entry('csl:n1', 'no-address-institute', 'No Address Research Institute'),
+      ],
+    },
+  };
+  const data = makeDataset({ snapshots });
+  assert.deepEqual(data.byId.get('salyut').places, ['Nizhny Novgorod', 'Nizhegorodskaya Oblast']);
+  assert.deepEqual(data.byId.get('harbin-institute-of-technology').places, ['Harbin']);
+  assert.deepEqual(data.byId.get('no-address-institute').places, []);
+});
