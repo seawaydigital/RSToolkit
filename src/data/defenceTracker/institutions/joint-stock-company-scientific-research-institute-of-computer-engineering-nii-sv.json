@@ -8,7 +8,9 @@
     "NII SVT PAO",
     "AKTSIONERNOE OBSHCHESTVO NAUCHNO ISSLEDOVATELSKII INSTITUT SREDSTV VYCHISLITELNOI TEKHNIKI",
     "AO Nauchno Issledovatelskii Institut Sredstv Vychislitelnoi Tekhniki",
-    "JSC NII SVT"
+    "JSC NII SVT",
+    "Joint Stock Company Scientific Research Institute of Computing Machinery",
+    "Scientific Research Institute of Computing Machinery JSC"
   ],
   "acronyms": [],
   "domains": [],
@@ -89,6 +91,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "The Entity List entry of 3 March 2022 and Canada’s sanctions entry for this institute under the name “Scientific Research Institute of Computing Machinery”, held as a separate record until now, are joined to this record, and their names added. Canada’s file gives its entry the Russian name of another institute (NICEVT); that name is left out."
     }
   ],
   "seedNotes": null
