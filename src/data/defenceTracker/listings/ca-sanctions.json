@@ -658,7 +658,7 @@
       "date": "2022-07-29",
       "citation": "Schedule 1, Part 2, item 247",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "scientific-research-institute-and-factory-platan"
+      "institution": "joint-stock-company-scientific-research-institute-platan-with-plant"
     },
     {
       "key": "ca:Russia:1, Part 2:248",
@@ -1255,7 +1255,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 486",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "state-research-institute-of-instrument-engineering-gosniip"
+      "institution": "joint-stock-company-state-scientific-research-institute-of-instrument-making"
     },
     {
       "key": "ca:Russia:1, Part 2:487",
@@ -1509,7 +1509,7 @@
     {
       "key": "ca:Russia:1, Part 2:554",
       "list": "ca-sanctions",
-      "name": "The Russian Institute of Radionavigation and Time, JSC (also known as Open Joint Stock Company Russian Institute of Radionavigation and Time and Russian",
+      "name": "The Russian Institute of Radionavigation and Time, JSC",
       "altNames": [
         "АО «Российский институт радионавигации и времени»"
       ],
@@ -1517,7 +1517,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 554",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s"
+      "institution": "russian-institute-of-radio-navigation-and-time"
     },
     {
       "key": "ca:Russia:1, Part 2:557",
