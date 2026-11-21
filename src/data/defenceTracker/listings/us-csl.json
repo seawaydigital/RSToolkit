@@ -3572,7 +3572,7 @@
       "date": null,
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "open-joint-stock-company-russian-institute-of-radionavigation-and-time"
+      "institution": "russian-institute-of-radio-navigation-and-time"
     },
     {
       "key": "csl:44258",
@@ -3855,7 +3855,7 @@
       "date": null,
       "citation": "RUSSIA-EO14024",
       "url": "https://home.treasury.gov/policy-issues/financial-sanctions/specially-designated-nationals-and-blocked-persons-list-sdn-human-readable-lists",
-      "institution": "joint-stock-company-state-research-institute-of-instrument-engineering"
+      "institution": "joint-stock-company-state-scientific-research-institute-of-instrument-making"
     },
     {
       "key": "csl:4737c0111227c683ed312ee75994c4d778e2129bd2f96a48afdc311d",
@@ -8436,7 +8436,7 @@
       "date": "2022-04-07",
       "citation": "87 FR 20299",
       "url": "https://www.bis.gov/licensing/guidance-on-end-user-and-end-use-controls-and-us-person-controls",
-      "institution": "scientific-research-institute-and-factory-platan"
+      "institution": "joint-stock-company-scientific-research-institute-platan-with-plant"
     },
     {
       "key": "csl:f5f36958af5b55c043f51f8716a8c73ce232e447812aa574b97ae9c3",

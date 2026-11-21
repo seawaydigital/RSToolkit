@@ -236,6 +236,14 @@ function splitCaAliases(text) {
     .filter((s) => s.length >= 2);
 }
 
+// Canada's file cuts one entity field off inside a bracket ("…, JSC (also
+// known as Open Joint Stock Company … and Russian"). What is left of the
+// bracket is not part of the name; a complete bracket is.
+function withoutCutBracket(name) {
+  const open = name.lastIndexOf('(');
+  return open > 0 && !name.includes(')', open) ? tidy(name.slice(0, open)) : name;
+}
+
 // Kept on the same terms as the US entries (see cslToEntries).
 export function caToEntries(rows, { index = null, countryOf = () => null } = {}) {
   const known = namesRecord(index, countryOf);
@@ -245,7 +253,7 @@ export function caToEntries(rows, { index = null, countryOf = () => null } = {})
     const country = CA_COUNTRIES[countryEn];
     if (!r.entity || !country) continue;
     // Names are bilingual: "English name/Nom français".
-    const [english, ...french] = r.entity.split('/').map(tidy);
+    const [english, ...french] = r.entity.split('/').map(tidy).map(withoutCutBracket);
     const altNames = unique([...french, ...splitCaAliases(r.aliases)]).filter((n) => n !== english);
     if (!isResearchBody(english) && !known(english, country)) continue;
     out.push({

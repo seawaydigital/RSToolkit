@@ -5,7 +5,10 @@
   "zhAliases": [],
   "aliases": [
     "JOINT STOCK COMPANY SCIENTIFIC RESEARCH INSTITUTE PLATAN WITH PLANT",
-    "AO NII PLATAN S ZAVODOM PRI NII"
+    "AO NII PLATAN S ZAVODOM PRI NII",
+    "Scientific-Research Institute and Factory Platan",
+    "NII Platan",
+    "Акционерное Общество \"Научно-Исследовательский Институт \"Платан\" С Заводом При Нии\""
   ],
   "acronyms": [],
   "domains": [],
@@ -86,6 +89,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated Very high."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "The Entity List and Canadian sanctions entries for NII Platan, held as a separate record until now, are joined to this record, and their names added."
     }
   ],
   "seedNotes": null
