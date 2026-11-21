@@ -55,7 +55,13 @@
     }
   ],
   "topics": [],
-  "subunits": [],
+  "subunits": [
+    {
+      "name": "Shenzhen International Graduate School",
+      "zh": "深圳国际研究生院",
+      "kind": "campus"
+    }
+  ],
   "sources": [
     {
       "id": "s1",
@@ -89,6 +95,17 @@
       "archive": {
         "url": "https://web.archive.org/web/20260409195713/https://www.airuniversity.af.edu/Portals/10/CASI/documents/Research/Infrastructure/2025-10-20%20Defense%20Labs%20Directory.pdf"
       }
+    },
+    {
+      "id": "s4",
+      "title": "学校沿革 (History of the university)",
+      "publisher": "Tsinghua University",
+      "url": "https://www.tsinghua.edu.cn/xxgk/xxyg.htm",
+      "accessed": "2026-11-21",
+      "lang": "zh",
+      "archive": {
+        "url": "https://web.archive.org/web/20261121200837/https://www.tsinghua.edu.cn/xxgk/xxyg.htm"
+      }
     }
   ],
   "rating": {
@@ -105,6 +122,10 @@
     {
       "date": "2026-10-31",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-11-21",
+      "change": "Campus in another city added from the university’s own history page (new source): the Shenzhen International Graduate School, founded in 2018."
     }
   ],
   "seedNotes": {
