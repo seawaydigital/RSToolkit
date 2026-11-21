@@ -56,6 +56,21 @@ export const GENERIC_WORDS = new Set([
   'enterprise', 'joint', 'stock', 'company', 'military',
 ]);
 
+// Legal forms the official lists put before or after a body's name, in the
+// words normalizePhrase leaves: Canada's "… Altai JSC" is the US Entity
+// List's "Joint Stock Company … Altai", OFAC writes "Aktsionernoe Obshchestvo
+// …", and Chinese companies end in "Co., Ltd.". Affiliations leave the form
+// out or write it another way, so the list sync and the matcher both compare
+// names apart from it.
+export const LEGAL_FORMS = [
+  'open joint stock company', 'closed joint stock company', 'public joint stock company', 'joint stock company',
+  'limited liability company', 'federal state unitary enterprise',
+  'otkrytoe aktsionernoe obshchestvo', 'publichnoe aktsionernoe obshchestvo', 'zakrytoe aktsionernoe obshchestvo', 'aktsionernoe obshchestvo',
+  'obshchestvo s ogranichennoi otvetstvennostyu',
+  'company limited', 'co limited', 'co ltd',
+  'ojsc', 'pjsc', 'cjsc', 'jsc', 'oao', 'pao', 'zao', 'ao', 'ooo', 'llc', 'fsue', 'fgup', 'limited', 'ltd',
+].map((form) => form.split(' '));
+
 export const PERSONAL_EMAIL_DOMAINS = new Set([
   'gmail.com', '163.com', '126.com', 'qq.com', 'foxmail.com', 'sina.com', 'sohu.com', 'yeah.net',
   'aliyun.com', 'outlook.com', 'hotmail.com', 'yahoo.com', 'icloud.com', 'proton.me',
@@ -112,6 +127,25 @@ export function normalizePhrase(s) {
 
 export function isGenericPhrase(phrase) {
   return phrase.split(' ').every((t) => GENERIC_WORDS.has(t));
+}
+
+// A normalized phrase without the legal forms at its start and its end. A form
+// inside a name ("Design Bureau of the Joint Stock Company …") is part of the
+// name, and at least one word is always left.
+export function stripLegalForm(phrase) {
+  let tokens = String(phrase ?? '').split(' ');
+  for (let again = true; again; ) {
+    again = false;
+    for (const form of LEGAL_FORMS) {
+      if (tokens.length <= form.length) continue;
+      const tail = tokens.length - form.length;
+      if (form.every((t, i) => tokens[i] === t)) tokens = tokens.slice(form.length);
+      else if (form.every((t, i) => tokens[tail + i] === t)) tokens = tokens.slice(0, tail);
+      else continue;
+      again = true;
+    }
+  }
+  return tokens.join(' ');
 }
 
 export function compactCjk(s) {
