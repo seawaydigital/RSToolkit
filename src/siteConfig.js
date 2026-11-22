@@ -25,13 +25,29 @@ export const ACCESSIBILITY_CONTACT = 'security.research@lakeheadu.ca';
  * almost every scenario, and the travel emergency block tells them to report
  * back to it — this is who that is. Shown by name, so keep it current when
  * the role changes hands. The email should be a monitored office inbox, not a
- * personal address, so it survives staff turnover.
+ * personal address, so it survives staff turnover. Email only: no phone
+ * number, for the same reason.
+ *
+ * travelConsultation, if the institution offers a pre-trip travel security
+ * consultation, adds a "Before You Go" item to Research Travel Security:
+ * `detail` says when it is required or recommended, in the institution's own
+ * words, and `url` is the page that explains how to book it. Set it to null
+ * if there is no such service. Lakehead's wording combines its Safeguarding
+ * Research page ("Required for high-risk destinations; recommended for all
+ * international research travel") and its Travel Security page (book before
+ * finalizing travel plans, for high-risk destinations or research involving
+ * sensitive technologies), both read 2026-11-21.
  */
 export const INSTITUTION_RS_CONTACT = {
   institution: 'Lakehead University',
   name: 'Andrew Austin',
   title: 'Research Security and Data Management Specialist',
   email: 'security.research@lakeheadu.ca',
+  travelConsultation: {
+    detail:
+      'Lakehead University requires a travel security consultation for travel to high-risk destinations and recommends one for all international research travel. For a high-risk destination, or if your research involves sensitive technologies, book it before you finalize your travel plans.',
+    url: 'https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/travel-security',
+  },
 };
 
 /**
