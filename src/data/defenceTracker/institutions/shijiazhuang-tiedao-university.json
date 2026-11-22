@@ -18,30 +18,83 @@
   "location": {
     "city": "Shijiazhuang",
     "province": "Hebei",
-    "lat": 38.08211099999999,
-    "lng": 114.51020900000003
+    "lat": 38.0821,
+    "lng": 114.5102
   },
-  "supervisors": [],
+  "supervisors": [
+    "Hebei Provincial Government (co-built with the National Railway Administration and the Ministry of Education)"
+  ],
   "parent": null,
   "ids": {
     "misp": "9c7f31dc-703e-4fbe-8003-59eddd44c3aa",
     "ror": "022e9e065",
     "wikidata": "Q7496504"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "In a 2020 interview published by China Education Online, the university said it had been co-built by SASTIND and the Hebei Provincial Government since December 2013. Its 2023 overview does not mention this and lists only its co-construction by Hebei, the National Railway Administration and the Ministry of Education, from 2015.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Founded in 1950 as the PLA Railway Corps Engineering College, the university passed to the Ministry of Railways in 1984 and to Hebei Province in 2000; since 2015 it has been co-built by Hebei, the National Railway Administration and the Ministry of Education.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "专访石家庄铁道大学研究生学院 (Interview with Shijiazhuang Tiedao University's graduate school, 2020)",
+      "publisher": "China Education Online (eol.cn)",
+      "url": "https://www.eol.cn/e_gx/df/hebei/html/2020yzb/stdu/pc/index.html",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122054100/https://www.eol.cn/e_gx/df/hebei/html/2020yzb/stdu/pc/index.html"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "石家庄铁道大学概况 (Overview of Shijiazhuang Tiedao University, 2023)",
+      "publisher": "China Education Online (eol.cn)",
+      "url": "https://eol.cn/hebei/hebgd/202309/W020230921349576591659.pdf",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122054132/https://www.eol.cn/hebei/hebgd/202309/W020230921349576591659.pdf"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
