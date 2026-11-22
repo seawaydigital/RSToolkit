@@ -18,30 +18,59 @@
   "location": {
     "city": "Kunming",
     "province": "Yunnan",
-    "lat": 24.837435,
-    "lng": 102.88006300000006
+    "lat": 24.8374,
+    "lng": 102.8801
   },
-  "supervisors": [],
+  "supervisors": [
+    "Yunnan Provincial Government (co-built with the Ministry of Education)"
+  ],
   "parent": null,
   "ids": {
     "misp": "c970688f-b194-405c-aad3-7b701d0a5505",
     "ror": "00sc9n023",
     "wikidata": "Q2120272"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "Yunnan Normal University is co-built by the Ministry of Education and the Yunnan provincial government; it grew from the teachers' college of the wartime National Southwestern Associated University, which stayed in Kunming in 1946.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Yunnan Normal University",
+      "url": "https://www.ynnu.edu.cn/ysgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122054607/https://www.ynnu.edu.cn/ysgk/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Low."
     }
   ],
   "seedNotes": {
