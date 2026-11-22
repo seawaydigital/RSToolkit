@@ -18,30 +18,80 @@
   "location": {
     "city": "Shanghai",
     "province": "Shanghai",
-    "lat": 31.27607029999999,
-    "lng": 121.50270049999995
+    "lat": 31.2847,
+    "lng": 121.4969
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with the Shanghai Municipal Government)"
+  ],
   "parent": null,
   "ids": {
     "misp": "98c1887b-6027-431a-a5d2-e00ffd6ca08e",
     "ror": "03rc6as71",
     "wikidata": "Q16947"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "Tongji's National College of Excellent Engineers, which trains engineering students together with companies, lists China State Shipbuilding Corporation among its council members and China Electronics Technology Group and China Aerospace Science and Technology Corporation among its partner companies.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Tongji University is directly under the Ministry of Education and co-built with the Shanghai municipal government; since 2004 it has been one of the universities whose leaders are appointed by the central government (中管高校).",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Tongji University",
+      "url": "https://www.tongji.edu.cn/xxgk1/xxjj1.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261117190634/https://www.tongji.edu.cn/xxgk1/xxjj1.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "合作企业 (Partner enterprises)",
+      "publisher": "Tongji University, National College of Excellent Engineers",
+      "url": "https://ncee.tongji.edu.cn/cjrh/hzqy.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20260715125206/https://ncee.tongji.edu.cn/cjrh/hzqy.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
