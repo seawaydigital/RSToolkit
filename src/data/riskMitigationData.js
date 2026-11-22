@@ -9,7 +9,9 @@ export const riskMitigationData = {
   // dd-4 and dd-5 were not re-checked; the Due Diligence Sources guide is the
   // place that reviews such sources.
   lastUpdated: '2026-11-21',
-  sourceNote: 'Best practices drawn from Canadian university research security programs, the U15 / Universities Canada guide "Mitigating Economic and/or Geopolitical Risks in Sensitive Research Projects" (2019), and Government of Canada guidance.',
+  // Not rendered: the footer in RiskMitigation.jsx carries the attribution
+  // users see, so keep the two in step.
+  sourceNote: 'Best practices drawn from Canadian university research security programs, the U15 Canada guide "Safeguarding Research in Canada – A Guide for University Policies and Practices" (June 2026), and Government of Canada guidance.',
   intro:
     'Risk mitigation is the set of measures you take to reduce identified national security or integrity risks to an acceptable level. Not all measures apply to every project — use the categories below to identify the practices most relevant to your situation.',
   categories: [
