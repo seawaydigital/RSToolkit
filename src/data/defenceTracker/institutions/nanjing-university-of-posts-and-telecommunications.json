@@ -18,30 +18,114 @@
   "location": {
     "city": "Nanjing",
     "province": "Jiangsu",
-    "lat": 32.08076200572154,
-    "lng": 118.77081065889547
+    "lat": 32.1153,
+    "lng": 118.926
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangsu Provincial Government (co-built with MIIT, the State Post Bureau and the Ministry of Education)"
+  ],
   "parent": null,
   "ids": {
     "misp": "00729c61-06a1-4a9b-b6bf-f8e9d70c7188",
     "ror": "043bpky34",
     "wikidata": "Q6963688"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "armed-forces-collaboration",
+      "summary": "A communication system that NUPT developed with a PLA research institute won a 2011 All-Army Science and Technology Progress Award, second class. From 2004 the Nanjing Military Region trained reserve officers (\"national-defence students\") at NUPT, and in 2025 a research institute of the PLA's National University of Defense Technology and NUPT's School of Communications and Information Engineering reported initial agreement to cooperate on research and graduate training.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "NUPT says it has taken on several key-technology research tasks for military information systems.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Once directly under the Ministry of Posts and Telecommunications, NUPT has been co-built since 2000 by MIIT, the State Post Bureau, the Ministry of Education and Jiangsu Province.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Nanjing University of Posts and Telecommunications",
+      "url": "https://www.njupt.edu.cn/17220/list.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122052257/https://www.njupt.edu.cn/17220/list.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "【江苏教育新闻网】南邮科研成果获年度全军科技进步二等奖 (NUPT research wins a 2011 All-Army Science and Technology Progress Award, second class)",
+      "publisher": "Nanjing University of Posts and Telecommunications (reposting Jiangsu Education News)",
+      "url": "https://www.njupt.edu.cn/2011/1206/c17125a99666/page.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122052401/https://www.njupt.edu.cn/2011/1206/c17125a99666/page.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "【金陵晚报】南邮今年招收80名国防生 (NUPT to recruit 80 national-defence students this year)",
+      "publisher": "Nanjing University of Posts and Telecommunications (reposting Jinling Evening News, 2004)",
+      "url": "https://www.njupt.edu.cn/2012/0605/c232a101090/page.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122052505/https://www.njupt.edu.cn/2012/0605/c232a101090/page.htm"
+      }
+    },
+    {
+      "id": "s4",
+      "title": "国防科技大学第六十三研究所来通信与信息工程学院调研交流 (NUDT's 63rd Research Institute visits the School of Communications and Information Engineering)",
+      "publisher": "Nanjing University of Posts and Telecommunications, School of Communications and Information Engineering",
+      "url": "https://scie.njupt.edu.cn/2025/0715/c2824a287298/page.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122052549/https://scie.njupt.edu.cn/2025/0715/c2824a287298/page.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
