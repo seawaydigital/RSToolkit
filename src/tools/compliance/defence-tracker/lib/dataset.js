@@ -35,6 +35,8 @@ function blankRecord(id, name) {
     subunits: [],
     sources: [],
     rating: { override: null, overrideReason: null },
+    // Where the lists' addresses place it (see the entries loop below).
+    places: [],
     status: 'listing-only',
     verifiedOn: null,
     history: [],
@@ -167,6 +169,8 @@ export function buildDataset({ institutions, snapshots = {}, nroData, meta }) {
         preferMixedCase(record, e.name);
         addNames(record, [e.name, ...(e.altNames ?? [])]);
       }
+      // Where this entry's address places the institution, for the matcher.
+      record.places = [...new Set([...record.places, ...(e.places ?? [])])];
       const forList = entriesByList.get(e.list);
       if (!forList) continue;
       if (!forList.has(record.id)) forList.set(record.id, []);
