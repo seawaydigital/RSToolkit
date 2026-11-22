@@ -1,4 +1,5 @@
-import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig';
+// The .js extension lets Node's test runner import this file as well as Vite.
+import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig.js';
 
 export const travelSecurityData = {
   id: 'travel-security',
@@ -18,6 +19,13 @@ export const travelSecurityData = {
   // the intro, and keep saying the checklist "follows" the guide.
   // The "Why this matters" notes are this site's own explanations unless they
   // say the guide lists something.
+  //
+  // One item is the host's, not the guide's: b-consult, the institution's
+  // pre-trip travel security consultation, built from
+  // INSTITUTION_RS_CONTACT.travelConsultation in siteConfig.js and left out
+  // when that is null. Item ids are the keys under which ticked items are
+  // saved in localStorage (rs-toolkit-travel-v1): renaming one loses saved
+  // ticks. tests/travel-security.test.mjs pins them.
   lastUpdated: '2026-11-21',
   sourceUrl:
     'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/mitigating-your-research-security-risks/how-can-you-protect-your-research-during-travel',
@@ -53,6 +61,16 @@ export const travelSecurityData = {
                 'The guide lists what raises interest: research on security practices, commercial activity or intellectual property, STEM and emerging technology, health or other personal data, or politically sensitive topics; your access to partners, industry, government or US institutions; where you are going; and who you travel with.',
               crossLink: { tool: 'stra-lookup', label: 'Check the STRA list' },
             },
+            ...(RS.travelConsultation
+              ? [
+                  {
+                    id: 'b-consult',
+                    text: `Book a travel security consultation with ${RS.institution} Research Security.`,
+                    detail: RS.travelConsultation.detail,
+                    link: { url: RS.travelConsultation.url, label: 'How to book' },
+                  },
+                ]
+              : []),
             {
               id: 'b-notify',
               text: 'Share your itinerary with your department and your institution’s research security or travel contact.',
