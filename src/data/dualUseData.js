@@ -104,7 +104,7 @@ export const dualUseData = {
     "Co-authors affiliated with defence or intelligence organizations.",
     "Publication gaps or incomplete publication records.",
     "Modified or incomplete publication titles that obscure military connections.",
-    "Affiliation with an organization on Canada's Named Research Organizations / entities-of-concern list.",
+    "Affiliation with an organization on Canada's Named Research Organizations list.",
   ],
 
   mice: [

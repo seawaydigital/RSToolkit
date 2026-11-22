@@ -178,8 +178,21 @@ export default function RiskChecklist() {
                 {expandedItems[item.id] && (
                   <div className="checklist-learn-more">
                     <p>{item.learnMore}</p>
-                    <p style={{ marginTop: 6, fontSize: 12, color: 'var(--text-muted)' }}>
-                      Ref: {item.policyRef}
+                    {/* Every reference is a link: policyRef names a part of the
+                        NSGRP page; otherRefs point at another document. */}
+                    <p className="checklist-ref">
+                      Ref:{' '}
+                      <a href={riskChecklist.sourceUrl} target="_blank" rel="noopener noreferrer">
+                        {item.policyRef}
+                      </a>
+                      {item.otherRefs?.map(ref => (
+                        <span key={ref.label}>
+                          {'; '}
+                          <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                            {ref.label}
+                          </a>
+                        </span>
+                      ))}
                     </p>
                   </div>
                 )}

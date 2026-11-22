@@ -556,11 +556,14 @@ Every tool displays a `lastUpdated` date from its data file in `src/data/`. Thos
 | `faqData.js`, `glossaryData.js`, `triAgencyData.js`, `cybersecurityData.js` | 2026-11-21 | ✅ Re-read whole against the sources they cite |
 | `riskMitigationData.js`, `dualUseData.js` | 2026-11-21 | ✅ Policy statements and named resources re-verified; the best-practice and workshop material has no single source to re-read (the comment in each file says what the date covers) |
 | `exportControlData.js` | 2026-11-21 | ⚠️ **Partially verified** — see below |
-| `riskChecklist.js` | 2026-09-06 | ✅ Verified against NSGRP Annex A / Annex B structure; not part of the 2026-11-21 pass |
-| `reportConcernData.js` | 2026-09-24 | ✅ Contacts verified on that date; not part of the 2026-11-21 pass |
-| `travelSecurityData.js` | 2026-09-02 | ✅ Current as of that date; not part of the 2026-11-21 pass |
+| `riskChecklist.js` | 2026-11-21 | ✅ Every item and reference re-read against the NSGRP page (Annex A, Annex B, the risk elements, mitigation measures), the Risk Assessment Form and, for the Named Research Organizations item, the STRAC policy |
+| `reportConcernData.js` | 2026-11-21 | ✅ Every phone number, address and link re-read on the page it comes from (Public Safety, RCMP, CSIS, Cyber Centre, Research Security Centre, Lakehead) |
+| `travelSecurityData.js` | 2026-11-21 | ✅ All 26 items re-read against the travel security guide; the emergency contacts against travel.gc.ca, Public Safety and Lakehead |
+| `straWizard.js`, `dualUseWizard.js` | no date field | ✅ Checked 2026-11-21 against the federal STRA list and the STRAC policy (the comment at the top of each file records it); `tests/wizards.test.mjs` checks the question trees |
 
 The scheduled re-check of 2026-11-21 re-read every source behind the files dated 2026-11-21 above. No policy had changed; the attestation form had moved to a new address, and a number of passages that did not match their (unchanged) source were corrected. `CLAUDE.md`'s "Content verification" entry records what was checked, what was corrected, and the wording not to reintroduce. For `nroData.js` and `straData.js` the date shown is the federal page's own, because the tools present it as the date of the list; the comment above the field carries the verification date.
+
+A follow-up pass the same day covered what that issue had left out: the risk checklist, the travel and reporting pages, and the two guided assessments. Two sources had changed there. Public Safety no longer says the RCMP takes anonymous reports (the RCMP's online form asks for a name and contact details), so the site no longer says it either; and Public Safety's old Safeguarding Science address now redirects, so the links were updated. The other corrections were to wording that did not match an unchanged source, including several guided-assessment results that did not match the federal list. The same `CLAUDE.md` entry lists them.
 
 ### What the 2026-09-06 verification did and did not cover
 

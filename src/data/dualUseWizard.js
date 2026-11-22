@@ -8,6 +8,14 @@
  * Question nodes: { text, type: "yesno"|"choice", yes/no | options[] }
  * Result nodes:   { type:"result", signal:"likely"|"possible"|"low", title,
  *                   description, flags:[...], nextSteps:[{label, tool?|url?}] }
+ *
+ * Verified 2026-11-21 against the STRAC policy (dateModified 2026-10-06) and
+ * the STRA list. It names no STRA sub-category of its own: the technology
+ * areas in q-stra are categories on the list. Canada's list is called the
+ * Named Research Organizations list ("entities of concern" is not its name),
+ * and the policy counts funding or in-kind support from a listed organization
+ * as well as affiliation. tests/wizards.test.mjs checks the question graph
+ * and that every next step points at a tool that exists.
  */
 
 export const dualUseWizard = {
@@ -26,7 +34,7 @@ export const dualUseWizard = {
       no: "q-stra",
     },
     "q-partner": {
-      text: "Will the research involve international collaborators, foreign funding, or any team member affiliated with — or funded by — an organization on Canada's Named Research Organizations / entities-of-concern list?",
+      text: "Will the research involve international collaborators, foreign funding, or any team member who is affiliated with an organization on Canada's Named Research Organizations list, or receives funding or in-kind support from one?",
       type: "yesno",
       yes: "result-likely-partner",
       no: "result-likely-solo",
@@ -47,7 +55,7 @@ export const dualUseWizard = {
         "Your research could advance a military, intelligence, or population-targeting capability, and your team or funding has potential affiliation exposure. Run the full due-diligence chain before applying for funding or signing agreements.",
       flags: [
         "Potential military / intelligence / population-targeting application",
-        "International collaborators, foreign funding, or possible NRO / entity-of-concern affiliation",
+        "International collaborators, foreign funding, or a possible tie to a Named Research Organization",
       ],
       nextSteps: [
         { label: "Screen your team against the NRO list", tool: "nro-lookup" },

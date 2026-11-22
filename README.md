@@ -151,8 +151,8 @@ All policy content is drawn from official Canadian Government sources:
 - [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations) — Government of Canada
 - [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas) — Government of Canada
 - [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario
-- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security) — NSERC/CIHR/SSHRC
-- [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx) — Public Safety Canada
+- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-on-research) — NSERC/CIHR/SSHRC
+- [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx) — Public Safety Canada
 - [Cybersecurity guidance](https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity) — Lakehead University
 
 The Defence Institution Tracker draws on the official lists it checks (Canada's NRO list and autonomous sanctions list, the US Consolidated Screening List and Section 1286 list, and Japan's End User List), [ROR](https://ror.org) (CC0) and the [MISP galaxy](https://github.com/MISP/misp-galaxy) list (CC0, structured fields only). Each profile cites its own sources.

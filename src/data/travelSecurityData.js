@@ -2,13 +2,30 @@ import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig';
 
 export const travelSecurityData = {
   id: 'travel-security',
-  lastUpdated: '2026-09-02',
+  // Verified 2026-11-21. All 26 items were re-read against the Travel Security
+  // Guide for University Researchers and Staff on the federal Safeguarding
+  // Your Research portal (sections 1 to 3 and Appendix A; page dateModified
+  // 2020-09-13, unchanged). The emergency block was checked against
+  // travel.gc.ca's emergency assistance page (dateModified 2026-09-03), the
+  // Research Security Centre's own page and Public Safety's Safeguarding
+  // Science page (both dateModified 2026-10-09), and Lakehead's Safeguarding
+  // Research page for the contact in siteConfig.js.
+  //
+  // The guide was written by the U15 and Universities Canada with the
+  // Government of Canada-Universities Working Group. Its reuse note asks that
+  // they be named as the source, and that a reproduction not be presented as
+  // an official version or as endorsed by them: keep them in sourceLabel and
+  // the intro, and keep saying the checklist "follows" the guide.
+  // The "Why this matters" notes are this site's own explanations unless they
+  // say the guide lists something.
+  lastUpdated: '2026-11-21',
   sourceUrl:
     'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/mitigating-your-research-security-risks/how-can-you-protect-your-research-during-travel',
-  sourceLabel: 'Government of Canada — Protecting your research during travel',
+  sourceLabel:
+    'Travel security guide for university researchers and staff — U15 and Universities Canada, published by the Government of Canada',
 
   intro:
-    'International travel is one of the highest-exposure moments in a research career. Conferences, site visits, and field work put you, your devices, and your unpublished work in environments you do not control. This checklist follows the Government of Canada guidance for the three phases of a trip.',
+    'International travel is one of the highest-exposure moments in a research career. Conferences, site visits, and field work put you, your devices, and your unpublished work in environments you do not control. This checklist follows the three phases of the travel security guide that the U15 and Universities Canada wrote with the Government of Canada–Universities Working Group, published on the federal Safeguarding Your Research portal.',
 
   // Phases mirror the federal guidance structure: before / during / after.
   phases: [
@@ -26,14 +43,14 @@ export const travelSecurityData = {
               id: 'b-advisory',
               text: 'Check the Government of Canada travel advisory for your destination and register your trip.',
               detail:
-                'Registration of Canadians Abroad lets Global Affairs reach you in an emergency or evacuation. It is free and takes a few minutes.',
+                'Registration of Canadians Abroad is a free service that lets the Government of Canada notify you of an emergency at your destination or a personal emergency at home.',
               link: { url: 'https://travel.gc.ca/travelling/advisories', label: 'Travel advisories' },
             },
             {
               id: 'b-threat',
               text: 'Consider whether your research focus makes you a target of interest.',
               detail:
-                'Exposure rises with proximity to a Sensitive Technology Research Area, access to a partner’s unpublished data, or work connected to controlled or export-restricted technology.',
+                'The guide lists what raises interest: research on security practices, commercial activity or intellectual property, STEM and emerging technology, health or other personal data, or politically sensitive topics; your access to partners, industry, government or US institutions; where you are going; and who you travel with.',
               crossLink: { tool: 'stra-lookup', label: 'Check the STRA list' },
             },
             {
@@ -167,7 +184,7 @@ export const travelSecurityData = {
             },
             {
               id: 'd-cloud',
-              text: 'Access institutional cloud accounts only from your own secured device.',
+              text: 'Avoid cloud storage while travelling if you can. If you must use it, do so only from your own secured device.',
             },
             {
               id: 'd-report-loss',
@@ -220,7 +237,7 @@ export const travelSecurityData = {
               id: 'a-obligations',
               text: 'If you agreed to any collaboration, data sharing, or affiliation while away, disclose it.',
               detail:
-                'New affiliations and in-kind support can change your eligibility under the STRAC Policy and your obligations under the NSGRP.',
+                'A new affiliation with a Named Research Organization, or funding or in-kind support from one, affects eligibility under the STRAC Policy for any grant that aims to advance a Sensitive Technology Research Area. A new private-sector partner can change what the NSGRP requires of a partnership grant.',
               crossLink: { tool: 'strac-flowchart', label: 'STRAC decision flow' },
             },
           ],
@@ -238,7 +255,7 @@ export const travelSecurityData = {
       {
         id: 'gac-ewrc',
         label: 'Global Affairs Canada — Emergency Watch and Response Centre',
-        detail: 'Open 24/7 for Canadians in distress abroad.',
+        detail: '24/7 consular assistance for Canadian citizens outside Canada. Call collect where available.',
         phone: '+1-613-996-8885',
         email: 'sos@international.gc.ca',
       },
@@ -251,7 +268,8 @@ export const travelSecurityData = {
       {
         id: 'rsc',
         label: 'Public Safety Canada — Research Security Centre',
-        detail: 'Federal first point of contact for research security questions and concerns.',
+        detail:
+          'Gives researchers and institutions advice and guidance on research security. For advice after the fact, usually through your institution; not an emergency line.',
         email: 'researchsecurity-securiteenrecherche@ps-sp.gc.ca',
       },
     ],
@@ -260,7 +278,7 @@ export const travelSecurityData = {
   training: {
     label: 'Safeguarding Science — Module 6: Travelling Safely',
     body:
-      'Public Safety Canada runs a free workshop module on protecting research while travelling abroad, covering the threat environment and the techniques used to gain access to research.',
+      'Public Safety Canada’s Research Security Centre offers a virtual training module on protecting research while travelling abroad. It covers the threat environment, the techniques foreign governments use to acquire research, and best practices before, during and after travel.',
     url: 'https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx',
   },
 };
