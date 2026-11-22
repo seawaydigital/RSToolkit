@@ -30,7 +30,7 @@ Verified, rated profiles live on the content branch `tracker/content` until the 
 
 Use the highest-quality source that supports each claim:
 
-1. Official lists and government documents (Canada, US, Japan, EU, UK, Australia).
+1. Official lists and government documents (Canada, US, Japan, EU, UK, Australia). For Russian and Iranian bodies, designation notices and press releases (US Treasury, State and Commerce, Global Affairs Canada, the EU, the UK) often say which ministry, force or group a body belongs to.
 2. The institution's own websites, Chinese and English (about pages, lab pages, discipline lists).
 3. Chinese government notices: SASTIND, MIIT, MOE, ministry and provincial announcements.
 4. Court records and indictments.
@@ -45,10 +45,10 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 
 | Signal | Counts when |
 |---|---|
-| `pla` | A PLA or People's Armed Police university, academy or institute, or a body under the Central Military Commission |
-| `security-agency` | Belongs to the MSS, MPS or another state security body |
-| `defence-conglomerate` | A state-owned defence-industry group (CASC, CASIC, AVIC, CETC, NORINCO, CSSC…) or one of its institutes |
-| `nuclear-weapons` | Designs, builds or tests nuclear weapons (e.g. CAEP and its institutes) |
+| `armed-forces` | Run by the armed forces: in China a PLA or PAP university, academy or institute, or a body under the Central Military Commission; in Russia a Ministry of Defence or National Guard (Rosgvardia) institution; in Iran an Army (Artesh), IRGC or MODAFL institution, or a company the IRGC owns or controls, directly or indirectly (e.g. the engineering firms of its Khatam al-Anbiya Construction Headquarters: keep the source's wording of the tie, and ask before applying this to a company of any other armed force) |
+| `security-agency` | Belongs to a state security or intelligence agency (MSS, MPS, Russia's FSB, Iran's Ministry of Intelligence…) |
+| `defence-conglomerate` | A state-owned defence-industry group or one of its institutes, academies or design bureaus (CASC, CASIC, AVIC, CETC, NORINCO, CSSC…; Rostec and its holdings, Almaz-Antey, Tactical Missiles Corporation, United Shipbuilding Corporation, Roscosmos; MODAFL's defence industries such as the Aerospace and Defense Industries Organizations) |
+| `nuclear-weapons` | Designs, builds or tests nuclear weapons (e.g. CAEP and its institutes; Russia's federal nuclear centres VNIIEF and VNIITF) |
 | `seven-sons` | One of the seven MIIT universities that are core defence-industry bases |
 | `defence-key-labs` | Hosts national defence key laboratories; list them in `items` (English name and Chinese). Two or more = major, one = substantial |
 | `secrecy-qualification` | Holds a weapons and equipment research secrecy qualification |
@@ -57,13 +57,13 @@ One evidence item per signal. Signal ids and what counts (full text in `SIGNALS`
 | `defence-disciplines` | Has officially designated defence-specialty disciplines |
 | `defence-industry-partnership` | Documented partnerships, joint centres or programs with defence-industry groups |
 | `defence-funded-research` | Documented projects funded by military or defence-industry bodies |
-| `pla-collaboration` | Documented joint research, joint labs or co-supervision with PLA institutions |
+| `armed-forces-collaboration` | Documented joint research, joint labs or co-supervision with armed-forces institutions (the PLA; Russia's Ministry of Defence; Iran's Army, IRGC or MODAFL) |
 | `misconduct` | Officially documented cyber operations, espionage, export-control or sanctions violations, or human-rights abuses (e.g. a government finding that it supported surveillance or repression) |
 | `state-control` | How the state owns, funds or directs it (context; never changes the rating alone) |
 
 Each item: `{ "signal", "summary", "annexB", "sources" }`, plus `items` (and `count` if not all are listed) for labs. `summary` is one or two sentences in your own words. `annexB` lists the NSGRP Annex B questions it supports: `2.1` state influence or control, `2.2` misconduct or lack of transparency, `2.3` military or government ties. `sources` lists source ids from the record.
 
-Also check and correct, with sources: `type`, `supervisors`, `zh`, aliases (a group's academies and institutes are not its aliases: one that a list names has a record of its own, so leave its names there; an unlisted one goes in `subunits`), `domains`, `subunits` (`{ "name", "zh", "kind" }`, kind `campus`, `hospital`, `institute` or `lab`; add `"match": true` only when the unit's name on its own identifies the parent, such as a named hospital like Xijing Hospital, so that the batch check matches it to the parent; never for campuses or generic names like 口腔医院 or 理学院), `topics` (STRA category or subcategory ids from `src/data/straData.js`, never MISP's topic names; `npm test` rejects any other value; only where a source shows research in that area), and `location` (main-campus coordinates to 4 decimals, never the city centre).
+Also check and correct, with sources: `type`, `supervisors`, `zh`, aliases (a group's academies and institutes are not its aliases: one that a list names has a record of its own, so leave its names there; an unlisted one goes in `subunits`; a name needs no second alias without its legal form, because the batch check matches names apart from "JSC", "Joint Stock Company", "Co., Ltd." and the like), `domains`, `subunits` (`{ "name", "zh", "kind" }`, kind `campus`, `hospital`, `institute` or `lab`; add `"match": true` only when the unit's name on its own identifies the parent, such as a named hospital like Xijing Hospital, so that the batch check matches it to the parent; never for campuses or generic names like 口腔医院 or 理学院; do list a campus or institute in another city, with the city in its name ("Shenzhen Graduate School"), because the batch check treats a line from a city the record does not know as a check), `topics` (STRA category or subcategory ids from `src/data/straData.js`, never MISP's topic names; `npm test` rejects any other value; only where a source shows research in that area), and `location` (main-campus coordinates to 4 decimals, never the city centre).
 
 ## Sources
 

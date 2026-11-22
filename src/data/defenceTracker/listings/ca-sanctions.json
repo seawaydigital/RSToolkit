@@ -1,7 +1,7 @@
 {
   "snapshot": "ca-sanctions",
   "coverage": "complete",
-  "checkedOn": "2026-10-28",
+  "checkedOn": "2026-11-21",
   "sourceUrl": "https://www.international.gc.ca/world-monde/assets/office_docs/international_relations-relations_internationales/sanctions/sema-lmes.xml",
   "entries": [
     {
@@ -371,7 +371,7 @@
       "date": "2022-03-10",
       "citation": "Schedule 1, Part 2, item 115",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "scientific-research-institute-of-computing-machinery-jsc"
+      "institution": "joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv"
     },
     {
       "key": "ca:Russia:1, Part 2:116",
@@ -658,7 +658,7 @@
       "date": "2022-07-29",
       "citation": "Schedule 1, Part 2, item 247",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "scientific-research-institute-and-factory-platan"
+      "institution": "joint-stock-company-scientific-research-institute-platan-with-plant"
     },
     {
       "key": "ca:Russia:1, Part 2:248",
@@ -684,7 +684,7 @@
       "date": "2022-07-29",
       "citation": "Schedule 1, Part 2, item 252",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-design-institute-morteplotekhnika-jsc"
+      "institution": "tactical-missile-corporation-joint-stock-company-scientific-research-institute-o"
     },
     {
       "key": "ca:Russia:1, Part 2:254",
@@ -994,6 +994,19 @@
       "institution": "federal-state-financed-institution-of-science-physics-and-technology-institute-n"
     },
     {
+      "key": "ca:Russia:1, Part 2:388",
+      "list": "ca-sanctions",
+      "name": "VNII Signal",
+      "altNames": [
+        "Всероссийский научно-исследовательский Институт радиотехники, ОАО"
+      ],
+      "country": "RU",
+      "date": "2023-05-18",
+      "citation": "Schedule 1, Part 2, item 388",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "joint-stock-company-all-russian-research-institute-signal"
+    },
+    {
       "key": "ca:Russia:1, Part 2:389",
       "list": "ca-sanctions",
       "name": "Elvees Research and Development Center, JSC",
@@ -1031,7 +1044,7 @@
       "date": "2023-08-22",
       "citation": "Schedule 1, Part 2, item 420",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "omsk-scientific-research-institute-of-instrument-making-jsc"
+      "institution": "omsk-scientific-research-institute-of-instrument-engineering-jsc"
     },
     {
       "key": "ca:Russia:1, Part 2:423",
@@ -1242,7 +1255,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 486",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "state-research-institute-of-instrument-engineering-gosniip"
+      "institution": "joint-stock-company-state-scientific-research-institute-of-instrument-making"
     },
     {
       "key": "ca:Russia:1, Part 2:487",
@@ -1270,7 +1283,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 490",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "moscow-research-institute-agat-jsc"
+      "institution": "joint-stock-company-moscow-scientific-research-institute-agat"
     },
     {
       "key": "ca:Russia:1, Part 2:493",
@@ -1361,7 +1374,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 516",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "kaluga-research-institute-of-radio-engineering-jsc"
+      "institution": "joint-stock-company-kaluga-scientific-research-institute-of-radio-engineering-kn"
     },
     {
       "key": "ca:Russia:1, Part 2:520",
@@ -1439,7 +1452,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 532",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-design-institute-morteplotekhnika-jsc"
+      "institution": "tactical-missile-corporation-joint-stock-company-scientific-research-institute-o"
     },
     {
       "key": "ca:Russia:1, Part 2:533",
@@ -1496,7 +1509,7 @@
     {
       "key": "ca:Russia:1, Part 2:554",
       "list": "ca-sanctions",
-      "name": "The Russian Institute of Radionavigation and Time, JSC (also known as Open Joint Stock Company Russian Institute of Radionavigation and Time and Russian",
+      "name": "The Russian Institute of Radionavigation and Time, JSC",
       "altNames": [
         "АО «Российский институт радионавигации и времени»"
       ],
@@ -1504,7 +1517,20 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 554",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s"
+      "institution": "russian-institute-of-radio-navigation-and-time"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:557",
+      "list": "ca-sanctions",
+      "name": "Academician A.L. Mints Radiotechnical Institute Joint Stock Company",
+      "altNames": [
+        "Акционерное общество«Радиотехнический институт имениакадемика А.Л. Минца»"
+      ],
+      "country": "RU",
+      "date": "2024-02-21",
+      "citation": "Schedule 1, Part 2, item 557",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "radio-technical-institute-named-after-a-l-mints"
     },
     {
       "key": "ca:Russia:1, Part 2:559",
@@ -1517,7 +1543,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 559",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "research-and-production-association-rusbitech-also-known-as-rusbitech"
+      "institution": "scientific-and-production-association-russian-basic-information-technology-jsc"
     },
     {
       "key": "ca:Russia:1, Part 2:56",
@@ -1567,7 +1593,7 @@
       "date": "2024-02-21",
       "citation": "Schedule 1, Part 2, item 585",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
-      "institution": "central-research-institute-of-chemistry-and-mechanics-fsue-also-known-as-federal"
+      "institution": "federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis"
     },
     {
       "key": "ca:Russia:1, Part 2:615",
@@ -1800,6 +1826,104 @@
       "citation": "Schedule 1, Part 2, item 789",
       "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
       "institution": "scientific-research-institute-of-applied-chemistry"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:876",
+      "list": "ca-sanctions",
+      "name": "Federal Research and Production Centre Altai JSC",
+      "altNames": [
+        "AO FNPZ Altai",
+        "JSC FNPC Altai"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 876",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "federal-research-and-production-centre-altai-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:878",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Association ‘Erkon’ JSC",
+      "altNames": [
+        "NPO Erkon JSC"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 878",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-association-erkon-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:881",
+      "list": "ca-sanctions",
+      "name": "Scientific and Production Enterprise Pulsar OJSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 881",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "scientific-and-production-enterprise-pulsar-ojsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:884",
+      "list": "ca-sanctions",
+      "name": "Elpa Research Institute and Pilot Line JSC",
+      "altNames": [
+        "NII ELPA AO"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 884",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "elpa-research-institute-and-pilot-line-joint-stock-company"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:891",
+      "list": "ca-sanctions",
+      "name": "Research Institute of Space Instrumentation JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 891",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "research-institute-of-space-instrumentation-jsc"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:892",
+      "list": "ca-sanctions",
+      "name": "Khrunichev State Research and Production Space Center",
+      "altNames": [
+        "Khrunichev GKNPTS JSC",
+        "Khrunichev Space Center"
+      ],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 892",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "khrunichev-state-research-and-production-space-center"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:893",
+      "list": "ca-sanctions",
+      "name": "Research Institute of Graphite-Based Materials NIIGRAFIT JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 893",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "joint-stock-company-research-institute-of-graphite-based-materials-niigrafit"
+    },
+    {
+      "key": "ca:Russia:1, Part 2:898",
+      "list": "ca-sanctions",
+      "name": "Research Institute Submicron JSC",
+      "altNames": [],
+      "country": "RU",
+      "date": "2026-11-05",
+      "citation": "Schedule 1, Part 2, item 898",
+      "url": "https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/consolidated-consolide.aspx?lang=eng",
+      "institution": "jsc-scientific-research-institute-submicron"
     }
   ]
 }

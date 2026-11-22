@@ -41,6 +41,14 @@ const NEVER_CONFIRMED = [
   'NU',
   'National Sun Yat-sen University, Kaohsiung, Taiwan',
   'Power Office, City of Toronto',
+  // Other bodies than the ones the lists name: the Russian Academy of Sciences' institute, and NIIMash in Nizhnyaya Salda.
+  'Institute of Applied Physics, Nizhny Novgorod, Russia',
+  'Scientific Research Institute of Mechanical Engineering, Nizhnyaya Salda, Russia',
+  // The listed NPP Salyut is in Nizhny Novgorod; another one is in Moscow. Tsinghua is in Beijing and
+  // USTC in Hefei, and a line from a city where neither has a campus needs a look.
+  'NPP Salyut, Moscow, Russia',
+  'Tsinghua University, Chengdu, China',
+  'University of Science and Technology of China, Chengdu, China',
 ];
 
 for (const line of NEVER_CONFIRMED) {
@@ -110,7 +118,12 @@ const NEVER_MATCHED_TO = [
   ['南京大学国际关系学院', 'university-of-international-relations'],
 ];
 
-for (const [line, id] of NEVER_MATCHED_TO) {
+// A name that is only generic words once its legal form is gone ("Joint Stock
+// Company Institute of Applied Physics") is not matched without the form: the
+// Institute of Applied Physics in Nizhny Novgorod is another body.
+const NOT_WITHOUT_LEGAL_FORM = [['Institute of Applied Physics, Nizhny Novgorod, Russia', 'joint-stock-company-institute-of-applied-physics']];
+
+for (const [line, id] of [...NEVER_MATCHED_TO, ...NOT_WITHOUT_LEGAL_FORM]) {
   test(`not matched to ${id}: ${line}`, () => {
     const ms = matchLine(line, index);
     assert.ok(!ms.some((m) => m.id === id), show(ms));
@@ -134,7 +147,26 @@ for (const [line, unit] of LISTED_UNITS) {
   });
 }
 
-for (const [line, id] of CONFIRMED) {
+// The lists give these bodies with a legal form ("Joint Stock Company …",
+// "… JSC", "… Co., Ltd."); affiliations leave it out.
+const WITHOUT_LEGAL_FORM = [
+  ['Federal Research and Production Center Altai, Biysk, Russia', 'federal-research-and-production-centre-altai-jsc'],
+  ['Research Institute Submicron, Zelenograd, Russia', 'jsc-scientific-research-institute-submicron'],
+  ['Scientific and Production Enterprise Pulsar, Moscow, Russia', 'scientific-and-production-enterprise-pulsar-ojsc'],
+  ['China Nuclear Power Technology Research Institute, Shenzhen, China', 'china-nuclear-power-technology-research-institute-co-ltd'],
+];
+
+// A line that names another city than the institution's is a check, but these
+// name a place the institution is known at: the city the list's address gives,
+// a site among the Entity List's addresses, or the city in the name itself.
+const AT_A_KNOWN_PLACE = [
+  ['NPP Salyut, Nizhny Novgorod, Russia', 'scientific-production-enterprise-salyut-jsc'],
+  ['Beihang University, Hangzhou, China', 'beihang-university'],
+  ['Harbin Institute of Technology, Shenzhen, China', 'harbin-institute-of-technology'],
+  ['Research Institute Submicron, Moscow, Russia', 'jsc-scientific-research-institute-submicron'],
+];
+
+for (const [line, id] of [...CONFIRMED, ...WITHOUT_LEGAL_FORM, ...AT_A_KNOWN_PLACE]) {
   test(`confirmed: ${line}`, () => {
     const ms = matchLine(line, index);
     assert.ok(ms.some((m) => m.id === id && m.confidence === 'confirmed'), show(ms));
