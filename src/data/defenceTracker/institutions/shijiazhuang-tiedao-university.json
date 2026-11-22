@@ -33,12 +33,13 @@
   "evidence": [
     {
       "signal": "sastind-coconstruction",
-      "summary": "In a 2020 interview published by China Education Online, the university said it had been co-built by SASTIND and the Hebei Provincial Government since December 2013. Its 2023 overview does not mention this and lists only its co-construction by Hebei, the National Railway Administration and the Ministry of Education, from 2015.",
+      "summary": "The university called itself a university co-built by SASTIND and the Hebei Provincial Government in a 2018 recruitment notice, which describes this as its current status, and again in a 2020 interview published by China Education Online, which dates the arrangement to December 2013. Its 2023 overview no longer mentions it and lists only its co-construction by Hebei, the National Railway Administration and the Ministry of Education, from 2015.",
       "annexB": [
         "2.1",
         "2.3"
       ],
       "sources": [
+        "s3",
         "s1",
         "s2"
       ]
@@ -79,6 +80,17 @@
       "archive": {
         "url": "https://web.archive.org/web/20261122054132/https://www.eol.cn/hebei/hebgd/202309/W020230921349576591659.pdf"
       }
+    },
+    {
+      "id": "s3",
+      "title": "石家庄铁道大学教师招聘公告 (Shijiazhuang Tiedao University teacher recruitment notice, 2018)",
+      "publisher": "Shijiazhuang Tiedao University (posted by Southeast University's School of Arts)",
+      "url": "https://arts.seu.edu.cn/_upload/article/files/a5/4f/480412834786aaceb9c17df5d747/41fd6003-fccd-4678-bf61-49cb57337a7a.pdf",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20241125055309/https://arts.seu.edu.cn/_upload/article/files/a5/4f/480412834786aaceb9c17df5d747/41fd6003-fccd-4678-bf61-49cb57337a7a.pdf"
+      }
     }
   ],
   "rating": {
@@ -95,6 +107,10 @@
     {
       "date": "2026-11-22",
       "change": "Verified; rated High."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "The SASTIND co-construction now also cites a 2018 recruitment notice that gives it as the university's current status; still rated High."
     }
   ],
   "seedNotes": {
