@@ -17,30 +17,80 @@
   "location": {
     "city": "Nanchang",
     "province": "Jiangxi",
-    "lat": 28.683529,
-    "lng": 115.93734700000005
+    "lat": 28.6572,
+    "lng": 115.7931
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangxi Provincial Government (co-built with the Ministry of Education)"
+  ],
   "parent": null,
   "ids": {
     "misp": "5fd4ec84-6f0b-4f08-9507-f39bccb8f8c8",
     "ror": "042v6xz23",
     "wikidata": "Q3497259"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "Nanchang University's School of Advanced Manufacturing runs an Institute of Military Industry, founded in 2005 together with the former Jiangxi provincial office for defence science and technology industry and key defence enterprises in the province; it researches the design, manufacture and reliability of electromechanical equipment.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "Nanchang University describes itself as a national \"Double First-Class\" university co-built by the Ministry of Education and the Jiangxi provincial government.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Nanchang University",
+      "url": "https://www.ncu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122051259/https://www.ncu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "Institute of Military Industry, Nanchang University",
+      "publisher": "Nanchang University, School of Advanced Manufacturing",
+      "url": "https://jdgcxy.ncu.edu.cn/English/Research/ResearchPlatform/d996e9dd9d174e62b67a74f7429e1567.blk.htm",
+      "lang": "en",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122051408/https://jdgcxy.ncu.edu.cn/English/Research/ResearchPlatform/d996e9dd9d174e62b67a74f7429e1567.blk.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
