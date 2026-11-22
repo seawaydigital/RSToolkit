@@ -23,30 +23,72 @@
   "location": {
     "city": "Nanjing",
     "province": "Jiangsu",
-    "lat": 32.06167,
-    "lng": 118.77778
+    "lat": 32.116,
+    "lng": 118.9102
   },
-  "supervisors": [],
+  "supervisors": [
+    "Jiangsu Provincial Government (co-built with the Ministry of Education)"
+  ],
   "parent": null,
   "ids": {
     "misp": "13b878c4-fb35-4936-a29c-1482eb8b100f",
     "ror": "036trcv74",
     "wikidata": "Q1477812"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "Nanjing Normal University has been co-built by Jiangsu Province and the Ministry of Education since 2015 and is a national \"Double First-Class\" university. Its School of Geography hosts the Ministry of Public Security's Key Laboratory of Police Geographic Information Technology (警用地理信息技术公安部重点实验室).",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Nanjing Normal University",
+      "url": "https://www.njnu.edu.cn/xxgk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20260616000154/http://www.njnu.edu.cn/xxgk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "科研机构 (Research institutions)",
+      "publisher": "Nanjing Normal University, School of Geography",
+      "url": "http://dky.njnu.edu.cn/xkky/kyjg.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20220320070837/http://dky.njnu.edu.cn/xkky/kyjg.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Low."
     }
   ],
   "seedNotes": {
