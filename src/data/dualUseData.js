@@ -2,12 +2,16 @@
  * Dual-Use Research Guide content.
  * Sourced from Public Safety Canada's Safeguarding Science dual-use workshop
  * and Government of Canada research-security guidance. Not attributed to any
- * single institution. Policy statements re-verified 2026-09-24 against the STRAC FAQ (Q3 on HQP,
- * past affiliations) and the live NRO page.
+ * single institution. The workshop material (dual-use areas, red flags, MICE,
+ * myths) has no public page to re-read. What lastUpdated records is the date
+ * the policy statements and outbound links were last re-verified: 2026-11-21,
+ * against the STRAC policy and FAQ (Q3 on HQP, Q9 on past affiliations, Q15),
+ * the tri-agency NSGRP guidance (Risk Assessment Form trigger) and the live
+ * NRO page.
  */
 
 export const dualUseData = {
-  lastUpdated: "2026-09-24",
+  lastUpdated: "2026-11-21",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research",
   sourceLabel: "Safeguarding Your Research (Government of Canada) & Public Safety Canada Safeguarding Science",
 

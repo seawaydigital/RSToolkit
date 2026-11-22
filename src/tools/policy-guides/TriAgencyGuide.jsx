@@ -258,7 +258,7 @@ export default function TriAgencyGuide({ onNavigate }) {
             <div className="trag-distinction-title">Key Distinction</div>
             <p>
               The <strong>NSGRP</strong> is a process — your application goes through a risk review and may result in conditions, mitigation requirements, or denial after assessment.
-              The <strong>STRAC Policy</strong> is a rule — if you are in a STRA and have an NRO affiliation, you are ineligible. There is no review that could result in approval.
+              The <strong>STRAC Policy</strong> is a rule — a grant that aims to advance a STRA is not funded if anyone working on it has a current NRO affiliation or NRO funding. There is no review that could result in approval.
             </p>
           </div>
         </TabPanel>

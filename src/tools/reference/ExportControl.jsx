@@ -78,7 +78,7 @@ export default function ExportControl() {
         <div className="ec-guide-cta-body">
           <strong>Looking up a specific ECL item?</strong>
           <p>
-            The full Export Control List contains over 2,000 individually-numbered items across nine Groups (Wassenaar dual-use, Munitions, Nuclear, MTCR, CBW, CWC, Information Security). Browse the official <em>Guide to Canada's Export Control List</em> published by Global Affairs Canada for item-level technical parameters.
+            The full Export Control List is organized in Groups numbered 1 to 9 (Group 8 was repealed in 2006): dual-use and munitions (Wassenaar Arrangement), nuclear and nuclear-related dual-use (Nuclear Suppliers Group), miscellaneous goods and technology, missile technology (MTCR), chemical and biological weapons non-proliferation (Australia Group) and Arms Trade Treaty items. Browse the official <em>Guide to Canada's Export Control List</em> published by Global Affairs Canada for item-level technical parameters.
           </p>
         </div>
         <ExternalLink size={18} className="ec-guide-cta-icon" aria-hidden />

@@ -894,7 +894,7 @@ export const straWizard = {
     },
     "result-sensing-mems": {
       type: "result",
-      title: "Your research likely falls under Micro/Nano Electro-Mechanical Systems (M/NEMS)",
+      title: "Your research likely falls under Micro (or Nano) Electro-Mechanical Systems (M/NEMS)",
       description:
         "Research on MEMS, NEMS, smart dust, or miniaturized sensor systems falls under the Advanced Sensing and Surveillance category.",
       riskLevel: "medium",

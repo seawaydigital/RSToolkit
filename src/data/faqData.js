@@ -3,7 +3,12 @@ import { TRACKER_ENABLED } from './defenceTracker/enabled';
 import { SCREENING_ENABLED } from '../tools/compliance/screening/enabled';
 
 export const faqData = {
-  lastUpdated: '2026-09-18',
+  // Verified 2026-11-21: every answer re-read against the source it relies on
+  // (STRAC policy and FAQ, tri-agency STRAC and NSGRP guidance, the Risk
+  // Assessment Form, STRA and NRO lists, Global Affairs Canada's export
+  // controls and sanctions pages, the Controlled Goods Program, Ontario
+  // ON00708E, and Public Safety's reporting contacts).
+  lastUpdated: '2026-11-21',
   categories: [
     {
       id: 'strac-policy',
@@ -29,7 +34,7 @@ export const faqData = {
           id: 'strac-affiliation',
           question: 'What counts as an "affiliation" with an NRO?',
           answer:
-            'Under the STRAC Policy you are "affiliated" with an organization if you are employed by it, hold an appointment there (including adjunct, visiting, honorary or courtesy appointments), or conduct research there. The policy separately captures researchers who receive funding or in-kind support from an NRO, even without a formal appointment. Only current affiliations count: the policy states explicitly that past affiliations will not be considered, and a former student or employee with no continuing obligation to return is not affiliated. You attest to your status at the time of application and must remain compliant for the duration of the grant, so disclose anything you are unsure about and ask your institution\'s research security or research services office.',
+            'Under the STRAC Policy you are "affiliated" with an organization if you are employed by it, hold an appointment there, or conduct research there. The policy makes no exception for adjunct, visiting, honorary or courtesy appointments, so treat any appointment as an affiliation. The policy separately captures researchers who receive funding or in-kind support from an NRO, even without a formal appointment. Only current affiliations count: the policy states explicitly that past affiliations will not be considered, and a former student or employee with no continuing obligation to return is not affiliated. You attest to your status at the time of application and must remain compliant for the duration of the grant, so disclose anything you are unsure about and ask your institution\'s research security or research services office.',
           tags: ['strac', 'nro', 'affiliation'],
         },
         {
@@ -58,7 +63,7 @@ export const faqData = {
           id: 'nro-what',
           question: 'What is a Named Research Organization (NRO)?',
           answer:
-            'A Named Research Organization (NRO) is an organization identified by the Government of Canada as posing a risk to national security due to its links with the military, national security apparatus, or state-sponsored programs of a foreign country that has demonstrated intent to acquire Canadian sensitive technologies. The current list names 103 organizations: 85 in China, 12 in Iran and 6 in Russia. The Government of Canada last modified it on 2024-04-18 and updates it as threats evolve. (The NRO Lookup in this toolkit plots 126 pins because the Chinese Academy of Engineering Physics\' listed sub-institutes are mapped as separate campuses.)',
+            'A Named Research Organization (NRO) is a university, research institute or laboratory that the Government of Canada has listed as posing the highest risk to Canada\'s national security because of its direct or indirect connections with military, national defence or state security entities. The current list names 103 organizations: 85 in China, 12 in Iran and 6 in Russia. The Government of Canada last modified it on 2024-04-18 and updates it as threats evolve. (The NRO Lookup in this toolkit plots 126 pins because the Chinese Academy of Engineering Physics\' listed sub-institutes are mapped as separate campuses.)',
           tags: ['nro', 'policy'],
         },
         {
@@ -73,7 +78,7 @@ export const faqData = {
           id: 'nro-update',
           question: 'How often is the NRO list updated?',
           answer:
-            'The Government of Canada updates the NRO list periodically as new intelligence assessments are completed. There is no fixed schedule — additions and removals can occur at any time. Researchers with ongoing collaborations or funding relationships should check the list regularly, particularly at the time of grant application and renewal. Sign up for notifications from your institution\'s research office or check the Government of Canada\'s Safeguarding Your Research portal for announcements.',
+            'The Government of Canada says the NRO list will be updated periodically as risks evolve, but it has not published a schedule, and the list has not been revised since 2024-04-18. Updates apply going forward, to funding competitions launched after the change: a grant that is already awarded stays under the version of the list that applied when its application was submitted. Check the list every time you prepare a new application, a renewal or a funded extension. Sign up for notifications from your institution\'s research office or check the Government of Canada\'s Safeguarding Your Research portal for announcements.',
           tags: ['nro', 'updates'],
         },
         {
@@ -101,14 +106,14 @@ export const faqData = {
           id: 'nsgrp-vs-strac',
           question: 'What is the difference between the NSGRP and the STRAC Policy?',
           answer:
-            'The NSGRP and the STRAC Policy are separate but related frameworks. The NSGRP is a risk assessment process applied at the time of partnership grant application — it requires researchers to complete a Risk Assessment Form evaluating national security risks, and the funding organization may deny or condition funding based on that assessment. The STRAC Policy is a hard eligibility rule: researchers whose work is in a STRA and who have NRO affiliations are simply ineligible for tri-agency funding — no case-by-case assessment is done. Think of the NSGRP as a risk review process and the STRAC Policy as a bright-line prohibition.',
+            'The NSGRP and the STRAC Policy are separate but related frameworks. The NSGRP is a risk assessment process applied at the time of partnership grant application — it requires researchers to complete a Risk Assessment Form evaluating national security risks, and the funding organization may deny or condition funding based on that assessment. The STRAC Policy is a hard eligibility rule: a grant application that aims to advance a STRA is not funded if anyone involved in the funded research has a current NRO affiliation, or receives funding or in-kind support from an NRO — no case-by-case assessment is done. Think of the NSGRP as a risk review process and the STRAC Policy as a bright-line prohibition.',
           tags: ['nsgrp', 'strac', 'policy'],
         },
         {
           id: 'nsgrp-assessment',
           question: 'What does the NSGRP risk assessment involve?',
           answer:
-            'The NSGRP risk assessment is the Risk Assessment Form (RAF), completed by the applying researcher(s) as part of the grant application. It asks about: the nature of the research and whether it involves sensitive technologies, the identity and background of partner organizations (including country of ownership and affiliations), proposed intellectual property arrangements, any publication restrictions, and safeguards in place to protect sensitive information. The funding organization uses this information to assess the national security risk of the partnership, consulting national security departments and agencies where appropriate. Higher-risk applications may require additional review or mitigation measures.',
+            'The NSGRP risk assessment is the Risk Assessment Form (RAF), completed by the applicant as part of the grant application. It has five sections. "Know Your Research" asks whether the work touches critical minerals, critical infrastructure, sensitive personal data, large datasets, items on the Export Control List, or a sensitive or dual-use area listed in Annex A of the guidelines. "Know Your Partner Organization" asks about signs of foreign government influence, interference or control, a lack of transparency or unethical behaviour, conflicts of interest or affiliations among the partner\'s people, and the access the partner would gain to your institution\'s facilities, networks or data. You then describe the risks you found, set out a mitigation plan with a timeline for each measure, and confirm two additional requirements about the funding. Answering "yes" or "unsure" to a question does not by itself mean funding will be denied. The funding organization uses this information to assess the national security risk of the partnership, consulting national security departments and agencies where appropriate. Higher-risk applications may require additional review or mitigation measures.',
           tags: ['nsgrp', 'risk', 'assessment'],
           relatedTool: 'nsgrp-flowchart',
         },
@@ -181,7 +186,7 @@ export const faqData = {
           id: 'inst-training',
           question: 'Is there training available for research security?',
           answer:
-            'Yes. The Government of Canada\'s Safeguarding Your Research portal (science.gc.ca) provides free online training modules for researchers. Individual universities also provide institution-specific training through their research security or research services offices. CSIS has produced threat awareness briefings available to institutions upon request. The tri-agency occasionally hosts webinars on STRAC Policy and NSGRP compliance. Investing time in training is strongly encouraged — research security requirements are evolving rapidly and non-compliance carries real consequences.',
+            'Yes. The Government of Canada\'s Safeguarding Your Research portal (science.gc.ca) offers three free online courses: an introduction to research security, cyber security for researchers, and open-source due diligence for research partnerships. The portal also carries a CSIS threat briefing and checklist, and Public Safety Canada\'s Research Security Centre delivers Safeguarding Science training modules for researchers, research staff and administrators. Individual universities also provide institution-specific training through their research security or research services offices. Investing time in training is strongly encouraged — research security requirements are evolving rapidly and non-compliance carries real consequences.',
           tags: ['training', 'institutional'],
         },
         {
