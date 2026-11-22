@@ -12,6 +12,7 @@ import {
   assignInstitutions,
   caToEntries,
   compareNroNames,
+  cslPlaces,
   cslToEntries,
   diffEntries,
   parseCaSanctionsXml,
@@ -44,9 +45,12 @@ export async function runSync({ write = false, today = new Date().toISOString().
   const sections = [];
   const failures = [];
   const pending = [];
+  // Where the US feed places its entries and the records they map to, so a
+  // namesake in another city is not taken for a body the tracker holds.
+  let places = null;
 
   const assign = (entries, previous) => {
-    const assigned = assignInstitutions(entries, { previous, index, takenIds, countryOf, ...shared });
+    const assigned = assignInstitutions(entries, { previous, index, takenIds, countryOf, places, ...shared });
     for (const id of assigned.created) takenIds.add(id);
     return assigned.entries;
   };
@@ -54,7 +58,9 @@ export async function runSync({ write = false, today = new Date().toISOString().
   for (const [name, title, load] of [
     ['us-csl', 'US Consolidated Screening List (Entity List, Military End-User, SDN)', async () => {
       const csl = await fetchJson(CSL_URL, { timeoutMs: 180000 });
-      return cslToEntries(csl.results ?? csl, { index: knownIndex, countryOf });
+      const rows = csl.results ?? csl;
+      places = cslPlaces(rows, raw.snapshots['us-csl'].entries);
+      return cslToEntries(rows, { index: knownIndex, countryOf, places });
     }],
     ['ca-sanctions', 'Consolidated Canadian Autonomous Sanctions List', async () =>
       caToEntries(parseCaSanctionsXml(await fetchText(CA_SANCTIONS_URL, { timeoutMs: 120000 })), { index: knownIndex, countryOf })],

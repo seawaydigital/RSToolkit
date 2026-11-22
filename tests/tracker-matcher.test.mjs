@@ -284,3 +284,148 @@ test('a line that also names the parent is reported as a name match', () => {
 test('the search box finds an institution by a marked unit', () => {
   assert.deepEqual(searchRecords('Xijing', afmu()), ['afmu']);
 });
+
+// The official lists write many bodies with their legal form ("… JSC", "Joint
+// Stock Company …", "… Co., Ltd."). Affiliations leave it out or write it
+// another way, so a name is also matched apart from the form at its start or
+// end.
+const listed = (id, name, fields = {}) => rec(id, { name, country: 'RU', ...fields });
+
+test('a name matches without the legal form at its start or end', () => {
+  const idx = buildMatchIndex([
+    listed('altai', 'Joint Stock Company Federal Research and Production Center Altai'),
+    listed('submicron', 'Research Institute Submicron JSC'),
+    rec('cnpri', { name: 'China Nuclear Power Technology Research Institute Co., Ltd.' }),
+  ]);
+  const [m] = matchLine('Federal Research and Production Centre Altai, Biysk, Russia', idx);
+  assert.deepEqual([m?.id, m?.matchedBy, m?.confidence], ['altai', 'name', 'confirmed']);
+  assert.deepEqual(norm(matchLine('Research Institute Submicron, Zelenograd, Russia', idx)), [{ id: 'submicron', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('China Nuclear Power Technology Research Institute, Shenzhen', idx)), [{ id: 'cnpri', confidence: 'confirmed' }]);
+});
+
+test('a line may write the legal form another way than the list does', () => {
+  const idx = buildMatchIndex([listed('pulsar', 'Open Joint Stock Company Scientific and Production Enterprise Pulsar')]);
+  assert.deepEqual(norm(matchLine('JSC Scientific and Production Enterprise Pulsar, Moscow, Russia', idx)), [{ id: 'pulsar', confidence: 'confirmed' }]);
+});
+
+test('an alternative name without its legal form is still an alternative name', () => {
+  const idx = buildMatchIndex([
+    listed('rastr', 'Scientific Research Institute of Industrial Television Rastr', { aliases: ['JSC NIIPT Rastr'], location: at('Veliky Novgorod') }),
+  ]);
+  assert.deepEqual(norm(matchLine('NIIPT Rastr, Russia', idx)), [{ id: 'rastr', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('NIIPT Rastr, Veliky Novgorod, Russia', idx)), [{ id: 'rastr', confidence: 'confirmed' }]);
+});
+
+test('what is left without the legal form must still say which body it is', () => {
+  const idx = buildMatchIndex([
+    listed('iap', 'Joint Stock Company Institute of Applied Physics', { location: at('Novosibirsk') }),
+    listed('niiet', 'Scientific-Research Institute of Electronics (NIIET)', { aliases: ['AO Scientific Research'] }),
+  ]);
+  assert.deepEqual(matchLine('Institute of Applied Physics, Nizhny Novgorod, Russia', idx), []);
+  assert.deepEqual(matchLine('Scientific Research Institute of Radio Engineering, Moscow, Russia', idx), []);
+});
+
+test('a long generic name without its legal form confirms only with its city', () => {
+  const idx = buildMatchIndex([
+    listed('gosniias', 'Federal State Unitary Enterprise State Scientific Research Institute of Aviation Systems', { location: at('Moscow') }),
+  ]);
+  assert.deepEqual(norm(matchLine('State Scientific Research Institute of Aviation Systems, Russia', idx)), [{ id: 'gosniias', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('State Scientific Research Institute of Aviation Systems, Moscow, Russia', idx)), [{ id: 'gosniias', confidence: 'confirmed' }]);
+});
+
+test('two bodies that share a name once the legal form is gone are both a check', () => {
+  const idx = buildMatchIndex([listed('kvant-jsc', 'Research and Production Association Kvant JSC'), listed('kvant', 'Research and Production Association Kvant')]);
+  assert.deepEqual(norm(matchLine('Research and Production Association Kvant, Moscow, Russia', idx)), [
+    { id: 'kvant', confidence: 'check' },
+    { id: 'kvant-jsc', confidence: 'check' },
+  ]);
+});
+
+test('a unit listed with its legal form after its parent is suggested without it', () => {
+  const idx = buildMatchIndex([
+    listed('phasotron', 'Concern Radio-Electronic Technologies, Joint Stock Company Phasotron Scientific Research Institute of Radio Engineering'),
+  ]);
+  const [m] = matchLine('Phasotron Scientific Research Institute of Radio Engineering, Moscow, Russia', idx);
+  assert.deepEqual([m?.id, m?.confidence], ['phasotron', 'check']);
+});
+
+test('a misspelt name without its legal form is still suggested', () => {
+  const idx = buildMatchIndex([listed('submicron', 'Research Institute Submicron JSC')]);
+  const [m] = matchLine('Research Institute Submikron, Zelenograd, Russia', idx);
+  assert.deepEqual([m?.id, m?.matchedBy, m?.confidence], ['submicron', 'similar-name', 'check']);
+});
+
+test('a fragment that a comma inside a name leaves is not a unit of its own', () => {
+  const idx = buildMatchIndex([
+    rec('huawei-chengdu', { name: 'Huawei Technologies Co., Ltd. Chengdu Research Institute' }),
+    listed('vniiftri', 'Federal State Unitary Enterprise All-Russian Research Institute of Physical, Technical and Radio Engineering Measurements'),
+  ]);
+  assert.deepEqual(matchLine('ZTE Chengdu Research Institute, Chengdu, China', idx), []);
+  assert.deepEqual(matchLine('All-Russian Research Institute of Physical Culture, Moscow, Russia', idx), []);
+});
+
+// A long alternative name can contain the institution's own name. The longest
+// span is kept, but the line is as sure as the name inside it.
+test('an alternative name that contains the institution’s own name is as sure as that name', () => {
+  const idx = buildMatchIndex([
+    listed('vniitf', 'All-Russian Scientific Research Institute of Technical Physics (VNIITF)', {
+      aliases: ['Federal State Unitary Enterprise Russian Federal Nuclear Center - Academician E.I. Zababakhin All-Russian Scientific Research Institute of Technical Physics'],
+      location: at('Snezhinsk'),
+    }),
+  ]);
+  const line = 'Russian Federal Nuclear Center - Academician E.I. Zababakhin All-Russian Scientific Research Institute of Technical Physics';
+  assert.deepEqual(norm(matchLine(line, idx)), [{ id: 'vniitf', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine(`Federal State Unitary Enterprise ${line}`, idx)), [{ id: 'vniitf', confidence: 'confirmed' }]);
+  assert.deepEqual(matchLine(`${line}, Boston, USA`, idx).map((m) => m.matchedBy), ['name']);
+});
+
+test('a name inside a longer one that several institutions share stays a check', () => {
+  const idx = buildMatchIndex([
+    listed('a', 'Volga Institute of Radio Systems', { aliases: ['Concern Volga Institute of Radio Systems Works'], location: at('Samara') }),
+    listed('b', 'Volga Institute of Radio Systems'),
+  ]);
+  assert.deepEqual(norm(matchLine('Concern Volga Institute of Radio Systems Works, Russia', idx)), [{ id: 'a', confidence: 'check' }]);
+});
+
+// Enterprises share names across cities: one NPP Salyut is in Nizhny Novgorod
+// and another in Moscow. A line that names a city or region of the country
+// other than the ones the institution is known at is a check. The places come
+// from the record's location, its names and units, and the lists' addresses.
+const salyut = () => buildMatchIndex([listed('salyut', 'Scientific-Production Enterprise Salyut JSC', { aliases: ['JSC NPP Salyut'], places: ['Nizhny Novgorod'] })]);
+
+test('a line that names another city than the institution’s is a check', () => {
+  assert.deepEqual(norm(matchLine('NPP Salyut, Moscow, Russia', salyut())), [{ id: 'salyut', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('Scientific-Production Enterprise Salyut, Moscow, Russia', salyut())), [{ id: 'salyut', confidence: 'check' }]);
+  assert.deepEqual(norm(matchLine('NPP Salyut, Nizhny Novgorod, Russia', salyut())), [{ id: 'salyut', confidence: 'confirmed' }]);
+  assert.deepEqual(norm(matchLine('NPP Salyut, Russia', salyut())), [{ id: 'salyut', confidence: 'confirmed' }]);
+});
+
+test('a name that carries its own place is not doubted by another city', () => {
+  const hit = buildMatchIndex([rec('hit', { name: 'Harbin Institute of Technology', location: at('Harbin') })]);
+  assert.deepEqual(norm(matchLine('Harbin Institute of Technology, Shenzhen, China', hit)), [{ id: 'hit', confidence: 'confirmed' }]);
+});
+
+test('the institution’s own city, its region, another spelling of it or a listed unit’s city is not another city', () => {
+  const idx = buildMatchIndex([
+    rec('nwpu', {
+      name: 'Northwestern Polytechnical University',
+      location: { city: "Xi'an", province: 'Shaanxi', lat: null, lng: null },
+      subunits: [{ name: 'Shenzhen Research Institute', zh: null, kind: 'institute' }],
+    }),
+    listed('rnt', 'Institute of Radio Navigation and Time', { places: ['Saint Petersburg'] }),
+    listed('issp', 'Institute of Solid State Physics', { places: ['Chernogolovka', 'Moscow Region'] }),
+  ]);
+  const only = (line, id, confidence) => assert.deepEqual(norm(matchLine(line, idx)), [{ id, confidence }], line);
+  only('Northwestern Polytechnical University, Xi’an 710072, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Shaanxi, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Shenzhen, China', 'nwpu', 'confirmed');
+  only('Northwestern Polytechnical University, Chengdu, China', 'nwpu', 'check');
+  only('Institute of Radio Navigation and Time, St. Petersburg, Russia', 'rnt', 'confirmed');
+  only('Institute of Radio Navigation and Time, Kazan, Russia', 'rnt', 'check');
+  only('Institute of Solid State Physics, Moscow, Russia', 'issp', 'confirmed');
+});
+
+test('an institution with no known place is judged as before', () => {
+  const idx = buildMatchIndex([listed('kurs', 'Central Research Institute Kurs JSC')]);
+  assert.deepEqual(norm(matchLine('Central Research Institute Kurs, Kazan, Russia', idx)), [{ id: 'kurs', confidence: 'confirmed' }]);
+});

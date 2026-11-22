@@ -131,6 +131,27 @@ test('an institution named differently on several lists is one record carrying a
     // title. FNPC Start: the SDN's "MV Protsenko" is Canada's "M.V. Protsenko".
     'scientific-research-institute-of-applied-chemistry': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
     'federal-scientific-and-production-center-mv-protsenko-start-production-associati': ['ca-sanctions', 'us-sdn'],
+    // NII Platan (Fryazino), the Russian Institute of Radionavigation and Time (St Petersburg) and GosNIIP
+    // (Moscow): the SDN gives each its legal name, the Entity List and Canada other translations. The US
+    // feed gives both US entries of Platan one address, and both of GosNIIP. It gives the radionavigation
+    // institute's SDN and Entity List entries ("Radio Navigation") the same two addresses, and Canada's
+    // entry gives the SDN's legal name as another name.
+    'joint-stock-company-scientific-research-institute-platan-with-plant': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'russian-institute-of-radio-navigation-and-time': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'joint-stock-company-state-scientific-research-institute-of-instrument-making': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    // Eight more that the lists translate or name differently. The US feed gives one address to both
+    // records' entries for NICEVT (Moscow), KNIRTI (Zhukov) and NII SVT (Kirov). Canada's entry for TsNIIKhM
+    // gives the US name as another name; Canada lists RusBITech twice under one Russian name; and for MNII
+    // Agat, the Omsk instrument institute (ONIIP) and TsNII Kurs, Canada's Russian name or acronym is the
+    // one the US entry gives.
+    'electronic-computing-technology-scientific-research-center': ['ca-sanctions', 'us-entity-list'],
+    'joint-stock-company-kaluga-scientific-research-institute-of-radio-engineering-kn': ['ca-sanctions', 'us-entity-list', 'us-sdn'],
+    'joint-stock-company-scientific-research-institute-of-computer-engineering-nii-sv': ['ca-sanctions', 'jp-eul', 'us-entity-list', 'us-sdn'],
+    'federal-state-unitary-enterprise-central-scientific-research-institute-of-chemis': ['ca-sanctions', 'us-1286', 'us-entity-list', 'us-sdn'],
+    'scientific-and-production-association-russian-basic-information-technology-jsc': ['ca-sanctions'],
+    'joint-stock-company-moscow-scientific-research-institute-agat': ['ca-sanctions', 'us-entity-list'],
+    'omsk-scientific-research-institute-of-instrument-engineering-jsc': ['ca-sanctions', 'us-entity-list'],
+    'central-scientific-research-institute-kurs-jsc': ['ca-sanctions', 'us-sdn'],
   };
   for (const [id, lists] of Object.entries(expected)) assert.deepEqual(listedOn(id), lists, id);
   for (const gone of [
@@ -146,8 +167,25 @@ test('an institution named differently on several lists is one record carrying a
     'joint-stock-company-federal-scientific-and-production-center-scientific-research',
     'federal-scientific-and-production-centre',
     'the-federal-scientific-and-production-center-m-v-protsenko-start-production-asso',
+    'scientific-research-institute-and-factory-platan',
+    'the-russian-institute-of-radionavigation-and-time-jsc-also-known-as-open-joint-s',
+    'open-joint-stock-company-russian-institute-of-radionavigation-and-time',
+    'joint-stock-company-state-research-institute-of-instrument-engineering',
+    'state-research-institute-of-instrument-engineering-gosniip',
+    'ao-scientific-research-center-for-electronic-computing',
+    'kaluga-research-institute-of-radio-engineering-jsc',
+    'scientific-research-institute-of-computing-machinery-jsc',
+    'central-research-institute-of-chemistry-and-mechanics-fsue-also-known-as-federal',
+    'research-and-production-association-rusbitech-also-known-as-rusbitech',
+    'moscow-research-institute-agat-jsc',
+    'omsk-scientific-research-institute-of-instrument-making-jsc',
+    'joint-stock-company-the-central-research-institute-kurs',
   ]) assert.equal(ds.byId.has(gone), false, gone);
   assert.equal(ds.byId.get('moscow-institute-of-physics-and-technology').name, 'Moscow Institute of Physics and Technology');
+  // Canada's file cuts this name off inside its "(also known as …" bracket.
+  const rirt = ds.byId.get('russian-institute-of-radio-navigation-and-time');
+  assert.equal(rirt.name, 'Russian Institute of Radio Navigation and Time');
+  assert.ok(rirt.aliases.includes('The Russian Institute of Radionavigation and Time, JSC'), rirt.aliases.join(' | '));
 });
 
 // The research-body filter reads names, so it used to drop companies and

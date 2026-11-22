@@ -4,7 +4,7 @@ import { screeningData } from '../../../data/screeningData';
 import { downloadFile, localDate } from '../../../utils/download';
 import { countryName } from './lib/countries';
 import { SCHEMA_LABELS, parseList } from './lib/parseList';
-import { DATASETS, DEFAULT_THRESHOLD, KeyRejectedError, resultLabel, screenRows, topicLabel } from './lib/client';
+import { DATASETS, DEFAULT_THRESHOLD, KeyRejectedError, QuotaError, resultLabel, screenRows, topicLabel } from './lib/client';
 import { DISCLAIMER, countResults, resultsToCsv, resultsToHtml, resultsToText, screeningLogLine } from './lib/resultsText';
 import { EMPTY_LIST, getList, setList } from './handoff';
 import ListBuilder from './ListBuilder';
@@ -162,7 +162,12 @@ export default function SanctionsScreening() {
         },
       });
     } catch (e) {
-      stopped = e instanceof KeyRejectedError ? `${e.message} Check the key and try again.` : 'Screening cancelled. Entries already checked are shown below.';
+      stopped =
+        e instanceof KeyRejectedError
+          ? `${e.message} Check the key and try again.`
+          : e instanceof QuotaError
+            ? `${e.message} Entries already checked are shown below; the rest can be screened once the quota resets, or after OpenSanctions raises it.`
+            : 'Screening cancelled. Entries already checked are shown below.';
     }
     controller.current = null;
     setRunning(false);
@@ -225,7 +230,38 @@ export default function SanctionsScreening() {
         : prohibitions depend on the specific activity, so a match is a reason to look closer, not a ban on working together.
       </p>
 
-      <h2 className="scr-heading">1. Your list</h2>
+      <section className="scr-howto scr-no-print" aria-labelledby="scr-howto-title">
+        <h2 id="scr-howto-title" className="scr-howto-title">
+          How to use this tool
+        </h2>
+        <p>
+          You need two things: the names you want to check, and an OpenSanctions API key (step 2 explains which kind). Then work
+          down the page:
+        </p>
+        <ol>
+          <li>
+            <strong>Add your list.</strong> Press <em>Build a list</em> and paste names in whatever form you have them: a co-author
+            list, email signatures, or rows from a spreadsheet. Check that each entry is marked as a person or an organization, and
+            add a country or birth date wherever you know one. Those cut false matches on common names.
+          </li>
+          <li>
+            <strong>Paste your API key.</strong> It stays in this tab only and is forgotten when you close it.
+          </li>
+          <li>
+            <strong>Leave the settings as they are</strong> unless you have a reason to change them: sanctions lists only, match
+            threshold 0.70.
+          </li>
+          <li>
+            <strong>Press Screen.</strong> Each entry takes about a second, and you can cancel at any time.
+          </li>
+          <li>
+            <strong>Review the results.</strong> Open every match and possible match on OpenSanctions and compare the details. Then
+            keep the dated log line, the copied table or the CSV in your file.
+          </li>
+        </ol>
+      </section>
+
+      <h2 className="scr-heading">1. Add your list</h2>
       <p className="scr-help">
         {rows.length
           ? `${count(rows.length, 'entry', 'entries')} ready (${count(rows.filter((r) => r.schema === 'Person').length, 'person', 'people')}, ${count(
@@ -233,7 +269,7 @@ export default function SanctionsScreening() {
               'organization',
               'organizations',
             )}, ${rows.filter((r) => r.schema === 'LegalEntity').length} either).`
-          : 'No list yet. Build one from any list you have (it tidies the format for you), or load a CSV saved from the list builder.'}
+          : 'No list yet. Press Build a list to paste names in any format, or load a CSV list you saved from this page before.'}
       </p>
       <div className="scr-actions scr-no-print">
         <button
@@ -257,13 +293,17 @@ export default function SanctionsScreening() {
       </div>
       {building && <ListBuilder id="scr-builder" list={list} onChange={changeList} onDone={closeBuilder} />}
 
-      <h2 className="scr-heading">2. Your OpenSanctions key</h2>
+      <h2 className="scr-heading">2. Paste your OpenSanctions key</h2>
       <p id="scr-privacy" className="scr-privacy">
         <strong>Privacy:</strong> unlike most of this site, screening sends your list off your device. Each entry&apos;s name, type,
-        country and birth date go, with your key and your IP address, to OpenSanctions (api.opensanctions.org), and their terms and
-        privacy policy apply to what they keep. Nothing goes to this site, and nothing is saved here: your key and list stay in this
-        tab&apos;s memory and are gone when you close it. Screen only what you need to, and leave out project details.{' '}
-        <a href="#how-it-works">How this site handles your data</a>
+        country and birth date go, with your key and your IP address, to OpenSanctions (api.opensanctions.org) in Germany.{' '}
+        <a href={screeningData.apiFaqUrl} target="_blank" rel="noopener noreferrer">
+          OpenSanctions says
+        </a>{' '}
+        it holds the names only in memory while answering and never logs or stores them; its request logs, which include your IP
+        address, are kept for 90 days, and a billing record for each entry, without the names, for three years. Nothing goes to this
+        site, and nothing is saved here: your key and list stay in this tab&apos;s memory and are gone when you close it. Screen only
+        what you need to, and leave out project details. <a href="#how-it-works">How this site handles your data</a>
       </p>
       <div className="scr-key-row scr-no-print">
         <label className="scr-label" htmlFor="scr-key">
@@ -286,14 +326,20 @@ export default function SanctionsScreening() {
         )}
       </div>
       <p id="scr-key-help" className="scr-help">
-        Each entry uses one API request on your key. OpenSanctions offers free keys to academic and non-profit users:{' '}
+        Each entry uses one request on your key. OpenSanctions{' '}
+        <a href={screeningData.useUrl} target="_blank" rel="noopener noreferrer">
+          counts compliance screening as commercial use
+        </a>{' '}
+        even when it earns nothing, so checking partners, co-authors or visitors needs a key that comes with a data licence. Its free
+        keys are for journalists, public-interest groups and researchers studying sanctions. Your institution may already have a
+        licence;{' '}
         <a href={screeningData.keyUrl} target="_blank" rel="noopener noreferrer">
-          get a key from OpenSanctions
-        </a>
-        .
+          ask OpenSanctions
+        </a>{' '}
+        which applies to you.
       </p>
 
-      <h2 className="scr-heading">3. Settings</h2>
+      <h2 className="scr-heading">3. Choose what to check against</h2>
       <div className="scr-settings scr-no-print">
         <label className="scr-label" htmlFor="scr-dataset">
           Check against
@@ -320,11 +366,14 @@ export default function SanctionsScreening() {
           onChange={(e) => setThreshold(Number(e.target.value))}
         />
         <p id="scr-threshold-help" className="scr-help">
-          A record scoring at or above the threshold is a match. Lower finds more, with more false alarms; records from 0.50 up are
-          always shown as possible matches.
+          How close a record must be to count as a match. Leave it at 0.70 unless you have a reason: lower finds more, with more
+          false alarms; higher finds fewer and can miss a different spelling. Records from 0.50 up are always shown as possible
+          matches.
         </p>
       </div>
 
+      <h2 className="scr-heading">4. Screen your list</h2>
+      {!rows.length && <p className="scr-help">Add a list in step 1 first.</p>}
       <div className="scr-actions scr-no-print">
         {running ? (
           <button type="button" className="scr-button" onClick={() => controller.current?.abort()}>
@@ -344,7 +393,7 @@ export default function SanctionsScreening() {
       {results.length > 0 && (
         <>
           <h2 className="scr-heading" ref={resultsHeading} tabIndex={-1}>
-            Results
+            5. Results
             {counts && (
               <span className="scr-heading-note">
                 {' '}
@@ -353,6 +402,41 @@ export default function SanctionsScreening() {
               </span>
             )}
           </h2>
+          <details className="scr-guide scr-no-print" open>
+            <summary>What the results mean and what to do next</summary>
+            <dl>
+              <dt>Match</dt>
+              <dd>
+                An OpenSanctions record is very close to your entry. Open the record and compare the details: full name, birth date,
+                country, affiliation. If it is the same person or organization, pause the activity and talk to your institution&apos;s
+                research security office before going further.
+              </dd>
+              <dt>Possible match</dt>
+              <dd>Close, but not close enough to be sure. A person needs to compare the details before deciding either way.</dd>
+              <dt>Possible match (name only)</dt>
+              <dd>
+                A person was screened on a name alone, so the result can&apos;t tell them apart from someone else with the same name.
+                Add a country or birth date and screen again.
+              </dd>
+              <dt>No match found</dt>
+              <dd>
+                Nothing close turned up in the data checked. That does not clear anyone: names are spelled differently, and lists
+                change. Use your judgement and your institution&apos;s process as well.
+              </dd>
+              <dt>Not checked</dt>
+              <dd>The request failed. Press Screen again to retry.</dd>
+              <dt>Score and Lists</dt>
+              <dd>
+                The score (0 to 1) says how closely the record&apos;s details match your entry; it is not a measure of risk. Lists
+                are short codes for the source lists; the record on OpenSanctions gives their full names.
+              </dd>
+            </dl>
+            <p>
+              Not sure what to do with a result? <a href="#report-concern">Report a Concern</a> says who to contact, starting with
+              your own institution. To look further, <a href="#due-diligence-sources">Due Diligence Sources</a> explains the other
+              open sources and how to read them.
+            </p>
+          </details>
           {counts?.nameOnly > 0 && (
             <div className="scr-banner scr-no-print" role="note">
               <p>
@@ -404,7 +488,11 @@ export default function SanctionsScreening() {
             <a href={screeningData.siteUrl} target="_blank" rel="noopener noreferrer">
               OpenSanctions
             </a>
-            .
+            , licensed{' '}
+            <a href={screeningData.licenceUrl} target="_blank" rel="noopener noreferrer">
+              CC BY-NC 4.0
+            </a>
+            ; screening for compliance needs a data licence from OpenSanctions.
           </p>
         </>
       )}

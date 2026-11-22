@@ -2,7 +2,7 @@
 // concurrency limit, retries, cancelling, and how results are classified.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { KeyRejectedError, buildQuery, listDatasets, matchUrl, resultLabel, screenRows, summarize } from '../src/tools/compliance/screening/lib/client.js';
+import { KeyRejectedError, QuotaError, buildQuery, listDatasets, matchUrl, resultLabel, screenRows, summarize } from '../src/tools/compliance/screening/lib/client.js';
 
 const row = (name, schema = 'Organization', extra = {}) => ({ name, schema, country: '', birthDate: '', ...extra });
 const json = (status, body, headers = {}) => ({
@@ -114,6 +114,31 @@ test('a rejected key stops the whole run', async () => {
     return json(401, { detail: 'Invalid API key' });
   };
   await assert.rejects(screenRows([row('a'), row('b'), row('c'), row('d')], { key: 'bad', fetchImpl, concurrency: 1 }), KeyRejectedError);
+  assert.equal(calls, 1);
+});
+
+test('a used-up quota stops the run instead of failing every entry', async () => {
+  let calls = 0;
+  const waits = [];
+  const fetchImpl = async () => {
+    calls++;
+    return json(429, {});
+  };
+  await assert.rejects(
+    screenRows([row('a'), row('b'), row('c')], { key: 'k', fetchImpl, concurrency: 1, sleep: async (ms) => waits.push(ms) }),
+    QuotaError,
+  );
+  assert.equal(calls, 4);
+  assert.deepEqual(waits, [1000, 2000, 4000]);
+});
+
+test('a 429 asking for a long wait stops at once', async () => {
+  let calls = 0;
+  const fetchImpl = async () => {
+    calls++;
+    return json(429, {}, { 'Retry-After': '86400' });
+  };
+  await assert.rejects(screenRows([row('a'), row('b')], { key: 'k', fetchImpl, concurrency: 1, sleep: async () => {} }), QuotaError);
   assert.equal(calls, 1);
 });
 

@@ -3,16 +3,24 @@
 // "Pasteur Institute"), so the matcher confirms a name only when the
 // affiliation places it in the tracked institution's country, and drops it
 // when the affiliation places itself somewhere else.
-import { extractDomains, hasCjk, normalizePhrase } from './normalize.js';
+import { extractDomains, hasCjk, normalizePhrase, osaDistance } from './normalize.js';
 
 const phrases = (text) => text.split(',').map((p) => normalizePhrase(p)).filter(Boolean);
 
-// Country words, provinces and cities, written as they appear in English
-// affiliations. Old romanizations that Taiwanese institutions still use
-// (Soochow, Tsing Hua, Chiao Tung) are left out on purpose.
+// Words that name the country itself: they say which country an affiliation
+// is in, not where in it.
+const COUNTRY_WORDS = {
+  CN: phrases('China, Chinese, PRC'),
+  RU: phrases('Russia, Russian, USSR'),
+  IR: phrases('Iran, Iranian, Islamic Republic'),
+};
+
+// Provinces and cities, written as they appear in English affiliations. Old
+// romanizations that Taiwanese institutions still use (Soochow, Tsing Hua,
+// Chiao Tung) are left out on purpose.
 const HOME_PLACES = {
   CN: phrases(
-    'China, Chinese, PRC, Peking, Nanking, Tientsin, Chungking, ' +
+    'Peking, Nanking, Tientsin, Chungking, ' +
       'Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hubei, Hunan, ' +
       'Inner Mongolia, Jiangsu, Jiangxi, Jilin, Liaoning, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Tianjin, ' +
       'Tibet, Xizang, Xinjiang, Yunnan, Zhejiang, ' +
@@ -26,7 +34,7 @@ const HOME_PLACES = {
       'Bengbu, Huainan, Maanshan, Anqing, Pingdingshan, Jiaozuo, Linyi, Weifang, Taian, Jining, Dongying, Rizhao, Haidian',
   ),
   RU: phrases(
-    'Russia, Russian, USSR, Moscow, St Petersburg, Saint Petersburg, Petersburg, Leningrad, Novosibirsk, Sarov, Snezhinsk, ' +
+    'Moscow, St Petersburg, Saint Petersburg, Petersburg, Leningrad, Novosibirsk, Sarov, Snezhinsk, ' +
       'Nizhny Novgorod, Yekaterinburg, Ekaterinburg, Kazan, Tomsk, Dubna, Obninsk, Korolev, Korolyov, Zhukovsky, Zhukovskiy, ' +
       'Troitsk, Chernogolovka, Pushchino, Samara, Perm, Omsk, Chelyabinsk, Vladivostok, Krasnoyarsk, Irkutsk, Sergiev Posad, ' +
       'Saratov, Volgograd, Rostov, Ufa, Tula, Kaliningrad, Zelenograd, Fryazino, Dolgoprudny, Dolgoprudnyy, Protvino, Khimki, ' +
@@ -34,7 +42,7 @@ const HOME_PLACES = {
       'Orenburg, Tyumen, Barnaul, Kemerovo, Novokuznetsk, Khabarovsk, Ulyanovsk, Kaluga, Bryansk, Smolensk, Shikhany',
   ),
   IR: phrases(
-    'Iran, Iranian, Islamic Republic, Tehran, Teheran, Isfahan, Esfahan, Shiraz, Tabriz, Mashhad, Karaj, Qom, Ahvaz, Ahwaz, ' +
+    'Tehran, Teheran, Isfahan, Esfahan, Shiraz, Tabriz, Mashhad, Karaj, Qom, Ahvaz, Ahwaz, ' +
       'Kerman, Yazd, Rasht, Hamedan, Hamadan, Kermanshah, Zanjan, Arak, Semnan, Urmia, Babol, Gorgan, Birjand, Zahedan, ' +
       'Bandar Abbas, Qazvin, Kashan, Sanandaj, Ardabil, Bushehr, Khorramabad, Shahrekord, Mazandaran, Khuzestan, Shahrood, ' +
       'Sabzevar, Neyshabur, Damghan, Dezful, Abadan',
@@ -71,7 +79,46 @@ const has = (tokens, phrase) => tokens.includes(` ${phrase} `);
 // Technology" names China).
 export function placesIn(phrase) {
   const tokens = ` ${phrase} `;
-  return new Set(Object.keys(HOME_PLACES).filter((c) => HOME_PLACES[c].some((p) => has(tokens, p))));
+  return new Set(Object.keys(HOME_PLACES).filter((c) => [...COUNTRY_WORDS[c], ...HOME_PLACES[c]].some((p) => has(tokens, p))));
+}
+
+// One place under the names affiliations and lists give it.
+const SAME_PLACE = {
+  peking: 'beijing', nanking: 'nanjing', tientsin: 'tianjin', chungking: 'chongqing', leningrad: 'saint petersburg',
+  petersburg: 'saint petersburg', teheran: 'tehran', esfahan: 'isfahan', ahwaz: 'ahvaz', hamadan: 'hamedan',
+  korolyov: 'korolev', ekaterinburg: 'yekaterinburg',
+};
+
+// A place name as it is compared: normalized, "St." read as "Saint".
+export function placeKey(name) {
+  const key = normalizePhrase(String(name ?? '').replace(/\bst\.?(?=\s)/gi, 'saint'));
+  return SAME_PLACE[key] ?? key;
+}
+
+// The cities and regions of a country that a text names, as place keys. The
+// text is normalized and padded with a space at each end.
+export function placesNamed(tokens, country) {
+  return (HOME_PLACES[country] ?? []).filter((p) => has(tokens, p)).map(placeKey);
+}
+
+// Two names of one place: the same key, a city and the region named after it
+// ("Moscow", "Moscow Region"), or a transliteration a letter or two apart
+// ("Zhukovsky", "Zhukovskiy"). A short name must match exactly: Omsk is not
+// Tomsk.
+export function samePlace(a, b) {
+  if (a === b || ` ${a} `.includes(` ${b} `) || ` ${b} `.includes(` ${a} `)) return true;
+  return Math.min(a.length, b.length) >= 8 && osaDistance(a, b, 2) <= 2;
+}
+
+// Where an institution is known to be: its city and region, the places the
+// lists' addresses give it, and the places its own names and its units' names
+// carry ("Harbin Institute of Technology", a "Shenzhen Research Institute").
+export function knownPlaces(record) {
+  const named = [record.name, ...(record.aliases ?? []), ...(record.subunits ?? []).map((u) => u?.name)]
+    .filter((n) => n && !hasCjk(n))
+    .flatMap((n) => placesNamed(` ${normalizePhrase(n)} `, record.country));
+  const given = [record.location?.city, record.location?.province, ...(record.places ?? [])].map(placeKey).filter(Boolean);
+  return [...new Set([...given, ...named])];
 }
 
 // What one affiliation says about where it is: the tracked countries it

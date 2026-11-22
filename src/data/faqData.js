@@ -240,6 +240,14 @@ export const faqData = {
             ]
           : []),
         {
+          id: 'help-sources',
+          question: 'Where else can I check a research partner, and how do I read what I find?',
+          answer:
+            'Start with the official lists: Canada\'s Named Research Organizations list and sanctions lists, and the UN Security Council\'s list. Open sources can add more, such as company registries for ownership, research registries for telling similar institutions apart, and publication and patent searches for what an organization works on. The Due Diligence Sources guide explains each one in plain language: what it is, what it can and cannot tell you, and how to read a result. Whatever you find, a matching name is not proof, finding nothing does not clear anyone, and your institution\'s research security office should be your first call when something turns up.',
+          tags: ['help', 'due diligence', 'osint', 'sources', 'partners', 'background check'],
+          relatedTool: 'due-diligence-sources',
+        },
+        {
           id: 'help-stra-lookup',
           question: 'What tools in this toolkit should I use before submitting a grant?',
           answer:

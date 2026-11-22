@@ -194,6 +194,7 @@ export const dualUseData = {
         { text: "The Controlled Goods Program regulates examination, possession, and transfer of certain goods within Canada — Public Services and Procurement Canada.", link: { url: "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods.html", label: "Controlled Goods Program (PSPC)" } },
         { text: "The Human Pathogens and Toxins Act governs activities involving human pathogens and toxins — Public Health Agency of Canada.", link: { url: "https://laws-lois.justice.gc.ca/eng/acts/h-5.67/", label: "Human Pathogens and Toxins Act" } },
         { text: "Check sanctions before partnering — Global Affairs Canada sanctions index, and OpenSanctions (aggregates sanctions lists from many countries; always verify a match against the official Canadian source).", link: { url: "https://www.opensanctions.org/", label: "OpenSanctions" } },
+        { text: "Not sure which source answers your question, or how to read what it finds? The toolkit's Due Diligence Sources guide explains each open source: what it is, what it can and cannot tell you, and how to read a result.", link: { tool: "due-diligence-sources", label: "Due Diligence Sources" } },
       ],
     },
     {

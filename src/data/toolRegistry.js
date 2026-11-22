@@ -121,7 +121,7 @@ export const CATEGORIES = [
     label: 'Reference',
     emoji: '\uD83D\uDCD6',
     primary: true,
-    description: 'Quick reference guides for export controls and regulations',
+    description: 'Quick reference guides for export controls, regulations and due diligence sources',
     tools: [
       {
         id: 'export-control',
@@ -130,6 +130,14 @@ export const CATEGORIES = [
         description: 'Searchable reference for EIPA, Controlled Goods List, sanctions, and regulations',
         tags: ['export', 'control', 'eipa', 'sanctions', 'reference'],
         related: ['risk-checklist', 'nsgrp-flowchart'],
+      },
+      {
+        id: 'due-diligence-sources',
+        name: 'Due Diligence Sources',
+        slug: 'due-diligence-sources',
+        description: 'Plain-language guide to the open sources for checking a research partner: what each one is, what it can and cannot tell you, and how to read what it finds',
+        tags: ['due diligence', 'osint', 'open source', 'sources', 'background check', 'partners', 'sanctions', 'ownership', 'opencorporates', 'opensanctions', 'gleif', 'ror', 'orcid', 'openalex', 'patents', 'offshore leaks', 'reference'],
+        related: ['risk-mitigation', 'nro-lookup', 'dual-use'],
       },
       {
         id: 'glossary',
