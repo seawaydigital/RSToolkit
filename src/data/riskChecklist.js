@@ -16,11 +16,19 @@ export const riskChecklist = {
   // FAQ. Annex A's real structure is "Research areas covered by export
   // controls", "List 1", "Additional research areas that can be considered
   // sensitive" and "List 2": it does NOT number items. Annex B has no
-  // sub-headings.
+  // sub-headings. Four items come from the Risk Assessment Form alone or
+  // mostly: partner-conduct (question 2.2), facility-access (2.4) and the two
+  // Section 5 commitments, no-lab-mirroring and partner-funding-disclosed.
   //
-  // policyRef names a part of the NSGRP page and is linked to sourceUrl;
-  // otherRefs are links to a different document (the Risk Assessment Form,
-  // the STRAC policy or the STRA list). The page renders both as hyperlinks.
+  // policyRef names a part of the NSGRP page and is linked to sourceUrl; it is
+  // null when the item rests on another document only. otherRefs link a
+  // different document (the Risk Assessment Form, the STRAC policy or the
+  // STRA list). A section's policySource links to sourceUrl and its
+  // otherSources to other documents. The page renders all of them as links.
+  //
+  // Item ids are the keys under which the page saves answers in localStorage
+  // (rs-toolkit-checklist-v1): renaming one loses every saved answer to it.
+  // tests/risk-checklist.test.mjs pins them.
   lastUpdated: "2026-11-21",
   sourceUrl: NSGRP_URL,
   sections: [
@@ -100,6 +108,7 @@ export const riskChecklist = {
       id: "partner-risk",
       title: "Partner Risk Assessment",
       policySource: "NSGRP, Annex B",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "state-owned",
@@ -120,6 +129,14 @@ export const riskChecklist = {
           label: "Is the partner subject to laws compelling disclosure of research to a foreign government?",
           learnMore: "Some countries have laws or practices that compel entities and individuals to be subject to direction from their governments to provide Canadian information, research knowledge, technology, and its resulting intellectual property.",
           policyRef: "NSGRP, Annex B",
+          defaultState: null
+        },
+        {
+          id: "partner-conduct",
+          label: "Are there signs of a lack of transparency or of unethical behaviour by the partner organization?",
+          learnMore: "The Risk Assessment Form asks this directly. Its indicators of unethical behaviour are: people associated with the partner who have been charged with, admitted to or been convicted of fraud, bribery, espionage or corruption in any jurisdiction; a partner that has been charged with, admitted to or been convicted of intellectual property, copyright or patent theft in any jurisdiction; and a partner that has committed offences related to import or export controls or controlled goods. Unethical behaviour that the partner did not disclose, and that you found through your own due diligence, is a sign of a lack of transparency. Focus on the last five years, and on older events with a lasting effect, such as one that brought the partner's reputation into disrepute. As with every partner question on the form, include the partner's affiliates: parent organizations, subsidiaries and joint ventures, in Canada and abroad.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, question 2.2", url: RAF_URL }],
           defaultState: null
         },
         {
@@ -153,6 +170,7 @@ export const riskChecklist = {
       id: "data-infrastructure",
       title: "Data and Infrastructure Security",
       policySource: "NSGRP, Research area and Mitigation Measures",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "data-storage",
@@ -181,6 +199,14 @@ export const riskChecklist = {
           learnMore: "Review the data storage, governance, and access provisions of the research partnership agreement to ensure they cannot be used to support unwanted data access or knowledge transfer outside the scope of the partnership. Consider both physical and digital infrastructure.",
           policyRef: "NSGRP — Research area: what are you working on?",
           defaultState: null
+        },
+        {
+          id: "facility-access",
+          label: "Could the project give the partner access to your institution's facilities, networks or other assets?",
+          learnMore: "The Risk Assessment Form asks whether, as a result of the project, a partner will or could have access to your institution's facilities, networks or assets on campus in Canada, including infrastructure that houses sensitive data. Consider access the partner could gain beyond what this project needs, such as new access to controlled or restricted areas, IT systems or networks, specialized equipment, or sensitive material. The question leaves out access the partner already has legitimately through other partnerships or projects, and access to facilities unrelated to research, such as recreational ones. The reason, in both the form and the NSGRP: access to physical and digital infrastructure and data could be used for unauthorized access or knowledge transfer outside the scope of the partnership.",
+          policyRef: "NSGRP — Research area: what are you working on?",
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, question 2.4", url: RAF_URL }],
+          defaultState: null
         }
       ]
     },
@@ -188,6 +214,7 @@ export const riskChecklist = {
       id: "mitigation-planning",
       title: "Mitigation and Compliance Planning",
       policySource: "NSGRP, Identify potential risks and Mitigation Measures",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "team-strength",
@@ -216,6 +243,22 @@ export const riskChecklist = {
           label: "Have applicable export control requirements been identified and addressed?",
           learnMore: "Annex A lists the controls that can apply. Research in areas covered by the Export Control List of the Export and Import Permits Act may need a permit before technology is transferred to researchers outside Canada, and goods or technology on the Controlled Goods List (the Schedule of the Defence Production Act) fall under the Controlled Goods Program. A partnership with an institution or researcher located in a country on the Area Control List must be authorized by an export permit whatever the research is. A partnership with an entity sanctioned under the Special Economic Measures Act or the United Nations Act may require prior authorization from Global Affairs Canada. Consult your institution's research security or export control contact.",
           policyRef: "NSGRP, Annex A — Research areas covered by export controls",
+          defaultState: null
+        },
+        {
+          id: "no-lab-mirroring",
+          label: "Can you confirm that no applicant has accepted, or will accept, funding conditional on mirroring or moving their lab to another country?",
+          learnMore: "This is one of the two commitments at the end of the Risk Assessment Form. By submitting the form, the applicant agrees for all co-applicants that, to the best of their knowledge, none of them has accepted or will accept an offer of funding that is conditional on mirroring their academic laboratory in a foreign country, or transferring it to one. Check with every co-applicant before the form goes in.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, Section 5: Additional Requirements", url: RAF_URL }],
+          defaultState: null
+        },
+        {
+          id: "partner-funding-disclosed",
+          label: "Has the partner organization told you the source of funding and the value of the project to it?",
+          learnMore: "The second commitment at the end of the Risk Assessment Form: by submitting it, the applicant agrees for all co-applicants that, to the best of their knowledge, the partner organization has told them the source of funding and the value of the research project to the partner. Ask the partner early, since the form cannot be submitted without agreeing to this.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, Section 5: Additional Requirements", url: RAF_URL }],
           defaultState: null
         },
         {

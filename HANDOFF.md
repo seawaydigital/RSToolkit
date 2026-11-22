@@ -556,7 +556,7 @@ Every tool displays a `lastUpdated` date from its data file in `src/data/`. Thos
 | `faqData.js`, `glossaryData.js`, `triAgencyData.js`, `cybersecurityData.js` | 2026-11-21 | ✅ Re-read whole against the sources they cite |
 | `riskMitigationData.js`, `dualUseData.js` | 2026-11-21 | ✅ Policy statements and named resources re-verified; the best-practice and workshop material has no single source to re-read (the comment in each file says what the date covers) |
 | `exportControlData.js` | 2026-11-21 | ⚠️ **Partially verified** — see below |
-| `riskChecklist.js` | 2026-11-21 | ✅ Every item and reference re-read against the NSGRP page (Annex A, Annex B, the risk elements, mitigation measures), the Risk Assessment Form and, for the Named Research Organizations item, the STRAC policy |
+| `riskChecklist.js` | 2026-11-21 | ✅ Every item and reference re-read against the NSGRP page (Annex A, Annex B, the risk elements, mitigation measures), the Risk Assessment Form and, for the Named Research Organizations item, the STRAC policy. Four items added for what the form asks and the checklist did not (questions 2.2 and 2.4, and the two Section 5 commitments) |
 | `reportConcernData.js` | 2026-11-21 | ✅ Every phone number, address and link re-read on the page it comes from (Public Safety, RCMP, CSIS, Cyber Centre, Research Security Centre, Lakehead) |
 | `travelSecurityData.js` | 2026-11-21 | ✅ All 26 items re-read against the travel security guide; the emergency contacts against travel.gc.ca, Public Safety and Lakehead |
 | `straWizard.js`, `dualUseWizard.js` | no date field | ✅ Checked 2026-11-21 against the federal STRA list and the STRAC policy (the comment at the top of each file records it); `tests/wizards.test.mjs` checks the question trees |

@@ -25,7 +25,7 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 |---|---|
 | STRA Lookup | Search and browse Sensitive Technology Research Areas; includes a guided assessment wizard |
 | NRO Lookup & Map | Search all 126 Named Research Organizations with an interactive map, proximity search, and sanctioned-country flags |
-| Risk Assessment Checklist | Interactive NSGRP-sourced grant risk checklist with 3-state toggles and print support |
+| Risk Assessment Checklist | Interactive grant risk checklist sourced from the NSGRP and its Risk Assessment Form, with 3-state toggles and print support |
 | Risk Mitigation Guide | 22 practical measures across 5 categories — personnel, partners, data, legal, monitoring |
 | Dual-Use Research Guide | Self-assessment wizard, dual-use research areas, collaborator vetting, and due-diligence actions |
 | Defence Institution Tracker | Chinese, Russian and Iranian research institutions with military or security ties: sourced ratings, the official lists each appears on, and a batch check for partner and co-author lists. **Hidden until launch** (`ENABLE_DEFENCE_TRACKER`) |
