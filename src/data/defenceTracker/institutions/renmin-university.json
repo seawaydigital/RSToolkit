@@ -1,40 +1,79 @@
 {
   "id": "renmin-university",
-  "name": "Renmin University",
-  "zh": "人民大学",
+  "name": "Renmin University of China",
+  "zh": "中国人民大学",
   "zhAliases": [],
-  "aliases": [],
+  "aliases": [
+    "Renmin University"
+  ],
   "acronyms": [
     "RUC"
   ],
-  "domains": [],
+  "domains": [
+    "ruc.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 39.968312,
-    "lng": 116.31444999999997
+    "city": "Beijing",
+    "province": "Beijing",
+    "lat": 39.9695,
+    "lng": 116.3071
   },
-  "supervisors": [],
+  "supervisors": [
+    "Ministry of Education (co-built with the Beijing Municipal Government)"
+  ],
   "parent": null,
   "ids": {
     "misp": "338011fb-69b3-430e-8024-281fa0af7857"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "Renmin University of China is directly under the Ministry of Education and co-built by the ministry and the Beijing municipal government; it describes itself as the first new-type regular university founded by the Chinese Communist Party.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Suzhou Campus",
+      "zh": "苏州校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Renmin University of China",
+      "url": "https://www.ruc.edu.cn/xuexiaojianjie.html",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122054023/https://www.ruc.edu.cn/xuexiaojianjie.html"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Low. Name corrected to Renmin University of China (中国人民大学)."
     }
   ],
   "seedNotes": {
