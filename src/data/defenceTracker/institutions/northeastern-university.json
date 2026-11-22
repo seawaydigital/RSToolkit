@@ -7,29 +7,118 @@
   "acronyms": [
     "NEU"
   ],
-  "domains": [],
+  "domains": [
+    "neu.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
-  "location": null,
-  "supervisors": [],
+  "location": {
+    "city": "Shenyang",
+    "province": "Liaoning",
+    "lat": 41.7635,
+    "lng": 123.4118
+  },
+  "supervisors": [
+    "Ministry of Education"
+  ],
   "parent": null,
   "ids": {
     "misp": "41b6e58e-f710-43b3-8b97-c88ca4e4ad66"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "In September 2025 Northeastern University signed a strategic cooperation agreement with the AECC Shenyang Engine Research Institute, part of the state-owned aero-engine group, covering technological innovation, joint research on complex technical problems and joint training of master's and doctoral students.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s2"
+      ]
+    },
+    {
+      "signal": "armed-forces-collaboration",
+      "summary": "In June 2026 the university agreed with the PLA Northern Theater Command General Hospital and Shenyang Medical College to build a medical school together, with joint research among its aims.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s3"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "A Ministry of Education university since 1998, and one of the national \"211\" and \"985\" key-construction universities.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Northeastern University at Qinhuangdao",
+      "zh": "东北大学秦皇岛分校",
+      "kind": "campus"
+    },
+    {
+      "name": "Foshan Graduate School of Innovation",
+      "zh": "佛山研究生创新学院",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Northeastern University",
+      "url": "https://www.neu.edu.cn/xygk/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122053817/https://www.neu.edu.cn/xygk/xxjj.htm"
+      }
+    },
+    {
+      "id": "s2",
+      "title": "NEU Signed a Strategic Cooperation Agreement with the AECC Shenyang Engine Research Institute",
+      "publisher": "Northeastern University News",
+      "url": "https://neunews.neu.edu.cn/info/1019/957161.htm",
+      "lang": "en",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122053856/https://neunews.neu.edu.cn/info/1019/957161.htm"
+      }
+    },
+    {
+      "id": "s3",
+      "title": "东北大学与中国人民解放军北部战区总医院、沈阳医学院签署合作协议 (Northeastern University signs a cooperation agreement with the PLA Northern Theater Command General Hospital and Shenyang Medical College)",
+      "publisher": "Northeastern University News",
+      "url": "https://neunews.neu.edu.cn/info/1002/978891.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122053938/https://neunews.neu.edu.cn/info/1002/978891.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
