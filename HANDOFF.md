@@ -548,25 +548,28 @@ Every tool displays a `lastUpdated` date from its data file in `src/data/`. Thos
 
 | Data file | `lastUpdated` | Verified? |
 |---|---|---|
-| `nroData.js` | 2024-04-18 | ✅ Diffed against the federal list 2026-09-02 — matches, no revision since |
-| `straData.js` | 2026-07-30 | ✅ All 11 categories / 74 subcategories diffed clean 2026-09-02 |
-| `reportConcernData.js`, `travelSecurityData.js` | 2026-09-02 | ✅ Current |
-| `dualUseData.js` | 2026-06-19 | ✅ Current |
-| `flowcharts/stracFlow.js` | 2026-09-06 | ✅ Verified against the STRAC policy page (dateModified 2026-07-29); policy unchanged since it took effect 2024-05-01 |
-| `flowcharts/nsgrpFlow.js` | 2026-09-06 | ✅ Verified against the NSGRP page; every `policyRef` matches a real heading |
-| `flowcharts/ontarioFlow.js` | 2026-09-06 | ✅ Verified against form **ON00708E (2024/06)**, the current Central Forms Repository version |
-| `riskChecklist.js` | 2026-09-06 | ✅ Verified against NSGRP Annex A / Annex B structure |
-| `cybersecurityData.js` | 2026-04-16 | ⚠️ Review |
-| `faqData.js`, `glossaryData.js`, `riskMitigationData.js`, `triAgencyData.js` | 2026-03-31 | ⚠️ Review |
-| `exportControlData.js` | 2026-09-06 | ⚠️ **Partially verified** — see below |
+| `nroData.js` | 2024-04-18 | ✅ The federal list's own date. Diffed name by name 2026-11-21 — matches (103 entries), no revision since |
+| `straData.js` | 2026-10-06 | ✅ The federal page's own date. All 11 categories / 74 subcategories diffed 2026-11-21; the date moved only because a survey notice was removed from the page |
+| `flowcharts/stracFlow.js` | 2026-11-21 | ✅ Verified against the STRAC policy page, the STRAC FAQ and the tri-agency guidance; policy unchanged since it took effect 2024-05-01 |
+| `flowcharts/nsgrpFlow.js` | 2026-11-21 | ✅ Verified against the NSGRP page and the tri-agency list of funding opportunities that require the Risk Assessment Form |
+| `flowcharts/ontarioFlow.js` | 2026-11-21 | ✅ Verified against form **ON00708E (2024/06)**, still the current Central Forms Repository version |
+| `faqData.js`, `glossaryData.js`, `triAgencyData.js`, `cybersecurityData.js` | 2026-11-21 | ✅ Re-read whole against the sources they cite |
+| `riskMitigationData.js`, `dualUseData.js` | 2026-11-21 | ✅ Policy statements and named resources re-verified; the best-practice and workshop material has no single source to re-read (the comment in each file says what the date covers) |
+| `exportControlData.js` | 2026-11-21 | ⚠️ **Partially verified** — see below |
+| `riskChecklist.js` | 2026-11-21 | ✅ Every item and reference re-read against the NSGRP page (Annex A, Annex B, the risk elements, mitigation measures), the Risk Assessment Form and, for the Named Research Organizations item, the STRAC policy. Four items added for what the form asks and the checklist did not (questions 2.2 and 2.4, and the two Section 5 commitments) |
+| `reportConcernData.js` | 2026-11-21 | ✅ Every phone number, address and link re-read on the page it comes from (Public Safety, RCMP, CSIS, Cyber Centre, Research Security Centre, Lakehead) |
+| `travelSecurityData.js` | 2026-11-21 | ✅ All 26 items re-read against the travel security guide; the emergency contacts against travel.gc.ca, Public Safety and Lakehead |
+| `straWizard.js`, `dualUseWizard.js` | no date field | ✅ Checked 2026-11-21 against the federal STRA list and the STRAC policy (the comment at the top of each file records it); `tests/wizards.test.mjs` checks the question trees |
+
+The scheduled re-check of 2026-11-21 re-read every source behind the files dated 2026-11-21 above. No policy had changed; the attestation form had moved to a new address, and a number of passages that did not match their (unchanged) source were corrected. `CLAUDE.md`'s "Content verification" entry records what was checked, what was corrected, and the wording not to reintroduce. For `nroData.js` and `straData.js` the date shown is the federal page's own, because the tools present it as the date of the list; the comment above the field carries the verification date.
+
+A follow-up pass the same day covered what that issue had left out: the risk checklist, the travel and reporting pages, and the two guided assessments. Two sources had changed there. Public Safety no longer says the RCMP takes anonymous reports (the RCMP's online form asks for a name and contact details), so the site no longer says it either; and Public Safety's old Safeguarding Science address now redirects, so the links were updated. The other corrections were to wording that did not match an unchanged source, including several guided-assessment results that did not match the federal list. The same `CLAUDE.md` entry lists them.
 
 ### What the 2026-09-06 verification did and did not cover
 
 The four ✅ files were checked heading-by-heading against the live federal and provincial sources, and **that pass found real defects, not just stale dates**: the STRAC and Ontario flowcharts had been citing section numbers that do not exist in either document (STRAC uses descriptive headings; the Ontario guidelines number process *stages*), and `riskChecklist.js` cited "Annex A, Item 1–4" when Annex A does not number its items. All are corrected, and each file now carries a comment recording what was checked.
 
-`exportControlData.js` is marked **partially** verified deliberately. Its source structure and every outbound link were confirmed, but the individual control-list entries were *not* re-derived against the current Export Control List, Controlled Goods List, and sanctions regulations — that means reading the schedules themselves. Read its date as "sources confirmed live", not "every entry re-checked". A researcher relying on a specific entry should still confirm it against the linked regulation.
-
-The three files still marked ⚠️ Review are guidance and definitional content rather than legal lists; they are lower-risk but have not been re-read since their dates.
+`exportControlData.js` is marked **partially** verified deliberately. Its source structure and every outbound link were confirmed, and on 2026-11-21 its text was also checked against Global Affairs Canada's export controls handbook and the Controlled Goods Program page, but the individual control-list entries were *not* re-derived against the current Export Control List, Controlled Goods List, and sanctions regulations — that means reading the schedules themselves. Read its date as "sources confirmed live and the text consistent with them", not "every entry re-checked". A researcher relying on a specific entry should still confirm it against the linked regulation.
 
 **When you re-verify:** update `lastUpdated` only on evidence, and leave a comment next to it recording what you checked, the way `nroData.js` and `straData.js` do. A date bumped on assumption is worse than an honestly old one.
 

@@ -25,7 +25,7 @@ A free, open-source web toolkit helping Canadian researchers and research admini
 |---|---|
 | STRA Lookup | Search and browse Sensitive Technology Research Areas; includes a guided assessment wizard |
 | NRO Lookup & Map | Search all 126 Named Research Organizations with an interactive map, proximity search, and sanctioned-country flags |
-| Risk Assessment Checklist | Interactive NSGRP-sourced grant risk checklist with 3-state toggles and print support |
+| Risk Assessment Checklist | Interactive grant risk checklist sourced from the NSGRP and its Risk Assessment Form, with 3-state toggles and print support |
 | Risk Mitigation Guide | 22 practical measures across 5 categories — personnel, partners, data, legal, monitoring |
 | Dual-Use Research Guide | Self-assessment wizard, dual-use research areas, collaborator vetting, and due-diligence actions |
 | Defence Institution Tracker | Chinese, Russian and Iranian research institutions with military or security ties: sourced ratings, the official lists each appears on, and a batch check for partner and co-author lists. **Hidden until launch** (`ENABLE_DEFENCE_TRACKER`) |
@@ -151,8 +151,8 @@ All policy content is drawn from official Canadian Government sources:
 - [NRO List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations) — Government of Canada
 - [STRA List](https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas) — Government of Canada
 - [Ontario RS Guidelines](https://forms.mgcs.gov.on.ca/en/dataset/on00708) — Government of Ontario
-- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-research-security) — NSERC/CIHR/SSHRC
-- [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx) — Public Safety Canada
+- [Tri-Agency RS Guidance](https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-on-research) — NSERC/CIHR/SSHRC
+- [Safeguarding Science](https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx) — Public Safety Canada
 - [Cybersecurity guidance](https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity) — Lakehead University
 
 The Defence Institution Tracker draws on the official lists it checks (Canada's NRO list and autonomous sanctions list, the US Consolidated Screening List and Section 1286 list, and Japan's End User List), [ROR](https://ror.org) (CC0) and the [MISP galaxy](https://github.com/MISP/misp-galaxy) list (CC0, structured fields only). Each profile cites its own sources.

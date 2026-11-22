@@ -1,6 +1,12 @@
 export const cybersecurityData = {
   id: 'cybersecurity-guide',
-  lastUpdated: '2026-09-18',
+  // Verified 2026-11-21 against Lakehead's research cybersecurity page, Apple's
+  // Disk Utility guide (now defaulting to a newer macOS version; the
+  // "Image from Folder" steps are unchanged), the Cyber Centre's passphrase
+  // guidance (ITSAP.30.032), the RCR Framework (record keeping) and FNIGC's
+  // OCAP page. Lakehead's page still gives a Terminal "zip -er" recipe for the
+  // Mac; this guide deliberately does not, because that produces ZipCrypto.
+  lastUpdated: '2026-11-21',
   sourceUrl: 'https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/cybersecurity',
   sourceLabel: 'Lakehead University Research Cyber Security',
 
@@ -10,14 +16,14 @@ export const cybersecurityData = {
       number: 1,
       icon: 'Shield',
       title: 'Enable 2FA in both places separately',
-      body: 'At most institutions, 2FA protects two different systems: Duo Security (for internal portals, LMS) and Google 2-Step Verification (for institutional Google accounts). They are independent — setting up one does not cover the other. Enable both.',
+      body: 'Your institution may protect two different systems separately. At Lakehead, for example, Duo Security covers single sign-on services (internal portals, the LMS) and Google 2-Step Verification covers the institutional Google account. They are independent — setting up one does not cover the other. Enable both.',
     },
     {
       id: 'password-manager',
       number: 2,
       icon: 'KeyRound',
       title: 'Use a password manager',
-      body: 'Bitwarden is free and open-source. 1Password is included with many institutional accounts. These tools generate and store unique passwords so you never reuse credentials across research systems.',
+      body: 'Bitwarden is free and open-source. 1Password is a popular paid option. These tools generate and store unique passwords so you never reuse credentials across research systems.',
     },
     {
       id: 'encrypt-laptop',
@@ -67,7 +73,7 @@ export const cybersecurityData = {
           { text: 'Right-click your file or folder → 7-Zip → Add to archive' },
           { text: 'Set format to 7z' },
           { text: 'Set encryption method to AES-256' },
-          { text: 'Enter a strong passphrase (12+ characters)' },
+          { text: 'Enter a strong passphrase (four or more words, 15+ characters)' },
           { text: 'Upload the resulting .7z file to cloud storage' },
         ],
         tip: 'Share the password separately from the file — never in the same email.',
@@ -79,7 +85,7 @@ export const cybersecurityData = {
         steps: [
           { text: 'Open Disk Utility (Applications → Utilities)' },
           { text: 'Choose File → New Image → Image from Folder…, then select the folder' },
-          { text: 'Set Encryption to 256-bit AES and enter a strong passphrase (12+ characters)' },
+          { text: 'Set Encryption to 256-bit AES and enter a strong passphrase (four or more words, 15+ characters)' },
           { text: 'Leave "Remember password in my keychain" unticked so the passphrase is not cached on this Mac, then Save' },
           { text: 'Upload the resulting .dmg file to cloud storage' },
           { text: 'Apple\'s instructions:', linkUrl: 'https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac', linkLabel: 'Create a disk image using Disk Utility' },
@@ -123,9 +129,9 @@ export const cybersecurityData = {
   passwordsAnd2FA: {
     passphrases: {
       title: 'Strong Passphrases',
-      body: 'Use four or more random words — "Closet lamp Bathroom Mug" is stronger than "P@ssw0rd!" because length beats complexity. The Canadian Centre for Cyber Security recommends at least 12 characters.',
+      body: 'Use four or more random words — "Closet lamp Bathroom Mug" is stronger than "P@ssw0rd!" because length beats complexity. The Canadian Centre for Cyber Security recommends a passphrase of at least four words and 15 characters, or at least 12 characters where you have to use a password instead.',
       resources: [
-        { label: 'Canadian Centre for Cyber Security', url: 'https://www.cyber.gc.ca' },
+        { label: 'Canadian Centre for Cyber Security: passphrases and passwords', url: 'https://www.cyber.gc.ca/en/guidance/best-practices-passphrases-and-passwords-itsap30032' },
         { label: 'Check if your email appeared in a data breach', url: 'https://haveibeenpwned.com' },
       ],
     },
@@ -140,7 +146,7 @@ export const cybersecurityData = {
       {
         id: '1password',
         name: '1Password',
-        description: 'Included with many institutional accounts. Check if your institution provides access.',
+        description: 'A popular paid option. Check whether your institution provides access.',
         url: 'https://1password.com',
         free: false,
       },

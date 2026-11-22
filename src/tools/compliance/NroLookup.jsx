@@ -333,12 +333,12 @@ export default function NroLookup() {
           <div id="nro-sanctioned-tier1-content" className="nro-sanctioned-content">
             <p className="nro-sanctioned-body">
               Canadian sanctions on these destinations prohibit dealings with listed persons —
-              even indirectly through a third party — and the supply of a wide range of goods,
-              technology and services, including research and development and scientific or
-              technical assistance. Almost any research collaboration would involve a prohibited
-              activity. Treat it as off the table unless Global Affairs Canada&rsquo;s Sanctions
-              Bureau has confirmed that the specific activity is permitted. This applies whether
-              or not an organization appears on the NRO list.
+              even indirectly through a third party — and reach much further: nearly all trade
+              in goods, new investment, and the provision of technical data or technical
+              assistance to the destination or anyone in it. Almost any research collaboration
+              would involve a prohibited activity. Treat it as off the table unless Global
+              Affairs Canada&rsquo;s Sanctions Bureau has confirmed that the specific activity
+              is permitted. This applies whether or not an organization appears on the NRO list.
             </p>
             <div className="nro-sanctioned-countries">
               {[
@@ -374,12 +374,15 @@ export default function NroLookup() {
             <p className="nro-sanctioned-body">
               Sanctions on these destinations are extensive but activity-specific: they
               prohibit dealings with listed persons and entities, and restrict named sectors,
-              goods, technology and services. Research collaboration is not categorically
-              banned, but you must confirm that no listed person, controlled item, restricted
-              sector or prohibited service is involved — and that the partner is not owned or
-              controlled, directly or indirectly, by a listed entity. Your institution&rsquo;s
-              research security or legal office should review any proposed partnership; some
-              Canadian institutions have paused new collaborations in these jurisdictions.
+              goods, technology and services. As Global Affairs Canada notes of the Russia
+              and Iran regulations, the prohibited services can include research and
+              development and scientific and technical assistance. Research collaboration
+              is not categorically banned, but you must confirm that no listed person,
+              controlled item, restricted sector or prohibited service is involved — and that
+              the partner is not owned or controlled, directly or indirectly, by a listed
+              entity. Your institution&rsquo;s research security or legal office should review
+              any proposed partnership; some Canadian institutions have paused new
+              collaborations in these jurisdictions.
             </p>
             <div className="nro-sanctioned-countries">
               {[

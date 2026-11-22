@@ -1,18 +1,20 @@
 /**
  * Named Research Organizations (NRO) List
  * Source: Government of Canada - Policy on Sensitive Technology Research and Affiliations of Concern
- * Last Updated: March 11, 2025
+ * Federal list last modified: 2024-04-18 (the lastUpdated value below)
  *
  * This data is extracted from the official NRO list published by
  * Innovation, Science and Economic Development Canada.
  */
 
 const nroData = {
-  // Verified 2026-09-02: matches the federal NRO page exactly (dateModified
-  // 2024-04-18 — the federal list itself has not been revised since). All 126
-  // entries here are covered by the 102 top-level federal entries; the extra 24
-  // are CAEP sub-institutes, which the federal list carries as aliases under
-  // "Chinese Academy of Engineering Physics" and which we split out so each
+  // Verified 2026-11-21: matches the federal NRO page name by name (dateModified
+  // 2024-04-18 — the federal list itself has not been revised since).
+  // lastUpdated carries that federal date, because the NRO Lookup shows it as
+  // the date the Government of Canada's data was last updated. The federal
+  // page has 103 entries (85 China, 12 Iran, 6 Russia). The 126 entries here
+  // are those 103 plus 23 names that the federal list carries only as aliases
+  // under "Chinese Academy of Engineering Physics", which we split out so each
   // campus gets its own map pin.
   lastUpdated: "2024-04-18",
   sourceUrl:

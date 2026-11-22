@@ -2,9 +2,28 @@ import { INSTITUTION_RS_CONTACT as RS } from '../siteConfig';
 
 export const reportConcernData = {
   id: 'report-concern',
-  lastUpdated: '2026-09-24',
+  // Verified 2026-11-21: every phone number, address and link below was read
+  // on the live page it comes from. Public Safety's "Protect yourself against
+  // foreign interference" page (dateModified 2026-10-20) for 9-1-1, the RCMP
+  // and CSIS numbers and the links to both; the RCMP's National Security
+  // Information Network page (2024-06-21) and its online form (2026-08-14);
+  // CSIS's reporting page (2026-01-19) and its contact answers (2026-11-17,
+  // the source for "613-993-9620 24/7"); the Cyber Centre's "Report a cyber
+  // incident" page (2026-05-04); the Research Security Centre's page
+  // (2026-10-09); the tri-agency research security page (2025-05-22); and
+  // Lakehead's Safeguarding Research page for the contact in siteConfig.js.
+  //
+  // Do not say the RCMP takes anonymous reports. Public Safety's page said
+  // "You may report anonymously if you need to" in every archived copy up to
+  // May 2026; the sentence is gone from the page as modified 2026-10-20. The
+  // RCMP's online form asks for a name and contact details and says the RCMP
+  // cannot guarantee anonymity.
+  //
+  // The old Safeguarding Science address (.../sfgrdng-scnc/index-en.aspx) now
+  // redirects to the training-modules page used as sourceUrl here.
+  lastUpdated: '2026-11-21',
   sourceUrl:
-    'https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx',
+    'https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/sfgrdng-scnc-wrkshp-en.aspx',
   sourceLabel: 'Public Safety Canada — Safeguarding Science',
 
   intro:
@@ -139,13 +158,14 @@ export const reportConcernData = {
     },
     'psc-rsc': {
       label: 'Public Safety Canada — Research Security Centre',
-      detail: 'Federal first point of contact for research security advice and concerns.',
+      detail:
+        'Gives researchers and institutions advice and guidance on research security, through regional advisors across Canada. Usually reached through your institution.',
       email: 'researchsecurity-securiteenrecherche@ps-sp.gc.ca',
-      url: 'https://www.publicsafety.gc.ca/cnt/ntnl-scrt/cntr-trrrsm/cntr-prlfrtn/sfgrdng-scnc/index-en.aspx',
+      url: 'https://www.canada.ca/en/services/defence/researchsecurity/about.html',
     },
     'cyber-centre': {
       label: 'Canadian Centre for Cyber Security',
-      detail: 'Cyber incidents. Part of the Communications Security Establishment.',
+      detail: 'Cyber incidents. Part of the Communications Security Establishment Canada (CSE).',
       url: 'https://www.cyber.gc.ca/en/incident-management',
     },
     csis: {
@@ -156,7 +176,8 @@ export const reportConcernData = {
     },
     'rcmp-nsin': {
       label: 'RCMP — National Security Information Network',
-      detail: 'Suspicious incidents and activity with a possible national security dimension. Report by phone or the online form; anonymous reports are accepted.',
+      detail:
+        'Suspicious incidents and activity with a possible national security dimension. Report by phone or the online form. The form asks for your name and contact details, and the RCMP says it cannot guarantee anonymity.',
       phone: '1-800-420-5805',
       url: 'https://rcmp.ca/en/federal-policing/national-security/national-security-information-network',
     },

@@ -1,5 +1,10 @@
 export const triAgencyData = {
-  lastUpdated: '2026-09-18',
+  // Verified 2026-11-21 against the tri-agency guidance on research security
+  // (dateModified 2025-05-22: definition, shared responsibility, the ten
+  // guiding principles), the tri-agency guidance on the NSGRP (2026-03-27) and
+  // on the STRAC Policy (2026-09-18), and the two federal policy pages. The
+  // "whatItMeansForYou" lines are this toolkit's reading of each principle.
+  lastUpdated: '2026-11-21',
   sourceUrl: 'https://nserc-crsng.canada.ca/en/funding/research-partnerships-and-collaborations/inter-agency/tri-agency-guidance-on-research',
   source: 'Natural Sciences and Engineering Research Council of Canada (NSERC) — Tri-agency Guidance on Research Security',
 
@@ -8,7 +13,7 @@ export const triAgencyData = {
 
   agencies: [
     { id: 'cihr', name: 'CIHR', fullName: 'Canadian Institutes of Health Research', url: 'https://cihr-irsc.gc.ca/e/193.html' },
-    { id: 'nserc', name: 'NSERC', fullName: 'Natural Sciences and Engineering Research Council of Canada', url: 'https://www.nserc-crsng.gc.ca/' },
+    { id: 'nserc', name: 'NSERC', fullName: 'Natural Sciences and Engineering Research Council of Canada', url: 'https://nserc-crsng.canada.ca/' },
     { id: 'sshrc', name: 'SSHRC', fullName: 'Social Sciences and Humanities Research Council of Canada', url: 'https://sshrc-crsh.canada.ca/' },
     { id: 'cfi', name: 'CFI', fullName: 'Canada Foundation for Innovation', url: 'https://www.innovation.ca/' },
   ],
@@ -49,7 +54,7 @@ export const triAgencyData = {
       icon: '🌐',
       summary: 'Research security implementation must actively uphold equitable access for all researchers.',
       full: 'Equity, diversity and inclusion (EDI) is the active promotion of the principles of access, diversity and non-discrimination in all research activities — including recruitment procedures and career prospects. Achieving a more equitable, diverse and inclusive Canadian research enterprise is essential to creating the excellent, innovative and impactful research necessary to advance knowledge and understanding.',
-      whatItMeansForYou: 'The granting agencies are required to evaluate whether their research security measures have any unintended discriminatory effects and to correct them. If you believe a research security measure is being applied in a discriminatory way, you are entitled to raise this concern with your institution and the granting agency.',
+      whatItMeansForYou: 'The granting agencies commit to safeguarding research alongside their commitments to equity, diversity and inclusion, and their principles say research security measures must never lead to discrimination against, or profiling of, any member of the research community. If you believe a research security measure is being applied in a discriminatory way, raise the concern with your institution and the granting agency.',
     },
     {
       id: 'institutional-autonomy',
@@ -85,7 +90,7 @@ export const triAgencyData = {
       icon: '🔍',
       summary: 'Full disclosure of interests, affiliations, and funding sources is required of all researchers.',
       full: 'Fully transparent and reciprocal sharing of the methods, data, and outcomes of research — while maintaining confidentiality when appropriate — is crucial to research collaboration, integrity, and the free flow of ideas and information. This extends to the transparent disclosure of interests, affiliations and sources of funding between the individuals and organizations involved in a research endeavour, to foster trust and alignment on research goals and to ensure that potential conflicts are appropriately mitigated.',
-      whatItMeansForYou: 'You are required to disclose all affiliations — including honorary appointments, advisory roles, and funding from foreign sources — when applying for tri-agency grants. Non-disclosure of affiliations with Named Research Organizations (NROs) while working in a Sensitive Technology Research Area (STRA) is a compliance violation.',
+      whatItMeansForYou: 'Be open with your institution, your collaborators and your funders about your interests, affiliations and sources of funding. On a grant that aims to advance a Sensitive Technology Research Area (STRA), every researcher with a named role must attest that they have no current affiliation with, and receive no funding or in-kind support from, a Named Research Organization (NRO); an inaccurate attestation can be treated as a breach of the Responsible Conduct of Research framework.',
     },
     {
       id: 'freedom-expression',
@@ -123,7 +128,7 @@ export const triAgencyData = {
       acronym: 'NSGRP',
       color: 'blue',
       icon: '🤝',
-      oneLiner: 'A risk assessment process for partnership grant applications involving non-academic organizations.',
+      oneLiner: 'A risk assessment process for partnership grant applications that involve private-sector partner organizations.',
       when: 'When you apply to one of the federal funding opportunities that require a Risk Assessment Form — NSERC Alliance and Idea to Innovation Phase II, CIHR Project Grants, SSHRC Partnership, Partnership Development and Partnership Engage Grants, and the newer opportunities on the tri-agency list — AND the application includes a private-sector partner organization. The guidelines themselves are recommended with any partner or funder.',
       what: 'Requires a completed Risk Assessment Form (RAF) as part of the application. The funding organization reviews every form case by case, consulting national security departments and agencies where appropriate, and may fund the project as proposed, fund it with additional mitigation measures, or decline it where the risks cannot be mitigated.',
       keyPoints: [
@@ -144,16 +149,16 @@ export const triAgencyData = {
       acronym: 'STRAC Policy',
       color: 'amber',
       icon: '🛡️',
-      oneLiner: 'A hard eligibility rule: researchers in STRA fields cannot hold tri-agency funding if they have NRO affiliations.',
+      oneLiner: 'A hard eligibility rule: a grant that aims to advance a STRA cannot involve anyone with a current NRO affiliation.',
       when: 'When you apply to the tri-agency or the Canada Foundation for Innovation (for applications from May 1, 2024) AND the proposed research aims to advance a Sensitive Technology Research Area (STRA).',
-      what: 'Unlike the NSGRP, the STRAC Policy is not a risk-based assessment — it is a bright-line rule. If any named researcher on a STRA-advancing application is affiliated with, or funded by, a Named Research Organization (NRO), the application is ineligible. Every named researcher attests to compliance at application and must remain compliant for the duration of the grant.',
+      what: 'Unlike the NSGRP, the STRAC Policy is not a risk-based assessment — it is a bright-line rule. If anyone involved in the research funded by a STRA-advancing application is affiliated with, or receives funding or in-kind support from, a Named Research Organization (NRO), the application is ineligible. Every named researcher attests to compliance at application and must remain compliant for the duration of the grant.',
       keyPoints: [
         'Both conditions must apply: STRA research AND NRO affiliation',
         'No case-by-case assessment — NRO affiliation in a STRA = ineligibility',
         'Attestation at application by every named researcher, maintained for the life of the grant',
         'Does not prohibit international collaboration broadly — only NRO affiliations',
         'Applies to new applications from May 1, 2024 — not retroactive to earlier grants',
-        'Non-disclosure of affiliations is a compliance violation',
+        'An inaccurate attestation can be treated as a breach of the Responsible Conduct of Research framework',
       ],
       relatedTool: 'strac-flowchart',
       relatedToolLabel: 'STRAC Flowchart',

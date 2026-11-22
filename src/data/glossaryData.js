@@ -1,5 +1,9 @@
 export const glossaryData = {
-  lastUpdated: '2026-09-18',
+  // Verified 2026-11-21: all 12 terms re-read against the source each one cites
+  // (STRAC policy and FAQ, STRA and NRO lists, NSGRP and its Risk Assessment
+  // Form, Global Affairs Canada's sanctions and export controls pages, and the
+  // Controlled Goods Program).
+  lastUpdated: '2026-11-21',
   sourceNote: 'Definitions sourced from official Canadian and Ontario Government publications where available.',
   terms: [
     {
@@ -51,7 +55,7 @@ export const glossaryData = {
       term: 'Named Research Organization (NRO)',
       shortDef: 'An organization listed by the Government of Canada as posing a risk to national security.',
       definition:
-        'Organizations identified by the Government of Canada as posing a risk to national security due to their involvement with the military, national security apparatus, or state-sponsored programs of countries with demonstrated intent to acquire Canadian sensitive technology. Under the Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy), researchers named on a federal grant application that aims to advance a Sensitive Technology Research Area must not be affiliated with, or receive funding or in-kind support from, a Named Research Organization. The list is maintained by the Government of Canada; the current version (last modified 2024-04-18) names 103 organizations in China, Iran and Russia.',
+        'Universities, research institutes and laboratories that the Government of Canada lists as posing the highest risk to Canada\'s national security because of their direct or indirect connections with military, national defence or state security entities. Under the Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy), researchers named on a federal grant application that aims to advance a Sensitive Technology Research Area must not be affiliated with, or receive funding or in-kind support from, a Named Research Organization. The list is maintained by the Government of Canada; the current version (last modified 2024-04-18) names 103 organizations in China, Iran and Russia.',
       source: 'Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy), Government of Canada',
       sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/named-research-organizations',
       category: 'Policy Terms',
@@ -84,7 +88,7 @@ export const glossaryData = {
       term: 'Risk Assessment',
       shortDef: 'Evaluating the national security risk of a research project or partnership.',
       definition:
-        'The process of systematically evaluating the potential national security risks associated with a research project, partnership, or funding arrangement. Under the NSGRP, all eligible partnership grant applications must include a risk assessment completed by the applying researcher(s). The assessment considers factors such as the sensitivity of the research area (STRA status), the nature of the partner organization (NRO status, country of origin), the potential for misuse of research outcomes, and proposed safeguards. Institutions are expected to support researchers in conducting meaningful risk assessments.',
+        'The process of systematically evaluating the potential national security risks associated with a research project, partnership, or funding arrangement. Under the NSGRP, an application to a federal funding opportunity that requires it, and that includes a private-sector partner organization, must include a Risk Assessment Form completed by the applicant. The form covers the research (whether it touches a sensitive or dual-use area listed in Annex A, such as a Sensitive Technology Research Area, critical minerals, critical infrastructure, sensitive personal data or large datasets, or items on the Export Control List), the partner organization (signs of foreign government influence or control, a lack of transparency, conflicts of interest or affiliations among its people, and the access it would gain to facilities, networks and data), the risks identified, and a plan to mitigate them. Researchers are expected to develop that plan with their institution.',
       source: 'National Security Guidelines for Research Partnerships (NSGRP), Government of Canada',
       sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships',
       category: 'Policy Terms',
@@ -106,7 +110,7 @@ export const glossaryData = {
       term: 'Sanctions',
       shortDef: 'Legal restrictions on transactions with designated countries, organizations, or individuals.',
       definition:
-        'Restrictive measures imposed by Canada against foreign states, organizations, and individuals for foreign policy or national security reasons. Canadian sanctions can arise under the Special Economic Measures Act (SEMA), the United Nations Act (UNA), the Justice for Victims of Corrupt Foreign Officials Act (Magnitsky Act), and the Export and Import Permits Act. For researchers, sanctions may prohibit funding from, payments to, or collaborations with sanctioned entities, even in academic contexts. Sanctions lists are maintained by Global Affairs Canada and updated frequently.',
+        'Restrictive measures imposed by Canada against foreign states, organizations, and individuals for foreign policy or national security reasons. Canadian sanctions are imposed under the United Nations Act (UNA), the Special Economic Measures Act (SEMA) and the Justice for Victims of Corrupt Foreign Officials Act (Magnitsky Act); the Area Control List under the Export and Import Permits Act is a related trade control. For researchers, sanctions may prohibit funding from, payments to, or collaborations with sanctioned entities, even in academic contexts. Sanctions lists are maintained by Global Affairs Canada and updated frequently.',
       source: 'Global Affairs Canada, Sanctions Regime',
       sourceUrl: 'https://www.international.gc.ca/world-monde/international_relations-relations_internationales/sanctions/index.aspx',
       category: 'Export Controls',
@@ -117,7 +121,7 @@ export const glossaryData = {
       term: 'Sensitive Technology Research Areas (STRA)',
       shortDef: 'Areas of research identified by Canada as particularly vulnerable to foreign misuse.',
       definition:
-        'A list of research areas identified by the Government of Canada as particularly sensitive from a national security perspective. Researchers conducting work in STRA fields are at higher risk of unwanted foreign interference and technology transfer. Under the STRAC Policy, a federal grant application that aims to advance a STRA is ineligible if any named researcher is affiliated with a Named Research Organization. The list currently has 11 categories: advanced digital infrastructure; advanced energy; advanced materials and manufacturing; advanced sensing and surveillance; advanced weapons; aerospace, space and satellite; artificial intelligence and big data; human-machine integration; life science; quantum science; and robotics and autonomous systems.',
+        'A list of research areas identified by the Government of Canada as particularly sensitive from a national security perspective. Researchers conducting work in STRA fields are at higher risk of unwanted foreign interference and technology transfer. Under the STRAC Policy, a federal grant application that aims to advance a STRA is ineligible if any researcher involved in the funded work is affiliated with, or receives funding or in-kind support from, a Named Research Organization. The list currently has 11 categories: advanced digital infrastructure; advanced energy; advanced materials and manufacturing; advanced sensing and surveillance; advanced weapons; aerospace, space and satellite; artificial intelligence and big data; human-machine integration; life science; quantum science; and robotics and autonomous systems.',
       source: 'Sensitive Technology Research Areas, Government of Canada',
       sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas',
       category: 'Policy Terms',
@@ -128,8 +132,8 @@ export const glossaryData = {
       term: 'Policy on Sensitive Technology Research and Affiliations of Concern (STRAC Policy)',
       shortDef: 'Federal policy requiring researchers in sensitive areas to have no NRO affiliations.',
       definition:
-        'A federal policy issued jointly by NSERC, SSHRC, and CIHR that requires researchers applying for or holding tri-agency funding to not have current affiliations with Named Research Organizations if their research falls within a Sensitive Technology Research Area. Every researcher with a named role attests at the time of application that they comply, and must remain compliant for the duration of the grant. The policy took effect for applications from May 1, 2024, also covers the Canada Foundation for Innovation, and is not retroactive. Non-compliance makes the application ineligible; an inaccurate attestation can lead to grant termination, reimbursement, or ineligibility for federal funding. The policy does not prohibit international collaboration broadly — only affiliations with specifically listed organizations in sensitive research areas.',
-      source: 'Policy on Sensitive Technology Research and Affiliations of Concern, NSERC/SSHRC/CIHR',
+        'A Government of Canada policy, implemented by the federal granting agencies (NSERC, SSHRC and CIHR) and the Canada Foundation for Innovation, under which a grant application that aims to advance a Sensitive Technology Research Area is not funded if any researcher involved in the funded work is currently affiliated with, or receives funding or in-kind support from, a Named Research Organization. Research that merely uses an existing technology is out of scope. Every researcher with a named role attests at the time of application that they comply, and the whole research team must remain compliant for the duration of the grant. The policy took effect for applications from May 1, 2024 and is not retroactive. Non-compliance makes the application ineligible; an inaccurate attestation can lead to grant termination, reimbursement, or ineligibility for federal funding. The policy does not prohibit international collaboration broadly — only affiliations with specifically listed organizations in sensitive research areas.',
+      source: 'Policy on Sensitive Technology Research and Affiliations of Concern, Government of Canada',
       sourceUrl: 'https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/policy-sensitive-technology-research-and-affiliations-concern',
       category: 'Policy Terms',
       tags: ['strac', 'policy', 'compliance'],

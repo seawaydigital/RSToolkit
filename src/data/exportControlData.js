@@ -1,12 +1,18 @@
 export const exportControlData = {
-  // Partially verified 2026-09-06. CHECKED: the NSGRP Annex A structure this
-  // derives from (federal page dateModified 2026-07-29) and every officialUrl
-  // below, all of which resolve. NOT CHECKED: the individual control-list
-  // entries against the current Export Control List, Controlled Goods List and
-  // sanctions regulations — that means reading the schedules themselves, which
-  // is subject-matter work. Treat the date as "sources confirmed live", not
-  // "every entry re-derived". See HANDOFF.md section 7.
-  lastUpdated: "2026-09-06",
+  // Partially verified 2026-11-21. CHECKED: the NSGRP Annex A structure this
+  // derives from (federal page dateModified 2026-10-06, unchanged apart from a
+  // removed survey notice); the Export and Brokering Controls Handbook
+  // (2026-06-12) for the Export Control List groups, the Area Control List
+  // (section D.1) and the Controlled Goods Program (section F.8); the
+  // Controlled Goods Program page (2026-06-16); Global Affairs Canada's
+  // sanctions legislation page; and every officialUrl below, all of which
+  // resolve. NOT CHECKED: the individual control-list entries against the
+  // current Export Control List, Controlled Goods List and sanctions
+  // regulations — that means reading the schedules themselves, which is
+  // subject-matter work. Treat the date as "sources confirmed live and the
+  // text below consistent with them", not "every entry re-derived". See
+  // HANDOFF.md section 7.
+  lastUpdated: "2026-11-21",
   policySource: "National Security Guidelines for Research Partnerships, Annex A",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   sections: [
@@ -60,22 +66,22 @@ export const exportControlData = {
     {
       id: "defence-production-act",
       title: "Defence Production Act - Controlled Goods List",
-      description: "The Controlled Goods List is the Schedule to the Defence Production Act and identifies goods and technology that are sensitive from a national security perspective. Research involving items on this list is subject to the Controlled Goods Program administered by Public Services and Procurement Canada. Researchers and institutions must be registered under the program to access or possess controlled goods.",
+      description: "The Controlled Goods List is the Schedule to the Defence Production Act and identifies goods and technology that are sensitive from a national security perspective. Research involving items on this list is subject to the Controlled Goods Program administered by Public Services and Procurement Canada. Individuals and organizations must be registered in the program to examine, possess or transfer controlled goods in Canada.",
       entries: [
         {
           id: "cgl-military-goods",
           title: "Controlled Military Goods and Technology",
-          description: "Goods and technology identified in the Schedule of the Defence Production Act that have direct military applications. Access to these items requires registration with the Controlled Goods Program and appropriate security clearances.",
+          description: "Goods and technology identified in the Schedule of the Defence Production Act that have direct military applications. Examining, possessing or transferring these items in Canada requires registration in the Controlled Goods Program and a security assessment of each person who will have access.",
           tags: ["military", "export-control"],
-          officialUrl: "https://www.tpsgc-pwgsc.gc.ca/pmc-cgp/index-eng.html",
-          keywords: ["controlled goods", "defence production", "military goods", "security clearance", "CGP registration"]
+          officialUrl: "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods.html",
+          keywords: ["controlled goods", "defence production", "military goods", "security assessment", "security clearance", "CGP registration"]
         },
         {
           id: "cgl-technical-data",
           title: "Controlled Technical Data",
           description: "Technical data related to controlled goods, including design specifications, manufacturing processes, and operational manuals. Subject to the same controls as the physical goods themselves.",
           tags: ["military", "export-control"],
-          officialUrl: "https://www.tpsgc-pwgsc.gc.ca/pmc-cgp/index-eng.html",
+          officialUrl: "https://www.canada.ca/en/public-services-procurement/services/industrial-security/controlled-goods.html",
           keywords: ["technical data", "specifications", "blueprints", "controlled information", "ITAR"]
         }
       ]

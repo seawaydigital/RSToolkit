@@ -12,6 +12,16 @@ function loadSaved() {
   }
 }
 
+// A section's or an item's references, every one a link: the part of the
+// NSGRP page it rests on first (null when it rests on another document only),
+// then any other documents.
+function refsOf(nsgrpPart, others) {
+  return [
+    ...(nsgrpPart ? [{ label: nsgrpPart, url: riskChecklist.sourceUrl }] : []),
+    ...(others ?? []),
+  ];
+}
+
 function buildInitial() {
   const initial = {};
   riskChecklist.sections.forEach(section => {
@@ -124,14 +134,21 @@ export default function RiskChecklist() {
         <div key={section.id} className="checklist-section">
           <div className="checklist-section-header">
             <span className="checklist-section-title">{section.title}</span>
-            <a
-              className="checklist-section-source"
-              href={riskChecklist.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {section.policySource}
-            </a>
+            <span className="checklist-section-sources">
+              {refsOf(section.policySource, section.otherSources).map((src, i) => (
+                <span key={src.label}>
+                  {i > 0 && <span aria-hidden="true"> &middot; </span>}
+                  <a
+                    className="checklist-section-source"
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {src.label}
+                  </a>
+                </span>
+              ))}
+            </span>
           </div>
 
           {section.items.map(item => {
@@ -178,8 +195,16 @@ export default function RiskChecklist() {
                 {expandedItems[item.id] && (
                   <div className="checklist-learn-more">
                     <p>{item.learnMore}</p>
-                    <p style={{ marginTop: 6, fontSize: 12, color: 'var(--text-muted)' }}>
-                      Ref: {item.policyRef}
+                    <p className="checklist-ref">
+                      Ref:{' '}
+                      {refsOf(item.policyRef, item.otherRefs).map((ref, i) => (
+                        <span key={ref.label}>
+                          {i > 0 && '; '}
+                          <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                            {ref.label}
+                          </a>
+                        </span>
+                      ))}
                     </p>
                   </div>
                 )}

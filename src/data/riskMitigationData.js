@@ -1,5 +1,14 @@
 export const riskMitigationData = {
-  lastUpdated: '2026-09-18',
+  // Verified 2026-11-21. The measures are best practice rather than a
+  // restatement of one document; what was re-read against a live source is
+  // every policy statement in them (STRAC policy, FAQ and tri-agency guidance
+  // for pers-4, dd-2, mon-1 and mon-4; Global Affairs Canada's academic
+  // sanctions guidance for dd-1; NSGRP Annex B for dd-3; the tri-agency NSGRP
+  // guidance for mon-2) and the government resources and addresses named in
+  // pers-2, cyber-4, cyber-5 and dd-1. The commercial databases named in dd-3,
+  // dd-4 and dd-5 were not re-checked; the Due Diligence Sources guide is the
+  // place that reviews such sources.
+  lastUpdated: '2026-11-21',
   sourceNote: 'Best practices drawn from Canadian university research security programs, the U15 / Universities Canada guide "Mitigating Economic and/or Geopolitical Risks in Sensitive Research Projects" (2019), and Government of Canada guidance.',
   intro:
     'Risk mitigation is the set of measures you take to reduce identified national security or integrity risks to an acceptable level. Not all measures apply to every project — use the categories below to identify the practices most relevant to your situation.',
@@ -56,16 +65,16 @@ export const riskMitigationData = {
         {
           id: 'dd-1',
           title: 'Screen for sanctions',
-          what: 'Search the partner organization, its owners and its key personnel against the Canadian sanctions list — and, as intelligence, the US and EU lists — before establishing any collaboration or funding relationship.',
+          what: 'Search the partner organization, its owners and its key personnel against the Canadian and United Nations sanctions lists — and, as intelligence, the US and EU lists — before establishing any collaboration or funding relationship.',
           why: 'Contravening Canadian sanctions regulations is an offence, and the prohibition on dealings with a listed person applies even when the dealing is indirect, through a third party. Sanctions apply to individuals as well as organizations, and to an organization owned, held or controlled — directly or indirectly — by a listed person.',
-          how: 'Check the Consolidated Canadian Autonomous Sanctions List (Global Affairs Canada) for the organization, its owners and its named personnel — that is the list that creates Canadian obligations. US (OFAC) and EU lists are worth checking as intelligence, and become binding where a US or EU legal nexus applies (US-origin technology, EU partners or funding). Aggregators such as OpenSanctions search several lists at once. A clear search does not clear the activity: the regulations also restrict goods, technology and services by sector.',
+          how: 'Check the Consolidated Canadian Autonomous Sanctions List (Global Affairs Canada) and the United Nations Security Council Consolidated List for the organization, its owners and its named personnel — those are the two lists Global Affairs Canada tells academic institutions to screen against, and the ones that create Canadian obligations. US (OFAC) and EU lists are worth checking as intelligence, and become binding where a US or EU legal nexus applies (US-origin technology, EU partners or funding). Aggregators such as OpenSanctions search several lists at once. A clear search does not clear the activity: the regulations also restrict goods, technology and services by sector.',
           tags: ['always', 'international'],
         },
         {
           id: 'dd-2',
           title: 'Check NRO list',
           what: 'Verify that the partner organization does not appear on the Government of Canada\'s Named Research Organizations (NRO) list, and that no key personnel have undisclosed affiliations with NROs.',
-          why: 'Under the STRAC Policy, an application that aims to advance a Sensitive Technology Research Area is ineligible if any named researcher is affiliated with, or receives funding or in-kind support from, a listed organization, and an inaccurate attestation can lead to grant termination and repayment. Co-authoring with someone at a listed organization does not by itself create an affiliation, but involving them in work supported by a STRA-advancing grant can breach the policy.',
+          why: 'Under the STRAC Policy, an application that aims to advance a Sensitive Technology Research Area is ineligible if any researcher involved in the funded work is affiliated with, or receives funding or in-kind support from, a listed organization, and an inaccurate attestation can lead to grant termination and repayment. Co-authoring with someone at a listed organization does not by itself create an affiliation, but involving them in work supported by a STRA-advancing grant can breach the policy.',
           how: 'Use the NRO Lookup tool in this toolkit or the Government of Canada\'s official NRO list. Search for the organization by name and common aliases. If a partner\'s ownership structure is opaque, investigate parent companies and subsidiaries as well.',
           tags: ['always'],
           relatedTool: 'nro-lookup',
@@ -93,7 +102,7 @@ export const riskMitigationData = {
           title: 'Check for legal disputes and regulatory history',
           what: 'Search for ongoing or past legal disputes, regulatory violations, export control enforcement actions, or sanctions violations involving the partner.',
           why: 'A history of regulatory non-compliance — especially export control violations — is a strong predictor of future non-compliance and indicates the partner may not respect legal boundaries around knowledge transfer.',
-          how: 'Search the World Legal Information Institute (WILI), court records databases, US Bureau of Industry and Security (BIS) enforcement actions (for US-based partners), and general news searches. Check if the partner appears in any export enforcement case lists.',
+          how: 'Search the World Legal Information Institute (WorldLII), court records databases, US Bureau of Industry and Security (BIS) enforcement actions (for US-based partners), and general news searches. Check if the partner appears in any export enforcement case lists.',
           tags: ['partnership'],
         },
         {
@@ -142,7 +151,7 @@ export const riskMitigationData = {
           title: 'Develop a Data Management Plan (DMP)',
           what: 'Create a Data Management Plan that addresses how sensitive data will be collected, stored, shared, and eventually archived or destroyed.',
           why: 'A DMP forces explicit thinking about data flows, which surfaces security risks early. Many tri-agency grants require a DMP, and reviewers may assess whether the plan adequately protects sensitive information.',
-          how: 'Use the Portage DMP Assistant (dmp-pgd.ca) to generate a DMP template. Include sections on: data classification, access controls, sharing restrictions with partners, retention periods, and secure disposal. Reference your DMP in your NSGRP risk assessment form where relevant.',
+          how: 'Use the DMP Assistant (dmp-pgd.ca), hosted by the Digital Research Alliance of Canada, to generate a DMP template. Include sections on: data classification, access controls, sharing restrictions with partners, retention periods, and secure disposal. Reference your DMP in your NSGRP risk assessment form where relevant.',
           tags: ['partnership', 'stra'],
         },
         {
@@ -150,7 +159,7 @@ export const riskMitigationData = {
           title: 'Monitor for suspicious cyber activity',
           what: 'Stay alert to indicators of compromise — unauthorized access attempts, unexpected outbound data transfers, unusual login locations — and report concerns promptly.',
           why: 'State-sponsored cyber actors routinely target Canadian research institutions. Early detection limits the scope of any breach.',
-          how: 'Enable login notifications and multi-factor authentication on all research accounts. Report suspicious activity to your institution\'s IT security team immediately. Review the Canadian Centre for Cyber Security\'s (cccs.gc.ca) current alerts for the academic sector.',
+          how: 'Enable login notifications and multi-factor authentication on all research accounts. Report suspicious activity to your institution\'s IT security team immediately. Review the Canadian Centre for Cyber Security\'s (cyber.gc.ca) current alerts and advisories.',
           tags: ['always', 'stra'],
         },
       ],
@@ -208,7 +217,7 @@ export const riskMitigationData = {
           id: 'mon-1',
           title: 'Re-check the NRO list periodically',
           what: 'Check the Government of Canada\'s NRO list at regular intervals during a multi-year project, not only at the time of application.',
-          why: 'The NRO list is updated periodically. The STRAC Policy is not retroactive — an existing award is not reassessed when a partner is added — but any new application, renewal or extension is assessed against the list as it stands on submission, and the agencies reserve the right to consider affiliations of concern if a risk is identified. Knowing early gives you time to restructure before the next application.',
+          why: 'The NRO list is updated periodically. The STRAC Policy is not retroactive — an existing award is not reassessed when an organization is added to the list — but any new application, renewal or funded extension is assessed against the list as it stands on submission, and the agencies reserve the right to consider affiliations of concern if a risk is identified. Knowing early gives you time to restructure before the next application.',
           how: 'Build an annual NRO list review into your project calendar. Sign up for notifications from your institution\'s research security office or monitor the Government of Canada\'s Safeguarding Your Research portal for list updates.',
           tags: ['always'],
           relatedTool: 'nro-lookup',

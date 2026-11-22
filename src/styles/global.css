@@ -1489,7 +1489,10 @@ a:hover {
 
 .tool-page-meta {
   display: flex;
-  gap: 12px;
+  /* A long source label drops to its own line on a narrow screen instead of
+     squeezing the date beside it into a one-word-wide column. */
+  flex-wrap: wrap;
+  gap: 2px 12px;
   margin-top: 8px;
   font-size: 12px;
   color: var(--text-muted);
@@ -2606,9 +2609,18 @@ a:hover {
 
 .checklist-section-header {
   display: flex;
+  /* A section can cite two sources; on a narrow screen they drop under the
+     title instead of squeezing it. */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 4px 12px;
   margin-bottom: 12px;
+}
+
+.checklist-section-sources {
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .checklist-section-title {
@@ -2681,6 +2693,14 @@ a:hover {
   border-radius: var(--radius);
   font-size: 13px;
   color: var(--text-secondary);
+}
+
+/* The policy reference under an item's details. Its links take the global
+   --link colour; the label around them stays muted. */
+.checklist-ref {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 .checklist-learn-more-toggle {
@@ -4559,6 +4579,14 @@ a:hover {
     font-size: 12px !important;
   }
 
+  .checklist-ref {
+    color: #374151 !important;
+  }
+
+  .checklist-ref a {
+    color: #1d4ed8 !important;
+  }
+
   /* Section headers */
   .checklist-section-header {
     background: #f3f4f6 !important;
@@ -4572,6 +4600,7 @@ a:hover {
     color: black !important;
   }
 
+  .checklist-section-sources,
   .checklist-section-source {
     color: #6b7280 !important;
   }

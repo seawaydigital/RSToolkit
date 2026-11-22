@@ -8,7 +8,11 @@ export const nsgrpFlow = {
   // help identify and mitigate risk; a "No" on either never waives a required
   // form. The named-researcher attestation is a STRAC Policy requirement and
   // is deliberately not part of this flow — see stracFlow.js.
-  lastUpdated: "2026-09-18",
+  // Re-verified 2026-11-21: the tri-agency guidance is still dated 2026-03-27
+  // and lists the same funding opportunities; the NSGRP page and the Risk
+  // Assessment Form page (both dateModified 2026-10-06) differ from their
+  // 2026-07-29 versions only by a removed survey notice.
+  lastUpdated: "2026-11-21",
   policySource: "National Security Guidelines for Research Partnerships",
   sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
   nodes: [
