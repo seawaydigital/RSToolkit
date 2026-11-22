@@ -23,7 +23,9 @@ export const travelSecurityData = {
   // One item is the host's, not the guide's: b-consult, the institution's
   // pre-trip travel security consultation, built from
   // INSTITUTION_RS_CONTACT.travelConsultation in siteConfig.js and left out
-  // when that is null. Item ids are the keys under which ticked items are
+  // when that is null. b-it's wording also depends on the host: with
+  // lendsTravelDevices it sends travellers to research security for a loaner
+  // device instead of IT. Item ids are the keys under which ticked items are
   // saved in localStorage (rs-toolkit-travel-v1): renaming one loses saved
   // ticks. tests/travel-security.test.mjs pins them.
   lastUpdated: '2026-11-21',
@@ -89,9 +91,18 @@ export const travelSecurityData = {
           items: [
             {
               id: 'b-it',
-              text: 'Talk to IT about loaner devices and VPN arrangements before you book.',
-              detail:
-                'Many institutions offer clean laptops and phones for international travel. Ask — this is the single most effective control available and it is usually free.',
+              // Who lends travel devices is the host's: see lendsTravelDevices
+              // in siteConfig.js.
+              ...(RS.lendsTravelDevices
+                ? {
+                    text: `Ask ${RS.institution} Research Security about a loaner device, and IT about VPN arrangements, before you book.`,
+                    detail: `At ${RS.institution}, loaner devices for travel are managed by the ${RS.title} (${RS.email}), not IT. The travel security guide says to use burner phones or travel-safe devices whenever possible, and to discuss VPN use with IT before you leave.`,
+                  }
+                : {
+                    text: 'Talk to IT about loaner devices and VPN arrangements before you book.',
+                    detail:
+                      'Many institutions offer clean laptops and phones for international travel. Ask — this is the single most effective control available and it is usually free.',
+                  }),
             },
             {
               id: 'b-minimum',

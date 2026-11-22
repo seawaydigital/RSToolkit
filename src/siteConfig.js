@@ -37,6 +37,14 @@ export const ACCESSIBILITY_CONTACT = 'security.research@lakeheadu.ca';
  * international research travel") and its Travel Security page (book before
  * finalizing travel plans, for high-risk destinations or research involving
  * sensitive technologies), both read 2026-11-21.
+ *
+ * lendsTravelDevices is true when this research security office, not IT,
+ * lends clean devices for travel. The travel checklist's loaner-device item
+ * then sends travellers here for the device and to IT for the VPN; false
+ * keeps the generic "Talk to IT" wording. At Lakehead the Research Security
+ * and Data Management Specialist manages them (Andrew Austin, 2026-11-22).
+ * Lakehead's Travel Security page said on 2026-11-21 that Lakehead does not
+ * currently provide loaner devices; Andrew's statement is the current one.
  */
 export const INSTITUTION_RS_CONTACT = {
   institution: 'Lakehead University',
@@ -48,6 +56,7 @@ export const INSTITUTION_RS_CONTACT = {
       'Lakehead University requires a travel security consultation for travel to high-risk destinations and recommends one for all international research travel. For a high-risk destination, or if your research involves sensitive technologies, book it before you finalize your travel plans.',
     url: 'https://www.lakeheadu.ca/research-and-innovation/research-services/resources/safeguarding-research-resources/travel-security',
   },
+  lendsTravelDevices: true,
 };
 
 /**

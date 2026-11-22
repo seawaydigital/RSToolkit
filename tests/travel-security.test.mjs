@@ -59,6 +59,19 @@ test("the travel consultation item follows siteConfig.js", () => {
   assert.equal(consult.link.url, config.url);
 });
 
+test('the loaner-device item sends travellers where siteConfig.js says devices come from', () => {
+  const loaner = items.find((i) => i.id === 'b-it');
+  assert.ok(loaner, 'b-it is always shown');
+  if (INSTITUTION_RS_CONTACT.lendsTravelDevices) {
+    // The research security office lends the devices: IT is only for the VPN.
+    assert.ok(loaner.text.includes(`${INSTITUTION_RS_CONTACT.institution} Research Security`), 'names research security');
+    assert.ok(loaner.detail.includes(INSTITUTION_RS_CONTACT.email), 'gives the office email');
+    assert.doesNotMatch(loaner.text, /^Talk to IT about loaner devices/);
+  } else {
+    assert.match(loaner.text, /^Talk to IT about loaner devices/);
+  }
+});
+
 test('every item has its text, and every link, cross-link and contact is usable', () => {
   // toolRegistry.js imports browser-only modules, so its slugs are read as text.
   const registry = readFileSync(new URL('../src/data/toolRegistry.js', import.meta.url), 'utf8');
