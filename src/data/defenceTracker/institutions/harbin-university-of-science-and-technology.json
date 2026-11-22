@@ -7,34 +7,93 @@
   "acronyms": [
     "HRBUST"
   ],
-  "domains": [],
+  "domains": [
+    "hrbust.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
   "location": {
-    "city": null,
-    "province": null,
-    "lat": 45.712764410855776,
-    "lng": 126.61280044047544
+    "city": "Harbin",
+    "province": "Heilongjiang",
+    "lat": 45.7138,
+    "lng": 126.6109
   },
-  "supervisors": [],
+  "supervisors": [
+    "Heilongjiang Provincial Government (co-built with SASTIND)"
+  ],
   "parent": null,
   "ids": {
-    "misp": "e9dd0b2f-7ab1-4ffd-8a2c-ef107c388f44"
+    "misp": "e9dd0b2f-7ab1-4ffd-8a2c-ef107c388f44",
+    "wikidata": "Q5654457"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "sastind-coconstruction",
+      "summary": "Harbin University of Science and Technology says it has been co-built by the Heilongjiang Provincial Government and SASTIND since 2015, and was chosen again for the next round of that arrangement in 2022.",
+      "annexB": [
+        "2.1",
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-disciplines",
+      "summary": "The university's own overview lists five defence-specialty discipline directions among its disciplines.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "state-control",
+      "summary": "A Heilongjiang provincial university since 1998, when it was transferred to the province under joint central and local administration with the province in charge.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
-  "subunits": [],
-  "sources": [],
+  "subunits": [
+    {
+      "name": "Weihai Campus",
+      "zh": "威海校区",
+      "kind": "campus"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介 (About the university)",
+      "publisher": "Harbin University of Science and Technology",
+      "url": "https://www.hrbust.edu.cn/xxgklink/xxjj.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122051231/https://www.hrbust.edu.cn/xxgklink/xxjj.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated High."
     }
   ],
   "seedNotes": {
