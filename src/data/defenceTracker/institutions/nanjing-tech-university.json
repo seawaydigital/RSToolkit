@@ -16,8 +16,8 @@
   "location": {
     "city": "Nanjing",
     "province": "Jiangsu",
-    "lat": 32.07584972656649,
-    "lng": 118.63851808465574
+    "lat": 32.0758,
+    "lng": 118.6385
   },
   "supervisors": [],
   "parent": null,
@@ -26,20 +26,67 @@
     "ror": "03sd35x91",
     "wikidata": "Q10906760"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "defence-industry-partnership",
+      "summary": "A research team in Nanjing Tech's School of Materials Science and Engineering reports joint development of key materials with the China Academy of Engineering Physics and the aerospace industry's Eighth Academy, and a joint laboratory for aerospace thermal-protection materials with an aerospace institute (航天806所).",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "defence-funded-research",
+      "summary": "The same team says it belongs to a national defence (GF) innovation team and lists frontier-technology foundation-strengthening projects (前沿技术基础加强项目) among its funded work.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    },
+    {
+      "signal": "armed-forces-collaboration",
+      "summary": "The team also reports developing materials together with the PLA's Eastern Theater Command General Hospital.",
+      "annexB": [
+        "2.3"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "功能气凝胶与复合材料团队 (Functional Aerogel and Composite Materials team)",
+      "publisher": "Nanjing Tech University, School of Materials Science and Engineering",
+      "url": "https://cly.njtech.edu.cn/info/1039/9213.htm",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261027104512/https://cly.njtech.edu.cn/info/1039/9213.htm"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Medium."
     }
   ],
   "seedNotes": {
