@@ -5,7 +5,9 @@ export const exportControlData = {
   // (2026-06-12) for the Export Control List groups, the Area Control List
   // (section D.1) and the Controlled Goods Program (section F.8); the
   // Controlled Goods Program page (2026-06-16); Global Affairs Canada's
-  // sanctions legislation page; and every officialUrl below, all of which
+  // sanctions legislation page; Notice to Exporters No. 1159 (cloud storage,
+  // dateModified 2025-11-05) for the eipa-cloud entry; and every officialUrl
+  // below, all of which
   // resolve. NOT CHECKED: the individual control-list entries against the
   // current Export Control List, Controlled Goods List and sanctions
   // regulations — that means reading the schedules themselves, which is
@@ -60,6 +62,14 @@ export const exportControlData = {
           tags: ["military", "export-control", "proliferation", "CBRN"],
           officialUrl: "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2000-210/",
           keywords: ["nuclear", "fissile", "uranium", "plutonium", "enrichment", "non-proliferation", "IAEA", "reactor"]
+        },
+        {
+          id: "eipa-cloud",
+          title: "Storing Controlled Technology in the Cloud",
+          description: "Under Global Affairs Canada's Notice to Exporters No. 1159 (November 2025), keeping technology on the Export Control List in cloud storage is an export only when it creates a reasonable possibility that someone outside Canada could examine it. That is generally the case when the files lack strong encryption and access controls, when someone outside Canada (an IT administrator, for example) holds the decryption keys or routine access, or when an unencrypted backup copy is kept on servers abroad. Files stored abroad with strong encryption, and keys managed so that no one outside Canada can read them, are generally not an export. Opening the files from outside Canada, or giving someone abroad the means to open them, is an export; simply having access while you travel, without using it, is not. You are responsible for choosing a provider with adequate safeguards and for how keys and access are set up, and if you are unsure, Global Affairs Canada encourages you to apply for a permit. If the material is also a controlled good, the Controlled Goods Program has its own guidance on cloud storage.",
+          tags: ["export-control"],
+          officialUrl: "https://www.international.gc.ca/trade-commerce/controls-controles/notices-avis/1159.aspx?lang=eng",
+          keywords: ["cloud", "cloud storage", "Google Drive", "OneDrive", "encryption", "encryption keys", "intangible transfer", "Notice to Exporters 1159", "data residency", "travel"]
         }
       ]
     },
