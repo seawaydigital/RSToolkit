@@ -9,29 +9,64 @@
   "acronyms": [
     "HZNU"
   ],
-  "domains": [],
+  "domains": [
+    "hznu.edu.cn"
+  ],
   "country": "CN",
   "type": "university",
-  "location": null,
+  "location": {
+    "city": "Hangzhou",
+    "province": "Zhejiang",
+    "lat": 30.2955,
+    "lng": 120.0137
+  },
   "supervisors": [],
   "parent": null,
   "ids": {
-    "misp": "e4c5ffbe-3f87-4e32-83ad-6bef3deb8b32"
+    "misp": "e4c5ffbe-3f87-4e32-83ad-6bef3deb8b32",
+    "wikidata": "Q5648125"
   },
-  "evidence": [],
+  "evidence": [
+    {
+      "signal": "state-control",
+      "summary": "Hangzhou Normal University describes itself as a key-construction university of Zhejiang Province: a comprehensive university that grew from a teachers' college.",
+      "annexB": [
+        "2.1"
+      ],
+      "sources": [
+        "s1"
+      ]
+    }
+  ],
   "topics": [],
   "subunits": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "学校简介：杭州师范大学概况 (About the university)",
+      "publisher": "Hangzhou Normal University",
+      "url": "https://www.hznu.edu.cn/c/2020-01-12/2303453.shtml",
+      "lang": "zh",
+      "accessed": "2026-11-22",
+      "archive": {
+        "url": "https://web.archive.org/web/20261122051440/https://www.hznu.edu.cn/c/2020-01-12/2303453.shtml"
+      }
+    }
+  ],
   "rating": {
     "override": null,
     "overrideReason": null
   },
-  "status": "seed",
-  "verifiedOn": null,
+  "status": "verified",
+  "verifiedOn": "2026-11-22",
   "history": [
     {
       "date": "2026-10-25",
       "change": "Seed record from the MISP galaxy list (structured fields only); not yet verified."
+    },
+    {
+      "date": "2026-11-22",
+      "change": "Verified; rated Low."
     }
   ],
   "seedNotes": {
