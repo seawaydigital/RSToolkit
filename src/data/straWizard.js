@@ -13,6 +13,21 @@
  *   - description: explanation text
  *   - riskLevel: "high" | "medium" | "low" | "none"
  *   - matchedCategories: array of STRA category IDs from straData.js
+ *
+ * Verified 2026-11-21 against the federal STRA list (dateModified 2026-10-06)
+ * and straData.js. Every sub-category a result names is on the list, under
+ * the category the result gives, and all 74 sub-categories can be reached.
+ * The examples in a description are the list's own for that sub-category,
+ * apart from a few plain-language glosses (for example drones, hydrogen
+ * aircraft, hyperspectral imaging); a second category offered as "may also
+ * intersect" is this site's reading, not the list's.
+ *
+ * The list has no levels of sensitivity, so no result ranks one area above
+ * another. riskLevel only says how directly the answers match the list, and
+ * the page shows it as "High likelihood", "Possible" or "Unlikely". Under the
+ * STRAC Policy only the sub-categories count, except Advanced Weapons, which
+ * has none: any grant that advances an advanced weapons technology is covered
+ * (STRAC FAQ). tests/wizards.test.mjs checks the question graph and the ids.
  */
 
 export const straWizard = {
@@ -64,7 +79,7 @@ export const straWizard = {
           next: "q4-aerospace-defence",
         },
         {
-          label: "CBRN defence or countermeasures",
+          label: "CBRN medical countermeasures (treatments, diagnostics)",
           next: "result-cbrn",
         },
         {
@@ -82,7 +97,7 @@ export const straWizard = {
       type: "choice",
       options: [
         {
-          label: "Digital/Cyber (AI, quantum computing, cybersecurity, networking, microelectronics)",
+          label: "Digital/Cyber (AI, cybersecurity, networking, microelectronics, data storage)",
           next: "q4-digital",
         },
         {
@@ -136,7 +151,7 @@ export const straWizard = {
           next: "q5-ai",
         },
         {
-          label: "Advanced communications (5G/6G, millimeter-wave, photonic communications)",
+          label: "Advanced communications (cognitive radio, massive MIMO, millimeter-wave, optical/photonic)",
           next: "result-digital-comms",
         },
         {
@@ -160,7 +175,7 @@ export const straWizard = {
           next: "result-digital-computing",
         },
         {
-          label: "Next-generation networking / Internet of Everything",
+          label: "Next-generation networks (5G, 6G and later) / Internet of Everything",
           next: "result-digital-network",
         },
       ],
@@ -196,7 +211,7 @@ export const straWizard = {
       ],
     },
     "q4-digital-security": {
-      text: "Is your research focused on offensive cybersecurity capabilities, novel encryption methods, or post-quantum cryptography?",
+      text: "Is your research focused on new encryption methods, such as post-quantum, homomorphic, biometric or DNA-based encryption?",
       type: "yesno",
       yes: "result-digital-security-high",
       no: "result-digital-security",
@@ -395,6 +410,10 @@ export const straWizard = {
           label: "Atomic interferometer sensors",
           next: "result-sensing-atomic",
         },
+        {
+          label: "Cross-cueing sensors (several sensors cueing one another)",
+          next: "result-sensing-crosscueing",
+        },
       ],
     },
     "q4-sensing-military": {
@@ -468,7 +487,7 @@ export const straWizard = {
       type: "choice",
       options: [
         {
-          label: "Quantum computing (qubits, quantum processors, quantum algorithms)",
+          label: "Quantum computing (qubits, quantum processors)",
           next: "result-quantum-computing",
         },
         {
@@ -517,7 +536,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Advanced Weapons",
       description:
-        "Research involving directed energy weapons, hypersonic weapons, autonomous weapons, or enhancements to biological/chemical weapons falls squarely under the STRA list. This area carries the highest level of sensitivity.",
+        "Research involving directed energy weapons, hypersonic weapons, autonomous weapons, or enhancements to biological or chemical weapons is what the Advanced Weapons category of the STRA list describes. The category has no sub-categories: any grant that advances an advanced weapons technology falls under the STRAC Policy.",
       riskLevel: "high",
       matchedCategories: ["advanced-weapons"],
     },
@@ -527,7 +546,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under CBRN Medical Countermeasures",
       description:
-        "Research on medical countermeasures for chemical, biological, radiological or nuclear threats is a sensitive area under Life Science Technology. This includes therapeutics, diagnostics and related CBRN defence technologies.",
+        "Research on medical countermeasures for chemical, biological, radiological or nuclear threats falls under the Life Science Technology category of the STRA list. The sub-category covers medical assets that prevent, identify or treat injuries and illnesses caused by CBRN threats, such as therapeutics and diagnostics. Other CBRN defence work is not named in it: check the rest of the list.",
       riskLevel: "high",
       matchedCategories: ["life-science"],
     },
@@ -537,7 +556,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Advanced Communications Technology",
       description:
-        "Research on 5G/6G, millimeter-wave, photonic communications, massive MIMO, or cognitive radios falls under the Advanced Digital Infrastructure Technology category of the STRA list.",
+        "Research on adaptive, cognitive or intelligent radios, massive MIMO, millimeter-wave spectrum, open or virtualized radio access networks, optical or photonic communications, or wideband high-frequency communications falls under the Advanced Digital Infrastructure Technology category of the STRA list.",
       riskLevel: "medium",
       matchedCategories: ["advanced-digital-infrastructure"],
     },
@@ -585,15 +604,15 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Cryptography and/or Cyber Security Technology",
       description:
-        "Research on cybersecurity tools, encryption methods, or cross-domain solutions falls under the Advanced Digital Infrastructure Technology category of the STRA list.",
+        "Research on cyber defence tools, cross domain solutions or moving target defence falls under the Cyber Security Technology sub-category, and work on secure communications may fall under Cryptography. Both are part of the Advanced Digital Infrastructure Technology category of the STRA list. The Cyber Security Technology sub-category describes technologies that protect systems: if your work is on offensive capabilities, read it closely and ask your research security office.",
       riskLevel: "medium",
       matchedCategories: ["advanced-digital-infrastructure"],
     },
     "result-digital-security-high": {
       type: "result",
-      title: "Your research falls under Cryptography and/or Cyber Security Technology (elevated sensitivity)",
+      title: "Your research likely falls under Cryptography",
       description:
-        "Research on offensive cybersecurity capabilities, novel encryption methods, or post-quantum cryptography is highly sensitive under the Advanced Digital Infrastructure Technology category. Post-quantum cryptography also intersects with Quantum Science and Technology.",
+        "Research on new encryption methods is what the Cryptography sub-category describes: the federal list names biometric encryption, DNA-based encryption, post-quantum cryptography, homomorphic encryption and optical stealth encryption as examples. It is part of the Advanced Digital Infrastructure Technology category. Quantum key distribution is listed separately, under Quantum Communications.",
       riskLevel: "high",
       matchedCategories: ["advanced-digital-infrastructure", "quantum-science"],
     },
@@ -677,7 +696,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under 2D Materials and/or Superconducting Materials",
       description:
-        "Research on graphene, silicene, germanene, topological materials, or superconductors falls under the Advanced Materials and Manufacturing category. It may also intersect with Quantum Science and Technology.",
+        "Research on graphene, silicene, germanene, metal chalcogenides, or superconductors falls under the Advanced Materials and Manufacturing category. Large-scale production of 2D materials has a sub-category of its own, Two-Dimensional (2D) Materials Manufacturing. This work may also intersect with Quantum Science and Technology.",
       riskLevel: "medium",
       matchedCategories: ["advanced-materials-manufacturing", "quantum-science"],
     },
@@ -788,7 +807,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Advanced Nuclear Generation Technology",
       description:
-        "Research on nuclear fusion or small modular reactors falls under the Advanced Energy Technology category of the STRA list. This area has elevated sensitivity due to dual-use potential.",
+        "Research on nuclear fusion or small modular reactors falls under the Advanced Energy Technology category of the STRA list. Both are named as examples of this sub-category.",
       riskLevel: "high",
       matchedCategories: ["advanced-energy"],
     },
@@ -844,9 +863,9 @@ export const straWizard = {
     },
     "result-aerospace-defence-high": {
       type: "result",
-      title: "Your research falls under Aerospace/Space Technology (elevated sensitivity)",
+      title: "Your research likely falls under Propulsion Technologies and/or Satellites",
       description:
-        "Research related to military propulsion or military satellite systems is highly sensitive. It falls under the Aerospace, Space and Satellite Technology category and may also intersect with Advanced Weapons.",
+        "Research on propulsion for missiles or military aircraft, or on military satellite systems, falls under the Aerospace, Space and Satellite Technology category of the STRA list. Its Propulsion Technologies sub-category covers thrust for aircraft, spacecraft, rockets or missiles, and Satellites is a sub-category of its own. This work may also intersect with Advanced Weapons.",
       riskLevel: "high",
       matchedCategories: ["aerospace-space-satellite", "advanced-weapons"],
     },
@@ -902,7 +921,7 @@ export const straWizard = {
     },
     "result-sensing-underwater": {
       type: "result",
-      title: "Your research likely falls under Underwater (Wireless) Sensor Networks",
+      title: "Your research likely falls under Underwater (Wireless) Sensor Network",
       description:
         "Research on underwater acoustic communication, ocean sensor networks, or autonomous underwater vehicle networks falls under the Advanced Sensing and Surveillance category.",
       riskLevel: "medium",
@@ -924,11 +943,19 @@ export const straWizard = {
       riskLevel: "medium",
       matchedCategories: ["advanced-sensing-surveillance", "quantum-science"],
     },
+    "result-sensing-crosscueing": {
+      type: "result",
+      title: "Your research likely falls under Cross-Cueing Sensors",
+      description:
+        "Research on systems that let multiple sensors cue one another, for example in satellites for data validation, object tracking, enhanced reliability or earth observation, falls under the Advanced Sensing and Surveillance category.",
+      riskLevel: "medium",
+      matchedCategories: ["advanced-sensing-surveillance"],
+    },
     "result-sensing-military": {
       type: "result",
-      title: "Your research falls under Advanced Sensing and Surveillance (elevated sensitivity)",
+      title: "Your research likely falls under Advanced Sensing and Surveillance",
       description:
-        "Research on radar, sonar, advanced imaging, or autonomous sensing platforms with military or intelligence applications is highly sensitive under the Advanced Sensing and Surveillance category.",
+        "Research on radar, sonar, advanced imaging, or autonomous sensing platforms for surveillance or reconnaissance falls under the Advanced Sensing and Surveillance category of the STRA list: check which of its sub-categories describes your work. If the sensing work enhances a weapon system, the Advanced Weapons category may apply as well.",
       riskLevel: "high",
       matchedCategories: ["advanced-sensing-surveillance", "advanced-weapons"],
     },
@@ -936,7 +963,7 @@ export const straWizard = {
     // -- ROBOTICS RESULTS --
     "result-robotics-vehicles": {
       type: "result",
-      title: "Your research likely falls under (Semi-)Autonomous/Uncrewed Vehicles",
+      title: "Your research likely falls under (Semi-)Autonomous/Uncrewed Aerial/Ground/Marine Vehicles",
       description:
         "Research on UAVs, UGVs, UUVs, drones, or autonomous vehicle systems falls under the Robotics and Autonomous Systems category of the STRA list.",
       riskLevel: "medium",
@@ -1017,7 +1044,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Quantum Computing",
       description:
-        "Research on qubits, quantum processors, quantum algorithms, or quantum error correction falls under the Quantum Science and Technology category. Quantum is considered cross-cutting across many STRA areas.",
+        "Research on qubits, quantum processors, or quantum error correction falls under the Quantum Science and Technology category. Quantum is considered cross-cutting across many STRA areas.",
       riskLevel: "high",
       matchedCategories: ["quantum-science"],
     },
@@ -1041,7 +1068,7 @@ export const straWizard = {
       type: "result",
       title: "Your research likely falls under Quantum Materials",
       description:
-        "Research on topological insulators, Weyl semimetals, quantum dots, or other materials with unusual quantum properties falls under the Quantum Science and Technology category. It also intersects with Advanced Materials.",
+        "Research on superconductors, graphene, topological insulators, Weyl semimetals, metal chalcogenides, or other materials with unusual magnetic and electrical properties falls under the Quantum Science and Technology category. It also intersects with Advanced Materials.",
       riskLevel: "medium",
       matchedCategories: ["quantum-science", "advanced-materials-manufacturing"],
     },

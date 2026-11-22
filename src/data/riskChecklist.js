@@ -1,11 +1,36 @@
+const NSGRP_URL =
+  "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships";
+const RAF_URL =
+  "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships/national-security-guidelines-research-partnerships-risk-assessment-form";
+const STRAC_URL =
+  "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/policy-sensitive-technology-research-and-affiliations-concern";
+const STRA_URL =
+  "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas";
+
 export const riskChecklist = {
-  // Verified 2026-09-06 against the federal NSGRP page (dateModified 2026-07-29).
-  // Annex A's real structure is "Research areas covered by export controls",
-  // "List 1", "Additional research areas that can be considered sensitive" and
-  // "List 2" — it does NOT number items, so the previous "Annex A, Item 1-4"
-  // refs were wrong. Annex B has no sub-headings. Corrected.
-  lastUpdated: "2026-09-06",
-  sourceUrl: "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/national-security-guidelines-research-partnerships",
+  // Verified 2026-11-21, item by item, against the live federal pages: the
+  // NSGRP page (dateModified 2026-10-06; Annex A, Annex B, the two "elements
+  // of risk" sections, guiding principles, mitigation measures), the Risk
+  // Assessment Form page (form updated July 19, 2024; dateModified 2026-10-06)
+  // and, for nro-listed, the STRAC policy (dateModified 2026-10-06) and its
+  // FAQ. Annex A's real structure is "Research areas covered by export
+  // controls", "List 1", "Additional research areas that can be considered
+  // sensitive" and "List 2": it does NOT number items. Annex B has no
+  // sub-headings. Four items come from the Risk Assessment Form alone or
+  // mostly: partner-conduct (question 2.2), facility-access (2.4) and the two
+  // Section 5 commitments, no-lab-mirroring and partner-funding-disclosed.
+  //
+  // policyRef names a part of the NSGRP page and is linked to sourceUrl; it is
+  // null when the item rests on another document only. otherRefs link a
+  // different document (the Risk Assessment Form, the STRAC policy or the
+  // STRA list). A section's policySource links to sourceUrl and its
+  // otherSources to other documents. The page renders all of them as links.
+  //
+  // Item ids are the keys under which the page saves answers in localStorage
+  // (rs-toolkit-checklist-v1): renaming one loses every saved answer to it.
+  // tests/risk-checklist.test.mjs pins them.
+  lastUpdated: "2026-11-21",
+  sourceUrl: NSGRP_URL,
   sections: [
     {
       id: "research-area",
@@ -15,7 +40,7 @@ export const riskChecklist = {
         {
           id: "nuclear-cbrn",
           label: "Does the research involve nuclear, chemical, biological, or radiological applications?",
-          learnMore: "Research in these fields has a clear link to advancing military or intelligence capabilities and is subject to export controls under the Export and Import Permits Act (EIPA) and the Nuclear Non-proliferation Import and Export Control Regulations. Permits may be required before transferring technology to researchers outside Canada.",
+          learnMore: "Fields such as nuclear, chemical, biological, radiological or space applications have a clear link to advancing military or intelligence capabilities, so laws and regulations govern how the research is conducted and how the resulting knowledge is exported. Research involving or applicable to nuclear programs is subject to the Export and Import Permits Act (EIPA) and the Nuclear Non-proliferation Import and Export Control Regulations. Research on chemical and biological weapons and agents may be subject to the Export Control List (ECL) of the EIPA.",
           policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
@@ -29,7 +54,7 @@ export const riskChecklist = {
         {
           id: "missile-space",
           label: "Does the research involve missile, rocket, or space technology?",
-          learnMore: "Research related to missile and rocket technology, space technology, and chemical and biological weapons agents may be subject to the ECL of the EIPA. These areas have direct military and intelligence applications.",
+          learnMore: "Research related to missile and rocket technology, space technology, and chemical and biological weapons and agents may be subject to the ECL of the EIPA. Annex A gives these as examples of fields with a clear link to advancing military or intelligence capabilities.",
           policyRef: "NSGRP, Annex A — Research areas covered by export controls",
           defaultState: null
         },
@@ -43,15 +68,17 @@ export const riskChecklist = {
         {
           id: "sensitive-dual-use",
           label: "Does the research advance sensitive or dual-use technologies (e.g., AI, quantum, biotech)?",
-          learnMore: "Some new and emerging technologies have military, intelligence, or dual military/civilian applications but are not yet covered by international arms and export control regimes. Review the Sensitive Technology Research Areas list for the current inventory of areas considered sensitive.",
-          policyRef: "NSGRP, Annex A — List 1",
+          learnMore: "Some export control laws do not yet apply to new and emerging technologies, because their military, security and intelligence applications are less clear or because international arms and export control regimes have yet to reach consensus. These technologies can still be sensitive or dual-use, with military, intelligence, or dual military/civilian applications. List 1 of Annex A is the list of Sensitive Technology Research Areas: review it for the areas currently considered sensitive.",
+          policyRef: "NSGRP, Annex A — Sensitive or dual-use technologies; List 1",
+          otherRefs: [{ label: "Sensitive Technology Research Areas list", url: STRA_URL }],
           defaultState: null
         },
         {
           id: "critical-minerals",
           label: "Does the research relate to critical minerals or critical mineral supply chains?",
-          learnMore: "Research areas related to critical minerals, including supply chains, as identified on the Government of Canada's Critical Minerals List, are considered sensitive due to their strategic importance to national security and the economy.",
+          learnMore: "Research areas related to critical minerals, including critical mineral supply chains, on the Government of Canada's Critical Minerals List can be considered sensitive. The Risk Assessment Form describes the list as the minerals considered critical for the sustainable economic success of Canada and its allies.",
           policyRef: "NSGRP, Annex A — Additional research areas that can be considered sensitive",
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, question 1.1", url: RAF_URL }],
           defaultState: null
         },
         {
@@ -71,7 +98,7 @@ export const riskChecklist = {
         {
           id: "sensitive-personal-data",
           label: "Does the research use sensitive personal data (health, genetic, biometric, financial, geolocation)?",
-          learnMore: "Personal data that could be leveraged by hostile state actors to harm national and economic security includes: personally identifiable health or genetic data, biometric data, financial data, private communications, geolocation data, and personal data concerning government officials or members of the military or intelligence community.",
+          learnMore: "Personal data that could be leveraged by hostile state actors to harm national and economic security includes: personally identifiable health or genetic data, biometric data, financial data, private communications, geolocation data, and personal data concerning government officials, including members of the military or intelligence community.",
           policyRef: "NSGRP, Annex A — List 2",
           defaultState: null
         }
@@ -81,6 +108,7 @@ export const riskChecklist = {
       id: "partner-risk",
       title: "Partner Risk Assessment",
       policySource: "NSGRP, Annex B",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "state-owned",
@@ -104,6 +132,14 @@ export const riskChecklist = {
           defaultState: null
         },
         {
+          id: "partner-conduct",
+          label: "Are there signs of a lack of transparency or of unethical behaviour by the partner organization?",
+          learnMore: "The Risk Assessment Form asks this directly. Its indicators of unethical behaviour are: people associated with the partner who have been charged with, admitted to or been convicted of fraud, bribery, espionage or corruption in any jurisdiction; a partner that has been charged with, admitted to or been convicted of intellectual property, copyright or patent theft in any jurisdiction; and a partner that has committed offences related to import or export controls or controlled goods. Unethical behaviour that the partner did not disclose, and that you found through your own due diligence, is a sign of a lack of transparency. Focus on the last five years, and on older events with a lasting effect, such as one that brought the partner's reputation into disrepute. As with every partner question on the form, include the partner's affiliates: parent organizations, subsidiaries and joint ventures, in Canada and abroad.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, question 2.2", url: RAF_URL }],
+          defaultState: null
+        },
+        {
           id: "military-ties",
           label: "Do any personnel involved in the partnership have ties to foreign militaries or governments?",
           learnMore: "Risks can originate from personnel participating in the project, particularly if individuals have ties to foreign militaries or governments. It is important to identify and assess any potential conflicts of interest and commitment for all individuals involved in a research partnership.",
@@ -120,8 +156,12 @@ export const riskChecklist = {
         {
           id: "nro-listed",
           label: "Is the partner on the Named Research Organizations list?",
-          learnMore: "The Named Research Organizations list identifies universities, research institutions, or laboratories connected to military, national defence, or state security organizations that could pose a risk to Canadian national security. Under the STRAC Policy, if the research aims to advance a Sensitive Technology Research Area, no named researcher may be affiliated with, or receive funding or in-kind support from, a listed organization — so a listed partner contributing to the project would make the application ineligible. Under the NSGRP, a listed partner is a serious risk factor that the Risk Assessment Form and your mitigation plan must address.",
-          policyRef: "NSGRP, Annex B; STRAC Policy — Steps for Researchers",
+          learnMore: "The Named Research Organizations list is a non-exhaustive inventory of universities, research institutes and laboratories connected to military, national defence or state security entities that could pose a risk to Canada's national security. Under the STRAC Policy, a grant that aims to advance a Sensitive Technology Research Area will not be funded if any researcher involved in the activities it supports is affiliated with, or receives funding or in-kind support from, a listed organization. That covers everyone working on the funded research, including students, postdoctoral fellows and research staff, not only the people named on the application. A listed organization whose people take part in the project, or that contributes funding or in-kind support to it, would therefore make the application ineligible. The policy also says research affiliations are considered in the national security assessment of applications that are subject to the NSGRP, so record any tie between a partner and a listed organization on the Risk Assessment Form and address it in your mitigation plan.",
+          policyRef: "NSGRP, Annex B",
+          otherRefs: [
+            { label: "STRAC Policy, Step 2: Check researchers' affiliations", url: STRAC_URL },
+            { label: "NSGRP Risk Assessment Form, Section 2", url: RAF_URL }
+          ],
           defaultState: null
         }
       ]
@@ -129,19 +169,20 @@ export const riskChecklist = {
     {
       id: "data-infrastructure",
       title: "Data and Infrastructure Security",
-      policySource: "NSGRP, Annex A and Mitigation measures",
+      policySource: "NSGRP, Research area and Mitigation Measures",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "data-storage",
           label: "Will research data be stored in or accessible from jurisdictions with elevated security risks?",
-          learnMore: "Influence over and access to data and infrastructure, including data storage, governance, and access provisions of the partnership agreement, could be used to support unwanted data access or knowledge transfer outside the scope of the research partnership.",
-          policyRef: "NSGRP — Research area: what are you working on?",
+          learnMore: "Influence over and access to data and infrastructure, including data storage, governance, and access provisions of the partnership agreement, could be used to support unwanted data access or knowledge transfer outside the scope of the research partnership. Annex B adds that some countries have laws or practices that compel entities and individuals to provide information and research knowledge to their governments, which is why it matters where data is stored and who can reach it from where.",
+          policyRef: "NSGRP — Research area: what are you working on?; Annex B",
           defaultState: null
         },
         {
           id: "cybersecurity",
           label: "Are sound cybersecurity and data management practices in place?",
-          learnMore: "A strong risk mitigation plan should include sound cybersecurity and data management practices. Ensure that digital and physical infrastructure access controls are adequate to protect research data and intellectual property from unauthorized access.",
+          learnMore: "The NSGRP lists sound cybersecurity and data management practices among the areas a risk mitigation plan can cover. Ensure that digital and physical infrastructure access controls are adequate to protect research data and intellectual property from unauthorized access.",
           policyRef: "NSGRP — Mitigation Measures",
           defaultState: null
         },
@@ -158,19 +199,29 @@ export const riskChecklist = {
           learnMore: "Review the data storage, governance, and access provisions of the research partnership agreement to ensure they cannot be used to support unwanted data access or knowledge transfer outside the scope of the partnership. Consider both physical and digital infrastructure.",
           policyRef: "NSGRP — Research area: what are you working on?",
           defaultState: null
+        },
+        {
+          id: "facility-access",
+          label: "Could the project give the partner access to your institution's facilities, networks or other assets?",
+          learnMore: "The Risk Assessment Form asks whether, as a result of the project, a partner will or could have access to your institution's facilities, networks or assets on campus in Canada, including infrastructure that houses sensitive data. Consider access the partner could gain beyond what this project needs, such as new access to controlled or restricted areas, IT systems or networks, specialized equipment, or sensitive material. The question leaves out access the partner already has legitimately through other partnerships or projects, and access to facilities unrelated to research, such as recreational ones. The reason, in both the form and the NSGRP: access to physical and digital infrastructure and data could be used for unauthorized access or knowledge transfer outside the scope of the partnership.",
+          policyRef: "NSGRP — Research area: what are you working on?",
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, question 2.4", url: RAF_URL }],
+          defaultState: null
         }
       ]
     },
     {
       id: "mitigation-planning",
       title: "Mitigation and Compliance Planning",
-      policySource: "NSGRP, Mitigation measures and Implementation",
+      policySource: "NSGRP, Identify potential risks and Mitigation Measures",
+      otherSources: [{ label: "Risk Assessment Form", url: RAF_URL }],
       items: [
         {
           id: "team-strength",
           label: "Has the research team been assessed for security risks and conflicts of interest?",
-          learnMore: "Building a strong research team involves assessing all individuals for potential conflicts of interest and commitment. Identify any undisclosed affiliations, dual appointments, or obligations to foreign entities for all team members.",
-          policyRef: "NSGRP — Mitigation Measures",
+          learnMore: "Building a strong research team is one of the areas the NSGRP says a risk mitigation plan can cover, and Annex B asks you to identify and assess potential conflicts of interest and commitment for everyone involved in the partnership. Look at affiliations and commitments, never at citizenship or country of residence: the Risk Assessment Form says mitigation measures must never lead to discrimination against or profiling of a member of the research community, and that excluding anyone on that basis is not an acceptable measure.",
+          policyRef: "NSGRP — Mitigation Measures; Annex B",
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, Section 4", url: RAF_URL }],
           defaultState: null
         },
         {
@@ -190,8 +241,24 @@ export const riskChecklist = {
         {
           id: "export-controls",
           label: "Have applicable export control requirements been identified and addressed?",
-          learnMore: "Research in areas covered by the Export and Import Permits Act, the Defence Production Act, the Area Control List, the Special Economic Measures Act, or the United Nations Act may require permits or prior authorization. Consult with your institution's export control office.",
+          learnMore: "Annex A lists the controls that can apply. Research in areas covered by the Export Control List of the Export and Import Permits Act may need a permit before technology is transferred to researchers outside Canada, and goods or technology on the Controlled Goods List (the Schedule of the Defence Production Act) fall under the Controlled Goods Program. A partnership with an institution or researcher located in a country on the Area Control List must be authorized by an export permit whatever the research is. A partnership with an entity sanctioned under the Special Economic Measures Act or the United Nations Act may require prior authorization from Global Affairs Canada. Consult your institution's research security or export control contact.",
           policyRef: "NSGRP, Annex A — Research areas covered by export controls",
+          defaultState: null
+        },
+        {
+          id: "no-lab-mirroring",
+          label: "Can you confirm that no applicant has accepted, or will accept, funding conditional on mirroring or moving their lab to another country?",
+          learnMore: "This is one of the two commitments at the end of the Risk Assessment Form. By submitting the form, the applicant agrees for all co-applicants that, to the best of their knowledge, none of them has accepted or will accept an offer of funding that is conditional on mirroring their academic laboratory in a foreign country, or transferring it to one. Check with every co-applicant before the form goes in.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, Section 5: Additional Requirements", url: RAF_URL }],
+          defaultState: null
+        },
+        {
+          id: "partner-funding-disclosed",
+          label: "Has the partner organization told you the source of funding and the value of the project to it?",
+          learnMore: "The second commitment at the end of the Risk Assessment Form: by submitting it, the applicant agrees for all co-applicants that, to the best of their knowledge, the partner organization has told them the source of funding and the value of the research project to the partner. Ask the partner early, since the form cannot be submitted without agreeing to this.",
+          policyRef: null,
+          otherRefs: [{ label: "NSGRP Risk Assessment Form, Section 5: Additional Requirements", url: RAF_URL }],
           defaultState: null
         },
         {

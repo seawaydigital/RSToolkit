@@ -194,7 +194,7 @@ export default function TravelSecurity({ onNavigate }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Safeguarding Science workshops &#8599;
+          Safeguarding Science training modules &#8599;
         </a>
       </section>
 
