@@ -1,11 +1,13 @@
 export const ontarioFlow = {
   id: "ontario",
   title: "Ontario Research Security Guidelines Decision Flow",
-  // Verified 2026-09-06 against form ON00708E (2024/06), the current version in
-  // the Ontario Central Forms Repository. The four stages and the a)/b) sub-parts
-  // below match it. Previously cited "Section 1/2a/2b/3a" — the document contains
-  // no "Section N" numbering at all; it numbers process STAGES. Corrected.
-  lastUpdated: "2026-09-18",
+  // Verified 2026-11-21 against form ON00708E (2024/06), still the current
+  // version in the Ontario Central Forms Repository (PDF last modified
+  // 2024-06-20). The four stages and the a)/b) sub-parts below match it, as do
+  // the Relevant Period (pages 3 and 5) and the scope of Option B (page 5).
+  // Previously cited "Section 1/2a/2b/3a" — the document contains no
+  // "Section N" numbering at all; it numbers process STAGES. Corrected.
+  lastUpdated: "2026-11-21",
   policySource: "Research Security Guidelines for Ontario Research Funding Programs",
   sourceUrl: "https://forms.mgcs.gov.on.ca/en/dataset/on00708",
   nodes: [

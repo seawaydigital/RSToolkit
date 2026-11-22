@@ -8,7 +8,7 @@ export default function StracFlowchart({ onNavigate }) {
         <h1>STRAC Policy Flowchart</h1>
         <p>Interactive decision flow for the Policy on Sensitive Technology Research and Affiliations of Concern</p>
         <div className="tool-page-meta">
-          <span>In effect from the 2025–26 grant competition cycle</span>
+          <span>In effect for funding opportunities launched from May 1, 2024</span>
           <span>Applies to NSERC, SSHRC, CIHR, and CFI funding</span>
         </div>
       </div>
@@ -24,7 +24,7 @@ export default function StracFlowchart({ onNavigate }) {
           <strong>sensitive research + a connection to a listed institution of concern</strong>. That combination is what triggers the compliance requirement.
         </p>
         <p className="strac-overview-intro strac-overview-intro--last">
-          The policy applies to all NSERC, SSHRC, CIHR, and CFI grant applications as of the 2025–26 competition cycle.
+          The policy applies to research grant funding opportunities launched by NSERC, SSHRC, CIHR and the CFI from May 1, 2024; scholarships and fellowships are out of scope. It is not retroactive: grants awarded before then are not affected.
         </p>
       </div>
 
@@ -60,7 +60,7 @@ export default function StracFlowchart({ onNavigate }) {
             <div className="strac-overview-step-content">
               <strong>Check all researcher affiliations against the NRO list</strong>
               <p>
-                Every researcher with a named role on a qualifying grant — applicants, co-applicants, and collaborators — must be checked against the Named Research Organizations (NRO) list. This list identifies universities, research institutes, and laboratories connected to foreign military, national defence, or state security programs that pose a risk to Canada's national security.
+                Everyone who will work on a qualifying grant must be checked against the Named Research Organizations (NRO) list: applicants, co-applicants and collaborators, and also students, postdoctoral fellows and research staff. This list identifies universities, research institutes, and laboratories connected to foreign military, national defence, or state security programs that pose a risk to Canada's national security.
               </p>
               <p><strong>Affiliation means any of the following:</strong></p>
               <ul className="strac-overview-bullets">
@@ -69,7 +69,7 @@ export default function StracFlowchart({ onNavigate }) {
                 <li>Actively conducting research there</li>
               </ul>
               <p className="strac-overview-note">
-                Receiving funding or in-kind support (equipment, lab access, software, facilities) from a listed NRO also counts.
+                Receiving funding or in-kind support (equipment, lab access, software, facilities) from a listed NRO also counts. Only current connections count; past ones are not considered.
               </p>
             </div>
           </li>
@@ -98,10 +98,10 @@ export default function StracFlowchart({ onNavigate }) {
             <div className="strac-overview-step-content">
               <strong>Complete the attestation</strong>
               <p>
-                Every researcher with a named role on a qualifying grant must sign an attestation form confirming they are not affiliated with, and are not receiving funding or in-kind support from, any NRO. This is not a one-time checkbox at application — compliance must be maintained for the full duration of the grant. If the research changes scope or the team composition changes, the attestation obligations are revisited.
+                Every researcher with a named role on a qualifying grant must sign an attestation form confirming they are not affiliated with, and are not receiving funding or in-kind support from, any NRO. This is not a one-time checkbox at application — compliance must be maintained for the full duration of the grant. Team members without a named role, such as students, do not sign the form, but the same rule applies to them. If the research changes scope or the team composition changes, the attestation obligations are revisited.
               </p>
               <p className="strac-overview-note">
-                Non-compliance with STRAC is treated as a breach of the Tri-Agency Framework on Responsible Conduct of Research.
+                Non-compliance with STRAC may be treated as a breach of the Tri-Agency Framework: Responsible Conduct of Research.
               </p>
             </div>
           </li>

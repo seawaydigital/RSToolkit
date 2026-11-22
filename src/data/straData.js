@@ -5,11 +5,17 @@
  */
 
 export const straData = {
-  // Verified 2026-09-02 against the federal STRA page (dateModified 2026-07-30):
-  // 11 categories and all 74 subcategories match. The one extra subcategory in
-  // this file ("Advanced Weapons") is a UI placeholder — that category has no
-  // subdivisions on the federal list, and an empty category renders badly.
-  lastUpdated: "2026-07-30",
+  // Verified 2026-11-21 against the federal STRA page (dateModified 2026-10-06):
+  // 11 categories and all 74 subcategories match, name by name and description
+  // by description. lastUpdated carries the federal page's own date, because
+  // the STRA Lookup shows it as "List last modified". That date moved twice in
+  // 2026 (2025-05-07 → 2026-07-30 → 2026-10-06) when a survey notice was added
+  // to the page and then removed; the list text itself is identical in the
+  // archived copies from January, June and August 2026. The one extra
+  // subcategory in this file ("Advanced Weapons") is a UI placeholder — that
+  // category has no subdivisions on the federal list, and an empty category
+  // renders badly.
+  lastUpdated: "2026-10-06",
   sourceUrl:
     "https://science.gc.ca/site/science/en/safeguarding-your-research/guidelines-and-tools-implement-research-security/sensitive-technology-research-and-affiliations-concern/sensitive-technology-research-areas",
   categories: [
@@ -493,7 +499,7 @@ export const straData = {
         },
         {
           id: "magnetic-field-sensors",
-          name: "Magnetic Field Sensors (Magnetometers)",
+          name: "Magnetic Field Sensors (or Magnetometers)",
           description:
             "Sensors detecting or measuring changes in magnetic fields, their intensity or direction.",
           keywords: [
@@ -505,7 +511,7 @@ export const straData = {
         },
         {
           id: "mems-nems",
-          name: "Micro/Nano Electro-Mechanical Systems (M/NEMS)",
+          name: "Micro (or Nano) Electro-Mechanical Systems (M/NEMS)",
           description:
             "Miniaturized, lightweight electro-mechanical devices integrating mechanical and electrical functionality at microscopic or nano level.",
           keywords: [
